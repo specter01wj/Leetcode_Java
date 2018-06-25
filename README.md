@@ -9,6 +9,18 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|1|**Two Sum**|Easy|Java||
+|7|**Reverse Integer**|Easy|Java||
+|9|**Palindrome Number**|Easy|Java||
+|13|**Roman to Integer**|Easy|Java||
+|14|**Longest Common Prefix**|Easy|Java||
+|20|**Valid Parentheses**|Easy|Java||
+|1|**Two Sum **|Easy|Java||
+|1|**Two Sum **|Easy|Java||
+|1|**Two Sum **|Easy|Java||
+|1|**Two Sum **|Easy|Java||
+|1|**Two Sum **|Easy|Java||
+|1|**Two Sum **|Easy|Java||
 |1|**Two Sum **|Easy|Java||
 
 
