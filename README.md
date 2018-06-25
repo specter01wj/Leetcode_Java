@@ -15,10 +15,10 @@ By Jin Wang
 |13|**Roman to Integer**|Easy|Java||
 |14|**Longest Common Prefix**|Easy|Java||
 |20|**Valid Parentheses**|Easy|Java||
-|1|**Two Sum **|Easy|Java||
-|1|**Two Sum **|Easy|Java||
-|1|**Two Sum **|Easy|Java||
-|1|**Two Sum **|Easy|Java||
+|21|**Merge Two Sorted Lists**|Easy|Java||
+|26|**Remove Duplicates from Sorted Array**|Easy|Java||
+|27|**Remove Element**|Easy|Java||
+|28|**Implement strStr()**|Easy|Java||
 |1|**Two Sum **|Easy|Java||
 |1|**Two Sum **|Easy|Java||
 |1|**Two Sum **|Easy|Java||
