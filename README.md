@@ -30,6 +30,9 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2|**Add Two Numbers**|Medium|Java||
 |3|**Longest Substring Without Repeating Characters**|Medium|Java||
+|5|**Longest Palindromic Substring**|Medium|Java||
+|6|**ZigZag Conversion**|Medium|Java||
+|8|**LString to Integer (atoi)**|Medium|Java||
 
 
 ### Hard Level
