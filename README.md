@@ -10,36 +10,36 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1|**Two Sum**|Easy|Java||
-|7|**Reverse Integer**|Easy|Java||
-|9|**Palindrome Number**|Easy|Java||
-|13|**Roman to Integer**|Easy|Java||
-|14|**Longest Common Prefix**|Easy|Java||
-|20|**Valid Parentheses**|Easy|Java||
-|21|**Merge Two Sorted Lists**|Easy|Java||
-|26|**Remove Duplicates from Sorted Array**|Easy|Java||
-|27|**Remove Element**|Easy|Java||
-|28|**Implement strStr()**|Easy|Java||
-|35|**Search Insert Position**|Easy|Java||
-|38|**Count and Say**|Easy|Java||
-|53|**Maximum Subarray**|Easy|Java||
+|7|**Reverse Integer**|Easy|Java/Javascript||
+|9|**Palindrome Number**|Easy|Java/Javascript||
+|13|**Roman to Integer**|Easy|Java/Javascript||
+|14|**Longest Common Prefix**|Easy|Java/Javascript||
+|20|**Valid Parentheses**|Easy|Java/Javascript||
+|21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
+|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript||
+|27|**Remove Element**|Easy|Java/Javascript||
+|28|**Implement strStr()**|Easy|Java/Javascript||
+|35|**Search Insert Position**|Easy|Java/Javascript||
+|38|**Count and Say**|Easy|Java/Javascript||
+|53|**Maximum Subarray**|Easy|Java/Javascript||
 
 
 ### Medium Level
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|2|**Add Two Numbers**|Medium|Java||
-|3|**Longest Substring Without Repeating Characters**|Medium|Java||
-|5|**Longest Palindromic Substring**|Medium|Java||
-|6|**ZigZag Conversion**|Medium|Java||
-|8|**LString to Integer (atoi)**|Medium|Java||
+|2|**Add Two Numbers**|Medium|Java/Javascript||
+|3|**Longest Substring Without Repeating Characters**|Medium|Java/Javascript||
+|5|**Longest Palindromic Substring**|Medium|Java/Javascript||
+|6|**ZigZag Conversion**|Medium|Java/Javascript||
+|8|**LString to Integer (atoi)**|Medium|Java/Javascript||
 
 
 ### Hard Level
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|4|**Median of Two Sorted Arrays**|Hard|Java||
-|10|**Regular Expression Matching**|Hard|Java||
+|4|**Median of Two Sorted Arrays**|Hard|Java/Javascript||
+|10|**Regular Expression Matching**|Hard|Java/Javascript||
 
 
