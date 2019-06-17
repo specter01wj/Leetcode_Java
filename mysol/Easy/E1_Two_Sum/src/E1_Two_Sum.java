@@ -15,7 +15,7 @@ public class E1_Two_Sum {
 
 	public static void main(String[] args) {
 		int[] input = {1, 3, 5, 11, 13};
-        int[] output = twoSum(input, 8);
+        int[] output = twoSum(input, 18);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
