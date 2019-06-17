@@ -9,7 +9,7 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|1|**Two Sum**|Easy|Java/Javascript||
+|1|**Two Sum**|Easy|Java/Javascript|Done/Done|
 |7|**Reverse Integer**|Easy|Java/Javascript||
 |9|**Palindrome Number**|Easy|Java/Javascript||
 |13|**Roman to Integer**|Easy|Java/Javascript||
