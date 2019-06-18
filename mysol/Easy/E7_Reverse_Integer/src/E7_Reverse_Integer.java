@@ -18,7 +18,7 @@ Output: 21*/
 public class E7_Reverse_Integer {
 
 	public static void main(String[] args) {
-		int input = 321;
+		int input = -123;
         int output = reverseInteger(input);
         System.out.println("input: " + (input) + "\noutput: " + (output) );
 	}
