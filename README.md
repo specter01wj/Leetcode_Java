@@ -17,7 +17,7 @@ By Jin Wang
 |20|**Valid Parentheses**|Easy|Java/Javascript||
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript||
-|27|**Remove Element**|Easy|Java/Javascript||
+|27|**Remove Element**|Easy|Java/Javascript|Done/Done|
 |28|**Implement strStr()**|Easy|Java/Javascript||
 |35|**Search Insert Position**|Easy|Java/Javascript||
 |38|**Count and Say**|Easy|Java/Javascript||
@@ -41,5 +41,24 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |4|**Median of Two Sorted Arrays**|Hard|Java/Javascript||
 |10|**Regular Expression Matching**|Hard|Java/Javascript||
+
+
+Cspiration Category:
+
+## Leetcode 分类顺序
+
+1. Array
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|27|Remove Element|Easy||Java/Javascript|Done/Done|
+|26|**Remove Duplicates from Sorted Array**|Easy||Java/Javascript||
+
+
+
+
+
+
 
 
