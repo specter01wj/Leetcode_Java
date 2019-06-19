@@ -65,8 +65,29 @@ Cspiration Category:
 |119|Pascal's Triangle II||很少考|Java/Javascript||
 |169|Majority Element||很少考|Java/Javascript||
 |229|Majority Element II||很少考|Java/Javascript||
-
-
+|274|H-Index|||Java/Javascript||
+|275|H-Index II|||Java/Javascript||
+|243|Shortest Word Distance|||Java/Javascript||
+|244|Shortest Word Distance II|||Java/Javascript||
+|245|Shortest Word Distance III|||Java/Javascript||
+|217|Contains Duplicate|||Java/Javascript||
+|219|Contains Duplicate II|||Java/Javascript||
+|220|Contains Duplicate III|||Java/Javascript||
+|55|Jump Game|||Java/Javascript||
+|45|Jump Game II|||Java/Javascript||
+|121|Best Time to Buy and Sell Stock|||Java/Javascript||
+|122|Best Time to Buy and Sell Stock II|||Java/Javascript||
+|123|Best Time to Buy and Sell Stock III|||Java/Javascript||
+|188|Best Time to Buy and Sell Stock IV|||Java/Javascript||
+|309|Best Time to Buy and Sell Stock with Cooldown|||Java/Javascript||
+|11|Container With Most Water|||Java/Javascript||
+|42|Trapping Rain Water|||Java/Javascript||
+|334|Increasing Triplet Subsequence|||Java/Javascript||
+|128|Longest Consecutive Sequence|||Java/Javascript||
+|164|Maximum Gap|||Java/Javascript||
+|287|Find the Duplicate Number|||Java/Javascript||
+|135|Candy|||Java/Javascript||
+|330|Patching Array|||Java/Javascript||
 
 
 
