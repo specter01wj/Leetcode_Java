@@ -32,6 +32,11 @@ public class E27_Remove_Element {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+	 * solution:
+	从前往后，遇到等于value的就跳过，把后面的元素填到前面的位置里。
+	*/
+	
 	/**
 	 * @param {number[]} nums
 	 * @param {number} val
