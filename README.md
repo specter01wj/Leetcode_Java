@@ -90,6 +90,31 @@ Cspiration Category:
 |330|Patching Array|||Java/Javascript||
 |提高||||||
 |4|Median of Two Sorted Arrays|||Java/Javascript||
+|Interval||||||
+|57|Insert Interval|||Java/Javascript||
+
+### 2. String
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|28|Implement strStr()|||Java/Javascript||
+
+### 3. Math
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|7|Reverse Integer|Easy||Java/Javascript|Done/Done|
+|基础||||||
+|1|Two Sum|Easy||Java/Javascript|Done/Done|
+
+
+
+
+
+
+
 
 
 
