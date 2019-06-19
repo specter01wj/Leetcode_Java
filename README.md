@@ -106,7 +106,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |7|Reverse Integer|Easy||Java/Javascript|Done/Done|
-|基础||||||
+|Sum||||||
 |1|Two Sum|Easy||Java/Javascript|Done/Done|
 
 
