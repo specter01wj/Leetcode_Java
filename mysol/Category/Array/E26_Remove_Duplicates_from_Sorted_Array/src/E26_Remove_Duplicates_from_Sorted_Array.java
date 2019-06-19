@@ -35,7 +35,7 @@ public class E26_Remove_Duplicates_from_Sorted_Array {
     */
 	
 	/*
-     * @param nums: An ineger array
+     * @param nums: An integer array
      * @return: An integer
     */
 	public static int removeDuplicates(int[] nums) {
