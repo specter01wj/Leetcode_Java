@@ -16,7 +16,7 @@ By Jin Wang
 |14|**Longest Common Prefix**|Easy|Java/Javascript||
 |20|**Valid Parentheses**|Easy|Java/Javascript||
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
-|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript||
+|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript|Done/Done|
 |27|**Remove Element**|Easy|Java/Javascript|Done/Done|
 |28|**Implement strStr()**|Easy|Java/Javascript||
 |35|**Search Insert Position**|Easy|Java/Javascript||
