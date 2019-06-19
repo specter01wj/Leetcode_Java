@@ -54,9 +54,17 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |27|Remove Element|Easy||Java/Javascript|Done/Done|
-|26|**Remove Duplicates from Sorted Array**|Easy||Java/Javascript||
-
-
+|26|Remove Duplicates from Sorted Array|Easy||Java/Javascript||
+|80|Remove Duplicates from Sorted Array II|||Java/Javascript||
+|277|Find the Celebrity|||Java/Javascript||
+|189|Rotate Array|||Java/Javascript||
+|41|First Missing Positive|||Java/Javascript||
+|299|Bulls and Cows|||Java/Javascript||
+|134|Gas Station|||Java/Javascript||
+|118|Pascal's Triangle||很少考|Java/Javascript||
+|119|Pascal's Triangle II||很少考|Java/Javascript||
+|169|Majority Element||很少考|Java/Javascript||
+|229|Majority Element II||很少考|Java/Javascript||
 
 
 
