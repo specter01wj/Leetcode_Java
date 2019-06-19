@@ -4,49 +4,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a 32-bit signed integer, reverse digits of an integer.
+			 	Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+
+				Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+				The order of elements can be changed. It doesn't matter what you leave beyond the new length.
 
 				Example 1:
 
-				Input: 123
-				Output: 321
+				Given nums = [3,2,2,3], val = 3,
+
+				Your function should return length = 2, with the first two elements of nums being 2.
+
+				It doesn't matter what you leave beyond the returned length.
 				Example 2:
 
-				Input: -123
-				Output: -321
-				Example 3:
+				Given nums = [0,1,2,2,3,0,4,2], val = 2,
 
-				Input: 120
-				Output: 21
+				Your function should return length = 5, with the first five elements of nums containing 0, 1, 3, 0, and 4.
+
+				Note that the order of those five elements can be arbitrary.
+
+				It doesn't matter what values are set beyond the returned length.
 			 */
 			$(document).ready(function(){
 
-				/**
-			     * @param n the integer to be reversed
-			     * @return the reversed integer
+				 /*
+			     * @param A: A list of integers
+			     * @param elem: An integer
+			     * @return: The new length after remove
 			     */
-				var reverseInteger = function(n) {
-					var reversed_n = 0;
+				var removeElement = function(nums, val) {
+					var i = 0;
 
-					while(n !== 0) {
-						var temp = reversed_n * 10 + n % 10;
-						n = parseInt(n/10);
-						if(parseInt(temp / 10) != reversed_n) {
-							reversed_n = 0;
-							break;
+					for(var j = 0; j < nums.length; j++) {
+						if(nums[j] != val) {
+							nums[i] = nums[j];
+							i++;
 						}
-						reversed_n = temp;
 					}
 
-					if (reversed_n < -2147483648 || reversed_n > 2147483647) {
-				        return 0;
-				    }
-
-					return reversed_n;
+					return i;
 				};
 
-				var nums = -321;
-				var tt1 = reverseInteger(nums);
+				var nums = [0,1,2,2,3,0,4,2];
+				var tt1 = removeElement(nums, 2);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
