@@ -48,7 +48,7 @@ Cspiration Category:
 
 ## Leetcode 分类顺序
 
-1. Array
+### 1. Array
 
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
