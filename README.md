@@ -54,7 +54,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |27|Remove Element|Easy||Java/Javascript|Done/Done|
-|26|Remove Duplicates from Sorted Array|Easy||Java/Javascript||
+|26|Remove Duplicates from Sorted Array|Easy||Java/Javascript|Done/Done|
 |80|Remove Duplicates from Sorted Array II|||Java/Javascript||
 |277|Find the Celebrity|||Java/Javascript||
 |189|Rotate Array|||Java/Javascript||
