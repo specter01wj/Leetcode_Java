@@ -52,5 +52,29 @@ public class E189_Rotate_Array {
 		return arr;
 	}
 	
+	/*
+	solution:
+    Step1:划分成[1,2,3,4], [5,6,7]
+	Step2:分别reverse，[4,3,2,1], [7,6,5]
+	Step3:合并reverse，[5,6,7,1,2,3,4]
+	
+	public int[] rotate(int[] nums, int k) {
+        int n = nums.length;
+        k %= n;
+        reverse(nums, 0, n - k - 1);
+        reverse(nums, n - k, nums.length - 1);
+        reverse(nums, 0, nums.length - 1);
+        return nums;
+    }
+    
+    public void reverse(int[] n, int i, int j) {
+        for (int p = i, q = j; p < q; p++, q--) {
+            int temp = n[p];
+            n[p] = n[q];
+            n[q] = temp;
+        }
+    }
+	 */
+	
 
 }
