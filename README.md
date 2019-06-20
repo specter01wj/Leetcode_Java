@@ -80,7 +80,7 @@ Cspiration Category:
 |122|Best Time to Buy and Sell Stock II|Easy||Java/Javascript||
 |123|Best Time to Buy and Sell Stock III|Hard||Java/Javascript||
 |188|Best Time to Buy and Sell Stock IV|Hard||Java/Javascript||
-|309|Best Time to Buy and Sell Stock with Cooldown|||Java/Javascript||
+|309|Best Time to Buy and Sell Stock with Cooldown|Medium||Java/Javascript||
 |11|Container With Most Water|Medium||Java/Javascript||
 |42|Trapping Rain Water|Hard||Java/Javascript||
 |334|Increasing Triplet Subsequence|Medium||Java/Javascript||
