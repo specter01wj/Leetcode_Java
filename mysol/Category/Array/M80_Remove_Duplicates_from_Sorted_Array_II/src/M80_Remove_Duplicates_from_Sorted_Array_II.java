@@ -20,7 +20,7 @@ Your function should return length = 7, with the first seven elements of nums be
 It doesn't matter what values are set beyond the returned length.
 */
 
-public class E80_Remove_Duplicates_from_Sorted_Array_II {
+public class M80_Remove_Duplicates_from_Sorted_Array_II {
 
 	public static void main(String[] args) {
 		int[] input = {0,0,1,1,1,1,2,3,3};
