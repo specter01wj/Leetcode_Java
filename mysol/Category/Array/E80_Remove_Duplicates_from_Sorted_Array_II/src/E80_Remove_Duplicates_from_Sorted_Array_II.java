@@ -23,14 +23,32 @@ It doesn't matter what values are set beyond the returned length.
 public class E80_Remove_Duplicates_from_Sorted_Array_II {
 
 	public static void main(String[] args) {
-		int[] input = {0,0,1,1,1,2,2,3,3,4};
+		int[] input = {0,0,1,1,1,1,2,3,3};
         int output = removeDuplicates2(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
 	
 	public static int removeDuplicates2(int[] nums) {
+		if(nums == null || nums.length == 0) {
+			return 0;
+		}
 		
+		int index = 0, count = 1;
+		
+		for(int i = 1; i < nums.length; i++) {
+			if(nums[i] == nums[index]) {
+				if(count < 2) {
+					nums[++index] = nums[i];
+					count++;
+				}
+			} else {
+				nums[++index] = nums[i];
+				count = 1;
+			}
+		}
+		
+		return index + 1;
 	}
 
 }
