@@ -56,9 +56,9 @@ Cspiration Category:
 |基础||||||
 |27|Remove Element|Easy||Java/Javascript|Done/Done|
 |26|Remove Duplicates from Sorted Array|Easy||Java/Javascript|Done/Done|
-|80|Remove Duplicates from Sorted Array II|||Java/Javascript|Done/Done|
-|277|Find the Celebrity|||Java/Javascript||
-|189|Rotate Array|||Java/Javascript|Done/Done|
+|80|Remove Duplicates from Sorted Array II|Medium||Java/Javascript|Done/Done|
+|277|Find the Celebrity|Medium||Java/Javascript||
+|189|Rotate Array|Easy||Java/Javascript|Done/Done|
 |41|First Missing Positive|||Java/Javascript||
 |299|Bulls and Cows|||Java/Javascript||
 |134|Gas Station|||Java/Javascript||
