@@ -28,7 +28,15 @@ public class E80_Remove_Duplicates_from_Sorted_Array_II {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    从重复的第三个开始删除即可
+    */
 	
+	/**
+     * @param A: a array of integers
+     * @return : return an integer
+     */
 	public static int removeDuplicates2(int[] nums) {
 		if(nums == null || nums.length == 0) {
 			return 0;
