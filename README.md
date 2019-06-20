@@ -11,7 +11,7 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1|**Two Sum**|Easy|Java/Javascript|Done/Done|
 |7|**Reverse Integer**|Easy|Java/Javascript|Done/Done|
-|9|**Palindrome Number**|Easy|Java/Javascript||
+|9|**Palindrome Number**|Easy|Java/Javascript|Done/Done|
 |13|**Roman to Integer**|Easy|Java/Javascript||
 |14|**Longest Common Prefix**|Easy|Java/Javascript||
 |20|**Valid Parentheses**|Easy|Java/Javascript||
@@ -33,6 +33,7 @@ By Jin Wang
 |5|**Longest Palindromic Substring**|Medium|Java/Javascript||
 |6|**ZigZag Conversion**|Medium|Java/Javascript||
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
+|80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 
 
 ### Hard Level
@@ -55,9 +56,9 @@ Cspiration Category:
 |基础||||||
 |27|Remove Element|Easy||Java/Javascript|Done/Done|
 |26|Remove Duplicates from Sorted Array|Easy||Java/Javascript|Done/Done|
-|80|Remove Duplicates from Sorted Array II|||Java/Javascript||
+|80|Remove Duplicates from Sorted Array II|||Java/Javascript|Done/Done|
 |277|Find the Celebrity|||Java/Javascript||
-|189|Rotate Array|||Java/Javascript||
+|189|Rotate Array|||Java/Javascript|Done/Done|
 |41|First Missing Positive|||Java/Javascript||
 |299|Bulls and Cows|||Java/Javascript||
 |134|Gas Station|||Java/Javascript||
