@@ -29,21 +29,37 @@ public class E118_Pascals_Triangle {
 	
 	/*
     solution:
-    Using Extra Array
-	Algorithm
-	We use an extra array in which we place every element of the array 
-	at its correct position i.e. the number at index ii in the original 
-	array is placed at the index (i+k)%(length of array)(i+k). 
-	Then, we copy the new array to the original one.
+    
     */
 	
 	/**
-     * @param nums: an array
-     * @param k: an integer
-     * @return: rotate the array to the right by k steps
+     * @param numRows: an integer
+     * @return: an ArrayList
      */
 	public static ArrayList<ArrayList<Integer>> generate(int numRows) {
 		ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
+		
+		if(numRows == 0) {
+			return rst;
+		}
+		
+		ArrayList<Integer> first = new ArrayList<Integer>();
+		first.add(0 ,1);
+		rst.add(first);
+		
+		for(int i = 1; i < numRows; i++) {
+			ArrayList<Integer> tmp = new ArrayList<Integer>(i + 1);
+			for(int j = 0; j < i + 1; j++) {
+				tmp.add(-1);
+			}
+			ArrayList<Integer> prev = rst.get(i - 1);
+			tmp.set(0, prev.get(0));
+			tmp.set(i, prev.get(i - 1));
+			for(int j = 1; j < i; j++) {
+				tmp.set(j, prev.get(j - 1) + prev.get(j));
+			}
+			rst.add(tmp);
+		}
 		
 		return rst;
 	}
