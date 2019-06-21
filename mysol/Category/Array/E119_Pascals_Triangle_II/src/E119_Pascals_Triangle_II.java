@@ -29,7 +29,7 @@ public class E119_Pascals_Triangle_II {
 	
 	/**
      * @param numRows: an integer
-     * @return: an ArrayList
+     * @return: an Array
      */
 	public static ArrayList<Integer> getRow(int rowIndex) {
 		ArrayList<Integer> rst = new ArrayList<Integer>();
