@@ -4,43 +4,48 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array, rotate the array to the right by k steps, where k is non-negative.
+			 	Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
 
-				Example 1:
 
-				Input: [1,2,3,4,5,6,7] and k = 3
-				Output: [5,6,7,1,2,3,4]
-				Explanation:
-				rotate 1 steps to the right: [7,1,2,3,4,5,6]
-				rotate 2 steps to the right: [6,7,1,2,3,4,5]
-				rotate 3 steps to the right: [5,6,7,1,2,3,4]
-				Example 2:
+				In Pascal's triangle, each number is the sum of the two numbers directly above it.
 
-				Input: [-1,-100,3,99] and k = 2
-				Output: [3,99,-1,-100]
-				Explanation: 
-				rotate 1 steps to the right: [99,-1,-100,3]
-				rotate 2 steps to the right: [3,99,-1,-100]
+				Example:
+
+				Input: 5
+				Output:
+				[
+				     [1],
+				    [1,1],
+				   [1,2,1],
+				  [1,3,3,1],
+				 [1,4,6,4,1]
+				]
 			 */
 			$(document).ready(function(){
 
 				/**
-			     * @param nums: an array
-			     * @param k: an integer
-			     * @return: rotate the array to the right by k steps
+			     * @param numRows: an integer
+			     * @return: an ArrayList
 			     */
-				var rotate = function(nums, k) {
-					var arr = [];
-
-					for(var i = 0; i < nums.length; i++) {
-						arr[(i + k) % nums.length] = nums[i];
+				var generate = function(numRows) {
+					var res = [], count = 0, row;
+					while(numRows--){
+						row = [1];
+						if(count !== 0){
+							pre = res[count - 1];
+							for(i = 1; i < count; i++){
+								row.push(pre[i - 1] + pre[i]);
+							}
+							row.push(1);
+						}
+						res.push(row);
+						count++;
 					}
-
-					return arr;
+					return res;
 				};
 
-				var nums = [1,2,3,4,5,6,7];
-				var tt1 = rotate(nums, 3);
+				var nums = 5;
+				var tt1 = generate(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
