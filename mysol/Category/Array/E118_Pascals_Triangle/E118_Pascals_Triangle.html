@@ -28,20 +28,30 @@
 			     * @return: an ArrayList
 			     */
 				var generate = function(numRows) {
-					var res = [], count = 0, row;
-					while(numRows--){
-						row = [1];
-						if(count !== 0){
-							pre = res[count - 1];
-							for(i = 1; i < count; i++){
-								row.push(pre[i - 1] + pre[i]);
-							}
-							row.push(1);
-						}
-						res.push(row);
-						count++;
+					var rst = [];
+					if(numRows === 0) {
+						return rst;
 					}
-					return res;
+
+					var first = [];
+					first.push(1);
+					rst.push(first);
+					
+					for(var i = 1; i < numRows; i++) {
+						var tmp = [];
+						for(var j = 0; j < i + 1; j++) {
+							tmp.push(-1);
+						}
+						var prev = rst[i -1];
+						tmp[0] = prev[0];
+						tmp[i] = prev[i - 1];
+						for(var j = 1; j < i; j++) {
+							tmp[j] = prev[j - 1] + prev[j];
+						}
+						rst.push(tmp);
+					}
+
+					return rst;
 				};
 
 				var nums = 5;
