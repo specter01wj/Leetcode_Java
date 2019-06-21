@@ -62,7 +62,7 @@ Cspiration Category:
 |41|First Missing Positive|Hard||Java/Javascript||
 |299|Bulls and Cows|Medium||Java/Javascript||
 |134|Gas Station|Medium||Java/Javascript||
-|118|Pascal's Triangle|Easy|很少考|Java/Javascript||
+|118|Pascal's Triangle|Easy|很少考|Java/Javascript|Done/Done|
 |119|Pascal's Triangle II|Easy|很少考|Java/Javascript||
 |169|Majority Element|Easy|很少考|Java/Javascript||
 |229|Majority Element II|Medium|很少考|Java/Javascript||
