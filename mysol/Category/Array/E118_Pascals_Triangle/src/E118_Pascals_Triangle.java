@@ -22,8 +22,9 @@ public class E118_Pascals_Triangle {
 
 	public static void main(String[] args) {
 		int input = 5;
-        int[] output = generate(input);
-        System.out.println("input: " + (input) + "\noutput: " + Arrays.toString(output));
+		ArrayList<ArrayList<Integer>> output = new ArrayList<ArrayList<Integer>>();
+        output = generate(input);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	/*
@@ -41,6 +42,10 @@ public class E118_Pascals_Triangle {
      * @param k: an integer
      * @return: rotate the array to the right by k steps
      */
-	
+	public static ArrayList<ArrayList<Integer>> generate(int numRows) {
+		ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
+		
+		return rst;
+	}
 
 }
