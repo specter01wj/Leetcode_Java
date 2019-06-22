@@ -24,6 +24,7 @@ By Jin Wang
 |53|**Maximum Subarray**|Easy|Java/Javascript||
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
+|169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
@@ -36,6 +37,7 @@ By Jin Wang
 |6|**ZigZag Conversion**|Medium|Java/Javascript||
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
+|229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 
 
 ### Hard Level
@@ -67,7 +69,7 @@ Cspiration Category:
 |118|Pascal's Triangle|Easy|很少考|Java/Javascript|Done/Done|
 |119|Pascal's Triangle II|Easy|很少考|Java/Javascript|Done/Done|
 |169|Majority Element|Easy|很少考|Java/Javascript|Done/Done|
-|229|Majority Element II|Medium|很少考|Java/Javascript||
+|229|Majority Element II|Medium|很少考|Java/Javascript|Done/Done|
 |274|H-Index|Medium||Java/Javascript||
 |275|H-Index II|Medium||Java/Javascript||
 |243|Shortest Word Distance|Easy||Java/Javascript||
