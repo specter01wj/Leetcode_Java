@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+				Note: The algorithm should run in linear time and in O(1) space.
+
+				Example 1:
+
+				Input: [3,2,3]
+				Output: [3]
+				Example 2:
+
+				Input: [1,1,1,3,3,2,2,2]
+				Output: [1,2]
+			 */
+			$(document).ready(function(){
+
+				/*
+			    solution:
+			   	
+			    */
+				
+				/*
+			     * @param nums: a list of integers
+			     * @return: List of majority number
+			     */
+				var majorityElementII = function(nums) {
+					var result = [];
+					var count = {};
+
+					for(var i of nums) {
+						if(count[i]) {
+							count[i] = count[i] + 1;
+						} else {
+							count[i] = 1;
+						}
+
+						if(count[i] > nums.length / 3 && !result[i]) {
+							result.push(i);
+						}
+					}
+
+					return result;
+				};
+
+				var nums = [1,1,1,3,3,2,2,2];
+				var tt1 = majorityElementII(nums);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
