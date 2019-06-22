@@ -17,13 +17,30 @@ Output: 2
 public class E169_Majority_Element {
 
 	public static void main(String[] args) {
-		int[] input = {1,2,3,4,5,6,7};
-        int[] output = rotate(input, 3);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
+		int[] input = {2,2,1,1,1,2,2};
+        int output = majorityElement(input);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
 	public static int majorityElement(int[] nums) {
 		Map<Integer, Integer> counts = countNums(nums);
+		Map.Entry<Integer, Integer> majorityEntry = null;
+		
+		return majorityEntry.getKey();
+	}
+	
+	private static Map<Integer, Integer> countNums(int[] nums) {
+		Map<Integer, Integer> counts = new HashMap<Integer, Integer>();
+		
+		for(int num : nums) {
+			if(!counts.containsKey(num)) {
+				counts.put(num, 1);
+			} else {
+				counts.put(num, counts.get(num) + 1);
+			}
+		}
+		
+		return counts;
 	}
 
 }
