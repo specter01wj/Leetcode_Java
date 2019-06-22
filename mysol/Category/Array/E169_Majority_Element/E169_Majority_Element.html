@@ -40,9 +40,13 @@
 					var counts = countNums(nums);
 					var majorityEntry = {};
 
-					for()
+					for(var entry in counts) {
+						if(Object.keys(majorityEntry).length === 0 || counts[entry] > counts[majorityEntry]) {
+							majorityEntry = entry;
+						}
+					}
 
-					return rst;
+					return majorityEntry;
 				};
 
 				function countNums(nums) {
