@@ -24,12 +24,7 @@ public class M229_Majority_Element_II {
 	
 	/*
     solution:
-    Using Extra Array
-	Algorithm
-	We use an extra array in which we place every element of the array 
-	at its correct position i.e. the number at index ii in the original 
-	array is placed at the index (i+k)%(length of array)(i+k). 
-	Then, we copy the new array to the original one.
+   	
     */
 	
 	/*
