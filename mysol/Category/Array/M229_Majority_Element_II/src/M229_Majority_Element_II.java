@@ -18,7 +18,7 @@ public class M229_Majority_Element_II {
 
 	public static void main(String[] args) {
 		int[] input = {1,1,1,3,3,2,2,2};
-		List<Integer> output = majorityElement(input);
+		List<Integer> output = majorityElementII(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
@@ -31,7 +31,7 @@ public class M229_Majority_Element_II {
      * @param nums: a list of integers
      * @return: List of majority number
      */
-	public static List<Integer> majorityElement(int[] nums) {
+	public static List<Integer> majorityElementII(int[] nums) {
         List<Integer> result = new ArrayList<>();
         
         Map<Integer, Integer> count = new HashMap<>();
