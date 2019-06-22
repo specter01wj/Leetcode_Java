@@ -17,7 +17,7 @@ Output: 2
 public class E169_Majority_Element {
 
 	public static void main(String[] args) {
-		int[] input = {2,2,1,1,1,2,2};
+		int[] input = {7,2,5,7,5,2,7,8,7};//{2,2,1,1,1,2,2};
         int output = majorityElement(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
@@ -25,6 +25,12 @@ public class E169_Majority_Element {
 	public static int majorityElement(int[] nums) {
 		Map<Integer, Integer> counts = countNums(nums);
 		Map.Entry<Integer, Integer> majorityEntry = null;
+		
+		for(Map.Entry<Integer, Integer> entry : counts.entrySet()) {
+			if(majorityEntry == null || entry.getValue() > majorityEntry.getValue()) {
+				majorityEntry = entry;
+			}
+		}
 		
 		return majorityEntry.getKey();
 	}
