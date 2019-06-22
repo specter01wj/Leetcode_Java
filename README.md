@@ -66,7 +66,7 @@ Cspiration Category:
 |134|Gas Station|Medium||Java/Javascript||
 |118|Pascal's Triangle|Easy|很少考|Java/Javascript|Done/Done|
 |119|Pascal's Triangle II|Easy|很少考|Java/Javascript|Done/Done|
-|169|Majority Element|Easy|很少考|Java/Javascript||
+|169|Majority Element|Easy|很少考|Java/Javascript|Done/Done|
 |229|Majority Element II|Medium|很少考|Java/Javascript||
 |274|H-Index|Medium||Java/Javascript||
 |275|H-Index II|Medium||Java/Javascript||
