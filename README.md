@@ -25,9 +25,9 @@ By Jin Wang
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
-|217|**Contains Duplicate**|Easy||Java/Javascript|Done/Done|
-|219|**Contains Duplicate II**|Easy||Java/Javascript|Done/Done|
-|220|**Contains Duplicate III**|Medium||Java/Javascript|Done/|
+|217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
+|219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
+|220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 
 
 ### Medium Level
