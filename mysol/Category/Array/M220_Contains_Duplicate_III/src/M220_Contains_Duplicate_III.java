@@ -19,8 +19,9 @@ Output: false
 public class M220_Contains_Duplicate_III {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] input = {1,2,3,1};//{1,5,9,1,5,9}; 2, 3
+        boolean output = containsNearbyAlmostDuplicate(input, 2, 3);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 
 }
