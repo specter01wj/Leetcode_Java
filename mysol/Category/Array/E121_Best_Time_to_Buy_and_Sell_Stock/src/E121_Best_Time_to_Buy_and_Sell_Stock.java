@@ -40,6 +40,19 @@ public class E121_Best_Time_to_Buy_and_Sell_Stock {
      * @param prices: a list of integers
      * @return: find a maximum profit
      */
-	
+	public static int maxProfit(int[] prices) {
+		int minPrice = Integer.MAX_VALUE;
+		int maxProfit = 0;
+		
+		for(int i : prices) {
+			if(i < minPrice) {
+				minPrice = i;
+			} else if(i - minPrice > maxProfit) {
+				maxProfit = i - minPrice;
+			}
+		}
+		
+		return maxProfit;
+	}
 
 }
