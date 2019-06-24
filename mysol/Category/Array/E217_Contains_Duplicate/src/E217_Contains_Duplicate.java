@@ -35,6 +35,17 @@ public class E217_Contains_Duplicate {
      * @param nums: the given array
      * @return: if any value appears at least twice in the array
      */
-	
+	public static boolean containsDuplicate(int[] nums) {
+		Set<Integer> set = new HashSet<>(nums.length);
+		
+		for(int x : nums) {
+			if(set.contains(x)) {
+				return true;
+			}
+			set.add(x);
+		}
+		
+		return false;
+	}
 
 }
