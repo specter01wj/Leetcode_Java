@@ -35,26 +35,20 @@
 
 				/*
 			    solution:
-			    The points of interest are the peaks and valleys in the given graph. 
-			    We need to find the largest peak following the smallest valley. 
-			    We can maintain two variables - minprice and maxprofit corresponding 
-			    to the smallest valley and maximum profit (maximum difference between 
-			    selling price and minprice) obtained so far respectively.
+			    贪心法: 只要相邻的两天股票的价格是上升的, 我们就进行一次交易, 获得一定利润.
+				这样的策略不一定是最小的交易次数, 但是一定会得到最大的利润.
 			    */
 				
 				/*
 			     * @param prices: a list of integers
 			     * @return: find a maximum profit
 			     */
-				var maxProfit = function(prices) {
-					var minPrice = Number.MAX_VALUE;
+				var maxProfit2 = function(prices) {
 					var maxProfit = 0;
 
-					for(var i of prices) {
-						if(i < minPrice) {
-							minPrice = i;
-						} else if(i - minPrice > maxProfit) {
-							maxProfit = i - minPrice;
+					for(var i = 1; i < prices.length; i++) {
+						if(prices[i] > prices[i - 1]) {
+							maxProfit += prices[i] - prices[i - 1];
 						}
 					}
 
@@ -62,7 +56,7 @@
 				};
 
 				var nums = [7,1,5,3,6,4];
-				var tt1 = maxProfit(nums);
+				var tt1 = maxProfit2(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
