@@ -102,6 +102,9 @@ Cspiration Category:
 |330|Patching Array|Hard||Java/Javascript||
 |提高||||||
 |4|Median of Two Sorted Arrays|Hard||Java/Javascript||
+|321|Create Maximum Number|Hard|很少考|Java/Javascript||
+|327|Count of Range Sum|Hard|很少考|Java/Javascript||
+|289|Game of Life|Medium||Java/Javascript||
 |Interval||||||
 |57|Insert Interval|Hard||Java/Javascript||
 
