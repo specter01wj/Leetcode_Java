@@ -23,5 +23,18 @@ public class M220_Contains_Duplicate_III {
         boolean output = containsNearbyAlmostDuplicate(input, 2, 3);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
+	
+	/*
+    solution:
+    用map维护数字的位置，然后扫一遍数组进行求解
+    */
+	
+	/**
+     * @param nums: the given array
+     * @param k: the given k
+     * @param t: the given t
+     * @return: whether there are two distinct indices i and j in the array such that the absolute difference between nums[i] and nums[j] is at most t and the absolute difference between i and j is at most k.
+     */
+	
 
 }
