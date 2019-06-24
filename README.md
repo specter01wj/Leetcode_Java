@@ -111,6 +111,16 @@ Cspiration Category:
 |252|Meeting Rooms|Easy||Java/Javascript||
 |253|Meeting Rooms II|Medium||Java/Javascript||
 |352|Data Stream as Disjoint Intervals|Hard|TreeMap|Java/Javascript||
+|Counter||||||
+|239|Sliding Window Maximum|Hard||Java/Javascript||
+|295|Find Median from Data Stream|Hard||Java/Javascript||
+|53|Maximum Subarray|Easy||Java/Javascript||
+|325|Maximum Size Subarray Sum Equals k|Medium||Java/Javascript||
+|209|Minimum Size Subarray Sum|Medium||Java/Javascript||
+|238|Product of Array Except Self|Medium||Java/Javascript||
+|152|Maximum Product Subarray|Medium||Java/Javascript||
+|228|Summary Ranges|Medium||Java/Javascript||
+|163|Missing Ranges|Medium||Java/Javascript||
 
 ### 2. String
 
