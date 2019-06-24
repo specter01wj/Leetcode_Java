@@ -26,14 +26,16 @@
 			     * @return: if any value appears at least twice in the array
 			     */
 				var containsNearbyDuplicate = function(nums, k) {
-					var set = {};
+					var map = {};
 
-					for(var i of nums) {
-
-						if(set[i]) {
-							return true;
+					for(var i = 0; i < nums.length; i++) {
+						
+						if(map[nums[i]] !== undefined) {
+							if(Math.abs(map[nums[i]] - i) <= k) {
+								return true;
+							}
 						}
-						set[i] = 1;
+						map[nums[i]] = i;
 					}
 
 					return false;
