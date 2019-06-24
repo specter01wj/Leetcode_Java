@@ -27,7 +27,6 @@ By Jin Wang
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
-|220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 
 
 ### Medium Level
@@ -41,6 +40,7 @@ By Jin Wang
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
+|220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 
 
 ### Hard Level
