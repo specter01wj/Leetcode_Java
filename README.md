@@ -75,8 +75,8 @@ Cspiration Category:
 |243|Shortest Word Distance|Easy||Java/Javascript||
 |244|Shortest Word Distance II|Medium||Java/Javascript||
 |245|Shortest Word Distance III|Medium||Java/Javascript||
-|217|Contains Duplicate|Easy||Java/Javascript||
-|219|Contains Duplicate II|Easy||Java/Javascript||
+|217|Contains Duplicate|Easy||Java/Javascript|Done/Done|
+|219|Contains Duplicate II|Easy||Java/Javascript|Done/Done|
 |220|Contains Duplicate III|Medium||Java/Javascript||
 |55|Jump Game|Medium||Java/Javascript||
 |45|Jump Game II|Hard||Java/Javascript||
