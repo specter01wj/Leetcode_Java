@@ -27,6 +27,8 @@ By Jin Wang
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
+|121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
+|122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
@@ -49,6 +51,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |4|**Median of Two Sorted Arrays**|Hard|Java/Javascript||
 |10|**Regular Expression Matching**|Hard|Java/Javascript||
+|123|**Best Time to Buy and Sell Stock III**|Hard|Java/Javascript|Done/|
+|188|**Best Time to Buy and Sell Stock IV**|Hard|Java/Javascript|Done/|
 
 ### ================================================================
 
@@ -83,10 +87,10 @@ Cspiration Category:
 |220|Contains Duplicate III|Medium||Java/Javascript|Done/|
 |55|Jump Game|Medium||Java/Javascript||
 |45|Jump Game II|Hard||Java/Javascript||
-|121|Best Time to Buy and Sell Stock|Easy||Java/Javascript||
-|122|Best Time to Buy and Sell Stock II|Easy||Java/Javascript||
-|123|Best Time to Buy and Sell Stock III|Hard||Java/Javascript||
-|188|Best Time to Buy and Sell Stock IV|Hard||Java/Javascript||
+|121|Best Time to Buy and Sell Stock|Easy||Java/Javascript|Done/Done|
+|122|Best Time to Buy and Sell Stock II|Easy||Java/Javascript|Done/Done|
+|123|Best Time to Buy and Sell Stock III|Hard||Java/Javascript|Done/|
+|188|Best Time to Buy and Sell Stock IV|Hard||Java/Javascript|Done/|
 |309|Best Time to Buy and Sell Stock with Cooldown|Medium||Java/Javascript||
 |11|Container With Most Water|Medium||Java/Javascript||
 |42|Trapping Rain Water|Hard||Java/Javascript||
