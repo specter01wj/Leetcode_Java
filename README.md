@@ -27,6 +27,7 @@ By Jin Wang
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |217|**Contains Duplicate**|Easy||Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy||Java/Javascript|Done/Done|
+|220|**Contains Duplicate III**|Medium||Java/Javascript|Done/|
 
 
 ### Medium Level
@@ -79,7 +80,7 @@ Cspiration Category:
 |245|Shortest Word Distance III|Medium||Java/Javascript||
 |217|Contains Duplicate|Easy||Java/Javascript|Done/Done|
 |219|Contains Duplicate II|Easy||Java/Javascript|Done/Done|
-|220|Contains Duplicate III|Medium||Java/Javascript||
+|220|Contains Duplicate III|Medium||Java/Javascript|Done/|
 |55|Jump Game|Medium||Java/Javascript||
 |45|Jump Game II|Hard||Java/Javascript||
 |121|Best Time to Buy and Sell Stock|Easy||Java/Javascript||
