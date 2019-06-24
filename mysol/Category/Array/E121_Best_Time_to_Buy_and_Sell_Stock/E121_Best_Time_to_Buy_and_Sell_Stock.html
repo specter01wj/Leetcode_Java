@@ -37,33 +37,23 @@
 			     * @param prices: a list of integers
 			     * @return: find a maximum profit
 			     */
-				var majorityElement = function(nums) {
-					var counts = countNums(nums);
-					var majorityEntry = {};
+				var maxProfit = function(prices) {
+					var minPrice = Number.MAX_VALUE;
+					var maxProfit = 0;
 
-					for(var entry in counts) {
-						if(Object.keys(majorityEntry).length === 0 || counts[entry] > counts[majorityEntry]) {
-							majorityEntry = entry;
+					for(var i of prices) {
+						if(i < minPrice) {
+							minPrice = i;
+						} else if(i - minPrice > maxProfit) {
+							maxProfit = i - minPrice;
 						}
 					}
 
-					return majorityEntry;
+					return maxProfit;
 				};
 
-				function countNums(nums) {
-					var counts = {};
-					for(var num of nums) {
-						if(!counts[num]) {
-							counts[num] = 1;
-						} else {
-							counts[num] = counts[num] + 1;
-						}
-					}
-					return counts;
-				}
-
-				var nums = [7,2,5,7,5,2,7,8,7];
-				var tt1 = majorityElement(nums);
+				var nums = [7,1,5,3,6,4];
+				var tt1 = maxProfit(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
