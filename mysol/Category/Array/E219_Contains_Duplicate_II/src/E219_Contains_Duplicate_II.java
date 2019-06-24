@@ -19,7 +19,7 @@ Output: false
 public class E219_Contains_Duplicate_II {
 
 	public static void main(String[] args) {
-		int[] input = {1,2,3,1};//{1,2,3,1,2,3}; 2
+		int[] input = {3,2,1,3};//{1,2,3,1,2,3}; 2
         boolean output = containsNearbyDuplicate(input, 3);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
@@ -34,7 +34,16 @@ public class E219_Contains_Duplicate_II {
      * @return: if any value appears at least twice in the array
      */
 	public static boolean containsNearbyDuplicate(int[] nums, int k) {
+		Map<Integer, Integer> map = new HashMap<>();
 		
+		for(int i = 0; i < nums.length; i++) {
+			Integer index = map.put(nums[i], i);
+			if(index != null && Math.abs(index - i) <= k) {
+				return true;
+			}
+		}
+		
+		return false;
 	}
 
 }
