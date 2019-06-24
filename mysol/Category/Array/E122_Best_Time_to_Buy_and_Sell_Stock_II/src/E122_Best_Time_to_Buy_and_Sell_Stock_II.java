@@ -32,7 +32,7 @@ public class E122_Best_Time_to_Buy_and_Sell_Stock_II {
 
 	public static void main(String[] args) {
 		int[] input = {7,1,5,3,6,4};//{7,6,4,3,1};
-        int output = maxProfit(input);
+        int output = maxProfit2(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
@@ -64,5 +64,16 @@ public class E122_Best_Time_to_Buy_and_Sell_Stock_II {
      * @param prices: a list of integers
      * @return: find a maximum profit
      */
+	public static int maxProfit2(int[] prices) {
+		int maxProfit = 0;
+		
+		for(int i = 1; i < prices.length; i++) {
+			if(prices[i] > prices[i - 1]) {
+				maxProfit += prices[i] - prices[i - 1];
+			}
+		}
+		
+		return maxProfit;
+	}
 
 }
