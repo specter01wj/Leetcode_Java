@@ -12,7 +12,7 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 public class E53_Maximum_Subarray {
 
 	public static void main(String[] args) {
-		int[] input = {7,1,5,3,6,4};//{7,6,4,3,1};
+		int[] input = {-2,1,-3,4,-1,2,1,-5,4};
         int output = maxSubArray(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
@@ -31,7 +31,11 @@ public class E53_Maximum_Subarray {
 		int max = Integer.MIN_VALUE;
 		int sum = 0;
 		
-		
+		for(int i = 0; i < nums.length; i++) {
+			sum += nums[i];
+			max = Math.max(max, sum);
+			sum = Math.max(sum, 0);
+		}
 		
 		return max;
 	}
