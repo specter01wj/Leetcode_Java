@@ -21,7 +21,7 @@ By Jin Wang
 |28|**Implement strStr()**|Easy|Java/Javascript||
 |35|**Search Insert Position**|Easy|Java/Javascript||
 |38|**Count and Say**|Easy|Java/Javascript||
-|53|**Maximum Subarray**|Easy|Java/Javascript||
+|53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
@@ -114,7 +114,7 @@ Cspiration Category:
 |Counter||||||
 |239|Sliding Window Maximum|Hard||Java/Javascript||
 |295|Find Median from Data Stream|Hard||Java/Javascript||
-|53|Maximum Subarray|Easy||Java/Javascript||
+|53|Maximum Subarray|Easy||Java/Javascript|Done/Done|
 |325|Maximum Size Subarray Sum Equals k|Medium||Java/Javascript||
 |209|Minimum Size Subarray Sum|Medium||Java/Javascript||
 |238|Product of Array Except Self|Medium||Java/Javascript||
