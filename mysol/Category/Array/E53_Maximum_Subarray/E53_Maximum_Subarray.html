@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+				Example:
+
+				Input: [-2,1,-3,4,-1,2,1,-5,4],
+				Output: 6
+				Explanation: [4,-1,2,1] has the largest sum = 6.
+			 */
+			$(document).ready(function(){
+
+				/*
+			    solution:
+			    max记录全局最大值，sum记录区间和，如果当前sum>0，那么可以继续和后面的数求和，否则就从0开始
+			    */
+				
+				/*
+			     * @param prices: a list of integers
+			     * @return: find a largest sum
+			     */
+				var maxProfit = function(prices) {
+					var minPrice = Number.MAX_VALUE;
+					var maxProfit = 0;
+
+					for(var i of prices) {
+						if(i < minPrice) {
+							minPrice = i;
+						} else if(i - minPrice > maxProfit) {
+							maxProfit = i - minPrice;
+						}
+					}
+
+					return maxProfit;
+				};
+
+				var nums = [7,1,5,3,6,4];
+				var tt1 = maxProfit(nums);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
