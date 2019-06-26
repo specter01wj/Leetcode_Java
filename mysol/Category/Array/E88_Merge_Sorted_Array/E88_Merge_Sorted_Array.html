@@ -4,58 +4,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Say you have an array for which the ith element is the price of a given stock on day i.
+			 	Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 
+			 	as one sorted array.
 
-				If you were only permitted to complete at most one transaction (i.e., buy one and 
-				sell one share of the stock), design an algorithm to find the maximum profit.
+				Note:
 
-				Note that you cannot sell a stock before you buy one.
+				The number of elements initialized in nums1 and nums2 are m and n respectively.
+				You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.
+				Example:
 
-				Example 1:
+				Input:
+				nums1 = [1,2,3,0,0,0], m = 3
+				nums2 = [2,5,6],       n = 3
 
-				Input: [7,1,5,3,6,4]
-				Output: 5
-				Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-				             Not 7-1 = 6, as selling price needs to be larger than buying price.
-				Example 2:
-
-				Input: [7,6,4,3,1]
-				Output: 0
-				Explanation: In this case, no transaction is done, i.e. max profit = 0.
+				Output: [1,2,2,3,5,6]
 			 */
 			$(document).ready(function(){
 
 				/*
 			    solution:
-			    The points of interest are the peaks and valleys in the given graph. 
-			    We need to find the largest peak following the smallest valley. 
-			    We can maintain two variables - minprice and maxprofit corresponding 
-			    to the smallest valley and maximum profit (maximum difference between 
-			    selling price and minprice) obtained so far respectively.
+			    涉及两个有序数组合并,设置i和j双指针,分别从两个数组的尾部想头部移动,并判断A[i]和B[j]的大小关系,
+    			从而保证最终数组有序,同时每次index从尾部向头部移动。
 			    */
 				
-				/*
-			     * @param prices: a list of integers
-			     * @return: find a maximum profit
+				/**
+			     * @param A: sorted integer array A which has m elements, 
+			     *           but size of A is m+n
+			     * @param B: sorted integer array B which has n elements
+			     * @return: merged array
 			     */
-				var maxProfit = function(prices) {
-					var minPrice = Number.MAX_VALUE;
-					var maxProfit = 0;
+				var merge = function(nums1, m, nums2, n) {
+					var i = m-1, j = n-1, index = m + n - 1;
+			        var result = [];
 
-					for(var i of prices) {
-						if(i < minPrice) {
-							minPrice = i;
-						} else if(i - minPrice > maxProfit) {
-							maxProfit = i - minPrice;
-						}
-					}
-
-					return maxProfit;
+			        while (i >= 0 && j >= 0) {
+			            if (nums1[i] > nums2[j]) {
+			                nums1[index--] = nums1[i--];
+			            } else {
+			                nums1[index--] = nums2[j--];
+			            }
+			        }
+			        while (i >= 0) {
+			            nums1[index--] = nums1[i--];
+			        }
+			        while (j >= 0) {
+			            nums1[index--] = nums2[j--];
+			        }
+			        
+			        result = nums1;
+			        
+			        return result;
 				};
 
-				var nums = [7,1,5,3,6,4];
-				var tt1 = maxProfit(nums);
-				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+				var nums1 = [1,2,3,0,0,0];
+				var nums2 = [2,5,6];
+				var tt1 = merge(nums1, 3, nums2, 3);
+				$('#t1').html('<h2>Input 1: ' + nums1 + 
+								' / Input 2: ' + nums2 +
+								'<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
