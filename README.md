@@ -22,6 +22,7 @@ By Jin Wang
 |35|**Search Insert Position**|Easy|Java/Javascript||
 |38|**Count and Say**|Easy|Java/Javascript||
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
+|88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
@@ -122,7 +123,7 @@ Cspiration Category:
 |228|Summary Ranges|Medium||Java/Javascript||
 |163|Missing Ranges|Medium||Java/Javascript||
 |Sort||||||
-|88|Merge Sorted Array|Easy||Java/Javascript||
+|88|Merge Sorted Array|Easy||Java/Javascript|Done/Done|
 |75|Sort Colors|Medium||Java/Javascript||
 |283|Move Zeroes|Easy||Java/Javascript||
 |376|Wiggle Subsequence|Medium||Java/Javascript||
