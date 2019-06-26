@@ -30,6 +30,7 @@ By Jin Wang
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
+|283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
@@ -125,7 +126,7 @@ Cspiration Category:
 |Sort||||||
 |88|Merge Sorted Array|Easy||Java/Javascript|Done/Done|
 |75|Sort Colors|Medium||Java/Javascript||
-|283|Move Zeroes|Easy||Java/Javascript||
+|283|Move Zeroes|Easy||Java/Javascript|Done/Done|
 |376|Wiggle Subsequence|Medium||Java/Javascript||
 |280|Wiggle Sort|Medium||Java/Javascript||
 |324|Wiggle Sort II|Medium||Java/Javascript||
