@@ -19,7 +19,8 @@ public class E28_Implement_strStr {
 
 	public static void main(String[] args) {
 		String input = "hello";
-        int output = maxProfit(input);
+		String needle = "ll";
+        int output = strStr(input, needle);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
@@ -36,6 +37,20 @@ public class E28_Implement_strStr {
      * @param prices: a list of integers
      * @return: find a maximum profit
      */
-	
+	public static int strStr(String haystack, String needle) {
+		for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
+            int j = 0;
+            for (j = 0; j < needle.length(); j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) {
+                    break;
+                }
+            }
+            // finished loop, needle found
+            if (j == needle.length()) {
+                return i;
+            }
+        }
+        return -1;
+	}
 
 }
