@@ -21,7 +21,7 @@ public class E28_Implement_strStr {
 		String input = "hello";
 		String needle = "ll";
         int output = strStr(input, needle);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	/*
