@@ -4,57 +4,46 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Say you have an array for which the ith element is the price of a given stock on day i.
+			 	Implement strStr().
 
-				If you were only permitted to complete at most one transaction (i.e., buy one and 
-				sell one share of the stock), design an algorithm to find the maximum profit.
-
-				Note that you cannot sell a stock before you buy one.
+				Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
 				Example 1:
 
-				Input: [7,1,5,3,6,4]
-				Output: 5
-				Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-				             Not 7-1 = 6, as selling price needs to be larger than buying price.
+				Input: haystack = "hello", needle = "ll"
+				Output: 2
 				Example 2:
 
-				Input: [7,6,4,3,1]
-				Output: 0
-				Explanation: In this case, no transaction is done, i.e. max profit = 0.
+				Input: haystack = "aaaaa", needle = "bba"
+				Output: -1
 			 */
 			$(document).ready(function(){
 
 				/*
-			    solution:
-			    The points of interest are the peaks and valleys in the given graph. 
-			    We need to find the largest peak following the smallest valley. 
-			    We can maintain two variables - minprice and maxprofit corresponding 
-			    to the smallest valley and maximum profit (maximum difference between 
-			    selling price and minprice) obtained so far respectively.
-			    */
-				
-				/*
-			     * @param prices: a list of integers
-			     * @return: find a maximum profit
+			     * @param haystack: source string to be scanned.
+			     * @param needle: target string containing the sequence of characters to match.
+			     * @return: a index to the first occurrence of target in source,
+			     * or -1  if target is not part of source.
 			     */
-				var maxProfit = function(prices) {
-					var minPrice = Number.MAX_VALUE;
-					var maxProfit = 0;
-
-					for(var i of prices) {
-						if(i < minPrice) {
-							minPrice = i;
-						} else if(i - minPrice > maxProfit) {
-							maxProfit = i - minPrice;
-						}
-					}
-
-					return maxProfit;
+				var strStr = function(haystack, needle) {
+					for (var i = 0; i < haystack.length - needle.length + 1; i++) {
+			            var j = 0;
+			            for (j = 0; j < needle.length; j++) {
+			                if (haystack.charAt(i + j) != needle.charAt(j)) {
+			                    break;
+			                }
+			            }
+			            // finished loop, needle found
+			            if (j == needle.length) {
+			                return i;
+			            }
+			        }
+			        return -1;
 				};
 
-				var nums = [7,1,5,3,6,4];
-				var tt1 = maxProfit(nums);
+				var nums = "hello";
+				var needle = "ll";
+				var tt1 = strStr(nums, needle);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
