@@ -34,8 +34,10 @@ public class E28_Implement_strStr {
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: find a maximum profit
+     * @param haystack: source string to be scanned.
+     * @param needle: target string containing the sequence of characters to match.
+     * @return: a index to the first occurrence of target in source,
+     * or -1  if target is not part of source.
      */
 	public static int strStr(String haystack, String needle) {
 		for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
