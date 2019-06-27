@@ -18,7 +18,7 @@ By Jin Wang
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript|Done/Done|
 |27|**Remove Element**|Easy|Java/Javascript|Done/Done|
-|28|**Implement strStr()**|Easy|Java/Javascript||
+|28|**Implement strStr()**|Easy|Java/Javascript|Done/Done|
 |35|**Search Insert Position**|Easy|Java/Javascript||
 |38|**Count and Say**|Easy|Java/Javascript||
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
@@ -136,7 +136,7 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|28|Implement strStr()|||Java/Javascript||
+|28|Implement strStr()|||Java/Javascript|Done/Done|
 
 ### 3. Math
 
