@@ -13,7 +13,7 @@ By Jin Wang
 |7|**Reverse Integer**|Easy|Java/Javascript|Done/Done|
 |9|**Palindrome Number**|Easy|Java/Javascript|Done/Done|
 |13|**Roman to Integer**|Easy|Java/Javascript||
-|14|**Longest Common Prefix**|Easy|Java/Javascript||
+|14|**Longest Common Prefix**|Easy|Java/Javascript|Done/Done|
 |20|**Valid Parentheses**|Easy|Java/Javascript||
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript|Done/Done|
@@ -22,6 +22,7 @@ By Jin Wang
 |35|**Search Insert Position**|Easy|Java/Javascript||
 |38|**Count and Say**|Easy|Java/Javascript||
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
+|58|**Length of Last Word**|Easy||Java/Javascript|Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
@@ -138,7 +139,7 @@ Cspiration Category:
 |基础||||||
 |28|Implement strStr()|Easy||Java/Javascript|Done/Done|
 |14|Longest Common Prefix|Easy||Java/Javascript|Done/Done|
-|58|Length of Last Word|Easy||Java/Javascript||
+|58|Length of Last Word|Easy||Java/Javascript|Done/Done|
 |387|First Unique Character in a String|Easy||Java/Javascript||
 |383|Ransom Note|Easy||Java/Javascript||
 |344|Reverse String|Easy||Java/Javascript||
