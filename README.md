@@ -22,7 +22,7 @@ By Jin Wang
 |35|**Search Insert Position**|Easy|Java/Javascript||
 |38|**Count and Say**|Easy|Java/Javascript||
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
-|58|**Length of Last Word**|Easy||Java/Javascript|Done/Done|
+|58|**Length of Last Word**|Easy|Java/Javascript|Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
