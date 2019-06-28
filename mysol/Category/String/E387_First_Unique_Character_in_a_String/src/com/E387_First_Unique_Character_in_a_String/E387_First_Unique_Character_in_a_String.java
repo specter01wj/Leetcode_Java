@@ -47,6 +47,7 @@ public class E387_First_Unique_Character_in_a_String {
 		
 		for(int i = 0; i < n; i++) {
 			char c = s.charAt(i);
+			int t1 = count.getOrDefault(c, 0) ;
 			count.put(c, count.getOrDefault(c, 0) + 1);
 		}
 		
