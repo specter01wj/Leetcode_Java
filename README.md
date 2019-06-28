@@ -136,7 +136,38 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|28|Implement strStr()|||Java/Javascript|Done/Done|
+|28|Implement strStr()|Easy||Java/Javascript|Done/Done|
+|14|Longest Common Prefix|Easy||Java/Javascript|Done/Done|
+|58|Length of Last Word|Easy||Java/Javascript||
+|387|First Unique Character in a String|Easy||Java/Javascript||
+|383|Ransom Note|Easy||Java/Javascript||
+|344|Reverse String|Easy||Java/Javascript||
+|151|Reverse Words in a String|Medium||Java/Javascript||
+|186|Reverse Words in a String II|Medium||Java/Javascript||
+|345|Reverse Vowels of a String|Easy||Java/Javascript||
+|205|Isomorphic Strings|Easy||Java/Javascript||
+|293|Flip Game|Easy||Java/Javascript||
+|294|Flip Game II|Medium||Java/Javascript||
+|290|Word Pattern|Easy||Java/Javascript||
+|242|Valid Anagram|Easy||Java/Javascript||
+|49|Group Anagrams|Medium||Java/Javascript||
+|249|Group Shifted Strings|Medium||Java/Javascript||
+|87|Scramble String|Hard||Java/Javascript||
+|179|Largest Number|Medium||Java/Javascript||
+|6|ZigZag Conversion|Medium||Java/Javascript||
+|161|One Edit Distance|Medium||Java/Javascript||
+|38|Count and Say|Easy||Java/Javascript||
+|358|Rearrange String k Distance Apart|Hard||Java/Javascript||
+|316|Remove Duplicate Letters|Hard||Java/Javascript||
+|271|Encode and Decode Strings|Medium||Java/Javascript||
+|168|Excel Sheet Column Title|Easy||Java/Javascript||
+|171|Excel Sheet Column Number|Easy||Java/Javascript||
+|13|Roman to Integer|Easy||Java/Javascript||
+|12|Integer to Roman|Medium||Java/Javascript||
+|273|Integer to English Words|Hard||Java/Javascript||
+|246|Strobogrammatic Number|Easy||Java/Javascript||
+|247|Strobogrammatic Number II|Medium||Java/Javascript||
+|248|Strobogrammatic Number III|Hard||Java/Javascript||
 
 ### 3. Math
 
