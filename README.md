@@ -168,6 +168,16 @@ Cspiration Category:
 |246|Strobogrammatic Number|Easy||Java/Javascript||
 |247|Strobogrammatic Number II|Medium||Java/Javascript||
 |248|Strobogrammatic Number III|Hard|很少考|Java/Javascript||
+|提高||||||
+|68|Text Justification|||Java/Javascript||
+|Substring||||||
+|76|Minimum Window Substring|||Java/Javascript||
+|Palindrome||||||
+|125|Valid Palindrome|||Java/Javascript||
+|Parentheses||||||
+|20|Valid Parentheses|||Java/Javascript||
+|Subsequence||||||
+|392|Is Subsequence|||Java/Javascript||
 
 ### 3. Math
 
