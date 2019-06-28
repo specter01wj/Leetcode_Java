@@ -153,8 +153,8 @@ Cspiration Category:
 |49|Group Anagrams|Medium||Java/Javascript||
 |249|Group Shifted Strings|Medium||Java/Javascript||
 |87|Scramble String|Hard||Java/Javascript||
-|179|Largest Number|Medium||Java/Javascript||
-|6|ZigZag Conversion|Medium||Java/Javascript||
+|179|Largest Number|Medium|很少考|Java/Javascript||
+|6|ZigZag Conversion|Medium|很少考|Java/Javascript||
 |161|One Edit Distance|Medium||Java/Javascript||
 |38|Count and Say|Easy||Java/Javascript||
 |358|Rearrange String k Distance Apart|Hard||Java/Javascript||
@@ -167,7 +167,7 @@ Cspiration Category:
 |273|Integer to English Words|Hard||Java/Javascript||
 |246|Strobogrammatic Number|Easy||Java/Javascript||
 |247|Strobogrammatic Number II|Medium||Java/Javascript||
-|248|Strobogrammatic Number III|Hard||Java/Javascript||
+|248|Strobogrammatic Number III|Hard|很少考|Java/Javascript||
 
 ### 3. Math
 
