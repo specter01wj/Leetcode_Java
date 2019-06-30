@@ -50,12 +50,20 @@ public class E290_Word_Pattern {
      */
 	public static boolean wordPattern(String pattern, String str) {
         String[] words = str.split(" ");
-        if (words.length != pattern.length())
-            return false;
+        if (words.length != pattern.length()) {
+        		return false;
+        }
         Map index = new HashMap();
-        for (Integer i=0; i<words.length; ++i)
-            if (index.put(pattern.charAt(i), i) != index.put(words[i], i))
+        for (Integer i = 0; i < words.length; ++i) {
+        		/*int t1 = pattern.charAt(i);
+        		Object t2 = index.put(pattern.charAt(i), i);
+        		String r1 = words[i];
+        		Object r2 = index.put(words[i], i);*/
+            if (index.put(pattern.charAt(i), i) != index.put(words[i], i)) {
                 return false;
+            }
+        }
+        
         return true;
     }
 
