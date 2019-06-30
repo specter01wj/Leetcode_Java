@@ -33,6 +33,7 @@ By Jin Wang
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
+|383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
@@ -142,7 +143,7 @@ Cspiration Category:
 |14|Longest Common Prefix|Easy||Java/Javascript|Done/Done|
 |58|Length of Last Word|Easy||Java/Javascript|Done/Done|
 |387|First Unique Character in a String|Easy||Java/Javascript|Done/Done|
-|383|Ransom Note|Easy||Java/Javascript||
+|383|Ransom Note|Easy||Java/Javascript|Done/Done|
 |344|Reverse String|Easy||Java/Javascript||
 |151|Reverse Words in a String|Medium||Java/Javascript||
 |186|Reverse Words in a String II|Medium||Java/Javascript||
