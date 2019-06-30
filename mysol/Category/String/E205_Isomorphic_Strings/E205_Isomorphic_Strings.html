@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given two strings s and t, determine if they are isomorphic.
+
+				Two strings are isomorphic if the characters in s can be replaced to get t.
+
+				All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
+
+				Example 1:
+
+				Input: s = "egg", t = "add"
+				Output: true
+				Example 2:
+
+				Input: s = "foo", t = "bar"
+				Output: false
+				Example 3:
+
+				Input: s = "paper", t = "title"
+				Output: true
+			 */
+			$(document).ready(function(){
+
+				/*
+			     * @param s: a string
+			     * @param t: a string
+			     * @return: true if the characters in s can be replaced to get t or false
+			     */
+				var isIsomorphic = function(s, t) {
+					var map = new Array(256).fill(0); // ASCII 的范围是0-255
+					var sc = s.split("");
+					var tc = t.split("");
+					
+					for(var i = 0; i < s.length; i++) {
+						if(map[sc[i].charCodeAt(0)] === 0) {
+							map[sc[i].charCodeAt(0)] = tc[i].charCodeAt(0);
+						} else {
+							if(map[sc[i].charCodeAt(0)] !== tc[i].charCodeAt(0)) {
+								return false;
+							}
+						}
+					}
+					
+					var map2 = new Array(256).fill(0);
+			        for (var i = 0; i < t.length; i++) {
+			            if (map2[tc[i].charCodeAt(0)] === 0) {
+			                map2[tc[i].charCodeAt(0)] = sc[i].charCodeAt(0);
+			            } else {
+			                if (map2[tc[i].charCodeAt(0)] !== sc[i].charCodeAt(0)) {
+			                    return false;
+			                }
+			            }
+			        }
+			        
+			        return true;
+				};
+
+				var input1 = "paper", input2 = "title";
+				var tt1 = isIsomorphic(input1, input2);
+				$('#t1').html('<h2>Input1: ' + input1 + ' / Input2: ' + input2 + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			开一个map尽量将s的字符替换为t对应的字符，再开一个map尽量将t的字符替换为s,
+    		如果两个都能成功，那么就能满足题目条件。
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
