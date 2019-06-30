@@ -21,7 +21,7 @@ public class E383_Ransom_Note {
 
 	public static void main(String[] args) {
 		String magazine = "anotherstringcontaining";
-		String ransomNote = "nbarr";
+		String ransomNote = "nharr";
         boolean output = canConstruct(ransomNote, magazine);
         System.out.println("input: " + (ransomNote) + "\noutput: " + (output));
 	}
@@ -43,9 +43,11 @@ public class E383_Ransom_Note {
 		
 		for(int i = 0; i < magazine.length(); i++) {
 			int t1 = magazine.charAt(i) - 'a';
+			// 记录每个字符的个数
 			arr[magazine.charAt(i) - 'a']++;
 		}
 		for(int i = 0; i < ransomNote.length(); i++) {
+			// 在ransomNote中减去字符的个数并判断是否 < 0
 			if(--arr[ransomNote.charAt(i) - 'a'] < 0) {
 				return false;
 			}
