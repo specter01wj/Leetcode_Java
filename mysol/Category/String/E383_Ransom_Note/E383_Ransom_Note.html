@@ -23,26 +23,20 @@
 			     * @return boolean: whether the ransom note can be constructed from the magazines
 			     */
 				var canConstruct = function(s) {
-					var length = 0;
-					var chars = s.split("");
-					
-					for(var i = s.length - 1; i >= 0; i--) {
-						if(length == 0) {
-							if(chars[i] == ' ') {
-								continue;
-							} else {
-								length++;
-							}
-						} else {
-							if(chars[i] == ' ') {
-								break;
-							} else {
-								length++;
-							}
+					var arr = new int[26];
+		
+					for(var i = 0; i < magazine.length; i++) {
+						// 记录每个字符的个数
+						arr[magazine.charAt(i) - 'a']++;
+					}
+					for(var i = 0; i < ransomNote.length; i++) {
+						// 在ransomNote中减去字符的个数并判断是否 < 0
+						if(--arr[ransomNote.charAt(i) - 'a'] < 0) {
+							return false;
 						}
 					}
 					
-					return length;
+					return true;
 				};
 
 				var magazine = "anotherstringcontaining";
