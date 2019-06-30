@@ -42,7 +42,6 @@ public class E383_Ransom_Note {
 		int[] arr = new int[26];
 		
 		for(int i = 0; i < magazine.length(); i++) {
-			int t1 = magazine.charAt(i) - 'a';
 			// 记录每个字符的个数
 			arr[magazine.charAt(i) - 'a']++;
 		}
