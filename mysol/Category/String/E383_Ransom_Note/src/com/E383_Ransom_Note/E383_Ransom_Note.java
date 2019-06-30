@@ -20,9 +20,10 @@ canConstruct("aa", "aab") -> true
 public class E383_Ransom_Note {
 
 	public static void main(String[] args) {
-		int[] input = {7,1,5,3,6,4};//{7,6,4,3,1};
-        int output = maxProfit(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		String magazine = "anotherstringcontaining";
+		String ransomNote = "nbarr";
+        boolean output = canConstruct(ransomNote, magazine);
+        System.out.println("input: " + (ransomNote) + "\noutput: " + (output));
 	}
 	
 	/*
@@ -37,6 +38,20 @@ public class E383_Ransom_Note {
      * @param magazine: a string
      * @return boolean: whether the ransom note can be constructed from the magazines
      */
-	
+	public static boolean canConstruct(String ransomNote, String magazine) {
+		int[] arr = new int[26];
+		
+		for(int i = 0; i < magazine.length(); i++) {
+			int t1 = magazine.charAt(i) - 'a';
+			arr[magazine.charAt(i) - 'a']++;
+		}
+		for(int i = 0; i < ransomNote.length(); i++) {
+			if(--arr[ransomNote.charAt(i) - 'a'] < 0) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
 
 }
