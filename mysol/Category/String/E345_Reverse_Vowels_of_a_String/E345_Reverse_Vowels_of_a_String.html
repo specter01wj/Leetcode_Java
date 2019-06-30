@@ -18,29 +18,44 @@
 			$(document).ready(function(){
 
 				/*
-			     * @param s: an array char
-			     * @return str: reversed array char
+			     * @param s: a String
+			     * @return chars: reversed vowels of a string
 			     */
-				var reverseString = function(s) {
-					var str = new Array(s.length);
-        
-			        for (var i = 0; i < parseInt(s.length / 2); i++) {
-			            var temp = s[i];
-			            s[i] = s[s.length - 1 - i];
-			            s[s.length - 1 - i] = temp;
-			        }
-			        str = s;
-			        
-			        return str;
+				var reverseVowels = function(s) {
+					if(s == null || s.length === 0) {
+						return s;
+					}
+					var vowels = "aeiouAEIOU";
+					// 将字符串转化成char类型数组
+					var chars = s.split("");
+					var start = 0, end = s.length - 1;
+					
+					while(start < end) {
+						// 双指针相向而行找元音字符
+						while(start < end && !(vowels.indexOf(chars[start]) === -1 ? false : true)) {
+							start++;
+						}
+						while(start < end && !(vowels.indexOf(chars[end]) === -1 ? false : true)) {
+							end--;
+						}
+						var temp = chars[start];
+						chars[start] = chars[end];
+						chars[end] = temp;
+						start++;
+						end--;
+					}
+					var result = chars.join("");
+					
+					return result;
 				};
 
-				var input = ['h','e','l','l','o'];
-				var tt1 = reverseString(input);
+				var input = "hello";
+				var tt1 = reverseVowels(input);
 				$('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-			
+			双指针解法，头尾两个指针相向而行，遇到元音字符则交换。
 			 */
 
 		</script>
