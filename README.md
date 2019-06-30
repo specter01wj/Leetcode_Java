@@ -31,6 +31,7 @@ By Jin Wang
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
+|205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
@@ -150,7 +151,7 @@ Cspiration Category:
 |151|Reverse Words in a String|Medium||Java/Javascript||
 |186|Reverse Words in a String II|Medium||Java/Javascript||
 |345|Reverse Vowels of a String|Easy||Java/Javascript|Done/Done|
-|205|Isomorphic Strings|Easy||Java/Javascript||
+|205|Isomorphic Strings|Easy||Java/Javascript|Done/Done|
 |293|Flip Game|Easy||Java/Javascript||
 |294|Flip Game II|Medium||Java/Javascript||
 |290|Word Pattern|Easy||Java/Javascript||
