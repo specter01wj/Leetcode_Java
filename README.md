@@ -20,7 +20,7 @@ By Jin Wang
 |27|**Remove Element**|Easy|Java/Javascript|Done/Done|
 |28|**Implement strStr()**|Easy|Java/Javascript|Done/Done|
 |35|**Search Insert Position**|Easy|Java/Javascript||
-|38|**Count and Say**|Easy|Java/Javascript||
+|38|**Count and Say**|Easy|Java/Javascript|Done/Done|
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
 |58|**Length of Last Word**|Easy|Java/Javascript|Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
@@ -164,7 +164,7 @@ Cspiration Category:
 |179|Largest Number|Medium|很少考|Java/Javascript||
 |6|ZigZag Conversion|Medium|很少考|Java/Javascript||
 |161|One Edit Distance|Medium||Java/Javascript||
-|38|Count and Say|Easy||Java/Javascript||
+|38|Count and Say|Easy||Java/Javascript|Done/Done|
 |358|Rearrange String k Distance Apart|Hard||Java/Javascript||
 |316|Remove Duplicate Letters|Hard||Java/Javascript||
 |271|Encode and Decode Strings|Medium||Java/Javascript||
