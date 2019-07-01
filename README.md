@@ -32,6 +32,7 @@ By Jin Wang
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
+|242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
@@ -156,7 +157,7 @@ Cspiration Category:
 |293|Flip Game|Easy||Java/Javascript||
 |294|Flip Game II|Medium||Java/Javascript||
 |290|Word Pattern|Easy||Java/Javascript|Done/Done|
-|242|Valid Anagram|Easy||Java/Javascript||
+|242|Valid Anagram|Easy||Java/Javascript|Done/Done|
 |49|Group Anagrams|Medium||Java/Javascript||
 |249|Group Shifted Strings|Medium||Java/Javascript||
 |87|Scramble String|Hard||Java/Javascript||
