@@ -4,38 +4,25 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a pattern and a string str, find if str follows the same pattern.
-
-				Here follow means a full match, such that there is a bijection between a letter 
-				in pattern and a non-empty word in str.
+			 	Given two strings s and t , write a function to determine if t is an anagram of s.
 
 				Example 1:
 
-				Input: pattern = "abba", str = "dog cat cat dog"
+				Input: s = "anagram", t = "nagaram"
 				Output: true
 				Example 2:
 
-				Input:pattern = "abba", str = "dog cat cat fish"
+				Input: s = "rat", t = "car"
 				Output: false
-				Example 3:
-
-				Input: pattern = "aaaa", str = "dog cat cat dog"
-				Output: false
-				Example 4:
-
-				Input: pattern = "abba", str = "dog dog dog dog"
-				Output: false
-				Notes:
-				You may assume pattern contains only lowercase letters, and str contains 
-				lowercase letters that may be separated by a single space.
+				Note:
+				You may assume the string contains only lowercase alphabets.
 			 */
 			$(document).ready(function(){
 
-				/*
-			     * @param pattern: a string，denote pattern string
-			     * @param str: a string，denote matching string
-			     * @return: an boolean，denote whether the pattern string and 
-			     * the matching string match or not
+				/**
+			     * @param s: The first string
+			     * @param t: The second string
+			     * @return true or false
 			     */
 				var wordPattern = function(pattern, str) {
 					var words = str.split(" ");
@@ -65,14 +52,13 @@
 			        return true;
 				};
 
-				var input = "dog cat cat dog", pattern = "abba";
-				var tt1 = wordPattern(pattern, input);
-				$('#t1').html('<h2>Input: ' + input + ' / Pattern: ' + pattern + '<br>Results: ' + tt1 + '</h2>');
+				var input1 = "anagram", input2 = "nagaram";
+				var tt1 = wordPattern(input1, input2);
+				$('#t1').html('<h2>Input1: ' + input1 + ' / Input2: ' + input2 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-			用HashMap联立str中的单词和pattern中的字母，如果后面出现str中的单词与pattern中的字母对不上，
-			则输出false，否则输出true
+			统计每个字母的数量，比较是否一致即可。
 			 */
 
 		</script>
