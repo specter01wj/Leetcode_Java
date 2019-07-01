@@ -41,7 +41,7 @@
 					for(var i = 0; i < s.length; i++) {
 						var t1 = Math.pow(26, s.length - 1 - i);
 						var r1 = (s.charAt(i).charCodeAt(0) - 64);
-						res += Math.pow(26, s.length - 1 - i) * (s.charAt(i).charCodeAt - 64);
+						res += Math.pow(26, s.length - 1 - i) * (s.charAt(i).charCodeAt(0) - 64);
 					}
 					
 					return res;
