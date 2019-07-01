@@ -39,16 +39,25 @@
 			     */
 				var wordPattern = function(pattern, str) {
 					var words = str.split(" ");
-			        if (words.length != pattern.length()) {
+			        if (words.length != pattern.length) {
 			        		return false;
 			        }
-			        Map index = new HashMap();
-			        for (Integer i = 0; i < words.length; ++i) {
-			        		/*int t1 = pattern.charAt(i);
-			        		Object t2 = index.put(pattern.charAt(i), i);
-			        		String r1 = words[i];
-			        		Object r2 = index.put(words[i], i);*/
-			            if (index.put(pattern.charAt(i), i) != index.put(words[i], i)) {
+			        var index = {};
+
+			        for (var i = 0; i < words.length; ++i) {
+			        	if(index[pattern[i]]) {
+							index[pattern[i]]++;
+			        	} else {
+			        		index[pattern[i]] = 1;
+			        	}
+
+			        	if(index[words[i]]) {
+							index[words[i]]++;
+			        	} else {
+			        		index[words[i]] = 1;
+			        	}
+			        	
+			            if( index[pattern[i]] !== index[words[i]] ) {
 			                return false;
 			            }
 			        }
@@ -58,7 +67,7 @@
 
 				var input = "dog cat cat dog", pattern = "abba";
 				var tt1 = wordPattern(pattern, input);
-				$('#t1').html('<h2>Input1: ' + input1 + ' / Input2: ' + input2 + '<br>Results: ' + tt1 + '</h2>');
+				$('#t1').html('<h2>Input: ' + input + ' / Pattern: ' + pattern + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
