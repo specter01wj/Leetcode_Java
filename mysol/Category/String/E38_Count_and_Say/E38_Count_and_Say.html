@@ -37,7 +37,7 @@
 			     * @param n: an integer
 			     * @return: string, the nth term of the count-and-say sequence
 			     */
-				var countAndSay = function(s) {
+				var countAndSay = function(n) {
 					var oldString = "1";
 		
 					while (--n > 0) {
@@ -50,7 +50,7 @@
 			                    count++;
 			                    i++;
 			                }
-			                sb.push(count + oldChars[i]);
+			                sb = sb.concat(count.toString() + oldChars[i]);
 			            }
 			            oldString = sb;
 			        }
