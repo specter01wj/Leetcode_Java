@@ -26,6 +26,7 @@ By Jin Wang
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
+|168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
@@ -168,7 +169,7 @@ Cspiration Category:
 |358|Rearrange String k Distance Apart|Hard||Java/Javascript||
 |316|Remove Duplicate Letters|Hard||Java/Javascript||
 |271|Encode and Decode Strings|Medium||Java/Javascript||
-|168|Excel Sheet Column Title|Easy||Java/Javascript||
+|168|Excel Sheet Column Title|Easy||Java/Javascript|Done/Done|
 |171|Excel Sheet Column Number|Easy||Java/Javascript||
 |13|Roman to Integer|Easy||Java/Javascript||
 |12|Integer to Roman|Medium||Java/Javascript||
