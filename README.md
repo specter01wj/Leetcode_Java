@@ -28,6 +28,7 @@ By Jin Wang
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
+|171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
@@ -170,7 +171,7 @@ Cspiration Category:
 |316|Remove Duplicate Letters|Hard||Java/Javascript||
 |271|Encode and Decode Strings|Medium||Java/Javascript||
 |168|Excel Sheet Column Title|Easy||Java/Javascript|Done/Done|
-|171|Excel Sheet Column Number|Easy||Java/Javascript||
+|171|Excel Sheet Column Number|Easy||Java/Javascript|Done/Done|
 |13|Roman to Integer|Easy||Java/Javascript||
 |12|Integer to Roman|Medium||Java/Javascript||
 |273|Integer to English Words|Hard||Java/Javascript||
