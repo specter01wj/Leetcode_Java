@@ -30,7 +30,7 @@ Output: "ZY"*/
 public class E168_Excel_Sheet_Column_Title {
 
 	public static void main(String[] args) {
-		int input = 28;
+		int input = 701;//28 -> AB
         String output = convertToTitle(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
@@ -49,6 +49,8 @@ public class E168_Excel_Sheet_Column_Title {
 		
 		while(n > 0) {
 			n--;
+			int t1 = (n % 26) + 'A';
+			char r1 = (char)((n % 26) + 'A');
 			str.append( (char)((n % 26) + 'A') );
 			n /= 26;
 		}
