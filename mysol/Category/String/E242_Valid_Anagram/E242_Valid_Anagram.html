@@ -24,36 +24,28 @@
 			     * @param t: The second string
 			     * @return true or false
 			     */
-				var wordPattern = function(pattern, str) {
-					var words = str.split(" ");
-			        if (words.length != pattern.length) {
-			        		return false;
+				var isAnagram = function(s, t) {
+					if (s.length !== t.length) {
+			            return false;
 			        }
-			        var index = {};
+			        var counter = new Array(26).fill(0);
 
-			        for (var i = 0; i < words.length; ++i) {
-			        	if(index[pattern[i]]) {
-							index[pattern[i]]++;
-			        	} else {
-			        		index[pattern[i]] = 1;
-			        	}
+			        for(var i = 0; i < s.length; i++) {
+			            counter[s.charCodeAt(i) - 97]++;
+			            counter[t.charCodeAt(i) - 97]--;
+			        }
 
-			        	if(index[words[i]]) {
-							index[words[i]]++;
-			        	} else {
-			        		index[words[i]] = 1;
-			        	}
-			        	
-			            if( index[pattern[i]] !== index[words[i]] ) {
+			        for(var count of counter) {
+			            if (count != 0) {
 			                return false;
 			            }
 			        }
-			        
+
 			        return true;
 				};
 
-				var input1 = "anagram", input2 = "nagaram";
-				var tt1 = wordPattern(input1, input2);
+				var input1 = "anagkam", input2 = "nagaram";
+				var tt1 = isAnagram(input1, input2);
 				$('#t1').html('<h2>Input1: ' + input1 + ' / Input2: ' + input2 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
