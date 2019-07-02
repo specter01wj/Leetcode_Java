@@ -52,36 +52,29 @@
 			     * @param num: an integer
 			     * @return: a string Roman representation
 			     */
-				var romanToInt = function(s) {
-					if(s === null || s.length === 0) {
-						return 0;
+				var intToRoman = function(num) {
+					if(num <= 0) {
+						return "";
 					}
-					var m = {};
-
-					m['I'] = 1;
-					m['V'] = 5;
-					m['X'] = 10;
-					m['L'] = 50;
-					m['C'] = 100;
-					m['D'] = 500;
-					m['M'] = 1000;
-					
-					var length = s.length;
-					var result = m[s.charAt(length - 1)];
-					
-					for(var i = length - 2; i >= 0; i--) {
-						if(m[s.charAt(i + 1)] <= m[s.charAt(i)]) {
-							result += m[s.charAt(i)];
-						} else {
-							result -= m[s.charAt(i)];
-						}
-					}
-					
-					return result;
+					var nums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+				    var symbols = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+				    var res = [];
+				    var digit = 0;
+				    
+				    while(num > 0) {
+			    		var times = parseInt(num / nums[digit]);
+			    		num -= nums[digit] * times;
+			    		for(; times > 0; times--) {
+			    			res.push(symbols[digit]);
+			    		}
+			    		digit++;
+				    }
+				    
+				    return res.join("");
 				};
 
-				var nums = "MCMXCIV";
-				var tt1 = romanToInt(nums);
+				var nums = 1994;
+				var tt1 = intToRoman(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
