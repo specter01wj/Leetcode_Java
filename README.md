@@ -52,6 +52,7 @@ By Jin Wang
 |5|**Longest Palindromic Substring**|Medium|Java/Javascript||
 |6|**ZigZag Conversion**|Medium|Java/Javascript||
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
+|12|**Integer to Roman**|Medium||Java/Javascript|Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
@@ -173,7 +174,7 @@ Cspiration Category:
 |168|Excel Sheet Column Title|Easy||Java/Javascript|Done/Done|
 |171|Excel Sheet Column Number|Easy||Java/Javascript|Done/Done|
 |13|Roman to Integer|Easy||Java/Javascript|Done/Done|
-|12|Integer to Roman|Medium||Java/Javascript||
+|12|Integer to Roman|Medium||Java/Javascript|Done/Done|
 |273|Integer to English Words|Hard||Java/Javascript||
 |246|Strobogrammatic Number|Easy||Java/Javascript||
 |247|Strobogrammatic Number II|Medium||Java/Javascript||
