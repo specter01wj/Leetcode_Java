@@ -12,7 +12,7 @@ By Jin Wang
 |1|**Two Sum**|Easy|Java/Javascript|Done/Done|
 |7|**Reverse Integer**|Easy|Java/Javascript|Done/Done|
 |9|**Palindrome Number**|Easy|Java/Javascript|Done/Done|
-|13|**Roman to Integer**|Easy|Java/Javascript||
+|13|**Roman to Integer**|Easy|Java/Javascript|Done/Done|
 |14|**Longest Common Prefix**|Easy|Java/Javascript|Done/Done|
 |20|**Valid Parentheses**|Easy|Java/Javascript||
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
@@ -172,7 +172,7 @@ Cspiration Category:
 |271|Encode and Decode Strings|Medium||Java/Javascript||
 |168|Excel Sheet Column Title|Easy||Java/Javascript|Done/Done|
 |171|Excel Sheet Column Number|Easy||Java/Javascript|Done/Done|
-|13|Roman to Integer|Easy||Java/Javascript||
+|13|Roman to Integer|Easy||Java/Javascript|Done/Done|
 |12|Integer to Roman|Medium||Java/Javascript||
 |273|Integer to English Words|Hard||Java/Javascript||
 |246|Strobogrammatic Number|Easy||Java/Javascript||
