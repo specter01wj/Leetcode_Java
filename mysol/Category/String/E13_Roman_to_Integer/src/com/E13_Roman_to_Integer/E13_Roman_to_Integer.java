@@ -86,8 +86,10 @@ public class E13_Roman_to_Integer {
 		
 		for(int i = length - 2; i >= 0; i--) {
 			if(m.get(s.charAt(i + 1)) <= m.get(s.charAt(i))) {
+//				int t1 = s.charAt(i);
 				result += m.get(s.charAt(i));
 			} else {
+//				int t2 = s.charAt(i);
 				result -= m.get(s.charAt(i));
 			}
 		}
