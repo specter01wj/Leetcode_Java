@@ -26,6 +26,7 @@ By Jin Wang
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
+|125|**Valid Palindrome**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
@@ -184,7 +185,7 @@ Cspiration Category:
 |Substring||||||
 |76|Minimum Window Substring|||Java/Javascript||
 |Palindrome||||||
-|125|Valid Palindrome|||Java/Javascript||
+|125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
 |Parentheses||||||
 |20|Valid Parentheses|||Java/Javascript||
 |Subsequence||||||
