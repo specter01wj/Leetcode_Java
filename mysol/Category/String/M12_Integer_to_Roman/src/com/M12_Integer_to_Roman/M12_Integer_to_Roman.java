@@ -61,16 +61,12 @@ public class M12_Integer_to_Roman {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    根据罗马数字的计数规则进行转换即可.
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: find a maximum profit
+     * @param num: an integer
+     * @return: a string Roman representation
      */
 	public static String intToRoman(int num) {
 		if(num <= 0) {
@@ -92,5 +88,13 @@ public class M12_Integer_to_Roman {
 	    
 	    return res.toString();
 	}
+	
+	/*public String intToRoman(int n) {
+        String M[] = {"", "M", "MM", "MMM"};
+        String C[] = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
+        String X[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
+        String I[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+        return M[n / 1000] + C[(n / 100) % 10] + X[(n / 10) % 10] + I[n % 10];
+    }*/
 
 }
