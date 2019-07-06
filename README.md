@@ -246,6 +246,12 @@ Cspiration Category:
 |233|Number of Digit One|||Java/Javascript||
 |319|Bulb Switcher|||Java/Javascript||
 |292|Nim Game|||Java/Javascript||
+|202|Happy Number|||Java/Javascript||
+|292|Nim Game|||Java/Javascript||
+|292|Nim Game|||Java/Javascript||
+|292|Nim Game|||Java/Javascript||
+|292|Nim Game|||Java/Javascript||
+|292|Nim Game|||Java/Javascript||
 
 
 
