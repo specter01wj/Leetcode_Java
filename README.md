@@ -186,6 +186,14 @@ Cspiration Category:
 |76|Minimum Window Substring|||Java/Javascript||
 |Palindrome||||||
 |125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
+|266|Palindrome Permutation|||Java/Javascript||
+|5|Longest Palindromic Substring|||Java/Javascript||
+|9|Palindrome Number|||Java/Javascript||
+|214|Shortest Palindrome|||Java/Javascript||
+|336|Palindrome Pairs|||Java/Javascript||
+|131|Palindrome Partitioning|||Java/Javascript||
+|132|Palindrome Partitioning II|||Java/Javascript||
+|267|Palindrome Permutation II|||Java/Javascript||
 |Parentheses||||||
 |20|Valid Parentheses|||Java/Javascript||
 |Subsequence||||||
