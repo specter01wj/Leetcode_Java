@@ -186,12 +186,12 @@ Cspiration Category:
 |157|Read N Characters Given Read4|||Java/Javascript||
 |158|Read N Characters Given Read4 II - Call multiple times|||Java/Javascript||
 |Substring||||||
-|76|Minimum Window Substring|||Java/Javascript||
-|30|Substring with Concatenation of All Words|||Java/Javascript||
-|3|Longest Substring Without Repeating Characters|||Java/Javascript||
-|340|Longest Substring with At Most K Distinct Characters|||Java/Javascript||
-|395|Longest Substring with At Least K Repeating Characters|||Java/Javascript||
-|159|Longest Substring with At Most Two Distinct Characters|||Java/Javascript||
+|76|Minimum Window Substring||Sliding Window|Java/Javascript||
+|30|Substring with Concatenation of All Words||Sliding Window|Java/Javascript||
+|3|Longest Substring Without Repeating Characters||Sliding Window|Java/Javascript||
+|340|Longest Substring with At Most K Distinct Characters||Sliding Window|Java/Javascript||
+|395|Longest Substring with At Least K Repeating Characters||Sliding Window|Java/Javascript||
+|159|Longest Substring with At Most Two Distinct Characters||Sliding Window|Java/Javascript||
 |Palindrome||||||
 |125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
 |266|Palindrome Permutation|||Java/Javascript||
