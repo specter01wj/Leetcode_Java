@@ -204,6 +204,10 @@ Cspiration Category:
 |267|Palindrome Permutation II|||Java/Javascript||
 |Parentheses||||||
 |20|Valid Parentheses|||Java/Javascript||
+|22|Generate Parentheses|||Java/Javascript||
+|32|Longest Valid Parentheses|||Java/Javascript||
+|241|Different Ways to Add Parentheses|||Java/Javascript||
+|301|Remove Invalid Parentheses|||Java/Javascript||
 |Subsequence||||||
 |392|Is Subsequence|||Java/Javascript||
 
