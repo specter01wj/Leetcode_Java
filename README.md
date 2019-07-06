@@ -188,7 +188,7 @@ Cspiration Category:
 |125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
 |266|Palindrome Permutation|||Java/Javascript||
 |5|Longest Palindromic Substring|||Java/Javascript||
-|9|Palindrome Number|Easy||Java/Javascript||
+|9|Palindrome Number|Easy||Java/Javascript|Done/Done|
 |214|Shortest Palindrome|||Java/Javascript||
 |336|Palindrome Pairs|||Java/Javascript||
 |131|Palindrome Partitioning|||Java/Javascript||
