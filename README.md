@@ -219,6 +219,18 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |7|Reverse Integer|Easy||Java/Javascript|Done/Done|
+|165|Compare Version Numbers|||Java/Javascript||
+|66|Plus One|||Java/Javascript||
+|8|String to Integer (atoi)|||Java/Javascript||
+|258|Add Digits|||Java/Javascript||
+|67|Add Binary|||Java/Javascript||
+|43|Multiply Strings|||Java/Javascript||
+|29|Divide Two Integers|||Java/Javascript||
+|69|Sqrt(x)|||Java/Javascript||
+|50|Pow(x, n)|||Java/Javascript||
+|367|Valid Perfect Square|||Java/Javascript||
+|365|Water and Jug Problem|||Java/Javascript||
+|204|Count Primes|||Java/Javascript||
 |Sum||||||
 |1|Two Sum|Easy||Java/Javascript|Done/Done|
 
