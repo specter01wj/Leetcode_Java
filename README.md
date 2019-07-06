@@ -182,6 +182,9 @@ Cspiration Category:
 |248|Strobogrammatic Number III|Hard|很少考|Java/Javascript||
 |提高||||||
 |68|Text Justification|||Java/Javascript||
+|65|Valid Number|||Java/Javascript||
+|157|Read N Characters Given Read4|||Java/Javascript||
+|158|Read N Characters Given Read4 II - Call multiple times|||Java/Javascript||
 |Substring||||||
 |76|Minimum Window Substring|||Java/Javascript||
 |Palindrome||||||
