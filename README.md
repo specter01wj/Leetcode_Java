@@ -233,6 +233,11 @@ Cspiration Category:
 |204|Count Primes|||Java/Javascript||
 |Sum||||||
 |1|Two Sum|Easy||Java/Javascript|Done/Done|
+|167|Two Sum II - Input array is sorted|||Java/Javascript||
+|3|3Sum|||Java/Javascript||
+|16|3Sum Closest||很少考|Java/Javascript||
+|259|3Sum Smaller||很少考|Java/Javascript||
+|18|4Sum|||Java/Javascript||
 
 
 
