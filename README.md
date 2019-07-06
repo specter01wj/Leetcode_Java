@@ -245,7 +245,7 @@ Cspiration Category:
 |372|Super Pow|||Java/Javascript||
 |233|Number of Digit One|||Java/Javascript||
 |319|Bulb Switcher|||Java/Javascript||
-|231|Power of Two|||Java/Javascript||
+|292|Nim Game|||Java/Javascript||
 
 
 
