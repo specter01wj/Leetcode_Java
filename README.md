@@ -211,7 +211,7 @@ Cspiration Category:
 |Subsequence||||||
 |392|Is Subsequence|||Java/Javascript||
 |115|Distinct Subsequences|||Java/Javascript||
-|187|Repeated DNA Sequences|||Java/Javascript||
+|187|Repeated DNA Sequences||很少考|Java/Javascript||
 
 ### 3. Math
 
