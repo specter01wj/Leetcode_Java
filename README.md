@@ -238,7 +238,14 @@ Cspiration Category:
 |16|3Sum Closest||很少考|Java/Javascript||
 |259|3Sum Smaller||很少考|Java/Javascript||
 |18|4Sum|||Java/Javascript||
-
+|很少考||||||
+|231|Power of Two|||Java/Javascript||
+|326|Power of Three|||Java/Javascript||
+|342|Power of Four|||Java/Javascript||
+|372|Super Pow|||Java/Javascript||
+|233|Number of Digit One|||Java/Javascript||
+|231|Power of Two|||Java/Javascript||
+|231|Power of Two|||Java/Javascript||
 
 
 
