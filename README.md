@@ -210,6 +210,8 @@ Cspiration Category:
 |301|Remove Invalid Parentheses|||Java/Javascript||
 |Subsequence||||||
 |392|Is Subsequence|||Java/Javascript||
+|115|Distinct Subsequences|||Java/Javascript||
+|187|Repeated DNA Sequences|||Java/Javascript||
 
 ### 3. Math
 
