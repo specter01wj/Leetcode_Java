@@ -26,9 +26,9 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.*/
 public class E9_Palindrome_Number {
 
 	public static void main(String[] args) {
-		int[] input = {7,1,5,3,6,4};//{7,6,4,3,1};
-        int output = maxProfit(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int input = 121;
+        boolean output = isPalindrome(input);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	/*
@@ -91,6 +91,19 @@ public class E9_Palindrome_Number {
      * @param x: an integers
      * @return: boolean whether an integer is a palindrome
      */
-	
+	public static boolean isPalindrome(int x) {
+		if(x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+		
+		int revertedNumber = 0;
+		
+		while(x > revertedNumber) {
+			revertedNumber = revertedNumber * 10 + x % 10;
+			x /= 10;
+		}
+		
+		return x == revertedNumber || x == revertedNumber / 10;
+	}
 
 }
