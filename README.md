@@ -194,24 +194,24 @@ Cspiration Category:
 |159|Longest Substring with At Most Two Distinct Characters|Hard|Sliding Window|Java/Javascript||
 |Palindrome||||||
 |125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
-|266|Palindrome Permutation|||Java/Javascript||
-|5|Longest Palindromic Substring|||Java/Javascript||
+|266|Palindrome Permutation|Easy||Java/Javascript||
+|5|Longest Palindromic Substring|Medium||Java/Javascript||
 |9|Palindrome Number|Easy||Java/Javascript|Done/Done|
-|214|Shortest Palindrome|||Java/Javascript||
-|336|Palindrome Pairs|||Java/Javascript||
-|131|Palindrome Partitioning|||Java/Javascript||
-|132|Palindrome Partitioning II|||Java/Javascript||
-|267|Palindrome Permutation II|||Java/Javascript||
+|214|Shortest Palindrome|Hard||Java/Javascript||
+|336|Palindrome Pairs|Hard||Java/Javascript||
+|131|Palindrome Partitioning|Medium||Java/Javascript||
+|132|Palindrome Partitioning II|Hard||Java/Javascript||
+|267|Palindrome Permutation II|Medium||Java/Javascript||
 |Parentheses||||||
-|20|Valid Parentheses|||Java/Javascript||
-|22|Generate Parentheses|||Java/Javascript||
-|32|Longest Valid Parentheses|||Java/Javascript||
-|241|Different Ways to Add Parentheses|||Java/Javascript||
-|301|Remove Invalid Parentheses|||Java/Javascript||
+|20|Valid Parentheses|Easy||Java/Javascript||
+|22|Generate Parentheses|Medium||Java/Javascript||
+|32|Longest Valid Parentheses|Hard||Java/Javascript||
+|241|Different Ways to Add Parentheses|Medium||Java/Javascript||
+|301|Remove Invalid Parentheses|Hard||Java/Javascript||
 |Subsequence||||||
-|392|Is Subsequence|||Java/Javascript||
-|115|Distinct Subsequences|||Java/Javascript||
-|187|Repeated DNA Sequences||很少考|Java/Javascript||
+|392|Is Subsequence|Medium||Java/Javascript||
+|115|Distinct Subsequences|Hard||Java/Javascript||
+|187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 
 ### 3. Math
 
