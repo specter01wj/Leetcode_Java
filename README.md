@@ -181,17 +181,17 @@ Cspiration Category:
 |247|Strobogrammatic Number II|Medium||Java/Javascript||
 |248|Strobogrammatic Number III|Hard|很少考|Java/Javascript||
 |提高||||||
-|68|Text Justification|||Java/Javascript||
-|65|Valid Number|||Java/Javascript||
-|157|Read N Characters Given Read4|||Java/Javascript||
-|158|Read N Characters Given Read4 II - Call multiple times|||Java/Javascript||
+|68|Text Justification|Hard||Java/Javascript||
+|65|Valid Number|Hard||Java/Javascript||
+|157|Read N Characters Given Read4|Easy||Java/Javascript||
+|158|Read N Characters Given Read4 II - Call multiple times|Hard||Java/Javascript||
 |Substring||||||
-|76|Minimum Window Substring||Sliding Window|Java/Javascript||
-|30|Substring with Concatenation of All Words||Sliding Window|Java/Javascript||
-|3|Longest Substring Without Repeating Characters||Sliding Window|Java/Javascript||
-|340|Longest Substring with At Most K Distinct Characters||Sliding Window|Java/Javascript||
-|395|Longest Substring with At Least K Repeating Characters||Sliding Window|Java/Javascript||
-|159|Longest Substring with At Most Two Distinct Characters||Sliding Window|Java/Javascript||
+|76|Minimum Window Substring|Hard|Sliding Window|Java/Javascript||
+|30|Substring with Concatenation of All Words|Hard|Sliding Window|Java/Javascript||
+|3|Longest Substring Without Repeating Characters|Medium|Sliding Window|Java/Javascript||
+|340|Longest Substring with At Most K Distinct Characters|Hard|Sliding Window|Java/Javascript||
+|395|Longest Substring with At Least K Repeating Characters|Medium|Sliding Window|Java/Javascript||
+|159|Longest Substring with At Most Two Distinct Characters|Hard|Sliding Window|Java/Javascript||
 |Palindrome||||||
 |125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
 |266|Palindrome Permutation|||Java/Javascript||
