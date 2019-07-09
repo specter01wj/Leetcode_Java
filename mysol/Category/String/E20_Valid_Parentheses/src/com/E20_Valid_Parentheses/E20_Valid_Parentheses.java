@@ -35,9 +35,9 @@ Output: true*/
 public class E20_Valid_Parentheses {
 
 	public static void main(String[] args) {
-		int[] input = {7,1,5,3,6,4};//{7,6,4,3,1};
-        int output = maxProfit(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		String input = "()[]{}";
+        boolean output = maxProfit(input);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	/*
@@ -92,7 +92,21 @@ public class E20_Valid_Parentheses {
      * @return: boolean, whether the string is a valid parentheses
      */
 	public static boolean isValid(String s) {
+		Stack<Character> stack = new Stack<Character>();
 		
+		for(char c : s.toCharArray()) {
+			if(c == '(') {
+				stack.push(')');
+			} else if (c == '{') {
+                stack.push('}');
+			} else if (c == '[') {
+                stack.push(']');
+			} else if (stack.isEmpty() || stack.pop() != c) {
+                return false;
+			}
+		}
+		
+		return stack.isEmpty();
 	}
 
 }
