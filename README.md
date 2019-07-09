@@ -247,9 +247,9 @@ Cspiration Category:
 |319|Bulb Switcher|||Java/Javascript||
 |292|Nim Game|||Java/Javascript||
 |202|Happy Number|||Java/Javascript||
-|292|Nim Game|||Java/Javascript||
-|292|Nim Game|||Java/Javascript||
-|292|Nim Game|||Java/Javascript||
+|400|Nth Digit|||Java/Javascript||
+|263|Ugly Number|||Java/Javascript||
+|264|Ugly Number II|||Java/Javascript||
 |292|Nim Game|||Java/Javascript||
 |292|Nim Game|||Java/Javascript||
 
