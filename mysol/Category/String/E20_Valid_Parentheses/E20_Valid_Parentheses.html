@@ -41,18 +41,21 @@
 			     * @return: boolean, whether the string is a valid parentheses
 			     */
 				var isValid = function(x) {
-					if(x < 0 || (x % 10 == 0 && x != 0)) {
-			            return false;
-			        }
-					
-					var revertedNumber = 0;
-					
-					while(x > revertedNumber) {
-						revertedNumber = revertedNumber * 10 + x % 10;
-						x /= 10;
+					var stack = [];
+		
+					for(var c in s.split()) {
+						if(c === '(') {
+							stack.push(')');
+						} else if (c === '{') {
+			                stack.push('}');
+						} else if (c === '[') {
+			                stack.push(']');
+						} else if (stack.length === 0 || stack.pop() !== c) {
+			                return false;
+						}
 					}
 					
-					return x == revertedNumber || x == revertedNumber / 10;
+					return stack.length === 0;
 				};
 
 				var nums = "()[]{}";
