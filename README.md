@@ -251,7 +251,7 @@ Cspiration Category:
 |263|Ugly Number|||Java/Javascript||
 |264|Ugly Number II|||Java/Javascript||
 |306|Additive Number|||Java/Javascript||
-|292|Nim Game|||Java/Javascript||
+|172|Factorial Trailing Zeroes|||Java/Javascript||
 
 
 
