@@ -14,7 +14,7 @@ By Jin Wang
 |9|**Palindrome Number**|Easy|Java/Javascript|Done/Done|
 |13|**Roman to Integer**|Easy|Java/Javascript|Done/Done|
 |14|**Longest Common Prefix**|Easy|Java/Javascript|Done/Done|
-|20|**Valid Parentheses**|Easy|Java/Javascript||
+|20|**Valid Parentheses**|Easy|Java/Javascript|Done/Done|
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript||
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript|Done/Done|
 |27|**Remove Element**|Easy|Java/Javascript|Done/Done|
@@ -203,7 +203,7 @@ Cspiration Category:
 |132|Palindrome Partitioning II|Hard||Java/Javascript||
 |267|Palindrome Permutation II|Medium||Java/Javascript||
 |Parentheses||||||
-|20|Valid Parentheses|Easy||Java/Javascript||
+|20|Valid Parentheses|Easy||Java/Javascript|Done/Done|
 |22|Generate Parentheses|Medium||Java/Javascript||
 |32|Longest Valid Parentheses|Hard||Java/Javascript||
 |241|Different Ways to Add Parentheses|Medium||Java/Javascript||
