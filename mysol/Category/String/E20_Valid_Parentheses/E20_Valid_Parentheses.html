@@ -40,10 +40,11 @@
 			     * @param s: a string
 			     * @return: boolean, whether the string is a valid parentheses
 			     */
-				var isValid = function(x) {
+				var isValid = function(s) {
 					var stack = [];
+					var arr = s.split("");
 		
-					for(var c in s.split()) {
+					for(var c of arr) {
 						if(c === '(') {
 							stack.push(')');
 						} else if (c === '{') {
