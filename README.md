@@ -252,6 +252,14 @@ Cspiration Category:
 |264|Ugly Number II|||Java/Javascript||
 |306|Additive Number|||Java/Javascript||
 |172|Factorial Trailing Zeroes|||Java/Javascript||
+|343|Integer Break|||Java/Javascript||
+|396|Rotate Function|||Java/Javascript||
+|390|Elimination Game|||Java/Javascript||
+|386|Lexicographical Numbers|||Java/Javascript||
+|357|Count Numbers with Unique Digits|||Java/Javascript||
+|360|Sort Transformed Array|||Java/Javascript||
+|397|Integer Replacement|||Java/Javascript||
+|368|Largest Divisible Subset|||Java/Javascript||
 
 
 
