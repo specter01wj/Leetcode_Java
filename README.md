@@ -220,7 +220,7 @@ Cspiration Category:
 |基础||||||
 |7|Reverse Integer|Easy||Java/Javascript|Done/Done|
 |165|Compare Version Numbers|||Java/Javascript||
-|66|Plus One|||Java/Javascript||
+|66|Plus One|Easy||Java/Javascript|Done/Done|
 |8|String to Integer (atoi)|||Java/Javascript||
 |258|Add Digits|||Java/Javascript||
 |67|Add Binary|||Java/Javascript||
