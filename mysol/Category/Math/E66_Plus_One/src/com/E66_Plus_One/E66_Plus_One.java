@@ -24,18 +24,16 @@ Explanation: The array represents the integer 4321.*/
 public class E66_Plus_One {
 
 	public static void main(String[] args) {
-		int[] input = {4,3,2,1};
+		int[] input = {9,9,9};//{4,3,2,1}
         int[] output = plusOne(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    // The complexity is O(1)
+    // f(n) = 9/10 + 1/10 * O(n-1)
+    //  ==>  O(n) =  10 / 9 = 1.1111 = O(1)
     */
 	
 	/*
