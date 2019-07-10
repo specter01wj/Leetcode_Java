@@ -36,6 +36,7 @@ By Jin Wang
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
+|258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
@@ -222,7 +223,7 @@ Cspiration Category:
 |165|Compare Version Numbers|||Java/Javascript||
 |66|Plus One|Easy||Java/Javascript|Done/Done|
 |8|String to Integer (atoi)|||Java/Javascript||
-|258|Add Digits|||Java/Javascript||
+|258|Add Digits|||Java/Javascript|Done/Done|
 |67|Add Binary|||Java/Javascript||
 |43|Multiply Strings|||Java/Javascript||
 |29|Divide Two Integers|||Java/Javascript||
