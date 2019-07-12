@@ -24,6 +24,7 @@ By Jin Wang
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
 |58|**Length of Last Word**|Easy|Java/Javascript|Done/Done|
 |67|Add Binary|Easy|Java/Javascript|Done/Done|
+|69|Sqrt(x)|Easy|Java/Javascript|Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
@@ -228,7 +229,7 @@ Cspiration Category:
 |67|Add Binary|Easy||Java/Javascript|Done/Done|
 |43|Multiply Strings|||Java/Javascript||
 |29|Divide Two Integers|||Java/Javascript||
-|69|Sqrt(x)|||Java/Javascript||
+|69|Sqrt(x)|Easy||Java/Javascript|Done/Done|
 |50|Pow(x, n)|||Java/Javascript||
 |367|Valid Perfect Square|||Java/Javascript||
 |365|Water and Jug Problem|||Java/Javascript||
