@@ -28,27 +28,24 @@
 			     * @param x: an integer
 			     * @return: integer, The sqrt of x
 			     */
-				var mySqrt = function(digits) {
-					var carries = 1;
-
-					for(var i = digits.length - 1; i >= 0 && carries > 0; i--) {
-						var sum = digits[i] + carries;
-						digits[i] = sum % 10;
-						carries = parseInt(sum / 10);
+				var mySqrt = function(x) {
+					if(x == 0) {
+						return 0;
 					}
-
-					if(carries == 0) {
-						return digits;
+					
+					var left = 1, right = Number.MAX_VALUE;
+					
+					while(true) {
+						var mid = left + (right - left) / 2;
+						if(mid > x / mid) {
+							right = mid - 1;
+						} else {
+							if(mid + 1 > x / (mid + 1)) {
+								return mid;
+							}
+							left = mid + 1;
+						}
 					}
-
-					var rst = new Array(digits.length + 1);
-					rst[0] = 1;
-
-					for(var i = 1; i < rst.length; i++) {
-						rst[i] = digits[i - 1];
-					}
-
-					return rst;
 
 				};
 
