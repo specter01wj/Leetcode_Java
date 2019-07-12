@@ -23,7 +23,7 @@ Explanation: The square root of 8 is 2.82842..., and since
 public class E69_Sqrtx {
 
 	public static void main(String[] args) {
-		int input = 8;
+		int input = 41;
         int output = mySqrt(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
@@ -41,6 +41,25 @@ public class E69_Sqrtx {
      * @param prices: a list of integers
      * @return: find a maximum profit
      */
-	
+	public static int mySqrt(int x) {
+		if(x == 0) {
+			return 0;
+		}
+		
+		int left = 1, right = Integer.MAX_VALUE;
+		
+		while(true) {
+			int mid = left + (right - left) / 2;
+			if(mid > x / mid) {
+				right = mid - 1;
+			} else {
+				if(mid + 1 > x / (mid + 1)) {
+					return mid;
+				}
+				left = mid + 1;
+			}
+		}
+		
+	}
 
 }
