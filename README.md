@@ -23,6 +23,7 @@ By Jin Wang
 |38|**Count and Say**|Easy|Java/Javascript|Done/Done|
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
 |58|**Length of Last Word**|Easy|Java/Javascript|Done/Done|
+|67|Add Binary|Easy|Java/Javascript|Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
@@ -224,7 +225,7 @@ Cspiration Category:
 |66|Plus One|Easy||Java/Javascript|Done/Done|
 |8|String to Integer (atoi)|||Java/Javascript||
 |258|Add Digits|Easy||Java/Javascript|Done/Done|
-|67|Add Binary|||Java/Javascript||
+|67|Add Binary|Easy||Java/Javascript|Done/Done|
 |43|Multiply Strings|||Java/Javascript||
 |29|Divide Two Integers|||Java/Javascript||
 |69|Sqrt(x)|||Java/Javascript||
