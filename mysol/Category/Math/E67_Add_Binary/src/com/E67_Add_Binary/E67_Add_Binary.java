@@ -47,7 +47,7 @@ public class E67_Add_Binary {
 		}
 		
 		if(carry != 0) {
-			ans = carry +ans;
+			ans = carry + ans;
 		}
 		
 		return ans;
