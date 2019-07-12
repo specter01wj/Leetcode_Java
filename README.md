@@ -223,7 +223,7 @@ Cspiration Category:
 |165|Compare Version Numbers|||Java/Javascript||
 |66|Plus One|Easy||Java/Javascript|Done/Done|
 |8|String to Integer (atoi)|||Java/Javascript||
-|258|Add Digits|||Java/Javascript|Done/Done|
+|258|Add Digits|Easy||Java/Javascript|Done/Done|
 |67|Add Binary|||Java/Javascript||
 |43|Multiply Strings|||Java/Javascript||
 |29|Divide Two Integers|||Java/Javascript||
