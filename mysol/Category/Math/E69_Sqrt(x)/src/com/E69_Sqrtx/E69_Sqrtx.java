@@ -30,16 +30,14 @@ public class E69_Sqrtx {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    思路：直接对答案可能存在的区间进行二分 => 二分答案
+	注意：判断区间的时候一个小技巧： mid * mid == x 中使用乘法可能会溢出，
+	写成 mid == x / mid 即可防止溢出，不需要使用long或者BigInteger
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: find a maximum profit
+     * @param x: an integer
+     * @return: integer, The sqrt of x
      */
 	public static int mySqrt(int x) {
 		if(x == 0) {
