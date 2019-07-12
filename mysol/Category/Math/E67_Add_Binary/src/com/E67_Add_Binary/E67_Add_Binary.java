@@ -20,16 +20,12 @@ public class E67_Add_Binary {
 	public static void main(String[] args) {
 		String input1 = "1010", input2 = "1011";
         String output = addBinary(input1, input2);
-        System.out.println("input1: " + (input1) + "input2: " + (input2) + "\noutput: " + (output));
+        System.out.println("input1: " + (input1) + " / input2: " + (input2) + "\noutput: " + (output));
 	}
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    
     */
 	
 	/*
