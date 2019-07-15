@@ -26,19 +26,19 @@
 			     */
 				var isPerfectSquare = function(num) {
 					//		sol 1:
-					var r = num;
+					/*var r = num;
 					
 					while(r * r > num) {
-						r = (r + num / r) / 2;
+						r = parseInt((r + num / r) / 2);
 					}
 					
-					return r * r == num;
+					return r * r == num;*/
 							
 					//		sol 2:
-					/*long low = 0, high = num;
+					var low = 0, high = num;
 					
 					while(high - low > 1) {
-						long mid = (low + high) / 2;
+						var mid = parseInt((low + high) / 2);
 						if(mid * mid <= num) {
 							low = mid;
 						} else {
@@ -46,13 +46,13 @@
 						}
 					}
 					
-					long ans = low;
+					var ans = low;
 					
 					if(low * low < num) {
 						ans = high;
 					}
 					
-					return ans * ans == num;*/
+					return ans * ans === num;
 
 				};
 
