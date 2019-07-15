@@ -43,6 +43,7 @@ By Jin Wang
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
+|367|Valid Perfect Square|Easy|Java/Javascript|Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 
@@ -231,7 +232,7 @@ Cspiration Category:
 |29|Divide Two Integers|||Java/Javascript||
 |69|Sqrt(x)|Easy||Java/Javascript|Done/Done|
 |50|Pow(x, n)|||Java/Javascript||
-|367|Valid Perfect Square|||Java/Javascript||
+|367|Valid Perfect Square|Easy||Java/Javascript|Done/Done|
 |365|Water and Jug Problem|||Java/Javascript||
 |204|Count Primes|||Java/Javascript||
 |Sum||||||
