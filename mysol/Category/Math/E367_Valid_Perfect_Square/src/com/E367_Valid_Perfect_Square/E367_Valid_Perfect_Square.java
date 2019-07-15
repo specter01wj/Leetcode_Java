@@ -34,6 +34,14 @@ public class E367_Valid_Perfect_Square {
      * @param num: a positive integer
      * @return: boolean, if num is a perfect square else False
      */
-	
+	public static boolean isPerfectSquare(int num) {
+		long r = num;
+		
+		while(r * r > num) {
+			r = (r + num / r) / 2;
+		}
+		
+		return r * r == num;
+	}
 
 }
