@@ -53,11 +53,13 @@ public class E204_Count_Primes {
 		}
 		
 		int res = 0;
+		List<Integer> arrList = new ArrayList<>();
 		boolean[] notPrime = new boolean[n];
 		
 		for(int i = 2; i < n; i++) {
 			if(notPrime[i] == false) {
 				res++;
+				arrList.add(i);
 				for(int j = 2; i * j < n; j++) {
 					notPrime[i * j] = true;
 				}
@@ -65,6 +67,7 @@ public class E204_Count_Primes {
 		}
 		
 		return res;
+		
 	}
 
 }
