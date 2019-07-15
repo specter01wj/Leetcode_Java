@@ -19,7 +19,7 @@ Output: false*/
 public class E367_Valid_Perfect_Square {
 
 	public static void main(String[] args) {
-		int input = 16;
+		int input = 36;
         boolean output = isPerfectSquare(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
