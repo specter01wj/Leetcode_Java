@@ -224,21 +224,21 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |7|Reverse Integer|Easy||Java/Javascript|Done/Done|
-|165|Compare Version Numbers|||Java/Javascript||
+|165|Compare Version Numbers|Medium||Java/Javascript||
 |66|Plus One|Easy||Java/Javascript|Done/Done|
-|8|String to Integer (atoi)|||Java/Javascript||
+|8|String to Integer (atoi)|Medium||Java/Javascript||
 |258|Add Digits|Easy||Java/Javascript|Done/Done|
 |67|Add Binary|Easy||Java/Javascript|Done/Done|
-|43|Multiply Strings|||Java/Javascript||
-|29|Divide Two Integers|||Java/Javascript||
+|43|Multiply Strings|Medium||Java/Javascript||
+|29|Divide Two Integers|Medium||Java/Javascript||
 |69|Sqrt(x)|Easy||Java/Javascript|Done/Done|
-|50|Pow(x, n)|||Java/Javascript||
+|50|Pow(x, n)|Medium||Java/Javascript||
 |367|Valid Perfect Square|Easy||Java/Javascript|Done/Done|
-|365|Water and Jug Problem|||Java/Javascript||
+|365|Water and Jug Problem|Medium||Java/Javascript||
 |204|Count Primes|Easy||Java/Javascript|Done/Done|
 |Sum||||||
 |1|Two Sum|Easy||Java/Javascript|Done/Done|
-|167|Two Sum II - Input array is sorted|||Java/Javascript||
+|167|Two Sum II - Input array is sorted|Easy||Java/Javascript||
 |3|3Sum|||Java/Javascript||
 |16|3Sum Closest||很少考|Java/Javascript||
 |259|3Sum Smaller||很少考|Java/Javascript||
