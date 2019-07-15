@@ -36,6 +36,7 @@ By Jin Wang
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
+|204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
@@ -43,7 +44,7 @@ By Jin Wang
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
-|367|Valid Perfect Square|Easy|Java/Javascript|Done/Done|
+|367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 
@@ -234,7 +235,7 @@ Cspiration Category:
 |50|Pow(x, n)|||Java/Javascript||
 |367|Valid Perfect Square|Easy||Java/Javascript|Done/Done|
 |365|Water and Jug Problem|||Java/Javascript||
-|204|Count Primes|||Java/Javascript||
+|204|Count Primes|Easy||Java/Javascript|Done/Done|
 |Sum||||||
 |1|Two Sum|Easy||Java/Javascript|Done/Done|
 |167|Two Sum II - Input array is sorted|||Java/Javascript||
