@@ -244,27 +244,27 @@ Cspiration Category:
 |259|3Sum Smaller|Medium|很少考|Java/Javascript||
 |18|4Sum|Medium||Java/Javascript||
 |很少考||||||
-|231|Power of Two|||Java/Javascript||
-|326|Power of Three|||Java/Javascript||
-|342|Power of Four|||Java/Javascript||
-|372|Super Pow|||Java/Javascript||
-|233|Number of Digit One|||Java/Javascript||
-|319|Bulb Switcher|||Java/Javascript||
-|292|Nim Game|||Java/Javascript||
-|202|Happy Number|||Java/Javascript||
-|400|Nth Digit|||Java/Javascript||
-|263|Ugly Number|||Java/Javascript||
-|264|Ugly Number II|||Java/Javascript||
-|306|Additive Number|||Java/Javascript||
-|172|Factorial Trailing Zeroes|||Java/Javascript||
-|343|Integer Break|||Java/Javascript||
-|396|Rotate Function|||Java/Javascript||
-|390|Elimination Game|||Java/Javascript||
-|386|Lexicographical Numbers|||Java/Javascript||
-|357|Count Numbers with Unique Digits|||Java/Javascript||
-|360|Sort Transformed Array|||Java/Javascript||
-|397|Integer Replacement|||Java/Javascript||
-|368|Largest Divisible Subset|||Java/Javascript||
+|231|Power of Two|Easy||Java/Javascript||
+|326|Power of Three|Easy||Java/Javascript||
+|342|Power of Four|Easy||Java/Javascript||
+|372|Super Pow|Medium||Java/Javascript||
+|233|Number of Digit One|Hard||Java/Javascript||
+|319|Bulb Switcher|Medium||Java/Javascript||
+|292|Nim Game|Easy||Java/Javascript||
+|202|Happy Number|Easy||Java/Javascript||
+|400|Nth Digit|Easy||Java/Javascript||
+|263|Ugly Number|Easy||Java/Javascript||
+|264|Ugly Number II|Medium||Java/Javascript||
+|306|Additive Number|Medium||Java/Javascript||
+|172|Factorial Trailing Zeroes|Easy||Java/Javascript||
+|343|Integer Break|Medium||Java/Javascript||
+|396|Rotate Function|Medium||Java/Javascript||
+|390|Elimination Game|Medium||Java/Javascript||
+|386|Lexicographical Numbers|Medium||Java/Javascript||
+|357|Count Numbers with Unique Digits|Medium||Java/Javascript||
+|360|Sort Transformed Array|Medium||Java/Javascript||
+|397|Integer Replacement|Medium||Java/Javascript||
+|368|Largest Divisible Subset|Medium||Java/Javascript||
 
 
 
