@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
+
+				Example 1:
+
+				Input: 16
+				Output: true
+				Example 2:
+
+				Input: 5
+				Output: false
+			 */
+			$(document).ready(function(){
+
+				/*
+			     * @param num: an integer
+			     * @return: boolean, whether the integer is a power of 4
+			     */
+				var isPowerOfFour = function(num) {
+					if(num < 1) {
+			            return false;
+			        }
+
+			        if((num & (num - 1)) !== 0) {
+			            return false;
+			        }
+
+			        while(num > 1) {
+			            num = num >> 2;
+			        }
+
+			        if(num === 1) {
+			            return true;
+			        }
+
+			        return false;
+				};
+
+				var nums = 4096;
+				var tt1 = isPowerOfFour(nums);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			Approach 1: Loop Iteration
+			One simple way of finding out if a number n is a power of a number b is to keep 
+			dividing n by b as long as the remainder is 0. This is because we can write
+			
+			n = b^x
+			n = b x b x ... x b
+			
+			Hence it should be possible to divide n by b x times, every time with a remainder 
+			of 0 and the end result to be 1.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
