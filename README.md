@@ -38,6 +38,7 @@ By Jin Wang
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
+|231|**Power of Two**|Easy|Java/Javascript|Done/Done|
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
@@ -244,7 +245,7 @@ Cspiration Category:
 |259|3Sum Smaller|Medium|很少考|Java/Javascript||
 |18|4Sum|Medium||Java/Javascript||
 |很少考||||||
-|231|Power of Two|Easy||Java/Javascript||
+|231|Power of Two|Easy||Java/Javascript|Done/Done|
 |326|Power of Three|Easy||Java/Javascript||
 |342|Power of Four|Easy||Java/Javascript||
 |372|Super Pow|Medium||Java/Javascript||
