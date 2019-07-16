@@ -44,7 +44,7 @@ By Jin Wang
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |326|**Power of Three**|Easy|Java/Javascript|Done/Done|
-|342|**Power of Four**|Easy||Java/Javascript|Done/Done|
+|342|**Power of Four**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
