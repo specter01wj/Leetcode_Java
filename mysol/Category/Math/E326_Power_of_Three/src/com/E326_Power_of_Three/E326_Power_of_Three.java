@@ -31,16 +31,20 @@ public class E326_Power_of_Three {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    Approach 1: Loop Iteration
+	One simple way of finding out if a number n is a power of a number b is to keep 
+	dividing n by b as long as the remainder is 0. This is because we can write
+	
+	n = b^x
+	n = b x b x ... x b
+	
+	Hence it should be possible to divide n by b x times, every time with a remainder 
+	of 0 and the end result to be 1.
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: find a maximum profit
+     * @param n: an integer
+     * @return: boolean, if n is a power of three
      */
 	public static boolean isPowerOfThree(int n) {
         if (n < 1) {
