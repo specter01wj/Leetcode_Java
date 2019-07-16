@@ -43,6 +43,7 @@ By Jin Wang
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
+|326|**Power of Three**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
@@ -246,7 +247,7 @@ Cspiration Category:
 |18|4Sum|Medium||Java/Javascript||
 |很少考||||||
 |231|Power of Two|Easy||Java/Javascript|Done/Done|
-|326|Power of Three|Easy||Java/Javascript||
+|326|Power of Three|Easy||Java/Javascript|Done/Done|
 |342|Power of Four|Easy||Java/Javascript||
 |372|Super Pow|Medium||Java/Javascript||
 |233|Number of Digit One|Hard||Java/Javascript||
