@@ -29,6 +29,7 @@ By Jin Wang
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |125|**Valid Palindrome**|Easy|Java/Javascript|Done/Done|
+|167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
@@ -241,7 +242,7 @@ Cspiration Category:
 |204|Count Primes|Easy||Java/Javascript|Done/Done|
 |Sum||||||
 |1|Two Sum|Easy||Java/Javascript|Done/Done|
-|167|Two Sum II - Input array is sorted|Easy||Java/Javascript||
+|167|Two Sum II - Input array is sorted|Easy||Java/Javascript|Done/Done|
 |3|3Sum|Medium||Java/Javascript||
 |16|3Sum Closest|Medium|很少考|Java/Javascript||
 |259|3Sum Smaller|Medium|很少考|Java/Javascript||
