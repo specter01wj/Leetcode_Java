@@ -44,6 +44,7 @@ By Jin Wang
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
+|292|**Nim Game**|Easy|Java/Javascript|Done/Done|
 |326|**Power of Three**|Easy|Java/Javascript|Done/Done|
 |342|**Power of Four**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
@@ -254,7 +255,7 @@ Cspiration Category:
 |372|Super Pow|Medium||Java/Javascript||
 |233|Number of Digit One|Hard||Java/Javascript||
 |319|Bulb Switcher|Medium||Java/Javascript||
-|292|Nim Game|Easy||Java/Javascript||
+|292|Nim Game|Easy||Java/Javascript|Done/Done|
 |202|Happy Number|Easy||Java/Javascript||
 |400|Nth Digit|Easy||Java/Javascript||
 |263|Ugly Number|Easy||Java/Javascript||
