@@ -29,20 +29,20 @@
 			     * @return: boolean, whether is a happy number
 			     */
 				var isHappy = function(n) {
-					HashSet<Integer> hash = new HashSet<Integer>();
+					var hash = [];
 		
-					while(n != 1) {
-						if(hash.contains(n)) {
+					while(n !== 1) {
+						if(hash.includes(n)) {
 							return false;
 						}
-						hash.add(n);
+						hash.push(n);
 						n = getNextHappy(n);
 					}
 					
 					return true;
 				};
 
-				function getNextHappy(int n) {
+				function getNextHappy(n) {
 					var sum = 0;
 					while(n !== 0) {
 						sum += (n % 10) * (n % 10);
