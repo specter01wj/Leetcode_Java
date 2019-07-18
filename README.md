@@ -37,6 +37,7 @@ By Jin Wang
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
+|202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
 |231|**Power of Two**|Easy|Java/Javascript|Done/Done|
@@ -256,7 +257,7 @@ Cspiration Category:
 |233|Number of Digit One|Hard||Java/Javascript||
 |319|Bulb Switcher|Medium||Java/Javascript||
 |292|Nim Game|Easy||Java/Javascript|Done/Done|
-|202|Happy Number|Easy||Java/Javascript||
+|202|Happy Number|Easy||Java/Javascript|Done/Done|
 |400|Nth Digit|Easy||Java/Javascript||
 |263|Ugly Number|Easy||Java/Javascript||
 |264|Ugly Number II|Medium||Java/Javascript||
