@@ -41,7 +41,7 @@ public class E202_Happy_Number {
      * @param prices: a list of integers
      * @return: find a maximum profit
      */
-	public boolean isHappy(int n) {
+	public static boolean isHappy(int n) {
 		HashSet<Integer> hash = new HashSet<Integer>();
 		
 		while(n != 1) {
@@ -55,7 +55,7 @@ public class E202_Happy_Number {
 		return true;
 	}
 	
-	private int getNextHappy(int n) {
+	private static int getNextHappy(int n) {
 		int sum = 0;
 		while(n != 0) {
 			sum += (n % 10) * (n % 10);
