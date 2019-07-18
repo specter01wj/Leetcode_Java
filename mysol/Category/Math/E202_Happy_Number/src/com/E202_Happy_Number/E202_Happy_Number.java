@@ -30,16 +30,12 @@ public class E202_Happy_Number {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    看看变化的过程中，是否出现重复，若出现，则代表不是快乐数
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: find a maximum profit
+     * @param n: an integer
+     * @return: boolean, whether is a happy number
      */
 	public static boolean isHappy(int n) {
 		HashSet<Integer> hash = new HashSet<Integer>();
