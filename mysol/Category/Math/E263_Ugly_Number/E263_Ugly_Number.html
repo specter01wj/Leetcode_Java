@@ -30,21 +30,29 @@
 			     * @param num: an integer
 			     * @return: boolean, true if num is an ugly number or false
 			     */
-				var addDigits = function(num) {
-					while(num >= 10) {
-						var sum = 0;
-						while(num > 0) {
-							sum += num % 10;
-							num = parseInt(num / 10);
-						}
-						num = sum;
+				var isUgly = function(num) {
+					if(num <= 0) {
+						return false;
+					}
+					if(num === 1) {
+						return true;
 					}
 					
-					return num;
+					while(num >= 2 && num % 2 === 0) {
+						num = parseInt(num / 2);
+					}
+					while(num >= 3 && num % 3 === 0) {
+						num = parseInt(num / 3);  
+					}
+			        while(num >= 5 && num % 5 === 0) {
+			        		num = parseInt(num / 5);  
+			        }
+			        
+			        return num === 1;
 				};
 
-				var nums = 3832;
-				var tt1 = addDigits(nums);
+				var nums = 8;
+				var tt1 = isUgly(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
