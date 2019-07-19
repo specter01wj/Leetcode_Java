@@ -41,8 +41,8 @@ public class E400_Nth_Digit {
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: find a maximum profit
+     * @param n: a positive integer
+     * @return: the nth digit of the infinite integer sequence
      */
 	public static int findNthDigit(int n) {
         // 初始化一位数的整数有9个，从1开始
