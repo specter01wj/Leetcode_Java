@@ -28,21 +28,22 @@ By Jin Wang
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
+|121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
+|122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |125|**Valid Palindrome**|Easy|Java/Javascript|Done/Done|
 |167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
-|217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
-|219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
-|121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
-|122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
+|217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
+|219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |231|**Power of Two**|Easy|Java/Javascript|Done/Done|
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
+|263|**Ugly Number**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
@@ -259,7 +260,7 @@ Cspiration Category:
 |292|Nim Game|Easy||Java/Javascript|Done/Done|
 |202|Happy Number|Easy||Java/Javascript|Done/Done|
 |400|Nth Digit|Easy||Java/Javascript||
-|263|Ugly Number|Easy||Java/Javascript||
+|263|Ugly Number|Easy||Java/Javascript|Done/Done|
 |264|Ugly Number II|Medium||Java/Javascript||
 |306|Additive Number|Medium||Java/Javascript||
 |172|Factorial Trailing Zeroes|Easy||Java/Javascript||
