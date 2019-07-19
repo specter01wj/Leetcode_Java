@@ -25,7 +25,7 @@ Explanation: 14 is not ugly since it includes another prime factor 7.*/
 public class E263_Ugly_Number {
 
 	public static void main(String[] args) {
-		int input = 6;
+		int input = 8;
         boolean output = isUgly(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
@@ -39,6 +39,25 @@ public class E263_Ugly_Number {
      * @param num: an integer
      * @return: boolean, true if num is an ugly number or false
      */
-	
+	public static boolean isUgly(int num) {
+		if(num <= 0) {
+			return false;
+		}
+		if(num == 1) {
+			return true;
+		}
+		
+		while(num >= 2 && num % 2 == 0) {
+			num /= 2;
+		}
+		while(num >= 3 && num % 3 == 0) {
+			num /= 3;  
+		}
+        while(num >= 5 && num % 5 == 0) {
+        		num /= 5;  
+        }
+        
+        return num == 1;
+	}
 
 }
