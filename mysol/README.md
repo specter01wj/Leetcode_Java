@@ -54,6 +54,7 @@ By Jin Wang
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
+|400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
@@ -259,7 +260,7 @@ Cspiration Category:
 |319|Bulb Switcher|Medium||Java/Javascript||
 |292|Nim Game|Easy||Java/Javascript|Done/Done|
 |202|Happy Number|Easy||Java/Javascript|Done/Done|
-|400|Nth Digit|Easy||Java/Javascript||
+|400|Nth Digit|Easy||Java/Javascript|Done/Done|
 |263|Ugly Number|Easy||Java/Javascript|Done/Done|
 |264|Ugly Number II|Medium||Java/Javascript||
 |306|Additive Number|Medium||Java/Javascript||
