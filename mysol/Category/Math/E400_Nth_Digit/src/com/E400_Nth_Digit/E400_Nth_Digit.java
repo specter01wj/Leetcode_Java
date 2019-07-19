@@ -37,11 +37,7 @@ public class E400_Nth_Digit {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    根据数字位数和个数之间的关系，找出第n位数存在于哪一个整数数值当中。然后根据位数和n之间的关系确定数值
     */
 	
 	/*
