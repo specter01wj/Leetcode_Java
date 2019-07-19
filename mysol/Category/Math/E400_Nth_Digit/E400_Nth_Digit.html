@@ -35,29 +35,28 @@
 			     * @param n: a positive integer
 			     * @return: integer, the nth digit of the infinite integer sequence
 			     */
-				var isUgly = function(num) {
-					if(num <= 0) {
-						return false;
-					}
-					if(num === 1) {
-						return true;
-					}
-					
-					while(num >= 2 && num % 2 === 0) {
-						num = parseInt(num / 2);
-					}
-					while(num >= 3 && num % 3 === 0) {
-						num = parseInt(num / 3);  
-					}
-			        while(num >= 5 && num % 5 === 0) {
-			        		num = parseInt(num / 5);  
-			        }
+				var findNthDigit = function(n) {
+					// 初始化一位数的整数有9个，从1开始
+			        var len = 1;
+			        var count = 9;
+			        var start = 1;
 			        
-			        return num === 1;
+			        while (n > len * count) {
+			            // 以此类推，二位数的整数有90个，从10开始
+			            n -= len * count;
+			            len += 1;
+			            count *= 10;
+			            start *= 10;
+			        }
+			    	// 找到第n位数在整数start中
+			        start += (n - 1) / len;
+			        var s = (start);
+			        // 取出对应位置的整数值
+			        return (s.charAt((n - 1) % len));
 				};
 
-				var nums = 8;
-				var tt1 = isUgly(nums);
+				var nums = 11;
+				var tt1 = findNthDigit(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
