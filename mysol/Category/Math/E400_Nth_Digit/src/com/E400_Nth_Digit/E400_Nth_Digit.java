@@ -48,6 +48,24 @@ public class E400_Nth_Digit {
      * @param prices: a list of integers
      * @return: find a maximum profit
      */
-	
+	public static int findNthDigit(int n) {
+        // 初始化一位数的整数有9个，从1开始
+        int len = 1;
+        long count = 9;
+        int start = 1;
+        
+        while (n > len * count) {
+            // 以此类推，二位数的整数有90个，从10开始
+            n -= len * count;
+            len += 1;
+            count *= 10;
+            start *= 10;
+        }
+    	// 找到第n位数在整数start中
+        start += (n - 1) / len;
+        String s = Integer.toString(start);
+        // 取出对应位置的整数值
+        return Character.getNumericValue(s.charAt((n - 1) % len));
+    }
 
 }
