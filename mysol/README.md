@@ -35,6 +35,7 @@ By Jin Wang
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
+|172|**Factorial Trailing Zeroes**|Easy|Java/Javascript|Done/Done|
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
@@ -264,7 +265,7 @@ Cspiration Category:
 |263|Ugly Number|Easy||Java/Javascript|Done/Done|
 |264|Ugly Number II|Medium||Java/Javascript||
 |306|Additive Number|Medium||Java/Javascript||
-|172|Factorial Trailing Zeroes|Easy||Java/Javascript||
+|172|Factorial Trailing Zeroes|Easy||Java/Javascript|Done/Done|
 |343|Integer Break|Medium||Java/Javascript||
 |396|Rotate Function|Medium||Java/Javascript||
 |390|Elimination Game|Medium||Java/Javascript||
