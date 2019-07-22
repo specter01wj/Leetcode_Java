@@ -18,7 +18,7 @@ Explanation: 5! = 120, one trailing zero.*/
 public class E172_Factorial_Trailing_Zeroes {
 
 	public static void main(String[] args) {
-		int input = 5;
+		int input = 15;
         int output = trailingZeroes(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
@@ -34,6 +34,12 @@ public class E172_Factorial_Trailing_Zeroes {
      * @param n: an integer
      * @return: the number of trailing zeroes in n!
      */
-	
+	public static int trailingZeroes(int n) {
+		if(n >= 5) {
+			return (n / 5 + trailingZeroes(n / 5));
+		} else {
+			return 0;
+		}
+	}
 
 }
