@@ -57,7 +57,7 @@ public class E400_Nth_Digit {
             count *= 10;
             start *= 10;
         }
-    	// 找到第n位数在整数start中
+    		// 找到第n位数在整数start中
         start += (n - 1) / len;
         String s = Integer.toString(start);
         // 取出对应位置的整数值
