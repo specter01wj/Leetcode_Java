@@ -442,7 +442,23 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|389|Find the Difference|Easy||Java/Javascript||
+|136|Single Number|Easy||Java/Javascript||
+|318|Maximum Product of Word Lengths|Medium||Java/Javascript||
+|很少考||||||
+|393|UTF-8 Validation|Medium||Java/Javascript||
+|201|Bitwise AND of Numbers Range|Medium||Java/Javascript||
+|371|Sum of Two Integers|Easy||Java/Javascript||
+|338|Counting Bits|Medium||Java/Javascript||
+|89|Gray Code|Medium||Java/Javascript||
+|268|Missing Number|Easy||Java/Javascript||
+|191|Number of 1 Bits|Easy||Java/Javascript||
+|190|Reverse Bits|Easy||Java/Javascript||
+|137|Single Number II|Medium||Java/Javascript||
+|260|Single Number III|Medium||Java/Javascript||
+
+
+
 
 
 
