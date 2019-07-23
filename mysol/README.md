@@ -348,7 +348,20 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|206|Reverse Linked List|Easy||Java/Javascript||
+|141|Linked List Cycle|Easy||Java/Javascript||
+|24|Swap Nodes in Pairs|Medium||Java/Javascript||
+|328|Odd Even Linked List|Medium||Java/Javascript||
+|92|Reverse Linked List II|Medium||Java/Javascript||
+|237|Delete Node in a Linked List|Easy||Java/Javascript||
+|19|Remove Nth Node From End of List|Medium||Java/Javascript||
+|83|Remove Duplicates from Sorted List|Easy||Java/Javascript||
+|203|Remove Linked List Elements|Easy||Java/Javascript||
+|82|Remove Duplicates from Sorted List II|Medium||Java/Javascript||
+|369|Plus One Linked List|Medium||Java/Javascript||
+|2|Add Two Numbers|Medium||Java/Javascript||
+|160|Intersection of Two Linked Lists|Easy||Java/Javascript||
+|21|Merge Two Sorted Lists|Easy||Java/Javascript||
 
 ### 8. Binary Search
 
