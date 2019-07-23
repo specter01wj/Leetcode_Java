@@ -410,7 +410,15 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|200|Number of Islands|Medium||Java/Javascript||
+|286|Walls and Gates|Medium||Java/Javascript||
+|130|Surrounded Regions|Medium||Java/Javascript||
+|339|Nested List Weight Sum|Easy||Java/Javascript||
+|364|Nested List Weight Sum II|Medium||Java/Javascript||
+|127|Word Ladder|Medium||Java/Javascript||
+|51|N-Queens|Hard||Java/Javascript||
+|52|N-Queens II|Hard||Java/Javascript||
+|126|Word Ladder II|Hard||Java/Javascript||
 
 ### 11. Stack & PriorityQueue
 
