@@ -30,31 +30,19 @@
 			     * @param t: a string
 			     * @return: the letter that was added in t
 			     */
-				var addBinary = function(a, b) {
-					var ans = "";
-		
-					var carry = 0;
+				var findTheDifference = function(s, t) {
+					var flag = 0;
 					
-					for(var i = a.length - 1, j = b.length - 1; i >= 0 || j >= 0; i--, j--) {
-						var sum = carry;
-						// sum += (i >= 0) ? a.charCodeAt(i) - '0'.charCodeAt(0) : 0;
-						// sum += (j >= 0) ? b.charCodeAt(j) - '0'.charCodeAt(0) : 0;
-						sum += (i >= 0) ? parseInt(a.charAt(i)) : 0;
-						sum += (j >= 0) ? parseInt(b.charAt(j)) : 0;
-						ans = (sum % 2) + ans;
-						carry = parseInt(sum / 2);
+					for(var i = 0; i < s.length; i++) {
+						flag += (t.charCodeAt(i) - s.charCodeAt(i));
 					}
+					flag += t.charCodeAt(t.length - 1);
 					
-					if(carry != 0) {
-						ans = carry + ans;
-					}
-					
-					return ans;
-
+					return String.fromCharCode(flag);
 				};
 
-				var num1 = "1010", num2 = "1011";
-				var tt1 = addBinary(num1, num2);
+				var num1 = "abcd", num2 = "dctba";
+				var tt1 = findTheDifference(num1, num2);
 				$('#t1').html('<h2>Input1: ' + num1 + ' / Input2: ' + num2 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
