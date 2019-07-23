@@ -322,7 +322,7 @@ Cspiration Category:
 |291|Word Pattern II|Hard||Java/Javascript||
 |Enumeration||||||
 |17|Letter Combinations of a Phone Number|Medium||Java/Javascript||
-|320|Subsets|Generalized Abbreviation|要重录|Java/Javascript||
+|320|Generalized Abbreviation|Medium|要重录|Java/Javascript||
 |93|Restore IP Addresses|Medium|很少考|Java/Javascript||
 |282|Expression Add Operators|Hard||Java/Javascript||
 |140|Word Break II|Hard||Java/Javascript||
