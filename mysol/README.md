@@ -328,19 +328,54 @@ Cspiration Category:
 |140|Word Break II|Hard||Java/Javascript||
 |351|Android Unlock Patterns|Medium||Java/Javascript||
 
+### 6. Dynamic Programming
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
+### 7. LinkedList
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
+### 8. Binary Search
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
+### 9. Matrix
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
+### 10. DFS & BFS
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
+### 11. Stack & PriorityQueue
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
+### 12. Bit Manipulation
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
 
 
 
