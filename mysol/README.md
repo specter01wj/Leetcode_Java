@@ -284,8 +284,16 @@ Cspiration Category:
 |94|Binary Tree Inorder Traversal|Medium|Inorder|Java/Javascript||
 |145|Binary Tree Postorder Traversal|Hard|postorder|Java/Javascript||
 |102|Binary Tree Level Order Traversal|Medium|DFS + BFS|Java/Javascript||
-
-
+|Preorder||||||
+|100|Same Tree|Easy|preorder|Java/Javascript||
+|101|Symmetric Tree|Easy|preorder|Java/Javascript||
+|226|Invert Binary Tree|Easy|preorder + BFS|Java/Javascript||
+|257|Binary Tree Paths|Easy|preorder|Java/Javascript||
+|112|Path Sum|Easy|preorder|Java/Javascript||
+|113|Path Sum II|Medium|preorder|Java/Javascript||
+|129|Sum Root to Leaf Numbers|Medium|preorder|Java/Javascript||
+|298|Binary Tree Longest Consecutive Sequence|Medium|preorder|Java/Javascript||
+|111|Minimum Depth of Binary Tree|Easy|preorder|Java/Javascript||
 
 
 
