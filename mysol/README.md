@@ -424,8 +424,18 @@ Cspiration Category:
 
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
-|基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|Stack||||||
+|155|Min Stack|Easy||Java/Javascript||
+|232|Implement Queue using Stacks|Easy||Java/Javascript||
+|225|Implement Stack using Queues|Easy||Java/Javascript||
+|150|Evaluate Reverse Polish Notation|Medium||Java/Javascript||
+|71|Simplify Path|Medium||Java/Javascript||
+|388|Longest Absolute File Path|Medium||Java/Javascript||
+|394|Decode String|Medium||Java/Javascript||
+|224|Basic Calculator|Hard||Java/Javascript||
+|227|Basic Calculator II|Medium||Java/Javascript||
+|385|Mini Parser|Medium||Java/Javascript||
+|84|Largest Rectangle in Histogram|Hard||Java/Javascript||
 
 ### 12. Bit Manipulation
 
