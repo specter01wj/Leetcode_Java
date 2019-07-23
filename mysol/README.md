@@ -368,7 +368,20 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|278|First Bad Version|Easy||Java/Javascript||
+|35|Search Insert Position|Easy||Java/Javascript||
+|33|Search in Rotated Sorted Array|Medium||Java/Javascript||
+|81|Search in Rotated Sorted Array II|Medium||Java/Javascript||
+|153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
+|154|Find Minimum in Rotated Sorted Array II|Hard||Java/Javascript||
+|162|Find Peak Element|Medium||Java/Javascript||
+|374|Guess Number Higher or Lower|Easy||Java/Javascript||
+|34|Search for a Range|Medium||Java/Javascript||
+|349|Intersection of Two Arrays|Easy||Java/Javascript||
+|350|Intersection of Two Arrays II|Easy||Java/Javascript||
+|315|Count of Smaller Numbers After Self|Hard||Java/Javascript||
+|300|Longest Increasing Subsequence|Medium||Java/Javascript||
+|354|Russian Doll Envelopes|Hard||Java/Javascript||
 
 ### 9. Matrix
 
