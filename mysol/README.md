@@ -387,8 +387,23 @@ Cspiration Category:
 
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
-|基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|48||||||
+|54|Spiral Matrix|Medium||Java/Javascript||
+|59|Spiral Matrix II|Medium||Java/Javascript||
+|73|Set Matrix Zeroes|Medium||Java/Javascript||
+|311|Sparse Matrix Multiplication|Medium||Java/Javascript||
+|329|Longest Increasing Path in a Matrix|Hard||Java/Javascript||
+|378|Kth Smallest Element in a Sorted Matrix|Medium||Java/Javascript||
+|74|Search a 2D Matrix|Medium||Java/Javascript||
+|240|Search a 2D Matrix II|Medium||Java/Javascript||
+|370|Range Addition|Medium||Java/Javascript||
+|79|Word Search|Medium||Java/Javascript||
+|296|Best Meeting Point|Hard||Java/Javascript||
+|361|Bomb Enemy|Medium||Java/Javascript||
+|317|Shortest Distance from All Buildings|Hard||Java/Javascript||
+|302|Smallest Rectangle Enclosing Black Pixels|Hard||Java/Javascript||
+|36|Valid Sudoku|Medium||Java/Javascript||
+|37|Sudoku Solver|Hard||Java/Javascript||
 
 ### 10. DFS & BFS
 
