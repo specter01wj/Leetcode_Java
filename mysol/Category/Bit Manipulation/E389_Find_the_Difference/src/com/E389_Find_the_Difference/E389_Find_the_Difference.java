@@ -24,7 +24,7 @@ Explanation:
 public class E389_Find_the_Difference {
 
 	public static void main(String[] args) {
-		String inputS = "abcd", inputT = "abtcd";
+		String inputS = "abcd", inputT = "cdtba";
         char output = findTheDifference(inputS, inputT);
         System.out.println("inputS: " + (inputS) + " / inputT: " + (inputT) + "\noutput: " + (output));
 	}
