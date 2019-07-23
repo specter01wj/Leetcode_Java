@@ -302,6 +302,50 @@ Cspiration Category:
 |366|Find Leaves of Binary Tree|Medium|postorder|Java/Javascript||
 |337|House Robber III|Medium|postorder + preorder|Java/Javascript||
 
+### 5. Backtracking
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+|90|Subsets II|Medium||Java/Javascript||
+|77|Combinations|Medium||Java/Javascript||
+|39|Combination Sum|Medium||Java/Javascript||
+|40|Combination Sum II|Medium||Java/Javascript||
+|216|Combination Sum III|Medium||Java/Javascript||
+|377|Combination Sum IV|Medium|Dynamic Programming|Java/Javascript||
+|254|Factor Combinations|Medium||Java/Javascript||
+|46|Permutations|Medium||Java/Javascript||
+|47|Permutations II|Medium||Java/Javascript||
+|31|Next Permutation|Medium|String|Java/Javascript||
+|60|Permutation Sequence|Medium|String|Java/Javascript||
+|291|Word Pattern II|Hard||Java/Javascript||
+|Enumeration||||||
+|17|Letter Combinations of a Phone Number|Medium||Java/Javascript||
+|320|Subsets|Generalized Abbreviation|要重录|Java/Javascript||
+|93|Restore IP Addresses|Medium|很少考|Java/Javascript||
+|282|Expression Add Operators|Hard||Java/Javascript||
+|140|Word Break II|Hard||Java/Javascript||
+|351|Android Unlock Patterns|Medium||Java/Javascript||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
