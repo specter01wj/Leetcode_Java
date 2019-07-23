@@ -294,7 +294,13 @@ Cspiration Category:
 |129|Sum Root to Leaf Numbers|Medium|preorder|Java/Javascript||
 |298|Binary Tree Longest Consecutive Sequence|Medium|preorder|Java/Javascript||
 |111|Minimum Depth of Binary Tree|Easy|preorder|Java/Javascript||
-
+|Postorder||||||
+|104|Maximum Depth of Binary Tree|Easy|postorder|Java/Javascript||
+|110|Balanced Binary Tree|Easy|postorder|Java/Javascript||
+|124|Binary Tree Maximum Path Sum|Hard|postorder|Java/Javascript||
+|250|Count Univalue Subtrees|Medium|postorder|Java/Javascript||
+|366|Find Leaves of Binary Tree|Medium|postorder|Java/Javascript||
+|337|House Robber III|Medium|postorder + preorder|Java/Javascript||
 
 
 
