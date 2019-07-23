@@ -27,20 +27,23 @@
 			     * @param nums: a list of integers
 			     * @return: integer, find the single one
 			     */
-				var findTheDifference = function(s, t) {
-					var flag = 0;
-					
-					for(var i = 0; i < s.length; i++) {
-						flag += (t.charCodeAt(i) - s.charCodeAt(i));
-					}
-					flag += t.charCodeAt(t.length - 1);
-					
-					return String.fromCharCode(flag);
+				var singleNumber = function(nums) {
+					if(nums === null || nums.length === 0) {
+			            return -1;
+			        }
+			        
+			        var rst = 0;
+			        
+			        for (var i = 0; i < nums.length; i++) {
+			            rst ^= nums[i];
+			        }
+			        
+			        return rst;
 				};
 
-				var num1 = "abcd", num2 = "dctba";
-				var tt1 = findTheDifference(num1, num2);
-				$('#t1').html('<h2>Input1: ' + num1 + ' / Input2: ' + num2 + '<br>Results: ' + tt1 + '</h2>');
+				var num = [1,4,2,1,2];
+				var tt1 = singleNumber(num);
+				$('#t1').html('<h2>Input1: ' + num + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
