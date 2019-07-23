@@ -275,7 +275,15 @@ Cspiration Category:
 |397|Integer Replacement|Medium||Java/Javascript||
 |368|Largest Divisible Subset|Medium||Java/Javascript||
 
+### 4. Tree
 
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|144|Binary Tree Preorder Traversal|Medium|preorder|Java/Javascript||
+|94|Binary Tree Inorder Traversal|Medium|Inorder|Java/Javascript||
+|145|Binary Tree Postorder Traversal|Hard|postorder|Java/Javascript||
+|102|Binary Tree Level Order Traversal|Medium|DFS + BFS|Java/Javascript||
 
 
 
