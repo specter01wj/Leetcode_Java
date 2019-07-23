@@ -55,6 +55,7 @@ By Jin Wang
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
+|389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
 |400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
 
 
@@ -442,7 +443,7 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|389|Find the Difference|Easy||Java/Javascript||
+|389|Find the Difference|Easy||Java/Javascript|Done/Done|
 |136|Single Number|Easy||Java/Javascript||
 |318|Maximum Product of Word Lengths|Medium||Java/Javascript||
 |很少考||||||
