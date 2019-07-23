@@ -332,8 +332,16 @@ Cspiration Category:
 
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
-|基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|一维||||||
+|70|Climbing Stairs|Easy||Java/Javascript||
+|62|Unique Paths|Medium||Java/Javascript||
+|63|Unique Paths II|Medium||Java/Javascript||
+|120|Triangle|Medium|很少考|Java/Javascript||
+|279|Perfect Squares|Medium||Java/Javascript||
+|139|Word Break|Medium||Java/Javascript||
+|375|Guess Number Higher or Lower II|Medium||Java/Javascript||
+|312|Burst Balloons|Hard||Java/Javascript||
+|322|Coin Change|Medium||Java/Javascript||
 
 ### 7. LinkedList
 
