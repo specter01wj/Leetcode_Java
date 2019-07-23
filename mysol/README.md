@@ -31,6 +31,7 @@ By Jin Wang
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |125|**Valid Palindrome**|Easy|Java/Javascript|Done/Done|
+|136|**Single Number**|Easy|Java/Javascript|Done/Done|
 |167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
@@ -444,7 +445,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |389|Find the Difference|Easy||Java/Javascript|Done/Done|
-|136|Single Number|Easy||Java/Javascript||
+|136|Single Number|Easy||Java/Javascript|Done/Done|
 |318|Maximum Product of Word Lengths|Medium||Java/Javascript||
 |很少考||||||
 |393|UTF-8 Validation|Medium||Java/Javascript||
