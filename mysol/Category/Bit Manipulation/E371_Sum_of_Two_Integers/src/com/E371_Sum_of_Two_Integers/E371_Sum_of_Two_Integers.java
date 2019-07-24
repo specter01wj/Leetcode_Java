@@ -17,9 +17,9 @@ Output: 1*/
 public class E371_Sum_of_Two_Integers {
 
 	public static void main(String[] args) {
-		int[] input = {7,1,5,3,6,4};//{7,6,4,3,1};
-        int output = maxProfit(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int input1 = 11, input2 = 3;
+        int output = getSum(input1, input2);
+        System.out.println("input1: " + (input1) + " / input2: " + (input2) + "\noutput: " + (output));
 	}
 	
 	/*
@@ -32,6 +32,17 @@ public class E371_Sum_of_Two_Integers {
      * @param b: an integer
      * @return: sum of two integers a and b
      */
-	
+	public static int getSum(int a, int b) {
+		if(a == 0) return b;
+		if(b == 0) return a;
+		
+		while(b != 0) {
+			int carry = a & b;
+			a = a ^ b;
+			b = carry << 1;
+		}
+		
+		return a;
+	}
 
 }
