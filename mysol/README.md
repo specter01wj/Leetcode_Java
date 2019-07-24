@@ -46,6 +46,7 @@ By Jin Wang
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |263|**Ugly Number**|Easy|Java/Javascript|Done/Done|
+|268|**Missing Number**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
@@ -454,7 +455,7 @@ Cspiration Category:
 |371|Sum of Two Integers|Easy||Java/Javascript|Done/Done|
 |338|Counting Bits|Medium||Java/Javascript||
 |89|Gray Code|Medium||Java/Javascript||
-|268|Missing Number|Easy||Java/Javascript||
+|268|Missing Number|Easy||Java/Javascript|Done/Done|
 |191|Number of 1 Bits|Easy||Java/Javascript||
 |190|Reverse Bits|Easy||Java/Javascript||
 |137|Single Number II|Medium||Java/Javascript||
