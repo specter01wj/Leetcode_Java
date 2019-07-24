@@ -54,6 +54,7 @@ By Jin Wang
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
+|371|**Sum of Two Integers**|Easy|Java/Javascript|Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
@@ -450,7 +451,7 @@ Cspiration Category:
 |很少考||||||
 |393|UTF-8 Validation|Medium||Java/Javascript||
 |201|Bitwise AND of Numbers Range|Medium||Java/Javascript||
-|371|Sum of Two Integers|Easy||Java/Javascript||
+|371|Sum of Two Integers|Easy||Java/Javascript|Done/Done|
 |338|Counting Bits|Medium||Java/Javascript||
 |89|Gray Code|Medium||Java/Javascript||
 |268|Missing Number|Easy||Java/Javascript||
