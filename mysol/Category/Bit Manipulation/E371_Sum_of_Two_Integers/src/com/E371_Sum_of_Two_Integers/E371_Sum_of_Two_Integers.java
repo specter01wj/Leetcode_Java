@@ -17,9 +17,9 @@ Output: 1*/
 public class E371_Sum_of_Two_Integers {
 
 	public static void main(String[] args) {
-		int input1 = 11, input2 = 3;
+		int input1 = 11, input2 = -3;
         int output = getSum(input1, input2);
-        System.out.println("input1: " + (input1) + " / input2: " + (input2) + "\noutput: " + (output));
+        System.out.println("input1: " + (input1) + " / input2: " + (input2 ) + "\noutput: " + (output));
 	}
 	
 	/*
