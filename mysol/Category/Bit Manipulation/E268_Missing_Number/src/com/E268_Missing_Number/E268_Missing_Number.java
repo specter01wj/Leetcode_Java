@@ -38,13 +38,24 @@ public class E268_Missing_Number {
      * @return: an integer
      */
 	public static int missingNumber(int[] nums) {
-        int xor = 0, i = 0;
+        //sol1:
+		int xor = 0, i = 0;
         
         for (i = 0; i < nums.length; i++) {
             xor = xor ^ i ^ nums[i];
         }
 
         return xor ^ i;
+		//sol2: (only for numbers from 0 to n)
+		/*int n = nums.length + 1;
+        int sum = 0;
+        int expectedSum = n* (n-1)/2;
+
+        for(int i = 0, len = nums.length; i < len; i++){
+            sum += nums[i];
+        }
+
+        return expectedSum - sum;*/
     }
 
 }
