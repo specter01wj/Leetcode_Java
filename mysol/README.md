@@ -505,7 +505,9 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|261|Graph Valid Tree|||Java/Javascript||
+|323|Number of Connected Components in an Undirected Graph|||Java/Javascript||
+|305|Number of Islands II|||Java/Javascript||
 
 ### 17. Trie
 
