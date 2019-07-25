@@ -463,6 +463,51 @@ Cspiration Category:
 |137|Single Number II|Medium||Java/Javascript||
 |260|Single Number III|Medium||Java/Javascript||
 
+### 13. Topological Sort
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|207|Course Schedule|||Java/Javascript||
+|210|Course Schedule II|||Java/Javascript||
+|269|Alien Dictionary|||Java/Javascript||
+
+### 14. Random
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+
+### 15. Graph
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+
+### 16. Union FInd
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+
+### 17. Trie
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+
+### 18. Design
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+
+
 
 
 
