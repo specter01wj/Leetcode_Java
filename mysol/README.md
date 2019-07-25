@@ -523,7 +523,23 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|359|Logger Rate Limiter|||Java/Javascript||
+|346|Moving Average from Data Stream||Sliding Window|Java/Javascript||
+|362|Design Hit Counter|||Java/Javascript||
+|281|Zigzag Iterator|||Java/Javascript||
+|284|Peeking Iterator|||Java/Javascript||
+|251|Flatten 2D Vector|||Java/Javascript||
+|288|Unique Word Abbreviation|||Java/Javascript||
+|170|Two Sum III - Data structure design|||Java/Javascript||
+|348|Design Tic-Tac-Toe|||Java/Javascript||
+|379|Design Phone Directory|||Java/Javascript||
+|353|Design Snake Game|||Java/Javascript||
+|146|LRU Cache|||Java/Javascript||
+|355|Design Twitter|||Java/Javascript||
+|303|Range Sum Query - Immutable|||Java/Javascript||
+|304|Range Sum Query 2D - Immutable|||Java/Javascript||
+|307|Range Sum Query - Mutable||Binary Index Tree|Java/Javascript||
+|308|Range Sum Query 2D - Mutable||Binary Index Tree|Java/Javascript||
 
 
 
