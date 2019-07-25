@@ -468,9 +468,9 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|207|Course Schedule|||Java/Javascript||
-|210|Course Schedule II|||Java/Javascript||
-|269|Alien Dictionary|||Java/Javascript||
+|207|Course Schedule|Medium||Java/Javascript||
+|210|Course Schedule II|Medium||Java/Javascript||
+|269|Alien Dictionary|Hard||Java/Javascript||
 
 ### 14. Random
 
