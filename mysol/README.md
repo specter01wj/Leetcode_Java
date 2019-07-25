@@ -37,6 +37,7 @@ By Jin Wang
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
 |172|**Factorial Trailing Zeroes**|Easy|Java/Javascript|Done/Done|
+|190|**Reverse Bits**|Easy|Java/Javascript|Done/Done|
 |191|**Number of 1 Bits**|Easy|Java/Javascript|Done/Done|
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
@@ -458,7 +459,7 @@ Cspiration Category:
 |89|Gray Code|Medium||Java/Javascript||
 |268|Missing Number|Easy||Java/Javascript|Done/Done|
 |191|Number of 1 Bits|Easy||Java/Javascript|Done/Done|
-|190|Reverse Bits|Easy||Java/Javascript||
+|190|Reverse Bits|Easy||Java/Javascript|Done/Done|
 |137|Single Number II|Medium||Java/Javascript||
 |260|Single Number III|Medium||Java/Javascript||
 
