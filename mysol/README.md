@@ -505,41 +505,41 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|261|Graph Valid Tree|||Java/Javascript||
-|323|Number of Connected Components in an Undirected Graph|||Java/Javascript||
-|305|Number of Islands II|||Java/Javascript||
+|261|Graph Valid Tree|Medium||Java/Javascript||
+|323|Number of Connected Components in an Undirected Graph|Medium||Java/Javascript||
+|305|Number of Islands II|Hard||Java/Javascript||
 
 ### 17. Trie
 
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|211|Add and Search Word - Data structure design|||Java/Javascript||
-|208|Implement Trie (Prefix Tree)|||Java/Javascript||
-|212|Word Search II|||Java/Javascript||
+|211|Add and Search Word - Data structure design|Medium||Java/Javascript||
+|208|Implement Trie (Prefix Tree)|Medium||Java/Javascript||
+|212|Word Search II|Hard||Java/Javascript||
 
 ### 18. Design
 
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|359|Logger Rate Limiter|||Java/Javascript||
-|346|Moving Average from Data Stream||Sliding Window|Java/Javascript||
-|362|Design Hit Counter|||Java/Javascript||
-|281|Zigzag Iterator|||Java/Javascript||
-|284|Peeking Iterator|||Java/Javascript||
-|251|Flatten 2D Vector|||Java/Javascript||
-|288|Unique Word Abbreviation|||Java/Javascript||
-|170|Two Sum III - Data structure design|||Java/Javascript||
-|348|Design Tic-Tac-Toe|||Java/Javascript||
-|379|Design Phone Directory|||Java/Javascript||
-|353|Design Snake Game|||Java/Javascript||
-|146|LRU Cache|||Java/Javascript||
-|355|Design Twitter|||Java/Javascript||
-|303|Range Sum Query - Immutable|||Java/Javascript||
-|304|Range Sum Query 2D - Immutable|||Java/Javascript||
-|307|Range Sum Query - Mutable||Binary Index Tree|Java/Javascript||
-|308|Range Sum Query 2D - Mutable||Binary Index Tree|Java/Javascript||
+|359|Logger Rate Limiter|Easy||Java/Javascript||
+|346|Moving Average from Data Stream|Easy|Sliding Window|Java/Javascript||
+|362|Design Hit Counter|Medium||Java/Javascript||
+|281|Zigzag Iterator|Medium||Java/Javascript||
+|284|Peeking Iterator|Medium||Java/Javascript||
+|251|Flatten 2D Vector|Medium||Java/Javascript||
+|288|Unique Word Abbreviation|Medium||Java/Javascript||
+|170|Two Sum III - Data structure design|Easy||Java/Javascript||
+|348|Design Tic-Tac-Toe|Medium||Java/Javascript||
+|379|Design Phone Directory|Medium||Java/Javascript||
+|353|Design Snake Game|Medium||Java/Javascript||
+|146|LRU Cache|Medium||Java/Javascript||
+|355|Design Twitter|Medium||Java/Javascript||
+|303|Range Sum Query - Immutable|Easy||Java/Javascript||
+|304|Range Sum Query 2D - Immutable|Medium||Java/Javascript||
+|307|Range Sum Query - Mutable|Medium|Binary Index Tree|Java/Javascript||
+|308|Range Sum Query 2D - Mutable|Hard|Binary Index Tree|Java/Javascript||
 
 
 
