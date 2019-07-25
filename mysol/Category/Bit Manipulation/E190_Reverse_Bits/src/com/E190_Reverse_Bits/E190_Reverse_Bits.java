@@ -23,7 +23,7 @@ is 10101111110010110010011101101001.*/
 public class E190_Reverse_Bits {
 
 	public static void main(String[] args) {
-		int input = 00000010100101000001111010011100;
+		int input = 00000000000000000000000000001010;
         int output = reverseBits(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
@@ -37,6 +37,15 @@ public class E190_Reverse_Bits {
      * @param n: an unsigned integer
      * @return: reverse bits of a given 32 bits unsigned integer
      */
-	
+	public static int reverseBits(int n) {
+		int reversed = 0;
+		
+		for(int i = 0; i < 32; i++) {
+			reversed = (reversed << 1) | (n & 1);
+			n = (n >> 1);
+		}
+		
+		return reversed;
+	}
 
 }
