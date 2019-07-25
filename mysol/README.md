@@ -477,7 +477,7 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|模板|Reservoir Sampling|Medium||||
+|模板|Reservoir Sampling|||||
 |384|Shuffle an Array|Medium||Java/Javascript||
 |398|Random Pick Index|Medium||Java/Javascript||
 |382|Linked List Random Node|Medium||Java/Javascript||
