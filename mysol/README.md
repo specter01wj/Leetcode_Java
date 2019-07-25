@@ -490,7 +490,15 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|133|Clone Graph|||Java/Javascript||
+|399|Evaluate Division|||Java/Javascript||
+|310|Minimum Height Trees|||Java/Javascript||
+|图形学||||||
+|335|Self Crossing||很少考|Java/Javascript||
+|149|Max Points on a Line|||Java/Javascript||
+|356|Line Reflection||很少考|Java/Javascript||
+|391|Perfect Rectangle||很少考|Java/Javascript||
+|223|Rectangle Area||很少考|Java/Javascript||
 
 ### 16. Union FInd
 
