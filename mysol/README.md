@@ -477,7 +477,13 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|模板|Reservoir Sampling|||||
+|384|Shuffle an Array|||Java/Javascript||
+|398|Random Pick Index|||Java/Javascript||
+|382|Linked List Random Node|||Java/Javascript||
+|380|Insert Delete GetRandom O(1)|||Java/Javascript||
+|381|Insert Delete GetRandom O(1) - Duplicates allowed|||Java/Javascript||
+|138|Copy List with Random Pointer|||Java/Javascript||
 
 ### 15. Graph
 
