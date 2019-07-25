@@ -514,7 +514,9 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|78|Subsets|Medium||Java/Javascript||
+|211|Add and Search Word - Data structure design|||Java/Javascript||
+|208|Implement Trie (Prefix Tree)|||Java/Javascript||
+|212|Word Search II|||Java/Javascript||
 
 ### 18. Design
 
