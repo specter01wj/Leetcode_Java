@@ -29,8 +29,31 @@ of thirty one '1' bits.*/
 public class E191_Number_of_1_Bits {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int input = 00000000000000000000000000001011;
+        int output = hammingWeight(input);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
+	}
+	
+	/*
+    solution:
+    使用位运算符号‘&’，与1做与操作
+	并将n右移一位( >>1 )
+	直到n为0
+    */
+	
+	/*
+     * @param n: an unsigned integer
+     * @return: the number of '1' bits
+     */
+	public static int hammingWeight(int n) {
+		int ones = 0;
+		
+		while(n != 0) {
+			ones += (n & 1);
+			n = n >> 1;
+		}
+		
+		return ones;
 	}
 
 }
