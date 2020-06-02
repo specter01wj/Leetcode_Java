@@ -162,7 +162,6 @@ Cspiration Category:
 |376|Wiggle Subsequence|Medium||Java/Javascript||
 |280|Wiggle Sort|Medium||Java/Javascript||
 |324|Wiggle Sort II|Medium||Java/Javascript||
-
 |278|First Bad Version|Easy||Java/Javascript||
 |35|Search Insert Position|Easy||Java/Javascript||
 |33|Search in Rotated Sorted Array|Medium||Java/Javascript||
@@ -174,10 +173,9 @@ Cspiration Category:
 |34|Find First and Last Position of Element in Sorted Array|Medium||Java/Javascript||
 |349|Intersection of Two Arrays|Easy||Java/Javascript||
 |350|Intersection of Two Arrays II|Easy||Java/Javascript||
-|315|Count of Smaller Numbers After Self|Medium||Java/Javascript||
+|315|Count of Smaller Numbers After Self|Hard||Java/Javascript||
 |300|Longest Increasing Subsequence|Medium||Java/Javascript||
-|354|Russian Doll Envelopes|Medium||Java/Javascript||
-|324|Wiggle Sort II|Medium||Java/Javascript||
+|354|Russian Doll Envelopes|Hard||Java/Javascript||
 
 ### 2. String
 
