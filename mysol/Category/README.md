@@ -1,0 +1,483 @@
+# LeetCode Algorithm Problems with Java Solutions
+
+LeetCode Solutions using Java<br/>
+By Jin Wang
+
+## by Category
+
+Cspiration Category:
+
+## Leetcode 分类顺序
+
+### 1. Array
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|27|Remove Element|Easy||Java/Javascript|Done/Done|
+|26|Remove Duplicates from Sorted Array|Easy||Java/Javascript|Done/Done|
+|80|Remove Duplicates from Sorted Array II|Medium||Java/Javascript|Done/Done|
+|277|Find the Celebrity|Medium||Java/Javascript||
+|189|Rotate Array|Easy||Java/Javascript|Done/Done|
+|41|First Missing Positive|Hard||Java/Javascript||
+|299|Bulls and Cows|Medium||Java/Javascript||
+|134|Gas Station|Medium||Java/Javascript||
+|118|Pascal's Triangle|Easy|很少考|Java/Javascript|Done/Done|
+|119|Pascal's Triangle II|Easy|很少考|Java/Javascript|Done/Done|
+|169|Majority Element|Easy|很少考|Java/Javascript|Done/Done|
+|229|Majority Element II|Medium|很少考|Java/Javascript|Done/Done|
+|274|H-Index|Medium||Java/Javascript||
+|275|H-Index II|Medium||Java/Javascript||
+|243|Shortest Word Distance|Easy||Java/Javascript||
+|244|Shortest Word Distance II|Medium||Java/Javascript||
+|245|Shortest Word Distance III|Medium||Java/Javascript||
+|217|Contains Duplicate|Easy||Java/Javascript|Done/Done|
+|219|Contains Duplicate II|Easy||Java/Javascript|Done/Done|
+|220|Contains Duplicate III|Medium||Java/Javascript|Done/|
+|55|Jump Game|Medium||Java/Javascript||
+|45|Jump Game II|Hard||Java/Javascript||
+|121|Best Time to Buy and Sell Stock|Easy||Java/Javascript|Done/Done|
+|122|Best Time to Buy and Sell Stock II|Easy||Java/Javascript|Done/Done|
+|123|Best Time to Buy and Sell Stock III|Hard||Java/Javascript|Done/|
+|188|Best Time to Buy and Sell Stock IV|Hard||Java/Javascript|Done/|
+|309|Best Time to Buy and Sell Stock with Cooldown|Medium||Java/Javascript||
+|11|Container With Most Water|Medium||Java/Javascript||
+|42|Trapping Rain Water|Hard||Java/Javascript||
+|334|Increasing Triplet Subsequence|Medium||Java/Javascript||
+|128|Longest Consecutive Sequence|Hard||Java/Javascript||
+|164|Maximum Gap|Hard||Java/Javascript||
+|287|Find the Duplicate Number|Medium||Java/Javascript||
+|135|Candy|Hard||Java/Javascript||
+|330|Patching Array|Hard||Java/Javascript||
+|提高||||||
+|4|Median of Two Sorted Arrays|Hard||Java/Javascript||
+|321|Create Maximum Number|Hard|很少考|Java/Javascript||
+|327|Count of Range Sum|Hard|很少考|Java/Javascript||
+|289|Game of Life|Medium||Java/Javascript||
+|Interval||||||
+|57|Insert Interval|Hard||Java/Javascript||
+|56|Merge Intervals|Medium||Java/Javascript||
+|252|Meeting Rooms|Easy||Java/Javascript||
+|253|Meeting Rooms II|Medium||Java/Javascript||
+|352|Data Stream as Disjoint Intervals|Hard|TreeMap|Java/Javascript||
+|Counter||||||
+|239|Sliding Window Maximum|Hard||Java/Javascript||
+|295|Find Median from Data Stream|Hard||Java/Javascript||
+|53|Maximum Subarray|Easy||Java/Javascript|Done/Done|
+|325|Maximum Size Subarray Sum Equals k|Medium||Java/Javascript||
+|209|Minimum Size Subarray Sum|Medium||Java/Javascript||
+|238|Product of Array Except Self|Medium||Java/Javascript||
+|152|Maximum Product Subarray|Medium||Java/Javascript||
+|228|Summary Ranges|Medium||Java/Javascript||
+|163|Missing Ranges|Medium||Java/Javascript||
+|Sort||||||
+|88|Merge Sorted Array|Easy||Java/Javascript|Done/Done|
+|75|Sort Colors|Medium||Java/Javascript||
+|283|Move Zeroes|Easy||Java/Javascript|Done/Done|
+|376|Wiggle Subsequence|Medium||Java/Javascript||
+|280|Wiggle Sort|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|278|First Bad Version|Easy||Java/Javascript||
+|35|Search Insert Position|Easy||Java/Javascript||
+|33|Search in Rotated Sorted Array|Medium||Java/Javascript||
+|81|Search in Rotated Sorted Array II|Medium||Java/Javascript||
+|153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
+|154|Find Minimum in Rotated Sorted Array II|Hard||Java/Javascript||
+|162|Find Peak Element|Medium||Java/Javascript||
+|374|Guess Number Higher or Lower|Easy||Java/Javascript||
+|34|Find First and Last Position of Element in Sorted Array|Medium||Java/Javascript||
+|349|Intersection of Two Arrays|Easy||Java/Javascript||
+|350|Intersection of Two Arrays II|Easy||Java/Javascript||
+|315|Count of Smaller Numbers After Self|Hard||Java/Javascript||
+|300|Longest Increasing Subsequence|Medium||Java/Javascript||
+|354|Russian Doll Envelopes|Hard||Java/Javascript||
+
+### 2. String
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|28|Implement strStr()|Easy||Java/Javascript|Done/Done|
+|14|Longest Common Prefix|Easy||Java/Javascript|Done/Done|
+|58|Length of Last Word|Easy||Java/Javascript|Done/Done|
+|387|First Unique Character in a String|Easy||Java/Javascript|Done/Done|
+|383|Ransom Note|Easy||Java/Javascript|Done/Done|
+|344|Reverse String|Easy||Java/Javascript|Done/Done|
+|151|Reverse Words in a String|Medium||Java/Javascript||
+|186|Reverse Words in a String II|Medium||Java/Javascript||
+|345|Reverse Vowels of a String|Easy||Java/Javascript|Done/Done|
+|205|Isomorphic Strings|Easy||Java/Javascript|Done/Done|
+|293|Flip Game|Easy||Java/Javascript||
+|294|Flip Game II|Medium||Java/Javascript||
+|290|Word Pattern|Easy||Java/Javascript|Done/Done|
+|242|Valid Anagram|Easy||Java/Javascript|Done/Done|
+|49|Group Anagrams|Medium||Java/Javascript||
+|249|Group Shifted Strings|Medium||Java/Javascript||
+|87|Scramble String|Hard||Java/Javascript||
+|179|Largest Number|Medium|很少考|Java/Javascript||
+|6|ZigZag Conversion|Medium|很少考|Java/Javascript||
+|161|One Edit Distance|Medium||Java/Javascript||
+|38|Count and Say|Easy||Java/Javascript|Done/Done|
+|358|Rearrange String k Distance Apart|Hard||Java/Javascript||
+|316|Remove Duplicate Letters|Hard||Java/Javascript||
+|271|Encode and Decode Strings|Medium||Java/Javascript||
+|168|Excel Sheet Column Title|Easy||Java/Javascript|Done/Done|
+|171|Excel Sheet Column Number|Easy||Java/Javascript|Done/Done|
+|13|Roman to Integer|Easy||Java/Javascript|Done/Done|
+|12|Integer to Roman|Medium||Java/Javascript|Done/Done|
+|273|Integer to English Words|Hard||Java/Javascript||
+|246|Strobogrammatic Number|Easy||Java/Javascript||
+|247|Strobogrammatic Number II|Medium||Java/Javascript||
+|248|Strobogrammatic Number III|Hard|很少考|Java/Javascript||
+|提高||||||
+|68|Text Justification|Hard||Java/Javascript||
+|65|Valid Number|Hard||Java/Javascript||
+|157|Read N Characters Given Read4|Easy||Java/Javascript||
+|158|Read N Characters Given Read4 II - Call multiple times|Hard||Java/Javascript||
+|Substring||||||
+|76|Minimum Window Substring|Hard|Sliding Window|Java/Javascript||
+|30|Substring with Concatenation of All Words|Hard|Sliding Window|Java/Javascript||
+|3|Longest Substring Without Repeating Characters|Medium|Sliding Window|Java/Javascript||
+|340|Longest Substring with At Most K Distinct Characters|Hard|Sliding Window|Java/Javascript||
+|395|Longest Substring with At Least K Repeating Characters|Medium|Sliding Window|Java/Javascript||
+|159|Longest Substring with At Most Two Distinct Characters|Hard|Sliding Window|Java/Javascript||
+|Palindrome||||||
+|125|Valid Palindrome|Easy||Java/Javascript|Done/Done|
+|266|Palindrome Permutation|Easy||Java/Javascript||
+|5|Longest Palindromic Substring|Medium||Java/Javascript||
+|9|Palindrome Number|Easy||Java/Javascript|Done/Done|
+|214|Shortest Palindrome|Hard||Java/Javascript||
+|336|Palindrome Pairs|Hard||Java/Javascript||
+|131|Palindrome Partitioning|Medium||Java/Javascript||
+|132|Palindrome Partitioning II|Hard||Java/Javascript||
+|267|Palindrome Permutation II|Medium||Java/Javascript||
+|Parentheses||||||
+|20|Valid Parentheses|Easy||Java/Javascript|Done/Done|
+|22|Generate Parentheses|Medium||Java/Javascript||
+|32|Longest Valid Parentheses|Hard||Java/Javascript||
+|241|Different Ways to Add Parentheses|Medium||Java/Javascript||
+|301|Remove Invalid Parentheses|Hard||Java/Javascript||
+|Subsequence||||||
+|392|Is Subsequence|Medium||Java/Javascript||
+|115|Distinct Subsequences|Hard||Java/Javascript||
+|187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
+
+### 3. Math
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|7|Reverse Integer|Easy||Java/Javascript|Done/Done|
+|165|Compare Version Numbers|Medium||Java/Javascript||
+|66|Plus One|Easy||Java/Javascript|Done/Done|
+|8|String to Integer (atoi)|Medium||Java/Javascript||
+|258|Add Digits|Easy||Java/Javascript|Done/Done|
+|67|Add Binary|Easy||Java/Javascript|Done/Done|
+|43|Multiply Strings|Medium||Java/Javascript||
+|29|Divide Two Integers|Medium||Java/Javascript||
+|69|Sqrt(x)|Easy||Java/Javascript|Done/Done|
+|50|Pow(x, n)|Medium||Java/Javascript||
+|367|Valid Perfect Square|Easy||Java/Javascript|Done/Done|
+|365|Water and Jug Problem|Medium||Java/Javascript||
+|204|Count Primes|Easy||Java/Javascript|Done/Done|
+|Sum||||||
+|1|Two Sum|Easy||Java/Javascript|Done/Done|
+|167|Two Sum II - Input array is sorted|Easy||Java/Javascript|Done/Done|
+|3|3Sum|Medium||Java/Javascript||
+|16|3Sum Closest|Medium|很少考|Java/Javascript||
+|259|3Sum Smaller|Medium|很少考|Java/Javascript||
+|18|4Sum|Medium||Java/Javascript||
+|很少考||||||
+|231|Power of Two|Easy||Java/Javascript|Done/Done|
+|326|Power of Three|Easy||Java/Javascript|Done/Done|
+|342|Power of Four|Easy||Java/Javascript|Done/Done|
+|372|Super Pow|Medium||Java/Javascript||
+|233|Number of Digit One|Hard||Java/Javascript||
+|319|Bulb Switcher|Medium||Java/Javascript||
+|292|Nim Game|Easy||Java/Javascript|Done/Done|
+|202|Happy Number|Easy||Java/Javascript|Done/Done|
+|400|Nth Digit|Easy||Java/Javascript|Done/Done|
+|263|Ugly Number|Easy||Java/Javascript|Done/Done|
+|264|Ugly Number II|Medium||Java/Javascript||
+|306|Additive Number|Medium||Java/Javascript||
+|172|Factorial Trailing Zeroes|Easy||Java/Javascript|Done/Done|
+|343|Integer Break|Medium||Java/Javascript||
+|396|Rotate Function|Medium||Java/Javascript||
+|390|Elimination Game|Medium||Java/Javascript||
+|386|Lexicographical Numbers|Medium||Java/Javascript||
+|357|Count Numbers with Unique Digits|Medium||Java/Javascript||
+|360|Sort Transformed Array|Medium||Java/Javascript||
+|397|Integer Replacement|Medium||Java/Javascript||
+|368|Largest Divisible Subset|Medium||Java/Javascript||
+
+### 4. Tree
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|144|Binary Tree Preorder Traversal|Medium|preorder|Java/Javascript||
+|94|Binary Tree Inorder Traversal|Medium|Inorder|Java/Javascript||
+|145|Binary Tree Postorder Traversal|Hard|postorder|Java/Javascript||
+|102|Binary Tree Level Order Traversal|Medium|DFS + BFS|Java/Javascript||
+|Preorder||||||
+|100|Same Tree|Easy|preorder|Java/Javascript||
+|101|Symmetric Tree|Easy|preorder|Java/Javascript||
+|226|Invert Binary Tree|Easy|preorder + BFS|Java/Javascript||
+|257|Binary Tree Paths|Easy|preorder|Java/Javascript||
+|112|Path Sum|Easy|preorder|Java/Javascript||
+|113|Path Sum II|Medium|preorder|Java/Javascript||
+|129|Sum Root to Leaf Numbers|Medium|preorder|Java/Javascript||
+|298|Binary Tree Longest Consecutive Sequence|Medium|preorder|Java/Javascript||
+|111|Minimum Depth of Binary Tree|Easy|preorder|Java/Javascript||
+|Postorder||||||
+|104|Maximum Depth of Binary Tree|Easy|postorder|Java/Javascript||
+|110|Balanced Binary Tree|Easy|postorder|Java/Javascript||
+|124|Binary Tree Maximum Path Sum|Hard|postorder|Java/Javascript||
+|250|Count Univalue Subtrees|Medium|postorder|Java/Javascript||
+|366|Find Leaves of Binary Tree|Medium|postorder|Java/Javascript||
+|337|House Robber III|Medium|postorder + preorder|Java/Javascript||
+
+### 5. Backtracking
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|78|Subsets|Medium||Java/Javascript||
+|90|Subsets II|Medium||Java/Javascript||
+|77|Combinations|Medium||Java/Javascript||
+|39|Combination Sum|Medium||Java/Javascript||
+|40|Combination Sum II|Medium||Java/Javascript||
+|216|Combination Sum III|Medium||Java/Javascript||
+|377|Combination Sum IV|Medium|Dynamic Programming|Java/Javascript||
+|254|Factor Combinations|Medium||Java/Javascript||
+|46|Permutations|Medium||Java/Javascript||
+|47|Permutations II|Medium||Java/Javascript||
+|31|Next Permutation|Medium|String|Java/Javascript||
+|60|Permutation Sequence|Medium|String|Java/Javascript||
+|291|Word Pattern II|Hard||Java/Javascript||
+|Enumeration||||||
+|17|Letter Combinations of a Phone Number|Medium||Java/Javascript||
+|320|Generalized Abbreviation|Medium|要重录|Java/Javascript||
+|93|Restore IP Addresses|Medium|很少考|Java/Javascript||
+|282|Expression Add Operators|Hard||Java/Javascript||
+|140|Word Break II|Hard||Java/Javascript||
+|351|Android Unlock Patterns|Medium||Java/Javascript||
+
+### 6. Dynamic Programming
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|一维||||||
+|70|Climbing Stairs|Easy||Java/Javascript||
+|62|Unique Paths|Medium||Java/Javascript||
+|63|Unique Paths II|Medium||Java/Javascript||
+|120|Triangle|Medium|很少考|Java/Javascript||
+|279|Perfect Squares|Medium||Java/Javascript||
+|139|Word Break|Medium||Java/Javascript||
+|375|Guess Number Higher or Lower II|Medium||Java/Javascript||
+|312|Burst Balloons|Hard||Java/Javascript||
+|322|Coin Change|Medium||Java/Javascript||
+
+### 7. LinkedList
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|206|Reverse Linked List|Easy||Java/Javascript||
+|141|Linked List Cycle|Easy||Java/Javascript||
+|24|Swap Nodes in Pairs|Medium||Java/Javascript||
+|328|Odd Even Linked List|Medium||Java/Javascript||
+|92|Reverse Linked List II|Medium||Java/Javascript||
+|237|Delete Node in a Linked List|Easy||Java/Javascript||
+|19|Remove Nth Node From End of List|Medium||Java/Javascript||
+|83|Remove Duplicates from Sorted List|Easy||Java/Javascript||
+|203|Remove Linked List Elements|Easy||Java/Javascript||
+|82|Remove Duplicates from Sorted List II|Medium||Java/Javascript||
+|369|Plus One Linked List|Medium||Java/Javascript||
+|2|Add Two Numbers|Medium||Java/Javascript||
+|160|Intersection of Two Linked Lists|Easy||Java/Javascript||
+|21|Merge Two Sorted Lists|Easy||Java/Javascript||
+
+### 8. Binary Search
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|278|First Bad Version|Easy||Java/Javascript||
+|35|Search Insert Position|Easy||Java/Javascript||
+|33|Search in Rotated Sorted Array|Medium||Java/Javascript||
+|81|Search in Rotated Sorted Array II|Medium||Java/Javascript||
+|153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
+|154|Find Minimum in Rotated Sorted Array II|Hard||Java/Javascript||
+|162|Find Peak Element|Medium||Java/Javascript||
+|374|Guess Number Higher or Lower|Easy||Java/Javascript||
+|34|Search for a Range|Medium||Java/Javascript||
+|349|Intersection of Two Arrays|Easy||Java/Javascript||
+|350|Intersection of Two Arrays II|Easy||Java/Javascript||
+|315|Count of Smaller Numbers After Self|Hard||Java/Javascript||
+|300|Longest Increasing Subsequence|Medium||Java/Javascript||
+|354|Russian Doll Envelopes|Hard||Java/Javascript||
+
+### 9. Matrix
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|48||||||
+|54|Spiral Matrix|Medium||Java/Javascript||
+|59|Spiral Matrix II|Medium||Java/Javascript||
+|73|Set Matrix Zeroes|Medium||Java/Javascript||
+|311|Sparse Matrix Multiplication|Medium||Java/Javascript||
+|329|Longest Increasing Path in a Matrix|Hard||Java/Javascript||
+|378|Kth Smallest Element in a Sorted Matrix|Medium||Java/Javascript||
+|74|Search a 2D Matrix|Medium||Java/Javascript||
+|240|Search a 2D Matrix II|Medium||Java/Javascript||
+|370|Range Addition|Medium||Java/Javascript||
+|79|Word Search|Medium||Java/Javascript||
+|296|Best Meeting Point|Hard||Java/Javascript||
+|361|Bomb Enemy|Medium||Java/Javascript||
+|317|Shortest Distance from All Buildings|Hard||Java/Javascript||
+|302|Smallest Rectangle Enclosing Black Pixels|Hard||Java/Javascript||
+|36|Valid Sudoku|Medium||Java/Javascript||
+|37|Sudoku Solver|Hard||Java/Javascript||
+
+### 10. DFS & BFS
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|200|Number of Islands|Medium||Java/Javascript||
+|286|Walls and Gates|Medium||Java/Javascript||
+|130|Surrounded Regions|Medium||Java/Javascript||
+|339|Nested List Weight Sum|Easy||Java/Javascript||
+|364|Nested List Weight Sum II|Medium||Java/Javascript||
+|127|Word Ladder|Medium||Java/Javascript||
+|51|N-Queens|Hard||Java/Javascript||
+|52|N-Queens II|Hard||Java/Javascript||
+|126|Word Ladder II|Hard||Java/Javascript||
+
+### 11. Stack & PriorityQueue
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|Stack||||||
+|155|Min Stack|Easy||Java/Javascript||
+|232|Implement Queue using Stacks|Easy||Java/Javascript||
+|225|Implement Stack using Queues|Easy||Java/Javascript||
+|150|Evaluate Reverse Polish Notation|Medium||Java/Javascript||
+|71|Simplify Path|Medium||Java/Javascript||
+|388|Longest Absolute File Path|Medium||Java/Javascript||
+|394|Decode String|Medium||Java/Javascript||
+|224|Basic Calculator|Hard||Java/Javascript||
+|227|Basic Calculator II|Medium||Java/Javascript||
+|385|Mini Parser|Medium||Java/Javascript||
+|84|Largest Rectangle in Histogram|Hard||Java/Javascript||
+
+### 12. Bit Manipulation
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|389|Find the Difference|Easy||Java/Javascript|Done/Done|
+|136|Single Number|Easy||Java/Javascript|Done/Done|
+|318|Maximum Product of Word Lengths|Medium||Java/Javascript||
+|很少考||||||
+|393|UTF-8 Validation|Medium||Java/Javascript||
+|201|Bitwise AND of Numbers Range|Medium||Java/Javascript||
+|371|Sum of Two Integers|Easy||Java/Javascript|Done/Done|
+|338|Counting Bits|Medium||Java/Javascript||
+|89|Gray Code|Medium||Java/Javascript||
+|268|Missing Number|Easy||Java/Javascript|Done/Done|
+|191|Number of 1 Bits|Easy||Java/Javascript|Done/Done|
+|190|Reverse Bits|Easy||Java/Javascript|Done/Done|
+|137|Single Number II|Medium||Java/Javascript||
+|260|Single Number III|Medium||Java/Javascript||
+
+### 13. Topological Sort
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|207|Course Schedule|Medium||Java/Javascript||
+|210|Course Schedule II|Medium||Java/Javascript||
+|269|Alien Dictionary|Hard||Java/Javascript||
+
+### 14. Random
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|模板|Reservoir Sampling|||||
+|384|Shuffle an Array|Medium||Java/Javascript||
+|398|Random Pick Index|Medium||Java/Javascript||
+|382|Linked List Random Node|Medium||Java/Javascript||
+|380|Insert Delete GetRandom O(1)|Medium||Java/Javascript||
+|381|Insert Delete GetRandom O(1) - Duplicates allowed|Hard||Java/Javascript||
+|138|Copy List with Random Pointer|Medium||Java/Javascript||
+
+### 15. Graph
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|133|Clone Graph|Medium||Java/Javascript||
+|399|Evaluate Division|Medium||Java/Javascript||
+|310|Minimum Height Trees|Medium||Java/Javascript||
+|图形学||||||
+|335|Self Crossing|Hard|很少考|Java/Javascript||
+|149|Max Points on a Line|Hard||Java/Javascript||
+|356|Line Reflection|Medium|很少考|Java/Javascript||
+|391|Perfect Rectangle|Hard|很少考|Java/Javascript||
+|223|Rectangle Area|Medium|很少考|Java/Javascript||
+
+### 16. Union FInd
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|261|Graph Valid Tree|Medium||Java/Javascript||
+|323|Number of Connected Components in an Undirected Graph|Medium||Java/Javascript||
+|305|Number of Islands II|Hard||Java/Javascript||
+
+### 17. Trie
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|211|Add and Search Word - Data structure design|Medium||Java/Javascript||
+|208|Implement Trie (Prefix Tree)|Medium||Java/Javascript||
+|212|Word Search II|Hard||Java/Javascript||
+
+### 18. Design
+
+| No. | Problem       | Level  | Type | Language  | Completed|
+|:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
+|基础||||||
+|359|Logger Rate Limiter|Easy||Java/Javascript||
+|346|Moving Average from Data Stream|Easy|Sliding Window|Java/Javascript||
+|362|Design Hit Counter|Medium||Java/Javascript||
+|281|Zigzag Iterator|Medium||Java/Javascript||
+|284|Peeking Iterator|Medium||Java/Javascript||
+|251|Flatten 2D Vector|Medium||Java/Javascript||
+|288|Unique Word Abbreviation|Medium||Java/Javascript||
+|170|Two Sum III - Data structure design|Easy||Java/Javascript||
+|348|Design Tic-Tac-Toe|Medium||Java/Javascript||
+|379|Design Phone Directory|Medium||Java/Javascript||
+|353|Design Snake Game|Medium||Java/Javascript||
+|146|LRU Cache|Medium||Java/Javascript||
+|355|Design Twitter|Medium||Java/Javascript||
+|303|Range Sum Query - Immutable|Easy||Java/Javascript||
+|304|Range Sum Query 2D - Immutable|Medium||Java/Javascript||
+|307|Range Sum Query - Mutable|Medium|Binary Index Tree|Java/Javascript||
+|308|Range Sum Query 2D - Mutable|Hard|Binary Index Tree|Java/Javascript||
+
+
+
+
+
+
+
+
+
+
+
+
