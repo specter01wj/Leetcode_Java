@@ -163,6 +163,22 @@ Cspiration Category:
 |280|Wiggle Sort|Medium||Java/Javascript||
 |324|Wiggle Sort II|Medium||Java/Javascript||
 
+|278|First Bad Version|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+|324|Wiggle Sort II|Medium||Java/Javascript||
+
 ### 2. String
 
 | No. | Problem       | Level  | Type | Language  | Completed|
