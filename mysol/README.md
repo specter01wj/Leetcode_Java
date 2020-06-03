@@ -19,7 +19,7 @@ By Jin Wang
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript|Done/Done|
 |27|**Remove Element**|Easy|Java/Javascript|Done/Done|
 |28|**Implement strStr()**|Easy|Java/Javascript|Done/Done|
-|35|**Search Insert Position**|Easy|Java/Javascript||
+|35|**Search Insert Position**|Easy|Java/Javascript|Done/Done|
 |38|**Count and Say**|Easy|Java/Javascript|Done/Done|
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
 |58|**Length of Last Word**|Easy|Java/Javascript|Done/Done|
