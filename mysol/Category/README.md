@@ -78,7 +78,7 @@ Cspiration Category:
 |280|Wiggle Sort|Medium||Java/Javascript||
 |324|Wiggle Sort II|Medium||Java/Javascript||
 |278|First Bad Version|Easy||Java/Javascript|Done/Done|
-|35|Search Insert Position|Easy||Java/Javascript||
+|35|Search Insert Position|Easy||Java/Javascript|Done/Done|
 |33|Search in Rotated Sorted Array|Medium||Java/Javascript||
 |81|Search in Rotated Sorted Array II|Medium||Java/Javascript||
 |153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
