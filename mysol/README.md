@@ -49,7 +49,7 @@ By Jin Wang
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |263|**Ugly Number**|Easy|Java/Javascript|Done/Done|
 |268|**Missing Number**|Easy|Java/Javascript|Done/Done|
-|278|**First Bad Version**|Easy||Java/Javascript|Done/Done|
+|278|**First Bad Version**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
