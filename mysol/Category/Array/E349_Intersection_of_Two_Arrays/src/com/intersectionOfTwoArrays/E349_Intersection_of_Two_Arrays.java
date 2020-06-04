@@ -19,10 +19,10 @@ The result can be in any order.*/
 public class E349_Intersection_of_Two_Arrays {
 
 	public static void main(String[] args) {
-		int[] input1 = {4,9,5}, input2 = {9,4,9,8,4};
+		int[] input1 = {4,9,4,5}, input2 = {9,4,9,4,8,4};
         int[] output = intersection(input1, input2);
         System.out.println("input1: " + Arrays.toString(input1) + 
-        		"input2: " + Arrays.toString(input2) + 
+        		" input2: " + Arrays.toString(input2) + 
         		"\noutput: " + Arrays.toString(output));
 	}
 	
