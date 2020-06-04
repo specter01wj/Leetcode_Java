@@ -86,7 +86,7 @@ Cspiration Category:
 |162|Find Peak Element|Medium||Java/Javascript||
 |374|Guess Number Higher or Lower|Easy||Java/Javascript||
 |34|Find First and Last Position of Element in Sorted Array|Medium||Java/Javascript||
-|349|Intersection of Two Arrays|Easy||Java/Javascript||
+|349|Intersection of Two Arrays|Easy||Java/Javascript|Done/Done|
 |350|Intersection of Two Arrays II|Easy||Java/Javascript||
 |315|Count of Smaller Numbers After Self|Hard||Java/Javascript||
 |300|Longest Increasing Subsequence|Medium||Java/Javascript||
