@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Implement strStr().
+
+				Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+				Example 1:
+
+				Input: haystack = "hello", needle = "ll"
+				Output: 2
+				Example 2:
+
+				Input: haystack = "aaaaa", needle = "bba"
+				Output: -1
+			 */
+			$(document).ready(function(){
+
+				/*
+			     * @param haystack: source string to be scanned.
+			     * @param needle: target string containing the sequence of characters to match.
+			     * @return: a index to the first occurrence of target in source,
+			     * or -1  if target is not part of source.
+			     */
+				var strStr = function(haystack, needle) {
+					for (var i = 0; i < haystack.length - needle.length + 1; i++) {
+			            var j = 0;
+			            for (j = 0; j < needle.length; j++) {
+			                if (haystack.charAt(i + j) != needle.charAt(j)) {
+			                    break;
+			                }
+			            }
+			            // finished loop, needle found
+			            if (j == needle.length) {
+			                return i;
+			            }
+			        }
+			        return -1;
+				};
+
+				var nums = "hello";
+				var needle = "ll";
+				var tt1 = strStr(nums, needle);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
