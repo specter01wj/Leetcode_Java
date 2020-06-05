@@ -50,8 +50,15 @@ By Jin Wang
 |167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
+|170|**Two Sum III - Data structure design**|Easy|Java/Javascript||
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
 |172|**Factorial Trailing Zeroes**|Easy|Java/Javascript|Done/Done|
+|175|**Combine Two Tables**|Easy|Java/Javascript||
+|176|**Second Highest Salary**|Easy|Java/Javascript||
+|181|**Employees Earning More Than Their Managers**|Easy|Java/Javascript||
+|182|**Duplicate Emails**|Easy|Java/Javascript||
+|183|**Customers Who Never Order**|Easy|Java/Javascript||
+|189|**Rotate Array**|Easy|Java/Javascript||
 |190|**Reverse Bits**|Easy|Java/Javascript|Done/Done|
 |191|**Number of 1 Bits**|Easy|Java/Javascript|Done/Done|
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
