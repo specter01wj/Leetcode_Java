@@ -58,6 +58,7 @@ By Jin Wang
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript|Done/Done|
 |349|**Intersection of Two Arrays**|Easy||Java/Javascript|Done/Done|
+|350|**Intersection of Two Arrays II**|Easy||Java/Javascript|Done/Done|
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
 |371|**Sum of Two Integers**|Easy|Java/Javascript|Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
