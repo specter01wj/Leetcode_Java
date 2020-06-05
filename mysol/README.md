@@ -116,7 +116,6 @@ By Jin Wang
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
 |392|**Is Subsequence**|Easy|Java/Javascript||
 |401|**Binary Watch**|Easy|Java/Javascript||
-|400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
@@ -128,10 +127,12 @@ By Jin Wang
 |5|**Longest Palindromic Substring**|Medium|Java/Javascript||
 |6|**ZigZag Conversion**|Medium|Java/Javascript||
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
+|11|**Container With Most Water**|Medium|Java/Javascript||
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
-|229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
+|229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
+|400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
 
 
 ### Hard Level
@@ -142,6 +143,7 @@ By Jin Wang
 |10|**Regular Expression Matching**|Hard|Java/Javascript||
 |123|**Best Time to Buy and Sell Stock III**|Hard|Java/Javascript|Done/|
 |188|**Best Time to Buy and Sell Stock IV**|Hard|Java/Javascript|Done/|
+
 
 ### ================================================================
 
