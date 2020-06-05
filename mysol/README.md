@@ -23,6 +23,7 @@ By Jin Wang
 |38|**Count and Say**|Easy|Java/Javascript|Done/Done|
 |53|**Maximum Subarray**|Easy|Java/Javascript|Done/Done|
 |58|**Length of Last Word**|Easy|Java/Javascript|Done/Done|
+|66|**Plus One**|Easy|Java/Javascript|Done/Done|
 |67|**Add Binary**|Easy|Java/Javascript|Done/Done|
 |69|**Sqrt(x)**|Easy|Java/Javascript|Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
