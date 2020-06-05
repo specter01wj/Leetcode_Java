@@ -88,7 +88,10 @@ By Jin Wang
 |257|**Binary Tree Paths**|Easy|Java/Javascript||
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |263|**Ugly Number**|Easy|Java/Javascript|Done/Done|
+|266|**Palindrome Permutation**|Easy|Java/Javascript||
 |268|**Missing Number**|Easy|Java/Javascript|Done/Done|
+|270|**Closest Binary Search Tree Value**|Easy|Java/Javascript||
+|276|**Paint Fence**|Easy|Java/Javascript||
 |278|**First Bad Version**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
