@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Find the nth digit of the infinite integer sequence 
+			 	1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...
+
+				Note:
+				n is positive and will fit within the range of a 32-bit signed integer (n < 231).
+
+				Example 1:
+
+				Input:
+				3
+
+				Output:
+				3
+				Example 2:
+
+				Input:
+				11
+
+				Output:
+				0
+
+				Explanation:
+				The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... is a 0, 
+				which is part of the number 10.
+			 */
+			$(document).ready(function(){
+
+				/*
+			     * @param n: a positive integer
+			     * @return: integer, the nth digit of the infinite integer sequence
+			     */
+				var findNthDigit = function(n) {
+					// 初始化一位数的整数有9个，从1开始
+			        var len = 1;
+			        var count = 9;
+			        var start = 1;
+			        
+			        while (n > len * count) {
+			            // 以此类推，二位数的整数有90个，从10开始
+			            n -= len * count;
+			            len += 1;
+			            count *= 10;
+			            start *= 10;
+			        }
+			    	// 找到第n位数在整数start中
+			        start = parseInt(start + (n - 1) / len);
+			        var s = start + "";
+			        // 取出对应位置的整数值
+			        return (s.charAt((n - 1) % len));
+				};
+
+				var nums = 11;
+				var tt1 = findNthDigit(nums);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			看这个数是否只有2，3，5的因子
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
