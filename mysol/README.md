@@ -67,10 +67,14 @@ By Jin Wang
 |197|**Rising Temperature**|Easy|Java/Javascript||
 |198|**House Robber**|Easy|Java/Javascript||
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
+|203|**Remove Linked List Elements**|Easy|Java/Javascript||
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
+|206|**Reverse Linked List**|Easy|Java/Javascript||
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
+|225|**Implement Stack using Queues**|Easy|Java/Javascript||
+|226|**Invert Binary Tree**|Easy|Java/Javascript||
 |231|**Power of Two**|Easy|Java/Javascript|Done/Done|
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
