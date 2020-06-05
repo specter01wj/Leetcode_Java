@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, 
+			 	find the one that is missing from the array.
+
+				Example 1:
+
+				Input: [3,0,1]
+				Output: 2
+				Example 2:
+
+				Input: [9,6,4,2,3,5,7,0,1]
+				Output: 8
+			 */
+			$(document).ready(function(){
+
+				/*
+			     * @param nums: an array of integers
+			     * @return: an integer
+			     */
+				var missingNumber = function(nums) {
+					var xor = 0, i = 0;
+			        
+			        for (i = 0; i < nums.length; i++) {
+			            xor = xor ^ i ^ nums[i];
+			        }
+
+			        return xor ^ i;
+				};
+
+				var num = [9,6,4,2,3,5,7,0,1];
+				var tt1 = missingNumber(num);
+				$('#t1').html('<h2>Input: ' + num + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
