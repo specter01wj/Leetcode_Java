@@ -26,7 +26,17 @@ By Jin Wang
 |66|**Plus One**|Easy|Java/Javascript|Done/Done|
 |67|**Add Binary**|Easy|Java/Javascript|Done/Done|
 |69|**Sqrt(x)**|Easy|Java/Javascript|Done/Done|
+|70|**Climbing Stairs**|Easy|Java/Javascript||
+|83|**Remove Duplicates from Sorted List**|Easy|Java/Javascript||
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
+|100|**Same Tree**|Easy|Java/Javascript||
+|101|**Symmetric Tree**|Easy|Java/Javascript||
+|104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript||
+|107|**Binary Tree Level Order Traversal II**|Easy|Java/Javascript||
+|108|**Convert Sorted Array to Binary Search Tree**|Easy|Java/Javascript||
+|110|**Balanced Binary Tree**|Easy|Java/Javascript||
+|111|**Minimum Depth of Binary Tree**|Easy|Java/Javascript||
+|112|**Path Sum**|Easy|Java/Javascript||
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
