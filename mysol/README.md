@@ -107,11 +107,15 @@ By Jin Wang
 |346|**Moving Average from Data Stream**|Easy|Java/Javascript||
 |349|**Intersection of Two Arrays**|Easy|Java/Javascript|Done/Done|
 |350|**Intersection of Two Arrays II**|Easy|Java/Javascript|Done/Done|
+|359|**Logger Rate Limiter**|Easy|Java/Javascript||
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
 |371|**Sum of Two Integers**|Easy|Java/Javascript|Done/Done|
+|374|**Guess Number Higher or Lower**|Easy|Java/Javascript||
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
+|392|**Is Subsequence**|Easy|Java/Javascript||
+|401|**Binary Watch**|Easy|Java/Javascript||
 |400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
 
 
