@@ -61,6 +61,11 @@ By Jin Wang
 |189|**Rotate Array**|Easy|Java/Javascript||
 |190|**Reverse Bits**|Easy|Java/Javascript|Done/Done|
 |191|**Number of 1 Bits**|Easy|Java/Javascript|Done/Done|
+|193|**Valid Phone Numbers**|Easy|Java/Javascript||
+|195|**Tenth Line**|Easy|Java/Javascript||
+|196|**Delete Duplicate Emails**|Easy|Java/Javascript||
+|197|**Rising Temperature**|Easy|Java/Javascript||
+|198|**House Robber**|Easy|Java/Javascript||
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
