@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*We are playing the Guess Game. The game is as follows:
+			
+			I pick a number from 1 to n. You have to guess which number I picked.
+
+			Every time you guess wrong, I'll tell you whether the number is higher or lower.
+
+			You call a pre-defined API guess(int num) which returns 3 possible results (-1, 1, or 0):
+
+			-1 : My number is lower
+			 1 : My number is higher
+			 0 : Congrats! You got it!
+			Example :
+
+			Input: n = 10, pick = 6
+			Output: 6*/
+			$(document).ready(function(){
+
+				/*
+			    solution:
+			    采用二分的方法可以很快的找到答案，需要注意在取mid的时候不能(l + r) / 2， 
+			    建议 mid = l + (r - l) / 2，防止超出数据范围。
+			    */
+				
+				/*
+			     * @param n an integer
+			     * @return the number you guess
+			     */
+				let guessNumber = (n) => {
+					let l = 1, r = n;
+					let gitrepo = new GitRepo();
+					
+					while(l <= r) {
+						let mid = l + (r - l) / 2;
+						let res = gitrepo.guess(mid);
+						if(res === 0) {
+							return mid;
+						}
+						if(res === -1) {
+							r = mid - 1;
+						} else {
+							l = mid + 1;
+						}
+					}
+					
+					return -1;
+				};
+
+				class GitRepo {
+					guess(k) {
+						if(k == 6) {
+							return 0;
+						}
+						if(k < 6) {
+							return -1;
+						} else {
+							return 1;
+						}
+					};
+				}
+
+				var nums = 11;
+				var tt1 = guessNumber(nums);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
