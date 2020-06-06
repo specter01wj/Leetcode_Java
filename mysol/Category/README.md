@@ -92,7 +92,7 @@ Cspiration Category:
 |300|Longest Increasing Subsequence|Medium||Java/Javascript||
 |354|Russian Doll Envelopes|Hard||Java/Javascript||
 |Missing||||||
-|414|Third Maximum Number|Easy||Java/Javascript||
+|414|Third Maximum Number|Easy||Java/Javascript|Done/Done|
 |448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript||
 |485|Max Consecutive Ones|Easy||Java/Javascript||
 
