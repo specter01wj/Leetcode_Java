@@ -84,7 +84,7 @@ Cspiration Category:
 |153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
 |154|Find Minimum in Rotated Sorted Array II|Hard||Java/Javascript||
 |162|Find Peak Element|Medium||Java/Javascript||
-|374|Guess Number Higher or Lower|Easy||Java/Javascript||
+|374|Guess Number Higher or Lower|Easy||Java/Javascript|Done/Done|
 |34|Find First and Last Position of Element in Sorted Array|Medium||Java/Javascript||
 |349|Intersection of Two Arrays|Easy||Java/Javascript|Done/Done|
 |350|Intersection of Two Arrays II|Easy||Java/Javascript|Done/Done|
