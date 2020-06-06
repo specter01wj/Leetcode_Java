@@ -116,6 +116,7 @@ By Jin Wang
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
 |392|**Is Subsequence**|Easy|Java/Javascript||
 |401|**Binary Watch**|Easy|Java/Javascript||
+|414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
