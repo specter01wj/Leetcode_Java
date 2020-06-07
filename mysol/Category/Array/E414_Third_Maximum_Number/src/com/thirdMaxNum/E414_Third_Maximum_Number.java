@@ -1,7 +1,8 @@
 package com.thirdMaxNum;
 import java.util.*;
 
-/*Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
+/*Given a non-empty array of integers, return the third maximum number in this array. 
+ If it does not exist, return the maximum number. The time complexity must be in O(n).
 
 Example 1:
 Input: [3, 2, 1]
