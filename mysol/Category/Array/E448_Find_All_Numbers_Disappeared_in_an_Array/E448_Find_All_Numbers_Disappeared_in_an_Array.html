@@ -30,6 +30,9 @@
 				let findDisappearedNumbers = (nums) => {
 					let res = [];
 					let vis = [];
+					for(let i = 0; i < nums.length; i++) {
+						vis[i] = 0;
+					}
 					
 					for(let i = 0; i < nums.length; i++) {
 						vis[nums[i] - 1]++;
