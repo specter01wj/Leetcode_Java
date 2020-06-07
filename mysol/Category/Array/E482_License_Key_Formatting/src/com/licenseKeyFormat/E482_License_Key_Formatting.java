@@ -28,7 +28,7 @@ String S is non-empty.*/
 public class E482_License_Key_Formatting {
 
 	public static void main(String[] args) {
-		String input = "5F3Z-2e-9-w";//2-5g-3-J
+		String input = "2-5g-3-J";//5F3Z-2e-9-w
         String output = licenseKeyFormatting(input, 4);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
