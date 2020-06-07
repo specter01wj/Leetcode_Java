@@ -44,7 +44,19 @@ public class E482_License_Key_Formatting {
      * @return: return a string
      */
 	public static String licenseKeyFormatting(String S, int K) {
+		S = S.replaceAll("[-]", "");
+		S = S.toUpperCase();
 		
+		StringBuilder res = new StringBuilder();
+		res.append(S);
+		
+		int i = res.length() - K;
+		while(i > 0) {
+			res.insert(i, "-");
+			i = i - K;
+		}
+		
+		return res.toString();
 	}
 
 }
