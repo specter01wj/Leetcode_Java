@@ -165,6 +165,11 @@ Cspiration Category:
 |392|Is Subsequence|Medium||Java/Javascript||
 |115|Distinct Subsequences|Hard||Java/Javascript||
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
+|Missing||||||
+|415|Add Strings|Easy||Java/Javascript||
+|434|Number of Segments in a String|Easy||Java/Javascript||
+|443|String Compression|Easy||Java/Javascript||
+|459|Repeated Substring Pattern|Easy||Java/Javascript||
 
 ### 3. Math
 

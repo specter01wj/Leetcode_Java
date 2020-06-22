@@ -8,7 +8,9 @@
 
 				Two strings are isomorphic if the characters in s can be replaced to get t.
 
-				All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
+				All occurrences of a character must be replaced with another character while 
+				preserving the order of characters. No two characters may map to the same 
+				character but a character may map to itself.
 
 				Example 1:
 
@@ -46,17 +48,17 @@
 					}
 					
 					var map2 = new Array(256).fill(0);
-			        for (var i = 0; i < t.length; i++) {
-			            if (map2[tc[i].charCodeAt(0)] === 0) {
-			                map2[tc[i].charCodeAt(0)] = sc[i].charCodeAt(0);
-			            } else {
-			                if (map2[tc[i].charCodeAt(0)] !== sc[i].charCodeAt(0)) {
-			                    return false;
-			                }
-			            }
-			        }
-			        
-			        return true;
+	        for (var i = 0; i < t.length; i++) {
+	            if (map2[tc[i].charCodeAt(0)] === 0) {
+	                map2[tc[i].charCodeAt(0)] = sc[i].charCodeAt(0);
+	            } else {
+	                if (map2[tc[i].charCodeAt(0)] !== sc[i].charCodeAt(0)) {
+	                    return false;
+	                }
+	            }
+	        }
+	        
+	        return true;
 				};
 
 				var input1 = "paper", input2 = "title";

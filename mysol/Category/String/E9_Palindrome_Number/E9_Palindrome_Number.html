@@ -32,7 +32,7 @@
 			     * @return: boolean whether an integer is a palindrome
 			     */
 				var isPalindrome = function(x) {
-					if(x < 0 || (x % 10 == 0 && x != 0)) {
+					if(x < 0 || (x % 10 === 0 && x !== 0)) {
 			            return false;
 			        }
 					
@@ -40,13 +40,13 @@
 					
 					while(x > revertedNumber) {
 						revertedNumber = revertedNumber * 10 + x % 10;
-						x /= 10;
+						x = parseInt(x / 10);
 					}
 					
-					return x == revertedNumber || x == revertedNumber / 10;
+					return x === revertedNum || x === parseInt(revertedNum / 10);
 				};
 
-				var nums = 121;
+				var nums = 8228;
 				var tt1 = isPalindrome(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});

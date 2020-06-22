@@ -25,7 +25,7 @@
 			     * @param magazine: a string
 			     * @return boolean: whether the ransom note can be constructed from the magazines
 			     */
-				var canConstruct = function(s) {
+				var canConstruct = function(ransomNote, magazine) {
 					var arr = new Array(26).fill(0);
 		
 					for(var i = 0; i < magazine.length; i++) {
