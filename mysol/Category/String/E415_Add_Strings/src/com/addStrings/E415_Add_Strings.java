@@ -22,6 +22,16 @@ public class E415_Add_Strings {
         		"\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    将两个数解析后相加即可
+    */
+	
+	/*
+     * @param s: a string
+     * @param s: a string
+     * @return: a string, sum up
+     */
 	public static String addStrings(String num1, String num2) {
 		String res = "";
 		int m = num1.length(), n = num2.length(), i = m - 1, j = n - 1, flag = 0;
