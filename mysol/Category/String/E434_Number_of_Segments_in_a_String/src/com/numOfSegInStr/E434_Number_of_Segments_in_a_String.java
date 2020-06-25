@@ -27,9 +27,8 @@ public class E434_Number_of_Segments_in_a_String {
     */
 	
 	/**
-     * @param s: The first string
-     * @param t: The second string
-     * @return true or false
+     * @param s: a string
+     * @return: the number of segments in a string
      */
 	public static int countSegments(String s) {
 		int res = 0;
