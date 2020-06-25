@@ -7,7 +7,7 @@ import java.util.*;
 public class E443_String_Compression {
 
 	public static void main(String[] args) {
-		char[] input = {'a','a','b','b','b','c','c','c'};
+		char[] input = {'a','b','b','b','b','b','b','b','b','b','b','b','b'};//{'a','a','b','b','b','c','c','c'};
         int output = compress(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
