@@ -118,6 +118,8 @@ By Jin Wang
 |401|**Binary Watch**|Easy|Java/Javascript||
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 |415|**Add Strings**|Easy|Java/Javascript|Done/Done|
+|434|**Number of Segments in a String**|Easy|Java/Javascript|Done/Done|
+|443|**String Compression**|Easy|Java/Javascript|Done/Done|
 |448|**Find All Numbers Disappeared in an Array**|Easy|Java/Javascript|Done/Done|
 |482|**License Key Formatting**|Easy|Java/Javascript|Done/Done|
 |485|**Max Consecutive Ones**|Easy|Java/Javascript|Done/Done|
