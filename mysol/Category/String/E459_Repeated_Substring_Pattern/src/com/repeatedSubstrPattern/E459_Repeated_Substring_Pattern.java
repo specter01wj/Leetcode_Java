@@ -27,7 +27,7 @@ Explanation: It's the substring "abc" four times. (And the substring "abcabc" tw
 public class E459_Repeated_Substring_Pattern {
 
 	public static void main(String[] args) {
-		String input = "abab";
+		String input = "abab";//"abcabcabcabc"
         boolean output = repeatedSubstringPattern(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
