@@ -32,7 +32,18 @@ public class E459_Repeated_Substring_Pattern {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    KMP算法对于next数组的应用。 next[i]是指对于字符串s[0,i-1]中，前缀与后缀的最大匹配长度。 
+    例如对于"abcabcabc"来说，其next[8] = 5，也即对于s[0,7]="abcabcab"，
+    前缀与后缀最大匹配的串为"abcab"，长度为5。 
+    用字符串长度减1减去最后一位的next数组值之后得到的应为重复串的长度。
+    */
 	
+	/*
+     * @param s: a string，denote matching string
+     * @return: an boolean，denote whether it is repeated pattern string
+     */
 	public static boolean repeatedSubstringPattern(String s) {
 		int l = s.length();
 		int[] next = new int[l];
