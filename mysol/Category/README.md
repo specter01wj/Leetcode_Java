@@ -245,6 +245,24 @@ Cspiration Category:
 |250|Count Univalue Subtrees|Medium|postorder|Java/Javascript||
 |366|Find Leaves of Binary Tree|Medium|postorder|Java/Javascript||
 |337|House Robber III|Medium|postorder + preorder|Java/Javascript||
+|BFS||||||
+|107|Binary Tree Level Order Traversal II|Easy||Java/Javascript||
+|103|Binary Tree Zigzag Level Order Traversal|Medium||Java/Javascript||
+|199|Binary Tree Right Side View|Medium|BFS + preorder|Java/Javascript||
+|BST||||||
+|98|Validate Binary Search Tree|Medium||Java/Javascript||
+|235|Lowest Common Ancestor of a Binary Search Tree|Easy||Java/Javascript||
+|236|Lowest Common Ancestor of a Binary Tree|Medium||Java/Javascript||
+|108|Convert Sorted Array to Binary Search Tree|Easy||Java/Javascript|Done|
+|109|Convert Sorted List to Binary Search Tree|Medium||Java/Javascript||
+|173|Binary Search Tree Iterator|Medium||Java/Javascript||
+|230|Kth Smallest Element in a BST|Medium||Java/Javascript||
+|297|Serialize and Deserialize Binary Tree|Hard||Java/Javascript||
+|285|Inorder Successor in BST|Medium||Java/Javascript||
+|270|Closest Binary Search Tree Value|Easy||Java/Javascript||
+|272|Closest Binary Search Tree Value II|Hard||Java/Javascript||
+|99|Recover Binary Search Tree|Hard||Java/Javascript||
+
 
 ### 5. Backtracking
 
