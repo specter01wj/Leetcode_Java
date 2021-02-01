@@ -69,7 +69,7 @@ Cspiration Category:
 |238|Product of Array Except Self|Medium||Java/Javascript||
 |152|Maximum Product Subarray|Medium||Java/Javascript||
 |228|Summary Ranges|Medium||Java/Javascript||
-|163|Missing Ranges|Medium||Java/Javascript||
+|163|Missing Ranges|Easy||Java/Javascript|Done/Done|
 |Sort||||||
 |88|Merge Sorted Array|Easy||Java/Javascript|Done/Done|
 |75|Sort Colors|Medium||Java/Javascript||
