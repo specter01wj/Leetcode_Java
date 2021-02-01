@@ -74,6 +74,6 @@ public class E108_Convert_Sorted_Array_to_Binary_Search_Tree {
    	        this.left = left;
    	        this.right = right;
         }
-   	 }
+   	}
 
 }
