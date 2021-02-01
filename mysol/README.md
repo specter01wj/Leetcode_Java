@@ -47,6 +47,7 @@ By Jin Wang
 |155|**Min Stack**|Easy|Java/Javascript||
 |157|**Read N Characters Given Read4**|Easy|Java/Javascript||
 |160|**Intersection of Two Linked Lists**|Easy|Java/Javascript||
+|163|**Missing Ranges**|Easy|Java/Javascript|Done/Done|
 |167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
