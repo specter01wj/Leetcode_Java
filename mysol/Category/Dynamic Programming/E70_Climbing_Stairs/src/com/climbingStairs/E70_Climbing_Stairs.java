@@ -27,7 +27,7 @@ Explanation: There are three ways to climb to the top.
 public class E70_Climbing_Stairs {
 
 	public static void main(String[] args) {
-		int input = 5;
+		int input = 8;
 		int output = climbStairs(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
