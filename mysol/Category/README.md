@@ -317,7 +317,7 @@ Cspiration Category:
 |92|Reverse Linked List II|Medium||Java/Javascript||
 |237|Delete Node in a Linked List|Easy||Java/Javascript||
 |19|Remove Nth Node From End of List|Medium||Java/Javascript||
-|83|Remove Duplicates from Sorted List|Easy||Java/Javascript||
+|83|Remove Duplicates from Sorted List|Easy||Java/Javascript|Done/|
 |203|Remove Linked List Elements|Easy||Java/Javascript||
 |82|Remove Duplicates from Sorted List II|Medium||Java/Javascript||
 |369|Plus One Linked List|Medium||Java/Javascript||
