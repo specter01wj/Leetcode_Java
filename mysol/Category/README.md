@@ -323,7 +323,7 @@ Cspiration Category:
 |369|Plus One Linked List|Medium||Java/Javascript||
 |2|Add Two Numbers|Medium||Java/Javascript||
 |160|Intersection of Two Linked Lists|Easy||Java/Javascript||
-|21|Merge Two Sorted Lists|Easy||Java/Javascript||
+|21|Merge Two Sorted Lists|Easy||Java/Javascript|Done/|
 
 ### 8. Binary Search
 
