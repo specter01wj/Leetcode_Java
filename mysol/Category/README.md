@@ -253,7 +253,7 @@ Cspiration Category:
 |98|Validate Binary Search Tree|Medium||Java/Javascript||
 |235|Lowest Common Ancestor of a Binary Search Tree|Easy||Java/Javascript||
 |236|Lowest Common Ancestor of a Binary Tree|Medium||Java/Javascript||
-|108|Convert Sorted Array to Binary Search Tree|Easy||Java/Javascript|Done|
+|108|Convert Sorted Array to Binary Search Tree|Easy||Java/Javascript|Done/|
 |109|Convert Sorted List to Binary Search Tree|Medium||Java/Javascript||
 |173|Binary Search Tree Iterator|Medium||Java/Javascript||
 |230|Kth Smallest Element in a BST|Medium||Java/Javascript||
@@ -295,7 +295,7 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |一维||||||
-|70|Climbing Stairs|Easy||Java/Javascript||
+|70|Climbing Stairs|Easy||Java/Javascript|Done/Done|
 |62|Unique Paths|Medium||Java/Javascript||
 |63|Unique Paths II|Medium||Java/Javascript||
 |120|Triangle|Medium|很少考|Java/Javascript||

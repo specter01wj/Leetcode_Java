@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are climbing a staircase. It takes n steps to reach the top.
+
+				Each time you can either climb 1 or 2 steps. In how many distinct ways 
+				can you climb to the top?
+
+				 
+
+				Example 1:
+
+				Input: n = 2
+				Output: 2
+				Explanation: There are two ways to climb to the top.
+				1. 1 step + 1 step
+				2. 2 steps
+				Example 2:
+
+				Input: n = 3
+				Output: 3
+				Explanation: There are three ways to climb to the top.
+				1. 1 step + 1 step + 1 step
+				2. 1 step + 2 steps
+				3. 2 steps + 1 step
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param n: An integer
+		     * @return: An integer
+		     */
+				let climbStairs = function(n) {
+					if(n <= 1) return n;
+					
+					let last1 = 1, last2 = 1;
+					let now = 0;
+
+					for(let i = 2; i <= n; i++) {
+						now = last1 + last2;
+						last2 = last1;
+						last1 = now;
+					}
+					
+					return now;
+				};
+
+				var nums = 8;
+				var tt1 = climbStairs(nums, 2);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>

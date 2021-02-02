@@ -26,7 +26,7 @@ By Jin Wang
 |66|**Plus One**|Easy|Java/Javascript|Done/Done|
 |67|**Add Binary**|Easy|Java/Javascript|Done/Done|
 |69|**Sqrt(x)**|Easy|Java/Javascript|Done/Done|
-|70|**Climbing Stairs**|Easy|Java/Javascript||
+|70|**Climbing Stairs**|Easy|Java/Javascript|Done/Done|
 |83|**Remove Duplicates from Sorted List**|Easy|Java/Javascript||
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |100|**Same Tree**|Easy|Java/Javascript||
