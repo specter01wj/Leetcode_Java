@@ -40,24 +40,13 @@ public class E100_Same_Tree {
 	
 	/*
     solution:
-    每次选择一个区间的中点作为当前区间的根，然后对左右子树依次构造。
+    先判断树的根的值是否相同，若相同，判断子树是否相同
     */
 	
 	/**
-	 * Definition for a binary tree node.
-	 * public class TreeNode {
-	 *     int val;
-	 *     TreeNode left;
-	 *     TreeNode right;
-	 *     TreeNode() {}
-	 *     TreeNode(int val) { this.val = val; }
-	 *     TreeNode(int val, TreeNode left, TreeNode right) {
-	 *         this.val = val;
-	 *         this.left = left;
-	 *         this.right = right;
-	 *     }
-	 * }
-	 */
+     * @param a, b, the root of binary trees.
+     * @return true if they are identical, or false.
+     */
 	public static boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null)
             return true;
