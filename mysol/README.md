@@ -30,7 +30,7 @@ By Jin Wang
 |83|**Remove Duplicates from Sorted List**|Easy|Java/Javascript|Done/|
 |88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
 |100|**Same Tree**|Easy|Java/Javascript|Done/|
-|101|**Symmetric Tree**|Easy|Java/Javascript||
+|101|**Symmetric Tree**|Easy|Java/Javascript|Done/|
 |104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript||
 |107|**Binary Tree Level Order Traversal II**|Easy|Java/Javascript||
 |108|**Convert Sorted Array to Binary Search Tree**|Easy|Java/Javascript|Done/|

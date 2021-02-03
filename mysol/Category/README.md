@@ -230,7 +230,7 @@ Cspiration Category:
 |102|Binary Tree Level Order Traversal|Medium|DFS + BFS|Java/Javascript||
 |Preorder||||||
 |100|Same Tree|Easy|preorder|Java/Javascript|Done/|
-|101|Symmetric Tree|Easy|preorder|Java/Javascript||
+|101|Symmetric Tree|Easy|preorder|Java/Javascript|Done/|
 |226|Invert Binary Tree|Easy|preorder + BFS|Java/Javascript||
 |257|Binary Tree Paths|Easy|preorder|Java/Javascript||
 |112|Path Sum|Easy|preorder|Java/Javascript||
