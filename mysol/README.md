@@ -34,7 +34,7 @@ By Jin Wang
 |104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript|Done/|
 |107|**Binary Tree Level Order Traversal II**|Easy|Java/Javascript|Done/|
 |108|**Convert Sorted Array to Binary Search Tree**|Easy|Java/Javascript|Done/|
-|110|**Balanced Binary Tree**|Easy|Java/Javascript||
+|110|**Balanced Binary Tree**|Easy|Java/Javascript|Done/|
 |111|**Minimum Depth of Binary Tree**|Easy|Java/Javascript||
 |112|**Path Sum**|Easy|Java/Javascript||
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
