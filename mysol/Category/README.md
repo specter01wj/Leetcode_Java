@@ -136,7 +136,7 @@ Cspiration Category:
 |提高||||||
 |68|Text Justification|Hard||Java/Javascript||
 |65|Valid Number|Hard||Java/Javascript||
-|157|Read N Characters Given Read4|Easy||Java/Javascript||
+|157|Read N Characters Given Read4|Easy||Java/Javascript|Done/Done|
 |158|Read N Characters Given Read4 II - Call multiple times|Hard||Java/Javascript||
 |Substring||||||
 |76|Minimum Window Substring|Hard|Sliding Window|Java/Javascript||
