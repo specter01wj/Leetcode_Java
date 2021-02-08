@@ -311,7 +311,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |206|Reverse Linked List|Easy||Java/Javascript||
-|141|Linked List Cycle|Easy||Java/Javascript||
+|141|Linked List Cycle|Easy||Java/Javascript|Done/|
 |24|Swap Nodes in Pairs|Medium||Java/Javascript||
 |328|Odd Even Linked List|Medium||Java/Javascript||
 |92|Reverse Linked List II|Medium||Java/Javascript||

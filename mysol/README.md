@@ -43,7 +43,7 @@ By Jin Wang
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |125|**Valid Palindrome**|Easy|Java/Javascript|Done/Done|
 |136|**Single Number**|Easy|Java/Javascript|Done/Done|
-|141|**Linked List Cycle**|Easy|Java/Javascript||
+|141|**Linked List Cycle**|Easy|Java/Javascript|Done/|
 |155|**Min Stack**|Easy|Java/Javascript||
 |157|**Read N Characters Given Read4**|Easy|Java/Javascript||
 |160|**Intersection of Two Linked Lists**|Easy|Java/Javascript||
