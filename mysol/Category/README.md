@@ -233,7 +233,7 @@ Cspiration Category:
 |101|Symmetric Tree|Easy|preorder|Java/Javascript|Done/|
 |226|Invert Binary Tree|Easy|preorder + BFS|Java/Javascript||
 |257|Binary Tree Paths|Easy|preorder|Java/Javascript||
-|112|Path Sum|Easy|preorder|Java/Javascript||
+|112|Path Sum|Easy|preorder|Java/Javascript|Done/|
 |113|Path Sum II|Medium|preorder|Java/Javascript||
 |129|Sum Root to Leaf Numbers|Medium|preorder|Java/Javascript||
 |298|Binary Tree Longest Consecutive Sequence|Medium|preorder|Java/Javascript||

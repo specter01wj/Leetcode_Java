@@ -36,7 +36,7 @@ By Jin Wang
 |108|**Convert Sorted Array to Binary Search Tree**|Easy|Java/Javascript|Done/|
 |110|**Balanced Binary Tree**|Easy|Java/Javascript|Done/|
 |111|**Minimum Depth of Binary Tree**|Easy|Java/Javascript|Done/|
-|112|**Path Sum**|Easy|Java/Javascript||
+|112|**Path Sum**|Easy|Java/Javascript|Done/|
 |118|**Pascal's Triangle**|Easy|Java/Javascript|Done/Done|
 |119|**Pascal's Triangle II**|Easy|Java/Javascript|Done/Done|
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|

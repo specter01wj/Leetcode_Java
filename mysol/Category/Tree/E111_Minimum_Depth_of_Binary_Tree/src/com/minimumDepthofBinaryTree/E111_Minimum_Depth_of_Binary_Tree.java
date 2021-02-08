@@ -26,8 +26,8 @@ public class E111_Minimum_Depth_of_Binary_Tree {
 		TreeNode input = new TreeNode(3);
 		input.left = new TreeNode(9);
 		input.right = new TreeNode(20);
-		input.left.left = new TreeNode(null);
-		input.left.right = new TreeNode(null);
+		input.left.left = new TreeNode();
+		input.left.right = new TreeNode();
 		input.right.left = new TreeNode(15);
 		input.right.right = new TreeNode(7);
 		int output = minDepth(input);
@@ -66,7 +66,7 @@ public class E111_Minimum_Depth_of_Binary_Tree {
     	int val;
    	    TreeNode left;
    	    TreeNode right;
-   	    TreeNode(Object object) {}
+   	    TreeNode() {}
    	    TreeNode(int val) { this.val = val; }
    	    TreeNode(int val, TreeNode left, TreeNode right) {
    	        this.val = val;
