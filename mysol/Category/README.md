@@ -237,7 +237,7 @@ Cspiration Category:
 |113|Path Sum II|Medium|preorder|Java/Javascript||
 |129|Sum Root to Leaf Numbers|Medium|preorder|Java/Javascript||
 |298|Binary Tree Longest Consecutive Sequence|Medium|preorder|Java/Javascript||
-|111|Minimum Depth of Binary Tree|Easy|preorder|Java/Javascript||
+|111|Minimum Depth of Binary Tree|Easy|preorder|Java/Javascript|Done/|
 |Postorder||||||
 |104|Maximum Depth of Binary Tree|Easy|postorder|Java/Javascript|Done/|
 |110|Balanced Binary Tree|Easy|postorder|Java/Javascript|Done/|
