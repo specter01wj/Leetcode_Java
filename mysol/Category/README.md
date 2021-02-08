@@ -322,7 +322,7 @@ Cspiration Category:
 |82|Remove Duplicates from Sorted List II|Medium||Java/Javascript||
 |369|Plus One Linked List|Medium||Java/Javascript||
 |2|Add Two Numbers|Medium||Java/Javascript||
-|160|Intersection of Two Linked Lists|Easy||Java/Javascript||
+|160|Intersection of Two Linked Lists|Easy||Java/Javascript|Done/|
 |21|Merge Two Sorted Lists|Easy||Java/Javascript|Done/|
 
 ### 8. Binary Search

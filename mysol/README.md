@@ -46,7 +46,7 @@ By Jin Wang
 |141|**Linked List Cycle**|Easy|Java/Javascript|Done/|
 |155|**Min Stack**|Easy|Java/Javascript|Done/|
 |157|**Read N Characters Given Read4**|Easy|Java/Javascript|Done/Done|
-|160|**Intersection of Two Linked Lists**|Easy|Java/Javascript||
+|160|**Intersection of Two Linked Lists**|Easy|Java/Javascript|Done/|
 |163|**Missing Ranges**|Easy|Java/Javascript|Done/Done|
 |167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
