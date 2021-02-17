@@ -68,7 +68,7 @@ Cspiration Category:
 |209|Minimum Size Subarray Sum|Medium||Java/Javascript||
 |238|Product of Array Except Self|Medium||Java/Javascript||
 |152|Maximum Product Subarray|Medium||Java/Javascript||
-|228|Summary Ranges|Medium||Java/Javascript||
+|228|Summary Ranges|Easy||Java/Javascript|Done/Done|
 |163|Missing Ranges|Easy||Java/Javascript|Done/Done|
 |Sort||||||
 |88|Merge Sorted Array|Easy||Java/Javascript|Done/Done|
