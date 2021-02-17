@@ -28,7 +28,7 @@ Cspiration Category:
 |229|Majority Element II|Medium|很少考|Java/Javascript|Done/Done|
 |274|H-Index|Medium||Java/Javascript||
 |275|H-Index II|Medium||Java/Javascript||
-|243|Shortest Word Distance|Easy||Java/Javascript||
+|243|Shortest Word Distance|Easy||Java/Javascript|Done/Done|
 |244|Shortest Word Distance II|Medium||Java/Javascript||
 |245|Shortest Word Distance III|Medium||Java/Javascript||
 |217|Contains Duplicate|Easy||Java/Javascript|Done/Done|

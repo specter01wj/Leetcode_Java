@@ -83,7 +83,7 @@ By Jin Wang
 |235|**Lowest Common Ancestor of a Binary Search Tree**|Easy|Java/Javascript||
 |237|**Delete Node in a Linked List**|Easy|Java/Javascript||
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
-|243|**Shortest Word Distance**|Easy|Java/Javascript||
+|243|**Shortest Word Distance**|Easy|Java/Javascript|Done/Done|
 |246|**Strobogrammatic Number**|Easy|Java/Javascript||
 |252|**Meeting Rooms**|Easy|Java/Javascript||
 |256|**Paint House**|Easy|Java/Javascript||
