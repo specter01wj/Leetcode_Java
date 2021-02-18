@@ -33,17 +33,17 @@
 		     * @return: the sum of min(ai, bi) for all i from 1 to n
 		     */
 				let arrayPairSum = function(n) {
-					Arrays.sort(nums);
-					int ans = 0;
+					nums.sort(function(a, b){return a-b});
+					let ans = 0;
 					
-					for(int i = 0; i < nums.length; i += 2) {
+					for(let i = 0; i < nums.length; i += 2) {
 						ans += nums[i];
 					}
 					
 					return ans;
 				};
 
-				let nums = [1,4,3,2];
+				let nums = [1,4,3,2,100,9];
 				let tt1 = arrayPairSum(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});

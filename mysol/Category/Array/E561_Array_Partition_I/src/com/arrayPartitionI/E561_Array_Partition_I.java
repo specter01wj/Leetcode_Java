@@ -26,7 +26,7 @@ min(2, 5) + min(6, 6) = 1 + 2 + 6 = 9.*/
 public class E561_Array_Partition_I {
 
 	public static void main(String[] args) {
-		int[] input = {1,4,3,2};//{6,2,6,5,1,2};
+		int[] input = {1,4,3,2,100,9};//{6,2,6,5,1,2};
         int output = arrayPairSum(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
