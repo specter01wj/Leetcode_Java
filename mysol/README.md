@@ -126,6 +126,7 @@ By Jin Wang
 |459|**Repeated Substring Pattern**|Easy|Java/Javascript|Done/Done|
 |482|**License Key Formatting**|Easy|Java/Javascript|Done/Done|
 |485|**Max Consecutive Ones**|Easy|Java/Javascript|Done/Done|
+|509|**Fibonacci Number**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
