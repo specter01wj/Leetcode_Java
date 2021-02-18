@@ -30,7 +30,7 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.*/
 public class E509_Fibonacci_Number {
 
 	public static void main(String[] args) {
-		int input = 4;
+		int input = 14;
         int output = fib(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
