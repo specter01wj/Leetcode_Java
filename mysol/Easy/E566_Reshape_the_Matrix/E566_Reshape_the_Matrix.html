@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix 
+			 	into a new one with different size but keep its original data.
+
+				You're given a matrix represented by a two-dimensional array, and two positive integers r 
+				and c representing the row number and column number of the wanted reshaped matrix, respectively.
+
+				The reshaped matrix need to be filled with all the elements of the original matrix in the same 
+				row-traversing order as they were.
+
+				If the 'reshape' operation with given parameters is possible and legal, output the new reshaped 
+				matrix; Otherwise, output the original matrix.
+
+				Example 1:
+				Input: 
+				nums = 
+				[[1,2],
+				 [3,4]]
+				r = 1, c = 4
+				Output: 
+				[[1,2,3,4]]
+				Explanation:
+				The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, 
+				fill it row by row by using the previous list.
+				Example 2:
+				Input: 
+				nums = 
+				[[1,2],
+				 [3,4]]
+				r = 2, c = 4
+				Output: 
+				[[1,2],
+				 [3,4]]
+				Explanation:
+				There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param nums: List[List[int]]
+		     * @param r: an integer
+		     * @param c: an integer
+		     * @return: return List[List[int]]
+		     */
+				let matrixReshape = function(nums, r, c) {
+					if(r * c !== nums.length * nums[0].length) return nums;
+					
+					let newNums = Array(r).fill().map(() => Array(c));
+					let ir = 0, ic = 0;
+					
+					for(let i = 0; i < nums.length; i++) {
+						for(let j = 0; j < nums[i].length; j++) {
+							newNums[ir][ic] = nums[i][j];
+							ic++;
+							if(ic === c) {
+								ic = 0;
+								ir++;
+							}
+						}
+					}
+					
+					return newNums;
+				};
+
+				let nums = [[1,2,3,4],[5,6,7,8],[9,10,11,12]];
+				let tt1 = matrixReshape(nums, 2, 6);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				判断矩阵能否重置只需要判断原矩阵的行数*列数是否等于r*c即可。 重置过程在遍历原矩阵时即可完成。
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>

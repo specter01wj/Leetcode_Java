@@ -97,6 +97,7 @@ Cspiration Category:
 |485|Max Consecutive Ones|Easy||Java/Javascript|Done/Done|
 |509|Fibonacci Number|Easy||Java/Javascript|Done/Done|
 |561|Array Partition I|Easy||Java/Javascript|Done/Done|
+|566|Reshape the Matrix|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
