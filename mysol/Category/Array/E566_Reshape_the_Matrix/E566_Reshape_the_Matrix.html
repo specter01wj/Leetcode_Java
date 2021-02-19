@@ -4,54 +4,76 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array nums of 2n integers, group these integers into n pairs (a1, b1), 
-			 	(a2, b2), ..., (an, bn) such that the sum of min(ai, bi) for all i is maximized. 
-			 	Return the maximized sum.
+			 	In MATLAB, there is a very useful function called 'reshape', which can reshape a matrix 
+			 	into a new one with different size but keep its original data.
 
-				 
+				You're given a matrix represented by a two-dimensional array, and two positive integers r 
+				and c representing the row number and column number of the wanted reshaped matrix, respectively.
+
+				The reshaped matrix need to be filled with all the elements of the original matrix in the same 
+				row-traversing order as they were.
+
+				If the 'reshape' operation with given parameters is possible and legal, output the new reshaped 
+				matrix; Otherwise, output the original matrix.
 
 				Example 1:
-
-				Input: nums = [1,4,3,2]
-				Output: 4
-				Explanation: All possible pairings (ignoring the ordering of elements) are:
-				1. (1, 4), (2, 3) -> min(1, 4) + min(2, 3) = 1 + 2 = 3
-				2. (1, 3), (2, 4) -> min(1, 3) + min(2, 4) = 1 + 2 = 3
-				3. (1, 2), (3, 4) -> min(1, 2) + min(3, 4) = 1 + 3 = 4
-				So the maximum possible sum is 4.
+				Input: 
+				nums = 
+				[[1,2],
+				 [3,4]]
+				r = 1, c = 4
+				Output: 
+				[[1,2,3,4]]
+				Explanation:
+				The row-traversing of nums is [1,2,3,4]. The new reshaped matrix is a 1 * 4 matrix, 
+				fill it row by row by using the previous list.
 				Example 2:
-
-				Input: nums = [6,2,6,5,1,2]
-				Output: 9
-				Explanation: The optimal pairing is (2, 1), (2, 5), (6, 6). min(2, 1) + min(2, 5) 
-				+ min(6, 6) = 1 + 2 + 6 = 9.
+				Input: 
+				nums = 
+				[[1,2],
+				 [3,4]]
+				r = 2, c = 4
+				Output: 
+				[[1,2],
+				 [3,4]]
+				Explanation:
+				There is no way to reshape a 2 * 2 matrix to a 2 * 4 matrix. So output the original matrix.
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param nums: an array
-		     * @return: the sum of min(ai, bi) for all i from 1 to n
+		     * @param nums: List[List[int]]
+		     * @param r: an integer
+		     * @param c: an integer
+		     * @return: return List[List[int]]
 		     */
-				let arrayPairSum = function(n) {
-					nums.sort(function(a, b){return a-b});
-					let ans = 0;
+				let matrixReshape = function(nums, r, c) {
+					if(r * c !== nums.length * nums[0].length) return nums;
 					
-					for(let i = 0; i < nums.length; i += 2) {
-						ans += nums[i];
+					let newNums = Array(r).fill().map(() => Array(c));
+					let ir = 0, ic = 0;
+					
+					for(let i = 0; i < nums.length; i++) {
+						for(let j = 0; j < nums[i].length; j++) {
+							newNums[ir][ic] = nums[i][j];
+							ic++;
+							if(ic === c) {
+								ic = 0;
+								ir++;
+							}
+						}
 					}
 					
-					return ans;
+					return newNums;
 				};
 
-				let nums = [1,4,3,2,100,9];
-				let tt1 = arrayPairSum(nums);
+				let nums = [[1,2,3,4],[5,6,7,8],[9,10,11,12]];
+				let tt1 = matrixReshape(nums, 2, 6);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-				将数组排序后，取出所有奇数位（下标为偶数）求和即可。 
-		    简单思路：从大往小考虑，数组最大值不可能是答案的一部分，数组第二大的值如果要是答案的一部分，
-		    必须和最大值配对。 此时原问题的答案转化为子问题(去除最大值和第二大值)的答案+数组第二大的值。
+				判断矩阵能否重置只需要判断原矩阵的行数*列数是否等于r*c即可。 重置过程在遍历原矩阵时即可完成。
 			 */
 
 		</script>
