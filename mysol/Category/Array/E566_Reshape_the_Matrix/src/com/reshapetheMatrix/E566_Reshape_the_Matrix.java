@@ -43,11 +43,21 @@ So output the original matrix.*/
 public class E566_Reshape_the_Matrix {
 
 	public static void main(String[] args) {
-		int[][] input = {{1,2},{3,4}};//{7,6,4,3,1};
-        int[][] output = matrixReshape(input, 1, 4);
+		int[][] input = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};//{{1,2},{3,4}};
+        int[][] output = matrixReshape(input, 2, 6);
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    判断矩阵能否重置只需要判断原矩阵的行数*列数是否等于r*c即可。 重置过程在遍历原矩阵时即可完成。
+    */
+	/**
+     * @param nums: List[List[int]]
+     * @param r: an integer
+     * @param c: an integer
+     * @return: return List[List[int]]
+     */
 	public static int[][] matrixReshape(int[][] nums, int r, int c) {
 		if(r * c != nums.length * nums[0].length) return nums;
 		
