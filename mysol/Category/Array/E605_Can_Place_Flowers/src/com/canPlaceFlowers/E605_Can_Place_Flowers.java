@@ -27,6 +27,15 @@ public class E605_Can_Place_Flowers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    按照题目要求从头开始模拟种植即可。
+    */
+	/**
+     * @param flowerbed: an array
+     * @param n: an Integer
+     * @return: if n new flowers can be planted in it without violating the no-adjacent-flowers rule
+     */
 	public static boolean canPlaceFlowers(int[] flowerbed, int n) {
 		int count = 0;
 		
