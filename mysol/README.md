@@ -130,6 +130,7 @@ By Jin Wang
 |561|**Array Partition I**|Easy|Java/Javascript|Done/Done|
 |566|**Reshape the Matrix**|Easy|Java/Javascript|Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript|Done/Done|
+|628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
