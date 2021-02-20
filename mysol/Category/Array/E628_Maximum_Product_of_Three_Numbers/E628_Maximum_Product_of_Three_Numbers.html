@@ -30,12 +30,13 @@
 		     */
 				let maximumProduct = function(nums) {
 					let n = nums.length;
-					nums.sort(function(a, b){return a-b});
+					nums.sort((a, b) => {return a-b});
+					
 					return Math.max(nums[0]*nums[1]*nums[n-1], nums[n-3]*nums[n-2]*nums[n-1]);
 				};
 
 				let nums = [7,11,-2,6,9,10];
-				let tt1 = canPlaceFlowers(nums);
+				let tt1 = maximumProduct(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
