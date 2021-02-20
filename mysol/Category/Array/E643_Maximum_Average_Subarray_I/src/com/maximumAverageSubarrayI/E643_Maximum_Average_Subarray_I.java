@@ -19,6 +19,16 @@ public class E643_Maximum_Average_Subarray_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    先算一个初始 k 的平均值，之后 for 循环找最大值（减去第一位加上最后一位）
+    */
+	
+	/**
+     * @param nums: an array
+     * @param k: an integer
+     * @return: the maximum average value
+     */
 	public static double findMaxAverage(int[] nums, int k) {
 		int sum = 0;
 		for(int i = 0; i < k; i++) {
