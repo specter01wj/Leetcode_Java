@@ -131,6 +131,7 @@ By Jin Wang
 |566|**Reshape the Matrix**|Easy|Java/Javascript|Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript|Done/Done|
 |628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
+|643|**Maximum Average Subarray I**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
