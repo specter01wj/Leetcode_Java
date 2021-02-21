@@ -101,6 +101,7 @@ Cspiration Category:
 |605|Can Place Flowers|Easy||Java/Javascript|Done/Done|
 |628|Maximum Product of Three Numbers|Easy||Java/Javascript|Done/Done|
 |643|Maximum Average Subarray I|Easy||Java/Javascript|Done/Done|
+|661|Image Smoother|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
