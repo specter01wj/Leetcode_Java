@@ -31,11 +31,22 @@ Note that it must be strictly increasing.*/
 public class E674_Longest_Continuous_Increasing_Subsequence {
 
 	public static void main(String[] args) {
-		int[] input = {1,3,5,4,7};
+		int[] input = {1,3,5,4,5,6,7,8,3,2,1}; //{1,3,5,4,7}
         int output = findLengthOfLCIS(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    The idea is to use cnt to record the length of the current 
+    continuous increasing subsequence which ends with nums[i], 
+    and use res to record the maximum cnt.
+    */
+	
+	/**
+     * @param A an array of Integer
+     * @return  an integer
+     */
 	public static int findLengthOfLCIS(int[] nums) {
 		int res = 0, cnt = 0;
 		
