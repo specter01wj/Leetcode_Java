@@ -24,12 +24,21 @@ For the point (1,1): floor(8/9) = floor(0.88888889) = 0*/
 public class E661_Image_Smoother {
 
 	public static void main(String[] args) {
-		int[][] input = {{1,1,1}, {1,0,1}, {1,1,1}};
+		int[][] input = {{1, 3, 2}, {6, 2, 25}}; //{{1,1,1}, {1,0,1}, {1,1,1}};
         int[][] output = imageSmoother(input);
         System.out.println("input: " + Arrays.deepToString(input) + 
         		"\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    按照要求往八个方向寻找值求平均即可
+    */
+	
+	/*
+     * @param 2D matrix: a 2D matrix of integers
+     * @return: a 2D matrix
+     */
 	public static int[][] imageSmoother(int[][] M) {
         int nx = M.length;
         int ny = M[0].length;
