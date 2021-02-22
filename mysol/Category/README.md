@@ -103,6 +103,7 @@ Cspiration Category:
 |643|Maximum Average Subarray I|Easy||Java/Javascript|Done/Done|
 |661|Image Smoother|Easy||Java/Javascript|Done/Done|
 |674|Longest Continuous Increasing Subsequence|Easy||Java/Javascript|Done/Done|
+|697|Degree of an Array|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
