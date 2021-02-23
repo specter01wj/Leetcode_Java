@@ -48,6 +48,15 @@ public class E724_Find_Pivot_Index {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    从左向右枚举中心索引
+    */
+	
+	/**
+     * @param nums: an array
+     * @return: the "pivot" index of this array
+     */
 	public static int pivotIndex(int[] nums) {
 		int sum = 0, left = 0;
 		
