@@ -104,6 +104,7 @@ Cspiration Category:
 |661|Image Smoother|Easy||Java/Javascript|Done/Done|
 |674|Longest Continuous Increasing Subsequence|Easy||Java/Javascript|Done/Done|
 |697|Degree of an Array|Easy||Java/Javascript|Done/Done|
+|717|1-bit and 2-bit Characters|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
