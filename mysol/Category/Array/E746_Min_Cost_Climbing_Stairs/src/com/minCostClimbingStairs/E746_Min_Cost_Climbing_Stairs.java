@@ -26,6 +26,15 @@ public class E746_Min_Cost_Climbing_Stairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    经典的动态规划问题 状态转移方程 dpi = min(dpi-1 + costi-1,dpi-2 + costi-2)
+    */
+	
+	/**
+     * @param cost: an array
+     * @return: minimum cost to reach the top of the floor
+     */
 	public static int minCostClimbingStairs(int[] cost) {
 		int[] dp = new int[cost.length + 1];
 		dp[0] = 0;
