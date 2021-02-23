@@ -49,18 +49,23 @@
 		     * @param nums: an array
 		     * @return: the "pivot" index of this array
 		     */
-				let pivotIndex = function(bits) {
-					let n = bits.length, i = 0;
-
-					while(i < n - 1) {
-						if(bits[i] === 0) {
-							i++;
-						} else {
-							i += 2;
+				let pivotIndex = function(nums) {
+					let sum = 0, left = 0;
+					
+					for(let i = 0; i < nums.length; i++) {
+						sum += nums[i];
+					}
+					
+					for(let i = 0; i < nums.length; i++) {
+						if(i !== 0) {
+							left += nums[i - 1];
+						}
+						if(sum - left - nums[i] === left) {
+							return i;
 						}
 					}
 					
-					return i === n - 1;
+					return -1;
 				};
 
 				let nums = [1,7,3,6,5,6];
