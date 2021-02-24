@@ -138,6 +138,7 @@ By Jin Wang
 |717|**1-bit and 2-bit Characters**|Easy|Java/Javascript|Done/Done|
 |724|**Find Pivot Index**|Easy|Java/Javascript|Done/Done|
 |746|**Min Cost Climbing Stairs**|Easy|Java/Javascript|Done/Done|
+|747|**Largest Number At Least Twice of Others**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
