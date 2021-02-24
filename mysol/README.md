@@ -139,6 +139,7 @@ By Jin Wang
 |724|**Find Pivot Index**|Easy|Java/Javascript|Done/Done|
 |746|**Min Cost Climbing Stairs**|Easy|Java/Javascript|Done/Done|
 |747|**Largest Number At Least Twice of Others**|Easy|Java/Javascript|Done/Done|
+|766|**Toeplitz Matrix**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
