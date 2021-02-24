@@ -35,6 +35,15 @@ public class E766_Toeplitz_Matrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    按照题意枚举每条对角线。即每个数和它右下方的数必须相同。
+    */
+	
+	/**
+     * @param matrix: the given matrix
+     * @return: True if and only if the matrix is Toeplitz
+     */
 	public static boolean isToeplitzMatrix(int[][] matrix) {
 		for(int i = 0; i < matrix.length - 1; i++) {
 			for(int j = 0; j < matrix[i].length - 1; j++) {
