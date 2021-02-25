@@ -110,6 +110,7 @@ Cspiration Category:
 |747|Largest Number At Least Twice of Others|Easy||Java/Javascript|Done/Done|
 |766|Toeplitz Matrix|Easy||Java/Javascript|Done/Done|
 |830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
+|832|Flipping an Image|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
