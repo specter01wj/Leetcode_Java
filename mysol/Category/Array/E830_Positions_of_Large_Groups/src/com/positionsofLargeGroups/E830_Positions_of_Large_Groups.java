@@ -49,6 +49,15 @@ public class E830_Positions_of_Large_Groups {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    找连续的区间即可
+    */
+	
+	/**
+     * @param S: a string
+     * @return: the starting and ending positions of every large group
+     */
 	public static List<List<Integer>> largeGroupPositions(String s) {
 		int i = 0, j = 0, len = s.length();
 		List<List<Integer>> res = new ArrayList<>();
