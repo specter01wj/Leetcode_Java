@@ -38,6 +38,15 @@ public class E832_Flipping_an_Image {
         System.out.println("output: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    首先翻转每一行，然后遍历每个数字，或上1取反
+    */
+	
+	/*
+     * @param image: a 2D list of integers
+     * @return: flip and invert the image
+     */
 	public static int[][] flipAndInvertImage(int[][] image) {
 		int n = image.length;
 		int m = image[0].length;
