@@ -140,6 +140,7 @@ By Jin Wang
 |746|**Min Cost Climbing Stairs**|Easy|Java/Javascript|Done/Done|
 |747|**Largest Number At Least Twice of Others**|Easy|Java/Javascript|Done/Done|
 |766|**Toeplitz Matrix**|Easy|Java/Javascript|Done/Done|
+|830|**Positions of Large Groups**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
