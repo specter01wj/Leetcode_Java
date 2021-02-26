@@ -28,6 +28,15 @@ public class E867_Transpose_Matrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    根据转置矩阵定义，新的数组与原数组行列索引值交换存入数据即可。
+    */
+	
+	/**
+     * @param A: A matrix
+     * @return: A transposed matrix
+     */
 	public static int[][] transpose(int[][] matrix) {
 		int n = matrix.length;
 		int m = matrix[0].length;
