@@ -25,7 +25,7 @@ public class E867_Transpose_Matrix {
 	public static void main(String[] args) {
 		int[][] input = {{1,2,3},{4,5,6},{7,8,9}};
         int[][] output = transpose(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
 	public static int[][] transpose(int[][] matrix) {
