@@ -112,6 +112,7 @@ Cspiration Category:
 |830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
 |832|Flipping an Image|Easy||Java/Javascript|Done/Done|
 |867|Transpose Matrix|Easy||Java/Javascript|Done/Done|
+|888|Fair Candy Swap|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 

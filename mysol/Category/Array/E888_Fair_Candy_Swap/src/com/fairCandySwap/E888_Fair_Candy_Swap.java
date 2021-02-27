@@ -70,20 +70,23 @@ public class E888_Fair_Candy_Swap {
         for(int j: B){
             sumB += j;
         }
+        
         Arrays.sort(A);
         Arrays.sort(B);
-        int temp = sumA-(sumA+sumB)/2;
+        
+        int temp = sumA - (sumA + sumB)/2;
         int i = 0, j = 0;
-        while(i<A.length&&j<B.length){
-            if(A[i]-B[j]==temp){
+        
+        while(i < A.length && j < B.length){
+            if(A[i] - B[j] == temp){
                 ans[0] = A[i];
                 ans[1] = B[j];
                 break;
             }
-            else if(A[i]-B[j]>temp){
+            else if(A[i] - B[j] > temp){
                 j++;
             }
-            else if(A[i]-B[j]<temp){
+            else if(A[i] - B[j] < temp){
                 i++;
             }
         }
