@@ -142,6 +142,7 @@ By Jin Wang
 |766|**Toeplitz Matrix**|Easy|Java/Javascript|Done/Done|
 |830|**Positions of Large Groups**|Easy|Java/Javascript|Done/Done|
 |832|**Flipping an Image**|Easy|Java/Javascript|Done/Done|
+|867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
