@@ -50,6 +50,17 @@ public class E888_Fair_Candy_Swap {
         		"\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    求出相同的糖果总量即两个数组总和的一半，计算A与相同糖果总量的差值，
+    这个差值就是两个需要交换的数值的差值，然后循环比较，找到相同的即可。
+    */
+	
+	/**
+     * @param A: an array
+     * @param B: an array
+     * @return: an integer array
+     */
 	public static int[] fairCandySwap(int[] A, int[] B) {
 		int[] ans = new int[2];
         int sumA = 0, sumB = 0;
