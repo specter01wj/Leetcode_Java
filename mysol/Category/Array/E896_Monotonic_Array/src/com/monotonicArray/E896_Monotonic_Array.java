@@ -44,6 +44,16 @@ public class E896_Monotonic_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    先假设数组为单调递增，也为单调递减。遍历一遍数组，判断是否破坏了递增或递减的单调性。
+    若递增或递减其中一种属性未被破坏，即始终为true，返回其中一种结果
+    */
+	
+	/**
+     * @param A: a array
+     * @return: is it monotonous
+     */
 	public static boolean isMonotonic(int[] A) {
 		boolean inc = true, dec = true;
 		
