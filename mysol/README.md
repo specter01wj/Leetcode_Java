@@ -144,6 +144,7 @@ By Jin Wang
 |832|**Flipping an Image**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|
+|896|**Monotonic Array**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
