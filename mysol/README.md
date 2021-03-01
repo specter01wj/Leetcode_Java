@@ -145,6 +145,7 @@ By Jin Wang
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|
 |896|**Monotonic Array**|Easy|Java/Javascript|Done/Done|
+|905|**Sort Array By Parity**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
