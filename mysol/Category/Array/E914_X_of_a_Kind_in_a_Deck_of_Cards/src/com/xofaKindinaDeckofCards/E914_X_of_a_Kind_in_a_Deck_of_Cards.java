@@ -49,6 +49,16 @@ public class E914_X_of_a_Kind_in_a_Deck_of_Cards {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    计数统计出现的数字的次数，然后对于出现的次数进行去最大公约数。若最大公约数小于2，
+    则返回False，否则返回True
+    */
+	
+	/**
+     * @param deck: a integer array
+     * @return: return a value of bool
+     */
 	public static boolean hasGroupsSizeX(int[] deck) {
 		Map<Integer, Integer> map = new HashMap<>();
 		int answer = 0;
