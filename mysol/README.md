@@ -146,6 +146,7 @@ By Jin Wang
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|
 |896|**Monotonic Array**|Easy|Java/Javascript|Done/Done|
 |905|**Sort Array By Parity**|Easy|Java/Javascript|Done/Done|
+|914|**X of a Kind in a Deck of Cards**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
