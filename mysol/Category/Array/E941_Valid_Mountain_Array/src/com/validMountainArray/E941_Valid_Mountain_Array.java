@@ -36,6 +36,16 @@ public class E941_Valid_Mountain_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    根据题目要求扫描数组，若当前位置不再递增，则开始按递减的条件进行判断，
+    若扫描至数组末尾，则为山形数组。
+    */
+	
+	/**
+     * @param A: the array
+     * @return: true or false
+     */
 	public static boolean validMountainArray(int[] arr) {
 		if(arr == null || arr.length < 3) return false;
 		
