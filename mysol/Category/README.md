@@ -118,6 +118,7 @@ Cspiration Category:
 |914|X of a Kind in a Deck of Cards|Easy||Java/Javascript|Done/Done|
 |922|Sort Array By Parity II|Easy||Java/Javascript|Done/Done|
 |941|Valid Mountain Array|Easy||Java/Javascript|Done/Done|
+|977|Squares of a Sorted Array|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
