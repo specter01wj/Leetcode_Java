@@ -34,27 +34,34 @@
 				  for(let i = 0; i < length; i++) { 
 				  	nums[i] = nums[i] * nums[i]; 
 				  }
-				  nums.sort();
+
+				  nums.sort((a, b) => a - b);
 				  
 				 	return nums;
 				};
 
 
 				let sortedSquares_2 = function(nums) {
-					let length = nums.length;
-
-				  for(let i = 0; i < length; i++) { 
-				  	nums[i] = nums[i] * nums[i]; 
-				  }
-				  nums.sort();
-				  
-				 	return nums;
+					let left = 0, right = nums.length - 1;
+	        let answer = Array(nums.length).fill();
+	        
+	        while(left <= right) {
+	            let left_num = nums[left] * nums[left];
+	            let right_num = nums[right] * nums[right];
+	            answer[right - left] = Math.max(left_num, right_num);
+	            left = left + (left_num > right_num ? 1 : 0);
+	            right = right - (left_num <= right_num ? 1 : 0);
+	        }
+	        
+	        return answer;
 				};
+
+				// Array.prototype.sort((a, b) => a - b);
 
 
 				let nums = [-4,-1,0,3,10];
 				$('#t1').html('<h2>Input: ' + nums + '</h2>');
-				let tt1 = sortedSquares(nums);
+				let tt1 = sortedSquares_2(nums);
 				$('#t2').html('<h2>Results: ' + tt1 + '</h2>');
 			});
 
