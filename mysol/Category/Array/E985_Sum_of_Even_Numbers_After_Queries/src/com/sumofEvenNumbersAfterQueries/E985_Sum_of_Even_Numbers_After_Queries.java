@@ -33,8 +33,48 @@ and the sum of even values is -2 + 6 = 4.*/
 public class E985_Sum_of_Even_Numbers_After_Queries {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] input = {1,2,3,4};
+		int[][] queries = {{1,0},{-3,1},{-4,0},{2,3}};
+        int[] output = sumEvenAfterQueries(input, queries);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
+	}
+	
+	/*
+    solution:
+    The points of interest are the peaks and valleys in the given graph. 
+    We need to find the largest peak following the smallest valley. 
+    We can maintain two variables - minprice and maxprofit corresponding 
+    to the smallest valley and maximum profit (maximum difference between 
+    selling price and minprice) obtained so far respectively.
+    */
+	
+	/*
+     * @param A: a list of integers
+     * @param queries: a list of integers
+     * @return: sum of even numbers
+     */
+	public static int[] sumEvenAfterQueries(int[] A, int[][] queries) {
+		int sum = 0;
+		
+		for(int a : A) {
+			sum += (a % 2 == 0 ? a : 0);
+		}
+		
+		int[] ans = new int[queries.length];
+		
+		for(int i = 0; i < ans.length; i++) {
+			int idx = queries[i][1];
+			if(A[idx] % 2 == 0) {
+				sum -= A[idx];
+			}
+			A[idx] += queries[i][0];
+			if(A[idx] % 2 == 0) {
+				sum += A[idx];
+			}
+			ans[i] = sum;
+		}
+		
+		return ans;
 	}
 
 }
