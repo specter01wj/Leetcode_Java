@@ -48,11 +48,11 @@
 					let res = [];
 					
 					for(let i = A.length - 1; i >= 0; i--) {
-						res.unshift(0, (A[i] + K) % 10);
+						res.unshift((A[i] + K) % 10);
 						K = Math.floor((A[i] + K) / 10);
 					}
 					while(K > 0) {
-						res.unshift(0, K % 10);
+						res.unshift(K % 10);
 						K = Math.floor(K / 10);
 					}
 					
