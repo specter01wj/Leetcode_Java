@@ -42,6 +42,19 @@ public class E989_Add_to_ArrayForm_of_Integer {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Take K as a carry.
+	Add it to the lowest digit,
+	Update carry K,
+	and keep going to higher digit.
+    */
+	
+	/*
+     * @param A: a list of integers
+     * @param K: an integer
+     * @return: array-form of the integer X+K
+     */
 	public static List<Integer> addToArrayForm(int[] A, int K) {
 		List<Integer> res = new LinkedList<>();
 		
