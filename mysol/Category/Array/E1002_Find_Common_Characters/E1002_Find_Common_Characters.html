@@ -36,26 +36,26 @@
 	        let count2 = Array(26).fill(0);
 
 	        for(let ch of A[0].split('')) {
-	        	count1[ch - 'a']++;
+	        	count1[ch.charCodeAt(0) - 'a'.charCodeAt(0)]++;
 	        }
 
 	        for (let i = 1; i < A.length - 1; i++) {
 	          for (let c of A[i].split('')) {
-	            if (count1[c - 'a'] > 0) {
-	              count2[c - 'a']++;
-	              count1[c - 'a']--;
+	            if (count1[c.charCodeAt(0) - 'a'.charCodeAt(0)] > 0) {
+	              count2[c.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+	              count1[c.charCodeAt(0) - 'a'.charCodeAt(0)]--;
 	            }
 	          }
 	          count1 = count2;
-	          count2 = Array(26).fill();
+	          count2 = Array(26).fill(0);
 	        }
 
 	        let result = [];
 
 	        for (let c of A[A.length - 1].split('')) {
-	          if (count1[c - 'a'] > 0) {
+	          if (count1[c.charCodeAt(0) - 'a'.charCodeAt(0)] > 0) {
 	            result.push((c));
-	            count1[c - 'a']--;
+	            count1[c.charCodeAt(0) - 'a'.charCodeAt(0)]--;
 	          }
 	        }
 	        return result;
