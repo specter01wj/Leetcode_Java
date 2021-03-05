@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array A of strings made only from lowercase letters, 
+				return a list of all characters that show up in all strings 
+				within the list (including duplicates).  
+				For example, if a character occurs 3 times in all strings 
+				but not 4 times, you need to include that character three 
+				times in the final answer.
+
+				You may return the answer in any order.
+
+				 
+
+				Example 1:
+
+				Input: ["bella","label","roller"]
+				Output: ["e","l","l"]
+
+				Example 2:
+
+				Input: ["cool","lock","cook"]
+				Output: ["c","o"]
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param prices: a list of strings
+		     * @return: find common characters
+		     */
+				let commonChars = function(A) {
+					let count1 = Array(26).fill(0);
+	        let count2 = Array(26).fill(0);
+
+	        for(let ch of A[0].split('')) {
+	        	count1[ch.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+	        }
+
+	        for (let i = 1; i < A.length - 1; i++) {
+	          for (let c of A[i].split('')) {
+	            if (count1[c.charCodeAt(0) - 'a'.charCodeAt(0)] > 0) {
+	              count2[c.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+	              count1[c.charCodeAt(0) - 'a'.charCodeAt(0)]--;
+	            }
+	          }
+	          count1 = count2;
+	          count2 = Array(26).fill(0);
+	        }
+
+	        let result = [];
+
+	        for (let c of A[A.length - 1].split('')) {
+	          if (count1[c.charCodeAt(0) - 'a'.charCodeAt(0)] > 0) {
+	            result.push((c));
+	            count1[c.charCodeAt(0) - 'a'.charCodeAt(0)]--;
+	          }
+	        }
+	        return result;
+				};
+
+				let nums = ["bella","label","roller"];
+				let tt1 = commonChars(nums);
+				$('#t1').html('<h2>Input: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				using 2 arrays
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
