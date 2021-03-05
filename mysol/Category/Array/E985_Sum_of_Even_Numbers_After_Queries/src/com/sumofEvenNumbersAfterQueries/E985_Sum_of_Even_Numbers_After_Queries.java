@@ -41,11 +41,19 @@ public class E985_Sum_of_Even_Numbers_After_Queries {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    Track sum of all even #s.
+	There are 4 cases for odd / even property of A[k] and queries[i][0], where k = queries[i][1]:
+	1). even and odd, lose an even item in A; sum need to deduct A[k];
+	2). even and even, get a bigger even item in A; sum need to add queries[i][0](same as deduct A[k] first then add both);
+	3). odd and odd, get a bigger even item in A; sum need to add both;
+	4). odd and even, no influence on even items in A;
+	
+	Therefore, we can simplify the above as following procedure:
+	
+	find sum of all even #s;
+	for each queries, check the item in A and after-added-up value, if
+	a) the item in A is even, deduct it from sum; according to 1) & 2).
+	b) after-added-up we have an even value, then add the new value to sum; according to 2) & 3).
     */
 	
 	/*
