@@ -30,11 +30,22 @@ public class E1002_Find_Common_Characters {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    using 2 arrays
+    */
+	
+	/*
+     * @param prices: a list of strings
+     * @return: find common characters
+     */
 	public static List<String> commonChars(String[] A) {
 		int[] count1 = new int[26];
         int[] count2 = new int[26];
 
-        for (char ch : A[0].toCharArray()) count1[ch - 'a']++;
+        for (char ch : A[0].toCharArray()) {
+        	count1[ch - 'a']++;
+        }
 
         for (int i = 1; i < A.length - 1; i++) {
           for (char c : A[i].toCharArray()) {
