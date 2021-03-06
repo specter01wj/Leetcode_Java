@@ -23,7 +23,7 @@ Output:
 public class E293_Flip_Game {
 
 	public static void main(String[] args) {
-		String input = "++++";//"++++";
+		String input = "++-+++---+++";//"++++";
         List<String> output = generatePossibleNextMoves(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
