@@ -29,8 +29,31 @@ Return false.*/
 public class E408_Valid_Word_Abbreviation {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String input = "internationalization";
+		String abbr = "i12iz4n";
+        boolean output = validWordAbbreviation(input, abbr);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
+	}
+	
+	public static boolean validWordAbbreviation(String word, String abbr) {
+		int i = 0, j = 0;
+		
+		while(i < word.length() && j < abbr.length()) {
+			if(word.charAt(i) == abbr.charAt(j)) {
+				i++;
+				j++;
+			} else if((abbr.charAt(j) > '0') && (abbr.charAt(j) <= '9')) {
+				int start = j;
+				while(j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
+					j++;
+				}
+				i += Integer.valueOf(abbr.substring(start, j));
+			} else {
+				return false;
+			}
+		}
+		
+		return (i == word.length()) && (j == abbr.length());
 	}
 
 }
