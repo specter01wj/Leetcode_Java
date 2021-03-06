@@ -35,6 +35,17 @@ public class E408_Valid_Word_Abbreviation {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    用两个指针i,j分别从头开始匹配，j遇到数字，就先把数字x解析出来，然后i移动x位，
+    继续匹配。如果不能匹配就返回false。
+    */
+	
+	/*
+     * @param word: a non-empty string
+     * @param abbr: an abbreviation
+     * @return: valid word abbreviation
+     */
 	public static boolean validWordAbbreviation(String word, String abbr) {
 		int i = 0, j = 0;
 		
