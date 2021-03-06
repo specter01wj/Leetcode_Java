@@ -98,7 +98,7 @@ By Jin Wang
 |283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
-|293|**Flip Game**|Easy|Java/Javascript||
+|293|**Flip Game**|Easy|Java/Javascript|Done/Done|
 |299|**Bulls and Cows**|Easy|Java/Javascript||
 |303|**Range Sum Query - Immutable**|Easy|Java/Javascript||
 |326|**Power of Three**|Easy|Java/Javascript|Done/Done|
