@@ -28,6 +28,15 @@ public class E293_Flip_Game {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    枚举所有的++所在位置，将其替换成--后加入到答案中
+    */
+	
+	/**
+     * @param s: the given string
+     * @return: all the possible states of the string after one valid move
+     */
 	public static List<String> generatePossibleNextMoves(String s) {
 		List list = new ArrayList();
 		
