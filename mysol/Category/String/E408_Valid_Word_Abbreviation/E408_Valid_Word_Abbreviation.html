@@ -43,9 +43,9 @@
 						if(word.charAt(i) === abbr.charAt(j)) {
 							i++;
 							j++;
-						} else if((abbr.charAt(j) > '0') && (abbr.charAt(j) <= '9')) {
+						} else if((abbr.charAt(j) > 0) && (abbr.charAt(j) <= 9)) {
 							let start = j;
-							while(j < abbr.length && Number.isInteger(abbr.charAt(j))) {
+							while(j < abbr.length && Number.isInteger(parseInt(abbr.charAt(j)))) {
 								j++;
 							}
 							i += parseInt(abbr.substring(start, j));
