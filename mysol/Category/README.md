@@ -199,6 +199,7 @@ Cspiration Category:
 |434|Number of Segments in a String|Easy||Java/Javascript|Done/Done|
 |443|String Compression|Medium||Java/Javascript|Done/Done|
 |459|Repeated Substring Pattern|Easy||Java/Javascript|Done/Done|
+|520|Detect Capital|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
