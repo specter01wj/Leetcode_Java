@@ -32,6 +32,17 @@ public class E520_Detect_Capital {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    遍历字符串时对大小写字母进行统计，当遇到如下两种情况应返回false：
+		大写字母数量超过一个且出现了小写字母
+		首字母小写但出现了一个大写字母
+    */
+	
+	/**
+     * @param word: a string
+     * @return: return a boolean
+     */
 	public static boolean detectCapitalUse(String word) {
 		int countUpper = 0, countLower = 0;
 		boolean flag = word.charAt(0) >= 'A' && word.charAt(0) <= 'Z';
