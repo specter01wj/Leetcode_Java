@@ -194,6 +194,7 @@ Cspiration Category:
 |115|Distinct Subsequences|Hard||Java/Javascript||
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 |Missing||||||
+|408|Valid Word Abbreviation|Easy||Java/Javascript|Done/Done|
 |415|Add Strings|Easy||Java/Javascript|Done/Done|
 |434|Number of Segments in a String|Easy||Java/Javascript|Done/Done|
 |443|String Compression|Medium||Java/Javascript|Done/Done|

@@ -118,6 +118,7 @@ By Jin Wang
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
 |392|**Is Subsequence**|Easy|Java/Javascript||
 |401|**Binary Watch**|Easy|Java/Javascript||
+|408|**Valid Word Abbreviation**|Easy|Java/Javascript|Done/Done|
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 |415|**Add Strings**|Easy|Java/Javascript|Done/Done|
 |434|**Number of Segments in a String**|Easy|Java/Javascript|Done/Done|
