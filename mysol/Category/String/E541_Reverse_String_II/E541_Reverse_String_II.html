@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*Given a string s and an integer k, reverse the first k characters 
+				for every 2k characters counting from the start of the string.
+
+				If there are fewer than k characters left, reverse all of them. 
+				If there are less than 2k but greater than or equal to k characters, 
+				then reverse the first k characters and left the other as original.
+
+				 
+
+				Example 1:
+
+				Input: s = "abcdefg", k = 2
+				Output: "bacdfeg"
+
+				Example 2:
+
+				Input: s = "abcd", k = 2
+				Output: "bacd"
+			*/
+			$(document).ready(function(){
+
+				/**
+		     * @param s: the string
+		     * @param k: the integer k
+		     * @return: the answer
+		     */
+				let reverseStr = (s, k) => {
+					let ans = [];
+					let l = s.length, i , j;
+					
+					for(i = 0; i < l; i += 2 * k) {
+						for(j = Math.min(l - 1, i + k - 1); j >= i; j--) {
+							ans.push(s.charAt(j));
+						}
+						for(j = i + k;j < Math.min(i + 2 * k, l); j++) {
+							ans.push(s.charAt(j));
+						}
+					}
+					
+					return ans.join('');
+				};
+
+				let input1 = "abcdefg", input2 = 2;
+				let tt1 = reverseStr(input1, input2);
+				$('#t1').html('<h2>Input1: ' + input1 + ' Input2: ' + input2 + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			将字符串每2k个长度为一部分，分部分进行处理，前k个倒序拼接至结果字符串，
+    	再将后k个正序拼接。注意最后的长度即可。
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
