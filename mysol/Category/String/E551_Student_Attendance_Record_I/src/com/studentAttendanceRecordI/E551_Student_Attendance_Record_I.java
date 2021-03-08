@@ -32,6 +32,15 @@ public class E551_Student_Attendance_Record_I {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    简单的遍历一遍字符串来判断是否有超过一个'A' 或者 连续三个或以上'L' 的情况即可。
+    */
+	
+	/**
+     * @param s: a string
+     * @return: whether the student could be rewarded according to his attendance record
+     */
 	public static boolean checkRecord(String s) {
 		int count_A = 0;
 		s += "##";
