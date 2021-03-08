@@ -202,6 +202,7 @@ Cspiration Category:
 |520|Detect Capital|Easy||Java/Javascript|Done/Done|
 |521|Longest Uncommon Subsequence I|Easy||Java/Javascript|Done/Done|
 |541|Reverse String II|Easy||Java/Javascript|Done/Done|
+|551|Student Attendance Record I|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
