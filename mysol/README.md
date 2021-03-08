@@ -130,6 +130,7 @@ By Jin Wang
 |509|**Fibonacci Number**|Easy|Java/Javascript|Done/Done|
 |520|**Detect Capital**|Easy|Java/Javascript|Done/Done|
 |521|**Longest Uncommon Subsequence I**|Easy|Java/Javascript|Done/Done|
+|541|**Reverse String II**|Easy|Java/Javascript|Done/Done|
 |561|**Array Partition I**|Easy|Java/Javascript|Done/Done|
 |566|**Reshape the Matrix**|Easy|Java/Javascript|Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript|Done/Done|

@@ -201,6 +201,7 @@ Cspiration Category:
 |459|Repeated Substring Pattern|Easy||Java/Javascript|Done/Done|
 |520|Detect Capital|Easy||Java/Javascript|Done/Done|
 |521|Longest Uncommon Subsequence I|Easy||Java/Javascript|Done/Done|
+|541|Reverse String II|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
