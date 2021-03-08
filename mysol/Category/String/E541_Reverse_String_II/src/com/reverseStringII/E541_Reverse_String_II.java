@@ -28,6 +28,17 @@ public class E541_Reverse_String_II {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    将字符串每2k个长度为一部分，分部分进行处理，前k个倒序拼接至结果字符串，
+    再将后k个正序拼接。注意最后的长度即可。
+    */
+	
+	/**
+     * @param s: the string
+     * @param k: the integer k
+     * @return: the answer
+     */
 	public static String reverseStr(String s, int k) {
 		String ans = new String("");
 		int l = s.length(), i , j;
