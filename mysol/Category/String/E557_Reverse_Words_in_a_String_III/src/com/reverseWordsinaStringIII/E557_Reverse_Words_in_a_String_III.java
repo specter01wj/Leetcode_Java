@@ -21,11 +21,30 @@ public class E557_Reverse_Words_in_a_String_III {
 	public static void main(String[] args) {
 		String input = "Let's take LeetCode contest";
         String output = reverseWords(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	public static String reverseWords(String s) {
+		String[] words = s.split(" ");
+		StringBuilder answer = new StringBuilder();
 		
+		answer.append(reverseString(words[0]));
+		
+		for(int i = 1; i < words.length; i++) {
+			answer.append(String.valueOf(' ') + reverseString(words[i]));
+		}
+		
+		return answer.toString();
+	}
+	
+	public static String reverseString(String s) {
+		String ans = "";
+		
+		for(int i = s.length() - 1; i >= 0; i--) {
+			ans += String.valueOf(s.charAt(i));
+		}
+		
+		return ans;
 	}
 
 }
