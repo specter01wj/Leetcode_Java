@@ -40,15 +40,31 @@ the one-to-one mapping relationship between the input and the output.*/
 public class E606_Construct_String_from_Binary_Tree {
 
 	public static void main(String[] args) {
-		TreeNode input = {1,2,3,4};
+		TreeNode input = new TreeNode(1);
+		input.left = new TreeNode(2);
+		input.right = new TreeNode(3);
+		input.left.left = new TreeNode(4);
         String output = tree2str(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    二叉树的遍历。 类似于树的前序遍历，只需在遍历时在左子树和右子树最外面加一对括号即可。 
+    注意如果右子树为空，则右子树不需要加括号；若左子树为空而右子树非空，
+    则需要在右子树前加一对空括号表示左子树。
+    */
+	
+	/**
+     * @param t: the root of tree
+     * @return: return a string
+     */
 	public static String tree2str(TreeNode t) {
 		if (t == null) return "";
+		
         String s = String.valueOf(t.val);
         boolean haveLeft = false;
+        
         if(t.left != null) {
             haveLeft = true;
             s += '(' + tree2str(t.left) + ')';
@@ -57,6 +73,7 @@ public class E606_Construct_String_from_Binary_Tree {
             if(!haveLeft) s+="()";
             s += '(' + tree2str(t.right) + ')';
         }
+        
         return s;
 	}
 	
