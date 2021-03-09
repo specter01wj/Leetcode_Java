@@ -24,6 +24,16 @@ public class E557_Reverse_Words_in_a_String_III {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    简单的 StringBuilder，StringBuilder(arrayi).reverse().toString(), 
+    以及 string.split 的应用
+    */
+	
+	/**
+     * @param s: a string
+     * @return: reverse the order of characters in each word
+     */
 	public static String reverseWords(String s) {
 		String[] words = s.split(" ");
 		StringBuilder answer = new StringBuilder();
