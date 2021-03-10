@@ -136,9 +136,10 @@ By Jin Wang
 |561|**Array Partition I**|Easy|Java/Javascript|Done/Done|
 |566|**Reshape the Matrix**|Easy|Java/Javascript|Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript|Done/Done|
-|606|**Construct String from Binary Tree**|Easy|Java/Javascript|Done/Done|
+|606|**Construct String from Binary Tree**|Easy|Java/Javascript|Done/|
 |628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
 |643|**Maximum Average Subarray I**|Easy|Java/Javascript|Done/Done|
+|657|**Robot Return to Origin**|Easy|Java/Javascript|Done/Done|
 |661|**Image Smoother**|Easy|Java/Javascript|Done/Done|
 |674|**Longest Continuous Increasing Subsequence**|Easy|Java/Javascript|Done/Done|
 |697|**Degree of an Array**|Easy|Java/Javascript|Done/Done|
