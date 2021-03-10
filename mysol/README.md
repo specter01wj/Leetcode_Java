@@ -142,6 +142,7 @@ By Jin Wang
 |657|**Robot Return to Origin**|Easy|Java/Javascript|Done/Done|
 |661|**Image Smoother**|Easy|Java/Javascript|Done/Done|
 |674|**Longest Continuous Increasing Subsequence**|Easy|Java/Javascript|Done/Done|
+|680|**Valid Palindrome II**|Easy|Java/Javascript|Done/Done|
 |697|**Degree of an Array**|Easy|Java/Javascript|Done/Done|
 |717|**1-bit and 2-bit Characters**|Easy|Java/Javascript|Done/Done|
 |724|**Find Pivot Index**|Easy|Java/Javascript|Done/Done|
