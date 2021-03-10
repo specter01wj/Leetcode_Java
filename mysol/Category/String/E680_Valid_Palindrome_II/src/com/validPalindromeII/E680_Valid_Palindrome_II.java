@@ -21,6 +21,15 @@ public class E680_Valid_Palindrome_II {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    双指针算法。从两头走到中间，发现第一对不一样的字符之后，要么删左边的，要么删右边的。
+    */
+	
+	/**
+     * @param s: a string
+     * @return boolean: valid palindrome
+     */
 	public static boolean validPalindrome(String s) {
         int left = 0, right = s.length() - 1;
         
