@@ -22,10 +22,10 @@
 		     * @return boolean: valid palindrome
 		     */
 				let validPalindrome = (s) => {
-					int left = 0, right = s.length() - 1;
+					let left = 0, right = s.length - 1;
 	        
 	        while(left < right) {
-	            if(s.charAt(left) != s.charAt(right)) {
+	            if(s.charAt(left) !== s.charAt(right)) {
 	                break;
 	            }
 	            left++;
@@ -41,7 +41,7 @@
 
 				function isSubPalindrome(s, left, right) {
 					while(left < right) {
-	            if(s.charAt(left) != s.charAt(right)) {
+	            if(s.charAt(left) !== s.charAt(right)) {
 	                return false;
 	            }
 	            left++;
