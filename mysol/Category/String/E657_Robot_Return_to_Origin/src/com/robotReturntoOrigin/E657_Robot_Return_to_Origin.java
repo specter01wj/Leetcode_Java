@@ -47,6 +47,17 @@ public class E657_Robot_Return_to_Origin {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    扫描字符串，获得字符串中'U','D','R','L'的出现次数，
+    若'U'与'D'出现的次数且'R'与'L'出现的次数也相同，
+    则机器人会回到原位置，否则则不再原位置
+    */
+	
+	/**
+     * @param moves: a string of its moves
+     * @return: if the robot return to origin
+     */
 	public static boolean judgeCircle(String moves) {
 		HashMap<Character, Integer> map = new HashMap<>();
 		map.put('U', 0);
