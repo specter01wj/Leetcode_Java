@@ -49,16 +49,16 @@
 		     */
 				let judgeCircle = (s) => {
 					let map = {};
-					map.put('U', 0);
-					map.put('D', 0);
-					map.put('L', 0);
-					map.put('R', 0);
+					map['U'] = 0;
+					map['D'] = 0;
+					map['L'] = 0;
+					map['R'] = 0;
 					
-					for(int i = 0; i < moves.length(); i++) {
-						map.put(moves.charAt(i), map.get(moves.charAt(i)) + 1);
+					for(let i = 0; i < moves.length; i++) {
+						map[moves.charAt(i)] += 1;
 					}
 					
-					return map.get('R').equals(map.get('L')) && map.get('U').equals(map.get('D'));
+					return map['R'] === map['L'] && map['U'] === map['D'];
 				}
 
 				let input = "RLRUDDUL";
