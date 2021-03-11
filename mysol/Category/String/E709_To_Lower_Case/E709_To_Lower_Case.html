@@ -30,22 +30,15 @@
 		     * @return: The lower case string
 		     */
 				let toLowerCase = (s) => {
-					let prevRunLength = 0, curRunLength = 1, res = 0;
-
-	        for(let i = 1; i < s.length; i++) {
-	            if(s.charAt(i) === s.charAt(i-1)) {
-	                curRunLength++;
-	            } else {
-	                prevRunLength = curRunLength;
-	                curRunLength = 1;
-	            }
-	            
-	            if (prevRunLength >= curRunLength) {
-	                res++;
+					let a = str.split('');
+			
+	        for(let i = 0; i < a.length; i++) {
+	            if(a[i].charCodeAt() >= 'A'.charCodeAt() && a[i].charCodeAt() <= 'Z'.charCodeAt()) {
+	            	a[i] = String.fromCharCode(a[i].charCodeAt() - 'A'.charCodeAt() + 'a'.charCodeAt());
 	            }
 	        }
 	        
-	        return res;
+	        return a.join('');
 				}
 
 				let input = "Hello";
