@@ -33,6 +33,15 @@ public class E696_Count_Binary_Substrings {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    统计相邻连续的0和1的数量
+    */
+	
+	/**
+     * @param s: a string
+     * @return: the number of substrings
+     */
 	public static int countBinarySubstrings(String s) {
 		int prevRunLength = 0, curRunLength = 1, res = 0;
         for(int i = 1; i < s.length(); i++) {
