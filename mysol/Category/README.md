@@ -207,6 +207,7 @@ Cspiration Category:
 |606|Construct String from Binary Tree|Easy||Java/Javascript|Done/|
 |657|Robot Return to Origin|Easy||Java/Javascript|Done/Done|
 |680|Valid Palindrome II|Easy||Java/Javascript|Done/Done|
+|696|Count Binary Substrings|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
