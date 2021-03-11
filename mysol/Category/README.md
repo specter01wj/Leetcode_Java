@@ -208,6 +208,7 @@ Cspiration Category:
 |657|Robot Return to Origin|Easy||Java/Javascript|Done/Done|
 |680|Valid Palindrome II|Easy||Java/Javascript|Done/Done|
 |696|Count Binary Substrings|Easy||Java/Javascript|Done/Done|
+|709|To Lower Case|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 

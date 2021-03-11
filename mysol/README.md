@@ -145,6 +145,7 @@ By Jin Wang
 |680|**Valid Palindrome II**|Easy|Java/Javascript|Done/Done|
 |696|**Count Binary Substrings**|Easy|Java/Javascript|Done/Done|
 |697|**Degree of an Array**|Easy|Java/Javascript|Done/Done|
+|709|**To Lower Case**|Easy|Java/Javascript|Done/Done|
 |717|**1-bit and 2-bit Characters**|Easy|Java/Javascript|Done/Done|
 |724|**Find Pivot Index**|Easy|Java/Javascript|Done/Done|
 |746|**Min Cost Climbing Stairs**|Easy|Java/Javascript|Done/Done|
