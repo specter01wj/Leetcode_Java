@@ -29,6 +29,15 @@ public class E709_To_Lower_Case {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    
+    */
+	
+	/**
+     * @param str: the input string
+     * @return: The lower case string
+     */
 	public static String toLowerCase(String str) {
 		char[] a = str.toCharArray();
 		
