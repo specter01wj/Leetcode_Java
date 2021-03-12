@@ -30,20 +30,37 @@
 		     * @param N: an integer
 		     * @return: rotated digits
 		     */
-				let toLowerCase = (str) => {
-					let a = str.split('');
+				let rotatedDigits = (N) => {
+					let count = 0;
 			
-	        for(let i = 0; i < a.length; i++) {
-	            if(a[i].charCodeAt() >= 'A'.charCodeAt() && a[i].charCodeAt() <= 'Z'.charCodeAt()) {
-	            	a[i] = String.fromCharCode(a[i].charCodeAt() - 'A'.charCodeAt() + 'a'.charCodeAt());
+	        for(let i = 1; i <= N; i ++) {
+	            if(isValid(i)) {
+	            	count ++;
 	            }
 	        }
 	        
-	        return a.join('');
+	        return count;
 				}
 
-				let input = "Hello";
-				let tt1 = toLowerCase(input);
+				function isValid(N) {
+					let validFound = false;
+	        
+	        while(N > 0) {
+	            if(N % 10 === 2) validFound = true;
+	            if(N % 10 === 5) validFound = true;
+	            if(N % 10 === 6) validFound = true;
+	            if(N % 10 === 9) validFound = true;
+	            if(N % 10 === 3) return false;
+	            if(N % 10 === 4) return false;
+	            if(N % 10 === 7) return false;
+	            N = Math.floor(N / 10);
+	        }
+	        
+	        return validFound;
+				}
+
+				let input = 10;
+				let tt1 = rotatedDigits(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
