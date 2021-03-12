@@ -17,10 +17,10 @@ use more tags, so it is incorrect.*/
 public class E758_Bold_Words_in_String {
 
 	public static void main(String[] args) {
-		String[] words = ["ab", "bc"];
+		String[] words = {"ab", "bc"};
 		String S = "aabcd";
-        int output = boldWords(input);
-        System.out.println("input: " + (input) + "\noutput: " + (output));
+        String output = boldWords(words, S);
+        System.out.println("input: " + Arrays.toString(words) + "\noutput: " + (output));
 	}
 	
 	public static String boldWords(String[] words, String S) {
