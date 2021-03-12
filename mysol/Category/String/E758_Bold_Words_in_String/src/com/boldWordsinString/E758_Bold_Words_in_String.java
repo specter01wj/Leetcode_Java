@@ -23,6 +23,17 @@ public class E758_Bold_Words_in_String {
         System.out.println("input: " + Arrays.toString(words) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    判断当前字符是否需要加粗，第一个需要加粗的字符左侧加上\<b>,
+    当前连续加粗的最后一个字符右侧加上\</b>，输出即可
+    */
+	
+	/*
+     * @param words: the words
+     * @param S: the string
+     * @return: the string with least number of tags
+     */
 	public static String boldWords(String[] words, String S) {
 		int[] s = new int[S.length() + 1];
 		
