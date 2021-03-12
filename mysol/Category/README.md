@@ -210,6 +210,7 @@ Cspiration Category:
 |696|Count Binary Substrings|Easy||Java/Javascript|Done/Done|
 |709|To Lower Case|Easy||Java/Javascript|Done/Done|
 |758|Bold Words in String|Easy||Java/Javascript|Done/Done|
+|788|Rotated Digits|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
