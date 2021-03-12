@@ -32,11 +32,9 @@ public class E788_Rotated_Digits {
 	
 	/*
     solution:
-    The points of interest are the peaks and valleys in the given graph. 
-    We need to find the largest peak following the smallest valley. 
-    We can maintain two variables - minprice and maxprofit corresponding 
-    to the smallest valley and maximum profit (maximum difference between 
-    selling price and minprice) obtained so far respectively.
+    遍历每一个数，由题意可知，6可以变成9，2可以变成5，是好数。
+    1、8、0本身转变后没有改变，因此不考虑。
+    如果存在3、4、7直接返回false，节约时间。
     */
 	
 	/*
