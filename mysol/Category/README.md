@@ -209,6 +209,7 @@ Cspiration Category:
 |680|Valid Palindrome II|Easy||Java/Javascript|Done/Done|
 |696|Count Binary Substrings|Easy||Java/Javascript|Done/Done|
 |709|To Lower Case|Easy||Java/Javascript|Done/Done|
+|758|Bold Words in String|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
