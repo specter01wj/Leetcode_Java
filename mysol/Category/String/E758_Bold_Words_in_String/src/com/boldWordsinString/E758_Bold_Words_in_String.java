@@ -39,7 +39,7 @@ public class E758_Bold_Words_in_String {
 		
         for(String w : words) {
             int i = 0;
-            while ((i = S.indexOf(w, i)) >= 0) {
+            while((i = S.indexOf(w, i)) >= 0) {
                 s[i]++;
                 s[i + w.length()]--;
                 i++;

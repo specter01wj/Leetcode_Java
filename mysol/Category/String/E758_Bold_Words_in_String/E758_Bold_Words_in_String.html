@@ -23,41 +23,42 @@
 		     * @param S: the string
 		     * @return: the string with least number of tags
 		     */
-				let toLowerCase = (str) => {
-					let s = Array(S.length() + 1).fill(0);
+				let boldWords = (words, S) => {
+					let s = Array(S.length + 1).fill(0);
 			
 	        for(let w of words) {
 	            let i = 0;
-	            while ((i = S.indexOf(w, i)) >= 0) {
+	            while((i = S.indexOf(w, i)) >= 0) {
 	                s[i]++;
-	                s[i + w.length()]--;
+	                s[i + w.length]--;
 	                i++;
 	            }
 	        }
 	        
-	        StringBuilder sb = new StringBuilder();
-	        int pre = 0, sum = 0;
+	        let sb = [];
+	        let pre = 0, sum = 0;
 	        
-	        for(int i = 0; i <= S.length(); i++) {
+	        for(let i = 0; i <= S.length; i++) {
 	            sum += s[i];
-	            if(sum > 0 && pre == 0) {
-	            	sb.append("<b>");
+	            if(sum > 0 && pre === 0) {
+	            	sb.push("<b>");
 	            }
-	            if(sum == 0 && pre > 0) {
-	            	sb.append("</b>");
+	            if(sum === 0 && pre > 0) {
+	            	sb.push("</b>");
 	            }
-	            if (i < S.length()) {
-	            	sb.append(S.charAt(i));
+	            if (i < S.length) {
+	            	sb.push(S.charAt(i));
 	            }
 	            pre = sum;
 	        }
 	        
-	        return sb.toString();
+	        return sb.join('');
 				}
 
 				let input = ["ab", "bc"], S = "aabcd";
 				let tt1 = boldWords(input, S);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: </h2>');
+				$('#t2').text( tt1 );
 			});
 
 			/*sol:
@@ -71,6 +72,7 @@
 	<body>
 		<div>
 			<p id='t1'></p>
+			<p id='t2'></p>
 		</div>
 	</body>
 
