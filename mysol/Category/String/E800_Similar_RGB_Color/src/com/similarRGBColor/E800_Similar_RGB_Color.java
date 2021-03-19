@@ -30,6 +30,15 @@ public class E800_Similar_RGB_Color {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    形如AA的十六进制数必定是17的倍数，我们只要判断离原数最接近的17的倍数是多少即可。
+    */
+	
+	/**
+     * @param color: the given color
+     * @return: a 7 character color that is most similar to the given color
+     */
 	public static String similarRGB(String color) {
 		StringBuilder sb = new StringBuilder(color.length());
 		sb.append("#");
