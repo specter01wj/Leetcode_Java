@@ -153,6 +153,7 @@ By Jin Wang
 |758|**Bold Words in String**|Easy|Java/Javascript|Done/Done|
 |766|**Toeplitz Matrix**|Easy|Java/Javascript|Done/Done|
 |788|**Rotated Digits**|Easy|Java/Javascript|Done/Done|
+|800|**Similar RGB Color**|Easy|Java/Javascript|Done/Done|
 |830|**Positions of Large Groups**|Easy|Java/Javascript|Done/Done|
 |832|**Flipping an Image**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
