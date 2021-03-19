@@ -31,7 +31,7 @@
 		     * @return: a 7 character color that is most similar to the given color
 		     */
 				let similarRGB = (color) => {
-					let sb = Array(color.length).fill(0);
+					let sb = [];
 					sb[0] = "#";
 
 					for(let i = 1; i < color.length; i += 2) {
@@ -42,15 +42,15 @@
 				}
 
 				function getHexDigits(c1, c2) {
-					let d1 = Number.isInteger(c1) ? c1.charCodeAt() - '0'.charCodeAt() : 10 + c1.charCodeAt() - 'a'.charCodeAt();
-					let d2 = Number.isInteger(c2) ? c2.charCodeAt() - '0'.charCodeAt() : 10 + c2.charCodeAt() - 'a'.charCodeAt();
+					let d1 = Number.isInteger(parseInt(c1)) ? c1.charCodeAt() - '0'.charCodeAt() : 10 + c1.charCodeAt() - 'a'.charCodeAt();
+					let d2 = Number.isInteger(parseInt(c2)) ? c2.charCodeAt() - '0'.charCodeAt() : 10 + c2.charCodeAt() - 'a'.charCodeAt();
 					
 					let sum = d1 * 16 + d2;
 					let index = Math.floor(sum / 17);
 					let remainder = sum % 17;
 					if(remainder > Math.floor(17 / 2)) index++;
 					
-					let c = (0 <= index && index <= 9) ? ('0'.charCodeAt() + index) : ('a'.charCodeAt() + index - 10);
+					let c = (0 <= index && index <= 9) ? String.fromCharCode('0'.charCodeAt() + index) : String.fromCharCode('a'.charCodeAt() + index - 10);
 					
 					return c + c;
 				}
