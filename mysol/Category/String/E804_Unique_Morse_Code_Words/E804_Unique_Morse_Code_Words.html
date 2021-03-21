@@ -48,19 +48,19 @@
 										"...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."];
 					let s = {};
 					
-					for(let word : words) {
+					for(let word of words) {
 						let code = "";
-						for(let c : word.split('')) {
+						for(let c of word.split('')) {
 							code += d[c.charCodeAt() - 'a'.charCodeAt()];
 						}
-						s[code] ? s[code]++ : s[code] = 1;
+						s[code] = s[code] ? s[code]++ : 1;
 					}
 					
-					return s.length;
+					return Object.keys(s).length;
 				}
 
-				let input = "#09f166";
-				let tt1 = similarRGB(input);
+				let input = ["gin", "zen", "gig", "msg"];
+				let tt1 = uniqueMorseRepresentations(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
