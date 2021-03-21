@@ -42,8 +42,20 @@ public class E804_Unique_Morse_Code_Words {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    用set保存出现过的摩斯码即可。
+    */
+	
+	/**
+     * @param words: the given list of words
+     * @return: the number of different transformations among all words we have
+     */
 	public static int uniqueMorseRepresentations(String[] words) {
-		String[] d = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+		String[] d = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", 
+				"....", "..", ".---", "-.-", ".-..", "--", "-.", "---", 
+				".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", 
+				"-..-", "-.--", "--.."};
 		HashSet<String> s = new HashSet<>();
 		
 		for(String word : words) {
