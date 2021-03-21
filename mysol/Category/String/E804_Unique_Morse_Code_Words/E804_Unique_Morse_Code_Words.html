@@ -43,14 +43,20 @@
 		     * @return: the number of different transformations among all words we have
 		     */
 				let uniqueMorseRepresentations = (words) => {
-					let sb = [];
-					sb[0] = "#";
-
-					for(let i = 1; i < color.length; i += 2) {
-						sb[i] = (getHexDigits(color.charAt(i), color.charAt(i + 1)));
+					let d = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", 
+										".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", 
+										"...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."];
+					let s = {};
+					
+					for(let word : words) {
+						let code = "";
+						for(let c : word.split('')) {
+							code += d[c.charCodeAt() - 'a'.charCodeAt()];
+						}
+						s[code] ? s[code]++ : s[code] = 1;
 					}
 					
-					return sb.join('');
+					return s.length;
 				}
 
 				let input = "#09f166";
