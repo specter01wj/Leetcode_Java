@@ -53,7 +53,7 @@
 						for(let c of word.split('')) {
 							code += d[c.charCodeAt() - 'a'.charCodeAt()];
 						}
-						s[code] = s[code] ? s[code]++ : 1;
+						s[code] = s[code] ? ++s[code] : 1;
 					}
 					
 					return Object.keys(s).length;

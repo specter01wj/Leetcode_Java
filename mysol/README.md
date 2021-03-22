@@ -155,6 +155,7 @@ By Jin Wang
 |788|**Rotated Digits**|Easy|Java/Javascript|Done/Done|
 |800|**Similar RGB Color**|Easy|Java/Javascript|Done/Done|
 |804|**Unique Morse Code Words**|Easy|Java/Javascript|Done/Done|
+|819|**Most Common Word**|Easy|Java/Javascript|Done/Done|
 |830|**Positions of Large Groups**|Easy|Java/Javascript|Done/Done|
 |832|**Flipping an Image**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
