@@ -41,43 +41,40 @@
 			$(document).ready(function(){
 
 				/**
-		     * @param paragraph:
-		     * @param banned:
+		     * @param S: 
 		     * @return: nothing
 		     */
-				let mostCommonWord = (paragraph, banned) => {
-					let ban = Array.of(banned);
-	        let count = {};
-	        let words = paragraph.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ").toLowerCase().split (" ");
-	        
-	        for(let w of words) {
-	        	let flag = false;
-	        	for(let item of ban) {
-	        		if(item.includes(w)) flag = true;
-	        	}
-	        	if(flag) {
-	        		continue;
-	        	} else {
-	        		count[w] = count[w] ? ++count[w] : 1;
-	        	}
-	        }
-	        
-	        return Object.keys(count).find(key => count[key] === Math.max(...Object.values(count)));
+				let toGoatLatin = (S) => {
+					let vowel = [];
+					for(let c of "aeiouAEIOU".split('')) {
+						vowel.push(c);
+					}
+					let res = "";
+					let i = 0, j = 0;
+					
+					for(let w of S.split(' ')) {
+						res += ' ' + (vowel.includes(w.charAt(0)) ? 
+								w : w.substr(1) + w.charAt(0)) + "ma";
+						for(j = 0, ++i; j < i; ++j) {
+							res += "a";
+						}
+					}
+					
+					return res.substr(1);
 				}
 
-				let input = "Bob hit a ball, the hit BALL flew far after it was hit.";
-				let banned = ["hit"];
-				let tt1 = mostCommonWord(input, banned);
+				let input = "I speak Goat Latin";
+				let tt1 = toGoatLatin(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-			利用哈希表记录每个单词出现的次数即可
-	    4 steps:
-				1.remove all punctuations
-				2.change to lowercase
-				3.words count for each word not in banned set
-				4.return the most common word
+			根据题目规则拼接出一个新的字符串
+			1. Build a vowel set.(optional)
+			2. Split 'S' to words.
+			3. For each word, check if it starts with a vowel. (O(1) complexity with set).
+			4. If it does, keep going. If it does not, rotate the first letter to the end.
+			5. Add it to result string.
 			 */
 
 		</script>
