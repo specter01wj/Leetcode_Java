@@ -44,6 +44,20 @@ public class E824_Goat_Latin {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    根据题目规则拼接出一个新的字符串
+    1. Build a vowel set.(optional)
+	2. Split 'S' to words.
+	3. For each word, check if it starts with a vowel. (O(1) complexity with set).
+	4. If it does, keep going. If it does not, rotate the first letter to the end.
+	5. Add it to result string.
+    */
+	
+	/**
+     * @param S: 
+     * @return: nothing
+     */
 	public static String toGoatLatin(String S) {
 		Set<Character> vowel = new HashSet<Character>();
 		for(char c : "aeiouAEIOU".toCharArray()) {
