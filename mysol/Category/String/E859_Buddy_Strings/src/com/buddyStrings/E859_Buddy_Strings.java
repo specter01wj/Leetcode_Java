@@ -45,6 +45,22 @@ public class E859_Buddy_Strings {
         System.out.println("input1: " + (input1) + " input2: " + (input2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    如果两个字符串长度不相等，返回False。如果长度相等，并且字符串也完全相同，
+    那么就找是否有相同的字符。如果字符串不相同，那么就看是否刚好有两个位置的字符不同，
+    并且这两个位置的字符满足A[i]==B[j] && A[j]==B[i].
+    If A.length() != B.length(): no possible swap
+	If A == B, we need swap two same characters. Check is duplicated char in A.
+	In other cases, we find index for A[i] != B[i]. 
+	There should be only 2 diffs and it's our one swap.
+    */
+	
+	/**
+     * @param a: string A
+     * @param b: string B
+     * @return: boolean
+     */
 	public static boolean buddyStrings(String a, String b) {
 		if(a.length() != b.length()) return false;
 		
