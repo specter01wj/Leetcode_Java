@@ -50,7 +50,7 @@
 					
 					if(a === b) {
 						let s = {};
-						for(let c : a.toCharArray()) {
+						for(let c of a.split(' ')) {
 							s.add(c);
 						}
 						return s.size() < a.length();
