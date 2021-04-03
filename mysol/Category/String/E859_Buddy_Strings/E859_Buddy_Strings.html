@@ -45,28 +45,32 @@
 		     * @param b: string B
 		     * @return: boolean
 		     */
-				let toGoatLatin = (S) => {
-					let vowel = [];
-					for(let c of "aeiouAEIOU".split('')) {
-						vowel.push(c);
-					}
-					let res = "";
-					let i = 0, j = 0;
+				let buddyStrings = (S) => {
+					if(a.length() != b.length()) return false;
 					
-					for(let w of S.split(' ')) {
-						res += ' ' + (vowel.includes(w.charAt(0)) ? 
-								w : w.substr(1) + w.charAt(0)) + "ma";
-						for(j = 0, ++i; j < i; ++j) {
-							res += "a";
+					if(a.contentEquals(b)) {
+						Set<Character> s = new HashSet<Character>();
+						for(char c : a.toCharArray()) {
+							s.add(c);
+						}
+						return s.size() < a.length();
+					}
+					
+					List<Integer> dif = new ArrayList<>();
+					
+					for(int i = 0; i < a.length(); ++i) {
+						if(a.charAt(i) != b.charAt(i)) {
+							dif.add(i);
 						}
 					}
 					
-					return res.substr(1);
+					return dif.size() == 2 && a.charAt(dif.get(0)) == b.charAt(dif.get(1))
+							&& a.charAt(dif.get(1)) == b.charAt(dif.get(0));
 				}
 
 				let input1 = "aba";
 				let input2 = "baa";
-				let tt1 = toGoatLatin(input1, input2);
+				let tt1 = buddyStrings(input1, input2);
 				$('#t1').html('<h2>Input1: ' + input1 + ' Input2: ' + input2 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
