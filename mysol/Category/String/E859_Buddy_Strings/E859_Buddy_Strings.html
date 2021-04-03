@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*Given two strings a and b, return true if you can swap two 
+				letters in a so the result is equal to b, otherwise, return false.
+
+				Swapping letters is defined as taking two indices i and j (0-indexed) 
+				such that i != j and swapping the characters at a[i] and b[j]. 
+				For example, swapping at indices 0 and 2 in "abcd" results in "cbad".
+
+				 
+
+				Example 1:
+
+				Input: a = "ab", b = "ba"
+				Output: true
+				Explanation: You can swap a[0] = 'a' and a[1] = 'b' to get "ba", 
+				which is equal to b.
+
+				Example 2:
+
+				Input: a = "ab", b = "ab"
+				Output: false
+				Explanation: The only letters you can swap are a[0] = 'a' and 
+				a[1] = 'b', which results in "ba" != b.
+
+				Example 3:
+
+				Input: a = "aa", b = "aa"
+				Output: true
+				Explanation: You can swap a[0] = 'a' and a[1] = 'a' to get "aa", 
+				which is equal to b.
+
+				Example 4:
+
+				Input: a = "aaaaaaabc", b = "aaaaaaacb"
+				Output: true
+			*/
+			$(document).ready(function(){
+
+				/**
+		     * @param a: string A
+		     * @param b: string B
+		     * @return: boolean
+		     */
+				let toGoatLatin = (S) => {
+					let vowel = [];
+					for(let c of "aeiouAEIOU".split('')) {
+						vowel.push(c);
+					}
+					let res = "";
+					let i = 0, j = 0;
+					
+					for(let w of S.split(' ')) {
+						res += ' ' + (vowel.includes(w.charAt(0)) ? 
+								w : w.substr(1) + w.charAt(0)) + "ma";
+						for(j = 0, ++i; j < i; ++j) {
+							res += "a";
+						}
+					}
+					
+					return res.substr(1);
+				}
+
+				let input = "I speak Goat Latin";
+				let tt1 = toGoatLatin(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			如果两个字符串长度不相等，返回False。如果长度相等，并且字符串也完全相同，
+	    那么就找是否有相同的字符。如果字符串不相同，那么就看是否刚好有两个位置的字符不同，
+	    并且这两个位置的字符满足A[i]==B[j] && A[j]==B[i].
+	    If A.length() != B.length(): no possible swap
+			If A == B, we need swap two same characters. Check is duplicated char in A.
+			In other cases, we find index for A[i] != B[i]. 
+			There should be only 2 diffs and it's our one swap.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
