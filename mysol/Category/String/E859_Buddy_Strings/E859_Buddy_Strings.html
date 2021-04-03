@@ -49,35 +49,23 @@
 					if(a.length !== b.length) return false;
 					
 					if(a === b) {
-						let s = {};
+						let s = [];
 						for(let c of a.split(' ')) {
-							s.add(c);
-
-
-
-
-
-
-
-
-
-
-
-							
+							s = s.includes(c) ? s : s.push(c);
 						}
-						return s.size() < a.length();
+						return s.length < a.length;
 					}
 					
-					List<Integer> dif = new ArrayList<>();
+					let dif = [];
 					
-					for(int i = 0; i < a.length(); ++i) {
-						if(a.charAt(i) != b.charAt(i)) {
-							dif.add(i);
+					for(let i = 0; i < a.length; ++i) {
+						if(a.charAt(i) !== b.charAt(i)) {
+							dif.push(i);
 						}
 					}
 					
-					return dif.size() == 2 && a.charAt(dif.get(0)) == b.charAt(dif.get(1))
-							&& a.charAt(dif.get(1)) == b.charAt(dif.get(0));
+					return dif.length === 2 && a.charAt(dif[0]) === b.charAt(dif[1])
+							&& a.charAt(dif[1]) === b.charAt(dif[0]);
 				}
 
 				let input1 = "aba";
