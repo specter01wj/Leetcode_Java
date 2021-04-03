@@ -45,10 +45,10 @@
 		     * @param b: string B
 		     * @return: boolean
 		     */
-				let buddyStrings = (S) => {
-					if(a.length() != b.length()) return false;
+				let buddyStrings = (a, b) => {
+					if(a.length !== b.length) return false;
 					
-					if(a.contentEquals(b)) {
+					if(a === b) {
 						Set<Character> s = new HashSet<Character>();
 						for(char c : a.toCharArray()) {
 							s.add(c);
