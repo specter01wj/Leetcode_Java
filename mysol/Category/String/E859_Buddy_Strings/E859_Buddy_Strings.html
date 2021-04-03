@@ -50,8 +50,8 @@
 					
 					if(a === b) {
 						let s = [];
-						for(let c of a.split(' ')) {
-							s = s.includes(c) ? s : s.push(c);
+						for(let c of a.split('')) {
+							s.includes(c) ? s : s.push(c);
 						}
 						return s.length < a.length;
 					}
