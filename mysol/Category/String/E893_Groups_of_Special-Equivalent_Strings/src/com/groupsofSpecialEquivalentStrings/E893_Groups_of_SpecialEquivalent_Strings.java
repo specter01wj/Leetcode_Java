@@ -43,8 +43,23 @@ Output: 3*/
 public class E893_Groups_of_SpecialEquivalent_Strings {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String[] input = {"abcd","cdab","cbad","xyzz","zzxy","zzyx"};
+        int output = numSpecialEquivGroups(input);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+	}
+	
+	public static int numSpecialEquivGroups(String[] A) {
+		Set<String> s = new HashSet();
+		
+		for(String str : A) {
+			int[] count = new int[52];
+			for(int i = 0; i < str.length(); ++i) {
+				count[str.charAt(i) - 'a' + 26 * (i % 2)]++;
+			}
+			s.add(Arrays.toString(count));
+		}
+		
+		return s.size();
 	}
 
 }
