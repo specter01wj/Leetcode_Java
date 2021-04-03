@@ -41,12 +41,31 @@ public class E859_Buddy_Strings {
 	public static void main(String[] args) {
 		String input1 = "aba";
 		String input2 = "baa";
-        int output = buddyStrings(input1, input2);
+        boolean output = buddyStrings(input1, input2);
         System.out.println("input1: " + (input1) + " input2: " + (input2) + "\noutput: " + (output));
 	}
 	
 	public static boolean buddyStrings(String a, String b) {
+		if(a.length() != b.length()) return false;
 		
+		if(a.contentEquals(b)) {
+			Set<Character> s = new HashSet<Character>();
+			for(char c : a.toCharArray()) {
+				s.add(c);
+			}
+			return s.size() < a.length();
+		}
+		
+		List<Integer> dif = new ArrayList<>();
+		
+		for(int i = 0; i < a.length(); ++i) {
+			if(a.charAt(i) != b.charAt(i)) {
+				dif.add(i);
+			}
+		}
+		
+		return dif.size() == 2 && a.charAt(dif.get(0)) == b.charAt(dif.get(1))
+				&& a.charAt(dif.get(1)) == b.charAt(dif.get(0));
 	}
 
 }
