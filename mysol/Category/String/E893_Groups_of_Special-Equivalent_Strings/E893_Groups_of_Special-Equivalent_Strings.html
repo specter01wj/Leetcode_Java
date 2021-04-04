@@ -54,9 +54,9 @@
 					for(let str of A) {
 						let count = Array(52).fill(0);
 						for(let i = 0; i < str.length; ++i) {
-							count[str.charCodeAt(i) - 'a' + 26 * (i % 2)]++;
+							count[str.charCodeAt(i) - 'a'.charCodeAt() + 26 * (i % 2)]++;
 						}
-						s[count.toString()] ? s : s.push(count.toString());
+						s.includes(count.toString()) ? s : s.push(count.toString());
 					}
 					
 					return s.length;
