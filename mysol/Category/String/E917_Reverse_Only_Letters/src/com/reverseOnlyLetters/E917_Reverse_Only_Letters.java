@@ -30,6 +30,18 @@ public class E917_Reverse_Only_Letters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    头部和尾部设置双指针遇到两个字母时，进行交换。
+    Two pointers,
+	from the begin and the of the string.
+	find two letters and swap them.
+    */
+	
+	/**
+     * @param S: Customary string
+     * @return: Reversed string
+     */
 	public static String reverseOnlyLetters(String S) {
 		int l = 0, r = S.length() - 1;
 		StringBuilder strBuilder = new StringBuilder(S);
