@@ -162,6 +162,7 @@ By Jin Wang
 |859|**Buddy Strings**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|
+|893|**Groups of Special-Equivalent Strings**|Easy|Java/Javascript|Done/Done|
 |896|**Monotonic Array**|Easy|Java/Javascript|Done/Done|
 |905|**Sort Array By Parity**|Easy|Java/Javascript|Done/Done|
 |914|**X of a Kind in a Deck of Cards**|Easy|Java/Javascript|Done/Done|

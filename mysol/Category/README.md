@@ -216,6 +216,7 @@ Cspiration Category:
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|
 |824|Goat Latin|Easy||Java/Javascript|Done/Done|
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
+|893|Groups of Special-Equivalent Strings|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
