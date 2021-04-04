@@ -73,6 +73,7 @@ public class E893_Groups_of_SpecialEquivalent_Strings {
 			
 			
 			
+			
 			s.add(Arrays.toString(count));
 		}
 		
