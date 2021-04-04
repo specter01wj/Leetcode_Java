@@ -48,6 +48,17 @@ public class E893_Groups_of_SpecialEquivalent_Strings {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    For each String, we generate it's corresponding signature, 
+    and add it to the set.
+	In the end, we return the size of the set.
+    */
+	
+	/**
+     * @param A: a string array
+     * @return: Return the number of groups of special-equivalent strings from A.
+     */
 	public static int numSpecialEquivGroups(String[] A) {
 		Set<String> s = new HashSet();
 		
