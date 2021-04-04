@@ -68,6 +68,7 @@ public class E893_Groups_of_SpecialEquivalent_Strings {
 				count[str.charAt(i) - 'a' + 26 * (i % 2)]++;
 			}
 			
+			
 			s.add(Arrays.toString(count));
 		}
 		
