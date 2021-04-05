@@ -50,32 +50,20 @@
 		     * @param emails: 
 		     * @return: The number of the different email addresses
 		     */
-				let reverseOnlyLetters = (S) => {
-					let l = 0, r = S.length - 1;
-					let strBuilder = S.split('');
+				let numUniqueEmails = (emails) => {
+					let diff = [];
 					
-					while(l < r) {
-						if(!(S.charCodeAt(l) >= 'A'.charCodeAt() && S.charCodeAt(l) <= 'Z'.charCodeAt() || 
-								S.charCodeAt(l) >= 'a'.charCodeAt() && S.charCodeAt(l) <= 'z'.charCodeAt())) {
-							++l;
-							continue;
-						}
-						if(!(S.charCodeAt(r) >= 'A'.charCodeAt() && S.charCodeAt(r) <= 'Z'.charCodeAt() || 
-								S.charCodeAt(r) >= 'a'.charCodeAt() && S.charCodeAt(r) <= 'z'.charCodeAt())) {
-							--r;
-							continue;
-						}
-						
-						let tmp = S.charAt(l);
-						strBuilder[l++] = S.charAt(r);
-						strBuilder[r--] = tmp;
+					for(let email of emails) {
+						let parts = email.split("@");
+						let local = parts[0].split("+");
+						diff.add(local[0].replace(".", "") + "@" + parts[1]);
 					}
 					
-					return strBuilder.join('');
+					return diff.length;
 				}
 
-				let input = "Test1ng-Leet=code-Q!";
-				let tt1 = reverseOnlyLetters(input);
+				let input = ["test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"];
+				let tt1 = numUniqueEmails(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
