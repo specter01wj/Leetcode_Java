@@ -218,6 +218,7 @@ Cspiration Category:
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
 |893|Groups of Special-Equivalent Strings|Easy||Java/Javascript|Done/Done|
 |917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
+|925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
