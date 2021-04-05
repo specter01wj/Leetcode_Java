@@ -38,8 +38,10 @@ Explanation: It's not necessary to long press any character.
 public class E925_Long_Pressed_Name {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		String input = "leelee";
+		String typed = "lleeelee";
+        int output = isLongPressedName(input);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 
 }
