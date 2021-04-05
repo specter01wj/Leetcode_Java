@@ -40,8 +40,23 @@ public class E925_Long_Pressed_Name {
 	public static void main(String[] args) {
 		String input = "leelee";
 		String typed = "lleeelee";
-        int output = isLongPressedName(input);
+        boolean output = isLongPressedName(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
+	}
+	
+	public static boolean isLongPressedName(String name, String typed) {
+		int m = name.length(), n = typed.length();
+		int i = 0;
+		
+		for(int j = 0; j < n; ++j) {
+			if(i < m && name.charAt(i) == typed.charAt(j)) {
+				++i;
+			} else if(j == 0 || typed.charAt(j) != typed.charAt(j - 1)) {
+				return false;
+			}
+		}
+		
+		return i == m;
 	}
 
 }
