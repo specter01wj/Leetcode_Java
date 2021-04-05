@@ -219,6 +219,8 @@ Cspiration Category:
 |893|Groups of Special-Equivalent Strings|Easy||Java/Javascript|Done/Done|
 |917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
 |925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
+|929|Unique Email Addresses|Easy||Java/Javascript|Done/Done|
+|937|Reorder Data in Log Files|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 

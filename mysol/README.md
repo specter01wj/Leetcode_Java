@@ -169,6 +169,8 @@ By Jin Wang
 |917|**Reverse Only Letters**|Easy|Java/Javascript|Done/Done|
 |922|**Sort Array By Parity II**|Easy|Java/Javascript|Done/Done|
 |925|**Long Pressed Name**|Easy|Java/Javascript|Done/Done|
+|929|**Unique Email Addresses**|Easy|Java/Javascript|Done/Done|
+|937|**Reorder Data in Log Files**|Easy|Java/Javascript|Done/Done|
 |941|**Valid Mountain Array**|Easy|Java/Javascript|Done/Done|
 |977|**Squares of a Sorted Array**|Easy|Java/Javascript|Done/Done|
 |985|**Sum of Even Numbers After Queries**|Easy|Java/Javascript|Done/Done|
