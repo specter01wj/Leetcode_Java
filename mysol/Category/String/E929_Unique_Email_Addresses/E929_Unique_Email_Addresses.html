@@ -56,7 +56,8 @@
 					for(let email of emails) {
 						let parts = email.split("@");
 						let local = parts[0].split("+");
-						diff.add(local[0].replace(".", "") + "@" + parts[1]);
+						let elem = local[0].replace(".", "") + "@" + parts[1];
+						diff[elem] ? diff : diff.push(elem);
 					}
 					
 					return diff.length;
