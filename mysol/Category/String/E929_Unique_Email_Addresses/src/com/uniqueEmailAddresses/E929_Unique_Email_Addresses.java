@@ -52,6 +52,15 @@ public class E929_Unique_Email_Addresses {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    去掉加号后面的，再将.去掉
+    */
+	
+	/**
+     * @param emails: 
+     * @return: The number of the different email addresses
+     */
 	public static int numUniqueEmails(String[] emails) {
 		Set<String> diff = new HashSet<>();
 		
