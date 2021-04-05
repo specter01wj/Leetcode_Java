@@ -48,6 +48,23 @@ public class E937_Reorder_Data_in_Log_Files {
         System.out.println("output: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. guaranteed to have a word following an identifier (allows me to 
+    	use indexOf ' ' freely).
+	2. letter logs need to be ordered lexicographically, so we can use 
+		built in compare function when we know we have two.
+	3. number logs need to be sorted naturally, so we just say they're 
+		all "equal" to eachother and trust java's built in sort feature 
+		to be stable.
+	4. number logs need to be after letter logs, so once we find out 
+		they're different, we return one of the other and short-circuit.
+    */
+	
+	/*
+     * @param logs: a list of strings
+     * @return: sort logs
+     */
 	public static String[] reorderLogFiles(String[] logs) {
 		Comparator<String> myComp = new Comparator<String>() {
 			@Override
