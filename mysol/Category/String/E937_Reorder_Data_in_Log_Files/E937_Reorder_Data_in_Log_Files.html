@@ -46,21 +46,29 @@
 		     * @param logs: a list of strings
 		     * @return: sort logs
 		     */
-				let numUniqueEmails = (emails) => {
-					let diff = [];
-					
-					for(let email of emails) {
-						let parts = email.split("@");
-						let local = parts[0].split("+");
-						let elem = local[0].replace(".", "") + "@" + parts[1];
-						diff[elem] ? diff : diff.push(elem);
-					}
-					
-					return diff.length;
+				let reorderLogFiles = (logs) => {
+					let body = s => s.slice(s.indexOf(' ') + 1);
+				  let isNum = c => /\d/.test(c);
+
+				  let compare = (a, b) => {
+				    let n = body(a).localeCompare(body(b));
+				    if(n !== 0) return n;
+
+				    return a.localeCompare(b);
+				  };
+
+				  let digitLogs = [];
+				  let letterLogs = [];
+				  for(let log of logs) {
+				    if(isNum(body(log))) digitLogs.push(log);
+				    else letterLogs.push(log);
+				  }
+				  
+				  return [...letterLogs.sort(compare), ...digitLogs];
 				}
 
-				let input = ["test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"];
-				let tt1 = numUniqueEmails(input);
+				let input = ["dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero"];
+				let tt1 = reorderLogFiles(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
