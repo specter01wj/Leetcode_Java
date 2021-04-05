@@ -30,22 +30,32 @@
 		     * @param S: Customary string
 		     * @return: Reversed string
 		     */
-				let numSpecialEquivGroups = (A) => {
-					let s = [];
+				let reverseOnlyLetters = (S) => {
+					let l = 0, r = S.length - 1;
+					let strBuilder = S.split('');
 					
-					for(let str of A) {
-						let count = Array(52).fill(0);
-						for(let i = 0; i < str.length; ++i) {
-							count[str.charCodeAt(i) - 'a'.charCodeAt() + 26 * (i % 2)]++;
+					while(l < r) {
+						if(!(S.charCodeAt(l) >= 'A'.charCodeAt() && S.charCodeAt(l) <= 'Z'.charCodeAt() || 
+								S.charCodeAt(l) >= 'a'.charCodeAt() && S.charCodeAt(l) <= 'z'.charCodeAt())) {
+							++l;
+							continue;
 						}
-						s.includes(count.toString()) ? s : s.push(count.toString());
+						if(!(S.charCodeAt(r) >= 'A'.charCodeAt() && S.charCodeAt(r) <= 'Z'.charCodeAt() || 
+								S.charCodeAt(r) >= 'a'.charCodeAt() && S.charCodeAt(r) <= 'z'.charCodeAt())) {
+							--r;
+							continue;
+						}
+						
+						let tmp = S.charAt(l);
+						strBuilder[l++] = S.charAt(r);
+						strBuilder[r--] = tmp;
 					}
 					
-					return s.length;
+					return strBuilder.join('');
 				}
 
-				let input = ["abcd","cdab","cbad","xyzz","zzxy","zzyx"];
-				let tt1 = numSpecialEquivGroups(input);
+				let input = "Test1ng-Leet=code-Q!";
+				let tt1 = reverseOnlyLetters(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
