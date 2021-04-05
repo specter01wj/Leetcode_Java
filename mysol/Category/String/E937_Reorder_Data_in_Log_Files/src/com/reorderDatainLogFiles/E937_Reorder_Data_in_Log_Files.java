@@ -45,8 +45,7 @@ public class E937_Reorder_Data_in_Log_Files {
 				"let2 own kit dig","let3 art zero"};
 		System.out.println("input: " + Arrays.toString(input));
         String[] output = reorderLogFiles(input);
-        System.out.println("output: " 
-        			+ Arrays.toString(output));
+        System.out.println("output: " + Arrays.toString(output));
 	}
 	
 	public static String[] reorderLogFiles(String[] logs) {
