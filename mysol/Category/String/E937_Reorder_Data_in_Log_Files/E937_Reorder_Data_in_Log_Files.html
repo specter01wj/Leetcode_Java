@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*You are given an array of logs. Each log is a space-delimited 
+				string of words, where the first word is the identifier.
+
+				There are two types of logs:
+
+				Letter-logs: All words (except the identifier) consist of lowercase 
+							English letters.
+				Digit-logs: All words (except the identifier) consist of digits.
+
+				Reorder these logs so that:
+
+				1. The letter-logs come before all digit-logs.
+				2. The letter-logs are sorted lexicographically by their contents. 
+				   If their contents are the same, then sort them lexicographically 
+				   by their identifiers.
+				3. The digit-logs maintain their relative ordering.
+
+				Return the final order of the logs.
+
+				 
+
+				Example 1:
+
+				Input: logs = ["dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig",
+								"let3 art zero"]
+				Output: ["let1 art can","let3 art zero","let2 own kit dig","dig1 8 1 5 1",
+						"dig2 3 6"]
+				Explanation:
+				The letter-log contents are all different, so their ordering is "art can", 
+				"art zero", "own kit dig".
+				The digit-logs have a relative order of "dig1 8 1 5 1", "dig2 3 6".
+
+				Example 2:
+
+				Input: logs = ["a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"]
+				Output: ["g1 act car","a8 act zoo","ab1 off key dog","a1 9 2 3 1","zo4 4 7"]
+			*/
+			$(document).ready(function(){
+
+				/*
+		     * @param logs: a list of strings
+		     * @return: sort logs
+		     */
+				let numUniqueEmails = (emails) => {
+					let diff = [];
+					
+					for(let email of emails) {
+						let parts = email.split("@");
+						let local = parts[0].split("+");
+						let elem = local[0].replace(".", "") + "@" + parts[1];
+						diff[elem] ? diff : diff.push(elem);
+					}
+					
+					return diff.length;
+				}
+
+				let input = ["test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"];
+				let tt1 = numUniqueEmails(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+			1. guaranteed to have a word following an identifier (allows me to 
+		    use indexOf ' ' freely).
+			2. letter logs need to be ordered lexicographically, so we can use 
+				built in compare function when we know we have two.
+			3. number logs need to be sorted naturally, so we just say they're 
+				all "equal" to eachother and trust java's built in sort feature 
+				to be stable.
+			4. number logs need to be after letter logs, so once we find out 
+				they're different, we return one of the other and short-circuit.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
