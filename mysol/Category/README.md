@@ -98,6 +98,10 @@ Cspiration Category:
 |455|Assign Cookies|Easy||Java/Javascript||
 |463|Island Perimeter|Easy||Java/Javascript||
 |485|Max Consecutive Ones|Easy||Java/Javascript|Done/Done|
+|495|Teemo Attacking|Easy||Java/Javascript||
+|496|Next Greater Element I|Easy||Java/Javascript||
+|500|Keyboard Row|Easy||Java/Javascript||
+|506|Relative Ranks|Easy||Java/Javascript||
 |509|Fibonacci Number|Easy||Java/Javascript|Done/Done|
 |561|Array Partition I|Easy||Java/Javascript|Done/Done|
 |566|Reshape the Matrix|Easy||Java/Javascript|Done/Done|
