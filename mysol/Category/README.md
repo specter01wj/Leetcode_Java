@@ -93,6 +93,7 @@ Cspiration Category:
 |354|Russian Doll Envelopes|Hard||Java/Javascript||
 |Missing||||||
 |414|Third Maximum Number|Easy||Java/Javascript|Done/Done|
+|422|Valid Word Square|Easy||Java/Javascript||
 |448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript|Done/Done|
 |485|Max Consecutive Ones|Easy||Java/Javascript|Done/Done|
 |509|Fibonacci Number|Easy||Java/Javascript|Done/Done|
