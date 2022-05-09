@@ -95,7 +95,7 @@ Cspiration Category:
 |414|Third Maximum Number|Easy||Java/Javascript|Done/Done|
 |422|Valid Word Square|Easy||Java/Javascript||
 |448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript|Done/Done|
-|455|Assign Cookies|Easy||Java/Javascript||
+|455|Assign Cookies|Easy||Java/Javascript|Done/Done|
 |463|Island Perimeter|Easy||Java/Javascript||
 |485|Max Consecutive Ones|Easy||Java/Javascript|Done/Done|
 |495|Teemo Attacking|Easy||Java/Javascript||
