@@ -33,6 +33,15 @@ public class E455_Assign_Cookies {
         					+ "\noutput: " + (output));
 	}
 	
+	/*
+	solution:
+	将"胃口数"数组和"饼干大小"数组，进行从小到大的排序。
+	从小到大开始遍历两个数组：
+	如果当前g[i]<=s[j]，则可以满足该孩子的胃口，result++，i++,j++。
+	否则，j++，看下一个饼干的大小能否满足对应孩子的胃口。
+	当i或j到达对应数组的结尾时，跳出循环，返回结果值result。
+	*/
+	
 	/**
      * @param g: children's greed factor
      * @param s: cookie's size
