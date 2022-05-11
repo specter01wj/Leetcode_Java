@@ -38,6 +38,22 @@ public class E463_Island_Perimeter {
 	}
 	
 	
+	/*
+	solution:
+	对于一片陆地，
+
+		若其上方没有陆地，则贡献一条边；
+		若其左方没有陆地，则贡献一条边；
+		若其下方没有陆地，则贡献一条边；
+		若其右方没有陆地，则贡献一条边；
+		
+	遍历所有陆地求出所有贡献和即可。
+	*/
+	
+	/**
+     * @param grid: a 2D array
+     * @return: the perimeter of the island
+     */
 	public static int islandPerimeter(int[][] grid) {
 		int perimeter = 0;
 		int []dx  = {1, 0, -1, 0};
