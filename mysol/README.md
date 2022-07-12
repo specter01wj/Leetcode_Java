@@ -129,6 +129,8 @@ By Jin Wang
 |463|**Island Perimeter**|Easy|Java/Javascript|Done/Done|
 |482|**License Key Formatting**|Easy|Java/Javascript|Done/Done|
 |485|**Max Consecutive Ones**|Easy|Java/Javascript|Done/Done|
+|495|**Teemo Attacking**|Easy|Java/Javascript|Done/Done|
+|496|**Next Greater Element I**|Easy|Java/Javascript|Done/Done|
 |509|**Fibonacci Number**|Easy|Java/Javascript|Done/Done|
 |520|**Detect Capital**|Easy|Java/Javascript|Done/Done|
 |521|**Longest Uncommon Subsequence I**|Easy|Java/Javascript|Done/Done|
