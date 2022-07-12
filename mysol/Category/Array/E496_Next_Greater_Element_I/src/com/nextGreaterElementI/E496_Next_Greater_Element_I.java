@@ -41,6 +41,17 @@ public class E496_Next_Greater_Element_I {
         System.out.println("output: " + Arrays.toString(output));
 	}
 	
+	/*
+	solution:
+	用栈来存储结果。对于数字x，若栈顶元素小于x，则将栈顶元素的答案置为x，直到栈顶大于元素x，此时将x入栈，
+	重复此过程从左到右遍历nums2即可得到所有数字的答案。
+	*/
+	
+	/**
+     * @param nums1: an array
+     * @param nums2: an array
+     * @return: find all the next greater numbers for nums1's elements in the corresponding places of nums2
+     */
 	public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
