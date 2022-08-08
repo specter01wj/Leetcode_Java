@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*Given an array of strings words, return the words that can be typed 
+				 using letters of the alphabet on only one row of American keyboard 
+				 like the image below.
+
+				In the American keyboard:
+
+				the first row consists of the characters "qwertyuiop",
+				the second row consists of the characters "asdfghjkl", and
+				the third row consists of the characters "zxcvbnm".
+
+
+				Example 1:
+
+				Input: words = ["Hello","Alaska","Dad","Peace"]
+				Output: ["Alaska","Dad"]
+				Example 2:
+
+				Input: words = ["omk"]
+				Output: []
+				Example 3:
+
+				Input: words = ["adsdf","sfd"]
+				Output: ["adsdf","sfd"]*/
+			$(document).ready(function(){
+				
+				/**
+		     * @param words: a list of strings
+		     * @return: return a list of strings
+		     */
+				let findWords = (words) => {
+					let list = [];
+					
+					for(var word of words) {
+						if(valid(word)) {
+							list.push(word);
+						}
+					}
+					
+					let ans = new Array(list.length);
+					for(var i = 0; i < list.length; i++) {
+						ans[i] = list[i];
+					}
+					
+					return ans;
+				};
+
+				function valid(word) {
+					let set1 = Array('q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p');
+	        let set2 = Array('a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l');
+	        let set3 = Array('z', 'x', 'c', 'v', 'b', 'n', 'm');
+	        
+	        var flag = Array(3).fill(true);
+	        for(var c of word.toLowerCase().split('')) {
+	        	if(!set1.includes(c)) {
+	        		flag[0] = false;
+	        	}
+	        	if(!set2.includes(c)) {
+	        		flag[1] = false;
+	        	}
+	        	if(!set3.includes(c)) {
+	        		flag[2] = false;
+	        	}
+	        }
+	        
+	        return flag[0] || flag[1] || flag[2];
+				}
+
+				var findWords_2 = function(words) {
+				    return words.filter((w) => {
+				        if (
+				            !/^[qwertyuiop]*$/i.test(w) &&
+				            !/^[asdfghjkl]*$/i.test(w) &&
+				            !/^[zxcvbnm]*$/i.test(w)
+				        ) return false;
+				        
+				        return true;
+				    });
+				};
+
+				var nums = ["Hello","Alaska","Dad","Peace"];
+				var tt1 = findWords(nums);
+				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*
+			solution:
+			将键盘每一行的字母分别存入三个集合中，每次根据单词首字母决定在哪个集合，再判断后面的字母是否在此集合中。
+			*/
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
