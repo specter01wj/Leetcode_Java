@@ -131,6 +131,7 @@ By Jin Wang
 |485|**Max Consecutive Ones**|Easy|Java/Javascript|Done/Done|
 |495|**Teemo Attacking**|Easy|Java/Javascript|Done/Done|
 |496|**Next Greater Element I**|Easy|Java/Javascript|Done/Done|
+|500|**Keyboard Row**|Easy|Java/Javascript|Done/Done|
 |509|**Fibonacci Number**|Easy|Java/Javascript|Done/Done|
 |520|**Detect Capital**|Easy|Java/Javascript|Done/Done|
 |521|**Longest Uncommon Subsequence I**|Easy|Java/Javascript|Done/Done|
