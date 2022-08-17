@@ -141,6 +141,8 @@ By Jin Wang
 |557|**Reverse Words in a String III**|Easy|Java/Javascript|Done/Done|
 |561|**Array Partition I**|Easy|Java/Javascript|Done/Done|
 |566|**Reshape the Matrix**|Easy|Java/Javascript|Done/Done|
+|575|**Distribute Candies**|Easy|Java/Javascript|Done/Done|
+|594|**Longest Harmonious Subsequence**|Easy|Java/Javascript|Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript|Done/Done|
 |606|**Construct String from Binary Tree**|Easy|Java/Javascript|Done/|
 |628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
