@@ -105,7 +105,7 @@ Cspiration Category:
 |509|Fibonacci Number|Easy||Java/Javascript|Done/Done|
 |561|Array Partition I|Easy||Java/Javascript|Done/Done|
 |566|Reshape the Matrix|Easy||Java/Javascript|Done/Done|
-|575|Distribute Candies|Easy||Java/Javascript||
+|575|Distribute Candies|Easy||Java/Javascript|Done/Done|
 |594|Longest Harmonious Subsequence|Easy||Java/Javascript||
 |598|Range Addition II|Easy||Java/Javascript||
 |599|Minimum Index Sum of Two Lists|Easy||Java/Javascript||
