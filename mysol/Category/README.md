@@ -107,7 +107,7 @@ Cspiration Category:
 |566|Reshape the Matrix|Easy||Java/Javascript|Done/Done|
 |575|Distribute Candies|Easy||Java/Javascript|Done/Done|
 |594|Longest Harmonious Subsequence|Easy||Java/Javascript|Done/Done|
-|598|Range Addition II|Easy||Java/Javascript||
+|598|Range Addition II|Easy||Java/Javascript|Done/Done|
 |599|Minimum Index Sum of Two Lists|Easy||Java/Javascript||
 |605|Can Place Flowers|Easy||Java/Javascript|Done/Done|
 |628|Maximum Product of Three Numbers|Easy||Java/Javascript|Done/Done|
