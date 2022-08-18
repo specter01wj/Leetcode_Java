@@ -121,7 +121,6 @@ Cspiration Category:
 |747|Largest Number At Least Twice of Others|Easy||Java/Javascript|Done/Done|
 |766|Toeplitz Matrix|Easy||Java/Javascript|Done/Done|
 |804|Unique Morse Code Words|Easy||Java/Javascript|Done/Done|
-|830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
 |832|Flipping an Image|Easy||Java/Javascript|Done/Done|
 |867|Transpose Matrix|Easy||Java/Javascript|Done/Done|
 |888|Fair Candy Swap|Easy||Java/Javascript|Done/Done|
@@ -226,6 +225,7 @@ Cspiration Category:
 |800|Similar RGB Color|Easy||Java/Javascript|Done/Done|
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|
 |824|Goat Latin|Easy||Java/Javascript|Done/Done|
+|830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
 |893|Groups of Special-Equivalent Strings|Easy||Java/Javascript|Done/Done|
 |917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
