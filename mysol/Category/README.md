@@ -112,27 +112,48 @@ Cspiration Category:
 |605|Can Place Flowers|Easy||Java/Javascript|Done/Done|
 |628|Maximum Product of Three Numbers|Easy||Java/Javascript|Done/Done|
 |643|Maximum Average Subarray I|Easy||Java/Javascript|Done/Done|
+|645|Set Mismatch|Easy||Java/Javascript||
 |661|Image Smoother|Easy||Java/Javascript|Done/Done|
 |674|Longest Continuous Increasing Subsequence|Easy||Java/Javascript|Done/Done|
+|682|Baseball Game|Easy||Java/Javascript||
 |697|Degree of an Array|Easy||Java/Javascript|Done/Done|
+|704|Binary Search|Easy||Java/Javascript||
+|705|Design HashSet|Easy||Java/Javascript||
+|706|Design HashMap|Easy||Java/Javascript||
 |717|1-bit and 2-bit Characters|Easy||Java/Javascript|Done/Done|
 |724|Find Pivot Index|Easy||Java/Javascript|Done/Done|
+|733|Flood Fill|Easy||Java/Javascript||
+|744|Find Smallest Letter Greater Than Target|Easy||Java/Javascript||
 |746|Min Cost Climbing Stairs|Easy||Java/Javascript|Done/Done|
 |747|Largest Number At Least Twice of Others|Easy||Java/Javascript|Done/Done|
+|748|Shortest Completing Word|Easy||Java/Javascript||
 |766|Toeplitz Matrix|Easy||Java/Javascript|Done/Done|
 |804|Unique Morse Code Words|Easy||Java/Javascript|Done/Done|
+|806|Number of Lines To Write String|Easy||Java/Javascript||
+|812|Largest Triangle Area|Easy||Java/Javascript||
+|821|Shortest Distance to a Character|Easy||Java/Javascript||
 |832|Flipping an Image|Easy||Java/Javascript|Done/Done|
+|860|Lemonade Change|Easy||Java/Javascript||
 |867|Transpose Matrix|Easy||Java/Javascript|Done/Done|
+|883|Projection Area of 3D Shapes|Easy||Java/Javascript||
 |888|Fair Candy Swap|Easy||Java/Javascript|Done/Done|
+|892|Surface Area of 3D Shapes|Easy||Java/Javascript||
 |896|Monotonic Array|Easy||Java/Javascript|Done/Done|
 |905|Sort Array By Parity|Easy||Java/Javascript|Done/Done|
+|908|Smallest Range I|Easy||Java/Javascript||
 |914|X of a Kind in a Deck of Cards|Easy||Java/Javascript|Done/Done|
 |922|Sort Array By Parity II|Easy||Java/Javascript|Done/Done|
 |929|Unique Email Addresses|Easy||Java/Javascript|Done/Done|
 |941|Valid Mountain Array|Easy||Java/Javascript|Done/Done|
+|942|DI String Match|Easy||Java/Javascript||
+|944|Delete Columns to Make Sorted|Easy||Java/Javascript||
+|953|Verifying an Alien Dictionary|Easy||Java/Javascript||
+|961|N-Repeated Element in Size 2N Array|Easy||Java/Javascript||
+|976|Largest Perimeter Triangle|Easy||Java/Javascript||
 |977|Squares of a Sorted Array|Easy||Java/Javascript|Done/Done|
-|985|Sum of Even Numbers After Queries|Easy||Java/Javascript|Done/Done|
+|985|Sum of Even Numbers After Queries|Medium||Java/Javascript|Done/Done|
 |989|Add to Array-Form of Integer|Easy||Java/Javascript|Done/Done|
+|997|Find the Town Judge|Easy||Java/Javascript||
 |999|Available Captures for Rook|Easy||Java/Javascript|Done/Done|
 |1002|Find Common Characters|Easy||Java/Javascript|Done/Done|
 
