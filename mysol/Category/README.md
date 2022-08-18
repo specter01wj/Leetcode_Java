@@ -228,10 +228,13 @@ Cspiration Category:
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 |Missing||||||
 |408|Valid Word Abbreviation|Easy||Java/Javascript|Done/Done|
+|409|Longest Palindrome|Easy||Java/Javascript||
+|412|Fizz Buzz|Easy||Java/Javascript||
 |415|Add Strings|Easy||Java/Javascript|Done/Done|
 |434|Number of Segments in a String|Easy||Java/Javascript|Done/Done|
 |443|String Compression|Medium||Java/Javascript|Done/Done|
 |459|Repeated Substring Pattern|Easy||Java/Javascript|Done/Done|
+|482|License Key Formatting|Easy||Java/Javascript|Done/Done|
 |520|Detect Capital|Easy||Java/Javascript|Done/Done|
 |521|Longest Uncommon Subsequence I|Easy||Java/Javascript|Done/Done|
 |541|Reverse String II|Easy||Java/Javascript|Done/Done|
