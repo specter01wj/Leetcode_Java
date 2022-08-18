@@ -223,7 +223,7 @@ Cspiration Category:
 |241|Different Ways to Add Parentheses|Medium||Java/Javascript||
 |301|Remove Invalid Parentheses|Hard||Java/Javascript||
 |Subsequence||||||
-|392|Is Subsequence|Medium||Java/Javascript||
+|392|Is Subsequence|Easy||Java/Javascript||
 |115|Distinct Subsequences|Hard||Java/Javascript||
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 |Missing||||||
@@ -243,16 +243,16 @@ Cspiration Category:
 |696|Count Binary Substrings|Easy||Java/Javascript|Done/Done|
 |709|To Lower Case|Easy||Java/Javascript|Done/Done|
 |758|Bold Words in String|Easy||Java/Javascript|Done/Done|
-|788|Rotated Digits|Easy||Java/Javascript|Done/Done|
+|788|Rotated Digits|Medium||Java/Javascript|Done/Done|
 |800|Similar RGB Color|Easy||Java/Javascript|Done/Done|
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|
 |824|Goat Latin|Easy||Java/Javascript|Done/Done|
 |830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
-|893|Groups of Special-Equivalent Strings|Easy||Java/Javascript|Done/Done|
+|893|Groups of Special-Equivalent Strings|Medium||Java/Javascript|Done/Done|
 |917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
 |925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
-|937|Reorder Data in Log Files|Easy||Java/Javascript|Done/Done|
+|937|Reorder Data in Log Files|Medium||Java/Javascript|Done/Done|
 
 ### 3. Math
 
