@@ -149,10 +149,12 @@ By Jin Wang
 |606|**Construct String from Binary Tree**|Easy|Java/Javascript|Done/|
 |628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
 |643|**Maximum Average Subarray I**|Easy|Java/Javascript|Done/Done|
+|645|**Set Mismatch**|Easy|Java/Javascript|Done/Done|
 |657|**Robot Return to Origin**|Easy|Java/Javascript|Done/Done|
 |661|**Image Smoother**|Easy|Java/Javascript|Done/Done|
 |674|**Longest Continuous Increasing Subsequence**|Easy|Java/Javascript|Done/Done|
 |680|**Valid Palindrome II**|Easy|Java/Javascript|Done/Done|
+|682|**Baseball Game**|Easy|Java/Javascript|Done/Done|
 |696|**Count Binary Substrings**|Easy|Java/Javascript|Done/Done|
 |697|**Degree of an Array**|Easy|Java/Javascript|Done/Done|
 |709|**To Lower Case**|Easy|Java/Javascript|Done/Done|
