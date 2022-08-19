@@ -115,7 +115,7 @@ Cspiration Category:
 |645|Set Mismatch|Easy||Java/Javascript|Done/Done|
 |661|Image Smoother|Easy||Java/Javascript|Done/Done|
 |674|Longest Continuous Increasing Subsequence|Easy||Java/Javascript|Done/Done|
-|682|Baseball Game|Easy||Java/Javascript||
+|682|Baseball Game|Easy||Java/Javascript|Done/Done|
 |697|Degree of an Array|Easy||Java/Javascript|Done/Done|
 |704|Binary Search|Easy||Java/Javascript||
 |705|Design HashSet|Easy||Java/Javascript||
