@@ -45,16 +45,19 @@ public class E645_Set_Mismatch {
 		boolean[] vis = new boolean[nums.length + 1];
         int answer_repeat = 0, answer_missing = 0;
         for(int i = 0; i < nums.length; i++) {
-            if (!vis[nums[i]])
+            if (!vis[nums[i]]) {
                 vis[nums[i]] = true;
-            else
+            } else {
                 answer_repeat = nums[i];
+            }
         }
-        for(int i = 1; i<=nums.length; i++)
+        for(int i = 1; i<=nums.length; i++) {
             if (!vis[i]) {
                 answer_missing = i;
                 break;
             }
+        }
+        
         return new int[] {answer_repeat, answer_missing};
 	}
 
