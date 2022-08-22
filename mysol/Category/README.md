@@ -117,7 +117,7 @@ Cspiration Category:
 |674|Longest Continuous Increasing Subsequence|Easy||Java/Javascript|Done/Done|
 |682|Baseball Game|Easy||Java/Javascript|Done/Done|
 |697|Degree of an Array|Easy||Java/Javascript|Done/Done|
-|704|Binary Search|Easy||Java/Javascript||
+|704|Binary Search|Easy||Java/Javascript|Done/Done|
 |705|Design HashSet|Easy||Java/Javascript||
 |706|Design HashMap|Easy||Java/Javascript||
 |717|1-bit and 2-bit Characters|Easy||Java/Javascript|Done/Done|
