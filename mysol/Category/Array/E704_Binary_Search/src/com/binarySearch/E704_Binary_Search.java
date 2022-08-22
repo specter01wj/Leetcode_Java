@@ -29,7 +29,16 @@ public class E704_Binary_Search {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    先用binary search找到其中一个index，再用双指针找到头和尾
+    */
 	
+	/**
+     * @param nums: The integer array.
+     * @param target: Target to find.
+     * @return: The first position of target. Position starts from 0.
+     */
 	public static int search(int[] nums, int target) {
 		if (nums == null || nums.length == 0) {
             return -1;
