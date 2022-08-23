@@ -123,7 +123,7 @@ Cspiration Category:
 |717|1-bit and 2-bit Characters|Easy||Java/Javascript|Done/Done|
 |724|Find Pivot Index|Easy||Java/Javascript|Done/Done|
 |733|Flood Fill|Easy||Java/Javascript|Done/Done|
-|744|Find Smallest Letter Greater Than Target|Easy||Java/Javascript||
+|744|Find Smallest Letter Greater Than Target|Easy||Java/Javascript|Done/Done|
 |746|Min Cost Climbing Stairs|Easy||Java/Javascript|Done/Done|
 |747|Largest Number At Least Twice of Others|Easy||Java/Javascript|Done/Done|
 |748|Shortest Completing Word|Easy||Java/Javascript||
