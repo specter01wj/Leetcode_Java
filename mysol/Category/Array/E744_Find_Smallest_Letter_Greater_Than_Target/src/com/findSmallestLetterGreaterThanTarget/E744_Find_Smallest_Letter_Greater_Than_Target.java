@@ -35,7 +35,16 @@ public class E744_Find_Smallest_Letter_Greater_Than_Target {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    按照题意模拟即可，可以使用二分
+    */
 	
+	/**
+     * @param letters: a list of sorted characters
+     * @param target: a target letter
+     * @return: the smallest element in the list that is larger than the given target
+     */
 	public static char nextGreatestLetter(char[] letters, char target) {
 		int left = 0, right = letters.length - 1;
         while(left <= right) {
