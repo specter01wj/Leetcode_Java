@@ -42,11 +42,23 @@ public class E733_Flood_Fill {
 
 	public static void main(String[] args) {
 		int[][] input = {{1,1,1},{1,1,0},{1,0,1}};
+		System.out.println("input: " + Arrays.deepToString(input));
         int[][] output = floodFill(input, 1, 1, 2);
-        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.toString(output));
+        System.out.println("Output: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    DFS，从起点开始枚举4方向并填充颜色
+    */
 	
+	/**
+     * @param image: a 2-D array
+     * @param sr: an integer
+     * @param sc: an integer
+     * @param newColor: an integer
+     * @return: the modified image
+     */
 	public static int[][] floodFill(int[][] image, int sr, int sc, int color) {
 		if (image[sr][sc] == color) {
             return image;
