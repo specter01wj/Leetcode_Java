@@ -129,7 +129,7 @@ Cspiration Category:
 |748|Shortest Completing Word|Easy||Java/Javascript|Done/Done|
 |766|Toeplitz Matrix|Easy||Java/Javascript|Done/Done|
 |804|Unique Morse Code Words|Easy||Java/Javascript|Done/Done|
-|806|Number of Lines To Write String|Easy||Java/Javascript||
+|806|Number of Lines To Write String|Easy||Java/Javascript|Done/Done|
 |812|Largest Triangle Area|Easy||Java/Javascript||
 |821|Shortest Distance to a Character|Easy||Java/Javascript||
 |832|Flipping an Image|Easy||Java/Javascript|Done/Done|
