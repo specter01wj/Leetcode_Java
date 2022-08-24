@@ -44,8 +44,36 @@ There are a total of 2 lines, and the last line is 4 pixels wide.
 public class E806_Number_of_Lines_To_Write_String {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] input = {10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10};
+        String s = "abcdefghijklmnopqrstuvwxyz";
+		int[] output = numberOfLines(input, s);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
+	}
+	
+	/*
+    solution:
+    按照题意模拟即可。
+    */
+	
+	/**
+     * @param widths: an array
+     * @param S: a string
+     * @return: how many lines have at least one character from S, and what is the width used by the last such line
+     */
+	public static int[] numberOfLines(int[] widths, String s) {
+		char[] array = s.toCharArray();
+        int lines = 1;
+        int lastLength = 0;
+        int index = 0;
+        for (char c : array) {
+        	index = c - 'a';
+        	lastLength += widths[index];
+        	if (lastLength > 100) {
+        		lines ++;
+        		lastLength = widths[index];
+    		}
+		}
+        return new int[] {lines, lastLength};
 	}
 
 }
