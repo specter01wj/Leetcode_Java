@@ -49,6 +49,16 @@ public class E748_Shortest_Completing_Word {
         System.out.println("input: " + input + "; word: " + Arrays.toString(word) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1.利用int数组做hash, 2.利用word长度剪枝, 3.直接遍历数组
+    */
+	
+	/**
+     * @param licensePlate: a string
+     * @param words: List[str]
+     * @return: return a string
+     */
 	public static String shortestCompletingWord(String licensePlate, String[] words) {
 		int[] target = toArray(licensePlate);
         String res = null;
