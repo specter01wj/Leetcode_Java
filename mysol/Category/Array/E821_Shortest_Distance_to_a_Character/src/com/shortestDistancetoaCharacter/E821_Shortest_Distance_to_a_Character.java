@@ -36,6 +36,17 @@ public class E821_Shortest_Distance_to_a_Character {
         System.out.println("input: " + (input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    将字符串按正、逆顺序两次扫描，第一次扫描计算当前位置字母与前一个目标字母之间的距离，
+    后一次扫描计算当前位置字母与后一个字母之间的距离，两者取小即可。
+    */
+	
+	/**
+     * @param S: 
+     * @param C: 
+     * @return: nothing
+     */
 	public static int[] shortestToChar(String s, char c) {
 		int n = s.length();
         int[] res = new int[n];
