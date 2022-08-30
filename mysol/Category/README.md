@@ -131,7 +131,7 @@ Cspiration Category:
 |804|Unique Morse Code Words|Easy||Java/Javascript|Done/Done|
 |806|Number of Lines To Write String|Easy||Java/Javascript|Done/Done|
 |812|Largest Triangle Area|Easy||Java/Javascript|Done/Done|
-|821|Shortest Distance to a Character|Easy||Java/Javascript||
+|821|Shortest Distance to a Character|Easy||Java/Javascript|Done/Done|
 |832|Flipping an Image|Easy||Java/Javascript|Done/Done|
 |860|Lemonade Change|Easy||Java/Javascript||
 |867|Transpose Matrix|Easy||Java/Javascript|Done/Done|
