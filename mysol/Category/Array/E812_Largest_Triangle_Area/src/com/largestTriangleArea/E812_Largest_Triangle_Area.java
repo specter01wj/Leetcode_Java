@@ -29,7 +29,15 @@ public class E812_Largest_Triangle_Area {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    由于点最多只有50个，直接枚举所有三角形即可。我们使用叉积计算三角形面积。
+    */
 	
+	/**
+     * @param points: List[List[int]]
+     * @return: return a double
+     */
 	public static double largestTriangleArea(int[][] points) {
 		double max = 0.0; 
         for (int i = 0; i < points.length - 2; i++) {
