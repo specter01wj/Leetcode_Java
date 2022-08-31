@@ -181,7 +181,9 @@ By Jin Wang
 |830|**Positions of Large Groups**|Easy|Java/Javascript|Done/Done|
 |832|**Flipping an Image**|Easy|Java/Javascript|Done/Done|
 |859|**Buddy Strings**|Easy|Java/Javascript|Done/Done|
+|860|**Lemonade Change**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
+|883|**Projection Area of 3D Shapes**|Easy|Java/Javascript|Done/Done|
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|
 |893|**Groups of Special-Equivalent Strings**|Easy|Java/Javascript|Done/Done|
 |896|**Monotonic Array**|Easy|Java/Javascript|Done/Done|
