@@ -44,6 +44,17 @@ public class E883_Projection_Area_of_3D_Shapes {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    front-back projection area on xz = sum(max value for every col)
+	right-left projection area on yz = sum(max value for every row)
+	top-down projection area on xy = sum(1 for every v > 0)
+    */
+	
+	/**
+     * @param grid: a List[List[int]]
+     * @return: return a integer number
+     */
 	public static int projectionArea(int[][] grid) {
 		int res = 0, n = grid.length;
         for (int i = 0; i < n; ++i) {
@@ -55,6 +66,7 @@ public class E883_Projection_Area_of_3D_Shapes {
             }
             res += x + y;
         }
+        
         return res;
 	}
 
