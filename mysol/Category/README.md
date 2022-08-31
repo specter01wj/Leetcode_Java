@@ -133,7 +133,7 @@ Cspiration Category:
 |812|Largest Triangle Area|Easy||Java/Javascript|Done/Done|
 |821|Shortest Distance to a Character|Easy||Java/Javascript|Done/Done|
 |832|Flipping an Image|Easy||Java/Javascript|Done/Done|
-|860|Lemonade Change|Easy||Java/Javascript||
+|860|Lemonade Change|Easy||Java/Javascript|Done/Done|
 |867|Transpose Matrix|Easy||Java/Javascript|Done/Done|
 |883|Projection Area of 3D Shapes|Easy||Java/Javascript||
 |888|Fair Candy Swap|Easy||Java/Javascript|Done/Done|
