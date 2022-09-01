@@ -137,7 +137,7 @@ Cspiration Category:
 |867|Transpose Matrix|Easy||Java/Javascript|Done/Done|
 |883|Projection Area of 3D Shapes|Easy||Java/Javascript|Done/Done|
 |888|Fair Candy Swap|Easy||Java/Javascript|Done/Done|
-|892|Surface Area of 3D Shapes|Easy||Java/Javascript||
+|892|Surface Area of 3D Shapes|Easy||Java/Javascript|Done/Done|
 |896|Monotonic Array|Easy||Java/Javascript|Done/Done|
 |905|Sort Array By Parity|Easy||Java/Javascript|Done/Done|
 |908|Smallest Range I|Easy||Java/Javascript||
