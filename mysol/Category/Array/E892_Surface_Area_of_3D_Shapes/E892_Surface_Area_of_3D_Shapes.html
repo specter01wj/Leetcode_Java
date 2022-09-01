@@ -40,25 +40,26 @@
 		     * @param grid: the grid
 		     * @return: the surface area
 		     */
-				let projectionArea = function(grid) {
-					let res = 0, n = grid.length;
-	        for (let i = 0; i < n; ++i) {
-	            let x = 0, y = 0;
-	            for (let j = 0; j < n; ++j) {
-	                x = Math.max(x, grid[i][j]);
-	                y = Math.max(y, grid[j][i]);
-	                if (grid[i][j] > 0) {
-	                	++res;
-	                }
-	            }
-	            res += x + y;
-	        }
-	        
-	        return res;
+				let surfaceArea = function(grid) {
+					let length = grid.length;
+					let surface1 = 0;
+					let surface2 = 0;
+					for (let i = 0; i < length; i++) {
+						for (let j = 0; j < length; j++) {
+							if (grid[i][j] !== 0) {
+								surface1 += grid[i][j] * 4 + 2;
+							}
+							if (i !== length - 1) {
+								surface2 += (grid[i][j] > grid[i + 1][j] ? grid[i + 1][j] : grid[i][j]) * 2;
+								surface2 += (grid[j][i] > grid[j][i + 1] ? grid[j][i + 1] : grid[j][i]) * 2;
+							}
+						}
+					}
+					return surface1 - surface2;
 				};
 
 				let nums = [[1,2],[3,4]];
-				let tt1 = projectionArea(nums);
+				let tt1 = surfaceArea(nums);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
