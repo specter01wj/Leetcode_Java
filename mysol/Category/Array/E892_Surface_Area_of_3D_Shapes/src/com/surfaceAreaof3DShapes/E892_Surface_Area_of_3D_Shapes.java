@@ -41,6 +41,15 @@ public class E892_Surface_Area_of_3D_Shapes {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    从正面，侧面，俯视图三个方向进行计算。
+    */
+	
+	/**
+     * @param grid: the grid
+     * @return: the surface area
+     */
 	public static int surfaceArea(int[][] grid) {
 		int length = grid.length;
 		int surface1 = 0;
