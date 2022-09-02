@@ -48,14 +48,16 @@ public class E908_Smallest_Range_I {
 		int minV = Integer.MAX_VALUE;
         int maxV = Integer.MIN_VALUE;
         int ans = 0;
+        
         for (int d : nums) {
             minV = Math.min(minV, d);
             maxV = Math.max(maxV, d);
         }
-        if (minV + k >= maxV - k) 
-        {
+        
+        if (minV + k >= maxV - k) {
             return ans;
         }
+        
         return maxV - minV - 2 * k;
 	}
 
