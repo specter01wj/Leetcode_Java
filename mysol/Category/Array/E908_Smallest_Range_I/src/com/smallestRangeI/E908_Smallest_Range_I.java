@@ -44,6 +44,16 @@ public class E908_Smallest_Range_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    最大值不可能小于max - K，最小值不可能大于min + K max - K <= min + K，
+    最大值和最小值差距可以为0 max - K > min + K，差距为 max - min - 2 * K
+    */
+	
+	/**
+     * @param nums: an array
+     * @return: an integer
+     */
 	public static int smallestRangeI(int[] nums, int k) {
 		int minV = Integer.MAX_VALUE;
         int maxV = Integer.MIN_VALUE;
