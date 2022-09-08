@@ -198,6 +198,8 @@ By Jin Wang
 |937|**Reorder Data in Log Files**|Easy|Java/Javascript|Done/Done|
 |941|**Valid Mountain Array**|Easy|Java/Javascript|Done/Done|
 |942|**DI String Match**|Easy|Java/Javascript|Done/Done|
+|944|**Delete Columns to Make Sorted**|Easy|Java/Javascript|Done/Done|
+|953|**Verifying an Alien Dictionary**|Easy|Java/Javascript|Done/Done|
 |977|**Squares of a Sorted Array**|Easy|Java/Javascript|Done/Done|
 |985|**Sum of Even Numbers After Queries**|Easy|Java/Javascript|Done/Done|
 |989|**Add to Array-Form of Integer**|Easy|Java/Javascript|Done/Done|
