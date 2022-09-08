@@ -44,8 +44,17 @@ public class E953_Verifying_an_Alien_Dictionary {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Build a transform mapping from order,
+	Find all alien words with letters in normal order.
+    */
 	
-	
+	/**
+     * @param words: array of string to be verified.
+     * @param order: string means the order of characters.
+     * @return: true of false.
+     */
 	static int[] mapping = new int[26];
 	public static boolean isAlienSorted(String[] words,String order) {
 		for (int i = 0; i < order.length(); i++) {
