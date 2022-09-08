@@ -57,7 +57,15 @@ public class E944_Delete_Columns_to_Make_Sorted {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    对A中的元素转置遍历，然后判断每一行是不是有序即可。
+    */
 	
+	/**
+     * @param A: A string array
+     * @return: Minimum D.length
+     */
 	public static int minDeletionSize(String[] strs) {
 		if (strs.length == 0) {
             return 0;
