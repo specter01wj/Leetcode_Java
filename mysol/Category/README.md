@@ -146,7 +146,7 @@ Cspiration Category:
 |929|Unique Email Addresses|Easy||Java/Javascript|Done/Done|
 |941|Valid Mountain Array|Easy||Java/Javascript|Done/Done|
 |942|DI String Match|Easy||Java/Javascript|Done/Done|
-|944|Delete Columns to Make Sorted|Easy||Java/Javascript||
+|944|Delete Columns to Make Sorted|Easy||Java/Javascript|Done/Done|
 |953|Verifying an Alien Dictionary|Easy||Java/Javascript||
 |961|N-Repeated Element in Size 2N Array|Easy||Java/Javascript||
 |976|Largest Perimeter Triangle|Easy||Java/Javascript||
