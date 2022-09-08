@@ -38,8 +38,10 @@ blank character which is less than any other character (More info).
 public class E953_Verifying_an_Alien_Dictionary {
 
 	public static void main(String[] args) {
-		String[] input = {"hello","leetcode"};
-		String order = "hlabcdefgijkmnopqrstuvwxyz";
+//		String[] input = {"hello","leetcode"};
+//		String order = "hlabcdefgijkmnopqrstuvwxyz";
+		String[] input = {"word","world","row"};
+		String order = "worldabcefghijkmnpqstuvxyz";
         boolean output = isAlienSorted(input, order);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
@@ -61,8 +63,9 @@ public class E953_Verifying_an_Alien_Dictionary {
             mapping[order.charAt(i) - 'a'] = i;
         }
         for (int i = 1; i < words.length; i++) {
-            if (cmp(words[i - 1], words[i]))
+            if (cmp(words[i - 1], words[i])) {
                 return false;
+            }
         }
         
         return true;

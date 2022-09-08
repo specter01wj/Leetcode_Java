@@ -43,13 +43,14 @@
 		     * @param order: string means the order of characters.
 		     * @return: true of false.
 		     */
-				let isAlienSorted = function(strs) {
+				let isAlienSorted = function(words, order) {
 					for (let i = 0; i < order.length; i++) {
-	            mapping[order.charCodeAt(i) - 'a'] = i;
+	            mapping[order.charCodeAt(i) - 'a'.charCodeAt(0)] = i;
 	        }
 	        for (let i = 1; i < words.length; i++) {
-	            if (cmp(words[i - 1], words[i]))
+	            if (cmp(words[i - 1], words[i])) {
 	                return false;
+	            }
 	        }
 	        
 	        return true;
@@ -60,14 +61,15 @@
 		        let n = s1.length, m = s2.length;
 		        for (let i = 0; i < n && i < m; ++i) {
 		            if (s1.charCodeAt(i) !== s2.charCodeAt(i)) {
-		                return mapping[s1.charAt(i) - 'a'] > mapping[s2.charAt(i) - 'a'];
+		                return mapping[s1.charCodeAt(i) - 'a'.charCodeAt(0)] > mapping[s2.charCodeAt(i) - 'a'.charCodeAt(0)];
 		            }
 		        }
 		        
 		        return n > m;
 		    }
 
-				let nums = ["hello","leetcode"], order = "hlabcdefgijkmnopqrstuvwxyz";
+				// let nums = ["hello","leetcode"], order = "hlabcdefgijkmnopqrstuvwxyz";
+				let nums = ["word","world","row"], order = "worldabcefghijkmnpqstuvxyz";
 				let tt1 = isAlienSorted(nums, order);
 				$('#t1').html('<h2>Inputs: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
