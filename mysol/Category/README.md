@@ -147,7 +147,7 @@ Cspiration Category:
 |941|Valid Mountain Array|Easy||Java/Javascript|Done/Done|
 |942|DI String Match|Easy||Java/Javascript|Done/Done|
 |944|Delete Columns to Make Sorted|Easy||Java/Javascript|Done/Done|
-|953|Verifying an Alien Dictionary|Easy||Java/Javascript||
+|953|Verifying an Alien Dictionary|Easy||Java/Javascript|Done/Done|
 |961|N-Repeated Element in Size 2N Array|Easy||Java/Javascript||
 |976|Largest Perimeter Triangle|Easy||Java/Javascript||
 |977|Squares of a Sorted Array|Easy||Java/Javascript|Done/Done|
