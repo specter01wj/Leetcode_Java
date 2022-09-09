@@ -42,7 +42,11 @@
 			});
 
 			/*sol:
-				Use array or set and return seen number at once.
+				1. We sort the A
+				2. Try to get a triangle with 3 biggest numbers.
+				3. If A[n-1] < A[n-2] + A[n-3], we get a triangle.
+				   If A[n-1] >= A[n-2] + A[n-3] >= A[i] + A[j], we cannot get any triangle with A[n-1]
+				4. repeat step2 and step3 with the left numbers.
 			 */
 
 		</script>
