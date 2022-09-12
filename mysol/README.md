@@ -116,7 +116,7 @@ By Jin Wang
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
-|392|**Is Subsequence**|Easy|Java/Javascript||
+|392|**Is Subsequence**|Easy|Java/Javascript|Done/Done|
 |401|**Binary Watch**|Easy|Java/Javascript||
 |408|**Valid Word Abbreviation**|Easy|Java/Javascript|Done/Done|
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
@@ -205,6 +205,7 @@ By Jin Wang
 |977|**Squares of a Sorted Array**|Easy|Java/Javascript|Done/Done|
 |985|**Sum of Even Numbers After Queries**|Easy|Java/Javascript|Done/Done|
 |989|**Add to Array-Form of Integer**|Easy|Java/Javascript|Done/Done|
+|997|**Find the Town Judge**|Easy|Java/Javascript|Done/Done|
 |999|**Available Captures for Rook**|Easy|Java/Javascript|Done/Done|
 |1002|**Find Common Characters**|Easy|Java/Javascript|Done/Done|
 
