@@ -30,7 +30,16 @@ public class E392_Is_Subsequence {
         System.out.println("input1: " + (input1) + "; input2: " + input2 + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    直接按s串的顺序去遍历t串即可。
+    */
 	
+	/**
+     * @param s: a string
+     * @param t: a string
+     * @return: if s is a subsequence of t
+     */
 	public static boolean isSubsequence(String s, String t) {
 		int i = 0, j = 0;
 		while(i < s.length() && j < t.length()) {
