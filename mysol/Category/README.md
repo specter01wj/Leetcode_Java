@@ -153,7 +153,7 @@ Cspiration Category:
 |977|Squares of a Sorted Array|Easy||Java/Javascript|Done/Done|
 |985|Sum of Even Numbers After Queries|Medium||Java/Javascript|Done/Done|
 |989|Add to Array-Form of Integer|Easy||Java/Javascript|Done/Done|
-|997|Find the Town Judge|Easy||Java/Javascript||
+|997|Find the Town Judge|Easy||Java/Javascript|Done/Done|
 |999|Available Captures for Rook|Easy||Java/Javascript|Done/Done|
 |1002|Find Common Characters|Easy||Java/Javascript|Done/Done|
 
