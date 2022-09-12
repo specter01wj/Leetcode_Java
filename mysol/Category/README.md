@@ -223,7 +223,7 @@ Cspiration Category:
 |241|Different Ways to Add Parentheses|Medium||Java/Javascript||
 |301|Remove Invalid Parentheses|Hard||Java/Javascript||
 |Subsequence||||||
-|392|Is Subsequence|Easy||Java/Javascript||
+|392|Is Subsequence|Easy||Java/Javascript|Done/Done|
 |115|Distinct Subsequences|Hard||Java/Javascript||
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 |Missing||||||
