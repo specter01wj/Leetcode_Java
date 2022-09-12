@@ -42,7 +42,17 @@ public class E997_Find_the_Town_Judge {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Consider trust as a graph, all pairs are directed edge.
+	The point with in-degree - out-degree = N - 1 become the judge.
+	Count the degree, and check at the end.
+    */
 	
+	/**
+     * @param nums: an 2-D array
+     * @return: the label of the town judge
+     */
 	public static int findJudge(int n, int[][] trust) {
 		int[] count = new int[n + 1];
         for (int[] t: trust) {
