@@ -31,7 +31,16 @@ public class E409_Longest_Palindrome {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    hash set 方法，加char到hashset的时候就统计结果，最后如果set里有剩余，
+    说明有奇数出现的字符，字符长度减去奇数个数就是答案
+    */
 	
+	/**
+     * @param nums: a string
+     * @return: the length of the longest palindromes that can be built
+     */
 	public static int longestPalindrome(String s) {
 		Set<Character> set = new HashSet<>();
         for (char c : s.toCharArray()) {
