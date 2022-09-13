@@ -34,27 +34,24 @@
 		     * param n: As description.
 		     * return: A list of strings.
 		     */
-				let longestPalindrome = function(s) {
-					let set = [];
-					let str = s.split('');
-	        for (let c of str) {
-	            if (set.includes(c)) {
-	                set = set.filter(value => value !== c);
+				let fizzBuzz = function(n) {
+					let results = [];
+	        for (let i = 1; i <= n; i++) {
+	            if (i % 15 == 0) {
+	                results.push("FizzBuzz");
+	            } else if (i % 5 == 0) {
+	                results.push("Buzz");
+	            } else if (i % 3 == 0) {
+	                results.push("Fizz");
 	            } else {
-	                set.push(c);
+	                results.push(i.toString());
 	            }
 	        }
-
-	        let remove = set.length;
-	        if (remove > 0) {
-	            remove -= 1;
-	        }
-	        
-	        return s.length - remove;
+	        return results;
 				};
 
-				let nums = "abccccdd";
-				let tt1 = longestPalindrome(nums);
+				let nums = 15;
+				let tt1 = fizzBuzz(nums);
 				$('#t1').html('<h2>Input1: ' + nums + '<br>Results: ' + tt1 + '</h2>');
 			});
 
