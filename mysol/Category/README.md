@@ -228,7 +228,7 @@ Cspiration Category:
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 |Missing||||||
 |408|Valid Word Abbreviation|Easy||Java/Javascript|Done/Done|
-|409|Longest Palindrome|Easy||Java/Javascript||
+|409|Longest Palindrome|Easy||Java/Javascript|Done/Done|
 |412|Fizz Buzz|Easy||Java/Javascript||
 |415|Add Strings|Easy||Java/Javascript|Done/Done|
 |434|Number of Segments in a String|Easy||Java/Javascript|Done/Done|
