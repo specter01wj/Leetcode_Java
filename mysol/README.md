@@ -119,6 +119,8 @@ By Jin Wang
 |392|**Is Subsequence**|Easy|Java/Javascript|Done/Done|
 |401|**Binary Watch**|Easy|Java/Javascript||
 |408|**Valid Word Abbreviation**|Easy|Java/Javascript|Done/Done|
+|409|**Longest Palindrome**|Easy|Java/Javascript|Done/Done|
+|412|**Fizz Buzz**|Easy|Java/Javascript|Done/Done|
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 |415|**Add Strings**|Easy|Java/Javascript|Done/Done|
 |434|**Number of Segments in a String**|Easy|Java/Javascript|Done/Done|
