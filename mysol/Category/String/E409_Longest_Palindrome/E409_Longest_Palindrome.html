@@ -32,9 +32,10 @@
 		     */
 				let longestPalindrome = function(s) {
 					let set = [];
-	        for (let c of s.split('')) {
+					let str = s.split('');
+	        for (let c of str) {
 	            if (set.includes(c)) {
-	                set.filter(value => value === c);
+	                set = set.filter(value => value !== c);
 	            } else {
 	                set.push(c);
 	            }
