@@ -247,7 +247,7 @@ Cspiration Category:
 |709|To Lower Case|Easy||Java/Javascript|Done/Done|
 |748|Shortest Completing Word|Easy||Java/Javascript||
 |758|Bold Words in String|Easy||Java/Javascript|Done/Done|
-|771|Jewels and Stones|Easy||Java/Javascript||
+|771|Jewels and Stones|Easy||Java/Javascript|Done/Done|
 |788|Rotated Digits|Medium||Java/Javascript|Done/Done|
 |796|Rotate String|Easy||Java/Javascript||
 |800|Similar RGB Color|Easy||Java/Javascript|Done/Done|
