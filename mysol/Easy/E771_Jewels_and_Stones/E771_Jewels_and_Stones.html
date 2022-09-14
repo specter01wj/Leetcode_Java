@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You're given strings jewels representing the types of stones that are jewels, 
+				and stones representing the stones you have. 
+				Each character in stones is a type of stone you have. You want to know 
+				how many of the stones you have are also jewels.
+
+				Letters are case sensitive, so "a" is considered a different type of stone 
+				from "A".
+
+
+				Example 1:
+
+				Input: jewels = "aA", stones = "aAAbbbb"
+				Output: 3
+
+				Example 2:
+
+				Input: jewels = "z", stones = "ZZ"
+				Output: 0
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param jewels: the types of stones that are jewels
+		     * @param stones: representing the stones you have
+		     * @return: how many of the stones you have are also jewels
+		     */
+				let numJewelsInStones = function(n) {
+					let res = 0;
+	        let setJ = [];
+	        
+	        for (let j of jewels.split('')) {
+	        	setJ.push(j);
+	        }
+	        for (let s of stones.split('')) {
+	        	if (setJ.includes(s)) {
+	        		res++;
+	        	}
+	        }
+	        
+	        return res;
+				};
+
+				let jewels = "aA", stones = "aAAbbbb";
+				let tt1 = numJewelsInStones(jewels, stones);
+				$('#t1').html('<h2>Input1: ' + jewels + '; Input2: ' + stones + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				利用set即可。
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
