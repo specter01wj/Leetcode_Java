@@ -31,7 +31,16 @@ public class E771_Jewels_and_Stones {
         System.out.println("input1: " + (input1) + "; input2: " + input2 + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    利用set即可。
+    */
 	
+	/**
+     * @param jewels: the types of stones that are jewels
+     * @param stones: representing the stones you have
+     * @return: how many of the stones you have are also jewels
+     */
 	public static int numJewelsInStones(String jewels, String stones) {
 		int res = 0;
         Set setJ = new HashSet();
