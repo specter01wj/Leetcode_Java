@@ -31,19 +31,19 @@
 		     * @return: how many of the stones you have are also jewels
 		     */
 				let numJewelsInStones = function(n) {
-					let results = [];
-	        for (let i = 1; i <= n; i++) {
-	            if (i % 15 == 0) {
-	                results.push("FizzBuzz");
-	            } else if (i % 5 == 0) {
-	                results.push("Buzz");
-	            } else if (i % 3 == 0) {
-	                results.push("Fizz");
-	            } else {
-	                results.push(i.toString());
-	            }
+					let res = 0;
+	        let setJ = [];
+	        
+	        for (let j of jewels.split('')) {
+	        	setJ.push(j);
 	        }
-	        return results;
+	        for (let s of stones.split('')) {
+	        	if (setJ.includes(s)) {
+	        		res++;
+	        	}
+	        }
+	        
+	        return res;
 				};
 
 				let jewels = "aA", stones = "aAAbbbb";
