@@ -250,7 +250,6 @@ Cspiration Category:
 |788|Rotated Digits|Medium||Java/Javascript|Done/Done|
 |796|Rotate String|Easy||Java/Javascript|Done/Done|
 |800|Similar RGB Color|Easy||Java/Javascript|Done/Done|
-|806|Number of Lines To Write String|Easy||Java/Javascript||
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|
 |821|Shortest Distance to a Character|Easy||Java/Javascript||
 |824|Goat Latin|Easy||Java/Javascript|Done/Done|
