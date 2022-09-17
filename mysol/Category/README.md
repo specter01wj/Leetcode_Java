@@ -251,7 +251,6 @@ Cspiration Category:
 |796|Rotate String|Easy||Java/Javascript|Done/Done|
 |800|Similar RGB Color|Easy||Java/Javascript|Done/Done|
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|
-|821|Shortest Distance to a Character|Easy||Java/Javascript||
 |824|Goat Latin|Easy||Java/Javascript|Done/Done|
 |830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
 |844|Backspace String Compare|Easy||Java/Javascript||
