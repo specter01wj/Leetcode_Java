@@ -31,7 +31,16 @@ public class E796_Rotate_String {
         System.out.println("input1: " + (input1) + "; input2: " + input2 + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    it is rotated if B can be found in (A + A).
+    */
 	
+	/**
+     * @param s: an array of char
+     * @param goal: an array of char
+     * @return: boolean if and only if s can become goal after some number of shifts on s
+     */
 	public static boolean rotateString(String s, String goal) {
 		return (s.length() == goal.length()) && (s + s).contains(goal);
 	}
