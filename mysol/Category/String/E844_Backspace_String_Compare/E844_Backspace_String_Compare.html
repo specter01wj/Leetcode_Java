@@ -35,25 +35,25 @@
 		     * @param t: an array of char
 		     * @return: boolean whether they are equal
 		     */
-				let rotateString = function(s, goal) {
-					int i = s.length() - 1, j = t.length() - 1, back;
+				let rotateString = function(s, t) {
+					let i = s.length - 1, j = t.length - 1, back;
 			
 	        while (true) {
 	            back = 0;
 	            
-	            while (i >= 0 && (back > 0 || s.charAt(i) == '#')) {
-	                back += s.charAt(i) == '#' ? 1 : -1;
+	            while (i >= 0 && (back > 0 || s.charAt(i) === '#')) {
+	                back += s.charAt(i) === '#' ? 1 : -1;
 	                i--;
 	            }
 	            
 	            back = 0;
 	            
-	            while (j >= 0 && (back > 0 || t.charAt(j) == '#')) {
-	                back += t.charAt(j) == '#' ? 1 : -1;
+	            while (j >= 0 && (back > 0 || t.charAt(j) === '#')) {
+	                back += t.charAt(j) === '#' ? 1 : -1;
 	                j--;
 	            }
 	            
-	            if (i >= 0 && j >= 0 && s.charAt(i) == t.charAt(j)) {
+	            if (i >= 0 && j >= 0 && s.charAt(i) === t.charAt(j)) {
 	                i--;
 	                j--;
 	            } else {
@@ -61,7 +61,7 @@
 	            }
 	        }
 	        
-	        return i == -1 && j == -1;
+	        return i === -1 && j === -1;
 				};
 
 				// let str1 = "ab#c", str2 = "ad#c";
