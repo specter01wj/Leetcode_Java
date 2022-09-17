@@ -36,7 +36,16 @@ public class E844_Backspace_String_Compare {
         System.out.println("input1: " + (input1) + "; input2: " + input2 + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    利用set即可。
+    */
 	
+	/**
+     * @param s: an array of char
+     * @param t: an array of char
+     * @return: boolean whether they are equal
+     */
 	public static boolean backspaceCompare(String s, String t) {
 		int i = s.length() - 1, j = t.length() - 1, back;
 		
