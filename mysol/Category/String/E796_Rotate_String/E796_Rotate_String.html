@@ -30,25 +30,14 @@
 		     * @param goal: an array of char
 		     * @return: boolean whether s can become goal after some number of shifts on s
 		     */
-				let numJewelsInStones = function(n) {
-					let res = 0;
-	        let setJ = [];
-	        
-	        for (let j of jewels.split('')) {
-	        	setJ.push(j);
-	        }
-	        for (let s of stones.split('')) {
-	        	if (setJ.includes(s)) {
-	        		res++;
-	        	}
-	        }
-	        
-	        return res;
+				let rotateString = function(s, goal) {
+					return (s.length === goal.length) && (s + s).includes(goal);
 				};
 
-				let jewels = "aA", stones = "aAAbbbb";
-				let tt1 = numJewelsInStones(jewels, stones);
-				$('#t1').html('<h2>Input1: ' + jewels + '; Input2: ' + stones + '<br>Results: ' + tt1 + '</h2>');
+				// let s = "abcde", goal = "cdeab";
+				let s = "abcde", goal = "abced";
+				let tt1 = rotateString(s, goal);
+				$('#t1').html('<h2>Input1: ' + s + '; Input2: ' + goal + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
