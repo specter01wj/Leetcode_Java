@@ -38,7 +38,8 @@ public class E844_Backspace_String_Compare {
 	
 	/*
     solution:
-    利用set即可。
+    read next letter from end to start. 
+    If we meet #, we increase the number we need to step back, until back = 0
     */
 	
 	/**
