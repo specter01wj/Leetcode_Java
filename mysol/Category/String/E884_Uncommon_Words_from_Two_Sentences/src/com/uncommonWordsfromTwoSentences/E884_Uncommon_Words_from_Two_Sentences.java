@@ -32,7 +32,18 @@ public class E884_Uncommon_Words_from_Two_Sentences {
         System.out.println("input1: " + (input1) + "; input2: " + input2 + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Two steps:
+	Count words occurrence to a HashMap<string, int> count.
+	Loop on the hashmap, find words that appears only once.
+    */
 	
+	/**
+     * @param s1: an array of char
+     * @param s2: an array of char
+     * @return: a list of all the uncommon words
+     */
 	public static String[] uncommonFromSentences(String s1, String s2) {
 		Map<String, Integer> count = new HashMap();
         for (String word: s1.split(" ")) {
