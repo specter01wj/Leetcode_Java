@@ -32,27 +32,29 @@
 		     * @return: a list of all the uncommon words
 		     */
 				let uncommonFromSentences = function(s1, s2) {
-					Map<String, Integer> count = new HashMap();
-	        for (String word: s1.split(" ")) {
-	            count.put(word, count.getOrDefault(word, 0) + 1);
-	        }
-	        for (String word: s2.split(" ")) {
-	            count.put(word, count.getOrDefault(word, 0) + 1);
+					let count = {};
+
+	        for (let word of s1.split(" ")) {
+	            count[word] = (count[word] ? count[word] : 0) + 1;
 	        }
 
-	        List<String> ans = new LinkedList();
-	        for (String word: count.keySet()) {
-	            if (count.get(word) == 1) {
-	                ans.add(word);
+	        for (let word of s2.split(" ")) {
+	            count[word] = (count[word] ? count[word] : 0) + 1;
+	        }
+
+	        let ans = [];
+	        for (let word in count) {
+	            if (count[word] === 1) {
+	                ans.push(word);
 	            }
 	        }
 
-	        return ans.toArray(new String[ans.size()]);
+	        return ans;
 				};
 
 				// let str1 = "this apple is sweet", str2 = "this apple is sour";
 				let str1 = "this apple is sweet", str2 = "this apple is sour";
-				let tt1 = rotateString(str1, str2);
+				let tt1 = uncommonFromSentences(str1, str2);
 				$('#t1').html('<h2>Input1: ' + str1 + '; Input2: ' + str2 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
