@@ -255,7 +255,7 @@ Cspiration Category:
 |830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
 |844|Backspace String Compare|Easy||Java/Javascript|Done/Done|
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
-|884|Uncommon Words from Two Sentences|Easy||Java/Javascript||
+|884|Uncommon Words from Two Sentences|Easy||Java/Javascript|Done/Done|
 |893|Groups of Special-Equivalent Strings|Medium||Java/Javascript|Done/Done|
 |917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
 |925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
