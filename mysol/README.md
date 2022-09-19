@@ -186,6 +186,7 @@ By Jin Wang
 |860|**Lemonade Change**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
 |883|**Projection Area of 3D Shapes**|Easy|Java/Javascript|Done/Done|
+|884|**Uncommon Words from Two Sentences**|Easy|Java/Javascript|Done/Done|
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|
 |892|**Surface Area of 3D Shapes**|Easy|Java/Javascript|Done/Done|
 |893|**Groups of Special-Equivalent Strings**|Easy|Java/Javascript|Done/Done|
