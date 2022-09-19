@@ -31,33 +31,23 @@
 		     * @param s2: an array of char
 		     * @return: a list of all the uncommon words
 		     */
-				let rotateString = function(s, t) {
-					let i = s.length - 1, j = t.length - 1, back;
-			
-	        while (true) {
-	            back = 0;
-	            
-	            while (i >= 0 && (back > 0 || s.charAt(i) === '#')) {
-	                back += s.charAt(i) === '#' ? 1 : -1;
-	                i--;
-	            }
-	            
-	            back = 0;
-	            
-	            while (j >= 0 && (back > 0 || t.charAt(j) === '#')) {
-	                back += t.charAt(j) === '#' ? 1 : -1;
-	                j--;
-	            }
-	            
-	            if (i >= 0 && j >= 0 && s.charAt(i) === t.charAt(j)) {
-	                i--;
-	                j--;
-	            } else {
-	                break;
+				let uncommonFromSentences = function(s1, s2) {
+					Map<String, Integer> count = new HashMap();
+	        for (String word: s1.split(" ")) {
+	            count.put(word, count.getOrDefault(word, 0) + 1);
+	        }
+	        for (String word: s2.split(" ")) {
+	            count.put(word, count.getOrDefault(word, 0) + 1);
+	        }
+
+	        List<String> ans = new LinkedList();
+	        for (String word: count.keySet()) {
+	            if (count.get(word) == 1) {
+	                ans.add(word);
 	            }
 	        }
-	        
-	        return i === -1 && j === -1;
+
+	        return ans.toArray(new String[ans.size()]);
 				};
 
 				// let str1 = "this apple is sweet", str2 = "this apple is sour";
