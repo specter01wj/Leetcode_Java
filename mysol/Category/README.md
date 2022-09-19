@@ -260,7 +260,6 @@ Cspiration Category:
 |917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
 |925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
 |937|Reorder Data in Log Files|Medium||Java/Javascript|Done/Done|
-|942|DI String Match|Easy||Java/Javascript||
 |944|Delete Columns to Make Sorted|Easy||Java/Javascript||
 |953|Verifying an Alien Dictionary|Easy||Java/Javascript||
 |1021|Remove Outermost Parentheses|Easy||Java/Javascript||
