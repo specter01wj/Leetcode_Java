@@ -4,75 +4,82 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two strings s and t, return true if they are equal when 
-				both are typed into empty text editors. '#' means a backspace character.
+			 	A valid parentheses string is either empty "", "(" + A + ")", or A + B, 
+				where A and B are valid parentheses strings, and + represents string 
+				concatenation.
 
-				Note that after backspacing an empty text, the text will continue empty.
+				For example, "", "()", "(())()", and "(()(()))" are all valid parentheses 
+				strings.
+				A valid parentheses string s is primitive if it is nonempty, and there 
+				does not exist a way to split it into s = A + B, with A and B nonempty 
+				valid parentheses strings.
+
+				Given a valid parentheses string s, consider its primitive 
+				decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive 
+				valid parentheses strings.
+
+				Return s after removing the outermost parentheses of every primitive 
+				string in the primitive decomposition of s.
 
 
 				Example 1:
 
-				Input: s = "ab#c", t = "ad#c"
-				Output: true
-				Explanation: Both s and t become "ac".
+				Input: s = "(()())(())"
+				Output: "()()()"
+				Explanation: 
+				The input string is "(()())(())", 
+				with primitive decomposition "(()())" + "(())".
+				After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
 
 				Example 2:
 
-				Input: s = "ab##", t = "c#d#"
-				Output: true
-				Explanation: Both s and t become "".
+				Input: s = "(()())(())(()(()))"
+				Output: "()()()()(())"
+				Explanation: 
+				The input string is "(()())(())(()(()))", 
+				with primitive decomposition "(()())" + "(())" + "(()(()))".
+				After removing outer parentheses of each part, 
+				this is "()()" + "()" + "()(())" = "()()()()(())".
 
 				Example 3:
 
-				Input: s = "a#c", t = "b"
-				Output: false
-				Explanation: s becomes "c" while t becomes "b".
+				Input: s = "()()"
+				Output: ""
+				Explanation: 
+				The input string is "()()", with primitive decomposition "()" + "()".
+				After removing outer parentheses of each part, this is "" + "" = "".
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param s: an array of char
-		     * @param t: an array of char
-		     * @return: boolean whether they are equal
+		     * @param s: a string
+		     * @return: after removing the outermost parentheses
 		     */
-				let rotateString = function(s, t) {
-					let i = s.length - 1, j = t.length - 1, back;
-			
-	        while (true) {
-	            back = 0;
-	            
-	            while (i >= 0 && (back > 0 || s.charAt(i) === '#')) {
-	                back += s.charAt(i) === '#' ? 1 : -1;
-	                i--;
+				let removeOuterParentheses = function(s) {
+					let str = [];
+	        let opened = 0;
+	        for (let c of s.split('')) {
+	            if (c === '(' && (opened++ > 0)) {
+	            	str.push(c);
 	            }
-	            
-	            back = 0;
-	            
-	            while (j >= 0 && (back > 0 || t.charAt(j) === '#')) {
-	                back += t.charAt(j) === '#' ? 1 : -1;
-	                j--;
-	            }
-	            
-	            if (i >= 0 && j >= 0 && s.charAt(i) === t.charAt(j)) {
-	                i--;
-	                j--;
-	            } else {
-	                break;
+	            if (c === ')' && (opened-- > 1)) {
+	            	str.push(c);
 	            }
 	        }
-	        
-	        return i === -1 && j === -1;
+	        return str.join('');
 				};
 
-				// let str1 = "ab#c", str2 = "ad#c";
-				let str1 = "a#c", str2 = "b";
-				let tt1 = rotateString(str1, str2);
-				$('#t1').html('<h2>Input1: ' + str1 + '; Input2: ' + str2 + '<br>Results: ' + tt1 + '</h2>');
+				// let str1 = "(()())(())";
+				let str1 = "(()())(())(()(()))";
+				let tt1 = removeOuterParentheses(str1);
+				$('#t1').html('<h2>Input1: ' + str1 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-				read next letter from end to start. 
-    		If we meet #, we increase the number we need to step back, until back = 0
+				opened count the number of opened parenthesis.
+				Add every char to the result,
+				unless the first left parenthesis,
+				and the last right parenthesis.
 			 */
 
 		</script>
