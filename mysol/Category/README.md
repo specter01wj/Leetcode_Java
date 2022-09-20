@@ -261,7 +261,7 @@ Cspiration Category:
 |925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
 |937|Reorder Data in Log Files|Medium||Java/Javascript|Done/Done|
 |1021|Remove Outermost Parentheses|Easy||Java/Javascript|Done/Done|
-|1047|Remove All Adjacent Duplicates In String|Easy||Java/Javascript||
+|1047|Remove All Adjacent Duplicates In String|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
