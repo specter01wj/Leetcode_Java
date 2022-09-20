@@ -36,7 +36,24 @@ public class E1047_Remove_All_Adjacent_Duplicates_In_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    i refers to the index to set next character in the output string.
+	j refers to the index of current iteration in the input string.
 	
+	Iterate characters of S one by one by increasing j.
+	
+	If S[j] is same as the current last character S[i - 1],
+	we remove duplicates by doing i -= 2.
+	
+	If S[j] is different as the current last character S[i - 1],
+	we set S[i] = S[j] and increment i++.
+    */
+	
+	/**
+     * @param s: a string
+     * @return: the final string after all such duplicate removals have been made
+     */
 	public static String removeDuplicates(String s) {
 		int i = 0, n = s.length();
         char[] res = s.toCharArray();
