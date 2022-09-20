@@ -58,7 +58,10 @@ public class E1021_Remove_Outermost_Parentheses {
 	
 	/*
     solution:
-    利用set即可。
+    opened count the number of opened parenthesis.
+	Add every char to the result,
+	unless the first left parenthesis,
+	and the last right parenthesis.
     */
 	
 	/**
