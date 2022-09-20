@@ -56,6 +56,15 @@ public class E1021_Remove_Outermost_Parentheses {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    利用set即可。
+    */
+	
+	/**
+     * @param s: a string
+     * @return: after removing the outermost parentheses
+     */
 	public static String removeOuterParentheses(String s) {
 		StringBuilder str = new StringBuilder();
         int opened = 0;
