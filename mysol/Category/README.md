@@ -265,7 +265,7 @@ Cspiration Category:
 |1071|Greatest Common Divisor of Strings|Easy||Java/Javascript|Done/Done|
 |1078|Occurrences After Bigram|Easy||Java/Javascript|Done/Done|
 |1108|Defanging an IP Address|Easy||Java/Javascript|Done/Done|
-|1154|Day of the Year|Easy||Java/Javascript||
+|1154|Day of the Year|Easy||Java/Javascript|Done/Done|
 |1160|Find Words That Can Be Formed by Characters|Easy||Java/Javascript||
 |1189|Maximum Number of Balloons|Easy||Java/Javascript||
 |1221|Split a String in Balanced Strings|Easy||Java/Javascript||
