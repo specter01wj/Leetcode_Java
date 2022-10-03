@@ -213,6 +213,8 @@ By Jin Wang
 |1002|**Find Common Characters**|Easy|Java/Javascript|Done/Done|
 |1021|**Remove Outermost Parentheses**|Easy|Java/Javascript|Done/Done|
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
+|1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
+|1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
