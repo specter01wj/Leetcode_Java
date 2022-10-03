@@ -32,7 +32,19 @@ public class E1078_Occurrences_After_Bigram {
         		" Input2: " + (input2) + "\noutput: " + Arrays.toString(output)); 
 	}
 	
+	/*
+    solution:
+    Split the text into words array, then loop through it to check 
+    if previous two words are first and second; If yes, add current 
+    word into list.
+    */
 	
+	/**
+     * @param text: a string
+     * @param first: a string
+     * @param second: a string
+     * @return: an array of all the words third for each occurrence of "first second third"
+     */
 	public static String[] findOcurrences(String text, String first, String second) {
         String[] words = text.split(" ");
         List<String> ans = new ArrayList<>();
