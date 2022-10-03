@@ -50,6 +50,7 @@ public class E1154_Day_of_the_Year {
             }
             noOfDays += days[i];
         }
+        
         return noOfDays + day;
     }
     
