@@ -9,7 +9,16 @@ public class E1071_Greatest_Common_Divisor_of_Strings {
         System.out.println("input1: " + (input1) + " Input2: " + (input2) + "\noutput: " + (output));   
 	}
 	
+	/*
+    solution:
+    Euclidean algorithm
+    */
 	
+	/**
+     * @param str1: a string
+     * @param str2: a string
+     * @return: the largest string x such that x divides both str1 and str2
+     */
 	public static String gcdOfStrings(String str1, String str2) {
         if (!(str1+str2).equals(str2+str1)) {
             return "";
