@@ -26,7 +26,15 @@ public class E1154_Day_of_the_Year {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    If it is leap year then simple add 1 to February, rest is added up.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the day number of the year
+     */
 	public static int dayOfYear(String date) {
         String[] s = date.split("-");
         int year = Integer.parseInt(s[0]);
