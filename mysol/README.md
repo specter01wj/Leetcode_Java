@@ -215,6 +215,8 @@ By Jin Wang
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
+|1108|**Defanging an IP Address**|Easy|Java/Javascript|Done/Done|
+|1154|**Day of the Year**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
