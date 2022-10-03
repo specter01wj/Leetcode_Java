@@ -4,65 +4,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a string s consisting of lowercase English letters. 
-				A duplicate removal consists of choosing two adjacent and equal 
-				letters and removing them.
+			 	For two strings s and t, we say "t divides s" if and only 
+				if s = t + ... + t (i.e., t is concatenated with itself one or more times).
 
-				We repeatedly make duplicate removals on s until we no longer can.
-
-				Return the final string after all such duplicate removals have been made. 
-				It can be proven that the answer is unique.
+				Given two strings str1 and str2, return the largest string x such that 
+				x divides both str1 and str2.
 
 
 				Example 1:
 
-				Input: s = "abbaca"
-				Output: "ca"
-				Explanation: 
-				For example, in "abbaca" we could remove "bb" since the letters are 
-				adjacent and equal, and this is the only possible move.  
-				The result of this move is that the string is "aaca", 
-				of which only "aa" is possible, so the final string is "ca".
-
+				Input: str1 = "ABCABC", str2 = "ABC"
+				Output: "ABC"
 				Example 2:
 
-				Input: s = "azxxzy"
-				Output: "ay"
+				Input: str1 = "ABABAB", str2 = "ABAB"
+				Output: "AB"
+				Example 3:
+
+				Input: str1 = "LEET", str2 = "CODE"
+				Output: ""
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param s: a string
-		     * @return: the final string after all such duplicate removals have been made
+		     * @param str1: a string
+		     * @param str2: a string
+		     * @return: the largest string x such that x divides both str1 and str2
 		     */
-				let removeDuplicates = function(s) {
-					let i = 0, n = s.length;
-	        let res = s.split('');
-	        for (let j = 0; j < n; ++j, ++i) {
-	            res[i] = res[j];
-	            if (i > 0 && res[i - 1] === res[i]) {
-	                i -= 2;
-	            }
+				let gcdOfStrings = function(str1, str2) {
+					if (!((str1+str2) === (str2+str1))) {
+	            return "";
 	        }
-	        return res.slice(0, i).join('');
+	    
+	        let gcdVal = gcd(str1.length , str2.length);
+	        return str2.substring(0, gcdVal);
 				};
 
-				let str1 = "abbaca";
-				let tt1 = removeDuplicates(str1);
-				$('#t1').html('<h2>Input1: ' + str1 + '<br>Results: ' + tt1 + '</h2>');
+				function gcd(p, q) {
+					if (q === 0) {
+	            return p;
+	        } else {
+	            return gcd(q, p % q);
+	        }
+				}
+
+				let str1 = "ABABAB";
+				let str2 = "ABAB";
+				let tt1 = gcdOfStrings(str1, str2);
+				$('#t1').html('<h2>Input1: ' + str1 + '; Input2: ' + str2 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-				i refers to the index to set next character in the output string.
-				j refers to the index of current iteration in the input string.
-				
-				Iterate characters of S one by one by increasing j.
-				
-				If S[j] is same as the current last character S[i - 1],
-				we remove duplicates by doing i -= 2.
-				
-				If S[j] is different as the current last character S[i - 1],
-				we set S[i] = S[j] and increment i++.
+				Euclidean algorithm
 			 */
 
 		</script>
