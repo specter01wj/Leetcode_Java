@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an array of strings words and a string chars.
+
+				A string is good if it can be formed by characters from chars 
+				(each character can only be used once).
+
+				Return the sum of lengths of all good strings in words.
+
+
+				Example 1:
+
+				Input: words = ["cat","bt","hat","tree"], chars = "atach"
+				Output: 6
+				Explanation: The strings that can be formed are "cat" and "hat" 
+				so the answer is 3 + 3 = 6.
+
+				Example 2:
+
+				Input: words = ["hello","world","leetcode"], chars = "welldonehoneyr"
+				Output: 10
+				Explanation: The strings that can be formed are "hello" and "world" 
+				so the answer is 5 + 5 = 10.
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param words: a string array
+		     * @param chars: a string
+		     * @return: the sum of lengths of all good strings in words
+		     */
+				let countCharacters = function(words, chars) {
+					let resCount = 0;
+	        let charsArr = new Array(26).fill(0);
+	        for (let c of chars.split('')) {
+	            charsArr[c.charCodeAt() - 'a'.charCodeAt()]++;
+	        }
+	        for (let word of words) {
+	            let wordArr = JSON.parse(JSON.stringify(charsArr));
+	            let count = 0;
+	            for (let c of word.split('')) {
+	                if (wordArr[c.charCodeAt() - 'a'.charCodeAt()] > 0) {
+	                    wordArr[c.charCodeAt() - 'a'.charCodeAt()]--;
+	                    count++;
+	                }
+	            }
+	            if (count === word.length) {
+	                resCount += count;
+	            }
+	        }
+	        return resCount;
+				};
+
+				let str = ["cat","bt","hat","tree"], chars = "atach";
+				let tt1 = countCharacters(str, chars);
+				$('#t1').html('<h2>Input: ' + str + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				Count the characters in chars in array charsArr, 
+    		then for each word in words check if charsArr has enough to cover it.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
