@@ -34,12 +34,23 @@ public class E1160_Find_Words_That_Can_Be_Formed_by_Characters {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Count the characters in chars in array charsArr, 
+    then for each word in words check if charsArr has enough to cover it.
+    */
 	
+	/**
+     * @param words: a string array
+     * @param chars: a string
+     * @return: the sum of lengths of all good strings in words
+     */
 	public static int countCharacters(String[] words, String chars) {
         int resCount = 0;
         int[] charsArr = new int[26];
-        for (char c : chars.toCharArray())
+        for (char c : chars.toCharArray()) {
             charsArr[c - 'a']++;
+        }
         for (String word : words) {
             int[] wordArr = Arrays.copyOf(charsArr, charsArr.length); 
             int count = 0;
