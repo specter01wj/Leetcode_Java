@@ -43,7 +43,7 @@ public class E1189_Maximum_Number_of_Balloons {
      * @param text: a string
      * @return: the maximum number of instances that can be formed
      */
-	public static int maxNumberOfBalloons(String text) {
+	public static int maxNumberOfBalloons2(String text) {
         int[] chars = new int[26];
         int res = 0;
         int len = text.length();
@@ -66,5 +66,18 @@ public class E1189_Maximum_Number_of_Balloons {
         
         return res;
     }
+	
+	public static int maxNumberOfBalloons2(String text) {
+		int[] chars = new int[26]; //count all letters
+        for (char c : text.toCharArray()) {
+            chars[c - 'a']++;
+        }
+        int min = chars[1];//for b
+        min = Math.min(min, chars[0]);//for a
+        min = Math.min(min, chars[11] / 2);// for l /2 
+        min = Math.min(min, chars[14] / 2);//similarly for o/2
+        min = Math.min(min, chars[13]);//for n
+        return min;   
+	}
 
 }
