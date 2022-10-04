@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a string text, you want to use the characters of text 
+				to form as many instances of the word "balloon" as possible.
+
+				You can use each character in text at most once. Return the 
+				maximum number of instances that can be formed.
+
+
+				Example 1:
+
+				Input: text = "nlaebolko"
+				Output: 1
+
+				Example 2:
+
+				Input: text = "loonbalxballpoon"
+				Output: 2
+
+				Example 3:
+
+				Input: text = "leetcode"
+				Output: 0
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param text: a string
+		     * @return: the maximum number of instances that can be formed
+		     */
+				let countCharacters = function(text) {
+					let chars = new Array(26).fill(0);
+	        let res = 0;
+	        let len = text.length;
+	        let balloonStr = ['b','a','l','l','o','o','n'];
+	        for (let c of text.split('')) {
+	            chars[c.charCodeAt() - 'a'.charCodeAt()]++;
+	        }
+	        label:
+	        while(len > 0) {
+	            for (let ch of balloonStr) {
+	                if(chars[ch.charCodeAt() - 'a'.charCodeAt()] > 0) {
+	                    chars[ch.charCodeAt() - 'a'.charCodeAt()]--;
+	                    len--;
+	                } else {
+	                    break label;
+	                }
+	            }
+	            res++;
+	        }
+	        
+	        return res;
+				};
+
+				let str = "loonbalxballpoon";
+				let tt1 = countCharacters(str);
+				$('#t1').html('<h2>Input: ' + str + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				Count chars of both text and balloon and find 
+    		the minimum of the times of the count of chars of text / balloon
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
