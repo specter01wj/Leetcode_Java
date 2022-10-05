@@ -41,7 +41,18 @@ public class E1221_Split_a_String_in_Balanced_Strings {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Greedily split the string, and with the counting
+	L: +1
+	R: -1
+	when the counter is reset to 0, we get one balanced string.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the maximum number of balanced strings you can obtain
+     */
 	public static int balancedStringSplit(String s) {
 		int res = 0, cnt = 0;
 		for (int i = 0; i < s.length(); ++i) {
