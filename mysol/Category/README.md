@@ -269,7 +269,7 @@ Cspiration Category:
 |1160|Find Words That Can Be Formed by Characters|Easy||Java/Javascript|Done/Done|
 |1189|Maximum Number of Balloons|Easy||Java/Javascript|Done/Done|
 |1221|Split a String in Balanced Strings|Easy||Java/Javascript|Done/Done|
-|1309|Decrypt String from Alphabet to Integer Mapping|Easy||Java/Javascript||
+|1309|Decrypt String from Alphabet to Integer Mapping|Easy||Java/Javascript|Done/Done|
 |1332|Remove Palindromic Subsequences|Easy||Java/Javascript||
 |1360|Number of Days Between Two Dates|Easy||Java/Javascript||
 |1370|Increasing Decreasing String|Easy||Java/Javascript||
