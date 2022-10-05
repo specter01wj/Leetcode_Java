@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a string s formed by digits and '#'. 
+				We want to map s to English lowercase characters as follows:
+
+				Characters ('a' to 'i') are represented by ('1' to '9') respectively.
+				Characters ('j' to 'z') are represented by ('10#' to '26#') respectively.
+				Return the string formed after mapping.
+
+				The test cases are generated so that a unique mapping will always exist.
+
+
+				Example 1:
+
+				Input: s = "10#11#12"
+				Output: "jkab"
+				Explanation: "j" -> "10#" , "k" -> "11#" , "a" -> "1" , "b" -> "2".
+
+				Example 2:
+
+				Input: s = "1326#"
+				Output: "acz"
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param s: a string
+		     * @return: the string formed after mapping
+		     */
+				let freqAlphabets = function(s) {
+					let map = {};
+	        let k = 1;
+	        for (let ch = 'a'.charCodeAt(); ch <= 'z'.charCodeAt(); ch++) {
+	            if (ch < 'j'.charCodeAt()) {
+	                map[k++] = String.fromCharCode(ch);
+	            } else {
+	                map[(k++)+"#"] = String.fromCharCode(ch);
+	            }
+	        }
+	        
+	        let sb = [];
+	        let i = s.length - 1;
+	        while (i >= 0) {
+	            if (s.charAt(i) === '#') {
+	                sb.push(map[s.substring(i - 2, i+1)]);
+	                i -= 3;
+	            } else {
+	                sb.push(map[s.substring(i, i + 1)]);
+	                i--;
+	            }
+	        }
+	        
+	        return sb.reverse().join(''); 
+				};
+
+				let freqAlphabets2 = function(s) {
+				    return s
+				        .match(/\d{2}(?=#)|\d/g)
+				        .map(num => String.fromCharCode(96 + +num))
+				        .join('')
+				};
+
+				let str = "10#11#12";
+				let tt1 = freqAlphabets2(str);
+				$('#t1').html('<h2>Input: ' + str + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				use HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>

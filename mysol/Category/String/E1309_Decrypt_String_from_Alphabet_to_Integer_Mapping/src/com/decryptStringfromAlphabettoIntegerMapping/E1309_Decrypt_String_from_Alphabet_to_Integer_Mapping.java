@@ -32,31 +32,39 @@ public class E1309_Decrypt_String_from_Alphabet_to_Integer_Mapping {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    use HashMap
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the string formed after mapping
+     */
 	public static String freqAlphabets(String s) {
-	       HashMap<String, Character> map = new HashMap<>();
-	        int k = 1;
-	        for (char ch = 'a'; ch <= 'z'; ch++) {
-	            if (ch < 'j') {
-	                map.put(String.valueOf(k++), ch);
-	            } else {
-	                map.put(String.valueOf(k++)+"#", ch);
-	            }
-	        }
-	        
-	        StringBuilder sb = new StringBuilder();
-	        int i = s.length() - 1;
-	        while (i >= 0) {
-	            if (s.charAt(i) == '#') {
-	                sb.append(map.get(s.substring(i - 2, i+1)));
-	                i -= 3;
-	            } else {
-	                sb.append(map.get(s.substring(i, i + 1)));
-	                i--;
-	            }
-	        }
-	        
-	        return sb.reverse().toString(); 
-	    }
+		HashMap<String, Character> map = new HashMap<>();
+        int k = 1;
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            if (ch < 'j') {
+                map.put(String.valueOf(k++), ch);
+            } else {
+                map.put(String.valueOf(k++)+"#", ch);
+            }
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        int i = s.length() - 1;
+        while (i >= 0) {
+            if (s.charAt(i) == '#') {
+                sb.append(map.get(s.substring(i - 2, i+1)));
+                i -= 3;
+            } else {
+                sb.append(map.get(s.substring(i, i + 1)));
+                i--;
+            }
+        }
+        
+        return sb.reverse().toString(); 
+    }
 
 }
