@@ -221,6 +221,8 @@ By Jin Wang
 |1189|**Maximum Number of Balloons**|Easy|Java/Javascript|Done/Done|
 |1221|**Split a String in Balanced Strings**|Easy|Java/Javascript|Done/Done|
 |1309|**Decrypt String from Alphabet to Integer Mapping**|Easy|Java/Javascript|Done/Done|
+|1332|**Remove Palindromic Subsequences**|Easy|Java/Javascript|Done/Done|
+|1360|**Number of Days Between Two Dates**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
