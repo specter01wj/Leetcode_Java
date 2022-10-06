@@ -45,7 +45,17 @@ public class E1332_Remove_Palindromic_Subsequences {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    If it's empty sting, return 0;
+	If it's palindrome, return 1;
+	Otherwise, we need at least 2 operation.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the minimum number of steps to make the given string empty
+     */
 	public static int removePalindromeSub(String s) {
         return s.isEmpty() ? 0 : (s.equals(new StringBuilder(s).reverse().toString()) ? 1:2);
     }
