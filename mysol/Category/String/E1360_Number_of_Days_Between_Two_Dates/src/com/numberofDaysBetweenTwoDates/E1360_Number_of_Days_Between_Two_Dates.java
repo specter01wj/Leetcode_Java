@@ -30,7 +30,16 @@ public class E1360_Number_of_Days_Between_Two_Dates {
         System.out.println("input1: " + (input1) + " Input2: " + (input2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    call time API
+    */
 	
+	/**
+     * @param date1: a string
+     * @param date2: a string
+     * @return: count the number of days between two dates
+     */
 	public static int daysBetweenDates(String date1, String date2) {
         return Math.abs((int)ChronoUnit.DAYS.between(LocalDate.parse(date1), LocalDate.parse(date2)));
     }
