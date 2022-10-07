@@ -223,6 +223,8 @@ By Jin Wang
 |1309|**Decrypt String from Alphabet to Integer Mapping**|Easy|Java/Javascript|Done/Done|
 |1332|**Remove Palindromic Subsequences**|Easy|Java/Javascript|Done/Done|
 |1360|**Number of Days Between Two Dates**|Easy|Java/Javascript|Done/Done|
+|1370|**Increasing Decreasing String**|Easy|Java/Javascript|Done/Done|
+|1374|**Generate a String With Characters That Have Odd Counts**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
