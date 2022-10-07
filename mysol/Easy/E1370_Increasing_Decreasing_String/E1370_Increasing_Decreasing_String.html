@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a string s. Reorder the string using the following algorithm:
+
+				1. Pick the smallest character from s and append it to the result.
+				2. Pick the smallest character from s which is greater than the last 
+					appended character to the result and append it.
+				3. Repeat step 2 until you cannot pick more characters.
+				4. Pick the largest character from s and append it to the result.
+				5. Pick the largest character from s which is smaller than the last 
+					appended character to the result and append it.
+				6. Repeat step 5 until you cannot pick more characters.
+				7. Repeat the steps from 1 to 6 until you pick all characters from s.
+
+				In each step, If the smallest or the largest character appears more than 
+				once you can choose any occurrence and append it to the result.
+
+				Return the result string after sorting s with this algorithm.
+
+
+				Example 1:
+
+				Input: s = "aaaabbbbcccc"
+				Output: "abccbaabccba"
+				Explanation: After steps 1, 2 and 3 of the first iteration, result = "abc"
+				After steps 4, 5 and 6 of the first iteration, result = "abccba"
+				First iteration is done. Now s = "aabbcc" and we go back to step 1
+				After steps 1, 2 and 3 of the second iteration, result = "abccbaabc"
+				After steps 4, 5 and 6 of the second iteration, result = "abccbaabccba"
+
+				Example 2:
+
+				Input: s = "rat"
+				Output: "art"
+				Explanation: The word "rat" becomes "art" after re-ordering it with 
+				the mentioned algorithm.
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param s: a string
+		     * @return: the result string after sorting s with this algorithm
+		     */
+				let sortString = function(s) {
+					let len = s.length;
+	        let freq = new Array(26).fill(0);
+	        for (let index = 0; index < len; index++) {
+	            freq[s.charAt(index).charCodeAt() - 'a'.charCodeAt()]++;
+	        }
+	        let sb = [];
+	        let count = 0;
+	        while (count < len) {
+	            // sorting up
+	            for (let i = 0; i < 26; i++) {
+	                if (freq[i] > 0) {
+	                    sb.push(String.fromCharCode(i + 'a'.charCodeAt()));
+	                    freq[i] = freq[i] - 1;
+	                    count++;
+	                }
+	            }
+	            // sorting down
+	            for (let i = 25; i >= 0; i--) {
+	                if (freq[i] > 0) {
+	                    sb.push(String.fromCharCode(i + 'a'.charCodeAt()));
+	                    freq[i] = freq[i] - 1;
+	                    count++;
+	                }
+	            }
+	        }
+	        return sb.join('');
+      	};
+
+				let str = "aaaabbbbcccc";
+				let tt1 = sortString(str);
+				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				calculates freq of each character
+				Step 1: If accumulated all characters, we are done, else
+				Step 2: accumulate from 'a' -> 'z',
+				Step 3: accumulate from 'z' -> 'a'
+				Go to Step 1.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
