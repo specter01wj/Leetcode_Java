@@ -60,6 +60,10 @@
 	        return set;
       	};
 
+      	let stringMatching2 = function(words) {
+      		return words.filter(n => words.some(h => h !== n && h.includes(n)));
+      	}
+
 				// let str = ["mass","as","hero","superhero"];
 				let str = ["leetcoder","leetcode","od","hamlet","am"];
 				let tt1 = stringMatching(str);
