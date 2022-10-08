@@ -44,11 +44,15 @@
 	                let nextWord = words[j];
 	                
 	                if(currWord.includes(nextWord)) {
+	                	if(!set.includes(nextWord)) {
 	                    set.push(nextWord);
+	                	}
 	                }
 	                
 	                if(nextWord.includes(currWord)) {
+	                	if(!set.includes(currWord)) {
 	                    set.push(currWord);
+	                  }
 	                }
 	            }
 	        }
@@ -56,7 +60,8 @@
 	        return set;
       	};
 
-				let str = ["mass","as","hero","superhero"];
+				// let str = ["mass","as","hero","superhero"];
+				let str = ["leetcoder","leetcode","od","hamlet","am"];
 				let tt1 = stringMatching(str);
 				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
 			});

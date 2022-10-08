@@ -31,7 +31,8 @@ Output: []
 public class E1408_String_Matching_in_an_Array {
 
 	public static void main(String[] args) {
-		String[] input = {"mass","as","hero","superhero"};
+//		String[] input = {"mass","as","hero","superhero"};
+		String[] input = {"leetcoder","leetcode","od","hamlet","am"};
 		List<String> output = stringMatching(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
