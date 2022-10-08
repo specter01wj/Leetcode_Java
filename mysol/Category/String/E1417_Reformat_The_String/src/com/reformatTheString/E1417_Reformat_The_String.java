@@ -41,7 +41,18 @@ public class E1417_Reformat_The_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Reformat the string with alternate digit and character, and vice versa.
+	2. Create 2 lists one for digits and the second one as characters
+	3. Traverse the string and segregate the items to reformat
+	4. Use a boolean to switch between character and digit and append all the items
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the reformatted string
+     */
 	public static String reformat(String s) {
         if(s == null || s.length() <= 1) {
             return s;
