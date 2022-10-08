@@ -36,7 +36,15 @@ public class E1408_String_Matching_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    using HashSet
+    */
 	
+	/**
+     * @param words: a string array
+     * @return: all strings in words which is substring of another word in any order
+     */
 	public static List<String> stringMatching(String[] words) {
         HashSet<String> set = new HashSet<>();
         
