@@ -46,7 +46,18 @@ public class E1436_Destination_City {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    opened count the number of opened parenthesis.
+	Add every char to the result,
+	unless the first left parenthesis,
+	and the last right parenthesis.
+    */
 	
+	/**
+     * @param path: a string array
+     * @return: the destination city
+     */
 	public static String destCity(List<List<String>> paths) {
         Set<String> set= new HashSet<>();
         for (List<String> l: paths) {
