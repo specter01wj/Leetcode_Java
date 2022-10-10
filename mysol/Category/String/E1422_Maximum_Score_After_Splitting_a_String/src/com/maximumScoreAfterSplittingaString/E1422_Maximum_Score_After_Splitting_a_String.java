@@ -38,7 +38,8 @@ Output: 3
 public class E1422_Maximum_Score_After_Splitting_a_String {
 
 	public static void main(String[] args) {
-		String input = "011101";
+//		String input = "011101";
+		String input = "1111";
         int output = maxScore(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
