@@ -48,10 +48,11 @@ public class E1436_Destination_City {
 	
 	/*
     solution:
-    opened count the number of opened parenthesis.
-	Add every char to the result,
-	unless the first left parenthesis,
-	and the last right parenthesis.
+    Obeservation : destination city will always be the right one
+	traverse the input for two times
+	first time, add all the cities on the right side to a set
+	second time, check if the city occurs on the left side, if so, remove it from the set
+	result will be the city left in the set
     */
 	
 	/**
