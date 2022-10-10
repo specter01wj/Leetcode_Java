@@ -43,7 +43,7 @@
 		     * @return: the maximum score after splitting the string into two non-empty substrings
 		     */
 				let maxScore = function(s) {
-					let zeros = 0, ones = 0, max = Number.MIN_VALUE;
+					let zeros = 0, ones = 0, max = -Number.MAX_VALUE;
 	        for(let i = 0;i < s.length;i++) {
 	            if(s.charAt(i) === '0') {
 	                zeros++;
