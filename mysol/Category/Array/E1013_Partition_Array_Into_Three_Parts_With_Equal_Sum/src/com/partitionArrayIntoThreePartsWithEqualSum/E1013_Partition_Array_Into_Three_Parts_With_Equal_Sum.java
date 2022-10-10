@@ -37,7 +37,21 @@ public class E1013_Partition_Array_Into_Three_Parts_With_Equal_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Method: Count valid parts
+	1. Loop through the array A, and compute part of sum; 
+	   if the average value is found, reset the part to 0, 
+	   and increase the counter;
+	2. By the end if the average can be seen for at least 
+	   3 times and if the total sum is divisible by 3, return true; 
+	   otherwise return false.
+    */
 	
+	/**
+     * @param arr: an array
+     * @return: true if we can partition the array into three non-empty parts with equal sums
+     */
 	public static boolean canThreePartsEqualSum(int[] arr) {
         int sum = Arrays.stream(arr).sum(), part = 0, average = sum / 3, cnt = 0;
         for (int a : arr) {
