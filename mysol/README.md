@@ -211,6 +211,8 @@ By Jin Wang
 |997|**Find the Town Judge**|Easy|Java/Javascript|Done/Done|
 |999|**Available Captures for Rook**|Easy|Java/Javascript|Done/Done|
 |1002|**Find Common Characters**|Easy|Java/Javascript|Done/Done|
+|1005|**Maximize Sum Of Array After K Negations**|Easy|Java/Javascript|Done/Done|
+|1013|**Partition Array Into Three Parts With Equal Sum**|Easy|Java/Javascript|Done/Done|
 |1021|**Remove Outermost Parentheses**|Easy|Java/Javascript|Done/Done|
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
