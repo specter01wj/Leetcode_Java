@@ -276,6 +276,7 @@ Cspiration Category:
 |1374|Generate a String With Characters That Have Odd Counts|Easy||Java/Javascript|Done/Done|
 |1408|String Matching in an Array|Easy||Java/Javascript|Done/Done|
 |1417|Reformat The String|Easy||Java/Javascript|Done/Done|
+|1422|Maximum Score After Splitting a String|Easy||Java/Javascript|Done/Done|
 |1422|Maximum Score After Splitting a String|Easy||Java/Javascript||
 
 ### 3. Math
