@@ -158,6 +158,16 @@ Cspiration Category:
 |1002|Find Common Characters|Easy||Java/Javascript|Done/Done|
 |1005|Maximize Sum Of Array After K Negations|Easy||Java/Javascript|Done/Done|
 |1013|Partition Array Into Three Parts With Equal Sum|Easy||Java/Javascript|Done/Done|
+|1018|Binary Prefix Divisible By 5|Easy||Java/Javascript||
+|1030|Matrix Cells in Distance Order|Easy||Java/Javascript||
+|1037|Valid Boomerang|Easy||Java/Javascript||
+|1046|Last Stone Weight|Easy||Java/Javascript||
+|1051|Height Checker|Easy||Java/Javascript||
+|1089|Duplicate Zeros|Easy||Java/Javascript||
+|1122|Relative Sort Array|Easy||Java/Javascript||
+|1128|Number of Equivalent Domino Pairs|Easy||Java/Javascript||
+|1184|Distance Between Bus Stops|Easy||Java/Javascript||
+|1200|Minimum Absolute Difference|Easy||Java/Javascript||
 
 ### 2. String
 
