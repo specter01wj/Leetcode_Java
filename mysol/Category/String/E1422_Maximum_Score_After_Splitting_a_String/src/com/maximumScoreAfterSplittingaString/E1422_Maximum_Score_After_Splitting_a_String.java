@@ -43,7 +43,17 @@ public class E1422_Maximum_Score_After_Splitting_a_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Result = Max of (ZerosOnLeft + OnesOnRight)
+	= Max of (ZerosOnLeft + (TotalOnes - OnesOnLeft))
+	= Max of (ZerosOnLeft - OnesOnLeft) + TotalOnes (as TotalOnes is constant)
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the maximum score after splitting the string into two non-empty substrings
+     */
 	public static int maxScore(String s) {
         int zeros = 0, ones = 0, max = Integer.MIN_VALUE;
         for(int i = 0;i < s.length();i++) {
