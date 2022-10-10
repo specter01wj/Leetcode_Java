@@ -33,6 +33,7 @@ public class E1013_Partition_Array_Into_Three_Parts_With_Equal_Sum {
 
 	public static void main(String[] args) {
 		int[] input = {0,2,1,-6,6,-7,9,1,2,0,1};
+//		int[] input = {0,2,1,-6,6,7,9,-1,2,0,1};
 		boolean output = canThreePartsEqualSum(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
