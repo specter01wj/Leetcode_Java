@@ -277,7 +277,7 @@ Cspiration Category:
 |1408|String Matching in an Array|Easy||Java/Javascript|Done/Done|
 |1417|Reformat The String|Easy||Java/Javascript|Done/Done|
 |1422|Maximum Score After Splitting a String|Easy||Java/Javascript|Done/Done|
-|1436|Destination City|Easy||Java/Javascript||
+|1436|Destination City|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
