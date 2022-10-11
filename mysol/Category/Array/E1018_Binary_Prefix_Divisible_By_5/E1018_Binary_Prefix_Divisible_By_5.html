@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array of integers arr, return true if we can partition 
+				the array into three non-empty parts with equal sums.
+
+				Formally, we can partition the array if we can find indexes 
+				i + 1 < j with (arr[0] + arr[1] + ... + arr[i] == arr[i + 1] + 
+				arr[i + 2] + ... + arr[j - 1] == arr[j] + arr[j + 1] + ... + 
+				arr[arr.length - 1])
+
+
+				Example 1:
+
+				Input: arr = [0,2,1,-6,6,-7,9,1,2,0,1]
+				Output: true
+				Explanation: 0 + 2 + 1 = -6 + 6 - 7 + 9 + 1 = 2 + 0 + 1
+
+				Example 2:
+
+				Input: arr = [0,2,1,-6,6,7,9,-1,2,0,1]
+				Output: false
+
+				Example 3:
+
+				Input: arr = [3,3,6,5,-2,2,5,1,-9,4]
+				Output: true
+				Explanation: 3 + 3 = 6 = 5 - 2 + 2 + 5 + 1 - 9 + 4
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param arr: an array
+		     * @return: true if we can partition the array into three non-empty parts with equal sums
+		     */
+				let canThreePartsEqualSum = function(arr) {
+					let sum = arr.reduce((prev, curr) => prev + curr, 0);
+					let part = 0, average = Math.floor(sum / 3), cnt = 0;
+	        for (let a of arr) {
+	            part += a;
+	            if (part === average) { // find the average: sum / 3
+	                ++cnt; // find an average, increase the counter.
+	                part = 0; // reset part.
+	            }
+	        }
+	        return cnt >= 3 && sum % 3 === 0;
+				};
+
+				let nums = [0,2,1,-6,6,-7,9,1,2,0,1];
+				// let nums = [0,2,1,-6,6,7,9,-1,2,0,1];
+				let tt1 = canThreePartsEqualSum(nums);
+				$('#t1').html('<h2>Input: ' + nums + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				Method: Count valid parts
+				1. Loop through the array A, and compute part of sum; 
+				   if the average value is found, reset the part to 0, 
+				   and increase the counter;
+				2. By the end if the average can be seen for at least 
+				   3 times and if the total sum is divisible by 3, return true; 
+				   otherwise return false.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
