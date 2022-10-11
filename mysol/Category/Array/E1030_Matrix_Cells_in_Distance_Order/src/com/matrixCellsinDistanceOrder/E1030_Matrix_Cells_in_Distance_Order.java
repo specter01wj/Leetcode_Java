@@ -47,12 +47,17 @@ public class E1030_Matrix_Cells_in_Distance_Order {
 	
 	/*
     solution:
-    using 2 arrays
+    The max distance is R + C, and the result array's length is R * C. 
+    Since the distance is limited (generally, compared with the cell count), 
+    we can use Counting Sort to solve it efficiently.
     */
 	
 	/*
-     * @param prices: a list of strings
-     * @return: find common characters
+     * @param rows: an integer
+     * @param cols: an integer
+     * @param rCenter: an integer
+     * @param cCenter: an integer
+     * @return: the coordinates of all cells in the matrix
      */
 	public static int[][] allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {
         int[] counter = new int[rows + cols + 1];
