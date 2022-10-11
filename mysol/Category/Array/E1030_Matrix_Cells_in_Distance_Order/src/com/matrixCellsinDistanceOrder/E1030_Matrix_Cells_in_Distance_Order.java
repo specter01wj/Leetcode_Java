@@ -45,7 +45,15 @@ public class E1030_Matrix_Cells_in_Distance_Order {
         		" rCenter: " + (rCenter) + " cCenter: " + (cCenter) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    using 2 arrays
+    */
 	
+	/*
+     * @param prices: a list of strings
+     * @return: find common characters
+     */
 	public static int[][] allCellsDistOrder(int rows, int cols, int rCenter, int cCenter) {
         int[] counter = new int[rows + cols + 1];
         for (int r = 0; r < rows; r++) {
