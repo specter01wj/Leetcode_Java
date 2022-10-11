@@ -213,7 +213,9 @@ By Jin Wang
 |1002|**Find Common Characters**|Easy|Java/Javascript|Done/Done|
 |1005|**Maximize Sum Of Array After K Negations**|Easy|Java/Javascript|Done/Done|
 |1013|**Partition Array Into Three Parts With Equal Sum**|Easy|Java/Javascript|Done/Done|
+|1018|**Binary Prefix Divisible By 5**|Easy|Java/Javascript|Done/Done|
 |1021|**Remove Outermost Parentheses**|Easy|Java/Javascript|Done/Done|
+|1030|**Matrix Cells in Distance Order**|Easy|Java/Javascript|Done/Done|
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
