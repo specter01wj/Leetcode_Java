@@ -46,24 +46,24 @@
 		     * @param cCenter: an integer
 		     * @return: the coordinates of all cells in the matrix
 		     */
-				let allCellsDistOrder = function(nums) {
-					int[] counter = new int[rows + cols + 1];
-	        for (int r = 0; r < rows; r++) {
-	            for (int c = 0; c < cols; c++) {
-	                int dist = Math.abs(r - rCenter) + Math.abs(c - cCenter);
+				let allCellsDistOrder = function(rows, cols, rCenter, cCenter) {
+					let counter = new Array(rows + cols + 1).fill(0);
+	        for (let r = 0; r < rows; r++) {
+	            for (let c = 0; c < cols; c++) {
+	                let dist = Math.abs(r - rCenter) + Math.abs(c - cCenter);
 	                counter[dist + 1] += 1;
 	            }
 	        }
 	        
-	        for (int i = 1; i < counter.length; i++) {
+	        for (let i = 1; i < counter.length; i++) {
 	            counter[i] += counter[i - 1];
 	        }
 	        
-	        int[][] ans = new int[rows * cols][];
-	        for (int r = 0; r < rows; r++) {
-	            for (int c = 0; c < cols; c++) {
-	                int dist = Math.abs(r - rCenter) + Math.abs(c - cCenter);
-	                ans[counter[dist]] = new int[] { r, c };
+	        let ans = [];
+	        for (let r = 0; r < rows; r++) {
+	            for (let c = 0; c < cols; c++) {
+	                let dist = Math.abs(r - rCenter) + Math.abs(c - cCenter);
+	                ans[counter[dist]] = [r, c];
 	                counter[dist]++;
 	            }
 	        }
