@@ -36,7 +36,11 @@ public class E1018_Binary_Prefix_Divisible_By_5 {
 	
 	/*
     solution:
-    using 2 arrays
+    1. Contruct the number from a string in decimal like "12345678", 
+    	key: num = num * 10 + (c - '0') where c is the current character.
+	2. Contruct the number from a string in binary like "01010101", 
+		key: num = num * 2 + (c - '0'), and faster: (num << 1) | (c - '0') where c is the current character.
+		Or array format like [0, 1, 0, 1, 0, 1], key: num = (num << 1) | c where c is the current bit.
     */
 	
 	/*
