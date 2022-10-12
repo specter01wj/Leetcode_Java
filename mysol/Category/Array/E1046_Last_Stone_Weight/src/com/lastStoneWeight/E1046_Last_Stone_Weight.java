@@ -45,7 +45,17 @@ public class E1046_Last_Stone_Weight {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Put all elements into a priority queue.
+	Pop out the two biggest, push back the difference,
+	until there are no more two elements left.
+    */
 	
+	/*
+     * @param stones: an array
+     * @return: the weight of the last remaining stone
+     */
 	public static int lastStoneWeight(int[] stones) {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b)-> b - a);
         for (int a : stones) {
