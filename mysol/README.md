@@ -216,6 +216,8 @@ By Jin Wang
 |1018|**Binary Prefix Divisible By 5**|Easy|Java/Javascript|Done/Done|
 |1021|**Remove Outermost Parentheses**|Easy|Java/Javascript|Done/Done|
 |1030|**Matrix Cells in Distance Order**|Easy|Java/Javascript|Done/Done|
+|1037|**Valid Boomerang**|Easy|Java/Javascript|Done/Done|
+|1046|**Last Stone Weight**|Easy|Java/Javascript|Done/Done|
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
