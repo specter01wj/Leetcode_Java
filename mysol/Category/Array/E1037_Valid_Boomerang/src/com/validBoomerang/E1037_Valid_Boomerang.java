@@ -28,7 +28,19 @@ public class E1037_Valid_Boomerang {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    calculate the slope of AB and AC.
+	K_AB = (p[0][0] - p[1][0]) / (p[0][1] - p[1][1])
+	K_AC = (p[0][0] - p[2][0]) / (p[0][1] - p[2][1])
 	
+	We check if K_AB != K_AC, instead of calculate a fraction.
+    */
+	
+	/*
+     * @param points: an array
+     * @return: true if these points are a boomerang
+     */
 	public static boolean isBoomerang(int[][] points) {
         return (points[0][0] - points[1][0]) * (points[0][1] - points[2][1]) != (points[0][0] - points[2][0]) * (points[0][1] - points[1][1]);
     }
