@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an array of integers stones where stones[i] is the 
+				weight of the ith stone.
+
+				We are playing a game with the stones. On each turn, we choose 
+				the heaviest two stones and smash them together. 
+				Suppose the heaviest two stones have weights x and y with x <= y. 
+				The result of this smash is:
+
+				. If x == y, both stones are destroyed, and
+				. If x != y, the stone of weight x is destroyed, and the stone of 
+					weight y has new weight y - x.
+
+				At the end of the game, there is at most one stone left.
+
+				Return the weight of the last remaining stone. 
+				If there are no stones left, return 0.
+
+
+				Example 1:
+
+				Input: stones = [2,7,4,1,8,1]
+				Output: 1
+				Explanation: 
+				We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+				we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+				we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+				we combine 1 and 1 to get 0 so the array converts to [1] then that's 
+				the value of the last stone.
+
+				Example 2:
+
+				Input: stones = [1]
+				Output: 1
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param stones: an array
+		     * @return: the weight of the last remaining stone
+		     */
+				let lastStoneWeight = function(stones) {
+					let pq = stones.sort((a, b) => b - a);
+	        
+	        while (pq.length > 1) {
+	            pq.push(Math.abs(pq.pop() - pq.pop()));
+	        }
+
+	        return pq.pop();
+				};
+
+				let arr = [2,7,4,1,8,1];
+				$('#t1').html('<h2>Input: ' + arr + '</h2>');
+				let tt1 = lastStoneWeight(arr);
+				$('#t2').html('<h2>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				Put all elements into a priority queue.
+				Pop out the two biggest, push back the difference,
+				until there are no more two elements left.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+			<p id='t2'></p>
+		</div>
+	</body>
+
+</html>
