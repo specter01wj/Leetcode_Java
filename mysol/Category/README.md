@@ -160,7 +160,7 @@ Cspiration Category:
 |1013|Partition Array Into Three Parts With Equal Sum|Easy||Java/Javascript|Done/Done|
 |1018|Binary Prefix Divisible By 5|Easy||Java/Javascript|Done/Done|
 |1030|Matrix Cells in Distance Order|Easy||Java/Javascript|Done/Done|
-|1037|Valid Boomerang|Easy||Java/Javascript||
+|1037|Valid Boomerang|Easy||Java/Javascript|Done/Done|
 |1046|Last Stone Weight|Easy||Java/Javascript||
 |1051|Height Checker|Easy||Java/Javascript||
 |1089|Duplicate Zeros|Easy||Java/Javascript||
