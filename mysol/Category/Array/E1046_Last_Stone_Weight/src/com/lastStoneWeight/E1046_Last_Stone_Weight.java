@@ -40,7 +40,9 @@ Output: 1
 public class E1046_Last_Stone_Weight {
 
 	public static void main(String[] args) {
-		int[] input = {2,7,4,1,8,1};
+//		int[] input = {2,7,4,1,8,1};
+//		int[] input = {7,6,7,6,9};
+		int[] input = {9,10,1,7,3};
 		int output = lastStoneWeight(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
