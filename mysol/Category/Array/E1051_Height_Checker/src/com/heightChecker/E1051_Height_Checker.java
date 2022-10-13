@@ -48,7 +48,15 @@ public class E1051_Height_Checker {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sort and compare
+    */
 	
+	/*
+     * @param heights: a list of integer
+     * @return: the number of indices where heights[i] != expected[i]
+     */
 	public static int heightChecker(int[] heights) {
         int[] copy = heights.clone();
         Arrays.sort(copy);
