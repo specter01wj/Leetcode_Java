@@ -51,17 +51,17 @@
 		     * @return: the weight of the last remaining stone
 		     */
 				let heightChecker = function(heights) {
-					int[] copy = heights.clone();
-	        Arrays.sort(copy);
-	        int count = 0;
-	        for(int i = 0; i < copy.length; i++){
-	            if(heights[i]!=copy[i]) {
+					let copy = JSON.parse(JSON.stringify(heights));
+	        copy.sort();
+	        let count = 0;
+	        for(let i = 0; i < copy.length; i++){
+	            if (heights[i] !== copy[i]) {
 	            	count++;
 	            }
 	        }
 	        return count;
 				};
-				
+
 				let arr = [1,1,4,2,1,3];
 				$('#t1').html('<h2>Input: ' + arr + '</h2>');
 				let tt1 = heightChecker(arr);
