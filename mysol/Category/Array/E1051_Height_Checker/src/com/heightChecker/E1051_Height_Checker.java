@@ -46,7 +46,8 @@ All indices match.
 public class E1051_Height_Checker {
 
 	public static void main(String[] args) {
-		int[] input = {1,1,4,2,1,3};
+//		int[] input = {1,1,4,2,1,3};
+		int[] input = {10,6,6,10,10,9,8,8,3,3,8,2,1,5,1,9,5,2,7,4,7,7};
 		int output = heightChecker(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
