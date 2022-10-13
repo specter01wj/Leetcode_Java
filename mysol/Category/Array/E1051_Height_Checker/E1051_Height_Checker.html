@@ -52,7 +52,7 @@
 		     */
 				let heightChecker = function(heights) {
 					let copy = JSON.parse(JSON.stringify(heights));
-	        copy.sort();
+	        copy.sort((a,b) => a - b);
 	        let count = 0;
 	        for(let i = 0; i < copy.length; i++){
 	            if (heights[i] !== copy[i]) {
