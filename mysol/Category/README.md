@@ -163,7 +163,7 @@ Cspiration Category:
 |1037|Valid Boomerang|Easy||Java/Javascript|Done/Done|
 |1046|Last Stone Weight|Easy||Java/Javascript|Done/Done|
 |1051|Height Checker|Easy||Java/Javascript|Done/Done|
-|1089|Duplicate Zeros|Easy||Java/Javascript||
+|1089|Duplicate Zeros|Easy||Java/Javascript|Done/Done|
 |1122|Relative Sort Array|Easy||Java/Javascript||
 |1128|Number of Equivalent Domino Pairs|Easy||Java/Javascript||
 |1184|Distance Between Bus Stops|Easy||Java/Javascript||
