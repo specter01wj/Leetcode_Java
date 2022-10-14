@@ -26,10 +26,23 @@ public class E1122_Relative_Sort_Array {
 	public static void main(String[] args) {
 		int[] input1 = {2,3,1,3,2,4,6,7,9,2,19}, input2 = {2,1,4,3,9,6};
 		int[] output = relativeSortArray(input1, input2);
-        System.out.println("input1: " + Arrays.toString(input1) + " input2: " + Arrays.toString(input2) + "\noutput: " + Arrays.toString(output));
+        System.out.println("input1: " + Arrays.toString(input1) + 
+        		" input2: " + Arrays.toString(input2) + 
+        		"\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Because 0 <= arr1[i], arr2[i] <= 1000, we use an array to count every element.
+	3. Go through every element in the second array, and update values of the first 
+	array based on the order in the second array.
+    */
 	
+	/*
+     * @param arr1: a list of integer
+     * @param arr2: a list of integer
+     * @return: a list of integer
+     */
 	public static int[] relativeSortArray(int[] arr1_orig, int[] arr2) {
 		int[] arr1 = arr1_orig.clone();
         int[] cnt = new int[1001];
