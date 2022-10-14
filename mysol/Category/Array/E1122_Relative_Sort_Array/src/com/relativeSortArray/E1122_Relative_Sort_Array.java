@@ -34,8 +34,8 @@ public class E1122_Relative_Sort_Array {
 	/*
     solution:
     1. Because 0 <= arr1[i], arr2[i] <= 1000, we use an array to count every element.
-	3. Go through every element in the second array, and update values of the first 
-	array based on the order in the second array.
+	2. Go through every element in the second array, and update values of the first 
+		array based on the order in the second array.
     */
 	
 	/*
