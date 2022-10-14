@@ -219,8 +219,10 @@ By Jin Wang
 |1037|**Valid Boomerang**|Easy|Java/Javascript|Done/Done|
 |1046|**Last Stone Weight**|Easy|Java/Javascript|Done/Done|
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
+|1051|**Height Checker**|Easy|Java/Javascript|Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
+|1089|**Duplicate Zeros**|Easy|Java/Javascript|Done/Done|
 |1108|**Defanging an IP Address**|Easy|Java/Javascript|Done/Done|
 |1154|**Day of the Year**|Easy|Java/Javascript|Done/Done|
 |1160|**Find Words That Can Be Formed by Characters**|Easy|Java/Javascript|Done/Done|
