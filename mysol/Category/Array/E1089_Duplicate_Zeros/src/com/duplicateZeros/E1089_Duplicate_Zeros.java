@@ -33,7 +33,22 @@ public class E1089_Duplicate_Zeros {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Basically, we apply two pointers.
+	i is the position in the original array,
+	j is the position in the new array.
+	(the original and the new are actually the same array.)
 	
+	The first we pass forward and count the zeros.
+	The second we pass backward and assign the value from original input to the new array.
+	so that the original value won't be overridden too early.
+    */
+	
+	/*
+     * @param arr: a list of integer
+     * @return: duplicate each occurrence of zero, shifting the remaining elements to the right
+     */
 	public static int[] duplicateZeros(int[] arr_orig) {
 		int[] arr = arr_orig.clone();
         int countZero = 0;
