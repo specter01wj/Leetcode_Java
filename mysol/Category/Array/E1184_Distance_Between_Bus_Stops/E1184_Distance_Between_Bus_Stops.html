@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	A bus has n stops numbered from 0 to n - 1 that form a circle. 
+				We know the distance between all pairs of neighboring stops where 
+				distance[i] is the distance between the stops number i and (i + 1) % n.
+
+				The bus goes along both directions i.e. clockwise and counterclockwise.
+
+				Return the shortest distance between the given start and destination stops.
+
+
+				Example 1:
+
+				Input: distance = [1,2,3,4], start = 0, destination = 1
+				Output: 1
+				Explanation: Distance between 0 and 1 is 1 or 9, minimum is 1.
+				 
+
+				Example 2:
+
+				Input: distance = [1,2,3,4], start = 0, destination = 2
+				Output: 3
+				Explanation: Distance between 0 and 2 is 3 or 7, minimum is 3.
+				 
+
+				Example 3:
+
+				Input: distance = [1,2,3,4], start = 0, destination = 3
+				Output: 4
+				Explanation: Distance between 0 and 3 is 6 or 4, minimum is 4.
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param distance: a list of integer
+		     * @param start: an integer
+		     * @param destination: an integer
+		     * @return: the shortest distance between the given start and destination stops
+		     */
+				let distanceBetweenBusStops = function(distance, start, destination) {
+					if (start > destination) {
+	            int temp = start;
+	            start = destination;
+	            destination = temp;;
+	        }
+	        int res = 0, total = 0;
+	        for (int i = 0; i < distance.length; i++) {
+	            if (i >= start && i < destination) {
+	                res += distance[i];
+	            }
+	            total += distance[i];
+	        }
+	        return Math.min(res, total - res);
+				};
+
+				let distance = [1,2,3,4], start = 0, destination = 3;
+				let tt1 = distanceBetweenBusStops(distance, start, destination);
+				$('#t1').html('<h2>Input: ' + distance + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+				1. Make sure start comes before end;
+				2. Caculate the sum of target interval as well as the total sum;
+				3. The result will be the min of target interval sum and the remaining interval sum.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
