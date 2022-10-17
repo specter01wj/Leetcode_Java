@@ -39,7 +39,15 @@ public class E1200_Minimum_Absolute_Difference {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    using 2 arrays
+    */
 	
+	/*
+     * @param arr: a list of integer
+     * @return: a list of pairs in ascending order
+     */
 	public static List<List<Integer>> minimumAbsDifference(int[] arr) {
         List<List<Integer>> res = new ArrayList();
         Arrays.sort(arr);
