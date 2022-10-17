@@ -41,7 +41,9 @@ public class E1200_Minimum_Absolute_Difference {
 	
 	/*
     solution:
-    using 2 arrays
+    We check for min difference as we go, adding to result list everytime 
+    our difference == min difference. When we met new min difference we 
+    clear the result list and start a new one.
     */
 	
 	/*
