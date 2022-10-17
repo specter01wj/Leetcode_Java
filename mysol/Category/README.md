@@ -166,7 +166,7 @@ Cspiration Category:
 |1089|Duplicate Zeros|Easy||Java/Javascript|Done/Done|
 |1122|Relative Sort Array|Easy||Java/Javascript|Done/Done|
 |1128|Number of Equivalent Domino Pairs|Easy||Java/Javascript|Done/Done|
-|1184|Distance Between Bus Stops|Easy||Java/Javascript||
+|1184|Distance Between Bus Stops|Easy||Java/Javascript|Done/Done|
 |1200|Minimum Absolute Difference|Easy||Java/Javascript||
 
 ### 2. String
