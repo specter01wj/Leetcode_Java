@@ -41,7 +41,19 @@ public class E1184_Distance_Between_Bus_Stops {
         System.out.println("input: " + Arrays.toString(distance) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Make sure start comes before end;
+	2. Caculate the sum of target interval as well as the total sum;
+	3. The result will be the min of target interval sum and the remaining interval sum.
+    */
 	
+	/*
+     * @param distance: a list of integer
+     * @param start: an integer
+     * @param destination: an integer
+     * @return: the shortest distance between the given start and destination stops
+     */
 	public static int distanceBetweenBusStops(int[] distance, int start, int destination) {
         if (start > destination) {
             int temp = start;
