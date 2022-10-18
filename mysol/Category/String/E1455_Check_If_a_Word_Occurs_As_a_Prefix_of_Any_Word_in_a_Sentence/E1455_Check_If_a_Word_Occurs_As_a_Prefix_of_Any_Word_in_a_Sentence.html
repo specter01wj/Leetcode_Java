@@ -40,23 +40,19 @@
 		     * @param searchWord: a string
 		     * @return: the index of the word in sentence
 		     */
-				let maxPower = function(s) {
-					let ans = 1;
-	        for (let i = 1, cnt = 1; i < s.length; ++i) {
-	            if (s.charAt(i) === s.charAt(i - 1)) {
-	                if (++cnt > ans) {
-	                    ans = cnt;
-	                }
-	            } else {
-	                cnt = 1;
+				let isPrefixOfWord = function(sentence, searchWord) {
+					let words = sentence.split(" ");
+	        for (let i = 1; i <= words.length; ++i) {
+	            if (words[i - 1].startsWith(searchWord)) {
+	                return i;
 	            }
 	        }
 	        
-	        return ans;
+	        return -1;
       	};
 
-				let str = "abbcccddddeeeeedcba";
-				let tt1 = maxPower(str);
+				let str = "this problem is an easy problem", search = "pro";
+				let tt1 = isPrefixOfWord(str, search);
 				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
 			});
 
