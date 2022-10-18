@@ -290,6 +290,8 @@ Cspiration Category:
 |1417|Reformat The String|Easy||Java/Javascript|Done/Done|
 |1422|Maximum Score After Splitting a String|Easy||Java/Javascript|Done/Done|
 |1436|Destination City|Easy||Java/Javascript|Done/Done|
+|1446|Consecutive Characters|Easy||Java/Javascript|Done/Done|
+|1455|Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
