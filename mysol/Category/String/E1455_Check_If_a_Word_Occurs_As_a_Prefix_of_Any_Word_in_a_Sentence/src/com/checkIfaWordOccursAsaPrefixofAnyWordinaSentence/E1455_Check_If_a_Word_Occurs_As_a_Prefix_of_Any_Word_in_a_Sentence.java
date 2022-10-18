@@ -42,10 +42,7 @@ public class E1455_Check_If_a_Word_Occurs_As_a_Prefix_of_Any_Word_in_a_Sentence 
 	
 	/*
     solution:
-    opened count the number of opened parenthesis.
-	Add every char to the result,
-	unless the first left parenthesis,
-	and the last right parenthesis.
+    find the prefix and return index
     */
 	
 	/**
