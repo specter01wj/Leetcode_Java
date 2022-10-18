@@ -40,7 +40,19 @@ public class E1455_Check_If_a_Word_Occurs_As_a_Prefix_of_Any_Word_in_a_Sentence 
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    opened count the number of opened parenthesis.
+	Add every char to the result,
+	unless the first left parenthesis,
+	and the last right parenthesis.
+    */
 	
+	/**
+     * @param sentence: a string
+     * @param searchWord: a string
+     * @return: the index of the word in sentence
+     */
 	public static int isPrefixOfWord(String sentence, String searchWord) {
         String[] words = sentence.split(" ");
         for (int i = 1; i <= words.length; ++i) {
