@@ -29,7 +29,17 @@ public class E1446_Consecutive_Characters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Increase the counter by 1 if current char same as the previous one; 
+    	otherwise, reset the counter to 1;
+	2. Update the max value of the counter during each iteration.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the power of s
+     */
 	public static int maxPower(String s) {
         int ans = 1;
         for (int i = 1, cnt = 1; i < s.length(); ++i) {
