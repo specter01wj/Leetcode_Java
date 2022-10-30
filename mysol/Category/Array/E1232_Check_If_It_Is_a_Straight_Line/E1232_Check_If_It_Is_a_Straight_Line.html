@@ -25,16 +25,21 @@
 		     * @param coordinates: a list of 2D integer
 		     * @return: check if these points make a straight line in the XY plane
 		     */
-				let minCostToMoveChips = function(position) {
-					let cnt = new Array(2).fill(0);
-	        for (let i of position) {
-	            ++cnt[i % 2];
-	        }
-	        return Math.min(cnt[0], cnt[1]);
+				let checkStraightLine = function(coordinates) {
+					let x0 = coordinates[0][0], y0 = coordinates[0][1], 
+            x1 = coordinates[1][0], y1 = coordinates[1][1];
+			    let dx = x1 - x0, dy = y1 - y0;
+			    for (let co of coordinates) {
+			        let x = co[0], y = co[1];
+			        if (dx * (y - y1) !== dy * (x - x1)) {
+			            return false;
+			        }
+			    }
+			    return true;  
 				};
 
-				let arr = [2,2,2,3,3];
-				let tt1 = minCostToMoveChips(arr);
+				let arr = [[1,2],[2,3],[3,4],[4,5],[5,6],[6,7]];
+				let tt1 = checkStraightLine(arr);
 				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
