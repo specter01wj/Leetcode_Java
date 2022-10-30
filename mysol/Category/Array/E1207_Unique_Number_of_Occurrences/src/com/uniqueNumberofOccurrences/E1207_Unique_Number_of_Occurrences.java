@@ -34,12 +34,13 @@ public class E1207_Unique_Number_of_Occurrences {
 	
 	/*
     solution:
-    using 2 arrays
+    1. Count the occurrences of each char;
+	2. Compare if the numbers of distinct chars and distinct counts are equal.
     */
 	
 	/*
-     * @param arr: a list of strings
-     * @return: find common characters
+     * @param arr: a list of integer
+     * @return: true if the number of occurrences of each value in the array is unique
      */
 	public static boolean uniqueOccurrences(int[] arr) {
         Map<Integer, Integer> count = new HashMap<>();
