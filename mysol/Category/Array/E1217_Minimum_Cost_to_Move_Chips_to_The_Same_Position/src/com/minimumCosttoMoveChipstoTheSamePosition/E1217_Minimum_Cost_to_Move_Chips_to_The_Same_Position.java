@@ -41,7 +41,18 @@ public class E1217_Minimum_Cost_to_Move_Chips_to_The_Same_Position {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Since no cost to move even steps, all elements at even/odd indices 
+    	can move to index 0/1 respectively without cost;
+	2. Compare the count of elements at index 0 with that at 1, each of 
+		them need cost 1 to move to index 1/0 respectively; return the lesser.
+    */
 	
+	/*
+     * @param position: a list of integer
+     * @return: the minimum cost needed to move all the chips to the same position
+     */
 	public static int minCostToMoveChips(int[] position) {
         int[] cnt = new int[2];
         for (int i : position) {
