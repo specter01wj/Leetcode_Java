@@ -170,8 +170,8 @@ Cspiration Category:
 |1200|Minimum Absolute Difference|Easy||Java/Javascript|Done/Done|
 |1207|Unique Number of Occurrences|Easy||Java/Javascript|Done/Done|
 |1217|Minimum Cost to Move Chips to The Same Position|Easy||Java/Javascript|Done/Done|
-|1232|Check If It Is a Straight Line|Easy||Java/Javascript||
-|1252|Cells with Odd Values in a Matrix|Easy||Java/Javascript||
+|1232|Check If It Is a Straight Line|Easy||Java/Javascript|Done/Done|
+|1252|Cells with Odd Values in a Matrix|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
