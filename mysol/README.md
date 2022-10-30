@@ -234,6 +234,8 @@ By Jin Wang
 |1207|**Unique Number of Occurrences**|Easy|Java/Javascript|Done/Done|
 |1217|**Minimum Cost to Move Chips to The Same Position**|Easy|Java/Javascript|Done/Done|
 |1221|**Split a String in Balanced Strings**|Easy|Java/Javascript|Done/Done|
+|1232|**Check If It Is a Straight Line**|Easy|Java/Javascript|Done/Done|
+|1252|**Cells with Odd Values in a Matrix**|Easy|Java/Javascript|Done/Done|
 |1309|**Decrypt String from Alphabet to Integer Mapping**|Easy|Java/Javascript|Done/Done|
 |1332|**Remove Palindromic Subsequences**|Easy|Java/Javascript|Done/Done|
 |1360|**Number of Days Between Two Dates**|Easy|Java/Javascript|Done/Done|
