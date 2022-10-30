@@ -38,7 +38,18 @@ public class E1252_Cells_with_Odd_Values_in_a_Matrix {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Count the rows and columns that appear odd times;
+	2. Traverse all cells to get the answer.
+    */
 	
+	/*
+     * @param m: an integer
+     * @param n: an integer
+     * @param indices: a list of 2D integer
+     * @return: the number of odd-valued cells in the matrix
+     */
 	public static int oddCells(int m, int n, int[][] indices) {
         boolean[] oddRows = new boolean[m], oddCols = new boolean[n];
         for (int[] idx : indices) {
