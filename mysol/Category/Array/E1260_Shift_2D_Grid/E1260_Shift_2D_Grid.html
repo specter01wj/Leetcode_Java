@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a 2D grid of size m x n and an integer k. You need to shift the grid k times.
+
+				In one shift operation:
+				. Element at grid[i][j] moves to grid[i][j + 1].
+				. Element at grid[i][n - 1] moves to grid[i + 1][0].
+				. Element at grid[m - 1][n - 1] moves to grid[0][0].
+				Return the 2D grid after applying shift operation k times.
+
+
+				Example 1:
+
+				Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1
+				Output: [[9,1,2],[3,4,5],[6,7,8]]
+
+				Example 2:
+
+				Input: grid = [[3,8,1,9],[19,7,2,5],[4,6,11,10],[12,0,21,13]], k = 4
+				Output: [[12,0,21,13],[3,8,1,9],[19,7,2,5],[4,6,11,10]]
+
+				Example 3:
+
+				Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 9
+				Output: [[1,2,3],[4,5,6],[7,8,9]]
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param grid: a list of 2D integer
+		     * @param k: an integer
+		     * @return: the 2D grid after applying shift operation k times
+		     */
+				let shiftGrid = function(m, n, indices) {
+					let oddRows = new Array(m).fill(false), oddCols = new Array(n).fill(false);
+	        for (let idx of indices) {
+	            oddRows[idx[0]] ^= true;
+	            oddCols[idx[1]] ^= true;
+	        }
+	        let cnt = 0;
+	        for (let i = 0; i < m; ++i) {
+	            for (let j = 0; j < n; ++j) {
+	                cnt += oddRows[i] ^ oddCols[j] ? 1 : 0;
+	            }
+	        }
+	        return cnt; 
+				};
+
+				let arr = [[1,2,3],[4,5,6],[7,8,9]], k = 1;
+				let tt1 = shiftGrid(arr, k);
+				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				1. filling all the rows of result with empty lists
+		    2. every rows*col shifts grid became the same, skipping the similar shifts
+		    3. element at (begin) will be at 0,0 in new grid
+		    4. counter variable
+		    5. calculating row and cell for new grid
+		    6. adding new element in new row
+		    7. returning result list
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
