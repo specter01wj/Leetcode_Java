@@ -173,7 +173,7 @@ Cspiration Category:
 |1232|Check If It Is a Straight Line|Easy||Java/Javascript|Done/Done|
 |1252|Cells with Odd Values in a Matrix|Easy||Java/Javascript|Done/Done|
 |1260|Shift 2D Grid|Easy||Java/Javascript|Done/Done|
-|1266|Minimum Time Visiting All Points|Easy||Java/Javascript||
+|1266|Minimum Time Visiting All Points|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
