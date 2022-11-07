@@ -35,19 +35,20 @@
 		     * @param k: an integer
 		     * @return: the 2D grid after applying shift operation k times
 		     */
-				let shiftGrid = function(m, n, indices) {
-					let oddRows = new Array(m).fill(false), oddCols = new Array(n).fill(false);
-	        for (let idx of indices) {
-	            oddRows[idx[0]] ^= true;
-	            oddCols[idx[1]] ^= true;
-	        }
-	        let cnt = 0;
-	        for (let i = 0; i < m; ++i) {
-	            for (let j = 0; j < n; ++j) {
-	                cnt += oddRows[i] ^ oddCols[j] ? 1 : 0;
-	            }
-	        }
-	        return cnt; 
+				let shiftGrid = function(grid, k) {
+					var arr = grid.flat(),
+					    len = grid[0].length,
+					    res = [];
+
+			    while (k--) {
+			        arr.unshift(arr.pop());
+			    }
+
+			    while (arr.length) {
+			        res.push(arr.splice(0, len));
+			    }
+
+			    return res;
 				};
 
 				let arr = [[1,2,3],[4,5,6],[7,8,9]], k = 1;
@@ -56,13 +57,9 @@
 			});
 
 			/*sol:
-				1. filling all the rows of result with empty lists
-		    2. every rows*col shifts grid became the same, skipping the similar shifts
-		    3. element at (begin) will be at 0,0 in new grid
-		    4. counter variable
-		    5. calculating row and cell for new grid
-		    6. adding new element in new row
-		    7. returning result list
+				1. Convert the matrix to an array
+				2. Move the array bottom to the start K times
+				3. Convert the array back to a matrix and return
 			 */
 
 		</script>
