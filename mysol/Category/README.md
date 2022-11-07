@@ -172,6 +172,8 @@ Cspiration Category:
 |1217|Minimum Cost to Move Chips to The Same Position|Easy||Java/Javascript|Done/Done|
 |1232|Check If It Is a Straight Line|Easy||Java/Javascript|Done/Done|
 |1252|Cells with Odd Values in a Matrix|Easy||Java/Javascript|Done/Done|
+|1260|Shift 2D Grid|Easy||Java/Javascript||
+|1266|Minimum Time Visiting All Points|Easy||Java/Javascript||
 
 ### 2. String
 
