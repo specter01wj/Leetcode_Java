@@ -41,7 +41,18 @@ public class E1266_Minimum_Time_Visiting_All_Points {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Traverse the input array, for each pair of neighboring points, 
+       comparing the absolute difference in x and y coordinates, 
+       the larger value is the minimum time need to travel between them;
+	2. Sum these time.
+    */
 	
+	/*
+     * @param points: a list of 2D integer
+     * @return: the minimum time in seconds to visit all the points in the order given by points
+     */
 	public static int minTimeToVisitAllPoints(int[][] points) {
        int ans = 0;
         for (int i = 1; i < points.length; ++i) {
