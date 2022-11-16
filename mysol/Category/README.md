@@ -174,6 +174,8 @@ Cspiration Category:
 |1252|Cells with Odd Values in a Matrix|Easy||Java/Javascript|Done/Done|
 |1260|Shift 2D Grid|Easy||Java/Javascript|Done/Done|
 |1266|Minimum Time Visiting All Points|Easy||Java/Javascript|Done/Done|
+|1275|Find Winner on a Tic Tac Toe Game|Easy||Java/Javascript|Done/Done|
+|1287|Element Appearing More Than 25% In Sorted Array|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
