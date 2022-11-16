@@ -51,7 +51,26 @@ public class E1275_Find_Winner_on_a_Tic_Tac_Toe_Game {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Totally 8 ways to win: placement of 3 same characters on:
+	1. 3 rows;
+	2. 3 cols;
+	3. 2 diagonals.
+	Therefore we can use arrays of size 3 to accumulate the count of same characters on rows 
+	and cols; use int variables to accumulate the count of same characters on diagonals.
 	
+	id: 0 for A, 1 for B;
+	row[id][r]: the current number of characters that player id places on row r;
+	col[id][c]: the current number of characters that player id places on column c;
+	d1[id]: the current number of characters that player id places on main diagonal;
+	d2[id]: the current number of characters that player id places on skew diagonal.
+    */
+	
+	/*
+     * @param prices: a list of 2D integer
+     * @return: the winner of the game if it exists (A or B)
+     */
 	public static String tictactoe(int[][] moves) {
         int[][] row = new int[2][3], col = new int[2][3];
         int[] d1 = new int[2], d2 = new int[2];
