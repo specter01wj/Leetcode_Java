@@ -68,7 +68,7 @@ public class E1275_Find_Winner_on_a_Tic_Tac_Toe_Game {
     */
 	
 	/*
-     * @param prices: a list of 2D integer
+     * @param moves: a list of 2D integer
      * @return: the winner of the game if it exists (A or B)
      */
 	public static String tictactoe(int[][] moves) {
