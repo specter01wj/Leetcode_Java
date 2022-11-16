@@ -47,8 +47,20 @@ public class E1275_Find_Winner_on_a_Tic_Tac_Toe_Game {
 
 	public static void main(String[] args) {
 		int[][] input = {{0,0},{2,0},{1,1},{2,1},{2,2}};
-		List<String> output = commonChars(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		String output = tictactoe(input);
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
+	
+	
+	public static String tictactoe(int[][] moves) {
+        int[][] row = new int[2][3], col = new int[2][3];
+        int[] d1 = new int[2], d2 = new int[2];
+        for (int i = 0; i < moves.length; ++i) {
+            int r = moves[i][0], c = moves[i][1], id = i % 2;
+            if (++row[id][r] == 3 || ++col[id][c] == 3 || r == c && ++d1[id] == 3 || r + c == 2 && ++d2[id] == 3) 
+                return id == 0 ? "A" : "B";
+        }
+        return moves.length == 9 ? "Draw" : "Pending";   
+    }
 
 }
