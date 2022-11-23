@@ -177,7 +177,7 @@ Cspiration Category:
 |1275|Find Winner on a Tic Tac Toe Game|Easy||Java/Javascript|Done/Done|
 |1287|Element Appearing More Than 25% In Sorted Array|Easy||Java/Javascript|Done/Done|
 |1295|Find Numbers with Even Number of Digits|Easy||Java/Javascript|Done/Done|
-|1287|Element Appearing More Than 25% In Sorted Array|Easy||Java/Javascript|Done/Done|
+|1299|Replace Elements with Greatest Element on Right Side|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 

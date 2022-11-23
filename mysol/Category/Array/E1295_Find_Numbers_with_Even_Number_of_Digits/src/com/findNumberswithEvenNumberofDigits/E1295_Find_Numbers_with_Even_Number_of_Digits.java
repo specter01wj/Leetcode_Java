@@ -42,7 +42,7 @@ public class E1295_Find_Numbers_with_Even_Number_of_Digits {
     */
 	
 	/*
-     * @param nums: a list of strings
+     * @param nums: a list of integers
      * @return: how many of them contain an even number of digits
      */
 	public static int findNumbers(int[] nums) {
