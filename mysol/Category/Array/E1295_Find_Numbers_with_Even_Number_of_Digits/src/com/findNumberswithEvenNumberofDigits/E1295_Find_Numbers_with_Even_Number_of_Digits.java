@@ -45,7 +45,7 @@ public class E1295_Find_Numbers_with_Even_Number_of_Digits {
      * @param nums: a list of strings
      * @return: how many of them contain an even number of digits
      */
-	public int findNumbers(int[] nums) {
+	public static int findNumbers(int[] nums) {
         int count=0;
         for(int i =0 ; i< nums.length; i++){
             if((nums[i]>9 && nums[i]<100) || (nums[i]>999 && nums[i]<10000) || nums[i]==100000){
