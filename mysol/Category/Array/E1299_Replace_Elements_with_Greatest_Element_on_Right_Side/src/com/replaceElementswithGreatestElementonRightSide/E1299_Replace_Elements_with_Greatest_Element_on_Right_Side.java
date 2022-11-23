@@ -47,10 +47,11 @@ public class E1299_Replace_Elements_with_Greatest_Element_on_Right_Side {
      * @return: an array
      */
 	public static int[] replaceElements(int[] arr) {
-        for (int i = arr.length - 1, mx = -1; i >= 0; --i) {
-            mx = Math.max(arr[i], arr[i] = mx);
+		int[] arr_tmp = arr.clone();
+        for (int i = arr_tmp.length - 1, mx = -1; i >= 0; --i) {
+            mx = Math.max(arr_tmp[i], arr_tmp[i] = mx);
         }
-        return arr;
+        return arr_tmp;
     }
 
 }
