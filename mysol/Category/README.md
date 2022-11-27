@@ -178,6 +178,20 @@ Cspiration Category:
 |1287|Element Appearing More Than 25% In Sorted Array|Easy||Java/Javascript|Done/Done|
 |1295|Find Numbers with Even Number of Digits|Easy||Java/Javascript|Done/Done|
 |1299|Replace Elements with Greatest Element on Right Side|Easy||Java/Javascript|Done/Done|
+|1304|Find N Unique Integers Sum up to Zero|Easy||Java/Javascript|Done/Done|
+|1313|Decompress Run-Length Encoded List|Easy||Java/Javascript||
+|1331|Rank Transform of an Array|Easy||Java/Javascript||
+|1337|The K Weakest Rows in a Matrix|Easy||Java/Javascript||
+|1346|Check If N and Its Double Exist|Easy||Java/Javascript||
+|1351|Count Negative Numbers in a Sorted Matrix|Easy||Java/Javascript||
+|1356|Sort Integers by The Number of 1 Bits|Easy||Java/Javascript||
+|1365|How Many Numbers Are Smaller Than the Current Number|Easy||Java/Javascript||
+|1380|Lucky Numbers in a Matrix|Easy||Java/Javascript||
+|1385|Find the Distance Value Between Two Arrays|Easy||Java/Javascript||
+|1389|Create Target Array in the Given Order|Easy||Java/Javascript||
+|1394|Find Lucky Integer in an Array|Easy||Java/Javascript||
+|1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript||
+|1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript||
 
 ### 2. String
 
