@@ -27,7 +27,7 @@ public class E1304_Find_N_Unique_Integers_Sum_up_to_Zero {
 	public static void main(String[] args) {
 		int input = 5;
 		int[] output = sumZero(input);
-        System.out.println("input: " + (input) + "\noutput: " + (output));
+        System.out.println("input: " + (input) + "\noutput: " + Arrays.toString(output));
 	}
 	
 	/*
