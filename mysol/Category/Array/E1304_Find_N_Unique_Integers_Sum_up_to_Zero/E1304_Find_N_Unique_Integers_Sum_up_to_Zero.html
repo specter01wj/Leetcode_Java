@@ -28,16 +28,16 @@
 		     * @param n: an integer
 		     * @return: array containing n unique integers such that they add up to 0
 		     */
-				let replaceElements = function(arr) {
-					let arr_tmp = JSON.parse(JSON.stringify(arr));
-	        for (let i = arr_tmp.length - 1, mx = -1; i >= 0; --i) {
-	            mx = Math.max(arr_tmp[i], arr_tmp[i] = mx);
+				let sumZero = function(n) {
+					let res = new Array(n).fill(0);
+	        for (let i = 0; i < n; ++i) {
+	            res[i] = i * 2 - n + 1;
 	        }
-	        return arr_tmp;
+	        return res;
 				};
 
-				let arr = [17,18,5,4,6,1];
-				let tt1 = replaceElements(arr);
+				let arr = 5;
+				let tt1 = sumZero(arr);
 				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
