@@ -39,14 +39,14 @@
 		     * @return: replace each element with its rank
 		     */
 				let arrayRankTransform = function(arr) {
-					int[] res = Arrays.copyOf(arr, arr.length);
-	        Arrays.sort(res);
-	        HashMap<Integer, Integer> rank = new HashMap<>();
-	        for (int x : res) {
-	          rank.putIfAbsent(x, rank.size() + 1);
+					let res = JSON.parse(JSON.stringify(arr));
+	        res.sort((a, b) => a - b);
+	        let rank = {};
+	        for (let x of res) {
+	          rank[x] = Object.keys(rank).length + 1;
 	        }
-	        for (int i = 0; i < arr.length; ++i) {
-	          res[i] = rank.get(arr[i]);
+	        for (let i = 0; i < arr.length; ++i) {
+	          res[i] = rank[arr[i]];
 	        }
 	        return res;
 				};
