@@ -34,8 +34,23 @@ Output: [5,3,4,2,8,6,7,1,3]
 public class E1331_Rank_Transform_of_an_Array {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] input = {40,10,20,30};
+		int[] output = arrayRankTransform(input);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
+	
+	
+	public static int[] arrayRankTransform(int[] arr) {
+        int[] res = Arrays.copyOf(arr, arr.length);
+        Arrays.sort(res);
+        HashMap<Integer, Integer> rank = new HashMap<>();
+        for (int x : res) {
+          rank.putIfAbsent(x, rank.size() + 1);
+        }
+        for (int i = 0; i < arr.length; ++i) {
+          res[i] = rank.get(arr[i]);
+        }
+        return res;
+    }
 
 }
