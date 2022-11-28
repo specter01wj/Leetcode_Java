@@ -43,7 +43,9 @@
 	        res.sort((a, b) => a - b);
 	        let rank = {};
 	        for (let x of res) {
-	          rank[x] = Object.keys(rank).length + 1;
+	        	if (!rank[x]) {
+	        		rank[x] = Object.keys(rank).length + 1;
+	        	}
 	        }
 	        for (let i = 0; i < arr.length; ++i) {
 	          res[i] = rank[arr[i]];
@@ -51,7 +53,8 @@
 	        return res;
 				};
 
-				let arr = [40,10,20,30];
+				// let arr = [40,10,20,30];
+				let arr = [100,100,100];
 				let tt1 = arrayRankTransform(arr);
 				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
 			});

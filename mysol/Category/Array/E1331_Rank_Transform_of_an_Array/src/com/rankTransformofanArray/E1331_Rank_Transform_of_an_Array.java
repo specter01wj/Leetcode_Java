@@ -34,7 +34,8 @@ Output: [5,3,4,2,8,6,7,1,3]
 public class E1331_Rank_Transform_of_an_Array {
 
 	public static void main(String[] args) {
-		int[] input = {40,10,20,30};
+//		int[] input = {40,10,20,30};
+		int[] input = {100,100,100};
 		int[] output = arrayRankTransform(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
