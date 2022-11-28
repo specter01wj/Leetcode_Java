@@ -39,7 +39,18 @@ public class E1331_Rank_Transform_of_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Copy arr into A and sort it.
+	Iterate sorted array A and record the rank for each element in hashmap rank.
+	Iterate arr again, and assign rank[arr[i]] to A[i].
+	return the final result A.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: replace each element with its rank
+     */
 	public static int[] arrayRankTransform(int[] arr) {
         int[] res = Arrays.copyOf(arr, arr.length);
         Arrays.sort(res);
