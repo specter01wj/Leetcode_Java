@@ -61,12 +61,13 @@ public class E1337_The_K_Weakest_Rows_in_a_Matrix {
 	
 	/*
     solution:
-    using 2 arrays
+    Binary Search + Heap
     */
 	
 	/*
-     * @param prices: a list of strings
-     * @return: find common characters
+     * @param mat: a list of 2D integers
+     * @param k: an integer
+     * @return: the indices of the k weakest rows in the matrix ordered from weakest to strongest
      */
 	public static int[] kWeakestRows(int[][] mat, int k) {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] != b[0] ? b[0] - a[0] : b[1] - a[1]);
