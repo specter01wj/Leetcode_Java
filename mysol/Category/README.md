@@ -182,7 +182,7 @@ Cspiration Category:
 |1313|Decompress Run-Length Encoded List|Easy||Java/Javascript|Done/Done|
 |1331|Rank Transform of an Array|Easy||Java/Javascript|Done/Done|
 |1337|The K Weakest Rows in a Matrix|Easy||Java/Javascript|Done/Done|
-|1346|Check If N and Its Double Exist|Easy||Java/Javascript||
+|1346|Check If N and Its Double Exist|Easy||Java/Javascript|Done/Done|
 |1351|Count Negative Numbers in a Sorted Matrix|Easy||Java/Javascript||
 |1356|Sort Integers by The Number of 1 Bits|Easy||Java/Javascript||
 |1365|How Many Numbers Are Smaller Than the Current Number|Easy||Java/Javascript||
