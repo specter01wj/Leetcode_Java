@@ -27,15 +27,24 @@ public class E1346_Check_If_N_and_Its_Double_Exist {
 	public static void main(String[] args) {
 		int[] input = {10,2,5,3};
 		boolean output = checkIfExist(input);
-        System.out.println("input: " + (input) + "\noutput: " + (output));
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: boolean
+     */
 	public static boolean checkIfExist(int[] arr) {
         Set<Integer> seen = new HashSet<>();   
         for (int i : arr) {
-            if (seen.contains(2 * i) || i % 2 == 0 && seen.contains(i / 2))
+            if (seen.contains(2 * i) || i % 2 == 0 && seen.contains(i / 2)) {
                 return true;
+            }
             seen.add(i);
         }
         return false;
