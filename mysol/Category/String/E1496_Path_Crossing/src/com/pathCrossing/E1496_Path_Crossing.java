@@ -50,11 +50,11 @@ public class E1496_Path_Crossing {
             char c = path.charAt(i);
             if (c == 'N') {
                 y += 1;
-            }else if (c == 'S') {
+            } else if (c == 'S') {
                 y -= 1;
-            }else if (c == 'E') {
+            } else if (c == 'E') {
                 x -= 1;
-            }else {
+            } else {
                 x += 1;
             }
             if (!seen.add(x * 20001 + y)) {
