@@ -261,7 +261,8 @@ By Jin Wang
 |1436|**Destination City**|Easy|Java/Javascript|Done/Done|
 |1446|**Consecutive Characters**|Easy|Java/Javascript|Done/Done|
 |1455|**Check If a Word Occurs As a Prefix of Any Word in a Sentence**|Easy|Java/Javascript|Done/Done|
-
+|1496|**Path Crossing**|Easy|Java/Javascript|Done/Done|
+|1507|**Reformat Date**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
