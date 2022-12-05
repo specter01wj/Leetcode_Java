@@ -39,7 +39,15 @@ public class E1365_How_Many_Numbers_Are_Smaller_Than_the_Current_Number {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the answer in an array
+     */
 	public static int[] smallerNumbersThanCurrent(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         int[] copy = nums.clone();
