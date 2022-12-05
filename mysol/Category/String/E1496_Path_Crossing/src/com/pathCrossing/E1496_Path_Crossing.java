@@ -35,13 +35,13 @@ public class E1496_Path_Crossing {
 	
 	/*
     solution:
-    Create a hash for each point (x, y)
+    Create a hash for each point (x, y),
 	x * 20001 + y, where 20001 > yMax - yMin, then use Set to check duplicate.
     */
 	
 	/**
-     * @param s: a string
-     * @return: after removing the outermost parentheses
+     * @param path: a string
+     * @return: true if the path crosses itself at any point
      */
 	public static boolean isPathCrossing(String path) {
         Set<Integer> seen = new HashSet<>();
