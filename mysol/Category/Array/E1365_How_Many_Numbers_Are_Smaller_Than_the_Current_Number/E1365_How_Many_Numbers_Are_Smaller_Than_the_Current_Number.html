@@ -45,7 +45,7 @@
 	        copy.sort((a, b) => a - b);
 	        
 	        for (let i = 0; i < nums.length; i++) {
-	            if(!map[copy[i]]) {
+	            if(map[copy[i]] === undefined) {
 	            	map[copy[i]] = i;
 	            }
 	        }

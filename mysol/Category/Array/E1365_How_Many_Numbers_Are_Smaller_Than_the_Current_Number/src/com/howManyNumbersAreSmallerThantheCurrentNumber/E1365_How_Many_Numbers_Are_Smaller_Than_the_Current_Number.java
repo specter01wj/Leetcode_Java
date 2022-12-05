@@ -34,7 +34,8 @@ Output: [0,0,0,0]
 public class E1365_How_Many_Numbers_Are_Smaller_Than_the_Current_Number {
 
 	public static void main(String[] args) {
-		int[] input = {8,1,2,2,3};
+//		int[] input = {8,1,2,2,3};
+		int[] input = {7,7,7,7};
 		int[] output = smallerNumbersThanCurrent(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}

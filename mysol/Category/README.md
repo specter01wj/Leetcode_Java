@@ -185,7 +185,7 @@ Cspiration Category:
 |1346|Check If N and Its Double Exist|Easy||Java/Javascript|Done/Done|
 |1351|Count Negative Numbers in a Sorted Matrix|Easy||Java/Javascript|Done/Done|
 |1356|Sort Integers by The Number of 1 Bits|Easy||Java/Javascript|Done/Done|
-|1365|How Many Numbers Are Smaller Than the Current Number|Easy||Java/Javascript||
+|1365|How Many Numbers Are Smaller Than the Current Number|Easy||Java/Javascript|Done/Done|
 |1380|Lucky Numbers in a Matrix|Easy||Java/Javascript||
 |1385|Find the Distance Value Between Two Arrays|Easy||Java/Javascript||
 |1389|Create Target Array in the Given Order|Easy||Java/Javascript||
