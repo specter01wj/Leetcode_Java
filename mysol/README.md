@@ -250,7 +250,9 @@ By Jin Wang
 |1337|**The K Weakest Rows in a Matrix**|Easy|Java/Javascript|Done/Done|
 |1346|**Check If N and Its Double Exist**|Easy|Java/Javascript|Done/Done|
 |1351|**Count Negative Numbers in a Sorted Matrix**|Easy|Java/Javascript|Done/Done|
+|1356|**Sort Integers by The Number of 1 Bits**|Easy|Java/Javascript|Done/Done|
 |1360|**Number of Days Between Two Dates**|Easy|Java/Javascript|Done/Done|
+|1365|**How Many Numbers Are Smaller Than the Current Number**|Easy|Java/Javascript|Done/Done|
 |1370|**Increasing Decreasing String**|Easy|Java/Javascript|Done/Done|
 |1374|**Generate a String With Characters That Have Odd Counts**|Easy|Java/Javascript|Done/Done|
 |1408|**String Matching in an Array**|Easy|Java/Javascript|Done/Done|
