@@ -316,6 +316,16 @@ Cspiration Category:
 |1436|Destination City|Easy||Java/Javascript|Done/Done|
 |1446|Consecutive Characters|Easy||Java/Javascript|Done/Done|
 |1455|Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy||Java/Javascript|Done/Done|
+|1496|Path Crossing|Easy||Java/Javascript|Done/Done|
+|1507|Reformat Date|Easy||Java/Javascript||
+|1528|Shuffle String|Easy||Java/Javascript||
+|1544|Make The String Great|Easy||Java/Javascript||
+|1556|Thousand Separator|Easy||Java/Javascript||
+|1576|Replace All ?'s to Avoid Consecutive Repeating Characters|Easy||Java/Javascript||
+|1592|Rearrange Spaces Between Words|Easy||Java/Javascript||
+|1598|Crawler Log Folder|Easy||Java/Javascript||
+|1614|Maximum Nesting Depth of the Parentheses|Easy||Java/Javascript||
+|1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript||
 
 ### 3. Math
 
