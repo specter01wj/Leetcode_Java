@@ -317,7 +317,7 @@ Cspiration Category:
 |1446|Consecutive Characters|Easy||Java/Javascript|Done/Done|
 |1455|Check If a Word Occurs As a Prefix of Any Word in a Sentence|Easy||Java/Javascript|Done/Done|
 |1496|Path Crossing|Easy||Java/Javascript|Done/Done|
-|1507|Reformat Date|Easy||Java/Javascript||
+|1507|Reformat Date|Easy||Java/Javascript|Done/Done|
 |1528|Shuffle String|Easy||Java/Javascript||
 |1544|Make The String Great|Easy||Java/Javascript||
 |1556|Thousand Separator|Easy||Java/Javascript||
