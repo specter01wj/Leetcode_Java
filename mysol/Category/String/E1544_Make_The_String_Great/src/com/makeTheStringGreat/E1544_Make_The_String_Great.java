@@ -47,7 +47,20 @@ public class E1544_Make_The_String_Great {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    The difference between the any lowercase and uppercase alphabet is 32. 
+    Example - ASCII value of a is 97 and A is 65 , 97-65 = 32
+    Using same trick, we can delete adjacent characters with absolute difference of 32.
+    If current character is A and a is at top of stack, we pop a and dont insert A.
+	Otherwise, we insert the current character in stack.
+	Collect result in String at the end.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the string after making it good
+     */
 	public static String makeGood(String s) {
         Stack<Character> stack = new Stack();
         for(int i=0;i<s.length();i++){
