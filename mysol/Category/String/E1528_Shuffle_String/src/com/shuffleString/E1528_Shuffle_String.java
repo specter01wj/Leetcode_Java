@@ -32,7 +32,16 @@ public class E1528_Shuffle_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    shift string
+    */
 	
+	/**
+     * @param s: a string
+     * @param indices: a list of integers
+     * @return: the shuffled string
+     */
 	public static String restoreString(String s, int[] indices) {
         StringBuilder s1 = new StringBuilder(s); 
         StringBuilder s2 = new StringBuilder(s); 
