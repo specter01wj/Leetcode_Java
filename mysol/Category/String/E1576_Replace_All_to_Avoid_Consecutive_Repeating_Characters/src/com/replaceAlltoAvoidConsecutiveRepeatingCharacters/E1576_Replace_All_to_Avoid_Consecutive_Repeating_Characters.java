@@ -35,12 +35,20 @@ repeating characters in "ubvvw" and "ubvww".
 public class E1576_Replace_All_to_Avoid_Consecutive_Repeating_Characters {
 
 	public static void main(String[] args) {
-		String input = "ubv?w";
+		String input = "u?bv?w";
         String output = modifyString(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    for each char, just try ‘a’, ‘b’, ‘c’, and select the one not the same as neighbors.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the final string after all the conversions
+     */
 	public static String modifyString(String s) {
         char[] arr = s.toCharArray();
         for (int i = 0; i < arr.length; i++) {
