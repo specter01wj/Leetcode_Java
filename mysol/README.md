@@ -265,6 +265,8 @@ By Jin Wang
 |1507|**Reformat Date**|Easy|Java/Javascript|Done/Done|
 |1528|**Shuffle String**|Easy|Java/Javascript|Done/Done|
 |1544|**Make The String Great**|Easy|Java/Javascript|Done/Done|
+|1556|**Thousand Separator**|Easy|Java/Javascript|Done/Done|
+|1576|**Replace All ?'s to Avoid Consecutive Repeating Characters**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
