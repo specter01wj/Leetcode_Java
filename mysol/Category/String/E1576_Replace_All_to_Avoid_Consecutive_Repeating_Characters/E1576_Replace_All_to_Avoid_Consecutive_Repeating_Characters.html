@@ -39,15 +39,23 @@
 		     * @param s: a string
 		     * @return: the final string after all the conversions
 		     */
-				let thousandSeparator = function(n) {
-					return ('' + n).split('').reverse()
-				    .reduce((a, ch) => {
-				    	return a.length % 4 === 3 ? ch + '.' + a : ch + a
-				    }, '');
+				let modifyString = function(s) {
+					let arr = s.split('');
+	        for (let i = 0; i < arr.length; i++) {
+	            if (arr[i] === '?') {
+	                for (let j = 0; j < 3; j++) {
+	                    if (i > 0 && arr[i - 1].charCodeAt() - 'a'.charCodeAt() === j) continue;
+	                    if (i + 1 < arr.length && arr[i + 1].charCodeAt() - 'a'.charCodeAt() === j) continue;
+	                    arr[i] = String.fromCharCode('a'.charCodeAt() + j);
+	                    break;
+	                }
+	            }
+	        }
+	        return arr.join('');
       	};
 
-				let str = 1234;
-				let tt1 = thousandSeparator(str);
+				let str = "u?bv?w";
+				let tt1 = modifyString(str);
 				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
 			});
 
