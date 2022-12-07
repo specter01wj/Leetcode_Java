@@ -24,7 +24,15 @@ public class E1556_Thousand_Separator {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    StringBuilder
+    */
 	
+	/**
+     * @param n: a string
+     * @return: add a dot as the thousands separator and return it in string format
+     */
 	public static String thousandSeparator(int n) {
         String num = Integer.toString(n);
         StringBuilder sb = new StringBuilder();
