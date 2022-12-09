@@ -4,58 +4,68 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a string text of words that are placed among some number of spaces. 
-				Each word consists of one or more lowercase English letters and are separated by 
-				at least one space. It's guaranteed that text contains at least one word.
+			 	The Leetcode file system keeps a log each time some user performs a change folder operation.
 
-				Rearrange the spaces so that there is an equal number of spaces between every pair 
-				of adjacent words and that number is maximized. If you cannot redistribute all the 
-				spaces equally, place the extra spaces at the end, meaning the returned string 
-				should be the same length as text.
+				The operations are described below:
 
-				Return the string after rearranging the spaces.
+				 ."../" : Move to the parent folder of the current folder. 
+				 		  (If you are already in the main folder, remain in the same folder).
+				 ."./" : Remain in the same folder.
+				 ."x/" : Move to the child folder named x (This folder is guaranteed to always exist).
+				 
+				You are given a list of strings logs where logs[i] is the operation performed by the user 
+				at the ith step.
+
+				The file system starts in the main folder, then the operations in logs are performed.
+
+				Return the minimum number of operations needed to go back to the main folder after the 
+				change folder operations.
 
 
 				Example 1:
 
-				Input: text = "  this   is  a sentence "
-				Output: "this   is   a   sentence"
-				Explanation: There are a total of 9 spaces and 4 words. 
-				We can evenly divide the 9 spaces between the words: 9 / (4-1) = 3 spaces.
+				Input: logs = ["d1/","d2/","../","d21/","./"]
+				Output: 2
+				Explanation: Use this change folder operation "../" 2 times and go back to the main folder.
 
 				Example 2:
 
-				Input: text = " practice   makes   perfect"
-				Output: "practice   makes   perfect "
-				Explanation: There are a total of 7 spaces and 3 words. 7 / (3-1) = 3 spaces plus 1 extra space. 
-				We place this extra space at the end of the string.
+				Input: logs = ["d1/","d2/","./","d3/","../","d31/"]
+				Output: 3
+
+				Example 3:
+
+				Input: logs = ["d1/","../","../","../"]
+				Output: 0
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param text: a string
-		     * @return: the string after rearranging the spaces
+		     * @param logs: a string array
+		     * @return: the minimum number of operations needed to go back to the main folder 
+		     * 					after the change folder operations
 		     */
-				let reorderSpaces = function(text) {
-					let K = text.split('').filter(c => c == ' ').length;
-			    let A = text.split(' ').filter(word => word.length);
-			    let N = A.length;
-			    if (N === 1) {
-			        return A[0] + ' '.repeat(K);
-			    }
-			    let space = Math.floor(K / (N - 1));
-			    let leftover = K % (N - 1);
-			    return A.join(' '.repeat(space)) + ' '.repeat(leftover);
+				let minOperations = function(logs) {
+					let res = 0;
+	        for (let s of logs) {
+	            if (s === "../") {
+	              res = Math.max(0, --res);  
+	            } else if (s === "./") {
+	               continue; 
+	            } else {
+	              res++;  
+	            }
+	        }
+	        return res;
       	};
 
-				let str = "  this   is  a sentence ";
-				$('#t1').html('<h2>Input1: ' + str + '</h2>');
-				let tt1 = reorderSpaces(str);
-				$('#t2').html('<h2>Results: ' + tt1 + '</h2>');
+				let str = ["d1/","d2/","../","d21/","./"];
+				let tt1 = minOperations(str);
+				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
-				for each char, just try ‘a’, ‘b’, ‘c’, and select the one not the same as neighbors.
+				loop
 			 */
 
 		</script>
@@ -64,7 +74,6 @@
 	<body>
 		<div>
 			<p id='t1'></p>
-			<p id='t2'></p>
 		</div>
 	</body>
 
