@@ -323,7 +323,7 @@ Cspiration Category:
 |1556|Thousand Separator|Easy||Java/Javascript|Done/Done|
 |1576|Replace All ?'s to Avoid Consecutive Repeating Characters|Easy||Java/Javascript|Done/Done|
 |1592|Rearrange Spaces Between Words|Easy||Java/Javascript|Done/Done|
-|1598|Crawler Log Folder|Easy||Java/Javascript||
+|1598|Crawler Log Folder|Easy||Java/Javascript|Done/Done|
 |1614|Maximum Nesting Depth of the Parentheses|Easy||Java/Javascript||
 |1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript||
 
