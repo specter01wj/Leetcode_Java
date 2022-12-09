@@ -49,8 +49,9 @@
       	};
 
 				let str = "  this   is  a sentence ";
+				$('#t1').html('<h2>Input1: ' + str + '</h2>');
 				let tt1 = reorderSpaces(str);
-				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
+				$('#t2').html('<h2>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
@@ -63,6 +64,7 @@
 	<body>
 		<div>
 			<p id='t1'></p>
+			<p id='t2'></p>
 		</div>
 	</body>
 
