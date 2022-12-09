@@ -33,17 +33,18 @@
 			$(document).ready(function(){
 
 				/**
-		     * @param s: a string
+		     * @param text: a string
 		     * @return: the final string after all the conversions
 		     */
 				let reorderSpaces = function(text) {
-					let K = s.split('').filter(c => c == ' ').length;
-			    let A = s.split(' ').filter(word => word.length);
+					let K = text.split('').filter(c => c == ' ').length;
+			    let A = text.split(' ').filter(word => word.length);
 			    let N = A.length;
-			    if (N == 1)
+			    if (N === 1) {
 			        return A[0] + ' '.repeat(K);
-			    let space = Math.floor(K / (N - 1)),
-			        leftover = K % (N - 1);
+			    }
+			    let space = Math.floor(K / (N - 1));
+			    let leftover = K % (N - 1);
 			    return A.join(' '.repeat(space)) + ' '.repeat(leftover);
       	};
 
