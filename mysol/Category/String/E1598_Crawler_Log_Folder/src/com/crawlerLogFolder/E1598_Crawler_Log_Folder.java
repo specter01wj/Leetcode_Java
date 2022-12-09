@@ -47,10 +47,7 @@ public class E1598_Crawler_Log_Folder {
 	
 	/*
     solution:
-    opened count the number of opened parenthesis.
-	Add every char to the result,
-	unless the first left parenthesis,
-	and the last right parenthesis.
+    loop
     */
 	
 	/**
