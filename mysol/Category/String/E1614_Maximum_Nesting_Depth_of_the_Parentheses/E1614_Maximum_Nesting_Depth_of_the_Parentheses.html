@@ -40,22 +40,21 @@
 		     * @param s: a string
 		     * @return: the nesting depth of s
 		     */
-				let minOperations = function(logs) {
-					let res = 0;
-	        for (let s of logs) {
-	            if (s === "../") {
-	              res = Math.max(0, --res);  
-	            } else if (s === "./") {
-	               continue; 
-	            } else {
-	              res++;  
+				let maxDepth = function(s) {
+					let res = 0, cur = 0;
+	        for (let i = 0; i < s.length; ++i) {
+	            if (s.charAt(i) === '(') {
+	                res = Math.max(res, ++cur);
+	            }
+	            if (s.charAt(i) === ')') {
+	                cur--;
 	            }
 	        }
 	        return res;
       	};
 
-				let str = ["d1/","d2/","../","d21/","./"];
-				let tt1 = minOperations(str);
+				let str = "(1+(2*3)+((8)/4))+1";
+				let tt1 = maxDepth(str);
 				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
 			});
 
