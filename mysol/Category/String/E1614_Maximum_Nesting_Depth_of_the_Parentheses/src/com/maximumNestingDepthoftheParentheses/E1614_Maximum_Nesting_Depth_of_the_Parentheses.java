@@ -41,7 +41,17 @@ public class E1614_Maximum_Nesting_Depth_of_the_Parentheses {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Ignore digits and signs,
+	only count the current open parentheses cur.
+	The depth equals to the maximum open parentheses.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the nesting depth of s
+     */
 	public static int maxDepth(String s) {
         int res = 0, cur = 0;
         for (int i = 0; i < s.length(); ++i) {
