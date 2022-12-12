@@ -50,7 +50,20 @@ public class E1385_Find_the_Distance_Value_Between_Two_Arrays {
         System.out.println("input: " + Arrays.toString(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Expression |arr1[i] - arr2[j]| <= d equals to arr1[i] - d <= arr2[j] <= arr1[i] + d. 
+    So for every value val in the array arr1 we need to check (using binary search) 
+    if the array arr2 contains any value in range from val - d to val + d. 
+    If not, increment distance.
+    */
 	
+	/*
+     * @param arr1: a list of integers
+     * @param arr2: a list of integers
+     * @param d: an integer
+     * @return: the distance value between the two arrays
+     */
 	public static int findTheDistanceValue(int[] arr1, int[] arr2, int d) {
         Arrays.sort(arr2);    
         int distance = 0;
