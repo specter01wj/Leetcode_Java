@@ -36,7 +36,18 @@ public class E1624_Largest_Substring_Between_Two_Equal_Characters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Loop through the input string s
+	1. Store the first index of the substring between same characters;
+	2. If current character seen before, compute the length of the substring 
+	   between them and update the max length;
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the length of the longest substring between two equal characters
+     */
 	public static int maxLengthBetweenEqualCharacters(String s) {
         int[] indices = new int[26];
         int maxLen = -1;
