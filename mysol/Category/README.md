@@ -325,7 +325,7 @@ Cspiration Category:
 |1592|Rearrange Spaces Between Words|Easy||Java/Javascript|Done/Done|
 |1598|Crawler Log Folder|Easy||Java/Javascript|Done/Done|
 |1614|Maximum Nesting Depth of the Parentheses|Easy||Java/Javascript|Done/Done|
-|1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript||
+|1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript|Done/Done|
 
 ### 3. Math
 
