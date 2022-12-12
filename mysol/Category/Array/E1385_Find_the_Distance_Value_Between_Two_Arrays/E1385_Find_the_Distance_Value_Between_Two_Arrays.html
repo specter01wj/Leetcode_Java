@@ -50,32 +50,36 @@
 		     * @param d: an integer
 		     * @return: the distance value between the two arrays
 		     */
-				let luckyNumbers = function(matrix) {
-					let m = matrix.length, n = matrix[0].length;
-	        let mi = new Array(m).fill(0);
-	        let mx = new Array(n).fill(0);
-	        mi.fill(Number.MAX_VALUE);
-	        for (let i = 0; i < m; ++i) {
-	            for (let j = 0; j < n; ++j) {
-	                mi[i] = Math.min(matrix[i][j], mi[i]);
-	                mx[j] = Math.max(matrix[i][j], mx[j]);
+				let luckyNumbers = function(arr1, arr2, d) {
+					arr2.sort((a,b) => a - b);    
+	        let distance = 0;
+	        for (let val of arr1) {
+	            if (notInRange(arr2, val - d, val + d)) {
+	                distance++;
 	            }
-	        }
-	        let res = [];
-	        for (let i = 0; i < m; ++i) {
-	            for (let j = 0; j < n; ++j) {
-	                if (mi[i] === mx[j])  {
-	                    res.push(mi[i]);
-	                    break;
-	                }
-	            }
-	        }
-	        return res; 
+	        }    
+	        return distance;
 				};
 
-				let arr = [[3,7,8],[9,11,13],[15,16,17]];
-				let tt1 = luckyNumbers(arr);
-				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
+				function notInRange(arr, from, to) {
+					let start = 0;
+	        let end = arr.length - 1;
+	        while (start <= end) {
+	            let mid = start + Math.floor((end - start) / 2);
+	            if (arr[mid] >= from && arr[mid] <= to) {
+	                return false;
+	            } else if (arr[mid] < from) {
+	                start = mid + 1;
+	            } else {
+	                end = mid - 1;
+	            }
+	        }
+	        return true;
+				}
+
+				let arr1 = [4,5,8], arr2 = [10,9,1,8];
+				let tt1 = luckyNumbers(arr1, arr2, 2);
+				$('#t1').html('<h2>Input: ' + arr1 + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
