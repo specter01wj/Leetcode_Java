@@ -35,21 +35,22 @@
 		     * @param s: a string
 		     * @return: the length of the longest substring between two equal characters
 		     */
-				let maxDepth = function(s) {
-					let res = 0, cur = 0;
+				let maxLengthBetweenEqualCharacters = function(s) {
+					let indices = new Array(26).fill(0);
+	        let maxLen = -1;
 	        for (let i = 0; i < s.length; ++i) {
-	            if (s.charAt(i) === '(') {
-	                res = Math.max(res, ++cur);
-	            }
-	            if (s.charAt(i) === ')') {
-	                cur--;
+	            let idx = s.charCodeAt(i) - 'a'.charCodeAt(0);
+	            if (indices[idx] > 0) {
+	                maxLen = Math.max(maxLen, i - indices[idx]);
+	            } else {
+	                indices[idx] = i + 1;
 	            }
 	        }
-	        return res;
+	        return maxLen;
       	};
 
-				let str = "(1+(2*3)+((8)/4))+1";
-				let tt1 = maxDepth(str);
+				let str = "abca";
+				let tt1 = maxLengthBetweenEqualCharacters(str);
 				$('#t1').html('<h2>Input1: ' + str + '<br>Results: ' + tt1 + '</h2>');
 			});
 
