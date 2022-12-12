@@ -186,12 +186,18 @@ Cspiration Category:
 |1351|Count Negative Numbers in a Sorted Matrix|Easy||Java/Javascript|Done/Done|
 |1356|Sort Integers by The Number of 1 Bits|Easy||Java/Javascript|Done/Done|
 |1365|How Many Numbers Are Smaller Than the Current Number|Easy||Java/Javascript|Done/Done|
-|1380|Lucky Numbers in a Matrix|Easy||Java/Javascript||
+|1380|Lucky Numbers in a Matrix|Easy||Java/Javascript|Done/Done|
 |1385|Find the Distance Value Between Two Arrays|Easy||Java/Javascript||
 |1389|Create Target Array in the Given Order|Easy||Java/Javascript||
 |1394|Find Lucky Integer in an Array|Easy||Java/Javascript||
 |1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript||
+|1408|String Matching in an Array|Easy||Java/Javascript||
 |1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript||
+|1431|Kids With the Greatest Number of Candies|Easy||Java/Javascript||
+|1437|Check If All 1's Are at Least Length K Places Away|Easy||Java/Javascript||
+|1450|Number of Students Doing Homework at a Given Time|Easy||Java/Javascript||
+|1460|Make Two Arrays Equal by Reversing Subarrays|Easy||Java/Javascript||
+|1464|Maximum Product of Two Elements in an Array|Easy||Java/Javascript||
 
 ### 2. String
 
@@ -326,18 +332,7 @@ Cspiration Category:
 |1598|Crawler Log Folder|Easy||Java/Javascript|Done/Done|
 |1614|Maximum Nesting Depth of the Parentheses|Easy||Java/Javascript|Done/Done|
 |1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript|Done/Done|
-|1380|Lucky Numbers in a Matrix|Easy||Java/Javascript||
-|1385|Find the Distance Value Between Two Arrays|Easy||Java/Javascript||
-|1389|Create Target Array in the Given Order|Easy||Java/Javascript||
-|1394|Find Lucky Integer in an Array|Easy||Java/Javascript||
-|1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript||
-|1408|String Matching in an Array|Easy||Java/Javascript||
-|1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript||
-|1431|Kids With the Greatest Number of Candies|Easy||Java/Javascript||
-|1437|Check If All 1's Are at Least Length K Places Away|Easy||Java/Javascript||
-|1450|Number of Students Doing Homework at a Given Time|Easy||Java/Javascript||
-|1460|Make Two Arrays Equal by Reversing Subarrays|Easy||Java/Javascript||
-|1464|Maximum Product of Two Elements in an Array|Easy||Java/Javascript||
+
 
 ### 3. Math
 
