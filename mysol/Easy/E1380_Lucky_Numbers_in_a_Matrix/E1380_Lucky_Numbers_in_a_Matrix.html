@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an m x n matrix of distinct numbers, 
+				return all lucky numbers in the matrix in any order.
+
+				A lucky number is an element of the matrix such that it is the minimum element 
+				in its row and maximum in its column.
+
+
+				Example 1:
+
+				Input: matrix = [[3,7,8],[9,11,13],[15,16,17]]
+				Output: [15]
+				Explanation: 15 is the only lucky number since it is the minimum in its row 
+				and the maximum in its column.
+
+				Example 2:
+
+				Input: matrix = [[1,10,4,2],[9,3,8,7],[15,16,17,12]]
+				Output: [12]
+				Explanation: 12 is the only lucky number since it is the minimum in its row 
+				and the maximum in its column.
+
+				Example 3:
+
+				Input: matrix = [[7,8],[1,2]]
+				Output: [7]
+				Explanation: 7 is the only lucky number since it is the minimum in its row 
+				and the maximum in its column.
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param matrix: a list of 2D integers
+		     * @return: all lucky numbers in the matrix in any order
+		     */
+				let luckyNumbers = function(matrix) {
+					let m = matrix.length, n = matrix[0].length;
+	        let mi = new Array(m).fill(0);
+	        let mx = new Array(n).fill(0);
+	        mi.fill(Number.MAX_VALUE);
+	        for (let i = 0; i < m; ++i) {
+	            for (let j = 0; j < n; ++j) {
+	                mi[i] = Math.min(matrix[i][j], mi[i]);
+	                mx[j] = Math.max(matrix[i][j], mx[j]);
+	            }
+	        }
+	        let res = [];
+	        for (let i = 0; i < m; ++i) {
+	            for (let j = 0; j < n; ++j) {
+	                if (mi[i] === mx[j])  {
+	                    res.push(mi[i]);
+	                    break;
+	                }
+	            }
+	        }
+	        return res; 
+				};
+
+				let arr = [[3,7,8],[9,11,13],[15,16,17]];
+				let tt1 = luckyNumbers(arr);
+				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				1. Find minimum and maxmium values for each row and each column, respectively;
+				2. Since all numbers in the matrix are distinct, only when the row minimum equals 
+				to the column maximum, it is a lucky number by the problem definition.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
