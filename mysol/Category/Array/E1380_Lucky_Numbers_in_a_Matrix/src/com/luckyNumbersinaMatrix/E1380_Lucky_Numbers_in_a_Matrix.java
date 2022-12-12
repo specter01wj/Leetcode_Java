@@ -39,7 +39,17 @@ public class E1380_Lucky_Numbers_in_a_Matrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Find minimum and maxmium values for each row and each column, respectively;
+	2. Since all numbers in the matrix are distinct, only when the row minimum equals 
+	to the column maximum, it is a lucky number by the problem definition.
+    */
 	
+	/*
+     * @param matrix: a list of 2D integers
+     * @return: all lucky numbers in the matrix in any order
+     */
 	public static List<Integer> luckyNumbers (int[][] matrix) {
         int m = matrix.length, n = matrix[0].length;
         int[] mi = new int[m], mx = new int[n];
