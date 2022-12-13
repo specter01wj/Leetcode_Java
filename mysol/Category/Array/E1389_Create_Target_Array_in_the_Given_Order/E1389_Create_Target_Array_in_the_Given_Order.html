@@ -55,7 +55,7 @@
 				let createTargetArray = function(nums, index) {
 					let arr = [];
 	        for (let i = 0;i < nums.length;i++) {
-        		if(arr[index[i]]) {
+        		if(arr[index[i]] !== undefined) {
         			arr.splice(index[i], 0, nums[i]);
         		} else {
         			arr[index[i]] = nums[i];
@@ -68,7 +68,8 @@
 	        return target;
 				};
 
-				let arr = [0,1,2,3,4], index = [0,1,2,2,1];
+				// let arr = [0,1,2,3,4], index = [0,1,2,2,1];
+				let arr = [0,1,0], index = [0,1,0];
 				let tt1 = createTargetArray(arr, index);
 				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
 			});
