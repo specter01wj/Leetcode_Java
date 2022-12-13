@@ -52,36 +52,25 @@
 		     * @param index: a list of integers
 		     * @return: the target array
 		     */
-				let luckyNumbers = function(arr1, arr2, d) {
-					arr2.sort((a,b) => a - b);    
-	        let distance = 0;
-	        for (let val of arr1) {
-	            if (notInRange(arr2, val - d, val + d)) {
-	                distance++;
-	            }
-	        }    
-	        return distance;
+				let createTargetArray = function(nums, index) {
+					let arr = [];
+	        for (let i = 0;i < nums.length;i++) {
+        		if(arr[index[i]]) {
+        			arr.splice(index[i], 0, nums[i]);
+        		} else {
+        			arr[index[i]] = nums[i];
+        		}
+	        }
+	        let target = [];
+	        for (let i = 0;i < nums.length;i++) {
+            target.push(arr[i]);
+	        }
+	        return target;
 				};
 
-				function notInRange(arr, from, to) {
-					let start = 0;
-	        let end = arr.length - 1;
-	        while (start <= end) {
-	            let mid = start + Math.floor((end - start) / 2);
-	            if (arr[mid] >= from && arr[mid] <= to) {
-	                return false;
-	            } else if (arr[mid] < from) {
-	                start = mid + 1;
-	            } else {
-	                end = mid - 1;
-	            }
-	        }
-	        return true;
-				}
-
-				let arr1 = [4,5,8], arr2 = [10,9,1,8];
-				let tt1 = luckyNumbers(arr1, arr2, 2);
-				$('#t1').html('<h2>Input: ' + arr1 + '<br>Results: ' + (tt1) + '</h2>');
+				let arr = [0,1,2,3,4], index = [0,1,2,2,1];
+				let tt1 = createTargetArray(arr, index);
+				$('#t1').html('<h2>Input: ' + arr + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
