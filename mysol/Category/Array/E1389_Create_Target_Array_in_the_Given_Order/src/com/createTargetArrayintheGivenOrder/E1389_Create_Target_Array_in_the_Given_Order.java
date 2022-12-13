@@ -53,7 +53,16 @@ public class E1389_Create_Target_Array_in_the_Given_Order {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    using ArrayList
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param index: a list of integers
+     * @return: the target array
+     */
 	public static int[] createTargetArray(int[] nums, int[] index) {
         ArrayList<Integer> arr = new ArrayList<Integer>();
         for(int i = 0;i < nums.length;i++) {
