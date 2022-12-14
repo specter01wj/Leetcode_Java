@@ -259,6 +259,7 @@ By Jin Wang
 |1385|**Find the Distance Value Between Two Arrays**|Easy|Java/Javascript|Done/Done|
 |1389|**Create Target Array in the Given Order**|Easy|Java/Javascript|Done/Done|
 |1394|**Find Lucky Integer in an Array**|Easy|Java/Javascript|Done/Done|
+|1403|**Minimum Subsequence in Non-Increasing Order**|Easy|Java/Javascript|Done/Done|
 |1408|**String Matching in an Array**|Easy|Java/Javascript|Done/Done|
 |1417|**Reformat The String**|Easy|Java/Javascript|Done/Done|
 |1422|**Maximum Score After Splitting a String**|Easy|Java/Javascript|Done/Done|
