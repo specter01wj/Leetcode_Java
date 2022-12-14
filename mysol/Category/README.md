@@ -190,8 +190,8 @@ Cspiration Category:
 |1385|Find the Distance Value Between Two Arrays|Easy||Java/Javascript|Done/Done|
 |1389|Create Target Array in the Given Order|Easy||Java/Javascript|Done/Done|
 |1394|Find Lucky Integer in an Array|Easy||Java/Javascript|Done/Done|
-|1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript||
-|1408|String Matching in an Array|Easy||Java/Javascript||
+|1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript|Done/Done|
+|1408|String Matching in an Array|Easy||Java/Javascript|Done/Done|
 |1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript||
 |1431|Kids With the Greatest Number of Candies|Easy||Java/Javascript||
 |1437|Check If All 1's Are at Least Length K Places Away|Easy||Java/Javascript||
