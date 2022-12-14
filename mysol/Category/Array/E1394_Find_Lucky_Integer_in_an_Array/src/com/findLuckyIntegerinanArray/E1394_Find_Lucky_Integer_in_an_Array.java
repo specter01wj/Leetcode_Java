@@ -36,7 +36,15 @@ public class E1394_Find_Lucky_Integer_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    array
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the largest lucky integer in the array
+     */
 	public static int findLucky(int[] arr) {
         int[] cnt = new int[501];
         for (int a : arr) {
