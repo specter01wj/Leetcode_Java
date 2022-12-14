@@ -40,7 +40,15 @@ public class E1403_Minimum_Subsequence_in_NonIncreasing_Order {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sort and keep adding from large side
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: obtain a subsequence of the array
+     */
 	public static List<Integer> minSubsequence(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length, sum = 0, rSum = 0;
