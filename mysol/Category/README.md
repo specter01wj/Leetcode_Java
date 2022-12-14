@@ -189,7 +189,7 @@ Cspiration Category:
 |1380|Lucky Numbers in a Matrix|Easy||Java/Javascript|Done/Done|
 |1385|Find the Distance Value Between Two Arrays|Easy||Java/Javascript|Done/Done|
 |1389|Create Target Array in the Given Order|Easy||Java/Javascript|Done/Done|
-|1394|Find Lucky Integer in an Array|Easy||Java/Javascript||
+|1394|Find Lucky Integer in an Array|Easy||Java/Javascript|Done/Done|
 |1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript||
 |1408|String Matching in an Array|Easy||Java/Javascript||
 |1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript||
