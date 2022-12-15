@@ -45,7 +45,23 @@ public class E1413_Minimum_Value_to_Get_Positive_Step_by_Step_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    This question uses the concept of Prefix Sum and can be optimally solved in 
+    One-Pass w/ Constant-Space.
+	To solve this question, we need to find the Minimum Prefix Sum <= 0 ending at each index.
+	At an index i:
+	prefixSum = Sum of first i elements.
+	To keep track of the minimum prefix sum, we use minVal. It is initially assigned to zero 
+	so that we can find the minimum prefix sum <= 0.
+	Final Minimum Positive startValue will be 1 - Minimum Prefix Sum as this will ensure 
+	that the prefix sum is always >= 1 at every index of the input array.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum positive value of startValue
+     */
 	public static int minStartValue(int[] nums) {
         int minVal = 0;
         int prefixSum = 0;
