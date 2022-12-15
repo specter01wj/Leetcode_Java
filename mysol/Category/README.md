@@ -192,7 +192,7 @@ Cspiration Category:
 |1394|Find Lucky Integer in an Array|Easy||Java/Javascript|Done/Done|
 |1403|Minimum Subsequence in Non-Increasing Order|Easy||Java/Javascript|Done/Done|
 |1408|String Matching in an Array|Easy||Java/Javascript|Done/Done|
-|1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript||
+|1413|Minimum Value to Get Positive Step by Step Sum|Easy||Java/Javascript|Done/Done|
 |1431|Kids With the Greatest Number of Candies|Easy||Java/Javascript||
 |1437|Check If All 1's Are at Least Length K Places Away|Easy||Java/Javascript||
 |1450|Number of Students Doing Homework at a Given Time|Easy||Java/Javascript||
