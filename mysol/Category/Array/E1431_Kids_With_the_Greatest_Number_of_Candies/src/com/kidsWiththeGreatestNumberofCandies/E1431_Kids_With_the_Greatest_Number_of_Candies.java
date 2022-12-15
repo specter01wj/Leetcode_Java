@@ -46,7 +46,16 @@ public class E1431_Kids_With_the_Greatest_Number_of_Candies {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Find the max of candies, then traverse to check if each candy[i] + extraCandies >= max.
+    */
 	
+	/*
+     * @param candies: a list of integers
+     * @param extraCandies: an integer
+     * @return: a boolean array result of length n
+     */
 	public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         List<Boolean> ans = new ArrayList<>(candies.length);
         int max = 0;
