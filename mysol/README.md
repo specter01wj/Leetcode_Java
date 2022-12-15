@@ -261,8 +261,10 @@ By Jin Wang
 |1394|**Find Lucky Integer in an Array**|Easy|Java/Javascript|Done/Done|
 |1403|**Minimum Subsequence in Non-Increasing Order**|Easy|Java/Javascript|Done/Done|
 |1408|**String Matching in an Array**|Easy|Java/Javascript|Done/Done|
+|1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript|Done/Done|
 |1417|**Reformat The String**|Easy|Java/Javascript|Done/Done|
 |1422|**Maximum Score After Splitting a String**|Easy|Java/Javascript|Done/Done|
+|1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript|Done/Done|
 |1436|**Destination City**|Easy|Java/Javascript|Done/Done|
 |1446|**Consecutive Characters**|Easy|Java/Javascript|Done/Done|
 |1455|**Check If a Word Occurs As a Prefix of Any Word in a Sentence**|Easy|Java/Javascript|Done/Done|
