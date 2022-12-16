@@ -266,7 +266,9 @@ By Jin Wang
 |1422|**Maximum Score After Splitting a String**|Easy|Java/Javascript|Done/Done|
 |1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript|Done/Done|
 |1436|**Destination City**|Easy|Java/Javascript|Done/Done|
+|1437|**Check If All 1's Are at Least Length K Places Away**|Easy|Java/Javascript|Done/Done|
 |1446|**Consecutive Characters**|Easy|Java/Javascript|Done/Done|
+|1450|**Number of Students Doing Homework at a Given Time**|Easy|Java/Javascript|Done/Done|
 |1455|**Check If a Word Occurs As a Prefix of Any Word in a Sentence**|Easy|Java/Javascript|Done/Done|
 |1496|**Path Crossing**|Easy|Java/Javascript|Done/Done|
 |1507|**Reformat Date**|Easy|Java/Javascript|Done/Done|
