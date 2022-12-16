@@ -43,20 +43,14 @@ public class E1450_Number_of_Students_Doing_Homework_at_a_Given_Time {
 	
 	/*
     solution:
-    This question uses the concept of Prefix Sum and can be optimally solved in 
-    One-Pass w/ Constant-Space.
-	To solve this question, we need to find the Minimum Prefix Sum <= 0 ending at each index.
-	At an index i:
-	prefixSum = Sum of first i elements.
-	To keep track of the minimum prefix sum, we use minVal. It is initially assigned to zero 
-	so that we can find the minimum prefix sum <= 0.
-	Final Minimum Positive startValue will be 1 - Minimum Prefix Sum as this will ensure 
-	that the prefix sum is always >= 1 at every index of the input array.
+    iterate and count
     */
 	
 	/*
-     * @param nums: a list of integers
-     * @return: the minimum positive value of startValue
+     * @param startTime: a list of integers
+     * @param endTime: a list of integers
+     * @param queryTime: an integer
+     * @return: the number of students doing their homework at time queryTime
      */
 	public static int busyStudent(int[] startTime, int[] endTime, int queryTime) {
         int res = 0;
