@@ -31,15 +31,9 @@ public class E1437_Check_If_All_1s_Are_at_Least_Length_K_Places_Away {
 	
 	/*
     solution:
-    This question uses the concept of Prefix Sum and can be optimally solved in 
-    One-Pass w/ Constant-Space.
-	To solve this question, we need to find the Minimum Prefix Sum <= 0 ending at each index.
-	At an index i:
-	prefixSum = Sum of first i elements.
-	To keep track of the minimum prefix sum, we use minVal. It is initially assigned to zero 
-	so that we can find the minimum prefix sum <= 0.
-	Final Minimum Positive startValue will be 1 - Minimum Prefix Sum as this will ensure 
-	that the prefix sum is always >= 1 at every index of the input array.
+    To iterate over the array and count the number of zeros in-between the "neighbor" 1s. 
+    Each two neighbor 1s should have at least kkk zeros in-between. 
+    If it's not the case, return false.
     */
 	
 	/*
