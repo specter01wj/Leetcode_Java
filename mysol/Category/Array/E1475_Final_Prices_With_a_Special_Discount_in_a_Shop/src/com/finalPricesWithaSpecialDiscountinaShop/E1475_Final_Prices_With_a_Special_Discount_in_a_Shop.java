@@ -46,7 +46,15 @@ public class E1475_Final_Prices_With_a_Special_Discount_in_a_Shop {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Stack, One Pass
+    */
 	
+	/*
+     * @param prices: a list of integers
+     * @return: an integer array answer where answer[i] is the final price
+     */
 	public static int[] finalPrices(int[] input) {
 		int[] prices = input.clone();
         Stack<Integer> stack = new Stack<>();
