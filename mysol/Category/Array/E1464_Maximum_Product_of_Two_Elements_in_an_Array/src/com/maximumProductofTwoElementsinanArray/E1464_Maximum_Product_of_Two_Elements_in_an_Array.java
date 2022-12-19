@@ -36,15 +36,7 @@ public class E1464_Maximum_Product_of_Two_Elements_in_an_Array {
 	
 	/*
     solution:
-    This question uses the concept of Prefix Sum and can be optimally solved in 
-    One-Pass w/ Constant-Space.
-	To solve this question, we need to find the Minimum Prefix Sum <= 0 ending at each index.
-	At an index i:
-	prefixSum = Sum of first i elements.
-	To keep track of the minimum prefix sum, we use minVal. It is initially assigned to zero 
-	so that we can find the minimum prefix sum <= 0.
-	Final Minimum Positive startValue will be 1 - Minimum Prefix Sum as this will ensure 
-	that the prefix sum is always >= 1 at every index of the input array.
+    Find the max 2 numbers.
     */
 	
 	/*
