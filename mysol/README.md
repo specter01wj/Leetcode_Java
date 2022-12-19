@@ -270,6 +270,8 @@ By Jin Wang
 |1446|**Consecutive Characters**|Easy|Java/Javascript|Done/Done|
 |1450|**Number of Students Doing Homework at a Given Time**|Easy|Java/Javascript|Done/Done|
 |1455|**Check If a Word Occurs As a Prefix of Any Word in a Sentence**|Easy|Java/Javascript|Done/Done|
+|1460|**Make Two Arrays Equal by Reversing Subarrays**|Easy|Java/Javascript|Done/Done|
+|1464|**Maximum Product of Two Elements in an Array**|Easy|Java/Javascript|Done/Done|
 |1496|**Path Crossing**|Easy|Java/Javascript|Done/Done|
 |1507|**Reformat Date**|Easy|Java/Javascript|Done/Done|
 |1528|**Shuffle String**|Easy|Java/Javascript|Done/Done|
