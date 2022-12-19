@@ -198,6 +198,12 @@ Cspiration Category:
 |1450|Number of Students Doing Homework at a Given Time|Easy||Java/Javascript|Done/Done|
 |1460|Make Two Arrays Equal by Reversing Subarrays|Easy||Java/Javascript|Done/Done|
 |1464|Maximum Product of Two Elements in an Array|Easy||Java/Javascript|Done/Done|
+|1470|Shuffle the Array|Easy||Java/Javascript||
+|1475|Final Prices With a Special Discount in a Shop|Easy||Java/Javascript||
+|1480|Running Sum of 1d Array|Easy||Java/Javascript||
+|1491|Average Salary Excluding the Minimum and Maximum Salary|Easy||Java/Javascript||
+|1502|Can Make Arithmetic Progression From Sequence|Easy||Java/Javascript||
+|1512|Number of Good Pairs|Easy||Java/Javascript||
 
 ### 2. String
 
