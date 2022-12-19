@@ -35,8 +35,32 @@ Explanation: arr does not have value 9 and it can never be converted to target.
 public class E1460_Make_Two_Arrays_Equal_by_Reversing_Subarrays {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] target = {1,2,3,4}, arr = {2,4,1,3};
+		boolean output = canBeEqual(target, arr);
+        System.out.println("input: " + Arrays.toString(target) + "\noutput: " + (output));
 	}
+	
+	/*
+    solution:
+    Count the arrays and compare.
+    */
+	
+	/*
+     * @param target: a list of integers
+     * @param arr: a list of integers
+     * @return: true if you can make arr equal to target or false otherwise
+     */
+	public static boolean canBeEqual(int[] target, int[] arr) {
+        int[] cnt = new int[1001];
+        for (int t : target) {
+            ++cnt[t];
+        }
+        for (int a : arr) {
+            if (--cnt[a] < 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
