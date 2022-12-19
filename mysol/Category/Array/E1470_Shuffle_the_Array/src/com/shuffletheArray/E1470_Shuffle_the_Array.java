@@ -33,7 +33,17 @@ public class E1470_Shuffle_the_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Store the pair of numbers and then
+	2. Retreive each number, from that pair where they were stored, 
+	one by one and place them at their desired positions.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the array in the form [x1,y1,x2,y2,...,xn,yn]
+     */
 	public static int[] shuffle(int[] input, int n) {
 		int[] nums = input.clone();
         int len = nums.length;
