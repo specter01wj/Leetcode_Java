@@ -272,6 +272,8 @@ By Jin Wang
 |1455|**Check If a Word Occurs As a Prefix of Any Word in a Sentence**|Easy|Java/Javascript|Done/Done|
 |1460|**Make Two Arrays Equal by Reversing Subarrays**|Easy|Java/Javascript|Done/Done|
 |1464|**Maximum Product of Two Elements in an Array**|Easy|Java/Javascript|Done/Done|
+|1470|**Shuffle the Array**|Easy|Java/Javascript|Done/Done|
+|1475|**Final Prices With a Special Discount in a Shop**|Easy|Java/Javascript|Done/Done|
 |1496|**Path Crossing**|Easy|Java/Javascript|Done/Done|
 |1507|**Reformat Date**|Easy|Java/Javascript|Done/Done|
 |1528|**Shuffle String**|Easy|Java/Javascript|Done/Done|
