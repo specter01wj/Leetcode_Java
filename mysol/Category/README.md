@@ -197,7 +197,7 @@ Cspiration Category:
 |1437|Check If All 1's Are at Least Length K Places Away|Easy||Java/Javascript|Done/Done|
 |1450|Number of Students Doing Homework at a Given Time|Easy||Java/Javascript|Done/Done|
 |1460|Make Two Arrays Equal by Reversing Subarrays|Easy||Java/Javascript|Done/Done|
-|1464|Maximum Product of Two Elements in an Array|Easy||Java/Javascript||
+|1464|Maximum Product of Two Elements in an Array|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
