@@ -34,8 +34,8 @@
 		     * @return: the maximum value of (nums[i]-1)*(nums[j]-1)
 		     */
 				let maxProduct = function(nums) {
-					int mx1 = 0, mx2 = 0;
-	        for (int n : nums) {
+					let mx1 = 0, mx2 = 0;
+	        for (let n of nums) {
 	            if (n > mx1) {
 	                mx2 = mx1;
 	                mx1 = n;
