@@ -33,8 +33,17 @@ public class E1480_Running_Sum_of_1d_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Loop once, we can get the sum of subarray starting from the initial point.
+    */
 	
-	public static int[] runningSum(int[] nums) {
+	/*
+     * @param nums: a list of integers
+     * @return: the running sum of nums
+     */
+	public static int[] runningSum(int[] input) {
+		int[] nums = input.clone();
         int i = 1;
         while (i < nums.length){
             nums[i] += nums[i-1];
