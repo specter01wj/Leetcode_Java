@@ -201,7 +201,7 @@ Cspiration Category:
 |1470|Shuffle the Array|Easy||Java/Javascript|Done/Done|
 |1475|Final Prices With a Special Discount in a Shop|Easy||Java/Javascript|Done/Done|
 |1480|Running Sum of 1d Array|Easy||Java/Javascript|Done/Done|
-|1491|Average Salary Excluding the Minimum and Maximum Salary|Easy||Java/Javascript||
+|1491|Average Salary Excluding the Minimum and Maximum Salary|Easy||Java/Javascript|Done/Done|
 |1502|Can Make Arithmetic Progression From Sequence|Easy||Java/Javascript||
 |1512|Number of Good Pairs|Easy||Java/Javascript||
 
