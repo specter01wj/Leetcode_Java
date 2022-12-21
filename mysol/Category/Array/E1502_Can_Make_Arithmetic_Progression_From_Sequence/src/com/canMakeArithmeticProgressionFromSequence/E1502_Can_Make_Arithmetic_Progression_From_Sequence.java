@@ -31,7 +31,15 @@ public class E1502_Can_Make_Arithmetic_Progression_From_Sequence {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sort and compare
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: true if the array can be rearranged to form an arithmetic progression
+     */
 	public static boolean canMakeArithmeticProgression(int[] arr) {
         Arrays.sort(arr);
         for (int i = 2; i < arr.length; ++i) {
