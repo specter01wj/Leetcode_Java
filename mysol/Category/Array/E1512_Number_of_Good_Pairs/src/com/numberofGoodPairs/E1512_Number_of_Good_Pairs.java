@@ -33,7 +33,18 @@ public class E1512_Number_of_Good_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count the occurrence of the same elements.
+	For each new element a,
+	there will be more count[a] pairs,
+	with A[i] == A[j] and i < j
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of good pairs
+     */
 	public static int numIdenticalPairs(int[] nums) {
         int res = 0, count[] = new int[101];
         for (int item : nums) {
