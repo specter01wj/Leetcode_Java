@@ -277,7 +277,9 @@ By Jin Wang
 |1480|**Running Sum of 1d Array**|Easy|Java/Javascript|Done/Done|
 |1491|**Average Salary Excluding the Minimum and Maximum Salary**|Easy|Java/Javascript|Done/Done|
 |1496|**Path Crossing**|Easy|Java/Javascript|Done/Done|
+|1502|**Can Make Arithmetic Progression From Sequence**|Easy|Java/Javascript|Done/Done|
 |1507|**Reformat Date**|Easy|Java/Javascript|Done/Done|
+|1512|**Number of Good Pairs**|Easy|Java/Javascript|Done/Done|
 |1528|**Shuffle String**|Easy|Java/Javascript|Done/Done|
 |1544|**Make The String Great**|Easy|Java/Javascript|Done/Done|
 |1556|**Thousand Separator**|Easy|Java/Javascript|Done/Done|
