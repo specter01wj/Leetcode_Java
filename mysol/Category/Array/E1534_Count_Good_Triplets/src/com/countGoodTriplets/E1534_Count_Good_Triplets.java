@@ -45,7 +45,9 @@ public class E1534_Count_Good_Triplets {
 	/*
      * @param arr: a list of integers
      * @param a: an integer
-     * @return: an integer array answer where answer[i] is the final price
+     * @param b: an integer
+     * @param c: an integer
+     * @return: the number of good triplets
      */
 	public static int countGoodTriplets(int[] arr, int a, int b, int c) {
         int count = 0;
