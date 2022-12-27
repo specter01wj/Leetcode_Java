@@ -30,7 +30,7 @@
 		     * @param k: an integer
 		     * @return: the kth positive integer that is missing from this array
 		     */
-				let countGoodTriplets = function(arr, a, b, c) {
+				let findKthPositive = function(arr, k) {
 					let l = 0, r = arr.length, m;
 	        while (l < r) {
 	            m = Math.floor((l + r) / 2);
@@ -43,8 +43,8 @@
 	        return l + k;
 				};
 
-				let input = [3,0,1,1,9,7];
-				let tt1 = countGoodTriplets(input, 7, 2, 3);
+				let input = [2,3,4,7,11], k = 5;
+				let tt1 = findKthPositive(input, k);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
