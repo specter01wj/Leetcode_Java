@@ -204,6 +204,14 @@ Cspiration Category:
 |1491|Average Salary Excluding the Minimum and Maximum Salary|Easy||Java/Javascript|Done/Done|
 |1502|Can Make Arithmetic Progression From Sequence|Easy||Java/Javascript|Done/Done|
 |1512|Number of Good Pairs|Easy||Java/Javascript|Done/Done|
+|1534|Count Good Triplets|Easy||Java/Javascript||
+|1539|Kth Missing Positive Number|Easy||Java/Javascript||
+|1550|Three Consecutive Odds|Easy||Java/Javascript||
+|1560|Most Visited Sector in a Circular Track|Easy||Java/Javascript||
+|1566|Detect Pattern of Length M Repeated K or More Times|Easy||Java/Javascript||
+|1572|Matrix Diagonal Sum|Easy||Java/Javascript||
+|1582|Special Positions in a Binary Matrix|Easy||Java/Javascript||
+|1588|Sum of All Odd Length Subarrays|Easy||Java/Javascript||
 
 ### 2. String
 
