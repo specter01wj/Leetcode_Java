@@ -50,8 +50,9 @@ public class E1539_Kth_Missing_Positive_Number {
     */
 	
 	/*
-     * @param prices: a list of integers
-     * @return: an integer array answer where answer[i] is the final price
+     * @param arr: a list of integers
+     * @param k: an integer
+     * @return: the kth positive integer that is missing from this array
      */
 	public static int findKthPositive(int[] arr, int k) {
         int l = 0, r = arr.length, m;
