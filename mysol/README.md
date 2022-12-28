@@ -284,7 +284,9 @@ By Jin Wang
 |1534|**Count Good Triplets**|Easy|Java/Javascript|Done/Done|
 |1539|**Kth Missing Positive Number**|Easy|Java/Javascript|Done/Done|
 |1544|**Make The String Great**|Easy|Java/Javascript|Done/Done|
+|1550|**Three Consecutive Odds**|Easy|Java/Javascript|Done/Done|
 |1556|**Thousand Separator**|Easy|Java/Javascript|Done/Done|
+|1560|**Most Visited Sector in a Circular Track**|Easy|Java/Javascript|Done/Done|
 |1576|**Replace All ?'s to Avoid Consecutive Repeating Characters**|Easy|Java/Javascript|Done/Done|
 |1592|**Rearrange Spaces Between Words**|Easy|Java/Javascript|Done/Done|
 |1598|**Crawler Log Folder**|Easy|Java/Javascript|Done/Done|
