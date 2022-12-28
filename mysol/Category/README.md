@@ -206,8 +206,8 @@ Cspiration Category:
 |1512|Number of Good Pairs|Easy||Java/Javascript|Done/Done|
 |1534|Count Good Triplets|Easy||Java/Javascript|Done/Done|
 |1539|Kth Missing Positive Number|Easy||Java/Javascript|Done/Done|
-|1550|Three Consecutive Odds|Easy||Java/Javascript||
-|1560|Most Visited Sector in a Circular Track|Easy||Java/Javascript||
+|1550|Three Consecutive Odds|Easy||Java/Javascript|Done/Done|
+|1560|Most Visited Sector in a Circular Track|Easy||Java/Javascript|Done/Done|
 |1566|Detect Pattern of Length M Repeated K or More Times|Easy||Java/Javascript||
 |1572|Matrix Diagonal Sum|Easy||Java/Javascript||
 |1582|Special Positions in a Binary Matrix|Easy||Java/Javascript||
