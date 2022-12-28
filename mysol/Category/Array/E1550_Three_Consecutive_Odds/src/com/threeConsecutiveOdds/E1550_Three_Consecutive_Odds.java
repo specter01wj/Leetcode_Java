@@ -27,7 +27,15 @@ public class E1550_Three_Consecutive_Odds {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    simple loop
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: true if there are three consecutive odd numbers in the array
+     */
 	public static boolean threeConsecutiveOdds(int[] arr) {
         for (int i = 0, cnt = 0; i < arr.length; i++) {
         	if (arr[i] % 2 == 0) {
