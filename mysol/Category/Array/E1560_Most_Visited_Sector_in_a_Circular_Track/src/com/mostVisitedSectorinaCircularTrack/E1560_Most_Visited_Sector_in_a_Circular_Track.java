@@ -45,7 +45,18 @@ public class E1560_Most_Visited_Sector_in_a_Circular_Track {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    We only need to care the start point and the end point.
+    If start <= end, return the range [start, end].
+	If end < start, return the range [1, end] + range [start, n].
+    */
 	
+	/*
+     * @param n: an integer
+     * @param rounds: a list of integers
+     * @return: an array of the most visited sectors sorted in ascending order
+     */
 	public static List<Integer> mostVisited(int n, int[] rounds) {
         List<Integer> res = new ArrayList<>();
         for (int i = rounds[0]; i <= rounds[rounds.length - 1]; ++i) {
