@@ -39,7 +39,17 @@ public class E1572_Matrix_Diagonal_Sum {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Primary diagonals are row = column
+    Secondary diagonals are row + column = n-1
+    if n is a odd number, that mean we have added the center element twice
+    */
 	
+	/*
+     * @param mat: a list of integers
+     * @return: the sum of the matrix diagonals
+     */
 	public static int diagonalSum(int[][] mat) {
         int sum = 0, n = mat.length;
         
