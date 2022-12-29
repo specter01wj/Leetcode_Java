@@ -43,7 +43,17 @@ public class E1566_Detect_Pattern_of_Length_M_Repeated_K_or_More_Times {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Compare with a shift of m.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @param m: an integer
+     * @param k: an integer
+     * @return: true if there exists a pattern of length m that is repeated k or more times
+     */
 	public static boolean containsPattern(int[] arr, int m, int k) {
         for(int i = 0, j = i + m, count = 0; j < arr.length; ++i, ++j) {
             if (arr[i] != arr[j]) {
