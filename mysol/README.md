@@ -290,6 +290,8 @@ By Jin Wang
 |1566|**Detect Pattern of Length M Repeated K or More Times**|Easy|Java/Javascript|Done/Done|
 |1572|**Matrix Diagonal Sum**|Easy|Java/Javascript|Done/Done|
 |1576|**Replace All ?'s to Avoid Consecutive Repeating Characters**|Easy|Java/Javascript|Done/Done|
+|1582|**Special Positions in a Binary Matrix**|Easy|Java/Javascript|Done/Done|
+|1588|**Sum of All Odd Length Subarrays**|Easy|Java/Javascript|Done/Done|
 |1592|**Rearrange Spaces Between Words**|Easy|Java/Javascript|Done/Done|
 |1598|**Crawler Log Folder**|Easy|Java/Javascript|Done/Done|
 |1614|**Maximum Nesting Depth of the Parentheses**|Easy|Java/Javascript|Done/Done|
