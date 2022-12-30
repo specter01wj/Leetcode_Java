@@ -30,7 +30,15 @@ public class E1582_Special_Positions_in_a_Binary_Matrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Simple Loop
+    */
 	
+	/*
+     * @param mat: a list of 2D integers
+     * @return: the number of special positions in mat
+     */
 	public static int numSpecial(int[][] mat) {
         int m = mat.length, n = mat[0].length;
         int res = 0, col[] = new int[n], row[] = new int[m];
