@@ -66,7 +66,7 @@ public class E1588_Sum_of_All_Odd_Length_Subarrays {
      * @param arr: a list of integers
      * @return: the sum of all possible odd-length subarrays of arr
      */
-	public int sumOddLengthSubarrays(int[] arr) {
+	public static int sumOddLengthSubarrays(int[] arr) {
         int res = 0, n = arr.length;
         for (int i = 0; i < n; ++i) {
             res += ((i + 1) * (n - i) + 1) / 2 * arr[i];
