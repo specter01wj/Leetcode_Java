@@ -212,6 +212,19 @@ Cspiration Category:
 |1572|Matrix Diagonal Sum|Easy||Java/Javascript|Done/Done|
 |1582|Special Positions in a Binary Matrix|Easy||Java/Javascript|Done/Done|
 |1588|Sum of All Odd Length Subarrays|Easy||Java/Javascript|Done/Done|
+|1608|Special Array With X Elements Greater Than or Equal X|Easy||Java/Javascript||
+|1619|Mean of Array After Removing Some Elements|Easy||Java/Javascript||
+|1629|Slowest Key|Easy||Java/Javascript||
+|1636|Sort Array by Increasing Frequency|Easy||Java/Javascript||
+|1640|Check Array Formation Through Concatenation|Easy||Java/Javascript||
+|1646|Get Maximum in Generated Array|Easy||Java/Javascript||
+|1652|Defuse the Bomb|Easy||Java/Javascript||
+|1656|Design an Ordered Stream|Easy||Java/Javascript||
+|1662|Check If Two String Arrays are Equivalent|Easy||Java/Javascript||
+|1672|Richest Customer Wealth|Easy||Java/Javascript||
+|1684|Count the Number of Consistent Strings|Easy||Java/Javascript||
+|1700|Number of Students Unable to Eat Lunch|Easy||Java/Javascript||
+|1710|Maximum Units on a Truck|Easy||Java/Javascript||
 
 ### 2. String
 
