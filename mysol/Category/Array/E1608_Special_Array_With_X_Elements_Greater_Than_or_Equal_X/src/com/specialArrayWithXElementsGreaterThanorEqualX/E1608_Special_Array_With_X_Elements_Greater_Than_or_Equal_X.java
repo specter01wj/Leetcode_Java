@@ -58,8 +58,8 @@ public class E1608_Special_Array_With_X_Elements_Greater_Than_or_Equal_X {
         int x = nums.length;
         int[] counts = new int[x+1];
         
-        for(int elem : nums) {
-            if(elem >= x) {
+        for (int elem : nums) {
+            if (elem >= x) {
                 counts[x]++;
             } else {
                 counts[elem]++;
@@ -67,7 +67,7 @@ public class E1608_Special_Array_With_X_Elements_Greater_Than_or_Equal_X {
         }
         
         int res = 0;
-        for(int i = counts.length-1; i > 0; i--) {
+        for (int i = counts.length - 1; i > 0; i--) {
             res += counts[i];
             if(res == i) {
                 return i;
