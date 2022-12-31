@@ -43,7 +43,17 @@ public class E1608_Special_Array_With_X_Elements_Greater_Than_or_Equal_X {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    while counts[counts.length - 1] store the occurences for all numbers >= counts.length - 1
+    x is the max possible answer, so no need to count occurences for each number >= x
+    Consider the index i as x, and the goal is to find when (res = current number of elements >= x) == x
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: x if the array is special, otherwise, return -1
+     */
 	public static int specialArray(int[] nums) {
         int x = nums.length;
         int[] counts = new int[x+1];
