@@ -44,7 +44,7 @@ public class E1619_Mean_of_Array_After_Removing_Some_Elements {
      * @return: the mean of the remaining integers
      */
 	public static double trimMean(int[] arr) {
-       int n = arr.length;
+		int n = arr.length;
         double sum = 0d;
         Arrays.sort(arr);
         for (int i = n / 20; i < n - n / 20; ++i) {
