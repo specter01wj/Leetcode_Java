@@ -213,7 +213,7 @@ Cspiration Category:
 |1582|Special Positions in a Binary Matrix|Easy||Java/Javascript|Done/Done|
 |1588|Sum of All Odd Length Subarrays|Easy||Java/Javascript|Done/Done|
 |1608|Special Array With X Elements Greater Than or Equal X|Easy||Java/Javascript|Done/Done|
-|1619|Mean of Array After Removing Some Elements|Easy||Java/Javascript||
+|1619|Mean of Array After Removing Some Elements|Easy||Java/Javascript|Done/Done|
 |1629|Slowest Key|Easy||Java/Javascript||
 |1636|Sort Array by Increasing Frequency|Easy||Java/Javascript||
 |1640|Check Array Formation Through Concatenation|Easy||Java/Javascript||
