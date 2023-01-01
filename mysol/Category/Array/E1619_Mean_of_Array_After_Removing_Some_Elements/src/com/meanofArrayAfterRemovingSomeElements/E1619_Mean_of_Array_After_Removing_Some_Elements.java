@@ -34,7 +34,15 @@ public class E1619_Mean_of_Array_After_Removing_Some_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sort and sum.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the mean of the remaining integers
+     */
 	public static double trimMean(int[] arr) {
        int n = arr.length;
         double sum = 0d;
