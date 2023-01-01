@@ -296,6 +296,7 @@ By Jin Wang
 |1598|**Crawler Log Folder**|Easy|Java/Javascript|Done/Done|
 |1608|**Special Array With X Elements Greater Than or Equal X**|Easy|Java/Javascript|Done/Done|
 |1614|**Maximum Nesting Depth of the Parentheses**|Easy|Java/Javascript|Done/Done|
+|1619|**Mean of Array After Removing Some Elements**|Easy|Java/Javascript|Done/Done|
 |1624|**Largest Substring Between Two Equal Characters**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
