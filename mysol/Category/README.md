@@ -214,8 +214,8 @@ Cspiration Category:
 |1588|Sum of All Odd Length Subarrays|Easy||Java/Javascript|Done/Done|
 |1608|Special Array With X Elements Greater Than or Equal X|Easy||Java/Javascript|Done/Done|
 |1619|Mean of Array After Removing Some Elements|Easy||Java/Javascript|Done/Done|
-|1629|Slowest Key|Easy||Java/Javascript||
-|1636|Sort Array by Increasing Frequency|Easy||Java/Javascript||
+|1629|Slowest Key|Easy||Java/Javascript|Done/Done|
+|1636|Sort Array by Increasing Frequency|Easy||Java/Javascript|Done/Done|
 |1640|Check Array Formation Through Concatenation|Easy||Java/Javascript||
 |1646|Get Maximum in Generated Array|Easy||Java/Javascript||
 |1652|Defuse the Bomb|Easy||Java/Javascript||

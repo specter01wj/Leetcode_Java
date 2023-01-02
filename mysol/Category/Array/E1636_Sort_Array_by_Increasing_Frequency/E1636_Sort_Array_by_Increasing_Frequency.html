@@ -35,18 +35,12 @@
 		     * @return: the sorted array
 		     */
 				let frequencySort = function(nums) {
-					let time = new Array(26).fill(0);
-	        for (let i = 0; i < releaseTimes.length; ++i) {
-	            let c = keysPressed.charAt(i);
-	            time[c.charCodeAt() - 'a'.charCodeAt()] = Math.max(time[c.charCodeAt() - 'a'.charCodeAt()], releaseTimes[i] - (i === 0 ? 0 : releaseTimes[i - 1]));
-	        }
-	        let ans = 'z';
-	        for (let c = 'y'.charCodeAt(); c >= 'a'.charCodeAt(); --c) {
-	            if (time[ans.charCodeAt() - 'a'.charCodeAt()] < time[c - 'a'.charCodeAt()]) {
-	                ans = String.fromCharCode(c);
-	            }
-	        }
-	        return ans; 
+					let data = JSON.parse(JSON.stringify(nums))
+					const map = new Map();
+			    for (let n of data) {
+			        map.set(n, (map.get(n) + 1) || 1);
+			    }
+			    return data.sort((a, b) => map.get(a) - map.get(b) || b - a)
 				};
 
 				let input = [1,1,2,2,2,3];
