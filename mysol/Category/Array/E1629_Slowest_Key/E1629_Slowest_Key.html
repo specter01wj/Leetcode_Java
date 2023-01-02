@@ -57,16 +57,16 @@
 		     * @param keysPressed: a String
 		     * @return: the key of the keypress that had the longest duration
 		     */
-				let slowestKey = function(arr) {
-					int[] time = new int[26];
-	        for (int i = 0; i < releaseTimes.length; ++i) {
-	            char c = keysPressed.charAt(i);
-	            time[c - 'a'] = Math.max(time[c - 'a'], releaseTimes[i] - (i == 0 ? 0 : releaseTimes[i - 1]));
+				let slowestKey = function(releaseTimes, keysPressed) {
+					let time = new Array(26).fill(0);
+	        for (let i = 0; i < releaseTimes.length; ++i) {
+	            let c = keysPressed.charAt(i);
+	            time[c.charCodeAt() - 'a'.charCodeAt()] = Math.max(time[c.charCodeAt() - 'a'.charCodeAt()], releaseTimes[i] - (i === 0 ? 0 : releaseTimes[i - 1]));
 	        }
-	        char ans = 'z';
-	        for (char c = 'y'; c >= 'a'; --c) {
-	            if (time[ans - 'a'] < time[c - 'a']) {
-	                ans = c;
+	        let ans = 'z';
+	        for (let c = 'y'.charCodeAt(); c >= 'a'.charCodeAt(); --c) {
+	            if (time[ans.charCodeAt() - 'a'.charCodeAt()] < time[c - 'a'.charCodeAt()]) {
+	                ans = String.fromCharCode(c);
 	            }
 	        }
 	        return ans; 
