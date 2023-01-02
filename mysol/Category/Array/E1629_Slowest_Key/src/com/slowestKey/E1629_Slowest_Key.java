@@ -58,7 +58,17 @@ public class E1629_Slowest_Key {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Traverse the input array and string, compute the press time for each character 
+    and update the longest time.
+    */
 	
+	/*
+     * @param releaseTimes: a list of integers
+     * @param keysPressed: a String
+     * @return: the key of the keypress that had the longest duration
+     */
 	public static char slowestKey(int[] releaseTimes, String keysPressed) {
        int[] time = new int[26];
         for (int i = 0; i < releaseTimes.length; ++i) {
