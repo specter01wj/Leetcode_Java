@@ -298,6 +298,8 @@ By Jin Wang
 |1614|**Maximum Nesting Depth of the Parentheses**|Easy|Java/Javascript|Done/Done|
 |1619|**Mean of Array After Removing Some Elements**|Easy|Java/Javascript|Done/Done|
 |1624|**Largest Substring Between Two Equal Characters**|Easy|Java/Javascript|Done/Done|
+|1629|**Slowest Key**|Easy|Java/Javascript|Done/Done|
+|1636|**Sort Array by Increasing Frequency**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
