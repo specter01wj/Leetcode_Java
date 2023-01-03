@@ -40,7 +40,7 @@
 			    for (let n of data) {
 			        map.set(n, (map.get(n) + 1) || 1);
 			    }
-			    return data.sort((a, b) => map.get(a) - map.get(b) || b - a)
+			    return data.sort((a, b) => map.get(a) - map.get(b) || b - a);
 				};
 
 				let input = [1,1,2,2,2,3];
