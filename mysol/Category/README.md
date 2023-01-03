@@ -216,8 +216,8 @@ Cspiration Category:
 |1619|Mean of Array After Removing Some Elements|Easy||Java/Javascript|Done/Done|
 |1629|Slowest Key|Easy||Java/Javascript|Done/Done|
 |1636|Sort Array by Increasing Frequency|Easy||Java/Javascript|Done/Done|
-|1640|Check Array Formation Through Concatenation|Easy||Java/Javascript||
-|1646|Get Maximum in Generated Array|Easy||Java/Javascript||
+|1640|Check Array Formation Through Concatenation|Easy||Java/Javascript|Done/Done|
+|1646|Get Maximum in Generated Array|Easy||Java/Javascript|Done/Done|
 |1652|Defuse the Bomb|Easy||Java/Javascript||
 |1656|Design an Ordered Stream|Easy||Java/Javascript||
 |1662|Check If Two String Arrays are Equivalent|Easy||Java/Javascript||
