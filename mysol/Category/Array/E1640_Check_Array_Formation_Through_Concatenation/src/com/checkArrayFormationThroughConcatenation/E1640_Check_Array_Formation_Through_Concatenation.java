@@ -38,7 +38,19 @@ public class E1640_Check_Array_Formation_Through_Concatenation {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Store the pieces in such a way that each array piece is linked and first element 
+    of each piece should be accessible in O(1) time. Hence using a HashMap. 
+    Then, traverse the arr and check if each value exits as a key (rest of the values 
+    in the arraylist of each key will be indexed over & checked in for loop)
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @param pieces: a list of 2D integers
+     * @return: true if it is possible to form the array arr from pieces
+     */
 	public static boolean canFormArray(int[] arr, int[][] pieces) {
         HashMap<Integer,int[]> hm = new HashMap();
         for(int[] list:pieces) {
