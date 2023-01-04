@@ -46,7 +46,19 @@ public class E1652_Defuse_the_Bomb {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    sliding window
+    Define the initial window and initial sum
+    If k < 0, the starting point will be end of the array.
+    Scan through the code array as i moving to the right, update the window sum.
+    */
 	
+	/*
+     * @param code: a list of integers
+     * @param k: an integer
+     * @return: the decrypted code to defuse the bomb
+     */
 	public static int[] decrypt(int[] code, int k) {
         int[] res = new int[code.length];
         if (k == 0) return res;
