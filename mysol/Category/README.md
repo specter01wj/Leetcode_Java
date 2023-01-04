@@ -220,7 +220,7 @@ Cspiration Category:
 |1646|Get Maximum in Generated Array|Easy||Java/Javascript|Done/Done|
 |1652|Defuse the Bomb|Easy||Java/Javascript|Done/Done|
 |1656|Design an Ordered Stream|Easy||Java/Javascript|Done/Done|
-|1662|Check If Two String Arrays are Equivalent|Easy||Java/Javascript||
+|1662|Check If Two String Arrays are Equivalent|Easy||Java/Javascript|Done/Done|
 |1672|Richest Customer Wealth|Easy||Java/Javascript||
 |1684|Count the Number of Consistent Strings|Easy||Java/Javascript||
 |1700|Number of Students Unable to Eat Lunch|Easy||Java/Javascript||
