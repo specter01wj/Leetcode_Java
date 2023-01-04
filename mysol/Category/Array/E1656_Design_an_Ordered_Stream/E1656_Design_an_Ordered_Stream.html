@@ -4,71 +4,84 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You have a bomb to defuse, and your time is running out! Your informer 
-				will provide you with a circular array code of length of n and a key k.
+			 	There is a stream of n (idKey, value) pairs arriving in an arbitrary order, 
+				where idKey is an integer between 1 and n and value is a string. No two 
+				pairs have the same id.
 
-				To decrypt the code, you must replace every number. All the numbers are replaced simultaneously.
+				Design a stream that returns the values in increasing order of their IDs 
+				by returning a chunk (list) of values after each insertion. 
+				The concatenation of all the chunks should result in a list of the sorted values.
 
-					.If k > 0, replace the ith number with the sum of the next k numbers.
-					.If k < 0, replace the ith number with the sum of the previous k numbers.
-					.If k == 0, replace the ith number with 0.
-				As code is circular, the next element of code[n-1] is code[0], and the previous element of code[0] 
-				is code[n-1].
+				Implement the OrderedStream class:
 
-				Given the circular array code and an integer key k, return the decrypted code to defuse the bomb!
+					.OrderedStream(int n) Constructs the stream to take n values.
+					.String[] insert(int idKey, String value) Inserts the pair (idKey, value) 
+					 into the stream, then returns the largest possible chunk of currently 
+					 inserted values that appear next in the order.
 
 
-				Example 1:
+				Example:
 
-				Input: code = [5,7,1,4], k = 3
-				Output: [12,10,16,13]
-				Explanation: Each number is replaced by the sum of the next 3 numbers. 
-				The decrypted code is [7+1+4, 1+4+5, 4+5+7, 5+7+1]. Notice that the numbers wrap around.
+				Input
+				["OrderedStream", "insert", "insert", "insert", "insert", "insert"]
+				[[5], [3, "ccccc"], [1, "aaaaa"], [2, "bbbbb"], [5, "eeeee"], [4, "ddddd"]]
+				Output
+				[null, [], ["aaaaa"], ["bbbbb", "ccccc"], [], ["ddddd", "eeeee"]]
 
-				Example 2:
-
-				Input: code = [1,2,3,4], k = 0
-				Output: [0,0,0,0]
-				Explanation: When k is zero, the numbers are replaced by 0. 
-
-				Example 3:
-
-				Input: code = [2,4,9,3], k = -2
-				Output: [12,5,6,13]
-				Explanation: The decrypted code is [3+9, 2+3, 4+2, 9+4]. 
-				Notice that the numbers wrap around again. If k is negative, the sum is of the previous numbers.
+				Explanation
+				// Note that the values ordered by ID is ["aaaaa", "bbbbb", "ccccc", "ddddd", "eeeee"].
+				OrderedStream os = new OrderedStream(5);
+				os.insert(3, "ccccc"); // Inserts (3, "ccccc"), returns [].
+				os.insert(1, "aaaaa"); // Inserts (1, "aaaaa"), returns ["aaaaa"].
+				os.insert(2, "bbbbb"); // Inserts (2, "bbbbb"), returns ["bbbbb", "ccccc"].
+				os.insert(5, "eeeee"); // Inserts (5, "eeeee"), returns [].
+				os.insert(4, "ddddd"); // Inserts (4, "ddddd"), returns ["ddddd", "eeeee"].
+				// Concatentating all the chunks returned:
+				// [] + ["aaaaa"] + ["bbbbb", "ccccc"] + [] + ["ddddd", "eeeee"] = ["aaaaa", "bbbbb", "ccccc", "ddddd", "eeeee"]
+				// The resulting order is the same as the order above.
 			 */
 			$(document).ready(function(){
 
 				/*
-		     * @param code: a list of integers
-		     * @param k: an integer
-		     * @return: the decrypted code to defuse the bomb
+		     * @param idKey: a list of integers
+		     * @param value: an integer
+		     * @return: Implement the OrderedStream class
 		     */
-				let decrypt = function(code, k) {
-					let res = new Array(code.length).fill(0);
-	        if (k === 0) return res;
-	        let start = 1, end = k, sum = 0;
-	        if (k < 0) {
-	            k = -k;
-	            start = code.length - k;
-	            end = code.length - 1;
-	        }
-	        for (let i = start; i <= end; i++) {
-	            sum += code[i];
-	        }
-	        
-	        for (let i = 0; i < code.length; i++) {
-	            res[i] = sum;
-	            sum -= code[(start++) % code.length];
-	            sum += code[(++end) % code.length];
-	        }
-	        return res;
+				var OrderedStream = function(n) {
+				  // initialize array
+				  this.arr = [];
+				  // start pointer at index of 0
+				  this.p = 0;
+				  //set array to have length of n
+				  this.arr.length = n;
 				};
 
-				let input = [5,7,1,4], key = 3;
-				let tt1 = decrypt(input, key);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+				/** 
+				 * @param {number} idKey 
+				 * @param {string} value
+				 * @return {string[]}
+				 */
+				OrderedStream.prototype.insert = function(idKey, value) {
+				  // push the value into array at index of idKey
+				  this.arr[idKey - 1] = value;
+				  // initialize result array
+				  let result = [];
+				  
+				  // while the pointer has a value, push that value into the result array and advance the pointer
+				  while (this.arr[this.p]) {
+				    result.push(this.arr[this.p]);
+				    this.p++;
+				  }
+				  // return the result array which will either be empty if the pointer was null, or will have the chunks pushed into it
+				  return result;
+				};
+
+				let idKey = ["OrderedStream", "insert", "insert", "insert", "insert", "insert"];
+				let value = [[5], [3, "ccccc"], [1, "aaaaa"], [2, "bbbbb"], [5, "eeeee"], [4, "ddddd"]];
+				let n = 6;
+				var obj = new OrderedStream(n)
+ 				var param_1 = obj.insert(idKey,value)
+				$('#t1').html('<h2>Input: ' + idKey + '<br>Results: ' + (param_1) + '</h2>');
 			});
 
 			/*sol:
