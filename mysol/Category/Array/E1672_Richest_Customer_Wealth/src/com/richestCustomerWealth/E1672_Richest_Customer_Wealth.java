@@ -43,7 +43,15 @@ public class E1672_Richest_Customer_Wealth {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    simple loop
+    */
 	
+	/*
+     * @param accounts: a list of 2D integers
+     * @return: the wealth that the richest customer has
+     */
 	public static int maximumWealth(int[][] accounts) {
         int res = 0;
         for(int i = 0;i < accounts.length;i++){
