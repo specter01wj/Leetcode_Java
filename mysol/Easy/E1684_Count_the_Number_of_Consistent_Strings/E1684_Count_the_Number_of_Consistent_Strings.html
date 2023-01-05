@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a string allowed consisting of distinct characters 
+				and an array of strings words. A string is consistent if all 
+				characters in the string appear in the string allowed.
+
+				Return the number of consistent strings in the array words.
+
+
+				Example 1:
+
+				Input: allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
+				Output: 2
+				Explanation: Strings "aaab" and "baa" are consistent since they only contain characters 'a' and 'b'.
+
+				Example 2:
+
+				Input: allowed = "abc", words = ["a","b","c","ab","ac","bc","abc"]
+				Output: 7
+				Explanation: All strings are consistent.
+
+				Example 3:
+
+				Input: allowed = "cad", words = ["cc","acd","b","ba","bac","bad","ac","d"]
+				Output: 4
+				Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param allowed: a string
+		     * @param words: a list of strings
+		     * @return: the number of consistent strings in the array words
+		     */
+				let countConsistentStrings = function(allowed, words) {
+					let count = words.length;
+	        let store = new Array(26).fill(0);
+
+	        for (let c of allowed.split('')){
+	            store[c.charCodeAt() - 'a'.charCodeAt()]++;
+	        }
+
+	        for (let word of words) {
+	            for (let c of word.split('')) {
+	                if (store[c.charCodeAt() - 'a'.charCodeAt()] <= 0){
+	                    count--;
+	                    break;
+	                }
+	            }
+	        }
+	        return count;
+				};
+
+				const countConsistentStrings_2 = (allowed, words) => {
+				  let set = new Set(allowed)
+				  return words.reduce((acc, curr) => {
+				    return curr.split('').every((item) => set.has(item)) ? ++acc : acc
+				  }, 0)
+				}
+
+				let input = ["ad","bd","aaab","baa","badab"], allowed = "ab";
+				let tt1 = countConsistentStrings(allowed, input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				map and count
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
