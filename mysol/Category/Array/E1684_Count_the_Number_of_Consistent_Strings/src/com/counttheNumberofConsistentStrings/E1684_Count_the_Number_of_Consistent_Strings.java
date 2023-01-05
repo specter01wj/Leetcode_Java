@@ -31,13 +31,22 @@ Explanation: Strings "cc", "acd", "ac", and "d" are consistent.
 public class E1684_Count_the_Number_of_Consistent_Strings {
 
 	public static void main(String[] args) {
-		String[] input = {"ad","bd","aaab","baa","badab"};
 		String allowed = "ab";
+		String[] input = {"ad","bd","aaab","baa","badab"};
 		int output = countConsistentStrings(allowed, input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    map and count
+    */
 	
+	/*
+     * @param allowed: a string
+     * @param words: a list of strings
+     * @return: the number of consistent strings in the array words
+     */
 	public static int countConsistentStrings(String allowed, String[] words) {
         int count = words.length;
         int[] store = new int[26];
