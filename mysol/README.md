@@ -305,6 +305,8 @@ By Jin Wang
 |1652|**Defuse the Bomb**|Easy|Java/Javascript|Done/Done|
 |1656|**Design an Ordered Stream**|Easy|Java/Javascript|Done/Done|
 |1662|**Check If Two String Arrays are Equivalent**|Easy|Java/Javascript|Done/Done|
+|1672|**Richest Customer Wealth**|Easy|Java/Javascript|Done/Done|
+|1684|**Count the Number of Consistent Strings**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
