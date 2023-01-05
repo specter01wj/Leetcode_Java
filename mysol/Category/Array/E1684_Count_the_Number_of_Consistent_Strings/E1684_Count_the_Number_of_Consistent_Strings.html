@@ -57,13 +57,13 @@
 
 				const countConsistentStrings_2 = (allowed, words) => {
 				  let set = new Set(allowed)
-				  return words.reduce((a, w) => {
-				    return w.split('').every(l => set.has(l)) ? ++a : a
+				  return words.reduce((acc, curr) => {
+				    return curr.split('').every((item) => set.has(item)) ? ++acc : acc
 				  }, 0)
 				}
 
 				let input = ["ad","bd","aaab","baa","badab"], allowed = "ab";
-				let tt1 = countConsistentStrings_2(allowed, input);
+				let tt1 = countConsistentStrings(allowed, input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
