@@ -36,8 +36,9 @@ Output: 91
 public class E1710_Maximum_Units_on_a_Truck {
 
 	public static void main(String[] args) {
-		int[][] input = {{1,3},{2,2},{3,1}};
-		int truckSize = 4;
+//		int[][] input = {{1,3},{2,2},{3,1}};
+		int[][] input = {{5,10},{2,5},{4,7},{3,9}};
+		int truckSize = 10;
 		int output = maximumUnits(input, truckSize);
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
