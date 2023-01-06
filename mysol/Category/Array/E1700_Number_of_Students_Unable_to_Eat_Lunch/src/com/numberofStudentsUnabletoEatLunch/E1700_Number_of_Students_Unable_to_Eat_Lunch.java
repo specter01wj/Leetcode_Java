@@ -46,8 +46,34 @@ Output: 3
 public class E1700_Number_of_Students_Unable_to_Eat_Lunch {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] input = {1,1,0,0}, sandwiches = {0,1,0,1};
+		int output = countStudents(input, sandwiches);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
+	
+	/*
+    solution:
+    Count students' preference of food to count
+	Now we iterate the food one by one,
+	and see if any one in the left students queue will take it.
+	We stop at sandwiches[k] if no one wants it,
+	then n - k students are unable to eat.
+    */
+	
+	/*
+     * @param students: a list of integers
+     * @param sandwiches: a list of integers
+     * @return: the number of students that are unable to eat
+     */
+	public static int countStudents(int[] students, int[] sandwiches) {
+        int count[] = {0, 0}, n = students.length, k;
+        for (int i : students) {
+            count[i]++;
+        }
+        for (k = 0; k < n && count[sandwiches[k]] > 0; ++k) {
+            count[sandwiches[k]]--;
+        }
+        return n - k;
+    }
 
 }
