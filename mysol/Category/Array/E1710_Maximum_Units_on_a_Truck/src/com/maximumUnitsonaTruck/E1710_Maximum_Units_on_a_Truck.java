@@ -43,7 +43,16 @@ public class E1710_Maximum_Units_on_a_Truck {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sort reversely
+    */
 	
+	/*
+     * @param boxTypes: a list of 2D integers
+     * @param truckSize: an integer
+     * @return: the number of good triplets
+     */
 	public static int maximumUnits(int[][] boxTypes, int truckSize) {
         Arrays.sort(boxTypes, (a, b) -> Integer.compare(b[1], a[1]));
         int boxes = 0;
