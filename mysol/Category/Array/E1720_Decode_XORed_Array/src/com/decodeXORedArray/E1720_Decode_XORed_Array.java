@@ -29,8 +29,20 @@ Output: [4,2,0,7,4]
 public class E1720_Decode_XORed_Array {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] input = {1,2,3};
+		int first = 1;
+		int[] output = decode(input, first);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
+	
+	
+	public static int[] decode(int[] encoded, int first) {
+        int n = encoded.length, res[] = new int[n + 1];
+        res[0] = first;
+        for (int i = 0; i < n; ++i) {
+            res[i + 1] = res[i] ^ encoded[i];
+        }
+        return res;
+    }
 
 }
