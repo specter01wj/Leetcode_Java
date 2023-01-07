@@ -35,7 +35,23 @@ public class E1720_Decode_XORed_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    For each element we have
+	A[i] = res[i] ^ res[i+1]
+	A[i] ^ A[i] ^ res[i+1] = res[i] ^ res[i+1] ^ A[i] ^ res[i+1]
+	res[i+1] = res[i] ^ A[i]
 	
+	So we use the conslusion above,
+	iterate the input encoded array A,
+	update res[i + 1] = res[i] ^ A[i].
+    */
+	
+	/*
+     * @param encoded: a list of integers
+     * @param first: an integer
+     * @return: the original array arr. It can be proved that the answer exists and is unique
+     */
 	public static int[] decode(int[] encoded, int first) {
         int n = encoded.length, res[] = new int[n + 1];
         res[0] = first;
