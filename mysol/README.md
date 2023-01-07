@@ -309,6 +309,7 @@ By Jin Wang
 |1684|**Count the Number of Consistent Strings**|Easy|Java/Javascript|Done/Done|
 |1700|**Number of Students Unable to Eat Lunch**|Easy|Java/Javascript|Done/Done|
 |1710|**Maximum Units on a Truck**|Easy|Java/Javascript|Done/Done|
+|1720|**Decode XORed Array**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
