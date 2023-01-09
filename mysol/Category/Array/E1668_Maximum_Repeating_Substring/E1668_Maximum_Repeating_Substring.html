@@ -41,7 +41,7 @@
 		     */
 				let maxRepeating = function(sequence, word) {
 					let ans = 1;
-	        while (sequence.contains(word.repeat(ans))) {
+	        while (sequence.includes(word.repeat(ans))) {
 	            ++ans;
 	        }
 	        return ans - 1;
