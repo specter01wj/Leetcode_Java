@@ -305,7 +305,9 @@ By Jin Wang
 |1652|**Defuse the Bomb**|Easy|Java/Javascript|Done/Done|
 |1656|**Design an Ordered Stream**|Easy|Java/Javascript|Done/Done|
 |1662|**Check If Two String Arrays are Equivalent**|Easy|Java/Javascript|Done/Done|
+|1668|**Maximum Repeating Substring**|Easy|Java/Javascript|Done/Done|
 |1672|**Richest Customer Wealth**|Easy|Java/Javascript|Done/Done|
+|1678|**Goal Parser Interpretation**|Easy|Java/Javascript|Done/Done|
 |1684|**Count the Number of Consistent Strings**|Easy|Java/Javascript|Done/Done|
 |1700|**Number of Students Unable to Eat Lunch**|Easy|Java/Javascript|Done/Done|
 |1710|**Maximum Units on a Truck**|Easy|Java/Javascript|Done/Done|
