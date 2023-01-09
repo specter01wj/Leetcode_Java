@@ -39,17 +39,30 @@
 		     * @param command: a string
 		     * @return: the Goal Parser's interpretation of command
 		     */
-				let maxRepeating = function(sequence, word) {
-					let ans = 1;
-	        while (sequence.includes(word.repeat(ans))) {
-	            ++ans;
+				let interpret = function(command) {
+					let sb = "";
+	        for (let i = 0; i < command.length; ++i) {
+	            let c = command.charAt(i);
+	            if (c === 'G') {
+	                sb = sb.concat(c);
+	            } else if (c === '(' && command.charAt(i + 1) === ')') {
+	                sb = sb.concat("o");
+	                ++i;
+	            } else {
+	                sb = sb.concat("al");
+	                i += 3;
+	            }
 	        }
-	        return ans - 1;
+	        return sb;
 				};
 
-				let sequence = "ababc", word = "ab";
-				let tt1 = maxRepeating(sequence, word);
-				$('#t1').html('<h2>Input: ' + sequence + '<br>Results: ' + (tt1) + '</h2>');
+				function interpret_2(command) {
+				    return command.split("()").join("o").split("(al)").join("al");
+				};
+
+				let command = "G()()()()(al)";
+				let tt1 = interpret_2(command);
+				$('#t1').html('<h2>Input: ' + command + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
