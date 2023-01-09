@@ -226,6 +226,7 @@ Cspiration Category:
 |1700|Number of Students Unable to Eat Lunch|Easy||Java/Javascript|Done/Done|
 |1710|Maximum Units on a Truck|Easy||Java/Javascript|Done/Done|
 |1720|Decode XORed Array|Easy||Java/Javascript|Done/Done|
+|1725|Number Of Rectangles That Can Form The Largest Square|Easy||Java/Javascript|Done/Done|
 
 ### 2. String
 
