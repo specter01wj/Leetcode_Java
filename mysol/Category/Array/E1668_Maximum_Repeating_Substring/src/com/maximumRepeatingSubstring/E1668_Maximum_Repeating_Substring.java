@@ -39,7 +39,16 @@ public class E1668_Maximum_Repeating_Substring {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Bruteforce
+    */
 	
+	/**
+     * @param sequence: a string
+     * @param word: a string
+     * @return: the maximum k-repeating value of word in sequence
+     */
 	public static int maxRepeating(String sequence, String word) {
         int ans = 1;
         while (sequence.contains(word.repeat(ans))) {
