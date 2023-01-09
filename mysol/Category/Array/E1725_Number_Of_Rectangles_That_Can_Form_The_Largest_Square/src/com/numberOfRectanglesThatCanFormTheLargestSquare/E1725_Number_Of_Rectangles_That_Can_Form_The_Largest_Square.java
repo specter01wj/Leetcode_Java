@@ -33,7 +33,7 @@ public class E1725_Number_Of_Rectangles_That_Can_Form_The_Largest_Square {
 	public static void main(String[] args) {
 		int[][] input = {{5,8},{3,9},{5,12},{16,5}};
 		int output = countGoodRectangles(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
 	
