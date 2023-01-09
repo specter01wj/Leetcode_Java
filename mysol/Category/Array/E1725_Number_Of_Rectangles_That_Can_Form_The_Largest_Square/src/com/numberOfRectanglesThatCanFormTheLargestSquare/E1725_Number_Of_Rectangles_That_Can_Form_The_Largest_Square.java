@@ -36,7 +36,20 @@ public class E1725_Number_Of_Rectangles_That_Can_Form_The_Largest_Square {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    There are 3 cases after initializing the counter cnt and the max side mx as 0:
+	The square side
 	
+	1. greater than mx, reset cnt to 1 and update mx;
+	2. == mx, increase cnt by 1;
+	3. less than mx, ignore it.
+    */
+	
+	/*
+     * @param rectangles: a list of 2D integers
+     * @return: the number of rectangles that can make a square with a side length of maxLen
+     */
 	public static int countGoodRectangles(int[][] rectangles) {
         int cnt = 0, mx = 0;
         for (int[] rec : rectangles) {
