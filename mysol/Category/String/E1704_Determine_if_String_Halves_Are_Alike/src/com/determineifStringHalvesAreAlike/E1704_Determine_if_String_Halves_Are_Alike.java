@@ -36,7 +36,15 @@ public class E1704_Determine_if_String_Halves_Are_Alike {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Use Set to check equality.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: true if a and b are alike
+     */
 	public static boolean halvesAreAlike(String s) {
         var vowels = Set.of('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U');
         int a = 0, b = 0;
