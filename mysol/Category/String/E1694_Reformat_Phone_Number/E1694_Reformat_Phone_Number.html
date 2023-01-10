@@ -4,64 +4,79 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You own a Goal Parser that can interpret a string command. 
-				The command consists of an alphabet of "G", "()" and/or "(al)" in some order. 
-				The Goal Parser will interpret "G" as the string "G", "()" as the string "o", 
-				and "(al)" as the string "al". 
-				The interpreted strings are then concatenated in the original order.
+			 	You are given a phone number as a string number. number consists of digits, 
+				spaces ' ', and/or dashes '-'.
 
-				Given the string command, return the Goal Parser's interpretation of command.
+				You would like to reformat the phone number in a certain manner. 
+				Firstly, remove all spaces and dashes. Then, group the digits from 
+				left to right into blocks of length 3 until there are 4 or fewer digits. 
+				The final digits are then grouped as follows:
+
+					.2 digits: A single block of length 2.
+					.3 digits: A single block of length 3.
+					.4 digits: Two blocks of length 2 each.
+					
+				The blocks are then joined by dashes. Notice that the reformatting process 
+				should never produce any blocks of length 1 and produce at most two blocks of length 2.
+
+				Return the phone number after formatting.
 
 
 				Example 1:
 
-				Input: command = "G()(al)"
-				Output: "Goal"
-				Explanation: The Goal Parser interprets the command as follows:
-				G -> G
-				() -> o
-				(al) -> al
-				The final concatenated result is "Goal".
+				Input: number = "1-23-45 6"
+				Output: "123-456"
+				Explanation: The digits are "123456".
+				Step 1: There are more than 4 digits, so group the next 3 digits. The 1st block is "123".
+				Step 2: There are 3 digits remaining, so put them in a single block of length 3. The 2nd block is "456".
+				Joining the blocks gives "123-456".
 
 				Example 2:
 
-				Input: command = "G()()()()(al)"
-				Output: "Gooooal"
+				Input: number = "123 4-567"
+				Output: "123-45-67"
+				Explanation: The digits are "1234567".
+				Step 1: There are more than 4 digits, so group the next 3 digits. The 1st block is "123".
+				Step 2: There are 4 digits left, so split them into two blocks of length 2. The blocks are "45" and "67".
+				Joining the blocks gives "123-45-67".
 
 				Example 3:
 
-				Input: command = "(al)G(al)()()G"
-				Output: "alGalooG"
+				Input: number = "123 4-5678"
+				Output: "123-456-78"
+				Explanation: The digits are "12345678".
+				Step 1: The 1st block is "123".
+				Step 2: The 2nd block is "456".
+				Step 3: There are 2 digits left, so put them in a single block of length 2. The 3rd block is "78".
+				Joining the blocks gives "123-456-78".
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param command: a string
-		     * @return: the Goal Parser's interpretation of command
+		     * @param number: a string
+		     * @return: the phone number after formatting
 		     */
-				let interpret = function(command) {
-					let sb = "";
-	        for (let i = 0; i < command.length; ++i) {
-	            let c = command.charAt(i);
-	            if (c === 'G') {
-	                sb = sb.concat(c);
-	            } else if (c === '(' && command.charAt(i + 1) === ')') {
-	                sb = sb.concat("o");
-	                ++i;
-	            } else {
-	                sb = sb.concat("al");
-	                i += 3;
+				let reformatNumber = function(number) {
+					let sb = [];
+	        for (let c of number.split('')) {
+	            if (c !== " " && c !== "-") {
+	                sb.push(c);
 	            }
 	        }
-	        return sb;
+	        let i = 0;
+	        while(i < sb.length - 4) {
+	            sb.splice(i + 3, 0, '-');
+	            i += 4;
+	        }
+	        
+	        if (sb.length - i == 4) {
+	            sb.splice(i + 2, 0, '-');
+	        }
+	        return sb.join('');
 				};
 
-				function interpret_2(command) {
-				    return command.split("()").join("o").split("(al)").join("al");
-				};
-
-				let command = "G()()()()(al)";
-				let tt1 = interpret_2(command);
+				let command = "123 4-567";
+				let tt1 = reformatNumber(command);
 				$('#t1').html('<h2>Input: ' + command + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
