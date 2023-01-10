@@ -363,8 +363,8 @@ Cspiration Category:
 |1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript|Done/Done|
 |1668|Maximum Repeating Substring|Easy||Java/Javascript|Done/Done|
 |1678|Goal Parser Interpretation|Easy||Java/Javascript|Done/Done|
-|1694|Reformat Phone Number|Easy||Java/Javascript||
-|1704|Determine if String Halves Are Alike|Easy||Java/Javascript||
+|1694|Reformat Phone Number|Easy||Java/Javascript|Done/Done|
+|1704|Determine if String Halves Are Alike|Easy||Java/Javascript|Done/Done|
 |1736|Latest Time by Replacing Hidden Digits|Easy||Java/Javascript||
 |1758|Minimum Changes To Make Alternating Binary String|Easy||Java/Javascript||
 |1763|Longest Nice Substring|Easy||Java/Javascript||
