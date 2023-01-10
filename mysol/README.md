@@ -309,7 +309,9 @@ By Jin Wang
 |1672|**Richest Customer Wealth**|Easy|Java/Javascript|Done/Done|
 |1678|**Goal Parser Interpretation**|Easy|Java/Javascript|Done/Done|
 |1684|**Count the Number of Consistent Strings**|Easy|Java/Javascript|Done/Done|
+|1694|**Reformat Phone Number**|Easy|Java/Javascript|Done/Done|
 |1700|**Number of Students Unable to Eat Lunch**|Easy|Java/Javascript|Done/Done|
+|1704|**Determine if String Halves Are Alike**|Easy|Java/Javascript|Done/Done|
 |1710|**Maximum Units on a Truck**|Easy|Java/Javascript|Done/Done|
 |1720|**Decode XORed Array**|Easy|Java/Javascript|Done/Done|
 |1725|**Number Of Rectangles That Can Form The Largest Square**|Easy|Java/Javascript|Done/Done|
