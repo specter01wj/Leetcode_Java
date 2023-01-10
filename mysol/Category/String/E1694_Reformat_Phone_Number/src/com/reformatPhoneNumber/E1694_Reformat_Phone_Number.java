@@ -57,7 +57,15 @@ public class E1694_Reformat_Phone_Number {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    StringBuilder
+    */
 	
+	/**
+     * @param number: a string
+     * @return: the phone number after formatting
+     */
 	public static String reformatNumber(String number) {
         StringBuilder sb = new StringBuilder();
         for (char c : number.toCharArray()) {
