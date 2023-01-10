@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a string s of even length. Split this string into two halves 
+				of equal lengths, and let a be the first half and b be the second half.
+
+				Two strings are alike if they have the same number of vowels 
+				('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'). 
+				Notice that s contains uppercase and lowercase letters.
+
+				Return true if a and b are alike. Otherwise, return false.
+
+
+				Example 1:
+
+				Input: s = "book"
+				Output: true
+				Explanation: a = "bo" and b = "ok". a has 1 vowel and b has 1 vowel. 
+				Therefore, they are alike.
+
+				Example 2:
+
+				Input: s = "textbook"
+				Output: false
+				Explanation: a = "text" and b = "book". a has 1 vowel whereas b has 2. 
+				Therefore, they are not alike.
+				Notice that the vowel o is counted twice.
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param s: a string
+		     * @return: true if a and b are alike
+		     */
+				let halvesAreAlike = function(s) {
+					let vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+	        let a = 0, b = 0;
+	        for (let i = 0, j = s.length - 1; i < j; ++i, --j) {
+	            a += vowels.includes(s.charAt(i)) ? 1 : 0;
+	            b += vowels.includes(s.charAt(j)) ? 1 : 0;
+	        }
+	        return a === b;
+				};
+
+				let input = "book";
+				let tt1 = halvesAreAlike(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				Use Set to check equality.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
