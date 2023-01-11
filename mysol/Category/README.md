@@ -365,7 +365,7 @@ Cspiration Category:
 |1678|Goal Parser Interpretation|Easy||Java/Javascript|Done/Done|
 |1694|Reformat Phone Number|Easy||Java/Javascript|Done/Done|
 |1704|Determine if String Halves Are Alike|Easy||Java/Javascript|Done/Done|
-|1736|Latest Time by Replacing Hidden Digits|Easy||Java/Javascript||
+|1736|Latest Time by Replacing Hidden Digits|Easy||Java/Javascript|Done/Done|
 |1758|Minimum Changes To Make Alternating Binary String|Easy||Java/Javascript||
 |1763|Longest Nice Substring|Easy||Java/Javascript||
 |1768|Merge Strings Alternately|Easy||Java/Javascript||
