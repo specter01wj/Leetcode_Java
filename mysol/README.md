@@ -315,6 +315,8 @@ By Jin Wang
 |1710|**Maximum Units on a Truck**|Easy|Java/Javascript|Done/Done|
 |1720|**Decode XORed Array**|Easy|Java/Javascript|Done/Done|
 |1725|**Number Of Rectangles That Can Form The Largest Square**|Easy|Java/Javascript|Done/Done|
+|1736|**Latest Time by Replacing Hidden Digits**|Easy|Java/Javascript|Done/Done|
+|1758|**Minimum Changes To Make Alternating Binary String**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
