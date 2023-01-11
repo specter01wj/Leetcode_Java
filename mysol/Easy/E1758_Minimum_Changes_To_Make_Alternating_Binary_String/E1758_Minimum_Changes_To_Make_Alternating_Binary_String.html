@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a string s consisting only of the characters '0' and '1'. 
+				In one operation, you can change any '0' to '1' or vice versa.
+
+				The string is called alternating if no two adjacent characters are equal. 
+				For example, the string "010" is alternating, while the string "0100" is not.
+
+				Return the minimum number of operations needed to make s alternating.
+
+
+				Example 1:
+
+				Input: s = "0100"
+				Output: 1
+				Explanation: If you change the last character to '1', s will be "0101", which is alternating.
+
+				Example 2:
+
+				Input: s = "10"
+				Output: 0
+				Explanation: s is already alternating.
+
+				Example 3:
+
+				Input: s = "1111"
+				Output: 2
+				Explanation: You need two operations to reach "0101" or "1010".
+			 */
+			$(document).ready(function(){
+
+				/**
+		     * @param s: a string
+		     * @return: the minimum number of operations needed to make s alternating
+		     */
+				let minOperations = function(s) {
+					let res = 0, n = s.length;
+	        for (let i = 0; i < n; ++i) {
+	            if (+s.charAt(i) !== i % 2) {
+	                res++;
+	            }
+	        }
+	        return Math.min(res, n - res);
+				};
+
+				let input = "0100";
+				let tt1 = minOperations(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				Small observation that the sequence of index is [0,1,2,3..],
+				if we get its module by 2, we get [0,1,0,1,0..],
+				which is the alternating binary sequence we want.
+				
+				So we iterate the string,
+				check if the characters[i] is same as the i % 2.
+				Note that s[i] is a character,
+				and s[i] - '0' making it to integer.
+				
+				We accumulate the number of difference,
+				which is the number of operation to make it into 01 string.
+				
+				We can do the same to find out res,
+				the number of operation for 10 string.
+				But we don't have to,
+				becaue this equals to s.length - res.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
