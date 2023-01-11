@@ -36,21 +36,21 @@
 		     * @return: the latest valid time you can get from time by replacing the hidden digits
 		     */
 				let maximumTime = function(time) {
-					char[] a = time.toCharArray();
-	        for (int i = 0; i < 5; ++i) {
-	            if (a[i] == '?') {
-	                if (i == 0) {
-	                    a[i] = a[1] <= '3' || a[1] == '?' ? '2' : '1';
-	                } else if (i == 1) {
-	                    a[i] = a[0] == '2' ? '3' : '9';
-	                } else if (i == 3) {
-	                    a[i] = '5';
-	                } else if (i == 4) {
-	                    a[i] = '9';
+					let arr = time.split('');
+	        for (let i = 0; i < 5; ++i) {
+	            if (arr[i] === '?') {
+	                if (i === 0) {
+	                    arr[i] = arr[1] <= '3' || arr[1] === '?' ? '2' : '1';
+	                } else if (i === 1) {
+	                    arr[i] = arr[0] === '2' ? '3' : '9';
+	                } else if (i === 3) {
+	                    arr[i] = '5';
+	                } else if (i === 4) {
+	                    arr[i] = '9';
 	                }
 	            }
 	        }
-	        return String.valueOf(a);
+	        return arr.join('');
 				};
 
 				let input = "2?:?0";
