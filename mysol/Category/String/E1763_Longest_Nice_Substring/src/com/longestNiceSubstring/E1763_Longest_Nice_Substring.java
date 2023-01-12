@@ -42,7 +42,20 @@ public class E1763_Longest_Nice_Substring {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Brute-force
+	We just make an assumption that if we invert case of chars in a nice string 
+	then we will have at least one char in the inverted string for each char in 
+	the original string. 
+	For example, aA -> inverting case -> Aa - each char from original string 
+	is present in inverted string but in different order. That what we do in the code.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the longest substring of s that is nice
+     */
 	public static String longestNiceSubstring(String s) {
         if (s.length() < 2) {
         	return "";
