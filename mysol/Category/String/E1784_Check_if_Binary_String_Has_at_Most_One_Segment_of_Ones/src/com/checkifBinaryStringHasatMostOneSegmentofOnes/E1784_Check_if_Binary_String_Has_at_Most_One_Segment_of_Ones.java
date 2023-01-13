@@ -26,7 +26,17 @@ public class E1784_Check_if_Binary_String_Has_at_Most_One_Segment_of_Ones {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    According to the description: "Given a binary string s without leading zeros,", 
+    if we find a 0, there must be at least a 1 somewhere before it. 
+    Therefore, if and only if we find a "01", there are at least 2 segments of 1's.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: true​​​ if s contains at most one contiguous segment of ones
+     */
 	public static boolean checkOnesSegment(String s) {
         return !s.contains("01");
     }
