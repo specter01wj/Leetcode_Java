@@ -54,8 +54,8 @@
 	        return res;
 				};
 
-				let items = [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]];
-				let ruleKey = "color", ruleValue = "silver";
+				let items = [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]];
+				let ruleKey = "type", ruleValue = "phone";
 				let tt1 = countMatches(items, ruleKey, ruleValue);
 				$('#t1').html('<h2>Input: ' + items + '<br>Results: ' + (tt1) + '</h2>');
 			});
