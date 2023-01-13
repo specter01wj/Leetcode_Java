@@ -42,7 +42,17 @@ public class E1773_Count_Items_Matching_a_Rule {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and count
+    */
 	
+	/**
+     * @param items: a List of strings
+     * @param ruleKey: a string
+     * @param ruleValue: a string
+     * @return: the number of items that match the given rule
+     */
 	public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int res = 0;
         
