@@ -371,7 +371,7 @@ Cspiration Category:
 |1768|Merge Strings Alternately|Easy||Java/Javascript|Done/Done|
 |1773|Count Items Matching a Rule|Easy||Java/Javascript|Done/Done|
 |1784|Check if Binary String Has at Most One Segment of Ones|Easy||Java/Javascript|Done/Done|
-|1790|Check if One String Swap Can Make Strings Equal|Easy||Java/Javascript||
+|1790|Check if One String Swap Can Make Strings Equal|Easy||Java/Javascript|Done|
 
 
 ### 3. Math
