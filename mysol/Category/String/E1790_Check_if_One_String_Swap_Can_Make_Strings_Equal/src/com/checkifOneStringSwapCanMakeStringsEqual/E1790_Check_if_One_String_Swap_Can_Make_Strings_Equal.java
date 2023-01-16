@@ -37,12 +37,23 @@ public class E1790_Check_if_One_String_Swap_Can_Make_Strings_Equal {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. the count of diff characters between the 2 strings must be 0 or 2
+	2. the diff characters must be the same
+    */
 	
+	/**
+     * @param s1: a string
+     * @param s2: a string
+     * @return: true if it is possible to make both strings equal by performing 
+     * at most one string swap on exactly one of the strings
+     */
 	public static boolean areAlmostEqual(String s1, String s2) {
         int[] s1Array = new int[26];
         int[] s2Array = new int[26];
         int counter = 0;
-        for(int i = 0;i<s1.length();i++){
+        for(int i = 0;i < s1.length();i++){
             char s = s1.charAt(i);
             char ss = s2.charAt(i);
             if(s != ss) {
