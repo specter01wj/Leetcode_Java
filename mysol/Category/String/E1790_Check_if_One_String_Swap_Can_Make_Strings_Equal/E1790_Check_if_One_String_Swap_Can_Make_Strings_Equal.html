@@ -4,40 +4,67 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a binary string s without leading zeros, return true if s contains 
-				at most one contiguous segment of ones. Otherwise, return false.
+			 	You are given two strings s1 and s2 of equal length. A string swap 
+				is an operation where you choose two indices in a string 
+				(not necessarily different) and swap the characters at these indices.
+
+				Return true if it is possible to make both strings equal by performing 
+				at most one string swap on exactly one of the strings. Otherwise, return false.
 
 
 				Example 1:
 
-				Input: s = "1001"
-				Output: false
-				Explanation: The ones do not form a contiguous segment.
+				Input: s1 = "bank", s2 = "kanb"
+				Output: true
+				Explanation: For example, swap the first character with the last character of s2 to make "bank".
 
 				Example 2:
 
-				Input: s = "110"
+				Input: s1 = "attack", s2 = "defend"
+				Output: false
+				Explanation: It is impossible to make them equal with one string swap.
+
+				Example 3:
+
+				Input: s1 = "kelb", s2 = "kelb"
 				Output: true
+				Explanation: The two strings are already equal, so no string swap operation is required.
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param s: a string
-		     * @return: true if s contains at most one contiguous segment of ones
+		     * @param s1: a string
+		     * @param s2: a string
+		     * @return: true if it is possible to make both strings equal by performing 
+		     * at most one string swap on exactly one of the strings
 		     */
-				let checkOnesSegment = function(s) {
-					return !s.includes("01");
+				let areAlmostEqual = function(s1, s2) {
+					let s1Array = new Array(26).fill(0);
+	        let s2Array = new Array(26).fill(0);
+	        let counter = 0;
+	        for(let i = 0;i < s1.length;i++){
+	            let s = s1.charAt(i);
+	            let ss = s2.charAt(i);
+	            if(s !== ss) {
+	                counter++;
+	            }
+	            if(counter > 2) {
+	                return false;
+	            }
+	            s1Array[s.charCodeAt() -'a'.charCodeAt()]++;
+	            s2Array[ss.charCodeAt() -'a'.charCodeAt()]++;
+	        }
+	        return JSON.stringify(s1Array) === JSON.stringify(s2Array);
 				};
 
-				let input = "110";
-				let tt1 = checkOnesSegment(input);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+				let input1 = "bank", input2 = "kanb";
+				let tt1 = areAlmostEqual(input1, input2);
+				$('#t1').html('<h2>Input: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				According to the description: "Given a binary string s without leading zeros,", 
-		    if we find a 0, there must be at least a 1 somewhere before it. 
-		    Therefore, if and only if we find a "01", there are at least 2 segments of 1's.
+				1. the count of diff characters between the 2 strings must be 0 or 2
+				2. the diff characters must be the same
 			 */
 
 		</script>
