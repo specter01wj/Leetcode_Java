@@ -42,7 +42,20 @@ public class E1805_Number_of_Different_Integers_in_a_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Replace all the non-numeric character with a single space.
+	2. Split the word by spaces and store it in a String[]
+	3. Ignore empty strings
+	4. Replace all 0 from the beginning, if any
+	5. Save the new word in the set
+	6. Return the set size
+    */
 	
+	/**
+     * @param word: a string
+     * @return: the number of different integers after performing the replacement operations on word
+     */
 	public static int numDifferentIntegers(String word) {
         String[] arr = word.replaceAll("[a-zA-Z]", " ").split("\\s+");
         Set<String> set = new HashSet<String>();
