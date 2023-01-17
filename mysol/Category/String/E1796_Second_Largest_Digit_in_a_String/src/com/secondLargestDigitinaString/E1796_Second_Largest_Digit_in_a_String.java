@@ -24,13 +24,21 @@ Explanation: The digits that appear in s are [1]. There is no second largest dig
 public class E1796_Second_Largest_Digit_in_a_String {
 
 	public static void main(String[] args) {
-		String input = "(()())(())(()(()))";
-        String output = removeOuterParentheses(input);
+		String input = "dfa12321afd";
+        int output = secondHighest(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and count
+    */
 	
-	public int secondHighest(String s) {
+	/**
+     * @param s: a string
+     * @return: the second largest numerical digit that appears in s, or -1 if it does not exist
+     */
+	public static int secondHighest(String s) {
         int first = -1, sec = -1;
         for (int i = 0; i < s.length(); ++i) {
             char c = s.charAt(i); 
