@@ -227,6 +227,33 @@ Cspiration Category:
 |1710|Maximum Units on a Truck|Easy||Java/Javascript|Done/Done|
 |1720|Decode XORed Array|Easy||Java/Javascript|Done/Done|
 |1725|Number Of Rectangles That Can Form The Largest Square|Easy||Java/Javascript|Done/Done|
+|1732|Find the Highest Altitude|Easy||Java/Javascript||
+|1748|Sum of Unique Elements|Easy||Java/Javascript||
+|1752|Check if Array Is Sorted and Rotated|Easy||Java/Javascript||
+|1779|Find Nearest Point That Has the Same X or Y Coordinate|Easy||Java/Javascript||
+|1800|Maximum Ascending Subarray Sum|Easy||Java/Javascript||
+|1822|Sign of the Product of an Array|Easy||Java/Javascript||
+|1827|Minimum Operations to Make the Array Increasing|Easy||Java/Javascript||
+|1848|Minimum Distance to the Target Element|Easy||Java/Javascript||
+|1854|Maximum Population Year|Easy||Java/Javascript||
+|1863|Sum of All Subset XOR Totals|Easy||Java/Javascript||
+|1886|Determine Whether Matrix Can Be Obtained By Rotation|Easy||Java/Javascript||
+|1893|Check if All the Integers in a Range Are Covered|Easy||Java/Javascript||
+|1909|Remove One Element to Make the Array Strictly Increasing|Easy||Java/Javascript||
+|1913|Maximum Product Difference Between Two Pairs|Easy||Java/Javascript||
+|1920|Build Array from Permutation|Easy||Java/Javascript||
+|1929|Concatenation of Array|Easy||Java/Javascript||
+|1961|Check If String Is a Prefix of Array|Easy||Java/Javascript||
+|1979|Find Greatest Common Divisor of Array|Easy||Java/Javascript||
+|1984|Minimum Difference Between Highest and Lowest of K Scores|Easy||Java/Javascript||
+|1991|Find the Middle Index in Array|Easy||Java/Javascript||
+|1995|Count Special Quadruplets|Easy||Java/Javascript||
+|2006|Count Number of Pairs With Absolute Difference K|Easy||Java/Javascript||
+|2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript||
+|2016|Maximum Difference Between Increasing Elements|Easy||Java/Javascript||
+|2022|Convert 1D Array Into 2D Array|Easy||Java/Javascript||
+|2032|Two Out of Three|Easy||Java/Javascript||
+
 
 ### 2. String
 
