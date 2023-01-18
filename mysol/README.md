@@ -324,6 +324,8 @@ By Jin Wang
 |1790|**Check if One String Swap Can Make Strings Equal**|Easy|Java/Javascript|Done|
 |1796|**Second Largest Digit in a String**|Easy|Java/Javascript|Done|
 |1805|**Number of Different Integers in a String**|Easy|Java/Javascript|Done|
+|1812|**Determine Color of a Chessboard Square**|Easy|Java/Javascript|Done/Done|
+|1816|**Truncate Sentence**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
