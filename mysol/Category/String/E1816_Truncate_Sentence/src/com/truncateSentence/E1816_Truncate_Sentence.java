@@ -46,16 +46,13 @@ public class E1816_Truncate_Sentence {
 	
 	/*
     solution:
-    opened count the number of opened parenthesis.
-	Add every char to the result,
-	unless the first left parenthesis,
-	and the last right parenthesis.
+    Split and join
     */
 	
 	/**
      * @param s: a string
      * @param k: an integer
-     * @return: after removing the outermost parentheses
+     * @return: s​​​​​​ after truncating it
      */
 	public static String truncateSentence(String s, int k) {
         String[] words = s.split(" ");
