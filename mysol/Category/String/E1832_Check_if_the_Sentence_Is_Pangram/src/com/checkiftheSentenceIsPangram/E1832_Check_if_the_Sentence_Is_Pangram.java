@@ -28,7 +28,16 @@ public class E1832_Check_if_the_Sentence_Is_Pangram {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Put all characters in a set,
+	return if the size of set equals to 26.
+    */
 	
+	/**
+     * @param sentence: a string
+     * @return: true if sentence is a pangram, or false otherwise
+     */
 	public static boolean checkIfPangram(String sentence) {
         Set<Character> s = new HashSet<>();
         for (int i = 0; i < sentence.length(); ++i) {
