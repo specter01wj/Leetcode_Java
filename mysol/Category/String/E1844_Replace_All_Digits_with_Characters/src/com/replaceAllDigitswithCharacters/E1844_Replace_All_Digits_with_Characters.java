@@ -44,7 +44,16 @@ public class E1844_Replace_All_Digits_with_Characters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    s[i] - '0' change a character to integer.
+	shift(c, x) is (char)(c + x) in java.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: s after replacing all digits
+     */
 	public static String replaceDigits(String s) {
         char[] res = s.toCharArray();
         for (int i = 1; i < s.length(); i += 2) {
