@@ -326,6 +326,8 @@ By Jin Wang
 |1805|**Number of Different Integers in a String**|Easy|Java/Javascript|Done|
 |1812|**Determine Color of a Chessboard Square**|Easy|Java/Javascript|Done/Done|
 |1816|**Truncate Sentence**|Easy|Java/Javascript|Done/Done|
+|1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript|Done/Done|
+|1844|**Replace All Digits with Characters**|Easy|Java/Javascript|Done/Done|
 
 ### Medium Level
 
