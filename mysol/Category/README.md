@@ -403,8 +403,8 @@ Cspiration Category:
 |1805|Number of Different Integers in a String|Easy||Java/Javascript|Done/Done|
 |1812|Determine Color of a Chessboard Square|Easy||Java/Javascript|Done/Done|
 |1816|Truncate Sentence|Easy||Java/Javascript|Done/Done|
-|1832|Check if the Sentence Is Pangram|Easy||Java/Javascript||
-|1844|Replace All Digits with Characters|Easy||Java/Javascript||
+|1832|Check if the Sentence Is Pangram|Easy||Java/Javascript|Done/Done|
+|1844|Replace All Digits with Characters|Easy||Java/Javascript|Done/Done|
 |1859|Sorting the Sentence|Easy||Java/Javascript||
 |1869|Longer Contiguous Segments of Ones than Zeros|Easy||Java/Javascript||
 |1876|Substrings of Size Three with Distinct Characters|Easy||Java/Javascript||
