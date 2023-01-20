@@ -405,8 +405,8 @@ Cspiration Category:
 |1816|Truncate Sentence|Easy||Java/Javascript|Done/Done|
 |1832|Check if the Sentence Is Pangram|Easy||Java/Javascript|Done/Done|
 |1844|Replace All Digits with Characters|Easy||Java/Javascript|Done/Done|
-|1859|Sorting the Sentence|Easy||Java/Javascript||
-|1869|Longer Contiguous Segments of Ones than Zeros|Easy||Java/Javascript||
+|1859|Sorting the Sentence|Easy||Java/Javascript|Done/Done|
+|1869|Longer Contiguous Segments of Ones than Zeros|Easy||Java/Javascript|Done/Done|
 |1876|Substrings of Size Three with Distinct Characters|Easy||Java/Javascript||
 
 
