@@ -49,7 +49,16 @@ public class E1869_Longer_Contiguous_Segments_of_Ones_than_Zeros {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and calculate
+    */
 	
+	/**
+     * @param s: a string
+     * @return: true if the longest contiguous segment of 1's is strictly 
+     * longer than the longest contiguous segment of 0's in s
+     */
 	public static boolean checkZeroOnes(String s) {
         int longestZeros = 0, longestOnes = 0, currentZeros = 0, currentOnes = 0;
         for (int i=0;i < s.length();i++) 
