@@ -31,7 +31,15 @@ public class E1732_Find_the_Highest_Altitude {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and compare
+    */
 	
+	/*
+     * @param gain: a list of integers
+     * @return: the highest altitude of a point
+     */
 	public static int largestAltitude(int[] gain) {
         int max_alt = 0;
         int curr_alt = 0;
