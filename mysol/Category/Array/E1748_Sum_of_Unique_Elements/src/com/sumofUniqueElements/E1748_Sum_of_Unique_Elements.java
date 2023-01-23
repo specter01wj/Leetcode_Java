@@ -35,7 +35,15 @@ public class E1748_Sum_of_Unique_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count and sum
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the sum of all the unique elements of nums
+     */
 	public static int sumOfUnique(int[] nums) {
         int[] cnt = new int[101];
         for (int n : nums) {
