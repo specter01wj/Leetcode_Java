@@ -58,7 +58,18 @@ public class E1880_Check_if_Word_Equals_Summation_of_Two_Words {
         System.out.println("input: " + (firstWord) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and add
+    */
 	
+	/**
+     * @param firstWord: a string
+     * @param secondWord: a string
+     * @param targetWord: a string
+     * @return: true if the summation of the numerical values of firstWord and 
+     * secondWord equals the numerical value of targetWord, or false otherwise
+     */
 	public static boolean isSumEqual(String firstWord, String secondWord, String targetWord) {
         return getIntValue(firstWord) + getIntValue(secondWord) == getIntValue(targetWord);
     }
