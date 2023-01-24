@@ -44,7 +44,21 @@ public class E1779_Find_Nearest_Point_That_Has_the_Same_X_or_Y_Coordinate {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Because we want A point that shares the same x-coordinate or the same y-coordinate 
+    as your location, dx * dy == 0 indicate either dx equals zero or dy equals zero, 
+    so we can make the product of dx and dy to be zero. dx and dy means the difference 
+    of x-coordinate and y-coordinate respectively. If the difference is zero, 
+    then they must be equal or shares the same x/y-coordinate.
+    */
 	
+	/*
+     * @param x: an integer
+     * @param y: an integer
+     * @param points: a list of 2D integers
+     * @return: the index of the valid point with the smallest Manhattan distance from your current location
+     */
 	public static int nearestValidPoint(int x, int y, int[][] points) {
         int index = -1; 
         for (int i = 0, smallest = Integer.MAX_VALUE; i < points.length; ++i) {
