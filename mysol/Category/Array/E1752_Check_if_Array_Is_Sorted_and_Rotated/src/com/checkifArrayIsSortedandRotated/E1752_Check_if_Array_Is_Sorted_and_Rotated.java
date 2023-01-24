@@ -41,7 +41,24 @@ public class E1752_Check_if_Array_Is_Sorted_and_Rotated {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Compare all neignbour elements (a,b) in A,
+	the case of a > b can happen at most once.
 	
+	Note that the first element and the last element are also connected.
+	
+	If all a <= b, A is already sorted.
+	If all a <= b but only one a > b,
+	we can rotate and make b the first element.
+	Other case, return false.
+    */
+	
+	/*
+     * @param nums: a list of integers
+     * @return: true if the array was originally sorted in non-decreasing order, 
+     * then rotated some number of positions
+     */
 	public static boolean check(int[] nums) {
        int k = 0, n = nums.length;
         for (int i = 0; i < n; ++i) {
