@@ -229,8 +229,8 @@ Cspiration Category:
 |1725|Number Of Rectangles That Can Form The Largest Square|Easy||Java/Javascript|Done/Done|
 |1732|Find the Highest Altitude|Easy||Java/Javascript|Done/Done|
 |1748|Sum of Unique Elements|Easy||Java/Javascript|Done/Done|
-|1752|Check if Array Is Sorted and Rotated|Easy||Java/Javascript||
-|1779|Find Nearest Point That Has the Same X or Y Coordinate|Easy||Java/Javascript||
+|1752|Check if Array Is Sorted and Rotated|Easy||Java/Javascript|Done/Done|
+|1779|Find Nearest Point That Has the Same X or Y Coordinate|Easy||Java/Javascript|Done/Done|
 |1800|Maximum Ascending Subarray Sum|Easy||Java/Javascript||
 |1822|Sign of the Product of an Array|Easy||Java/Javascript||
 |1827|Minimum Operations to Make the Array Increasing|Easy||Java/Javascript||
