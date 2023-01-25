@@ -33,8 +33,8 @@ Explanation: [10,11,12] is the ascending subarray with the maximum sum of 33.
 public class E1800_Maximum_Ascending_Subarray_Sum {
 
 	public static void main(String[] args) {
-		int[] input = {3,0,1,1,9,7};
-		int output = countGoodTriplets(input, 7, 2, 3);
+		int[] input = {10,20,30,5,10,50};
+		int output = maxAscendingSum(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
@@ -47,7 +47,7 @@ public class E1800_Maximum_Ascending_Subarray_Sum {
      * @param nums: a list of integers
      * @return: the maximum possible sum of an ascending subarray in nums
      */
-	public int maxAscendingSum(int[] nums) {
+	public static int maxAscendingSum(int[] nums) {
         int res = nums[0],temp = nums[0];
         for (int i = 1;i < nums.length;i++){
             if (nums[i] > nums[i-1]) {
