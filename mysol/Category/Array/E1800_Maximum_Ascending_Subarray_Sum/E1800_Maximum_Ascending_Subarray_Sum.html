@@ -4,70 +4,68 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given two integers, x and y, which represent your current location 
-				on a Cartesian grid: (x, y). You are also given an array points where each 
-				points[i] = [ai, bi] represents that a point exists at (ai, bi). 
-				A point is valid if it shares the same x-coordinate or the same y-coordinate 
-				as your location.
+			 	Given an array of positive integers nums, return the maximum possible 
+				sum of an ascending subarray in nums.
 
-				Return the index (0-indexed) of the valid point with the smallest Manhattan 
-				distance from your current location. If there are multiple, return the valid 
-				point with the smallest index. If there are no valid points, return -1.
+				A subarray is defined as a contiguous sequence of numbers in an array.
 
-				The Manhattan distance between two points (x1, y1) and (x2, y2) is abs(x1 - x2) + abs(y1 - y2).
+				A subarray [numsl, numsl+1, ..., numsr-1, numsr] is ascending if for all i 
+				where l <= i < r, numsi  < numsi+1. Note that a subarray of size 1 is ascending.
 
 
 				Example 1:
 
-				Input: x = 3, y = 4, points = [[1,2],[3,1],[2,4],[2,3],[4,4]]
-				Output: 2
-				Explanation: Of all the points, only [3,1], [2,4] and [4,4] are valid. Of the valid points, 
-				[2,4] and [4,4] have the smallest Manhattan distance from your current location, 
-				with a distance of 1. [2,4] has the smallest index, so return 2.
+				Input: nums = [10,20,30,5,10,50]
+				Output: 65
+				Explanation: [5,10,50] is the ascending subarray with the maximum sum of 65.
 
 				Example 2:
 
-				Input: x = 3, y = 4, points = [[3,4]]
-				Output: 0
-				Explanation: The answer is allowed to be on the same location as your current location.
+				Input: nums = [10,20,30,40,50]
+				Output: 150
+				Explanation: [10,20,30,40,50] is the ascending subarray with the maximum sum of 150.
 
 				Example 3:
 
-				Input: x = 3, y = 4, points = [[2,3]]
-				Output: -1
-				Explanation: There are no valid points.
+				Input: nums = [12,17,15,13,10,11,12]
+				Output: 33
+				Explanation: [10,11,12] is the ascending subarray with the maximum sum of 33.
 			 */
 			$(document).ready(function(){
 
 				/*
-		     * @param x: an integer
-		     * @param y: an integer
-		     * @param points: a list of 2D integers
-		     * @return: the index of the valid point with the smallest Manhattan distance from your current location
+		     * @param nums: a list of integers
+		     * @return: the maximum possible sum of an ascending subarray in nums
 		     */
-				let nearestValidPoint = function(x, y, points) {
-					let index = -1; 
-	        for (let i = 0, smallest = Number.MAX_VALUE; i < points.length; ++i) {
-	            let dx = x - points[i][0], dy = y - points[i][1];
-	            if (dx * dy === 0 && Math.abs(dy + dx) < smallest) {
-	                smallest = Math.abs(dx + dy);
-	                index = i;
+				let maxAscendingSum = function(nums) {
+					let res = nums[0],temp = nums[0];
+	        for (let i = 1;i < nums.length;i++){
+	            if (nums[i] > nums[i-1]) {
+	                temp += nums[i];
+	            } else {
+	                temp = nums[i];
 	            }
+	            res = Math.max(res, temp);
 	        }
-	        return index; 
+	        return res;
 				};
 
-				let input = [[1,2],[3,1],[2,4],[2,3],[4,4]];
-				let tt1 = nearestValidPoint(3, 4, input);
+				function maxAscendingSum_2 {
+					const subarray = nums.reduce((acc, curr, index) => {
+						curr > nums[index - 1] ? acc[acc.length - 1] += curr : acc.push(curr);
+						return acc;
+					}, []);
+
+					return Math.max(...subarray);
+				}
+
+				let input = [10,20,30,5,10,50];
+				let tt1 = maxAscendingSum_2(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				Because we want A point that shares the same x-coordinate or the same y-coordinate 
-		    as your location, dx * dy == 0 indicate either dx equals zero or dy equals zero, 
-		    so we can make the product of dx and dy to be zero. dx and dy means the difference 
-		    of x-coordinate and y-coordinate respectively. If the difference is zero, 
-		    then they must be equal or shares the same x/y-coordinate.
+				loop and add
 			 */
 
 		</script>
