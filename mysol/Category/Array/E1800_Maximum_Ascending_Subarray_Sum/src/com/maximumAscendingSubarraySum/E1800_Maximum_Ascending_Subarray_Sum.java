@@ -44,11 +44,8 @@ public class E1800_Maximum_Ascending_Subarray_Sum {
     */
 	
 	/*
-     * @param arr: a list of integers
-     * @param a: an integer
-     * @param b: an integer
-     * @param c: an integer
-     * @return: the number of good triplets
+     * @param nums: a list of integers
+     * @return: the maximum possible sum of an ascending subarray in nums
      */
 	public int maxAscendingSum(int[] nums) {
         int res = nums[0],temp = nums[0];
