@@ -50,17 +50,16 @@
 	        return res;
 				};
 
-				function maxAscendingSum_2 {
+				function maxAscendingSum_2(nums) {
 					const subarray = nums.reduce((acc, curr, index) => {
 						curr > nums[index - 1] ? acc[acc.length - 1] += curr : acc.push(curr);
 						return acc;
 					}, []);
-
 					return Math.max(...subarray);
 				}
 
 				let input = [10,20,30,5,10,50];
-				let tt1 = maxAscendingSum_2(input);
+				let tt1 = maxAscendingSum(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
