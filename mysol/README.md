@@ -327,9 +327,11 @@ By Jin Wang
 |1784|**Check if Binary String Has at Most One Segment of Ones**|Easy|Java/Javascript|Done/Done|
 |1790|**Check if One String Swap Can Make Strings Equal**|Easy|Java/Javascript|Done|
 |1796|**Second Largest Digit in a String**|Easy|Java/Javascript|Done|
+|1800|**Maximum Ascending Subarray Sum**|Easy|Java/Javascript|Done/Done|
 |1805|**Number of Different Integers in a String**|Easy|Java/Javascript|Done|
 |1812|**Determine Color of a Chessboard Square**|Easy|Java/Javascript|Done/Done|
 |1816|**Truncate Sentence**|Easy|Java/Javascript|Done/Done|
+|1822|**Sign of the Product of an Array**|Easy|Java/Javascript|Done/Done|
 |1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript|Done/Done|
 |1844|**Replace All Digits with Characters**|Easy|Java/Javascript|Done/Done|
 |1859|**Sorting the Sentence**|Easy|Java/Javascript|Done/Done|
