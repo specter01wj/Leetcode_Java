@@ -40,7 +40,16 @@ public class E1822_Sign_of_the_Product_of_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Only care about 0 and the occurence of negative numbers in the array. 
+    No need to calculate the final product.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: signFunc(product)
+     */
 	public static int arraySign(int[] nums) {
         int sign = 1; 
         for (int n : nums) {
