@@ -233,8 +233,8 @@ Cspiration Category:
 |1779|Find Nearest Point That Has the Same X or Y Coordinate|Easy||Java/Javascript|Done/Done|
 |1800|Maximum Ascending Subarray Sum|Easy||Java/Javascript|Done/Done|
 |1822|Sign of the Product of an Array|Easy||Java/Javascript|Done/Done|
-|1827|Minimum Operations to Make the Array Increasing|Easy||Java/Javascript||
-|1848|Minimum Distance to the Target Element|Easy||Java/Javascript||
+|1827|Minimum Operations to Make the Array Increasing|Easy||Java/Javascript|Done/Done|
+|1848|Minimum Distance to the Target Element|Easy||Java/Javascript|Done/Done|
 |1854|Maximum Population Year|Easy||Java/Javascript||
 |1863|Sum of All Subset XOR Totals|Easy||Java/Javascript||
 |1886|Determine Whether Matrix Can Be Obtained By Rotation|Easy||Java/Javascript||
