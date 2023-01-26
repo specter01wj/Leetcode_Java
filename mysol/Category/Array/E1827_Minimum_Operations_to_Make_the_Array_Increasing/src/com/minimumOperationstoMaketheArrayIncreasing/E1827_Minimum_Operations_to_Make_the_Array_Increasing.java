@@ -41,7 +41,19 @@ public class E1827_Minimum_Operations_to_Make_the_Array_Increasing {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Use a dummy value of 0 to initialize the prev;
+	2. Traverse the input array, compare each element cur with the modified previous element 
+	prev; If cur > prev, update prev to the value of cur for the prospective comparison in 
+	the next iteration; otherwise, we need to increase cur to at least prev + 1 to make the 
+	array strictly increasing; in this case, update prev by increment of 1.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum number of operations needed to make nums strictly increasing
+     */
 	public static int minOperations(int[] nums) {
         int cnt = 0, prev = 0;
         for (int cur : nums) {
