@@ -38,7 +38,17 @@ public class E1848_Minimum_Distance_to_the_Target_Element {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param target: an integer
+     * @param start: an integer
+     * @return: abs(i - start)
+     */
 	public static int getMinDistance(int[] nums, int target, int start) {
         int ans = Integer.MAX_VALUE;
         for (int i = 0; i < nums.length; i++) {
