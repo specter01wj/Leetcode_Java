@@ -332,8 +332,10 @@ By Jin Wang
 |1812|**Determine Color of a Chessboard Square**|Easy|Java/Javascript|Done/Done|
 |1816|**Truncate Sentence**|Easy|Java/Javascript|Done/Done|
 |1822|**Sign of the Product of an Array**|Easy|Java/Javascript|Done/Done|
+|1827|**Minimum Operations to Make the Array Increasing**|Easy|Java/Javascript|Done/Done|
 |1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript|Done/Done|
 |1844|**Replace All Digits with Characters**|Easy|Java/Javascript|Done/Done|
+|1848|**Minimum Distance to the Target Element**|Easy|Java/Javascript|Done/Done|
 |1859|**Sorting the Sentence**|Easy|Java/Javascript|Done/Done|
 |1869|**Longer Contiguous Segments of Ones than Zeros**|Easy|Java/Javascript|Done/Done|
 |1876|**Substrings of Size Three with Distinct Characters**|Easy|Java/Javascript|Done/Done|
