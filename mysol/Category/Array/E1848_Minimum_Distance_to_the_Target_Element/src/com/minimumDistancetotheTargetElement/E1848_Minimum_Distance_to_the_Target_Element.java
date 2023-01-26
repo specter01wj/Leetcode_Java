@@ -40,7 +40,7 @@ public class E1848_Minimum_Distance_to_the_Target_Element {
 	
 	/*
     solution:
-    count good triplets
+    Iterate all values and check if it equals to target.
     */
 	
 	/*
