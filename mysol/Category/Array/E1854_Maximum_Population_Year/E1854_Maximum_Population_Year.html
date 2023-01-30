@@ -34,18 +34,30 @@
 		     * @param logs: a list of 2D integers
 		     * @return: the earliest year with the maximum population
 		     */
-				let getMinDistance = function(nums, target, start) {
-					let ans = Number.MAX_VALUE;
-	        for (let i = 0; i < nums.length; i++) {
-	            if (nums[i] === target) {
-	                ans = Math.min(ans, Math.abs(i - start));
+				let maximumPopulation = function(logs) {
+					let year = new Array(2051).fill(0);
+	        
+	        for(let log of logs){
+	            year[log[0]] += 1;
+	            year[log[1]] -= 1;
+	        }
+	        
+	        let maxNum = year[1950], maxYear = 1950;
+
+	        for(let i = 1951; i < year.length; i++){
+	            year[i] += year[i - 1];
+	            
+	            if(year[i] > maxNum){
+	                maxNum = year[i];
+	                maxYear = i;
 	            }
 	        }
-	        return ans;
+	        
+	        return maxYear;
 				};
 
-				let input = [1,2,3,4,5];
-				let tt1 = getMinDistance(input, 5, 3);
+				let input = [[1950,1961],[1960,1971],[1970,1981]];
+				let tt1 = maximumPopulation(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
