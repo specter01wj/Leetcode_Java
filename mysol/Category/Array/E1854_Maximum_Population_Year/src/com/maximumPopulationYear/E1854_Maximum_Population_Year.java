@@ -35,7 +35,23 @@ public class E1854_Maximum_Population_Year {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Let's understand with an example
+	Suppose we are given the log [1950, 1961]
+	This means birth year is 1950 and death year is 1961
+	Therefore, years from 1950 to 1960 will be incremented by 1.
 	
+	We can do it by iterating from 1950 to 1960 but that will increase time complexity if we have to do it for every query in logs array.
+	
+	To do this in O(1), we increment year[1950] by 1 and decrement year[1961] by 1.
+	We can reapeat this for every query in logs array.
+    */
+	
+	/*
+     * @param logs: a list of 2D integers
+     * @return: the earliest year with the maximum population
+     */
 	public static int maximumPopulation(int[][] logs) {
         int[] year = new int[2051];
         
