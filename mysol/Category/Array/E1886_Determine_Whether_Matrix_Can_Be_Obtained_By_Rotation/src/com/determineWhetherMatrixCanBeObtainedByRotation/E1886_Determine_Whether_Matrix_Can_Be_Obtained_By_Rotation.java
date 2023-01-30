@@ -38,7 +38,18 @@ public class E1886_Determine_Whether_Matrix_Can_Be_Obtained_By_Rotation {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. In order to rotate clockwise, first reverse rows order, then transpose the matrix;
+	2. Rotate 0, 1, 2, 3 times and compare the rotated matrix with target, respectively.
+    */
 	
+	/*
+     * @param mat: a list of 2D integers
+     * @param target: a list of 2D integers
+     * @return: true if it is possible to make mat equal to target by rotating mat 
+     * in 90-degree increments, or false otherwise
+     */
 	public static boolean findRotation(int[][] mat, int[][] target) {
         for (int i = 0; i < 4; ++i) {
             if (Arrays.deepEquals(mat, target)) {
