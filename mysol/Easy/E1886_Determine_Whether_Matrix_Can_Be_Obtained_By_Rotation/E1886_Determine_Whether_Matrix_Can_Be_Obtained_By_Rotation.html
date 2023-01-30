@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given two n x n binary matrices mat and target, return true if it is 
+				possible to make mat equal to target by rotating mat in 90-degree 
+				increments, or false otherwise.
+
+
+				Example 1:
+
+
+				Input: mat = [[0,1],[1,0]], target = [[1,0],[0,1]]
+				Output: true
+				Explanation: We can rotate mat 90 degrees clockwise to make mat equal target.
+
+				Example 2:
+
+
+				Input: mat = [[0,1],[1,1]], target = [[1,0],[0,1]]
+				Output: false
+				Explanation: It is impossible to make mat equal to target by rotating mat.
+
+				Example 3:
+
+
+				Input: mat = [[0,0,0],[0,1,0],[1,1,1]], target = [[1,1,1],[0,1,0],[0,0,0]]
+				Output: true
+				Explanation: We can rotate mat 90 degrees clockwise two times to make mat equal target.
+			 */
+			$(document).ready(function(){
+
+				/*
+		     * @param mat: a list of 2D integers
+		     * @param target: a list of 2D integers
+		     * @return: true if it is possible to make mat equal to target by rotating mat 
+		     * in 90-degree increments, or false otherwise
+		     */
+				let findRotation = function(mat, target) {
+					let width = mat[0].length;
+			    let height = mat.length;
+			    
+			    let normal = true;
+			    let rightOneTime = true;
+			    let rightTwoTimes = true;
+			    let rightThreeTimes = true;
+			    for (let i = 0; i < height; i++)  {
+			        for (let j = 0; j < width; j++) {
+			            if (mat[i][j] !== target[i][j]) {
+			                normal = false;
+			            }
+			            if (mat[i][j] !== target[j][width - 1 - i]) {
+			                rightOneTime = false;
+			            }
+			            if (mat[i][j] !== target[height - 1 - i][width - 1 - j]) {
+			                rightTwoTimes = false;
+			            }
+			            if (mat[i][j] !== target[height - 1 - j][i]) {
+			                rightThreeTimes = false;
+			            }
+			        }
+			    }
+			    return normal || rightOneTime || rightTwoTimes || rightThreeTimes;
+				};
+
+				let input = [[0,0,0],[0,1,0],[1,1,1]], target = [[1,1,1],[0,1,0],[0,0,0]];
+				let tt1 = findRotation(input, target);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				1. In order to rotate clockwise, first reverse rows order, then transpose the matrix;
+				2. Rotate 0, 1, 2, 3 times and compare the rotated matrix with target, respectively.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
