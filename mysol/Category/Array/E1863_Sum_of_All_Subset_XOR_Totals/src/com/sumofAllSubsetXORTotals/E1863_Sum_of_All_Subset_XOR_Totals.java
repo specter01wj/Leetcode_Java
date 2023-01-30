@@ -56,7 +56,15 @@ public class E1863_Sum_of_All_Subset_XOR_Totals {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Backtracking
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the sum of all XOR totals for every subset of nums
+     */
 	static int sum = 0;
     public static int subsetXORSum(int[] nums) {
         sum = 0;
