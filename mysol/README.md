@@ -338,9 +338,11 @@ By Jin Wang
 |1848|**Minimum Distance to the Target Element**|Easy|Java/Javascript|Done/Done|
 |1854|**Maximum Population Year**|Easy|Java/Javascript|Done/Done|
 |1859|**Sorting the Sentence**|Easy|Java/Javascript|Done/Done|
+|1863|**Sum of All Subset XOR Totals**|Easy|Java/Javascript|Done/Done|
 |1869|**Longer Contiguous Segments of Ones than Zeros**|Easy|Java/Javascript|Done/Done|
 |1876|**Substrings of Size Three with Distinct Characters**|Easy|Java/Javascript|Done/Done|
 |1880|**Check if Word Equals Summation of Two Words**|Easy|Java/Javascript|Done/Done|
+|1886|**Determine Whether Matrix Can Be Obtained By Rotation**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
