@@ -57,7 +57,6 @@ public class E1854_Maximum_Population_Year {
         int[] year = new int[2051];
         
         for(int[] log : logs){
-            
             year[log[0]] += 1;
             year[log[1]] -= 1;
         }
