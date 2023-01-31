@@ -343,6 +343,8 @@ By Jin Wang
 |1876|**Substrings of Size Three with Distinct Characters**|Easy|Java/Javascript|Done/Done|
 |1880|**Check if Word Equals Summation of Two Words**|Easy|Java/Javascript|Done/Done|
 |1886|**Determine Whether Matrix Can Be Obtained By Rotation**|Easy|Java/Javascript|Done/Done|
+|1893|**Check if All the Integers in a Range Are Covered**|Easy|Java/Javascript|Done/Done|
+|1909|**Remove One Element to Make the Array Strictly Increasing**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
