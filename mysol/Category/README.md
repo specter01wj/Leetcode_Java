@@ -238,8 +238,8 @@ Cspiration Category:
 |1854|Maximum Population Year|Easy||Java/Javascript|Done/Done|
 |1863|Sum of All Subset XOR Totals|Easy||Java/Javascript|Done/Done|
 |1886|Determine Whether Matrix Can Be Obtained By Rotation|Easy||Java/Javascript|Done/Done|
-|1893|Check if All the Integers in a Range Are Covered|Easy||Java/Javascript||
-|1909|Remove One Element to Make the Array Strictly Increasing|Easy||Java/Javascript||
+|1893|Check if All the Integers in a Range Are Covered|Easy||Java/Javascript|Done/Done|
+|1909|Remove One Element to Make the Array Strictly Increasing|Easy||Java/Javascript|Done/Done|
 |1913|Maximum Product Difference Between Two Pairs|Easy||Java/Javascript||
 |1920|Build Array from Permutation|Easy||Java/Javascript||
 |1929|Concatenation of Array|Easy||Java/Javascript||
