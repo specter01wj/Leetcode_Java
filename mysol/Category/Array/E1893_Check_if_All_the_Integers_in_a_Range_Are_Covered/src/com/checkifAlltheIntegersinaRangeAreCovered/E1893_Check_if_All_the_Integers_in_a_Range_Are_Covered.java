@@ -35,11 +35,21 @@ public class E1893_Check_if_All_the_Integers_in_a_Range_Are_Covered {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sort and count
+    */
 	
+	/*
+     * @param ranges: a list of integers
+     * @param left: an integer
+     * @param right: an integer
+     * @return: the number of good triplets
+     */
 	public static boolean isCovered(int[][] ranges, int left, int right) {
         Arrays.sort(ranges, (x,y)->x[0]-y[0]);
-        for(int[] range: ranges) {
-            if(left >= range[0] && left <= range[1]) {
+        for (int[] range: ranges) {
+            if (left >= range[0] && left <= range[1]) {
                 left = range[1] + 1;
             }
         }
