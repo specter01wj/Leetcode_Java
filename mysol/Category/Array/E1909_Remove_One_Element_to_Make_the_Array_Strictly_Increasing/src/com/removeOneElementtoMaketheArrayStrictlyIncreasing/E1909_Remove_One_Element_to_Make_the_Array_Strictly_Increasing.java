@@ -44,7 +44,21 @@ public class E1909_Remove_One_Element_to_Make_the_Array_Strictly_Increasing {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    . When a dip is found, we need to decide whether to remove the current number or the previous
+	. If the current number (a[i]) ≥ previous to previous number (a[i - 2]), then remove previous 
+	  number (a[i - 1]) because the ascending order will still remain with a[i - 2] < a[i]
+	. Else remove the current number
+	. If there's a second dip, then its not possible to remove only 1 element to make the array 
+	  strictly ascending
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if it can be made strictly increasing after removing exactly one element, 
+     * or false otherwise
+     */
 	public static boolean canBeIncreasing(int[] nums) {
         for (int i = 1, dips = 0, previous = nums[0]; i < nums.length; i++) {
             if (nums[i] <= previous) {

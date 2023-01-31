@@ -44,7 +44,8 @@ public class E1893_Check_if_All_the_Integers_in_a_Range_Are_Covered {
      * @param ranges: a list of integers
      * @param left: an integer
      * @param right: an integer
-     * @return: the number of good triplets
+     * @return: true if each integer in the inclusive range [left, right] is covered by 
+     * at least one interval in ranges
      */
 	public static boolean isCovered(int[][] ranges, int left, int right) {
         Arrays.sort(ranges, (x,y)->x[0]-y[0]);
