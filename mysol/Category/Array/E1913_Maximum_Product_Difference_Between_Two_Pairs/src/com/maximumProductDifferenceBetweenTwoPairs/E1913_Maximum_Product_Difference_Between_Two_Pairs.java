@@ -37,7 +37,15 @@ public class E1913_Maximum_Product_Difference_Between_Two_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sort and calculate
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum such product difference
+     */
 	public static int maxProductDifference(int[] nums) {
         Arrays.sort(nums);
 	    return nums[nums.length - 1] * nums[nums.length - 2] - nums[0] * nums[1];
