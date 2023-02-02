@@ -347,6 +347,8 @@ By Jin Wang
 |1909|**Remove One Element to Make the Array Strictly Increasing**|Easy|Java/Javascript|Done/Done|
 |1913|**Maximum Product Difference Between Two Pairs**|Easy|Java/Javascript|Done/Done|
 |1920|**Build Array from Permutation**|Easy|Java/Javascript|Done/Done|
+|1929|**Concatenation of Array**|Easy|Java/Javascript|Done/Done|
+|1961|**Check If String Is a Prefix of Array**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
