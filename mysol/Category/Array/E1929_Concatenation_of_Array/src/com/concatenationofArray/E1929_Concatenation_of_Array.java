@@ -35,7 +35,15 @@ public class E1929_Concatenation_of_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    loop and add
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the array ans
+     */
 	public static int[] getConcatenation(int[] nums) {
         int[] result = new int[nums.length * 2];
         for(int i = 0;i < nums.length;i++) {
