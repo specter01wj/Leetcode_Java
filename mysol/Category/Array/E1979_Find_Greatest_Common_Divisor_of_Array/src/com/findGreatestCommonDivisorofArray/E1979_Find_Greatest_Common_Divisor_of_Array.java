@@ -62,7 +62,7 @@ public class E1979_Find_Greatest_Common_Divisor_of_Array {
         int max = 0;
         int min = 1001;
 
-        for(int e : nums){
+        for (int e : nums) {
             max = Math.max(max, e);
             min = Math.min(min, e);
         }
