@@ -55,7 +55,7 @@ public class E1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores {
 	public static int minimumDifference(int[] nums, int k) {
         Arrays.sort(nums);
         int minDiff = Integer.MAX_VALUE;
-        for (int i=0;i < nums.length;i++) {
+        for (int i = 0;i < nums.length;i++) {
             if (i >= k-1) {
                 minDiff = Math.min(minDiff, nums[i] - nums[i - (k - 1)]);
             }
