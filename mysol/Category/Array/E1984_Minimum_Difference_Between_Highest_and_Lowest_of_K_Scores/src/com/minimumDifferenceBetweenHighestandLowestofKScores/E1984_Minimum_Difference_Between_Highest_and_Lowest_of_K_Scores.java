@@ -42,7 +42,16 @@ public class E1984_Minimum_Difference_Between_Highest_and_Lowest_of_K_Scores {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sort and sliding
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the minimum possible difference
+     */
 	public static int minimumDifference(int[] nums, int k) {
         Arrays.sort(nums);
         int minDiff = Integer.MAX_VALUE;
