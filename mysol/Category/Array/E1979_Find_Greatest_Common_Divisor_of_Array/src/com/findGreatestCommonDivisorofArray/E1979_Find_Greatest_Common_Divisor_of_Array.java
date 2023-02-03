@@ -45,7 +45,19 @@ public class E1979_Find_Greatest_Common_Divisor_of_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    It is based on the principle that the greatest common divisor of two numbers 
+    does not change if the larger number is replaced by its difference with the smaller number.
+	Since this replacement reduces the larger of the two numbers, repeating this 
+	process gives successively smaller pairs of numbers until the two numbers become equal.
+	When that occurs, they are the GCD of the original two numbers
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the greatest common divisor of the smallest number and largest number in nums
+     */
 	public static int findGCD(int[] nums) {
         int max = 0;
         int min = 1001;
