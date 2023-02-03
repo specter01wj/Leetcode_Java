@@ -349,6 +349,8 @@ By Jin Wang
 |1920|**Build Array from Permutation**|Easy|Java/Javascript|Done/Done|
 |1929|**Concatenation of Array**|Easy|Java/Javascript|Done/Done|
 |1961|**Check If String Is a Prefix of Array**|Easy|Java/Javascript|Done/Done|
+|1979|**Find Greatest Common Divisor of Array**|Easy|Java/Javascript|Done/Done|
+|1984|**Minimum Difference Between Highest and Lowest of K Scores**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
