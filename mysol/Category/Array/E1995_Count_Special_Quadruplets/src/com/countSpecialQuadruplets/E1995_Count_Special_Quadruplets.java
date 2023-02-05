@@ -41,7 +41,21 @@ public class E1995_Count_Special_Quadruplets {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    a + b + c = d = > a + b = d - c
+	Break array into two parts[0, i - 1] and [i, n -1]
+	for each i,
+	step 1: calculate all possible d - c and put them in a hashMap called diffCount .
+	d - c = nums[j] - nums[i]. for all j [i + 1, n - 1]
+	step 2: calculate all possible a + b in the 1st part. Then check if any a + b in the hashMap diffCount
+	a + b = nums[j] + nums[i - 1], for all j [0, i - 2]
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of distinct quadruplets (a, b, c, d)
+     */
 	public static int countQuadruplets(int[] nums) {
         int res = 0;
         int len = nums.length;
