@@ -246,8 +246,8 @@ Cspiration Category:
 |1961|Check If String Is a Prefix of Array|Easy||Java/Javascript|Done/Done|
 |1979|Find Greatest Common Divisor of Array|Easy||Java/Javascript|Done/Done|
 |1984|Minimum Difference Between Highest and Lowest of K Scores|Easy||Java/Javascript|Done/Done|
-|1991|Find the Middle Index in Array|Easy||Java/Javascript||
-|1995|Count Special Quadruplets|Easy||Java/Javascript||
+|1991|Find the Middle Index in Array|Easy||Java/Javascript|Done/Done|
+|1995|Count Special Quadruplets|Easy||Java/Javascript|Done/Done|
 |2006|Count Number of Pairs With Absolute Difference K|Easy||Java/Javascript||
 |2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript||
 |2016|Maximum Difference Between Increasing Elements|Easy||Java/Javascript||
