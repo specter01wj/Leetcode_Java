@@ -43,14 +43,25 @@ public class E1991_Find_the_Middle_Index_in_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    We need to find leftmost index where
+	leftSum = rightSum - nums[i]
+	leftSum = (totalSum - leftSum) - nums[i]
+	leftSum * 2 = totalSum-nums[i]
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the leftmost middleIndex that satisfies the condition, or -1 if there is no such index
+     */
 	public static int findMiddleIndex(int[] nums) {
         int totalSum = 0, leftSum = 0;
-        for (int i=0; i<nums.length; i++) {
+        for (int i=0;i < nums.length;i++) {
             totalSum += nums[i];
         }
-        for (int i=0; i<nums.length; leftSum+=nums[i++]) {
-            if (leftSum*2 == totalSum-nums[i]) {
+        for (int i=0;i<nums.length;leftSum += nums[i++]) {
+            if (leftSum * 2 == totalSum - nums[i]) {
                 return i;
             }
         }
