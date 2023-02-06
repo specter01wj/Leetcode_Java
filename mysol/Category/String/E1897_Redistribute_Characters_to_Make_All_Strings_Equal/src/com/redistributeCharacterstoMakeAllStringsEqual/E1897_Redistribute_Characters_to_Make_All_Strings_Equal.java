@@ -34,7 +34,16 @@ public class E1897_Redistribute_Characters_to_Make_All_Strings_Equal {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Count all chars then check if all frequencies can be divided without remaining.
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @return: true if you can make every string in words equal using any number of operations, 
+     * and false otherwise
+     */
 	public static boolean makeEqual(String[] words) {
         int[] cnt = new int[26];
         for (String w : words) {
