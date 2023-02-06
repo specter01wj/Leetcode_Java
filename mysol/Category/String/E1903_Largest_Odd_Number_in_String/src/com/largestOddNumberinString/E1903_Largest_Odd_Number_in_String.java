@@ -38,7 +38,7 @@ public class E1903_Largest_Odd_Number_in_String {
 	
 	/*
     solution:
-    count good triplets
+    if remainder not 0 then get substring
     */
 	
 	/**
