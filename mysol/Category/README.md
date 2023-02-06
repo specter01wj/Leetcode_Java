@@ -409,6 +409,21 @@ Cspiration Category:
 |1869|Longer Contiguous Segments of Ones than Zeros|Easy||Java/Javascript|Done/Done|
 |1876|Substrings of Size Three with Distinct Characters|Easy||Java/Javascript|Done/Done|
 |1880|Check if Word Equals Summation of Two Words|Easy||Java/Javascript|Done/Done|
+|1897|Redistribute Characters to Make All Strings Equal|Easy||Java/Javascript|Done/Done|
+|1903|Largest Odd Number in String|Easy||Java/Javascript|Done/Done|
+|1935|Maximum Number of Words You Can Type|Easy||Java/Javascript||
+|1941|Check if All Characters Have Equal Number of Occurrences|Easy||Java/Javascript||
+|1945|Sum of Digits of String After Convert|Easy||Java/Javascript||
+|1957|Delete Characters to Make Fancy String|Easy||Java/Javascript||
+|1967|Number of Strings That Appear as Substrings in Word|Easy||Java/Javascript||
+|1974|Minimum Time to Type Word Using Special Typewriter|Easy||Java/Javascript||
+|2000|Reverse Prefix of Word|Easy||Java/Javascript||
+|2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript||
+|2027|Minimum Moves to Convert String|Easy||Java/Javascript||
+|2042|Check if Numbers Are Ascending in a Sentence|Easy||Java/Javascript||
+|2047|Number of Valid Words in a Sentence|Easy||Java/Javascript||
+|2053|Kth Distinct String in an Array|Easy||Java/Javascript||
+|2062|Count Vowel Substrings of a String|Easy||Java/Javascript||
 
 
 ### 3. Math
