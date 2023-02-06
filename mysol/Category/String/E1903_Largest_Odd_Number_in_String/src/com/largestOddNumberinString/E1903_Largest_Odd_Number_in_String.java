@@ -36,7 +36,16 @@ public class E1903_Largest_Odd_Number_in_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/**
+     * @param num: a string
+     * @return: the largest-valued odd integer that is a non-empty substring of num, 
+     * or an empty string "" if no odd integer exists
+     */
 	public static String largestOddNumber(String num) {
         for (int i = num.length() - 1; i >= 0; i--) {
             if (num.charAt(i) % 2 != 0) {
