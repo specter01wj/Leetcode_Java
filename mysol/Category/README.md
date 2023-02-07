@@ -411,8 +411,8 @@ Cspiration Category:
 |1880|Check if Word Equals Summation of Two Words|Easy||Java/Javascript|Done/Done|
 |1897|Redistribute Characters to Make All Strings Equal|Easy||Java/Javascript|Done/Done|
 |1903|Largest Odd Number in String|Easy||Java/Javascript|Done/Done|
-|1935|Maximum Number of Words You Can Type|Easy||Java/Javascript||
-|1941|Check if All Characters Have Equal Number of Occurrences|Easy||Java/Javascript||
+|1935|Maximum Number of Words You Can Type|Easy||Java/Javascript|Done/Done|
+|1941|Check if All Characters Have Equal Number of Occurrences|Easy||Java/Javascript|Done/Done|
 |1945|Sum of Digits of String After Convert|Easy||Java/Javascript||
 |1957|Delete Characters to Make Fancy String|Easy||Java/Javascript||
 |1967|Number of Strings That Appear as Substrings in Word|Easy||Java/Javascript||
