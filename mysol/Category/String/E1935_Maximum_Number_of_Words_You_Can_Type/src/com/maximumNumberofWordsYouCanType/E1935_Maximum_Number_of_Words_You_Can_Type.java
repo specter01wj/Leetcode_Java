@@ -38,7 +38,16 @@ public class E1935_Maximum_Number_of_Words_You_Can_Type {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/**
+     * @param text: a string
+     * @param brokenLetters: a string
+     * @return: the number of words in text you can fully type using this keyboard
+     */
 	public static int canBeTypedWords(String text, String brokenLetters) {
         Set<Character> no = new HashSet<>();
         for (char c : brokenLetters.toCharArray()) {
