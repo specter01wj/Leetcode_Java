@@ -43,12 +43,12 @@ public class E1941_Check_if_All_Characters_Have_Equal_Number_of_Occurrences {
      */
 	public static boolean areOccurrencesEqual(String s) {
         int[] freq = new int[26];
-        for(char c : s.toCharArray()){
+        for (char c : s.toCharArray()) {
             freq[c - 'a']++;
         }
         int occur = freq[s.charAt(0) - 'a'];
-        for(int num : freq){
-            if(num != 0 && num != occur){
+        for (int num : freq) {
+            if (num != 0 && num != occur) {
                 return false;
             }
         }
