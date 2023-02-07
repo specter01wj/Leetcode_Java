@@ -31,7 +31,16 @@ public class E1941_Check_if_All_Characters_Have_Equal_Number_of_Occurrences {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count the frequency of the letters in the string and then check all the 
+    frequencies if they are the same.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: true if s is a good string, or false otherwise
+     */
 	public static boolean areOccurrencesEqual(String s) {
         int[] freq = new int[26];
         for(char c : s.toCharArray()){
