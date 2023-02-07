@@ -350,6 +350,8 @@ By Jin Wang
 |1913|**Maximum Product Difference Between Two Pairs**|Easy|Java/Javascript|Done/Done|
 |1920|**Build Array from Permutation**|Easy|Java/Javascript|Done/Done|
 |1929|**Concatenation of Array**|Easy|Java/Javascript|Done/Done|
+|1935|**Maximum Number of Words You Can Type**|Easy|Java/Javascript|Done/Done|
+|1941|**Check if All Characters Have Equal Number of Occurrences**|Easy|Java/Javascript|Done/Done|
 |1961|**Check If String Is a Prefix of Array**|Easy|Java/Javascript|Done/Done|
 |1979|**Find Greatest Common Divisor of Array**|Easy|Java/Javascript|Done/Done|
 |1984|**Minimum Difference Between Highest and Lowest of K Scores**|Easy|Java/Javascript|Done/Done|
