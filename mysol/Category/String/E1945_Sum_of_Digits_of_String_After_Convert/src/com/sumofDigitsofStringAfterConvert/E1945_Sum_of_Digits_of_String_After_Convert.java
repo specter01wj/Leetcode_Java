@@ -14,7 +14,16 @@ public class E1945_Sum_of_Digits_of_String_After_Convert {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    StringBuilder
+    */
 	
+	/**
+     * @param s: a string
+     * @param k: an integer
+     * @return: the resulting integer after performing the operations described above
+     */
 	public static int getLucky(String s, int k) {
         StringBuilder sb = new StringBuilder();
 
