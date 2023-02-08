@@ -413,8 +413,8 @@ Cspiration Category:
 |1903|Largest Odd Number in String|Easy||Java/Javascript|Done/Done|
 |1935|Maximum Number of Words You Can Type|Easy||Java/Javascript|Done/Done|
 |1941|Check if All Characters Have Equal Number of Occurrences|Easy||Java/Javascript|Done/Done|
-|1945|Sum of Digits of String After Convert|Easy||Java/Javascript||
-|1957|Delete Characters to Make Fancy String|Easy||Java/Javascript||
+|1945|Sum of Digits of String After Convert|Easy||Java/Javascript|Done/Done|
+|1957|Delete Characters to Make Fancy String|Easy||Java/Javascript|Done/Done|
 |1967|Number of Strings That Appear as Substrings in Word|Easy||Java/Javascript||
 |1974|Minimum Time to Type Word Using Special Typewriter|Easy||Java/Javascript||
 |2000|Reverse Prefix of Word|Easy||Java/Javascript||
