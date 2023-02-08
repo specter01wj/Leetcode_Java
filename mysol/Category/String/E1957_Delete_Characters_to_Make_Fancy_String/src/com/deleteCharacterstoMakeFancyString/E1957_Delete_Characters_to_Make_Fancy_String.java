@@ -41,7 +41,17 @@ public class E1957_Delete_Characters_to_Make_Fancy_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Count consecutive same characters, if less than 3, put into StringBuilder/List; 
+    Otherwise, ignore it.
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the final string after the deletion. It can be shown that the answer 
+     * will always be unique
+     */
 	public static String makeFancyString(String s) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0, cnt = 0; i < s.length(); ++i) {
