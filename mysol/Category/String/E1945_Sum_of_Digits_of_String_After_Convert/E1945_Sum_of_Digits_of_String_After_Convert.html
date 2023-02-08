@@ -4,54 +4,89 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a string s, return true if s is a good string, or false otherwise.
+			 	You are given a string s consisting of lowercase English letters, and an integer k.
 
-				A string s is good if all the characters that appear in s have the same number 
-				of occurrences (i.e., the same frequency).
+				First, convert s into an integer by replacing each letter with its position in the 
+				alphabet (i.e., replace 'a' with 1, 'b' with 2, ..., 'z' with 26). Then, transform 
+				the integer by replacing it with the sum of its digits. Repeat the transform operation 
+				k times in total.
+
+				For example, if s = "zbax" and k = 2, then the resulting integer would be 8 by the 
+				following operations:
+
+					.Convert: "zbax" ➝ "(26)(2)(1)(24)" ➝ "262124" ➝ 262124
+					.Transform #1: 262124 ➝ 2 + 6 + 2 + 1 + 2 + 4 ➝ 17
+					.Transform #2: 17 ➝ 1 + 7 ➝ 8
+					
+				Return the resulting integer after performing the operations described above.
 
 
 				Example 1:
 
-				Input: s = "abacbc"
-				Output: true
-				Explanation: The characters that appear in s are 'a', 'b', and 'c'. 
-				All characters occur 2 times in s.
+				Input: s = "iiii", k = 1
+				Output: 36
+				Explanation: The operations are as follows:
+				- Convert: "iiii" ➝ "(9)(9)(9)(9)" ➝ "9999" ➝ 9999
+				- Transform #1: 9999 ➝ 9 + 9 + 9 + 9 ➝ 36
+				Thus the resulting integer is 36.
 
 				Example 2:
 
-				Input: s = "aaabb"
-				Output: false
-				Explanation: The characters that appear in s are 'a' and 'b'.
-				'a' occurs 3 times while 'b' occurs 2 times, which is not the same number of times.
+				Input: s = "leetcode", k = 2
+				Output: 6
+				Explanation: The operations are as follows:
+				- Convert: "leetcode" ➝ "(12)(5)(5)(20)(3)(15)(4)(5)" ➝ "12552031545" ➝ 12552031545
+				- Transform #1: 12552031545 ➝ 1 + 2 + 5 + 5 + 2 + 0 + 3 + 1 + 5 + 4 + 5 ➝ 33
+				- Transform #2: 33 ➝ 3 + 3 ➝ 6
+				Thus the resulting integer is 6.
+
+				Example 3:
+
+				Input: s = "zbax", k = 2
+				Output: 8
 			 */
 			$(document).ready(function(){
 
 				/**
 		     * @param s: a string
-		     * @return: true if s is a good string, or false otherwise
+		     * @param k: an integer
+		     * @return: the resulting integer after performing the operations described above
 		     */
-				let areOccurrencesEqual = function(s) {
-					let freq = new Array(26).fill(0);
-	        for (let c of s.split('')) {
-	            freq[c.charCodeAt() - 'a'.charCodeAt()]++;
-	        }
-	        let occur = freq[s.charCodeAt(0) - 'a'.charCodeAt()];
-	        for (let num of freq) {
-	            if (num !== 0 && num !== occur) {
-	                return false;
-	            }
-	        }
-	        return true;
+				let getLucky = function(s, k) {
+					const base = 'a'.charCodeAt(0);
+			    
+			    let sum = 0;
+			    for (let i = 0; i < s.length; i++) {
+			        const val = s.charCodeAt(i) - base + 1;
+			        sum += Math.floor(val / 10) + val % 10;
+			    }
+			    
+			    for (let i = 1; i < k; i++) {
+			        let numStr = sum.toString();
+			        sum = 0;
+			        for (let j = 0; j < numStr.length; j++) {
+			            sum += Number(numStr[j]);
+			        }
+			    }
+			    
+			    return sum;
 				};
 
-				let input = "abacbc";
-				let tt1 = areOccurrencesEqual(input);
+				function getLucky_2(s, k) {
+					let res = s.split('').reduce((acc, curr) => acc + (curr.charCodeAt(0) - 96), '')
+					for (let i = 0; i < k; i++) {
+						res = res.toString().split('').reduce((acc, curr) => acc + Number(curr), 0)
+					}
+					return res;
+				}
+
+				let input = "leetcode", k = 2;
+				let tt1 = getLucky_2(input, k);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				count the frequency of the letters in the string and then check all the 
-    		frequencies if they are the same.
+				split and reduce
 			 */
 
 		</script>
