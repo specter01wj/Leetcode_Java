@@ -355,6 +355,8 @@ By Jin Wang
 |1945|**Sum of Digits of String After Convert**|Easy|Java/Javascript|Done/Done|
 |1957|**Delete Characters to Make Fancy String**|Easy|Java/Javascript|Done/Done|
 |1961|**Check If String Is a Prefix of Array**|Easy|Java/Javascript|Done/Done|
+|1967|**Number of Strings That Appear as Substrings in Word**|Easy|Java/Javascript|Done/Done|
+|1974|**Minimum Time to Type Word Using Special Typewriter**|Easy|Java/Javascript|Done/Done|
 |1979|**Find Greatest Common Divisor of Array**|Easy|Java/Javascript|Done/Done|
 |1984|**Minimum Difference Between Highest and Lowest of K Scores**|Easy|Java/Javascript|Done/Done|
 |1991|**Find the Middle Index in Array**|Easy|Java/Javascript|Done/Done|
