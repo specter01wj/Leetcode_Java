@@ -63,7 +63,20 @@ public class E1974_Minimum_Time_to_Type_Word_Using_Special_Typewriter {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialize the prev as a;
+	2. Traverse the word, for each character, compute the distances from 
+	current character, cur, to previous one, prev, clockwise and counter-clockwise, 
+	respectively; Choose the minimum between them;
+	3. Count in 1 second for each typing character; therefore we can initialize cnt 
+	to word.length().
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the minimum number of seconds to type out the characters in word
+     */
 	public static int minTimeToType(String word) {
         int cnt = word.length();
         char prev = 'a';
