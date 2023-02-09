@@ -45,7 +45,16 @@ public class E1967_Number_of_Strings_That_Appear_as_Substrings_in_Word {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and check if contains
+    */
 	
+	/**
+     * @param patterns: a list of strings
+     * @param word: a string
+     * @return: the number of strings in patterns that exist as a substring in word
+     */
 	public static int numOfStrings(String[] patterns, String word) {
         int res = 0;
         for(String p: patterns){
