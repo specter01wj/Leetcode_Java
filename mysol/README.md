@@ -361,6 +361,8 @@ By Jin Wang
 |1984|**Minimum Difference Between Highest and Lowest of K Scores**|Easy|Java/Javascript|Done/Done|
 |1991|**Find the Middle Index in Array**|Easy|Java/Javascript|Done/Done|
 |1995|**Count Special Quadruplets**|Easy|Java/Javascript|Done/Done|
+|2000|**Reverse Prefix of Word**|Easy|Java/Javascript|Done/Done|
+|2011|**Final Value of Variable After Performing Operations**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
