@@ -44,7 +44,16 @@ public class E2000_Reverse_Prefix_of_Word {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    find the index and reverse
+    */
 	
+	/**
+     * @param word: a string
+     * @param ch: a char
+     * @return: the resulting string
+     */
 	public static String reversePrefix(String word, char ch) {
         StringBuilder sb = new StringBuilder();
         
