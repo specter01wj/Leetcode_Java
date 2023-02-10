@@ -417,8 +417,8 @@ Cspiration Category:
 |1957|Delete Characters to Make Fancy String|Easy||Java/Javascript|Done/Done|
 |1967|Number of Strings That Appear as Substrings in Word|Easy||Java/Javascript|Done/Done|
 |1974|Minimum Time to Type Word Using Special Typewriter|Easy||Java/Javascript|Done/Done|
-|2000|Reverse Prefix of Word|Easy||Java/Javascript||
-|2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript||
+|2000|Reverse Prefix of Word|Easy||Java/Javascript|Done/Done|
+|2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript|Done/Done|
 |2027|Minimum Moves to Convert String|Easy||Java/Javascript||
 |2042|Check if Numbers Are Ascending in a Sentence|Easy||Java/Javascript||
 |2047|Number of Valid Words in a Sentence|Easy||Java/Javascript||
