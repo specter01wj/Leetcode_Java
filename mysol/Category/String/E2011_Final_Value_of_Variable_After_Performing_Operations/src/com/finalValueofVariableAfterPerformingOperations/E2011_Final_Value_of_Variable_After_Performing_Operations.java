@@ -53,7 +53,15 @@ public class E2011_Final_Value_of_Variable_After_Performing_Operations {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    If character at index 1 is + then add else subtract.
+    */
 	
+	/**
+     * @param operations: a string array
+     * @return: the final value of X after performing all the operations
+     */
 	public static int finalValueAfterOperations(String[] operations) {
         int val = 0;
     	for (int i = 0;i < operations.length;i++) {
