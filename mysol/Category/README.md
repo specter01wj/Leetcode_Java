@@ -419,8 +419,8 @@ Cspiration Category:
 |1974|Minimum Time to Type Word Using Special Typewriter|Easy||Java/Javascript|Done/Done|
 |2000|Reverse Prefix of Word|Easy||Java/Javascript|Done/Done|
 |2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript|Done/Done|
-|2027|Minimum Moves to Convert String|Easy||Java/Javascript||
-|2042|Check if Numbers Are Ascending in a Sentence|Easy||Java/Javascript||
+|2027|Minimum Moves to Convert String|Easy||Java/Javascript|Done/Done|
+|2042|Check if Numbers Are Ascending in a Sentence|Easy||Java/Javascript|Done/Done|
 |2047|Number of Valid Words in a Sentence|Easy||Java/Javascript||
 |2053|Kth Distinct String in an Array|Easy||Java/Javascript||
 |2062|Count Vowel Substrings of a String|Easy||Java/Javascript||
