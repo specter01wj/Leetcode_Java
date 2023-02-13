@@ -48,7 +48,7 @@ public class E2006_Count_Number_of_Pairs_With_Absolute_Difference_K {
 	
 	/*
     solution:
-    count good triplets
+    hashmap and loop
     */
 	
 	/*
