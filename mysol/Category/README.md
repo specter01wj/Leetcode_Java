@@ -252,6 +252,22 @@ Cspiration Category:
 |2016|Maximum Difference Between Increasing Elements|Easy||Java/Javascript|Done/Done|
 |2022|Convert 1D Array Into 2D Array|Easy||Java/Javascript||
 |2032|Two Out of Three|Easy||Java/Javascript||
+|2037|Minimum Number of Moves to Seat Everyone|Easy||Java/Javascript||
+|2053|Kth Distinct String in an Array|Easy||Java/Javascript||
+|2057|Smallest Index With Equal Value|Easy||Java/Javascript||
+|2073|Time Needed to Buy Tickets|Easy||Java/Javascript||
+|2078|Two Furthest Houses With Different Colors|Easy||Java/Javascript||
+|2085|Count Common Words With One Occurrence|Easy||Java/Javascript||
+|2089|Find Target Indices After Sorting Array|Easy||Java/Javascript||
+|2094|Finding 3-Digit Even Numbers|Easy||Java/Javascript||
+|2099|Find Subsequence of Length K With the Largest Sum|Easy||Java/Javascript||
+|2108|Find First Palindromic String in the Array|Easy||Java/Javascript||
+|2114|Maximum Number of Words Found in Sentences|Easy||Java/Javascript||
+|2133|Check if Every Row and Column Contains All Numbers|Easy||Java/Javascript||
+|2144|Minimum Cost of Buying Candies With Discount|Easy||Java/Javascript||
+|2148|Count Elements With Strictly Smaller and Greater Elements|Easy||Java/Javascript||
+|2154|Keep Multiplying Found Values by Two|Easy||Java/Javascript||
+|2164|Sort Even and Odd Indices Independently|Easy||Java/Javascript||
 
 
 ### 2. String
