@@ -40,7 +40,16 @@ public class E2027_Minimum_Moves_to_Convert_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and count
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the minimum number of moves required so that all the characters 
+     * of s are converted to 'O'
+     */
 	public static int minimumMoves(String s) {
         int count = 0;
         
