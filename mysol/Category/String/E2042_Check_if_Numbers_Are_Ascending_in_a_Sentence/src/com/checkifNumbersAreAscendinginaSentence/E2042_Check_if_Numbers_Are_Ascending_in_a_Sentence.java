@@ -62,7 +62,7 @@ public class E2042_Check_if_Numbers_Are_Ascending_in_a_Sentence {
             if (Character.isDigit(str.charAt(0))) {
                 int number = Integer.parseInt(str);
                 
-                if(number <= previous) {
+                if (number <= previous) {
                     return false;
                 }
                 
