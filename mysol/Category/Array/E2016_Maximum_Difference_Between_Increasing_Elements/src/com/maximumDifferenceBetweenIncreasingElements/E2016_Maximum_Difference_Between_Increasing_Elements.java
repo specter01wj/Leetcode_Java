@@ -41,7 +41,16 @@ public class E2016_Maximum_Difference_Between_Increasing_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Traverse input, compare current number to the minimum of the previous ones, 
+    then update the max difference.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum difference. If no such i and j exists, return -1
+     */
 	public static int maximumDifference(int[] nums) {
         int diff = -1;
         for (int i = 1, min = nums[0]; i < nums.length; ++i) {
