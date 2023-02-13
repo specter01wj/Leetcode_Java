@@ -248,8 +248,8 @@ Cspiration Category:
 |1984|Minimum Difference Between Highest and Lowest of K Scores|Easy||Java/Javascript|Done/Done|
 |1991|Find the Middle Index in Array|Easy||Java/Javascript|Done/Done|
 |1995|Count Special Quadruplets|Easy||Java/Javascript|Done/Done|
-|2006|Count Number of Pairs With Absolute Difference K|Easy||Java/Javascript||
-|2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript||
+|2006|Count Number of Pairs With Absolute Difference K|Easy||Java/Javascript|Done/Done|
+|2011|Final Value of Variable After Performing Operations|Easy||Java/Javascript|Done/Done|
 |2016|Maximum Difference Between Increasing Elements|Easy||Java/Javascript||
 |2022|Convert 1D Array Into 2D Array|Easy||Java/Javascript||
 |2032|Two Out of Three|Easy||Java/Javascript||
