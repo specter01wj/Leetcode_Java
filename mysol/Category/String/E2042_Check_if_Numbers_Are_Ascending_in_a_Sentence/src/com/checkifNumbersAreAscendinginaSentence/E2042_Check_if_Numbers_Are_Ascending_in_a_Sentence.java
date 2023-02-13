@@ -46,7 +46,15 @@ public class E2042_Check_if_Numbers_Are_Ascending_in_a_Sentence {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and find
+    */
 	
+	/**
+     * @param s: a string
+     * @return: true if so, or false otherwise
+     */
 	public static boolean areNumbersAscending(String s) {
         int previous = 0;
     
@@ -54,7 +62,7 @@ public class E2042_Check_if_Numbers_Are_Ascending_in_a_Sentence {
             if (Character.isDigit(str.charAt(0))) {
                 int number = Integer.parseInt(str);
                 
-                if(number <=previous) {
+                if(number <= previous) {
                     return false;
                 }
                 
