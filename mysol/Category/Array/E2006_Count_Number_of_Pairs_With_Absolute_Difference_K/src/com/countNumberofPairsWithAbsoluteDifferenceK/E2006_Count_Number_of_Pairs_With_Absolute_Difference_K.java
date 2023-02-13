@@ -46,7 +46,16 @@ public class E2006_Count_Number_of_Pairs_With_Absolute_Difference_K {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k
+     */
 	public static int countKDifference(int[] nums, int k) {
         Map<Integer,Integer> map = new HashMap<>();
         int res = 0;
