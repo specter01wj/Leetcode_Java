@@ -47,7 +47,18 @@ public class E2022_Convert_1D_Array_Into_2D_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param original: a list of integers
+     * @param m: an integer
+     * @param n: an integer
+     * @return: an m x n 2D array constructed according to the above procedure, 
+     * or an empty 2D array if it is impossible
+     */
 	public static int[][] construct2DArray(int[] original, int m, int n) {
         if (original.length != m * n) {
             return new int[0][0];
