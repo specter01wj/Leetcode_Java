@@ -365,7 +365,9 @@ By Jin Wang
 |2006|**Count Number of Pairs With Absolute Difference K**|Easy|Java/Javascript|Done/Done|
 |2011|**Final Value of Variable After Performing Operations**|Easy|Java/Javascript|Done/Done|
 |2016|**Maximum Difference Between Increasing Elements**|Easy|Java/Javascript|Done/Done|
+|2022|**Convert 1D Array Into 2D Array**|Easy|Java/Javascript|Done/Done|
 |2027|**Minimum Moves to Convert String**|Easy|Java/Javascript|Done/Done|
+|2032|**Two Out of Three**|Easy|Java/Javascript|Done/Done|
 |2042|**Check if Numbers Are Ascending in a Sentence**|Easy|Java/Javascript|Done/Done|
 
 
