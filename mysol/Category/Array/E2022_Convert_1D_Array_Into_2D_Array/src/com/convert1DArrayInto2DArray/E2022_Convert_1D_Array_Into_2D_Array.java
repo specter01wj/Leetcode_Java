@@ -49,7 +49,7 @@ public class E2022_Convert_1D_Array_Into_2D_Array {
 	
 	/*
     solution:
-    count good triplets
+    loop and reconstruct
     */
 	
 	/*
