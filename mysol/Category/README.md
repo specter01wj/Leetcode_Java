@@ -250,8 +250,8 @@ Cspiration Category:
 |1995|Count Special Quadruplets|Easy||Java/Javascript|Done/Done|
 |2006|Count Number of Pairs With Absolute Difference K|Easy||Java/Javascript|Done/Done|
 |2016|Maximum Difference Between Increasing Elements|Easy||Java/Javascript|Done/Done|
-|2022|Convert 1D Array Into 2D Array|Easy||Java/Javascript||
-|2032|Two Out of Three|Easy||Java/Javascript||
+|2022|Convert 1D Array Into 2D Array|Easy||Java/Javascript|Done/Done|
+|2032|Two Out of Three|Easy||Java/Javascript|Done/Done|
 |2037|Minimum Number of Moves to Seat Everyone|Easy||Java/Javascript||
 |2053|Kth Distinct String in an Array|Easy||Java/Javascript||
 |2057|Smallest Index With Equal Value|Easy||Java/Javascript||
