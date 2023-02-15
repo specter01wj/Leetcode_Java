@@ -47,7 +47,9 @@ public class E2053_Kth_Distinct_String_in_an_Array {
 	
 	/*
     solution:
-    count good triplets
+    1. in first iteration record the frequencies of each string in the map
+	2. in the second iteration if you find a string with frequency 1 then decreese k .
+	3. when k ==0 we have found the kth distrinct string.
     */
 	
 	/*
