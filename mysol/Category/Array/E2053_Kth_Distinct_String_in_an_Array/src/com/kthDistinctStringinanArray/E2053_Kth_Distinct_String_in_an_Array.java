@@ -58,7 +58,7 @@ public class E2053_Kth_Distinct_String_in_an_Array {
      * @return: the kth distinct string present in arr
      */
 	public static String kthDistinct(String[] arr, int k) {
-        Map<String,Integer> map=new HashMap<>();
+        Map<String,Integer> map = new HashMap<>();
         
         for (String s : arr) {
             if (map.containsKey(s)) {

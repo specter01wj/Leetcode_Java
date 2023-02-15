@@ -4,62 +4,45 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	There are n seats and n students in a room. You are given an array seats 
-				of length n, where seats[i] is the position of the ith seat. 
-				You are also given the array students of length n, where students[j] is 
-				the position of the jth student.
+			 	A distinct string is a string that is present only once in an array.
 
-				You may perform the following move any number of times:
+				Given an array of strings arr, and an integer k, return the kth distinct 
+				string present in arr. If there are fewer than k distinct strings, return an empty string "".
 
-					.Increase or decrease the position of the ith student by 1 (i.e., 
-					moving the ith student from position x to x + 1 or x - 1)
-
-				Return the minimum number of moves required to move each student to a seat 
-				such that no two students are in the same seat.
-
-				Note that there may be multiple seats or students in the same position at the beginning.
+				Note that the strings are considered in the order in which they appear in the array.
 
 
 				Example 1:
 
-				Input: seats = [3,1,5], students = [2,7,4]
-				Output: 4
-				Explanation: The students are moved as follows:
-				- The first student is moved from from position 2 to position 1 using 1 move.
-				- The second student is moved from from position 7 to position 5 using 2 moves.
-				- The third student is moved from from position 4 to position 3 using 1 move.
-				In total, 1 + 2 + 1 = 4 moves were used.
+				Input: arr = ["d","b","c","b","c","a"], k = 2
+				Output: "a"
+				Explanation:
+				The only distinct strings in arr are "d" and "a".
+				"d" appears 1st, so it is the 1st distinct string.
+				"a" appears 2nd, so it is the 2nd distinct string.
+				Since k == 2, "a" is returned. 
 
 				Example 2:
 
-				Input: seats = [4,1,5,9], students = [1,3,2,6]
-				Output: 7
-				Explanation: The students are moved as follows:
-				- The first student is not moved.
-				- The second student is moved from from position 3 to position 4 using 1 move.
-				- The third student is moved from from position 2 to position 5 using 3 moves.
-				- The fourth student is moved from from position 6 to position 9 using 3 moves.
-				In total, 0 + 1 + 3 + 3 = 7 moves were used.
+				Input: arr = ["aaa","aa","a"], k = 1
+				Output: "aaa"
+				Explanation:
+				All strings in arr are distinct, so the 1st string "aaa" is returned.
 
 				Example 3:
 
-				Input: seats = [2,2,6,6], students = [1,3,2,6]
-				Output: 4
-				Explanation: Note that there are two seats at position 2 and two seats at position 6.
-				The students are moved as follows:
-				- The first student is moved from from position 1 to position 2 using 1 move.
-				- The second student is moved from from position 3 to position 6 using 3 moves.
-				- The third student is not moved.
-				- The fourth student is not moved.
-				In total, 1 + 3 + 0 + 0 = 4 moves were used.
+				Input: arr = ["a","b","a"], k = 3
+				Output: ""
+				Explanation:
+				The only distinct string is "b". Since there are fewer than 3 distinct strings, 
+				we return an empty string "".
 			 */
 			$(document).ready(function(){
 
 				/*
-		     * @param seats: a list of integers
-		     * @param students: a list of integers
-		     * @return: the minimum number of moves required to move each student to a seat 
-		     * such that no two students are in the same seat
+		     * @param arr: a list of strings
+		     * @param k: an integer
+		     * @return: the kth distinct string present in arr
 		     */
 				let twoOutOfThree = function(seats, students) {
 					seats.sort((a, b) => a - b);
@@ -77,7 +60,9 @@
 			});
 
 			/*sol:
-				Sort both and sum the corresponding difference
+				1. in first iteration record the frequencies of each string in the map
+				2. in the second iteration if you find a string with frequency 1 then decreese k .
+				3. when k ==0 we have found the kth distrinct string.
 			 */
 
 		</script>
