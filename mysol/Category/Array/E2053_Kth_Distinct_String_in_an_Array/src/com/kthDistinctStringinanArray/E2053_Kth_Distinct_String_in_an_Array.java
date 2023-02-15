@@ -45,7 +45,16 @@ public class E2053_Kth_Distinct_String_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param arr: a list of strings
+     * @param k: an integer
+     * @return: the kth distinct string present in arr
+     */
 	public static String kthDistinct(String[] arr, int k) {
         Map<String,Integer> map=new HashMap<>();
         
