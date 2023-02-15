@@ -368,7 +368,9 @@ By Jin Wang
 |2022|**Convert 1D Array Into 2D Array**|Easy|Java/Javascript|Done/Done|
 |2027|**Minimum Moves to Convert String**|Easy|Java/Javascript|Done/Done|
 |2032|**Two Out of Three**|Easy|Java/Javascript|Done/Done|
+|2037|**Minimum Number of Moves to Seat Everyone**|Easy|Java/Javascript|Done/Done|
 |2042|**Check if Numbers Are Ascending in a Sentence**|Easy|Java/Javascript|Done/Done|
+|2053|**Kth Distinct String in an Array**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
