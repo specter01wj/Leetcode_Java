@@ -252,8 +252,8 @@ Cspiration Category:
 |2016|Maximum Difference Between Increasing Elements|Easy||Java/Javascript|Done/Done|
 |2022|Convert 1D Array Into 2D Array|Easy||Java/Javascript|Done/Done|
 |2032|Two Out of Three|Easy||Java/Javascript|Done/Done|
-|2037|Minimum Number of Moves to Seat Everyone|Easy||Java/Javascript||
-|2053|Kth Distinct String in an Array|Easy||Java/Javascript||
+|2037|Minimum Number of Moves to Seat Everyone|Easy||Java/Javascript|Done/Done|
+|2053|Kth Distinct String in an Array|Easy||Java/Javascript|Done/Done|
 |2057|Smallest Index With Equal Value|Easy||Java/Javascript||
 |2073|Time Needed to Buy Tickets|Easy||Java/Javascript||
 |2078|Two Furthest Houses With Different Colors|Easy||Java/Javascript||
