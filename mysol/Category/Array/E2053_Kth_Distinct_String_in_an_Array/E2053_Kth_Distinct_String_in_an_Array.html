@@ -44,18 +44,27 @@
 		     * @param k: an integer
 		     * @return: the kth distinct string present in arr
 		     */
-				let twoOutOfThree = function(seats, students) {
-					seats.sort((a, b) => a - b);
-	        students.sort((a, b) => a - b);
-	        let moves = 0;
-	        for (let i = 0; i < seats.length; ++i) {
-	            moves += Math.abs(seats[i] - students[i]);
+				let kthDistinct = function(arr, k) {
+					let map = {};
+	        
+	        for (let s of arr) {
+	            if (map[s] !== undefined) {
+	                map[s] = map[s] + 1;
+	            } else {
+	                map[s] = 1;
+	            }
 	        }
-	        return moves;
+					let i = 0;
+	        for (let s of arr) {
+	            if (map[s] === 1 && ++i === k) {
+	                return s;
+	            } 
+	        }
+	        return "";
 				};
 
-				let input = [3,1,5], students = [2,7,4];
-				let tt1 = twoOutOfThree(input, students);
+				let input = ["d","b","c","b","c","a"], k = 2;
+				let tt1 = kthDistinct(input, k);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
