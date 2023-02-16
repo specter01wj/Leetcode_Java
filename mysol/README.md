@@ -371,6 +371,8 @@ By Jin Wang
 |2037|**Minimum Number of Moves to Seat Everyone**|Easy|Java/Javascript|Done/Done|
 |2042|**Check if Numbers Are Ascending in a Sentence**|Easy|Java/Javascript|Done/Done|
 |2053|**Kth Distinct String in an Array**|Easy|Java/Javascript|Done/Done|
+|2057|**Smallest Index With Equal Value**|Easy|Java/Javascript|Done/Done|
+|2073|**Time Needed to Buy Tickets**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
