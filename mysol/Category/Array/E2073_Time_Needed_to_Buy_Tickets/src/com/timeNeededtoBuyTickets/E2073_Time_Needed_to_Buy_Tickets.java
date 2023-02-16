@@ -44,7 +44,18 @@ public class E2073_Time_Needed_to_Buy_Tickets {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Add min(tickets[i],tickets[k]) upto k (inclusive).
+	2. Add min(tickets[i],tickets[k] - 1) after k.
+	3. Return the count.
+    */
 	
+	/*
+     * @param tickets: a list of integers
+     * @param k: an integer
+     * @return: the time taken for the person at position k (0-indexed) to finish buying tickets
+     */
 	public static int timeRequiredToBuy(int[] tickets, int k) {
         int res = 0;
         for (int i = 0;i < tickets.length;i++) {
