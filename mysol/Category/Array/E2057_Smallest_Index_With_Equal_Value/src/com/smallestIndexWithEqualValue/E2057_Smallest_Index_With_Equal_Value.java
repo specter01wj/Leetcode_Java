@@ -44,7 +44,16 @@ public class E2057_Smallest_Index_With_Equal_Value {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop, modulus and find
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the smallest index i of nums such that i mod 10 == nums[i], 
+     * or -1 if such index does not exist
+     */
 	public static int smallestEqual(int[] nums) {
         for (int i = 0; i < nums.length; i ++) {
             if (i % 10 == nums[i]) { 
