@@ -38,7 +38,17 @@ public class E2085_Count_Common_Words_With_One_Occurrence {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    . Count frequency of words in each array in two separate hashmaps.
+	. Iterating over either of the array, check if the value is 1 in both the hashmaps.
+    */
 	
+	/*
+     * @param words1: a list of integers
+     * @param words2: a list of integers
+     * @return: the number of strings that appear exactly once in each of the two arrays
+     */
 	public static int countWords(String[] words1, String[] words2) {
         HashMap<String, Integer> map1 = new HashMap<>();
         HashMap<String, Integer> map2 = new HashMap<>();
