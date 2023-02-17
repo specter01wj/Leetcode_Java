@@ -47,7 +47,17 @@ public class E2078_Two_Furthest_Houses_With_Different_Colors {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Find the last house with different color of the first house.
+	Find the first house with different color of the last house.
+	Return the max distance of these two options.
+    */
 	
+	/*
+     * @param colors: a list of integers
+     * @return: the maximum distance between two houses with different colors
+     */
 	public static int maxDistance(int[] colors) {
         int n = colors.length, i = 0, j = n - 1;
         while (colors[0] == colors[j]) {
