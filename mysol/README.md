@@ -373,6 +373,8 @@ By Jin Wang
 |2053|**Kth Distinct String in an Array**|Easy|Java/Javascript|Done/Done|
 |2057|**Smallest Index With Equal Value**|Easy|Java/Javascript|Done/Done|
 |2073|**Time Needed to Buy Tickets**|Easy|Java/Javascript|Done/Done|
+|2078|**Two Furthest Houses With Different Colors**|Easy|Java/Javascript|Done/Done|
+|2085|**Count Common Words With One Occurrence**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
