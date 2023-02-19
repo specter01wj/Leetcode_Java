@@ -375,6 +375,8 @@ By Jin Wang
 |2073|**Time Needed to Buy Tickets**|Easy|Java/Javascript|Done/Done|
 |2078|**Two Furthest Houses With Different Colors**|Easy|Java/Javascript|Done/Done|
 |2085|**Count Common Words With One Occurrence**|Easy|Java/Javascript|Done/Done|
+|2089|**Find Target Indices After Sorting Array**|Easy|Java/Javascript|Done/Done|
+|2094|**Finding 3-Digit Even Numbers**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
