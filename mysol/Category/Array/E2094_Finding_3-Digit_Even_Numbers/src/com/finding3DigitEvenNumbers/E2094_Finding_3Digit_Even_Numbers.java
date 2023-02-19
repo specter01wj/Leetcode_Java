@@ -56,7 +56,7 @@ public class E2094_Finding_3Digit_Even_Numbers {
      * @return: a sorted array of the unique integers
      */
 	public static int[] findEvenNumbers(int[] digits) {
-        int [] map = new int[10];
+        int[] map = new int[10];
         
         for (int i = 0;i < digits.length;i++) {
             map[digits[i]]++;
@@ -66,7 +66,7 @@ public class E2094_Finding_3Digit_Even_Numbers {
         
         for (int i = 100;i <= 999;i = i + 2) {
             int num = i;
-            int [] freq = new int[10];
+            int[] freq = new int[10];
             while (num > 0) {
                 int rem = num % 10;
                 freq[rem]++;
@@ -78,7 +78,7 @@ public class E2094_Finding_3Digit_Even_Numbers {
             }
         }
         
-        int [] ans = new int[arr.size()];
+        int[] ans = new int[arr.size()];
         for (int i = 0;i < arr.size();i++) {
             ans[i] = arr.get(i);
         }
