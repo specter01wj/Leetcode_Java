@@ -258,8 +258,8 @@ Cspiration Category:
 |2073|Time Needed to Buy Tickets|Easy||Java/Javascript|Done/Done|
 |2078|Two Furthest Houses With Different Colors|Easy||Java/Javascript|Done/Done|
 |2085|Count Common Words With One Occurrence|Easy||Java/Javascript|Done/Done|
-|2089|Find Target Indices After Sorting Array|Easy||Java/Javascript||
-|2094|Finding 3-Digit Even Numbers|Easy||Java/Javascript||
+|2089|Find Target Indices After Sorting Array|Easy||Java/Javascript|Done/Done|
+|2094|Finding 3-Digit Even Numbers|Easy||Java/Javascript|Done/Done|
 |2099|Find Subsequence of Length K With the Largest Sum|Easy||Java/Javascript||
 |2108|Find First Palindromic String in the Array|Easy||Java/Javascript||
 |2114|Maximum Number of Words Found in Sentences|Easy||Java/Javascript||
