@@ -42,7 +42,18 @@ public class E2089_Find_Target_Indices_After_Sorting_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    . The array nums is sorted using Array.sort() method.
+	. Then while traversing nums, if any element equals the target its index is added in the ArrayList ans.
+	. List ans is then returned as answer.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param target: an integer
+     * @return: a list of the target indices of nums after sorting nums in non-decreasing order
+     */
 	public static List<Integer> targetIndices(int[] nums, int target) {
         Arrays.sort(nums);
 	    ArrayList<Integer> ans = new ArrayList<Integer>();
