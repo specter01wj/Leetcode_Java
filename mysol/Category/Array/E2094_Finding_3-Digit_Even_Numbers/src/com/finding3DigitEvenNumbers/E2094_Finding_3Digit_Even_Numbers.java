@@ -43,7 +43,18 @@ public class E2094_Finding_3Digit_Even_Numbers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    We want unique numbers of 3 digits only that too only even.  so first we gather the frequency 
+    of all the digits we have, then we iterate from 100 to 999 (all possible even 3 digit numbers).  
+	for example, iterating and at 104  so we will see that if we have  digits 1,0,4 in our database 
+	if yes then we can make this number from our available digits given to us.
+    */
 	
+	/*
+     * @param digits: a list of integers
+     * @return: a sorted array of the unique integers
+     */
 	public static int[] findEvenNumbers(int[] digits) {
         int [] map = new int[10];
         
