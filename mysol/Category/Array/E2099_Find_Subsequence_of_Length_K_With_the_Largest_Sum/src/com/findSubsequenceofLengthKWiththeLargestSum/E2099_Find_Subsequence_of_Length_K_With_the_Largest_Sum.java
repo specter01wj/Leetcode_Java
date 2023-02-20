@@ -43,7 +43,19 @@ public class E2099_Find_Subsequence_of_Length_K_With_the_Largest_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Sort the whole array
+	. Combine each index with its corresponding value to create a 2-d array;
+	. Sort the 2-d array reversely by value, then copy the largest k ones;
+	. Sort the largest k ones by index, then return the corresponding values by index order.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: any such subsequence as an integer array of length k
+     */
 	public static int[] maxSubsequence(int[] nums, int k) {
         int n = nums.length;
         int[][] indexAndVal = new int[n][2];
