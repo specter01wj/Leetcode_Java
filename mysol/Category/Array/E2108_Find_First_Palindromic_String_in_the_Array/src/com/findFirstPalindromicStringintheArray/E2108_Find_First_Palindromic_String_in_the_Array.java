@@ -36,7 +36,15 @@ public class E2108_Find_First_Palindromic_String_in_the_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    reverse and compare
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @return: the first palindromic string in the array
+     */
 	public static String firstPalindrome(String[] words) {
         StringBuffer sb = null;
         for (String s : words) {
