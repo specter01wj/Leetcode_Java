@@ -36,15 +36,15 @@
 		     * @param arr: a list of strings
 		     * @return: the number of good triplets
 		     */
-				let mostWordsFound = function(words) {
-	        int max = 0;
-	        for(int i = 0;i < sentences.length;i++) {
+				let mostWordsFound = function(sentences) {
+	        let max = 0;
+	        for(let i = 0;i < sentences.length;i++) {
 	            max = Math.max(max, (sentences[i].split(" ")).length);
 	        }
 	        return max;
 				};
 
-				let input = ["abc","car","ada","racecar","cool"];
+				let input = ["alice and bob love leetcode", "i think so too", "this is great thanks very much"];
 				let tt1 = mostWordsFound(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
