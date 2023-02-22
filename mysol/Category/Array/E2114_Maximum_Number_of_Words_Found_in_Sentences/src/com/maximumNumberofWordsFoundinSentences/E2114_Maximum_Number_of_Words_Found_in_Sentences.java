@@ -37,7 +37,15 @@ public class E2114_Maximum_Number_of_Words_Found_in_Sentences {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and compare
+    */
 	
+	/*
+     * @param arr: a list of strings
+     * @return: the number of good triplets
+     */
 	public static int mostWordsFound(String[] sentences) {
         int max = 0;
         for(int i = 0;i < sentences.length;i++) {
