@@ -33,7 +33,15 @@ public class E2133_Check_if_Every_Row_and_Column_Contains_All_Numbers {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Use HashSet to check each row / column
+    */
 	
+	/*
+     * @param matrix: a list of 2D integers
+     * @return: true if the matrix is valid. Otherwise, return false
+     */
 	public static boolean checkValid(int[][] matrix) {
         for (int r = 0, n = matrix.length; r < n; ++r) {
             Set<Integer> row = new HashSet<>();

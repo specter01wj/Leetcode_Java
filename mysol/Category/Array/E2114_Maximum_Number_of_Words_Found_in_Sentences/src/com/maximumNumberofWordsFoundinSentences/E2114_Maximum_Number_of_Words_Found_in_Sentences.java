@@ -44,7 +44,7 @@ public class E2114_Maximum_Number_of_Words_Found_in_Sentences {
 	
 	/*
      * @param sentences: a list of strings
-     * @return: the number of good triplets
+     * @return: the maximum number of words that appear in a single sentence
      */
 	public static int mostWordsFound(String[] sentences) {
         int max = 0;
