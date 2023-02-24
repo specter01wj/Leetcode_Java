@@ -33,7 +33,7 @@ public class E2148_Count_Elements_With_Strictly_Smaller_and_Greater_Elements {
 	
 	/*
     solution:
-    count good triplets
+    loop and count
     */
 	
 	/*
