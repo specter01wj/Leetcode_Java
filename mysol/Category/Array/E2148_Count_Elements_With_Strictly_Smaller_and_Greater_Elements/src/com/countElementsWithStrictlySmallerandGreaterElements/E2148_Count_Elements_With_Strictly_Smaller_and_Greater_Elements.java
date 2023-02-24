@@ -31,7 +31,16 @@ public class E2148_Count_Elements_With_Strictly_Smaller_and_Greater_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of elements that have both a strictly smaller 
+     * and a strictly greater element appear in nums
+     */
 	public static int countElements(int[] nums) {
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
