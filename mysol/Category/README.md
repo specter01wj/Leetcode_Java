@@ -264,8 +264,8 @@ Cspiration Category:
 |2108|Find First Palindromic String in the Array|Easy||Java/Javascript|Done/Done|
 |2114|Maximum Number of Words Found in Sentences|Easy||Java/Javascript|Done/Done|
 |2133|Check if Every Row and Column Contains All Numbers|Easy||Java/Javascript|Done/Done|
-|2144|Minimum Cost of Buying Candies With Discount|Easy||Java/Javascript||
-|2148|Count Elements With Strictly Smaller and Greater Elements|Easy||Java/Javascript||
+|2144|Minimum Cost of Buying Candies With Discount|Easy||Java/Javascript|Done/Done|
+|2148|Count Elements With Strictly Smaller and Greater Elements|Easy||Java/Javascript|Done/Done|
 |2154|Keep Multiplying Found Values by Two|Easy||Java/Javascript||
 |2164|Sort Even and Odd Indices Independently|Easy||Java/Javascript||
 
