@@ -52,7 +52,21 @@ public class E2144_Minimum_Cost_of_Buying_Candies_With_Discount {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    For the max value, we have to pay for it.
+	For the second max value, we still have to pay for it.
+	For the third max value, we can get it free one as bonus.
+	And continue do this for the rest.
 	
+	The the core of problem, is need to sort the input.
+	All A[i] with i % 3 == n % 3, we can get it for free.
+    */
+	
+	/*
+     * @param cost: a list of integers
+     * @return: the minimum cost of buying all the candies
+     */
 	public static int minimumCost(int[] cost) {
         Arrays.sort(cost);
         int res = 0, n = cost.length;
