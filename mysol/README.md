@@ -381,6 +381,8 @@ By Jin Wang
 |2108|**Find First Palindromic String in the Array**|Easy|Java/Javascript|Done/Done|
 |2114|**Maximum Number of Words Found in Sentences**|Easy|Java/Javascript|Done/Done|
 |2133|**Check if Every Row and Column Contains All Numbers**|Easy|Java/Javascript|Done/Done|
+|2144|**Minimum Cost of Buying Candies With Discount**|Easy|Java/Javascript|Done/Done|
+|2148|**Count Elements With Strictly Smaller and Greater Elements**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
