@@ -40,7 +40,16 @@ public class E2154_Keep_Multiplying_Found_Values_by_Two {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param original: an integer
+     * @return: the final value of original
+     */
 	public static int findFinalValue(int[] nums, int original) {
         HashSet<Integer> set = new HashSet<>();
         for (int i : nums) {
