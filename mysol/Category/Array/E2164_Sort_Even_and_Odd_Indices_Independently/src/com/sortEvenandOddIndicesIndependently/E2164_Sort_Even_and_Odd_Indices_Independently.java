@@ -44,7 +44,15 @@ public class E2164_Sort_Even_and_Odd_Indices_Independently {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Heap and Counting Sort
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the array formed after rearranging the values of nums
+     */
 	public static int[] sortEvenOdd(int[] nums) {
 		int[] even = new int[101];
 	    int[] odd = new int[101];
