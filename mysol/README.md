@@ -385,6 +385,8 @@ By Jin Wang
 |2148|**Count Elements With Strictly Smaller and Greater Elements**|Easy|Java/Javascript|Done/Done|
 |2154|**Keep Multiplying Found Values by Two**|Easy|Java/Javascript|Done/Done|
 |2164|**Sort Even and Odd Indices Independently**|Easy|Java/Javascript|Done/Done|
+|2176|**Count Equal and Divisible Pairs in an Array**|Easy|Java/Javascript|Done/Done|
+|2185|**Counting Words With a Given Prefix**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
