@@ -43,7 +43,7 @@ public class E2185_Counting_Words_With_a_Given_Prefix {
      */
 	public static int prefixCount(String[] words, String pref) {
         int ans = 0;
-        for(String w: words) {
+        for (String w: words) {
             ans += (w.indexOf(pref) == 0) ? 1 : 0;
         }
         return ans;
