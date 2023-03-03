@@ -35,7 +35,16 @@ public class E2176_Count_Equal_and_Divisible_Pairs_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Traverse indices with same values
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the number of pairs (i, j)
+     */
 	public static int countPairs(int[] nums, int k) {
         Map<Integer, List<Integer>> indices = new HashMap<>();
         for (int i = 0; i < nums.length; ++i) {
