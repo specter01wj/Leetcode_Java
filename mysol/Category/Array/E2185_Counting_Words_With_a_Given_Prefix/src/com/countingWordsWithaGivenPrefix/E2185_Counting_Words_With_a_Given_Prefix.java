@@ -31,7 +31,16 @@ public class E2185_Counting_Words_With_a_Given_Prefix {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and find the index
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param pref: a string
+     * @return: the number of good triplets
+     */
 	public static int prefixCount(String[] words, String pref) {
         int ans = 0;
         for(String w: words) {
