@@ -44,7 +44,16 @@ public class E2190_Most_Frequent_Number_Following_Key_In_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and calculate
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param key: an integer
+     * @return: the target with the maximum count
+     */
 	public static int mostFrequent(int[] nums, int key) {
         Map<Integer, Integer> freq = new HashMap<>();
         int mostFreq = -1;
