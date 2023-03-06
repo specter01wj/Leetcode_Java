@@ -42,7 +42,21 @@ public class E2200_Find_All_KDistant_Indices_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    If we find all the indices of the keys in a given array in increasing order, 
+    then we can iterate k elements on the right and left sides of that key index 
+    to add them to answer in increasing order. For the next key index we can start 
+    iterating from the maximum(last key index + k , current key index - k) so that 
+    we will not process the already iterated array index.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param key: an integer
+     * @param k: an integer
+     * @return: a list of all k-distant indices sorted in increasing order
+     */
 	public static List<Integer> findKDistantIndices(int[] nums, int key, int k) {
         List<Integer> idx = new ArrayList<>();
         List<Integer> ans = new ArrayList<>();
