@@ -387,6 +387,8 @@ By Jin Wang
 |2164|**Sort Even and Odd Indices Independently**|Easy|Java/Javascript|Done/Done|
 |2176|**Count Equal and Divisible Pairs in an Array**|Easy|Java/Javascript|Done/Done|
 |2185|**Counting Words With a Given Prefix**|Easy|Java/Javascript|Done/Done|
+|2190|**Most Frequent Number Following Key In an Array**|Easy|Java/Javascript|Done/Done|
+|2200|**Find All K-Distant Indices in an Array**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
