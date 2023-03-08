@@ -38,7 +38,15 @@ public class E2206_Divide_Array_Into_Equal_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet and loop
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if nums can be divided into n pairs, otherwise return false
+     */
 	public static boolean divideArray(int[] nums) {
         Set<Integer> seen = new HashSet<>();
         for (int num : nums) {
