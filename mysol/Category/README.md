@@ -272,8 +272,8 @@ Cspiration Category:
 |2185|Counting Words With a Given Prefix|Easy||Java/Javascript|Done/Done|
 |2190|Most Frequent Number Following Key In an Array|Easy||Java/Javascript|Done/Done|
 |2200|Find All K-Distant Indices in an Array|Easy||Java/Javascript|Done/Done|
-|2206|Divide Array Into Equal Pairs|Easy||Java/Javascript||
-|2210|Count Hills and Valleys in an Array|Easy||Java/Javascript||
+|2206|Divide Array Into Equal Pairs|Easy||Java/Javascript|Done/Done|
+|2210|Count Hills and Valleys in an Array|Easy||Java/Javascript|Done/Done|
 |2215|Find the Difference of Two Arrays|Easy||Java/Javascript||
 |2239|Find Closest Number to Zero|Easy||Java/Javascript||
 |2248|Intersection of Multiple Arrays|Easy||Java/Javascript||
