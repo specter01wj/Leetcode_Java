@@ -60,13 +60,14 @@ public class E2210_Count_Hills_and_Valleys_in_an_Array {
      * @return: the number of hills and valleys in nums
      */
 	public static int countHillValley(int[] nums) {
-        int r = 0, left = nums[0];
-        for(int i = 1; i < nums.length - 1; i++)
-            if(left < nums[i] && nums[i] > nums[i + 1] || left > nums[i] && nums[i] < nums[i + 1]){
-                r++;
+        int result = 0, left = nums[0];
+        for (int i = 1; i < nums.length - 1; i++) {
+            if ((left < nums[i] && nums[i] > nums[i + 1]) || (left > nums[i] && nums[i] < nums[i + 1])) {
+            	result++;
                 left = nums[i];
             }
-        return r;
+        }
+        return result;
     }
 
 }
