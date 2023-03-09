@@ -50,7 +50,15 @@ public class E2210_Count_Hills_and_Valleys_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and compare
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of hills and valleys in nums
+     */
 	public static int countHillValley(int[] nums) {
         int r = 0, left = nums[0];
         for(int i = 1; i < nums.length - 1; i++)
