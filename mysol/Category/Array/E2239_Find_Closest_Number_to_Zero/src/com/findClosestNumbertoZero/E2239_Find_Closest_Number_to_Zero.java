@@ -33,7 +33,15 @@ public class E2239_Find_Closest_Number_to_Zero {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and compare
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number with the largest value
+     */
 	public static int findClosestNumber(int[] nums) {
         int res = Integer.MAX_VALUE;
         for (int i: nums) {
