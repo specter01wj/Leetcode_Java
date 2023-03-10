@@ -38,7 +38,19 @@ public class E2215_Find_the_Difference_of_Two_Arrays {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. First create 2 sets. Then add nums1 elements to set1, and nums2 to set2.This will give us 2 sets with unique elements only.
+	2. Now,  just iterate to all elements of set1 and add those elements to first sublist of result list, which are not in set2.
+	3. Similarly, iterate to all elements of set2 and add those elements to second sublist of result list, which are not in set1.
+	4. Now, we got our result list.
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @return: a list answer of size 2
+     */
 	public static List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
         Set<Integer> set1 = new HashSet<>();
 		Set<Integer> set2 = new HashSet<>();
