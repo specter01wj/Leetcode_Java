@@ -34,12 +34,13 @@ public class E2248_Intersection_of_Multiple_Arrays {
 	
 	/*
     solution:
-    count good triplets
+    loop and count
     */
 	
 	/*
      * @param nums: a list of 2D integers
-     * @return: the list of integers that are present in each array of nums sorted in ascending order
+     * @return: the list of integers that are present in each array of nums sorted in 
+     * ascending order
      */
 	public static List<Integer> intersection(int[][] nums) {
         List<Integer> ans = new ArrayList<>();
