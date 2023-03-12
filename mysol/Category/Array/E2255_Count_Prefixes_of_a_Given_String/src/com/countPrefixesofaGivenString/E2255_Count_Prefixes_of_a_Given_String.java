@@ -39,7 +39,16 @@ public class E2255_Count_Prefixes_of_a_Given_String {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    for each word w in words list, check if word w startsWith the string s
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param s: a string
+     * @return: the number of strings in words that are a prefix of s
+     */
 	public static int countPrefixes(String[] words, String s) {
         int res = 0;
         for (String w : words) {
