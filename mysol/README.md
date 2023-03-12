@@ -393,6 +393,8 @@ By Jin Wang
 |2210|**Count Hills and Valleys in an Array**|Easy|Java/Javascript|Done/Done|
 |2215|**Find the Difference of Two Arrays**|Easy|Java/Javascript|Done/Done|
 |2239|**Find Closest Number to Zero**|Easy|Java/Javascript|Done/Done|
+|2248|**Intersection of Multiple Arrays**|Easy|Java/Javascript|Done/Done|
+|2255|**Count Prefixes of a Given String**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
