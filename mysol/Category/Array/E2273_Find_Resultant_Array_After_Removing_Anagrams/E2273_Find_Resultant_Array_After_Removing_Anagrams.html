@@ -48,22 +48,38 @@
 		     * @return: words after performing all operations
 		     */
 				let removeAnagrams = function(words, s) {
-					let res = 0;
-	        for (let w of words) {
-	            if (s.startsWith(w)) {
-	                res++;
-	            }
-	        }
-	        return res;
+					let i = 1; // start from the second word
+			    while (i < words.length) {
+			        if (areAnagrams(words[i], words[i - 1])) {
+			            // remove word at position i
+			            words.splice(i, 1);
+			        } else {
+			            i++;
+			        }
+			    }
+			    return words;
 				};
 
+				function areAnagrams(s1, s2) {
+			    return sortString(s1) === sortString(s2);
+				}
+
+				function sortString(str) {
+			    return str.split('').sort().join('');
+				}
+
 				let input = ["abba","baba","bbaa","cd","cd"];
+				$('#t1').html('<h2>Input: ' + input + '</h2>');
 				let tt1 = removeAnagrams(input);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+				$('#t2').html('<h2>Output: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				for each word w in words list, check if word w startsWith the string s
+				Iterate through the words array, and for each word, check if it's an anagram of the 
+		    previous word. If it is, you remove it from the list. 
+		    Note that since removing an element will alter the structure of the list, 
+		    we need to adjust our loop counter accordingly.
+				To check if two words are anagrams, you can sort their characters and see if they match.
 			 */
 
 		</script>
@@ -72,6 +88,7 @@
 	<body>
 		<div>
 			<p id='t1'></p>
+			<p id='t2'></p>
 		</div>
 	</body>
 
