@@ -396,6 +396,7 @@ By Jin Wang
 |2248|**Intersection of Multiple Arrays**|Easy|Java/Javascript|Done/Done|
 |2255|**Count Prefixes of a Given String**|Easy|Java/Javascript|Done/Done|
 |2273|**Find Resultant Array After Removing Anagrams**|Easy|Java/Javascript|Done/Done|
+|2293|**Min Max Game**|Easy|Java/Javascript|Done/Done|
 
 
 ### Medium Level
