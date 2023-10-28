@@ -1,25 +1,24 @@
+type TaxBracket = [number, number];
 
-function minMaxGame(nums: number[]): number {
-    while (nums.length > 1) {
-        let n = nums.length;
-        let newNums: number[] = new Array(Math.floor(n / 2)).fill(0);
-        
-        for (let i = 0; i < Math.floor(n / 2); i++) {
-            if (i % 2 === 0) {
-                newNums[i] = Math.min(nums[2 * i], nums[2 * i + 1]);
-            } else {
-                newNums[i] = Math.max(nums[2 * i], nums[2 * i + 1]);
-            }
-        }
-            
-        nums = newNums;
+function calculateTax(brackets: TaxBracket[], income: number): number {
+  let tax = 0;
+  let prev = 0;
+  for (let bracket of brackets) {
+    let upper = bracket[0], percent = bracket[1];
+    if (income >= upper) {
+      tax += (upper - prev) * percent / 100;
+      prev = upper;
+    } else {
+      tax += (income - prev) * percent / 100;
+      return tax;
     }
-
-    return nums[0];
+  }
+  
+  return tax;
 }
 
-let input = [1,3,5,2,4,8,2,2];
-let output = minMaxGame(input);
+let input: TaxBracket[] = [[3,50],[7,10],[12,25]];
+let output = calculateTax(input, 10);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
