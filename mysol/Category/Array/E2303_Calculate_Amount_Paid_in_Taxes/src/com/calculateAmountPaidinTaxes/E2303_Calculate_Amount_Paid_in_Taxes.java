@@ -55,7 +55,15 @@ public class E2303_Calculate_Amount_Paid_in_Taxes {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and add
+    */
 	
+	/*
+     * @param arr: a 2D list of integers
+     * @return: the amount of money that you have to pay in taxes
+     */
 	public static double calculateTax(int[][] brackets, int income) {
 		double tax = 0;
 		int prev = 0;
