@@ -18,7 +18,7 @@ function checkXMatrix(grid) {
     }
     return true;
 }
-var input = [[5, 7, 0], [0, 3, 1], [0, 5, 0]];
+var input = [[2, 0, 0, 1], [0, 3, 1, 0], [0, 5, 2, 0], [4, 0, 0, 2]];
 var output = checkXMatrix(input);
 var webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();

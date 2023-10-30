@@ -21,7 +21,7 @@ function checkXMatrix(grid: number[][]): boolean {
   return true;
 }
 
-let input: number[][] = [[5,7,0],[0,3,1],[0,5,0]];
+let input: number[][] = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]];
 let output = checkXMatrix(input);
 
 let webHeading = document.querySelector('#t1');
