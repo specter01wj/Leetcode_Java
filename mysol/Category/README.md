@@ -281,6 +281,7 @@ Cspiration Category:
 |2273|Find Resultant Array After Removing Anagrams|Easy||Java/Javascript|Done/Done|
 |2293|Min Max Game|Easy||Java/Javascript|Done/Done|
 |2303|Calculate Amount Paid in Taxes|Easy||Java/Javascript|Done/Done|
+|2319|Check if Matrix Is X-Matrix|Easy||Java/Javascript|Done/Done|
 
 
 ### 2. String
