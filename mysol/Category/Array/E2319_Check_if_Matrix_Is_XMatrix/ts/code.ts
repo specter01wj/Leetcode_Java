@@ -1,24 +1,28 @@
-type TaxBracket = [number, number];
 
-function calculateTax(brackets: TaxBracket[], income: number): number {
-  let tax = 0;
-  let prev = 0;
-  for (let bracket of brackets) {
-    let upper = bracket[0], percent = bracket[1];
-    if (income >= upper) {
-      tax += (upper - prev) * percent / 100;
-      prev = upper;
-    } else {
-      tax += (income - prev) * percent / 100;
-      return tax;
+function checkXMatrix(grid: number[][]): boolean {
+  let n = grid.length;
+  
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === j || i + j === n - 1) {
+        // For diagonal elements
+        if (grid[i][j] === 0) {
+          return false;
+        }
+      } else {
+        // For non-diagonal elements
+        if (grid[i][j] !== 0) {
+          return false;
+        }
+      }
     }
   }
   
-  return tax;
+  return true;
 }
 
-let input: TaxBracket[] = [[3,50],[7,10],[12,25]];
-let output = calculateTax(input, 10);
+let input: number[] = [[5,7,0],[0,3,1],[0,5,0]];
+let output = checkXMatrix(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
