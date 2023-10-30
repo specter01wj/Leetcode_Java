@@ -37,7 +37,15 @@ public class E2319_Check_if_Matrix_Is_XMatrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    double loop and check
+    */
 	
+	/*
+     * @param grid: a 2D list of integers
+     * @return: true if grid is an X-Matrix. Otherwise, return false
+     */
 	public static boolean checkXMatrix(int[][] grid) {
 		int n = grid.length;
 		
