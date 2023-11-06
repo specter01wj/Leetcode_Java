@@ -51,7 +51,23 @@ public class E2335_Minimum_Amount_of_Time_to_Fill_Cups {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. res >= max(A)
+	Because each time,
+	one type can reduce at most 1 cup,
+	so the final result is bigger or equal to max(A)
 	
+	2. res >= ceil(sum(A) / 2)
+	Because each time,
+	we can fill up to 2 cups,
+	so the final result is bigger or equal to ceil(sum(A) / 2)
+    */
+	
+	/*
+     * @param amount: a list of integers
+     * @return: the minimum number of seconds needed to fill up all the cups
+     */
 	public static int fillCups(int[] amount) {
 		int max = 0, sum = 0;
 		for (int i : amount) {
