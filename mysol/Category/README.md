@@ -282,6 +282,7 @@ Cspiration Category:
 |2293|Min Max Game|Easy||Java/Javascript|Done/Done|
 |2303|Calculate Amount Paid in Taxes|Easy||Java/Javascript|Done/Done|
 |2319|Check if Matrix Is X-Matrix|Easy||Java/Javascript|Done/Done|
+|2335|Minimum Amount of Time to Fill Cups|Easy||Java/Javascript|Done/Done|
 
 
 ### 2. String
