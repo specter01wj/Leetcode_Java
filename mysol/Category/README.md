@@ -278,12 +278,12 @@ Cspiration Category:
 |2239|Find Closest Number to Zero|Easy||Java/Javascript|Done/Done|
 |2248|Intersection of Multiple Arrays|Easy||Java/Javascript|Done/Done|
 |2255|Count Prefixes of a Given String|Easy||Java/Javascript|Done/Done|
-|2273|Find Resultant Array After Removing Anagrams|Easy||Java/Javascript/Typescript|Done/Done|
-|2293|Min Max Game|Easy||Java/Javascript/Typescript|Done/Done|
-|2303|Calculate Amount Paid in Taxes|Easy||Java/Javascript/Typescript|Done/Done|
-|2319|Check if Matrix Is X-Matrix|Easy||Java/Javascript/Typescript|Done/Done|
-|2335|Minimum Amount of Time to Fill Cups|Easy||Java/Javascript/Typescript|Done/Done|
-|2341|Maximum Number of Pairs in Array|Easy||Java/Javascript/Typescript|Done/Done|
+|2273|Find Resultant Array After Removing Anagrams|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2293|Min Max Game|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2303|Calculate Amount Paid in Taxes|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2319|Check if Matrix Is X-Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2335|Minimum Amount of Time to Fill Cups|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2341|Maximum Number of Pairs in Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
