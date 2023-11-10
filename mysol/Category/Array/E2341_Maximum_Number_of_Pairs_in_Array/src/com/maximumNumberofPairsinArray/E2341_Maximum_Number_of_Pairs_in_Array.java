@@ -4,8 +4,9 @@ import java.util.*;
 /*
 You are given a 0-indexed integer array nums. In one operation, you may do the following:
 
-Choose two integers in nums that are equal.
-Remove both integers from nums, forming a pair.
+. Choose two integers in nums that are equal.
+. Remove both integers from nums, forming a pair.
+
 The operation is done on nums as many times as possible.
 
 Return a 0-indexed integer array answer of size 2 where answer[0] is the number of 
@@ -47,7 +48,18 @@ public class E2341_Maximum_Number_of_Pairs_in_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    . A HashMap (numCounts) is used to count the occurrences of each integer in the input array.
+	. The pairs and leftovers are calculated by iterating over the values in numCounts.
+	. For each number, the integer division (count / 2) gives the number of pairs, 
+	and the remainder (count % 2) gives the number of leftovers.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: a 0-indexed integer array answer of size 2
+     */
 	public static int[] numberOfPairs(int[] nums) {
 		Map<Integer, Integer> numCounts = new HashMap<>();
 		for (int num : nums) {
