@@ -283,6 +283,7 @@ Cspiration Category:
 |2303|Calculate Amount Paid in Taxes|Easy||Java/Javascript|Done/Done|
 |2319|Check if Matrix Is X-Matrix|Easy||Java/Javascript|Done/Done|
 |2335|Minimum Amount of Time to Fill Cups|Easy||Java/Javascript|Done/Done|
+|2341|Maximum Number of Pairs in Array|Easy||Java/Javascript|Done/Done|
 
 
 ### 2. String
