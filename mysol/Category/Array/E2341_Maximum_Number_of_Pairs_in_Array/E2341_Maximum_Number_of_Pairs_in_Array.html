@@ -45,7 +45,7 @@
 
 				/*
         * @param nums: a list of integers
-        * @return: the minimum number of seconds needed to fill up all the cups
+        * @return: a 0-indexed integer array answer of size 2
         */
 				let numberOfPairs = function(nums) {
 					let numCounts = {};
@@ -54,7 +54,7 @@
           }
           
           let pairs = 0, leftovers = 0;
-          for (let count of numCounts) {
+          for (let count of Object.values(numCounts)) {
             pairs += Math.floor(count / 2);
             leftovers += count % 2;
           }
@@ -68,15 +68,10 @@
 			});
 
 			/*sol:
-				1. res >= max(A)
-        Because each time,
-        one type can reduce at most 1 cup,
-        so the final result is bigger or equal to max(A)
-        
-        2. res >= ceil(sum(A) / 2)
-        Because each time,
-        we can fill up to 2 cups,
-        so the final result is bigger or equal to ceil(sum(A) / 2)
+				. A HashMap (numCounts) is used to count the occurrences of each integer in the input array.
+        . The pairs and leftovers are calculated by iterating over the values in numCounts.
+        . For each number, the integer division (count / 2) gives the number of pairs, 
+        and the remainder (count % 2) gives the number of leftovers.
 			 */
 
 		</script>
