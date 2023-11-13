@@ -51,7 +51,19 @@ public class E2347_Best_Poker_Hand {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. If all characters in suits are same, then it is Flush;
+	2. If there are at least 3 values in ranks are same, it is Three of a Kind;
+	3. If there are2 values in ranks are same, it is Pair;
+	4. Otherwise, it is High Card.
+    */
 	
+	/*
+     * @param ranks: a list of integers
+     * @param suits: a list of chars
+     * @return: a string representing the best type of poker hand you can make with the given cards
+     */
 	public static String bestHand(int[] ranks, char[] suits) {
 		int[] cnt = new int[14];
 		int max = 0;
