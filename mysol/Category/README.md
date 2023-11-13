@@ -284,6 +284,7 @@ Cspiration Category:
 |2319|Check if Matrix Is X-Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2335|Minimum Amount of Time to Fill Cups|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2341|Maximum Number of Pairs in Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2347|Best Poker Hand|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
