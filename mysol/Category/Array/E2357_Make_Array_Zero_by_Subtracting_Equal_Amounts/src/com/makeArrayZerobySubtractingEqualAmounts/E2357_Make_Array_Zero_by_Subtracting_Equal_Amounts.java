@@ -34,7 +34,16 @@ public class E2357_Make_Array_Zero_by_Subtracting_Equal_Amounts {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Same elements, are always same -> Deduplicate
+	2. Different elements, are always different until 0 -> Counts unique elements
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum number of operations to make every element in nums equal to 0
+     */
 	public static int minimumOperations(int[] nums) {
 		Set<Integer> set = new HashSet<>();
 		for (int num : nums) {
