@@ -22,7 +22,20 @@ public class E2363_Merge_Similar_Items {
         		"; input2: " + Arrays.deepToString(input2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Combine the Items: Concatenate items1 and items2 into a single array.
+	2. Map Values to Weights: Use a JavaScript Map to store the sum of weights for each unique value.
+	3. Sort and Prepare the Result: Convert the map into an array of arrays (each inner array containing 
+	   a value and its total weight), and then sort this array based on the value.
+	4. Return the Result: Return the sorted array.
+    */
 	
+	/*
+     * @param input1: a 2D list of integers
+     * @param input2: a 2D list of integers
+     * @return: a 2D integer array
+     */
 	public static List<List<Integer>> mergeSimilarItems(int[][] items1, int[][] items2) {
         // Step 1: Combine items from both arrays
         List<int[]> combinedItems = new ArrayList<>();
