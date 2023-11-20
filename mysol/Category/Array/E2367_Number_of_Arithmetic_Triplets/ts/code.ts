@@ -12,7 +12,7 @@ function arithmeticTriplets(nums: number[], diff: number): number {
   return cnt;
 }
 
-let input: number[] = [0,1,4,6,7,10], diff: number = 2;
+let input: number[] = [0,1,4,6,7,10], diff: number = 3;
 let output = arithmeticTriplets(input, diff);
 
 let webHeading = document.querySelector('#t1');
