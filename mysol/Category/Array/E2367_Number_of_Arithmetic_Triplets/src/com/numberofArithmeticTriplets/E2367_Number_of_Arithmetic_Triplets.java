@@ -22,7 +22,16 @@ public class E2367_Number_of_Arithmetic_Triplets {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Create a HashSet numberSet to keep track of the numbers encountered in the array.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param diff: an integer
+     * @return: the number of good triplets
+     */
 	public static int arithmeticTriplets(int[] nums, int diff) {
 		int cnt = 0;
 		Set<Integer> numberSet = new HashSet<>();
@@ -30,6 +39,7 @@ public class E2367_Number_of_Arithmetic_Triplets {
 			if (numberSet.contains(num - diff) && numberSet.contains(num - diff * 2)) {
 				++cnt;
 			}
+			numberSet.add(num);
 		}
 		
 		return cnt;
