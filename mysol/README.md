@@ -404,6 +404,7 @@ By Jin Wang
 |2347|**Best Poker Hand**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2357|**Make Array Zero by Subtracting Equal Amounts**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2363|**Merge Similar Items**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2367|**Number of Arithmetic Triplets**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
