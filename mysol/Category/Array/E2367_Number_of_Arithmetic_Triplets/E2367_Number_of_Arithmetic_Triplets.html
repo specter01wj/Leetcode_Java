@@ -22,20 +22,16 @@
         * @return: the number of good triplets
         */
 				let arithmeticTriplets = function(nums, diff) {
-					const map = {};
-          const items = [...items1, ...items2];
-          
-          // Sum weights for each unique value
-          for (const [val, weight] of items) {
-              if (map[val]) {
-                  map[val] += weight;
-              } else {
-                  map[val] = weight;   
-              }
+					let cnt = 0;
+          let numberSet = new Set();
+          for (let num of nums) {
+            if (numberSet.has(num - diff) && numberSet.has(num - diff * 2)) {
+              ++cnt;
+            }
+            numberSet.add(num);
           }
           
-          // Convert the map to an array, sort it by value, and return
-          return Object.entries(map).sort((a, b) => a[0] - b[0]);
+          return cnt;
 				};
 
 				let input = [0,1,4,6,7,10], diff = 3;
