@@ -1,24 +1,19 @@
 
-function mergeSimilarItems(items1: [number, number][], items2: [number, number][]): [number, number][] {
-  const map: { [key: number]: number } = {};
-  const items = [...items1, ...items2];
-  
-  // Sum weights for each unique value
-  for (const [val, weight] of items) {
-      if (map[val]) {
-          map[val] += weight;
-      } else {
-          map[val] = weight;   
-      }
+function arithmeticTriplets(nums: number[], diff: number): number {
+  let cnt: number = 0;
+  let numberSet: Set<number> = new Set();
+  for (let num of nums) {
+    if (numberSet.has(num - diff) && numberSet.has(num - diff * 2)) {
+      ++cnt;
+    }
+    numberSet.add(num);
   }
   
-  // Convert the map to an array, sort it by value, and return
-  return Object.entries(map).map(([value, weight]) => [parseInt(value, 10), weight])
-                             .sort((a, b) => a[0] - b[0]);
+  return cnt;
 }
 
-let input1: [number, number][] = [[1,1],[4,5],[3,8]], input2: [number, number][] = [[3,1],[1,5]];
-let output = mergeSimilarItems(input1, input2);
+let input: number[] = [0,1,4,6,7,10], diff: number = 2;
+let output = arithmeticTriplets(input, diff);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
