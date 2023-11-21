@@ -22,7 +22,17 @@ public class E2373_Largest_Local_Values_in_a_Matrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    For each cell in the maxLocal matrix, call the getMaxValue method to find 
+    the maximum value in the corresponding 3 x 3 matrix in the grid.
+	getMaxValue iterates over the 3 x 3 matrix and finds the maximum value.
+    */
 	
+	/*
+     * @param grid: a 2D list of integers
+     * @return: the generated matrix
+     */
 	public static int[][] largestLocal(int[][] grid) {
         int n = grid.length;
         int[][] maxLocal = new int[n - 2][n - 2];
