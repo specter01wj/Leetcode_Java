@@ -1,19 +1,33 @@
 
-function arithmeticTriplets(nums: number[], diff: number): number {
-  let cnt: number = 0;
-  let numberSet: Set<number> = new Set();
-  for (let num of nums) {
-    if (numberSet.has(num - diff) && numberSet.has(num - diff * 2)) {
-      ++cnt;
-    }
-    numberSet.add(num);
+function largestLocal(grid: number[][]): number[][] {
+  let n: number = grid.length;
+  let maxLocal: number[][] = Array.from({ length: n - 2 }, () => Array(n - 2).fill(0));
+
+  // Iterate over each cell of the maxLocal matrix
+  for (let i = 0; i < n - 2; i++) {
+      for (let j = 0; j < n - 2; j++) {
+          maxLocal[i][j] = getMaxValue(grid, i, j);
+      }
   }
-  
-  return cnt;
+
+  return maxLocal;
 }
 
-let input: number[] = [0,1,4,6,7,10], diff: number = 3;
-let output = arithmeticTriplets(input, diff);
+function getMaxValue(grid: number[][], row: number, col: number): number {
+  let maxVal: number = Number.MIN_SAFE_INTEGER;
+
+  // Iterate over the 3x3 matrix
+  for (let i = row; i <= row + 2; i++) {
+      for (let j = col; j <= col + 2; j++) {
+          maxVal = Math.max(maxVal, grid[i][j]);
+      }
+  }
+
+  return maxVal;
+}
+
+let input: number[][] = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]];
+let output = largestLocal(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
