@@ -288,6 +288,7 @@ Cspiration Category:
 |2357|Make Array Zero by Subtracting Equal Amounts|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2363|Merge Similar Items|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2367|Number of Arithmetic Triplets|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2373|Largest Local Values in a Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
