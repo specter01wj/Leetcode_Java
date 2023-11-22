@@ -406,6 +406,7 @@ By Jin Wang
 |2363|**Merge Similar Items**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2367|**Number of Arithmetic Triplets**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2373|**Largest Local Values in a Matrix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2383|**Minimum Hours of Training to Win a Competition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
