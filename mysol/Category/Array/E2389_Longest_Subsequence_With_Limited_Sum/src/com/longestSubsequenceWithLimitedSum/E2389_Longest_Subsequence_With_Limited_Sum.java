@@ -20,7 +20,19 @@ public class E2389_Longest_Subsequence_With_Limited_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Sort input nums, since we care the sum and doesn't care the order.
+	2. Calculate the prefix sum of A, since we want to know the accumulate sum.
+	3. Binary search each query q in query, and the index is the result.
+	4. return result res.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param queries: a list of integers
+     * @return: an array answer of length m
+     */
 	public static int[] answerQueries(int[] nums, int[] queries) {
         Arrays.sort(nums);
         int n = nums.length, m = queries.length, res[] = new int[m];
