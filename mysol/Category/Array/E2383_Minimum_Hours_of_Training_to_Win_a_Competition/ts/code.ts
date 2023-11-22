@@ -1,33 +1,29 @@
 
-function largestLocal(grid: number[][]): number[][] {
-  let n: number = grid.length;
-  let maxLocal: number[][] = Array.from({ length: n - 2 }, () => Array(n - 2).fill(0));
+function minTrainingHours(initialEnergy: number, initialExperience: number, energy: number[], experience: number[]): number {
+  let trainingHours: number = 0;
+  let currentEnergy: number = initialEnergy;
+  let currentExperience: number = initialExperience;
 
-  // Iterate over each cell of the maxLocal matrix
-  for (let i = 0; i < n - 2; i++) {
-      for (let j = 0; j < n - 2; j++) {
-          maxLocal[i][j] = getMaxValue(grid, i, j);
+  for (let i = 0; i < energy.length; i++) {
+      while (currentEnergy <= energy[i] || currentExperience <= experience[i]) {
+          // Decide whether to increase energy or experience
+          if (currentEnergy <= energy[i]) {
+              currentEnergy++;
+          } else {
+              currentExperience++;
+          }
+          trainingHours++;
       }
+      // Defeat the opponent
+      currentEnergy -= energy[i];
+      currentExperience += experience[i];
   }
 
-  return maxLocal;
+  return trainingHours;
 }
 
-function getMaxValue(grid: number[][], row: number, col: number): number {
-  let maxVal: number = Number.MIN_SAFE_INTEGER;
-
-  // Iterate over the 3x3 matrix
-  for (let i = row; i <= row + 2; i++) {
-      for (let j = col; j <= col + 2; j++) {
-          maxVal = Math.max(maxVal, grid[i][j]);
-      }
-  }
-
-  return maxVal;
-}
-
-let input: number[][] = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]];
-let output = largestLocal(input);
+let initialEnergy = 5, initialExperience = 3, energy = [1,4,3,2], experience = [2,6,3,1];
+let output = minTrainingHours(initialEnergy, initialExperience, energy, experience);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
