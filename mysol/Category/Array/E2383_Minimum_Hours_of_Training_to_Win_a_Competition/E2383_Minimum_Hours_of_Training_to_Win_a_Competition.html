@@ -56,8 +56,8 @@
         }
 
 				let initialEnergy = 5, initialExperience = 3, energy = [1,4,3,2], experience = [2,6,3,1];
-				let tt1 = minNumberOfHours(input);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+				let tt1 = minNumberOfHours(initialEnergy, initialExperience, energy, experience);
+				$('#t1').html('<h2>energy: ' + energy + '; experience: ' + experience + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
