@@ -31,7 +31,22 @@ public class E2383_Minimum_Hours_of_Training_to_Win_a_Competition {
         System.out.println("energy: " + Arrays.toString(energy) + "; experience: " + Arrays.toString(experience) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate over each opponent.
+	2. Check if the current energy and experience are sufficient to defeat the opponent.
+	   If not, calculate how many training hours are needed to either increase energy or experience to meet the requirements.
+	3. Update the current energy and experience after each opponent is defeated.
+	4. Keep a cumulative count of the training hours required.
+    */
 	
+	/*
+	 * @param initialEnergy: an integer
+	 * @param initialExperience: an integer
+     * @param energy: a list of integers
+     * @param experience: a list of integers
+     * @return: the minimum number of training hours required to defeat all n opponents
+     */
 	public static int minNumberOfHours(int initialEnergy, int initialExperience, int[] energy, int[] experience) {
         int trainingHours = 0;
         int currentEnergy = initialEnergy;
