@@ -1,29 +1,33 @@
 
-function minTrainingHours(initialEnergy: number, initialExperience: number, energy: number[], experience: number[]): number {
-  let trainingHours: number = 0;
-  let currentEnergy: number = initialEnergy;
-  let currentExperience: number = initialExperience;
+function answerQueries(nums: number[], queries: number[]): number[] {
+  // Sort the nums array
+  nums.sort((a, b) => a - b);
 
-  for (let i = 0; i < energy.length; i++) {
-      while (currentEnergy <= energy[i] || currentExperience <= experience[i]) {
-          // Decide whether to increase energy or experience
-          if (currentEnergy <= energy[i]) {
-              currentEnergy++;
-          } else {
-              currentExperience++;
-          }
-          trainingHours++;
-      }
-      // Defeat the opponent
-      currentEnergy -= energy[i];
-      currentExperience += experience[i];
+  // Convert nums into a prefix sum array
+  for (let i = 1; i < nums.length; ++i) {
+      nums[i] += nums[i - 1];
   }
 
-  return trainingHours;
+  // Process each query using a modified binary search
+  return queries.map(query => {
+      let left = 0, right = nums.length - 1, result = 0;
+
+      while (left <= right) {
+          let mid = Math.floor((left + right) / 2);
+          if (nums[mid] <= query) {
+              result = mid + 1;
+              left = mid + 1;
+          } else {
+              right = mid - 1;
+          }
+      }
+
+      return result;
+  });
 }
 
-let initialEnergy = 5, initialExperience = 3, energy = [1,4,3,2], experience = [2,6,3,1];
-let output = minTrainingHours(initialEnergy, initialExperience, energy, experience);
+let nums = [4,5,2,1], queries = [3,10,21];
+let output = minTrainingHours(nums, queries);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
