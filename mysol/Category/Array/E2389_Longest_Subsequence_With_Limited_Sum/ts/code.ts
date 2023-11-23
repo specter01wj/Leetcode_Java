@@ -27,7 +27,7 @@ function answerQueries(nums: number[], queries: number[]): number[] {
 }
 
 let nums = [4,5,2,1], queries = [3,10,21];
-let output = minTrainingHours(nums, queries);
+let output = answerQueries(nums, queries);
 
 let webHeading = document.querySelector('#t1');
 webHeading.textContent = 'Output: ' + output.toString();
