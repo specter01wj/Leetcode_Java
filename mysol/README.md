@@ -407,6 +407,7 @@ By Jin Wang
 |2367|**Number of Arithmetic Triplets**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2373|**Largest Local Values in a Matrix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2383|**Minimum Hours of Training to Win a Competition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2389|**Longest Subsequence With Limited Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
