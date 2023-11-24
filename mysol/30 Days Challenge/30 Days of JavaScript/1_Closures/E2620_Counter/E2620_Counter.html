@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer n, return a counter function. 
+        This counter function initially returns n and then returns 1 more than the previous 
+        value every subsequent time it is called (n, n + 1, n + 2, etc).
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param {number} n
+        * @return {Function} counter
+        */
+				let createCounter = function(n) {
+					return function() {
+            return n++;
+          }
+				};
+
+        let input = 10;
+				let counter = createCounter(10)
+        // counter() // 10
+        // counter() // 11
+        // counter() // 12
+				$('#t1').html('<h2>Input: ' + input + '<br>Results1: ' + (counter()) + '</h2>');
+				$('#t2').html('<h2>' + 'Results2: ' + (counter()) + '</h2>');
+				$('#t3').html('<h2>' + 'Results3: ' + (counter()) + '</h2>');
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+			<p id='t2'></p>
+			<p id='t3'></p>
+		</div>
+	</body>
+
+</html>
