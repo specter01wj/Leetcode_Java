@@ -20,7 +20,7 @@ function expect(val) {
 
 let input = '';
 let output1 = expect(5).toBe(5);
-let output2 = expect(5).notToBe(5);
+let output2 = expect(5).notToBe(15);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + output1.toString();
