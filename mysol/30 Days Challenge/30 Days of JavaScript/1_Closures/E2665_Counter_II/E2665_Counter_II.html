@@ -39,9 +39,11 @@
         };
 
 				let input = '';
-				let tt1 = expect(5).toBe(5);
-				let tt2 = expect(5).notToBe(15);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + ', ' + (tt2) + '</h2>');
+				const counter = createCounter(5);
+        let tt1 = counter.increment();
+        let tt2 = counter.reset();
+        let tt3 = counter.decrement();
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + ', ' + (tt2) + ', ' + (tt3) + '</h2>');
 			});
 
 			/*sol:
