@@ -3,6 +3,20 @@
 LeetCode Solutions using Java<br/>
 By Jin Wang
 
+## Study Plan
+
+### 30 Days of JavaScript
+
+#### Closures
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
+|2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
+|2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
+|2665|**Counter II**|Easy|Javascript/Typescript|Done/Done|
+
+
 ## by Difficulties
 
 ### Easy Level
