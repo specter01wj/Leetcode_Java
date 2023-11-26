@@ -1,17 +1,17 @@
 
-function createCounter(init) {
-  let currentValue = init;
+function createCounter(init: number) {
+  let currentValue: number = init;
 
   return {
-    increment: function() {
+    increment: function(): number {
       currentValue += 1;
       return currentValue;
     },
-    decrement: function() {
+    decrement: function(): number {
       currentValue -= 1;
       return currentValue;
     },
-    reset: function() {
+    reset: function(): number {
       currentValue = init;
       return currentValue;
     }
