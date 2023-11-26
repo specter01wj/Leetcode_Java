@@ -16,6 +16,21 @@ By Jin Wang
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
 |2665|**Counter II**|Easy|Javascript/Typescript|Done/Done|
 
+#### Basic Array Transformations
+
+
+#### Function Transformations
+
+
+#### Promises and Time
+
+
+#### JSON
+
+
+
+#### Classes
+
 
 ## by Difficulties
 
