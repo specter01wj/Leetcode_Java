@@ -18,6 +18,11 @@ By Jin Wang
 
 #### Basic Array Transformations
 
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2635|**Apply Transform Over Each Element in Array**|Easy|Javascript/Typescript|Done/Done|
+|2634|**Filter Elements from Array**|Easy|Javascript/Typescript|Done/Done|
+|2626|**Array Reduce Transformation**|Easy|Javascript/Typescript|Done/Done|
 
 #### Function Transformations
 
