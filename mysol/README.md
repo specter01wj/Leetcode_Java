@@ -26,6 +26,10 @@ By Jin Wang
 
 #### Function Transformations
 
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2629|**Function Composition**|Easy|Javascript/Typescript|Done/Done|
+|2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
 
 #### Promises and Time
 
