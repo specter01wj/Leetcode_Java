@@ -27,12 +27,9 @@
           }
         };
 
-        function fn(a, b) {
-            return a + b;
-        }
-
-				let input = [1, 2, 3, 4], init = 10;
-				let tt1 = reduce(input, fn, init);
+        let input = '';
+				let fn = compose([x => x + 1, x => 2 * x]);
+				let tt1 = fn(4);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
