@@ -1,16 +1,13 @@
-type F = (x: number) => number;
+type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
 
-function compose(functions: F[]): F {
-  return function(x) {
-    return functions.reduceRight((acc, func) => func(acc), x);
-  }
+function argumentsLength(...args: JSONValue[]): number {
+  return args.length;
 }
 
-let fn = compose([x => x + 1, x => 2 * x]);
-let output1 = fn(4);
+let output = argumentsLength({}, null, "3");
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + output1.toString();
+webHeading1.textContent = 'Output: ' + output.toString();
 
 
 
