@@ -1,20 +1,13 @@
+type F = (x: number) => number;
 
-function reduce(nums: number[], fn: (item: number, index: number) => number): number {
-  let val = init;
-  
-  for (let i = 0; i < nums.length; i++) {
-    val = fn(val, nums[i]);
+function reduce(functions: F[]): F {
+  return function(x) {
+    return functions.reduceRight((acc, func) => func(acc), x);
   }
-
-  return val;
 }
 
-function fn(a, b) {
-  return a + b;
-}
-
-let input = [1, 2, 3, 4], init = 10;
-let output1 = reduce(input, fn, init);
+let fn = compose([x => x + 1, x => 2 * x]);
+let output1 = fn(4);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + output1.toString();
