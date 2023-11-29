@@ -1,31 +1,37 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
-type OnceFn = (...args: JSONValue[]) => JSONValue | undefined;
+type Fn = (...params: number[]) => number;
 
-function once(fn: Function): OnceFn {
-  let called = false;
-  let result: any;
-
-	return function (...args: any[]): any {
-		if (!called) {
-      result = fn(...args);
-      called = true;
-      return result;
+function memoize(fn: Fn): Fn {
+  const cache = {};
+  return function(...args) {
+    const key = JSON.stringify(args);
+    if (key in cache) {
+      return cache[key];
     } else {
-      return undefined;
+      const result = fn.apply(this, args);
+      cache[key] = result;
+      return result;
     }
-	};
+  };
 }
 
-let fn = (a,b,c) => (a + b + c);
-let onceFn = once(fn);
-let output1 = onceFn(1,2,3);
-let output2 = onceFn(2,3,6);
+let callCount = 0;
+const memoizedFn = memoize(function (a, b) {
+  callCount += 1;
+  return a + b;
+});
+
+let output1 = memoizedFn(2, 3);
+let output2 = memoizedFn(2, 3);
+let output3 = callCount;
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + output1.toString();
 
 let webHeading2 = document.querySelector('#t2');
 webHeading2.textContent = 'Output: ' + output2.toString();
+
+let webHeading3 = document.querySelector('#t3');
+webHeading3.textContent = 'Output: ' + output3.toString();
 
 
 
