@@ -16,8 +16,19 @@
          * @param {Function} fn
          * @return {Function}
          */
-				let argumentsLength = function(...args) {
-          return args.length;
+				let once = function(fn) {
+          let called = false;
+          let result;
+
+          return function(...args){
+            if (!called) {
+              result = fn(...args);
+              called = true;
+              return result;
+            } else {
+              return undefined;
+            }
+          }
         };
 
         let input = '';
