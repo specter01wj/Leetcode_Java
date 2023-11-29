@@ -30,6 +30,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2629|**Function Composition**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
+|2666|**Allow One Function Call**|Easy|Javascript/Typescript|Done/Done|
+|2623|**Memoize**|Medium|Javascript/Typescript|Done/Done|
 
 #### Promises and Time
 
