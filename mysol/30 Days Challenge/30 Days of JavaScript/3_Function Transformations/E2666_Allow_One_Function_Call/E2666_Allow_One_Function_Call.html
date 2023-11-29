@@ -32,8 +32,10 @@
         };
 
         let input = '';
-				let tt1 = argumentsLength(1, 2, 3, 4, 5);
-				let tt2 = argumentsLength({}, null, "3");
+        let fn = (a,b,c) => (a + b + c);
+        let onceFn = once(fn);
+				let tt1 = onceFn(1,2,3);
+				let tt2 = onceFn(2,3,6);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '; ' + (tt2) + '</h2>');
 			});
 
