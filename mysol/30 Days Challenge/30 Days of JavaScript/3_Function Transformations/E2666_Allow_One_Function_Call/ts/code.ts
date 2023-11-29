@@ -1,7 +1,19 @@
 type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+type OnceFn = (...args: JSONValue[]) => JSONValue | undefined;
 
-function argumentsLength(...args: JSONValue[]): number {
-  return args.length;
+function once(fn: Function): OnceFn {
+  let called = false;
+  let result: any;
+
+	return function (...args: any[]): any {
+		if (!called) {
+      result = fn(...args);
+      called = true;
+      return result;
+    } else {
+      return undefined;
+    }
+	};
 }
 
 let output = argumentsLength({}, null, "3");
