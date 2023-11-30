@@ -1,7 +1,7 @@
 function cancellable(fn, args, t) {
-    fn.apply(null, args);
+    fn.apply(void 0, args);
     var intervalId = setInterval(function () {
-        fn.apply(null, args);
+        fn.apply(void 0, args);
     }, t);
     return function cancelFn() {
         clearInterval(intervalId);
