@@ -35,6 +35,10 @@ By Jin Wang
 
 #### Promises and Time
 
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2723|**Add Two Promises**|Easy|Javascript/Typescript|Done/Done|
+|2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
 
 #### JSON
 
