@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given two promises promise1 and promise2, return a new promise. 
+        promise1 and promise2 will both resolve with a number. 
+        The returned promise should resolve with the sum of the two numbers.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {Promise} promise1
+         * @param {Promise} promise2
+         * @return {Promise}
+         */
+				let addTwoPromises = async function(promise1, promise2) {
+          return Promise.all([promise1, promise2])
+            .then(values => {
+              const sum = values.reduce((total, value) => total + value, 0);
+              return sum;
+            });
+        };
+
+        let input = '';
+        let tt1 = '';
+        addTwoPromises(Promise.resolve(2), Promise.resolve(2))
+          .then( val => {
+            tt1 = val;
+          });
+        
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
