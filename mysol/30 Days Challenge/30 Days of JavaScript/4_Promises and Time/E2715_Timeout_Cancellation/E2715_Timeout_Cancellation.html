@@ -4,33 +4,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two promises promise1 and promise2, return a new promise. 
-        promise1 and promise2 will both resolve with a number. 
-        The returned promise should resolve with the sum of the two numbers.
+			 	Given a function fn, an array of arguments args, and a timeout t in milliseconds, 
+        return a cancel function cancelFn.
+
+        After a delay of t, fn should be called with args passed as parameters unless 
+        cancelFn was invoked before the delay of t milliseconds elapses, specifically 
+        at cancelT ms. In that case, fn should never be called.
 			 */
 			$(document).ready(function(){
 
 				/**
-         * @param {Promise} promise1
-         * @param {Promise} promise2
-         * @return {Promise}
+         * @param {Function} fn
+         * @param {Array} args
+         * @param {number} t
+         * @return {Function}
          */
-				let addTwoPromises = async function(promise1, promise2) {
-          return Promise.all([promise1, promise2])
-            .then(values => {
-              const sum = values.reduce((total, value) => total + value, 0);
-              return sum;
-            });
+				let cancellable = function(fn, args, t) {
+          let timeoutId;
+
+          const cancelFn = () => {
+              clearTimeout(timeoutId);
+          };
+
+          timeoutId = setTimeout(() => {
+              fn(...args);
+          }, t);
+
+          return cancelFn;
         };
 
-        let input = '';
-        let tt1 = '';
-        addTwoPromises(Promise.resolve(2), Promise.resolve(2))
-          .then( val => {
-            tt1 = val;
-            $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
-          });
+        const result = []
+        const fn = (x) => x * 5
+        const args = [2], t = 20, cancelT = 50
+        const start = performance.now() 
+        const log = (...argsArr) => {
+        const diff = Math.floor(performance.now() - start);
+          result.push({"time": diff, "returned": fn(...argsArr)})
+        }
         
+        const cancel = cancellable(log, args, t);
+      
+        const maxT = Math.max(t, cancelT)
+                  
+        setTimeout(() => {
+            cancel()
+        }, cancelT)
+      
+        setTimeout(() => {
+            console.log(result); // [{"time":20,"returned":10}]
+            let input = '';
+            let tt1 = result;
+            $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + 'Time - ' + (tt1[0].time) + '; Returned - ' + (tt1[0].returned) + '</h2>');
+        }, maxT + 15)
 				
 			});
 
