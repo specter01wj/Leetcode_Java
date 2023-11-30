@@ -39,6 +39,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2723|**Add Two Promises**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
+|2715|**Timeout Cancellation**|Easy|Javascript/Typescript|Done/Done|
+|2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|
 
 #### JSON
 
