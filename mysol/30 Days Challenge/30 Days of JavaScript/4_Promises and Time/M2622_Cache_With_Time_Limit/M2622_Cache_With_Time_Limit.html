@@ -69,15 +69,15 @@
             }, 0);
         };
 
-        
-        const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
 
-        limited(150).catch((result) => {
-          let input = '';
-          let tt1 = result;
-          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
-        }); // "Time Limit Exceeded" at t=100ms
-        
+        const timeLimitedCache = new TimeLimitedCache();
+
+        let tt1 = timeLimitedCache.set(1, 42, 1000); // false
+        let tt2 = timeLimitedCache.get(1); // 42
+        let tt3 = timeLimitedCache.count(); // 1
+
+        let input = '';
+        $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + ';' + (tt2) + ';' + (tt3) + '</h2>');
 				
 			});
 
