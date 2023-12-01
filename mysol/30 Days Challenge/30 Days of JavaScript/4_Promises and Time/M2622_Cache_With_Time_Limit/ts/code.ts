@@ -37,7 +37,6 @@ class TimeLimitedCache {
   }
 }
 
-const limited = timeLimit((t) => new Promise(res => setTimeout(res, t)), 100);
 const timeLimitedCache = new TimeLimitedCache()
 let output1 = timeLimitedCache.set(1, 42, 1000); // false
 let output2 = timeLimitedCache.get(1) // 42
