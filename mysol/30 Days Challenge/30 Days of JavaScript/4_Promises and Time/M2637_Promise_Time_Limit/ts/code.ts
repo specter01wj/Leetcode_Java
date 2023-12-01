@@ -1,16 +1,16 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
-type Fn = (...args: JSONValue[]) => void;
+type Fn = (...params: any[]) => Promise<any>;
 
-function cancellable(fn: Fn, args: JSONValue[], t: number): Function {
-	fn(...args);
+function timeLimit(fn: Fn, t: number): Fn {
+    
+	return async function(...args) {
+    let timeoutPromise = new Promise<any>((_, reject) => {
+      setTimeout(() => reject("Time Limit Exceeded"), t);
+    });
 
-  const intervalId = setInterval(() => {
-    fn(...args);
-  }, t);
+    let fnPromise = fn(...args);
 
-  return function cancelFn() {
-    clearInterval(intervalId);
-  };
+    return Promise.race([fnPromise, timeoutPromise]);
+  }
 };
 
 
