@@ -43,6 +43,8 @@ By Jin Wang
 |2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|
 |2637|**Promise Time Limit**|Easy|Javascript/Typescript|Done/Done|
 |2622|**Cache With Time Limit**|Easy|Javascript/Typescript|Done/Done|
+|2627|**Debounce**|Easy|Javascript/Typescript|Done/Done|
+|2721|**Execute Asynchronous Functions in Parallel**|Easy|Javascript/Typescript|Done/Done|
 
 #### JSON
 
