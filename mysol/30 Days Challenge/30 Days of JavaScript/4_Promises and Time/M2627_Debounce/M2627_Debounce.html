@@ -45,13 +45,15 @@
           }
         };
 
-        const log = debounce(console.log, 100);
-        log('Hello'); // cancelled
-        log('Hello'); // cancelled
-        let tt1 = log('Hello'); // Logged at t=100ms
-
         let input = '';
-        $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+        let tt1 = '';
+        const log = debounce((item) => {
+          tt1 = item;
+          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+        }, 100);
+        log('Hello1'); // cancelled
+        log('Hello2'); // cancelled
+        tt1 = log('Hello3'); // Logged at t=100ms
 				
 			});
 
