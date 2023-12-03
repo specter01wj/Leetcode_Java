@@ -12,10 +12,10 @@ function chunk(arr: Obj[], size: number): Obj[][] {
 };
 
 
-let inpu1 = [1,9,6,3,2], size = 3;
+let input1 = [1,9,6,3,2], size = 3;
 let output1 = chunk(input1, size);
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + output1.toString();
+webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
 
 
