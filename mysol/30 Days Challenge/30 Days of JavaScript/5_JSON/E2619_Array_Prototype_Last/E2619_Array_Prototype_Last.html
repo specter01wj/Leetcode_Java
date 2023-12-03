@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array arr and a chunk size size, return a chunked array. 
+        A chunked array contains the original elements in arr, but consists of 
+        subarrays each of length size. 
+        The length of the last subarray may be less than size if arr.length is 
+        not evenly divisible by size.
+
+        You may assume the array is the output of JSON.parse. In other words, 
+        it is valid JSON.
+
+        Please solve it without using lodash's _.chunk function.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {Array} arr
+         * @param {number} size
+         * @return {Array}
+         */
+				let chunk = function(arr, size) {
+          let chunkedArr = [];
+          for (let i = 0; i < arr.length; i += size) {
+            chunkedArr.push(arr.slice(i, i + size));
+          }
+
+          return chunkedArr;
+        };
+
+				let input = [1,9,6,3,2];
+				let tt1 = chunk(input, 3);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input) + '<br>Results: ' + JSON.stringify(tt1) + '</h2>');
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
