@@ -4,77 +4,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Write a class that allows getting and setting key-value pairs, 
-        however a time until expiration is associated with each key.
+			 	Given a function fn and a time in milliseconds t, return a debounced 
+        version of that function.
 
-        The class has three public methods:
+        A debounced function is a function whose execution is delayed by t milliseconds 
+        and whose execution is cancelled if it is called again within that window of time. 
+        The debounced function should also receive the passed parameters.
 
-        set(key, value, duration): accepts an integer key, an integer value, 
-        and a duration in milliseconds. Once the duration has elapsed, 
-        the key should be inaccessible. The method should return true if the 
-        same un-expired key already exists and false otherwise. Both the value 
-        and duration should be overwritten if the key already exists.
+        For example, let's say t = 50ms, and the function was called at 30ms, 60ms, 
+        and 100ms. The first 2 function calls would be cancelled, and the 3rd function 
+        call would be executed at 150ms. If instead t = 35ms, The 1st call would be 
+        cancelled, the 2nd would be executed at 95ms, and the 3rd would be executed at 135ms.
 
-        get(key): if an un-expired key exists, it should return the associated value. 
-        Otherwise it should return -1.
+        Debounce Schematic
 
-        count(): returns the count of un-expired keys.
+        The above diagram shows how debounce will transform events. 
+        Each rectangle represents 100ms and the debounce time is 400ms. 
+        Each color represents a different set of inputs.
+
+        Please solve it without using lodash's _.debounce() function.
 			 */
 			$(document).ready(function(){
 
-				
-				let TimeLimitedCache = function() {
-          this.cache = {}; // Stores key-value pairs
-          this.expiryTimes = {}; // Stores key-expiration time pairs
-        };
-
-        /** 
-         * @param {number} key
-         * @param {number} value
-         * @param {number} duration time until expiration in ms
-         * @return {boolean} if un-expired key already existed
+				/**
+         * @param {Function} fn
+         * @param {number} t milliseconds
+         * @return {Function}
          */
-        TimeLimitedCache.prototype.set = function(key, value, duration) {
-            const now = new Date().getTime();
-            const alreadyExistsAndUnexpired = this.cache.hasOwnProperty(key) && now < this.expiryTimes[key];
-            
-            this.cache[key] = value;
-            this.expiryTimes[key] = now + duration;
+				let debounce = function(fn, t) {
+          var timeoutID;
 
-            return alreadyExistsAndUnexpired;
+          return function(...args) {
+            // Clear the previous timeout if the function is called again within the debounce period
+            clearTimeout(timeoutID);
+
+            // Set a new timeout
+            timeoutID = setTimeout(function() {
+              fn.apply(this, args);
+            }, t);
+          }
         };
 
-        /** 
-         * @param {number} key
-         * @return {number} value associated with key
-         */
-        TimeLimitedCache.prototype.get = function(key) {
-            const now = new Date().getTime();
-            if (this.cache.hasOwnProperty(key) && now < this.expiryTimes[key]) {
-                return this.cache[key];
-            }
-            return -1;
-        };
-
-        /** 
-         * @return {number} count of non-expired keys
-         */
-        TimeLimitedCache.prototype.count = function() {
-            const now = new Date().getTime();
-            return Object.keys(this.expiryTimes).reduce((count, key) => {
-                if (now < this.expiryTimes[key]) {
-                    count++;
-                }
-                return count;
-            }, 0);
-        };
-
-
-        const timeLimitedCache = new TimeLimitedCache();
-
-        let tt1 = timeLimitedCache.set(1, 42, 1000); // false
-        let tt2 = timeLimitedCache.get(1); // 42
-        let tt3 = timeLimitedCache.count(); // 1
+        const log = debounce(console.log, 100);
+        log('Hello'); // cancelled
+        log('Hello'); // cancelled
+        log('Hello'); // Logged at t=100ms
 
         let input = '';
         $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + ';' + (tt2) + ';' + (tt3) + '</h2>');
