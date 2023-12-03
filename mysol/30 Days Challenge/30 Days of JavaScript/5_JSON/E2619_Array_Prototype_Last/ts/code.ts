@@ -1,15 +1,22 @@
 
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
-type Obj = Record<string, JSONValue> | JSONValue[]
+declare global {
+  interface Array<T> {
+      last(): T | -1;
+  }
+}
 
-function isEmpty(obj: Obj): boolean {
-	return Object.keys(obj).length === 0;
+Array.prototype.last = function() {
+  if (this.length === 0) {
+      return -1;
+  }
+  return this[this.length - 1];
 };
 
+export {};
 
-let input1 = {"x": 5, "y": 42}, input2 = {};
-let output1 = isEmpty(input1);
-let output2 = isEmpty(input2);
+let input1 = [null, {}, 3], input2 = [];
+let output1 = input1.last();
+let output2 = input2.last();
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + output1.toString();
