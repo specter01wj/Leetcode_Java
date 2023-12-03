@@ -1,26 +1,43 @@
-type F = (...args: number[]) => void
+type Fn<T> = () => Promise<T>
 
-function debounce(fn: F, t: number): F {
-    let timeoutID: number | undefined;
+function promiseAll<T>(functions: Fn<T>[]): Promise<T[]> {
+	return new Promise((resolve, reject) => {
+        const results: T[] = new Array(functions.length);
+        let completed = 0;
+        let hasRejected = false;
 
-    return function(...args: number[]) {
-        
-        clearTimeout(timeoutID);
+        if (functions.length === 0) {
+            resolve(results);
+        }
 
-        timeoutID = setTimeout(() => {
-            fn(...args);
-        }, t) as unknown as number;
-    };
+        functions.forEach((func, index) => {
+            func()
+                .then(result => {
+                    if (hasRejected) return;
+
+                    results[index] = result;
+                    completed += 1;
+
+                    if (completed === functions.length) {
+                        resolve(results);
+                    }
+                })
+                .catch(error => {
+                    if (!hasRejected) {
+                        hasRejected = true;
+                        reject(error);
+                    }
+                });
+        });
+    });
 };
 
 let output = '';
-const log = debounce((item) => {
+const promise = promiseAll([() => new Promise(res => res(42))]);
+promise.then((item) => {
   output = item;
   let webHeading1 = document.querySelector('#t1');
   webHeading1.textContent = 'Output: ' + (output);
-}, 100);
-log('Hello1'); // cancelled
-log('Hello2'); // cancelled
-output = log('Hello3'); // Logged at t=100ms
+}); // [42]
 
 
