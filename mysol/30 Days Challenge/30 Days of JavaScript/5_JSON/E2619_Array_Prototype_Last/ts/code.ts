@@ -12,7 +12,7 @@ Array.prototype.last = function() {
   return this[this.length - 1];
 };
 
-export {};
+// export {};
 
 let input1 = [null, {}, 3], input2 = [];
 let output1 = input1.last();
