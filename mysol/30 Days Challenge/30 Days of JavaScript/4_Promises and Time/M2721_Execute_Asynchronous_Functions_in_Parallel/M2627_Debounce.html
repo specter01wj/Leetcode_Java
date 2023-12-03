@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array of asynchronous functions functions, return a new promise promise. 
+        Each function in the array accepts no arguments and returns a promise. 
+        All the promises should be executed in parallel.
+
+        promise resolves:
+
+        . When all the promises returned from functions were resolved successfully in parallel. 
+          The resolved value of promise should be an array of all the resolved values of 
+          promises in the same order as they were in the functions. 
+          The promise should resolve when all the asynchronous functions in the array 
+          have completed execution in parallel.
+        
+        promise rejects:
+
+        . When any of the promises returned from functions were rejected. promise should 
+          also reject with the reason of the first rejection.
+        
+        Please solve it without using the built-in Promise.all function.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {Array<Function>} functions
+         * @return {Promise<any>}
+         */
+				let promiseAll = function(functions) {
+          return new Promise((resolve, reject) => {
+            let results = [];
+            let completed = 0;
+            let hasRejected = false;
+
+            if (functions.length === 0) {
+              resolve(results);
+            }
+
+            functions.forEach((func, index) => {
+              func()
+                .then(result => {
+                  if (hasRejected) return;
+
+                  results[index] = result;
+                  completed += 1;
+
+                  if (completed === functions.length) {
+                    resolve(results);
+                  }
+                })
+                .catch(error => {
+                  if (!hasRejected) {
+                    hasRejected = true;
+                    reject(error);
+                  }
+                });
+            });
+          });
+        };
+
+        let input = '';
+        let tt1 = '';
+
+        const promise = promiseAll([() => new Promise(res => res(42))]);
+        promise.then((item) => {
+          tt1 = item;
+          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+        }); // [42]
+        
+				
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
