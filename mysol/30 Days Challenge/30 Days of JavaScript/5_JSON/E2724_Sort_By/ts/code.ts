@@ -1,36 +1,22 @@
-declare global {
-  interface Array<T> {
-      groupBy(fn: (item: T) => string): Record<string, T[]>
-  }
-}
+type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+type Fn = (value: JSONValue) => number
 
-Array.prototype.groupBy = function(fn) {
-  const grouped = {};
-
-  for (let i = 0; i < this.length; i++) {
-      const key = fn(this[i]);
-
-      if (!grouped[key]) {
-          grouped[key] = [];
-      }
-
-      grouped[key].push(this[i]);
-  }
-
-  return grouped;
-}
-
-
-let input1 = [
-  {"id":"1"},
-  {"id":"1"},
-  {"id":"2"}
-];
-let fn = function (item) { 
-  return item.id; 
+function sortBy(arr: JSONValue[], fn: Fn): JSONValue[] {
+	return arr.slice().sort((a, b) => {
+    const aValue = fn(a);
+    const bValue = fn(b);
+    return aValue - bValue;
+  });
 };
-let output1 = [1,2,3].groupBy(String);
-let output2 = input1.groupBy(fn);
+
+
+let input1 = [5, 4, 1, 2, 3];
+let input2 = [{"x": 1}, {"x": 0}, {"x": -1}];
+let fn1 = (x) => x;
+let fn2 = (d) => d.x;
+
+let output1 = sortBy(input1, fn1);
+let output2 = sortBy(input2, fn2);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
