@@ -53,6 +53,8 @@ By Jin Wang
 |2727|**Is Object Empty**|Easy|Javascript/Typescript|Done/Done|
 |2677|**Chunk Array**|Easy|Javascript/Typescript|Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
+|2631|**Group By**|Medium|Javascript/Typescript|Done/Done|
+|2724|**Sort By**|Easy|Javascript/Typescript|Done/Done|
 
 
 #### Classes
