@@ -33,10 +33,10 @@ let output1 = [1,2,3].groupBy(String);
 let output2 = input1.groupBy(fn);
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + output1.toString();
+webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
 
 let webHeading2 = document.querySelector('#t2');
-webHeading2.textContent = 'Output: ' + output2.toString();
+webHeading2.textContent = 'Output: ' + JSON.stringify(output2);
 
 
 
