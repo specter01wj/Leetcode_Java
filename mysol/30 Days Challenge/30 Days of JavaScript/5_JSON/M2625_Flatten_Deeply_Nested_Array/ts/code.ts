@@ -1,41 +1,29 @@
-type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
+type MultiDimensionalArray = (number | MultiDimensionalArray)[];
 
-function join(arr1: JSONValue[], arr2: JSONValue[]): JSONValue[] {
-	const mergedObjects = new Map<number, { [key: string]: JSONValue }>();
-
-    const mergeObjects = (obj1: { [key: string]: JSONValue }, obj2: { [key: string]: JSONValue }) => {
-        for (let key in obj2) {
-            obj1[key] = obj2[key];
+var flat = function (arr:  MultiDimensionalArray, n: number):  MultiDimensionalArray {
+    if (n === 0) {
+        return arr;
+    }
+    
+    const result: MultiDimensionalArray = [];
+    arr.forEach(item => {
+        if (typeof item === 'number') {
+            result.push(item);
+        } else {
+            result.push(...flat(item, n - 1));
         }
-        return obj1;
-    };
+    })
 
-    [arr1, arr2].forEach(array => {
-        array.forEach(item => {
-            if (typeof item === 'object' && item !== null && 'id' in item) {
-                const obj = item as { [key: string]: JSONValue };
-                const id = obj.id as number;
-
-                if (mergedObjects.has(id)) {
-                    mergedObjects.set(id, mergeObjects(mergedObjects.get(id)!, obj));
-                } else {
-                    mergedObjects.set(id, { ...obj });
-                }
-            }
-        });
-    });
-
-    return Array.from(mergedObjects.values()).sort((a, b) => (a.id as number) - (b.id as number));
+    return result;
 };
 
 
-let input1 = [{"id": 1, "x": 1}, {"id": 2, "x": 9}], arr1 = [{"id": 3, "x": 5}];
-let input2 = [{"id": 1, "x": 2, "y": 3}, {"id": 2, "x": 3, "y": 6}], arr2 = [{"id": 2, "x": 10, "y": 20}, {"id": 3, "x": 0, "y": 0}];
-let input3 = [{"id": 1, "b": {"b": 94},"v": [4, 3], "y": 48}], arr3 = [{"id": 1, "b": {"c": 84}, "v": [1, 3]}];
+let input1 = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]];
+let n1 = 0, n2 = 1, n3 = 2;
 
-let output1 = join(input1, arr1);
-let output2 = join(input2, arr2);
-let output3 = join(input3, arr3);
+let output1 = flat(input1, n1);
+let output2 = flat(input1, n2);
+let output3 = flat(input1, n3);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
