@@ -55,6 +55,8 @@ By Jin Wang
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2631|**Group By**|Medium|Javascript/Typescript|Done/Done|
 |2724|**Sort By**|Easy|Javascript/Typescript|Done/Done|
+|2722|**Join Two Arrays by ID**|Medium|Javascript/Typescript|Done/Done|
+|2625|**Flatten Deeply Nested Array**|Medium|Javascript/Typescript|Done/Done|
 
 
 #### Classes
