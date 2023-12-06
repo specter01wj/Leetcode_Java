@@ -4,66 +4,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two arrays arr1 and arr2, return a new array joinedArray. 
-        All the objects in each of the two inputs arrays will contain an id field that 
-        has an integer value. joinedArray is an array formed by merging arr1 and arr2 
-        based on their id key. 
-        The length of joinedArray should be the length of unique values of id. 
-        The returned array should be sorted in ascending order based on the id key.
+			 	Given a multi-dimensional array arr and a depth n, return a flattened 
+        version of that array.
 
-        If a given id exists in one array but not the other, the single object with 
-        that id should be included in the result array without modification.
+        A multi-dimensional array is a recursive data structure that contains 
+        integers or other multi-dimensional arrays.
 
-        If two objects share an id, their properties should be merged into a single object:
+        A flattened array is a version of that array with some or all of the 
+        sub-arrays removed and replaced with the actual elements in that sub-array. 
+        This flattening operation should only be done if the current depth of 
+        nesting is less than n. The depth of the elements in the first array 
+        are considered to be 0.
 
-        . If a key only exists in one object, that single key-value pair should be 
-          included in the object.
-        . If a key is included in both objects, the value in the object from arr2 
-          should override the value from arr1.
+        Please solve it without the built-in Array.flat method.
 			 */
 			$(document).ready(function(){
 
 				/**
-         * @param {Array} arr1
-         * @param {Array} arr2
+         * @param {Array} arr
+         * @param {number} depth
          * @return {Array}
          */
-				let join = function(arr1, arr2) {
-          // Create a map to store the merged objects
-          const mergedObjects = new Map();
-
-          // Helper function to merge two objects
-          const mergeObjects = (obj1, obj2) => {
-              for (let key in obj2) {
-                  obj1[key] = obj2[key]; // Override or add property from obj2
+				let flat = function(arr, n) {
+          // Function to recursively flatten the array
+          const flatten = (array, depth) => {
+              // Base case: if depth is 0, return the array as-is
+              if (depth === 0) {
+                  return array.slice(); // Create a shallow copy
               }
-              return obj1;
+
+              let result = [];
+              for (let item of array) {
+                  if (Array.isArray(item)) {
+                      // If item is an array and depth is not reached, flatten it
+                      result.push(...flatten(item, depth - 1));
+                  } else {
+                      // Otherwise, push the item as-is
+                      result.push(item);
+                  }
+              }
+              return result;
           };
 
-          // Process each object in arr1 and arr2
-          [arr1, arr2].forEach(array => {
-              array.forEach(obj => {
-                  if (mergedObjects.has(obj.id)) {
-                      // If already present, merge the objects
-                      mergedObjects.set(obj.id, mergeObjects(mergedObjects.get(obj.id), obj));
-                  } else {
-                      // If not present, add the object to the map
-                      mergedObjects.set(obj.id, {...obj}); // Create a shallow copy
-                  }
-              });
-          });
-
-          // Convert the map values to an array and sort by id
-          return Array.from(mergedObjects.values()).sort((a, b) => a.id - b.id);
+          return flatten(arr, n);
         };
 
-				let input1 = [{"id": 1, "x": 1}, {"id": 2, "x": 9}], arr1 = [{"id": 3, "x": 5}];
-				let input2 = [{"id": 1, "x": 2, "y": 3}, {"id": 2, "x": 3, "y": 6}], arr2 = [{"id": 2, "x": 10, "y": 20}, {"id": 3, "x": 0, "y": 0}];
-				let input3 = [{"id": 1, "b": {"b": 94},"v": [4, 3], "y": 48}], arr3 = [{"id": 1, "b": {"c": 84}, "v": [1, 3]}];
-        
-				let tt1 = join(input1, arr1);
-				let tt2 = join(input2, arr2);
-				let tt3 = join(input3, arr3);
+
+				let input1 = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]];
+        let n1 = 0, n2 = 1, n3 = 2;
+
+				let tt1 = flat(input1, n1);
+				let tt2 = flat(input1, n2);
+				let tt3 = flat(input1, n3);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input1) + '<br>Results: ' + JSON.stringify(tt1) + '; ' + JSON.stringify(tt2) + '; ' + JSON.stringify(tt3) + '</h2>');
 			});
 
