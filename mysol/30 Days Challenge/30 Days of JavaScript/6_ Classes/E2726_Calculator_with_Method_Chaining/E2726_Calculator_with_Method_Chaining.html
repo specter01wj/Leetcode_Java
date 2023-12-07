@@ -41,7 +41,7 @@
            */
           add(value){
             this.result += value;
-                return this;
+            return this;
           }
 
           /** 
@@ -50,7 +50,7 @@
            */
           subtract(value){
             this.result -= value;
-                return this;
+            return this;
           }
 
           /** 
@@ -59,7 +59,7 @@
            */  
           multiply(value) {
             this.result *= value;
-                return this;
+            return this;
           }
 
           /** 
@@ -68,10 +68,10 @@
            */
           divide(value) {
             if (value === 0) {
-                    throw new Error("Division by zero is not allowed");
-                }
-                this.result /= value;
-                return this;
+                throw new Error("Division by zero is not allowed");
+            }
+            this.result /= value;
+            return this;
           }
 
           /** 
@@ -80,7 +80,7 @@
            */
           power(value) {
             this.result **= value;
-                return this;
+            return this;
           }
           
           /** 
