@@ -64,6 +64,8 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2694|**Event Emitter**|Medium|Javascript/Typescript|Done/Done|
+|2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
+|2726|**Calculator with Method Chaining**|Easy|Javascript/Typescript|Done/Done|
 
 ## by Difficulties
 
