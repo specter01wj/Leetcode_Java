@@ -54,7 +54,7 @@ webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
 let webHeading2 = document.querySelector('#t2');
 webHeading2.textContent = 'Output: ' + JSON.stringify(output2);
 
-let webHeading3 = document.querySelector('#t2');
+let webHeading3 = document.querySelector('#t3');
 webHeading3.textContent = 'Output: ' + JSON.stringify(output3);
 
 
