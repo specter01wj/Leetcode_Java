@@ -57,10 +57,13 @@ By Jin Wang
 |2724|**Sort By**|Easy|Javascript/Typescript|Done/Done|
 |2722|**Join Two Arrays by ID**|Medium|Javascript/Typescript|Done/Done|
 |2625|**Flatten Deeply Nested Array**|Medium|Javascript/Typescript|Done/Done|
-
+|2705|**Compact Object**|Medium|Javascript/Typescript|Done/Done|
 
 #### Classes
 
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2694|**Event Emitter**|Medium|Javascript/Typescript|Done/Done|
 
 ## by Difficulties
 
