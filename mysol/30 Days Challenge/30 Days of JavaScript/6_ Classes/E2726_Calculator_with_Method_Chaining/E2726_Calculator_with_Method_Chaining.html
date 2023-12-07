@@ -93,14 +93,12 @@
 
         
         let input1 = '';
-        const obj1 = new ArrayWrapper([1,2]);
-        const obj2 = new ArrayWrapper([3,4]);
         
-				let tt1 = obj1 + obj2; // 10
-				let tt2 = String(obj1); // "[1,2]"
-				let tt3 = String(obj2); // "[3,4]"
+				let tt1 = new Calculator(10).add(5).subtract(7).getResult(); // 10 + 5 - 7 = 8
+				let tt2 = new Calculator(2).multiply(5).power(2).getResult(); // (2 * 5) ^ 2 = 100
+				// let tt3 = new Calculator(20).divide(0).getResult(); // 20 / 0 
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input1) + 
-          '<br>Results: ' + (tt1) + '; ' + (tt2) + '; ' + (tt3) + '</h2>');
+          '<br>Results: ' + (tt1) + '; ' + (tt2) + '</h2>');
 			});
 
 			/*sol:
