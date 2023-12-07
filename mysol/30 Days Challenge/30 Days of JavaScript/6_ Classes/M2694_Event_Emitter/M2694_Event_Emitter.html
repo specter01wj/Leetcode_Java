@@ -4,26 +4,89 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an object or an array, return if it is empty.
+			 	Design an EventEmitter class. This interface is similar (but with some differences) 
+        to the one found in Node.js or the Event Target interface of the DOM. 
+        The EventEmitter should allow for subscribing to events and emitting them.
 
-        . An empty object contains no key-value pairs.
-        . An empty array contains no elements.
-        
-        You may assume the object or array is the output of JSON.parse.
+        Your EventEmitter class should have the following two methods:
+
+        . subscribe - This method takes in two arguments: the name of an event as 
+          a string and a callback function. This callback function will later be 
+          called when the event is emitted.
+          An event should be able to have multiple listeners for the same event. 
+          When emitting an event with multiple callbacks, each should be called 
+          in the order in which they were subscribed. 
+          An array of results should be returned. 
+          You can assume no callbacks passed to subscribe are referentially identical.
+          The subscribe method should also return an object with an unsubscribe method 
+          that enables the user to unsubscribe. 
+          When it is called, the callback should be removed from the list of 
+          subscriptions and undefined should be returned.
+
+        . emit - This method takes in two arguments: the name of an event as a 
+          string and an optional array of arguments that will be passed to the callback(s). 
+          If there are no callbacks subscribed to the given event, return an empty array. 
+          Otherwise, return an array of the results of all callback calls in the order 
+          they were subscribed.
 			 */
 			$(document).ready(function(){
 
-				/**
-         * @param {Object|Array} obj
-         * @return {boolean}
-         */
-				let isEmpty = function(obj) {
-          return Object.keys(obj).length === 0;
-        };
+				class EventEmitter {
+          constructor() {
+              this.events = {};
+          }
 
-				let input1 = {"x": 5, "y": 42}, input2 = {};
-				let tt1 = isEmpty(input1);
-				let tt2 = isEmpty(input2);
+          /**
+           * @param {string} eventName
+           * @param {Function} callback
+           * @return {Object}
+           */
+          subscribe(eventName, callback) {
+            // Initialize the event's callback array if it doesn't exist
+            if (!this.events[eventName]) {
+                this.events[eventName] = [];
+            }
+
+            // Add the callback to the event's callback array
+            this.events[eventName].push(callback);
+
+            // Return an object with an unsubscribe method
+            return {
+              unsubscribe: () => {
+                const index = this.events[eventName].indexOf(callback);
+                if (index > -1) {
+                    this.events[eventName].splice(index, 1);
+                }
+              }
+            };
+          }
+          
+          /**
+           * @param {string} eventName
+           * @param {Array} args
+           * @return {Array}
+           */
+          emit(eventName, args = []) {
+            // Check if there are callbacks subscribed to the event
+            if (!this.events[eventName] || this.events[eventName].length === 0) {
+                return [];
+            }
+
+            // Call each callback with the provided arguments and collect results
+            return this.events[eventName].map(callback => callback(...args));
+          }
+        }
+
+        const emitter = new EventEmitter();
+
+        // Subscribe to the onClick event with onClickCallback
+        function onClickCallback() { return 99 }
+        const sub = emitter.subscribe('onClick', onClickCallback);
+        
+				let input1 = '';
+				let tt1 = emitter.emit('onClick'); // [99]
+				let tt2 = sub.unsubscribe(); // undefined
+				let tt3 = emitter.emit('onClick'); // []
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input1) + '<br>Results: ' + (tt1) + '; ' + (tt2) + '</h2>');
 			});
 
