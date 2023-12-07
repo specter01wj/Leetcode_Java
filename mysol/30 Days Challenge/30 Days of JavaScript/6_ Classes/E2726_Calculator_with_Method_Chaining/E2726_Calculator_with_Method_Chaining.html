@@ -4,13 +4,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Create a class ArrayWrapper that accepts an array of integers in its constructor. 
-        This class should have two features:
+			 	Design a Calculator class. The class should provide the mathematical operations 
+        of addition, subtraction, multiplication, division, and exponentiation. 
+        It should also allow consecutive operations to be performed using method chaining. 
+        The Calculator class constructor should accept a number which serves as the 
+        initial value of result.
 
-        . When two instances of this class are added together with the + operator, 
-          the resulting value is the sum of all the elements in both arrays.
-        . When the String() function is called on the instance, it will return a 
-          comma separated string surrounded by brackets. For example, [1,2,3].
+        Your Calculator class should have the following methods:
+
+        add - This method adds the given number value to the result and returns the updated Calculator.
+        subtract - This method subtracts the given number value from the result and returns the updated Calculator.
+        multiply - This method multiplies the result  by the given number value and returns the updated Calculator.
+        divide - This method divides the result by the given number value and returns the updated Calculator. If the passed value is 0, an error "Division by zero is not allowed" should be thrown.
+        power - This method raises the result to the power of the given number value and returns the updated Calculator.
+        getResult - This method returns the result.
+        Solutions within 10-5 of the actual result are considered correct.
 			 */
 			$(document).ready(function(){
 
@@ -18,22 +26,69 @@
          * @param {number[]} nums
          * @return {void}
          */
-        let ArrayWrapper = function(nums) {
-            this.nums = nums;
-        };
+        class Calculator {
+          
+          /** 
+           * @param {number} value
+           */
+          constructor(value) {
+            this.result = value;
+          }
 
-        /**
-         * @return {number}
-         */
-        ArrayWrapper.prototype.valueOf = function() {
-            return this.nums.reduce((acc, num) => acc + num, 0);
-        }
+          /** 
+           * @param {number} value
+           * @return {Calculator}
+           */
+          add(value){
+            this.result += value;
+                return this;
+          }
 
-        /**
-         * @return {string}
-         */
-        ArrayWrapper.prototype.toString = function() {
-            return '[' + this.nums.join(',') + ']';
+          /** 
+           * @param {number} value
+           * @return {Calculator}
+           */
+          subtract(value){
+            this.result -= value;
+                return this;
+          }
+
+          /** 
+           * @param {number} value
+           * @return {Calculator}
+           */  
+          multiply(value) {
+            this.result *= value;
+                return this;
+          }
+
+          /** 
+           * @param {number} value
+           * @return {Calculator}
+           */
+          divide(value) {
+            if (value === 0) {
+                    throw new Error("Division by zero is not allowed");
+                }
+                this.result /= value;
+                return this;
+          }
+
+          /** 
+           * @param {number} value
+           * @return {Calculator}
+           */
+          power(value) {
+            this.result **= value;
+                return this;
+          }
+          
+          /** 
+           * @return {number}
+           */
+          getResult() {
+            return this.result;
+          }
         }
 
         
