@@ -1,52 +1,26 @@
-type Callback = (...args: any[]) => any;
-type Subscription = {
-    unsubscribe: () => void
-}
+class ArrayWrapper {
+  private nums: number[];
+  constructor(nums: number[]) {
+    this.nums = nums;
+  }
 
-class EventEmitter {
-  private events: Record<string, Callback[]>;
+  valueOf(): number {
+    return this.nums.reduce((acc, num) => acc + num, 0);
+  }
 
-  constructor() {
-      this.events = {};
-  }  
+  toString(): string {
+    return '[' + this.nums.join(',') + ']';
+  }
+};
 
-	subscribe(eventName: string, callback: Callback): Subscription {
-		if (!this.events[eventName]) {
-        this.events[eventName] = [];
-    }
-
-    this.events[eventName].push(callback);
-
-		return {
-			unsubscribe: () => {
-				const index = this.events[eventName].indexOf(callback);
-        if (index > -1) {
-            this.events[eventName].splice(index, 1);
-        }
-			}
-    };
-	}
-
-	emit(eventName: string, args: any[] = []): any[] {
-		if (!this.events[eventName] || this.events[eventName].length === 0) {
-        return [];
-    }
-    
-    return this.events[eventName].map(callback => callback(...args));
-	}
-}
-
-
-const emitter = new EventEmitter();
-
-// Subscribe to the onClick event with onClickCallback
-function onClickCallback() { return 99 }
-const sub = emitter.subscribe('onClick', onClickCallback);
 
 let input1 = '';
-let output1 = emitter.emit('onClick'); // [99]
-let output2 = sub.unsubscribe(); // undefined
-let output3 = emitter.emit('onClick'); // []
+const obj1 = new ArrayWrapper([1,2]);
+const obj2 = new ArrayWrapper([3,4]);
+
+let output1 = obj1 + obj2; // 10
+let output2 = String(obj1); // "[1,2]"
+let output3 = String(obj2); // "[3,4]"
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
