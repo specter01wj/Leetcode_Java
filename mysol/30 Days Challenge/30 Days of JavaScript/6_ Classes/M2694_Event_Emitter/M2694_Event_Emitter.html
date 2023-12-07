@@ -87,7 +87,8 @@
 				let tt1 = emitter.emit('onClick'); // [99]
 				let tt2 = sub.unsubscribe(); // undefined
 				let tt3 = emitter.emit('onClick'); // []
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input1) + '<br>Results: ' + (tt1) + '; ' + (tt2) + '</h2>');
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input1) + 
+          '<br>Results: ' + (tt1) + '; ' + (tt2) + '; ' + (tt3)  + '</h2>');
 			});
 
 			/*sol:
