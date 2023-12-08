@@ -74,6 +74,8 @@ By Jin Wang
 |2636|**Promise Pool**|Medium|Javascript/Typescript|Done/Done|
 |2676|**Throttle**|Medium|Javascript/Typescript|Done/Done|
 |2632|**Curry**|Medium|Javascript/Typescript|Done/Done|
+|2628|**JSON Deep Equal**|Medium|Javascript/Typescript||
+|2633|**Convert Object to JSON String**|Medium|Javascript/Typescript||
 
 ## by Difficulties
 
