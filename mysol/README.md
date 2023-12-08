@@ -67,6 +67,14 @@ By Jin Wang
 |2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
 |2726|**Calculator with Method Chaining**|Easy|Javascript/Typescript|Done/Done|
 
+#### Summarize Your 30-day Journey with Bonus Challenges!
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2636|**Promise Pool**|Medium|Javascript/Typescript|Done/Done|
+|2676|**Throttle**|Medium|Javascript/Typescript|Done/Done|
+|2632|**Curry**|Medium|Javascript/Typescript|Done/Done|
+
 ## by Difficulties
 
 ### Easy Level
