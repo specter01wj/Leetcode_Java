@@ -1,39 +1,47 @@
-type F = () => Promise<any>;
+type F = (...args: number[]) => void
 
-function promisePool(functions: F[], n: number): Promise<any> {
-	return new Promise<any>(async (resolve) => {
-        const results: any[] = [];
-        const inProgress: Promise<any>[] = [];
-        let i = 0;
+function throttle(fn: F, t: number): F {
+    let lastCall: number = 0;
+    let timeoutId: any = null;
+    let lastArgs: number[] | null = null;
 
-        while (i < functions.length || inProgress.length > 0) {
-            while (inProgress.length < n && i < functions.length) {
-                const promise = functions[i]();
-                const index = i;
-                const resultPromise = promise.then((result) => {
-                    results[index] = result;
-                    inProgress.splice(inProgress.indexOf(resultPromise), 1);
-                });
-                inProgress.push(resultPromise);
-                i++;
+	return function (...args) {
+		const now = Date.now();
+
+        // If this is the first call or the last call was t or more milliseconds ago
+        if (lastCall === 0 || (now - lastCall >= t)) {
+            // Call the function immediately and update lastCall
+            lastCall = now;
+            fn.apply(this, args);
+        } else {
+            // Save the latest arguments
+            lastArgs = args;
+
+            // Clear the existing timeout, if any
+            if (timeoutId) {
+                clearTimeout(timeoutId);
             }
 
-            if (inProgress.length > 0) {
-                await Promise.race(inProgress);
-            }
+            // Set a new timeout to call the function after the remaining time in the t milliseconds period
+            timeoutId = setTimeout(() => {
+                // Update lastCall to the current time
+                lastCall = Date.now();
+                fn.apply(this, lastArgs);
+                lastArgs = null;
+                timeoutId = null;
+            }, lastCall + t - now);
         }
-
-        resolve(results);
-    });
+	}
 };
 
 let input = '';
-const sleep = (t) => new Promise(res => setTimeout(res, t));
-promisePool([() => sleep(500), () => sleep(400)], 1)
-  .then((item) => {
-    let output1 = item.length;
-    let webHeading1 = document.querySelector('#t1');
-    webHeading1.textContent = 'Output: ' + output1.toString();
-  });
+const throttled = throttle((item) => {
+  let output1 = item;
+  let webHeading1 = document.querySelector('#t1');
+  webHeading1.textContent = 'Output: ' + output1.toString();
+}, 1000);
+throttled("log"); // logged immediately.
+throttled("log1000"); // logged at t=100ms.
+
 
 
