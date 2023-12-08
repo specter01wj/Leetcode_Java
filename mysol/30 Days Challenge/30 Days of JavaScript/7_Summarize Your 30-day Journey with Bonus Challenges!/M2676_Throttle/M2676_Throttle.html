@@ -4,60 +4,68 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of asynchronous functions functions and a pool limit n, 
-        return an asynchronous function promisePool. It should return a promise 
-        that resolves when all the input functions resolve.
+			 	Given a function fn and a time in milliseconds t, return a throttled version 
+        of that function.
 
-        Pool limit is defined as the maximum number promises that can be pending at once. 
-        promisePool should begin execution of as many functions as possible and continue 
-        executing new functions when old promises resolve. promisePool should execute 
-        functions[i] then functions[i + 1] then functions[i + 2], etc. 
-        When the last promise resolves, promisePool should also resolve.
+        A throttled function is first called without delay and then, for a time interval 
+        of t milliseconds, can't be executed but should store the latest function 
+        arguments provided to call fn with them after the end of the delay.
 
-        For example, if n = 1, promisePool will execute one function at a time in series. 
-        However, if n = 2, it first executes two functions. When either of the two functions 
-        resolve, a 3rd function should be executed (if available), and so on until 
-        there are no functions left to execute.
+        For instance, t = 50ms, and the function was called at 30ms, 40ms, and 60ms. 
+        The first function call would block calling functions for the following t milliseconds. 
+        The second function call would save arguments, and the third call arguments 
+        should overwrite currently stored arguments from the second call because the 
+        second and third calls are called before 80ms. Once the delay has passed, 
+        the throttled function should be called with the latest arguments provided 
+        during the delay period, and it should also create another delay period of 80ms + t.
 
-        You can assume all functions never reject. It is acceptable for promisePool to 
-        return a promise that resolves any value.
+        The above diagram shows how throttle will transform events. 
+        Each rectangle represents 100ms and the throttle time is 400ms. Each color 
+        represents a different set of inputs.
 			 */
 			$(document).ready(function(){
 
 				/**
-         * @param {number} millis
-         * @return {Promise}
+         * @param {Function} fn
+         * @param {number} t
+         * @return {Function}
          */
-				let promisePool = async function(functions, n) {
-          const results = [];
-          const inProgress = [];
-          let i = 0;
+				let throttle = function(fn, t) {
+          let lastCall = 0;
+          let timeoutId = null;
+          let lastArgs = null;
 
-          while (i < functions.length || inProgress.length > 0) {
-              while (inProgress.length < n && i < functions.length) {
-                  const promise = functions[i]();
-                  const index = i;
-                  const resultPromise = promise.then((result) => {
-                      results[index] = result;
-                      inProgress.splice(inProgress.indexOf(resultPromise), 1);
-                  });
-                  inProgress.push(resultPromise);
-                  i++;
-              }
+          return function(...args) {
+            const now = Date.now();
 
-              await Promise.race(inProgress);
+            if (!lastCall) {
+                // First call is executed immediately
+                lastCall = now;
+                fn.apply(this, args);
+            } else if (now - lastCall >= t) {
+                // If the time has passed, execute the function
+                lastCall = now;
+                fn.apply(this, args);
+            } else {
+                // Save the latest arguments and set a timeout
+                lastArgs = args;
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    lastCall = Date.now();
+                    fn.apply(this, lastArgs);
+                    lastArgs = null;
+                }, t - (now - lastCall));
+            }
           }
-
-          return results;
         };
 
         let input = '';
-        const sleep = (t) => new Promise(res => setTimeout(res, t));
-        promisePool([() => sleep(500), () => sleep(400)], 1)
-          .then((item) => {
-            let tt1 = item.length;
-            $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
-          }); // After 900ms
+        const throttled = throttle((item) => {
+          let tt1 = item;
+          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+        }, 1000);
+        throttled("log"); // logged immediately.
+        throttled("log1000"); // logged at t=100ms.
         
 			});
 
