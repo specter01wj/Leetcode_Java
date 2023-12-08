@@ -25,8 +25,9 @@
 			$(document).ready(function(){
 
 				/**
-         * @param {number} millis
-         * @return {Promise}
+         * @param {Function[]} functions
+         * @param {number} n
+         * @return {Promise<any>}
          */
 				let promisePool = async function(functions, n) {
           const results = [];
