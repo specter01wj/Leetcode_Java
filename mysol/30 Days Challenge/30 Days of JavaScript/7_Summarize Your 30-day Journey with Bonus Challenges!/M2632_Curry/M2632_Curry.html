@@ -4,69 +4,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a function fn and a time in milliseconds t, return a throttled version 
-        of that function.
+			 	Given a function fn, return a curried version of that function.
 
-        A throttled function is first called without delay and then, for a time interval 
-        of t milliseconds, can't be executed but should store the latest function 
-        arguments provided to call fn with them after the end of the delay.
+        A curried function is a function that accepts fewer or an equal number of 
+        parameters as the original function and returns either another curried 
+        function or the same value the original function would have returned.
 
-        For instance, t = 50ms, and the function was called at 30ms, 40ms, and 60ms. 
-        The first function call would block calling functions for the following t milliseconds. 
-        The second function call would save arguments, and the third call arguments 
-        should overwrite currently stored arguments from the second call because the 
-        second and third calls are called before 80ms. Once the delay has passed, 
-        the throttled function should be called with the latest arguments provided 
-        during the delay period, and it should also create another delay period of 80ms + t.
-
-        The above diagram shows how throttle will transform events. 
-        Each rectangle represents 100ms and the throttle time is 400ms. Each color 
-        represents a different set of inputs.
+        In practical terms, if you called the original function like sum(1,2,3), 
+        you would call the curried version like csum(1)(2)(3), csum(1)(2,3), csum(1,2)(3), 
+        or csum(1,2,3). All these methods of calling the curried function should return 
+        the same value as the original.
 			 */
 			$(document).ready(function(){
 
 				/**
          * @param {Function} fn
-         * @param {number} t
          * @return {Function}
          */
-				let throttle = function(fn, t) {
-          let lastCall = 0;
-          let timeoutId = null;
-          let lastArgs = null;
-
-          return function(...args) {
-            const now = Date.now();
-
-            if (!lastCall) {
-                // First call is executed immediately
-                lastCall = now;
-                fn.apply(this, args);
-            } else if (now - lastCall >= t) {
-                // If the time has passed, execute the function
-                lastCall = now;
-                fn.apply(this, args);
-            } else {
-                // Save the latest arguments and set a timeout
-                lastArgs = args;
-                clearTimeout(timeoutId);
-                timeoutId = setTimeout(() => {
-                    lastCall = Date.now();
-                    fn.apply(this, lastArgs);
-                    lastArgs = null;
-                }, t - (now - lastCall));
-            }
+				let curry = function(fn, t) {
+          return function curried(...args) {
+              // If the number of arguments is sufficient to call the original function
+              if (args.length >= fn.length) {
+                  // Call the original function with these arguments
+                  return fn(...args);
+              } else {
+                  // Otherwise, return a function that takes more arguments
+                  return function(...moreArgs) {
+                      // Combine the old arguments with the new ones and recurse
+                      return curried(...args.concat(moreArgs));
+                  };
+              }
           }
         };
 
-        let input = '';
-        const throttled = throttle((item) => {
-          let tt1 = item;
-          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
-        }, 1000);
-        throttled("log"); // logged immediately.
-        throttled("log1000"); // logged at t=100ms.
-        
+        let input1 = [[1],[2],[3]];
+        fn = function sum(a, b, c) { return a + b + c; };
+
+        const csum1 = curry(fn);
+        const csum2 = curry(fn);
+        const csum3 = curry(fn);
+
+        let tt1 = csum1(1)(2)(3);
+        let tt2 = csum2(1, 2)(3);
+        let tt3 = csum3()()(1, 2, 3);
+        $('#t1').html('<h2>Input: ' + input1 + 
+          '<br>Results: ' + (tt1) + '; ' + (tt2) + '; ' + (tt3) + '</h2>');
 			});
 
 			/*sol:
