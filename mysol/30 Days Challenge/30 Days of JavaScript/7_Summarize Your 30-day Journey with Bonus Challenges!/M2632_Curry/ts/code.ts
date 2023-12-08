@@ -1,47 +1,33 @@
-type F = (...args: number[]) => void
-
-function throttle(fn: F, t: number): F {
-    let lastCall: number = 0;
-    let timeoutId: any = null;
-    let lastArgs: number[] | null = null;
-
-	return function (...args) {
-		const now = Date.now();
-
-        // If this is the first call or the last call was t or more milliseconds ago
-        if (lastCall === 0 || (now - lastCall >= t)) {
-            // Call the function immediately and update lastCall
-            lastCall = now;
-            fn.apply(this, args);
-        } else {
-            // Save the latest arguments
-            lastArgs = args;
-
-            // Clear the existing timeout, if any
-            if (timeoutId) {
-                clearTimeout(timeoutId);
-            }
-
-            // Set a new timeout to call the function after the remaining time in the t milliseconds period
-            timeoutId = setTimeout(() => {
-                // Update lastCall to the current time
-                lastCall = Date.now();
-                fn.apply(this, lastArgs);
-                lastArgs = null;
-                timeoutId = null;
-            }, lastCall + t - now);
-        }
-	}
+function curry(fn: Function): Function {
+    
+  return function curried(...args) {
+  if (args.length >= fn.length) {
+          return fn(...args);
+      } else {
+          return function(...moreArgs: any[]): any {
+              return curried(...args.concat(moreArgs));
+          };
+      }
+  }
 };
 
-let input = '';
-const throttled = throttle((item) => {
-  let output1 = item;
-  let webHeading1 = document.querySelector('#t1');
-  webHeading1.textContent = 'Output: ' + output1.toString();
-}, 1000);
-throttled("log"); // logged immediately.
-throttled("log1000"); // logged at t=100ms.
+let input1 = [[1],[2],[3]];
+const fn = function sum(a, b, c) { return a + b + c; };
 
+const csum1 = curry(fn);
+const csum2 = curry(fn);
+const csum3 = curry(fn);
+
+let output1 = csum1(1)(2)(3);
+let webHeading1 = document.querySelector('#t1');
+webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
+
+let output2 = csum2(1, 2)(3);
+let webHeading2 = document.querySelector('#t2');
+webHeading2.textContent = 'Output: ' + JSON.stringify(output2);
+
+let output3 = csum3()()(1, 2, 3);
+let webHeading3 = document.querySelector('#t3');
+webHeading3.textContent = 'Output: ' + JSON.stringify(output3);
 
 

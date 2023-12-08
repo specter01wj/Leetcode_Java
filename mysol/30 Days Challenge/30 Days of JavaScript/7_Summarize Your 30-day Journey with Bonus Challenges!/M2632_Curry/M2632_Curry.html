@@ -38,7 +38,7 @@
         };
 
         let input1 = [[1],[2],[3]];
-        fn = function sum(a, b, c) { return a + b + c; };
+        const fn = function sum(a, b, c) { return a + b + c; };
 
         const csum1 = curry(fn);
         const csum2 = curry(fn);
