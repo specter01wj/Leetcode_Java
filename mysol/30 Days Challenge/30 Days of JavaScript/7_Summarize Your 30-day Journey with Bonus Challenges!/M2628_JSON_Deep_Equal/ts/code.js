@@ -45,9 +45,9 @@ function areDeeplyEqual(o1, o2) {
 var input1 = { "x": 1, "y": 2 }, input2 = { "x": 1, "y": 2 };
 var input3 = { "y": 2, "x": 1 }, input4 = { "x": 1, "y": 2 };
 var input5 = { "x": null, "L": [1, 2, 3] }, input6 = { "x": null, "L": ["1", "2", "3"] };
-var tt1 = areDeeplyEqual(input1, input2);
-var tt2 = areDeeplyEqual(input3, input4);
-var tt3 = areDeeplyEqual(input5, input6);
+var output1 = areDeeplyEqual(input1, input2);
+var output2 = areDeeplyEqual(input3, input4);
+var output3 = areDeeplyEqual(input5, input6);
 var webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
 var webHeading2 = document.querySelector('#t2');
