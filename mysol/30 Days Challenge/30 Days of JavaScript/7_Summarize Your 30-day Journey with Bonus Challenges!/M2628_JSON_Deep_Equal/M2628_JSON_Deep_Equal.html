@@ -4,68 +4,95 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a function fn and a time in milliseconds t, return a throttled version 
-        of that function.
+			 	Given two values o1 and o2, return a boolean value indicating whether two values, 
+        o1 and o2, are deeply equal.
 
-        A throttled function is first called without delay and then, for a time interval 
-        of t milliseconds, can't be executed but should store the latest function 
-        arguments provided to call fn with them after the end of the delay.
+        For two values to be deeply equal, the following conditions must be met:
 
-        For instance, t = 50ms, and the function was called at 30ms, 40ms, and 60ms. 
-        The first function call would block calling functions for the following t milliseconds. 
-        The second function call would save arguments, and the third call arguments 
-        should overwrite currently stored arguments from the second call because the 
-        second and third calls are called before 80ms. Once the delay has passed, 
-        the throttled function should be called with the latest arguments provided 
-        during the delay period, and it should also create another delay period of 80ms + t.
+        . If both values are primitive types, they are deeply equal if they pass 
+          the === equality check.
 
-        The above diagram shows how throttle will transform events. 
-        Each rectangle represents 100ms and the throttle time is 400ms. Each color 
-        represents a different set of inputs.
+        . If both values are arrays, they are deeply equal if they have the same 
+          elements in the same order, and each element is also deeply equal according 
+          to these conditions.
+
+        . If both values are objects, they are deeply equal if they have the same keys, 
+          and the associated values for each key are also deeply equal according to 
+          these conditions.
+
+        You may assume both values are the output of JSON.parse. In other words, 
+        they are valid JSON.
+
+        Please solve it without using lodash's _.isEqual() function
 			 */
 			$(document).ready(function(){
 
 				/**
-         * @param {Function} fn
-         * @param {number} t
-         * @return {Function}
+         * @param {null|boolean|number|string|Array|Object} o1
+         * @param {null|boolean|number|string|Array|Object} o2
+         * @return {boolean}
          */
-				let throttle = function(fn, t) {
-          let lastCall = 0;
-          let timeoutId = null;
-          let lastArgs = null;
-
-          return function(...args) {
-            const now = Date.now();
-
-            if (!lastCall) {
-                // First call is executed immediately
-                lastCall = now;
-                fn.apply(this, args);
-            } else if (now - lastCall >= t) {
-                // If the time has passed, execute the function
-                lastCall = now;
-                fn.apply(this, args);
-            } else {
-                // Save the latest arguments and set a timeout
-                lastArgs = args;
-                clearTimeout(timeoutId);
-                timeoutId = setTimeout(() => {
-                    lastCall = Date.now();
-                    fn.apply(this, lastArgs);
-                    lastArgs = null;
-                }, t - (now - lastCall));
-            }
+				let areDeeplyEqual = function(o1, o2) {
+          // Check for null values
+          if (o1 === null || o2 === null) {
+              return o1 === o2;
           }
+
+          // Check if both values are of the same type
+          if (typeof o1 !== typeof o2) {
+              return false;
+          }
+
+          // Handle primitive types
+          if (typeof o1 !== 'object') {
+              return o1 === o2;
+          }
+
+          // Differentiate between arrays and objects
+          if (Array.isArray(o1) !== Array.isArray(o2)) {
+              return false;
+          }
+
+          // Handle arrays
+          if (Array.isArray(o1)) {
+              if (o1.length !== o2.length) {
+                  return false;
+              }
+              for (let i = 0; i < o1.length; i++) {
+                  if (!areDeeplyEqual(o1[i], o2[i])) {
+                      return false;
+                  }
+              }
+              return true;
+          }
+
+          // Handle objects
+          let keys1 = Object.keys(o1);
+          let keys2 = Object.keys(o2);
+
+          if (keys1.length !== keys2.length) {
+              return false;
+          }
+
+          for (let key of keys1) {
+              if (!keys2.includes(key) || !areDeeplyEqual(o1[key], o2[key])) {
+                  return false;
+              }
+          }
+
+          return true;
         };
 
-        let input = '';
-        const throttled = throttle((item) => {
-          let tt1 = item;
-          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
-        }, 1000);
-        throttled("log"); // logged immediately.
-        throttled("log1000"); // logged at t=100ms.
+        let input1 = {"x":1,"y":2}, input2 = {"x":1,"y":2};
+        let input3 = {"y":2,"x":1}, input4 = {"x":1,"y":2};
+        let input5 = {"x":null,"L":[1,2,3]}, input6 = {"x":null,"L":["1","2","3"]};
+
+        let tt1 = areDeeplyEqual(input1, input2);
+        let tt2 = areDeeplyEqual(input3, input4);
+        let tt3 = areDeeplyEqual(input5, input6);
+
+        $('#t1').html('<h2>Input: ' + input + '<br>Results: ' 
+          + (tt1) + '; ' + (tt2) + '; ' + (tt3) + '</h2>');
         
 			});
 
