@@ -1,37 +1,54 @@
-type F = (...args: number[]) => void
+type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
 
-function throttle(fn: F, t: number): F {
-    let lastCall: number = 0;
-    let timeoutId: any = null;
-    let lastArgs: number[] | null = null;
+function areDeeplyEqual(o1: JSONValue, o2: JSONValue): boolean {
+	// Check for null values
+    if (o1 === null || o2 === null) {
+        return o1 === o2;
+    }
 
-	return function (...args) {
-		const now = Date.now();
+    // Check if both values are of the same type
+    if (typeof o1 !== typeof o2) {
+        return false;
+    }
 
-        // If this is the first call or the last call was t or more milliseconds ago
-        if (lastCall === 0 || (now - lastCall >= t)) {
-            // Call the function immediately and update lastCall
-            lastCall = now;
-            fn.apply(this, args);
-        } else {
-            // Save the latest arguments
-            lastArgs = args;
+    // Handle primitive types
+    if (typeof o1 !== 'object' || o1 === null || o2 === null) {
+        return o1 === o2;
+    }
 
-            // Clear the existing timeout, if any
-            if (timeoutId) {
-                clearTimeout(timeoutId);
-            }
+    // Differentiate between arrays and objects
+    if (Array.isArray(o1) !== Array.isArray(o2)) {
+        return false;
+    }
 
-            // Set a new timeout to call the function after the remaining time in the t milliseconds period
-            timeoutId = setTimeout(() => {
-                // Update lastCall to the current time
-                lastCall = Date.now();
-                fn.apply(this, lastArgs);
-                lastArgs = null;
-                timeoutId = null;
-            }, lastCall + t - now);
+    // Handle arrays
+    if (Array.isArray(o1) && Array.isArray(o2)) {
+        if (o1.length !== o2.length) {
+            return false;
         }
-	}
+        for (let i = 0; i < o1.length; i++) {
+            if (!areDeeplyEqual(o1[i], o2[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Handle objects
+    const keys1 = Object.keys(o1 as object);
+    const keys2 = Object.keys(o2 as object);
+
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+
+    for (let key of keys1) {
+        if (!keys2.includes(key) || !areDeeplyEqual((o1 as { [key: string]: JSONValue })[key], (o2 as { [key: string]: JSONValue })[key])) {
+            return false;
+        }
+    }
+
+    return true;
 };
 
 let input = '';
