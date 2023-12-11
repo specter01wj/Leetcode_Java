@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a function fn and a time in milliseconds t, return a throttled version 
+        of that function.
+
+        A throttled function is first called without delay and then, for a time interval 
+        of t milliseconds, can't be executed but should store the latest function 
+        arguments provided to call fn with them after the end of the delay.
+
+        For instance, t = 50ms, and the function was called at 30ms, 40ms, and 60ms. 
+        The first function call would block calling functions for the following t milliseconds. 
+        The second function call would save arguments, and the third call arguments 
+        should overwrite currently stored arguments from the second call because the 
+        second and third calls are called before 80ms. Once the delay has passed, 
+        the throttled function should be called with the latest arguments provided 
+        during the delay period, and it should also create another delay period of 80ms + t.
+
+        The above diagram shows how throttle will transform events. 
+        Each rectangle represents 100ms and the throttle time is 400ms. Each color 
+        represents a different set of inputs.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {Function} fn
+         * @param {number} t
+         * @return {Function}
+         */
+				let throttle = function(fn, t) {
+          let lastCall = 0;
+          let timeoutId = null;
+          let lastArgs = null;
+
+          return function(...args) {
+            const now = Date.now();
+
+            if (!lastCall) {
+                // First call is executed immediately
+                lastCall = now;
+                fn.apply(this, args);
+            } else if (now - lastCall >= t) {
+                // If the time has passed, execute the function
+                lastCall = now;
+                fn.apply(this, args);
+            } else {
+                // Save the latest arguments and set a timeout
+                lastArgs = args;
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => {
+                    lastCall = Date.now();
+                    fn.apply(this, lastArgs);
+                    lastArgs = null;
+                }, t - (now - lastCall));
+            }
+          }
+        };
+
+        let input = '';
+        const throttled = throttle((item) => {
+          let tt1 = item;
+          $('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+        }, 1000);
+        throttled("log"); // logged immediately.
+        throttled("log1000"); // logged at t=100ms.
+        
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
