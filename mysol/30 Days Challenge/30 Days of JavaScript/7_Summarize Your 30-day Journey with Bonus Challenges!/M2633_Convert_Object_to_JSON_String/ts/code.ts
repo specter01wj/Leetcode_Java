@@ -1,63 +1,53 @@
 type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string]: JSONValue };
 
-function areDeeplyEqual(o1: JSONValue, o2: JSONValue): boolean {
-	// Check for null values
-    if (o1 === null || o2 === null) {
-        return o1 === o2;
+function jsonStringify(object: JSONValue): string {
+	// Handle null
+    if (object === null) {
+        return "null";
     }
 
-    // Check if both values are of the same type
-    if (typeof o1 !== typeof o2) {
-        return false;
+    // Handle strings
+    if (typeof object === 'string') {
+        return `"${object}"`;
     }
 
-    // Handle primitive types
-    if (typeof o1 !== 'object' || o1 === null || o2 === null) {
-        return o1 === o2;
+    // Handle numbers
+    if (typeof object === 'number') {
+        return object.toString();
     }
 
-    // Differentiate between arrays and objects
-    if (Array.isArray(o1) !== Array.isArray(o2)) {
-        return false;
+    // Handle booleans
+    if (typeof object === 'boolean') {
+        return object.toString();
     }
 
     // Handle arrays
-    if (Array.isArray(o1) && Array.isArray(o2)) {
-        if (o1.length !== o2.length) {
-            return false;
-        }
-        for (let i = 0; i < o1.length; i++) {
-            if (!areDeeplyEqual(o1[i], o2[i])) {
-                return false;
-            }
-        }
-        return true;
+    if (Array.isArray(object)) {
+        const result = object.map(item => jsonStringify(item)).join(",");
+        return `[${result}]`;
     }
 
     // Handle objects
-    const keys1 = Object.keys(o1 as object);
-    const keys2 = Object.keys(o2 as object);
-
-    if (keys1.length !== keys2.length) {
-        return false;
+    if (typeof object === 'object') {
+        const keys = Object.keys(object);
+        const result = keys.map(key => {
+            const value = (object as { [key: string]: JSONValue })[key];
+            return `"${key}":${jsonStringify(value)}`;
+        }).join(",");
+        return `{${result}}`;
     }
 
-    for (let key of keys1) {
-        if (!keys2.includes(key) || !areDeeplyEqual((o1 as { [key: string]: JSONValue })[key], (o2 as { [key: string]: JSONValue })[key])) {
-            return false;
-        }
-    }
-
-    return true;
+    // Unsupported types (e.g., functions, undefined)
+    throw new Error('Unsupported type');
 };
 
-let input1 = {"x":1,"y":2}, input2 = {"x":1,"y":2};
-let input3 = {"y":2,"x":1}, input4 = {"x":1,"y":2};
-let input5 = {"x":null,"L":[1,2,3]}, input6 = {"x":null,"L":["1","2","3"]};
+let input1 = {"y":1,"x":2};
+let input2 = {"a":"str","b":-12,"c":true,"d":null};
+let input3 = {"key":{"a":1,"b":[{},null,"Hello"]}};
 
-let output1 = areDeeplyEqual(input1, input2);
-let output2 = areDeeplyEqual(input3, input4);
-let output3 = areDeeplyEqual(input5, input6);
+let output1 = jsonStringify(input1);
+let output2 = jsonStringify(input2);
+let output3 = jsonStringify(input3);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
