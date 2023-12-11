@@ -51,14 +51,21 @@ function areDeeplyEqual(o1: JSONValue, o2: JSONValue): boolean {
     return true;
 };
 
-let input = '';
-const throttled = throttle((item) => {
-  let output1 = item;
-  let webHeading1 = document.querySelector('#t1');
-  webHeading1.textContent = 'Output: ' + output1.toString();
-}, 1000);
-throttled("log"); // logged immediately.
-throttled("log1000"); // logged at t=100ms.
+let input1 = {"x":1,"y":2}, input2 = {"x":1,"y":2};
+let input3 = {"y":2,"x":1}, input4 = {"x":1,"y":2};
+let input5 = {"x":null,"L":[1,2,3]}, input6 = {"x":null,"L":["1","2","3"]};
 
+let tt1 = areDeeplyEqual(input1, input2);
+let tt2 = areDeeplyEqual(input3, input4);
+let tt3 = areDeeplyEqual(input5, input6);
+
+let webHeading1 = document.querySelector('#t1');
+webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
+
+let webHeading2 = document.querySelector('#t2');
+webHeading2.textContent = 'Output: ' + JSON.stringify(output2);
+
+let webHeading3 = document.querySelector('#t3');
+webHeading3.textContent = 'Output: ' + JSON.stringify(output3);
 
 
