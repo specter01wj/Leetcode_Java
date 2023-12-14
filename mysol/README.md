@@ -77,6 +77,17 @@ By Jin Wang
 |2628|**JSON Deep Equal**|Medium|Javascript/Typescript|Done/Done|
 |2633|**Convert Object to JSON String**|Medium|Javascript/Typescript|Done/Done|
 
+
+### LeetCode 75
+
+#### Array / String
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|1768|**Merge Strings Alternately**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
+
+
 ## by Difficulties
 
 ### Easy Level
