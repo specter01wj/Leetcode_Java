@@ -1,21 +1,22 @@
-function mergeAlternately(word1: string, word2: string): string {
-  let n = word1.length, m = word2.length, i = 0, j = 0;
-  let res = '';
-
-  while (i < n || j < m) {
-      if (i < n) {
-          res += word1[i++];
-      }
-      if (j < m) {
-          res += word2[j++];
-      }
+function gcdOfStrings(str1: string, str2: string): string {
+  if ((str1 + str2) !== (str2 + str1)) {
+      return "";
   }
 
-  return res;
+  let gcdVal = gcd(str1.length, str2.length);
+  return str2.substring(0, gcdVal);
 }
 
-let word1 = "abcd", word2 = "pq";
-let output1 = mergeAlternately(word1, word2);
+function gcd(p: number, q: number): number {
+  if (q === 0) {
+      return p;
+  } else {
+      return gcd(q, p % q);
+  }
+}
+
+let str1 = "ABABAB", str2 = "ABAB";
+let output1 = gcdOfStrings(str1, str2);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + output1.toString();
