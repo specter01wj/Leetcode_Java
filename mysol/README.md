@@ -85,7 +85,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1768|**Merge Strings Alternately**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
+|1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
