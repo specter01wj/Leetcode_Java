@@ -86,6 +86,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1768|**Merge Strings Alternately**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|605|**Can Place Flowers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
