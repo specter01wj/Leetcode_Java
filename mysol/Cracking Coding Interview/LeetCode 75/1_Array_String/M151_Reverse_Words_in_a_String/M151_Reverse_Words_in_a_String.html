@@ -21,7 +21,7 @@
          * @param s: a string
          * @return: a string of the words in reverse order concatenated by a single space
          */
-				var reverseWords = function(s) {
+				let reverseWords = function(s) {
 					// Trim the input string to remove leading or trailing spaces
           s = s.trim();
 
@@ -32,8 +32,12 @@
           return words.join(' ');
 				};
 
-				var input = "the sky is blue";
-				var tt1 = reverseWords(input);
+        function reverseWords_2(s) {
+          return s.split(" ").reverse().filter(w => w !== "").join(" ");
+        }
+
+				let input = "the sky is blue";
+				let tt1 = reverseWords(input);
 				$('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
