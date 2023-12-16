@@ -4,53 +4,36 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Write a function that takes a string as input and reverse only the vowels of a string.
+			 	Given an input string s, reverse the order of the words.
 
-				Example 1:
+        A word is defined as a sequence of non-space characters. 
+        The words in s will be separated by at least one space.
 
-				Input: "hello"
-				Output: "holle"
-				Example 2:
+        Return a string of the words in reverse order concatenated by a single space.
 
-				Input: "leetcode"
-				Output: "leotcede"
+        Note that s may contain leading or trailing spaces or multiple spaces between 
+        two words. The returned string should only have a single space separating the words. 
+        Do not include any extra spaces.
 			 */
 			$(document).ready(function(){
 
-				/*
-			     * @param s: a String
-			     * @return chars: reversed vowels of a string
-			     */
-				var reverseVowels = function(s) {
-					if(s == null || s.length === 0) {
-						return s;
-					}
-					var vowels = "aeiouAEIOU";
-					// 将字符串转化成char类型数组
-					var chars = s.split("");
-					var start = 0, end = s.length - 1;
-					
-					while(start < end) {
-						// 双指针相向而行找元音字符
-						while(start < end && !(vowels.indexOf(chars[start]) === -1 ? false : true)) {
-							start++;
-						}
-						while(start < end && !(vowels.indexOf(chars[end]) === -1 ? false : true)) {
-							end--;
-						}
-						var temp = chars[start];
-						chars[start] = chars[end];
-						chars[end] = temp;
-						start++;
-						end--;
-					}
-					var result = chars.join("");
-					
-					return result;
+				/**
+         * @param s: a string
+         * @return: a string of the words in reverse order concatenated by a single space
+         */
+				var reverseWords = function(s) {
+					// Trim the input string to remove leading or trailing spaces
+          s = s.trim();
+
+          // Split the string by spaces (one or more) and reverse the array of words
+          let words = s.split(/\s+/).reverse();
+
+          // Join the words with a single space and return the result
+          return words.join(' ');
 				};
 
-				var input = "hello";
-				var tt1 = reverseVowels(input);
+				var input = "the sky is blue";
+				var tt1 = reverseWords(input);
 				$('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
