@@ -88,6 +88,8 @@ By Jin Wang
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|345|**Reverse Vowels of a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|151|**Reverse Words in a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
