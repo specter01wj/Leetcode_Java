@@ -22,7 +22,15 @@ public class M151_Reverse_Words_in_a_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Built-in Split + Reverse
+    */
 	
+	/**
+     * @param s: a string
+     * @return: a string of the words in reverse order concatenated by a single space
+     */
 	public static String reverseWords(String s) {
 		// Trim the input string to remove leading and trailing spaces
         s = s.trim();
