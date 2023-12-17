@@ -90,6 +90,8 @@ By Jin Wang
 |605|**Can Place Flowers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |151|**Reverse Words in a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|238|**Product of Array Except Self**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|334|**Increasing Triplet Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
