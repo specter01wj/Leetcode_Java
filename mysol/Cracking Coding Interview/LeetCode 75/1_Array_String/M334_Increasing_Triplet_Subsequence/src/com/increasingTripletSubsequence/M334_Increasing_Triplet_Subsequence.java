@@ -15,7 +15,15 @@ public class M334_Increasing_Triplet_Subsequence {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Linear Scan
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: boolean
+     */
 	public static boolean increasingTriplet(int[] nums) {
         if (nums == null || nums.length < 3) {
             return false;

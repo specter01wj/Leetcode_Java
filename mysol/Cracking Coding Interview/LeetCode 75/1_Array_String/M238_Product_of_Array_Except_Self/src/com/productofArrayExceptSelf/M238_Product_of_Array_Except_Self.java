@@ -24,7 +24,7 @@ public class M238_Product_of_Array_Except_Self {
     */
 	
 	/*
-     * @param arr: a list of integers
+     * @param nums: a list of integers
      * @return: an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]
      */
 	public static int[] productExceptSelf(int[] nums) {
