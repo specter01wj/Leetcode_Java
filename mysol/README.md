@@ -195,7 +195,7 @@ By Jin Wang
 |270|**Closest Binary Search Tree Value**|Easy|Java/Javascript||
 |276|**Paint Fence**|Easy|Java/Javascript||
 |278|**First Bad Version**|Easy|Java/Javascript|Done/Done|
-|283|**Move Zeroes**|Easy|Java/Javascript|Done/Done|
+|283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
 |293|**Flip Game**|Easy|Java/Javascript|Done/Done|
