@@ -1,29 +1,31 @@
-function reverseVowels(s: string): string {
-  if(s === null || s.length === 0) {
-      return s;
-  }
-  const vowels: string = "aeiouAEIOU";
-  let chars: string[] = s.split("");
-  let start: number = 0, end: number = s.length - 1;
+function compress(chars: string[]): number {
+  let indexAns = 0, index = 0;
 
-  while(start < end) {
-      while(start < end && !vowels.includes(chars[start])) {
-          start++;
+  while (index < chars.length) {
+      let currentChar = chars[index];
+      let count = 0;
+
+      while (index < chars.length && chars[index] === currentChar) {
+          index++;
+          count++;
       }
-      while(start < end && !vowels.includes(chars[end])) {
-          end--;
+
+      chars[indexAns++] = currentChar;
+
+      if (count !== 1) {
+          let countStr = count.toString();
+          for (let i = 0; i < countStr.length; i++) {
+              chars[indexAns++] = countStr[i];
+          }
       }
-      [chars[start], chars[end]] = [chars[end], chars[start]]; // Swapping
-      start++;
-      end--;
   }
 
-  return chars.join("");
+  return indexAns;
 };
 
-let input1 = "leetcode";
-let output1 = reverseVowels(input1);
+let input1 = ["a","a","b","b","c","c","c"];
+let output1 = compress(input1);
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + output1.toString();
+webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
 
