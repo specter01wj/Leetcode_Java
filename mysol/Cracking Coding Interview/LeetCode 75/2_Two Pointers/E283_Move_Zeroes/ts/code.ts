@@ -1,30 +1,25 @@
-function compress(chars: string[]): number {
-  let indexAns = 0, index = 0;
+function moveZeroes(nums: number[]): void {
+  // Initialize a pointer for the next position to place a non-zero number
+  let insertPos = 0;
+  let res = JSON.parse(JSON.stringify(nums));
 
-  while (index < chars.length) {
-      let currentChar = chars[index];
-      let count = 0;
-
-      while (index < chars.length && chars[index] === currentChar) {
-          index++;
-          count++;
-      }
-
-      chars[indexAns++] = currentChar;
-
-      if (count !== 1) {
-          let countStr = count.toString();
-          for (let i = 0; i < countStr.length; i++) {
-              chars[indexAns++] = countStr[i];
-          }
+  // Traverse the array, moving non-zero numbers to the front
+  for (let num of nums) {
+      if (num !== 0) {
+        res[insertPos++] = num;
       }
   }
 
-  return indexAns;
+  // Fill the remaining array with zeroes
+  while (insertPos < nums.length) {
+    res[insertPos++] = 0;
+  }
+
+  return res;
 };
 
-let input1 = ["a","a","b","b","c","c","c"];
-let output1 = compress(input1);
+let input1 = [0,1,0,3,12];
+let output1 = moveZeroes(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
