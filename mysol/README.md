@@ -216,7 +216,7 @@ By Jin Wang
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
-|392|**Is Subsequence**|Easy|Java/Javascript|Done/Done|
+|392|**Is Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |401|**Binary Watch**|Easy|Java/Javascript||
 |408|**Valid Word Abbreviation**|Easy|Java/Javascript|Done/Done|
 |409|**Longest Palindrome**|Easy|Java/Javascript|Done/Done|
