@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a value, return a valid JSON string of that value. 
+        The value can be a string, number, array, object, boolean, or null. 
+        The returned string should not include extra spaces. 
+        The order of keys should be the same as the order returned by Object.keys().
+
+        Please solve it without using the built-in JSON.stringify method.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {null|boolean|number|string|Array|Object} object
+         * @return {string}
+         */
+				let jsonStringify = function(object) {
+          // Handle null
+          if (object === null) {
+              return "null";
+          }
+
+          // Handle strings
+          if (typeof object === 'string') {
+              return `"${object}"`;
+          }
+
+          // Handle numbers
+          if (typeof object === 'number') {
+              return object.toString();
+          }
+
+          // Handle booleans
+          if (typeof object === 'boolean') {
+              return object.toString();
+          }
+
+          // Handle arrays
+          if (Array.isArray(object)) {
+              let result = object.map(item => jsonStringify(item)).join(",");
+              return `[${result}]`;
+          }
+
+          // Handle objects
+          if (typeof object === 'object') {
+              let keys = Object.keys(object);
+              let result = keys.map(key => {
+                  let val = jsonStringify(object[key]);
+                  return `"${key}":${val}`;
+              }).join(",");
+              return `{${result}}`;
+          }
+
+          // Return undefined for unsupported types
+          return undefined;
+        };
+
+        let input1 = {"y":1,"x":2};
+        let input2 = {"a":"str","b":-12,"c":true,"d":null};
+        let input3 = {"key":{"a":1,"b":[{},null,"Hello"]}};
+
+        let tt1 = jsonStringify(input1);
+        let tt2 = jsonStringify(input2);
+        let tt3 = jsonStringify(input3);
+
+        $('#t1').html('<h2>Input: ' + JSON.stringify(input1) + '<br>Results: ' 
+          + JSON.stringify(tt1) + '; ' + JSON.stringify(tt2) + '; ' + JSON.stringify(tt3) + '</h2>');
+        
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
