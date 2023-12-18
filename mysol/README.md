@@ -509,7 +509,7 @@ By Jin Wang
 |2383|**Minimum Hours of Training to Win a Competition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2389|**Longest Subsequence With Limited Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
-|2623|**Memoize**|Medium|Javascript/Typescript|Done/Done|
+|2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
 |2626|**Array Reduce Transformation**|Easy|Javascript/Typescript|Done/Done|
 |2629|**Function Composition**|Easy|Javascript/Typescript|Done/Done|
 |2634|**Filter Elements from Array**|Easy|Javascript/Typescript|Done/Done|
@@ -519,6 +519,9 @@ By Jin Wang
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
+|2715|**Timeout Cancellation**|Easy|Javascript/Typescript|Done/Done|
+|2723|**Add Two Promises**|Easy|Javascript/Typescript|Done/Done|
+|2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|
 
 ### Medium Level
 
@@ -538,6 +541,11 @@ By Jin Wang
 |238|**Product of Array Except Self**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
+|2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
+|2623|**Memoize**|Medium|Javascript/Typescript|Done/Done|
+|2627|**Debounce**|Medium|Javascript/Typescript|Done/Done|
+|2637|**Promise Time Limit**|Medium|Javascript/Typescript|Done/Done|
+|2721|**Execute Asynchronous Functions in Parallel**|Medium|Javascript/Typescript|Done/Done|
 
 
 ### Hard Level
