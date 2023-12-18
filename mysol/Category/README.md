@@ -109,7 +109,7 @@ Cspiration Category:
 |594|Longest Harmonious Subsequence|Easy||Java/Javascript|Done/Done|
 |598|Range Addition II|Easy||Java/Javascript|Done/Done|
 |599|Minimum Index Sum of Two Lists|Easy||Java/Javascript|Done/Done|
-|605|Can Place Flowers|Easy||Java/Javascript|Done/Done|
+|605|Can Place Flowers|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |628|Maximum Product of Three Numbers|Easy||Java/Javascript|Done/Done|
 |643|Maximum Average Subarray I|Easy||Java/Javascript|Done/Done|
 |645|Set Mismatch|Easy||Java/Javascript|Done/Done|
