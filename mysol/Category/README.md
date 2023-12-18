@@ -433,7 +433,7 @@ Cspiration Category:
 |1736|Latest Time by Replacing Hidden Digits|Easy||Java/Javascript|Done/Done|
 |1758|Minimum Changes To Make Alternating Binary String|Easy||Java/Javascript|Done/Done|
 |1763|Longest Nice Substring|Easy||Java/Javascript|Done/Done|
-|1768|Merge Strings Alternately|Easy||Java/Javascript|Done/Done|
+|1768|Merge Strings Alternately|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1773|Count Items Matching a Rule|Easy||Java/Javascript|Done/Done|
 |1784|Check if Binary String Has at Most One Segment of Ones|Easy||Java/Javascript|Done/Done|
 |1790|Check if One String Swap Can Make Strings Equal|Easy||Java/Javascript|Done/Done|

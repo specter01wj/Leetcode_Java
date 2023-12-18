@@ -92,6 +92,7 @@ By Jin Wang
 |151|**Reverse Words in a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |238|**Product of Array Except Self**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |334|**Increasing Triplet Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|443|**String Compression**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
@@ -412,7 +413,7 @@ By Jin Wang
 |1752|**Check if Array Is Sorted and Rotated**|Easy|Java/Javascript|Done/Done|
 |1758|**Minimum Changes To Make Alternating Binary String**|Easy|Java/Javascript|Done/Done|
 |1763|**Longest Nice Substring**|Easy|Java/Javascript|Done/Done|
-|1768|**Merge Strings Alternately**|Easy|Java/Javascript|Done/Done|
+|1768|**Merge Strings Alternately**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1773|**Count Items Matching a Rule**|Easy|Java/Javascript|Done/Done|
 |1779|**Find Nearest Point That Has the Same X or Y Coordinate**|Easy|Java/Javascript|Done/Done|
 |1784|**Check if Binary String Has at Most One Segment of Ones**|Easy|Java/Javascript|Done/Done|
