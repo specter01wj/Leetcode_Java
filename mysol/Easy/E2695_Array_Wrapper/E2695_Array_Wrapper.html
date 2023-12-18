@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Create a class ArrayWrapper that accepts an array of integers in its constructor. 
+        This class should have two features:
+
+        . When two instances of this class are added together with the + operator, 
+          the resulting value is the sum of all the elements in both arrays.
+        . When the String() function is called on the instance, it will return a 
+          comma separated string surrounded by brackets. For example, [1,2,3].
+			 */
+			$(document).ready(function(){
+
+        /**
+         * @param {number[]} nums
+         * @return {void}
+         */
+        let ArrayWrapper = function(nums) {
+            this.nums = nums;
+        };
+
+        /**
+         * @return {number}
+         */
+        ArrayWrapper.prototype.valueOf = function() {
+            return this.nums.reduce((acc, num) => acc + num, 0);
+        }
+
+        /**
+         * @return {string}
+         */
+        ArrayWrapper.prototype.toString = function() {
+            return '[' + this.nums.join(',') + ']';
+        }
+
+        
+        let input1 = '';
+        const obj1 = new ArrayWrapper([1,2]);
+        const obj2 = new ArrayWrapper([3,4]);
+        
+				let tt1 = obj1 + obj2; // 10
+				let tt2 = String(obj1); // "[1,2]"
+				let tt3 = String(obj2); // "[3,4]"
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input1) + 
+          '<br>Results: ' + (tt1) + '; ' + (tt2) + '; ' + (tt3) + '</h2>');
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
