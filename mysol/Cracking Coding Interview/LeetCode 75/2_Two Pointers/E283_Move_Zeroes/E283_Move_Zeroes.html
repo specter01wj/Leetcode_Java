@@ -23,7 +23,7 @@
 			     * @param nums: an integer array
 			     * @return nothing, do this in-place
 			     */
-				var moveZeroes = function(nums) {
+				let moveZeroes = function(nums) {
 					var left = 0, right = 0;
 					var result = JSON.parse(JSON.stringify(nums));
 					
@@ -39,6 +39,23 @@
 					
 					return result;
 				};
+
+        function moveZeroes_2(nums) {
+          // Initialize a pointer for the next position to place a non-zero number
+          let insertPos = 0;
+
+          // Traverse the array, moving non-zero numbers to the front
+          for (let num of nums) {
+              if (num !== 0) {
+                  nums[insertPos++] = num;
+              }
+          }
+
+          // Fill the remaining array with zeroes
+          while (insertPos < nums.length) {
+              nums[insertPos++] = 0;
+          }
+        }
 
 				var nums = [0,1,0,3,12];
 				var tt1 = moveZeroes(nums);
