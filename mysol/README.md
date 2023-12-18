@@ -89,10 +89,10 @@ By Jin Wang
 |1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|151|**Reverse Words in a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|238|**Product of Array Except Self**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|334|**Increasing Triplet Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|443|**String Compression**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|238|**Product of Array Except Self**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|443|**String Compression**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
@@ -514,6 +514,7 @@ By Jin Wang
 |11|**Container With Most Water**|Medium|Java/Javascript||
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
+|151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
