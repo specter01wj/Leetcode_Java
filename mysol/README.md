@@ -509,6 +509,9 @@ By Jin Wang
 |2383|**Minimum Hours of Training to Win a Competition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2389|**Longest Subsequence With Limited Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
+|2626|**Array Reduce Transformation**|Easy|Javascript/Typescript|Done/Done|
+|2634|**Filter Elements from Array**|Easy|Javascript/Typescript|Done/Done|
+|2635|**Apply Transform Over Each Element in Array**|Easy|Javascript/Typescript|Done/Done|
 |2665|**Counter II**|Easy|Javascript/Typescript|Done/Done|
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|

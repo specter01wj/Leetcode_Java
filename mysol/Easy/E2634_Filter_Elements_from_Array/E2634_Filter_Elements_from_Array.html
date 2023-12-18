@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array arr and a filtering function fn, 
+        return a filtered array filteredArr.
+
+        The fn function takes one or two arguments:
+
+        . arr[i] - number from the arr
+        . i - index of arr[i]
+        
+        filteredArr should only contain the elements from the arr for which 
+        the expression fn(arr[i], i) evaluates to a truthy value. 
+        A truthy value is a value where Boolean(value) returns true.
+
+        Please solve it without the built-in Array.filter method.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {number[]} arr
+         * @param {Function} fn
+         * @return {number[]}
+         */
+				let filter = function(arr, fn) {
+          let filteredArr = [];
+
+          for (let i = 0; i < arr.length; i++) {
+            if (fn(arr[i], i)) {
+              filteredArr.push(arr[i]);
+            }
+          }
+
+          return filteredArr;
+        };
+
+        function fn(number, index) {
+            return number % index === 0;
+        }
+
+				let input = [0, 1, 2, 4, 6, 10];
+				let tt1 = filter(input, fn);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
