@@ -368,7 +368,7 @@ Cspiration Category:
 |412|Fizz Buzz|Easy||Java/Javascript|Done/Done|
 |415|Add Strings|Easy||Java/Javascript|Done/Done|
 |434|Number of Segments in a String|Easy||Java/Javascript|Done/Done|
-|443|String Compression|Medium||Java/Javascript|Done/Done|
+|443|String Compression|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |459|Repeated Substring Pattern|Easy||Java/Javascript|Done/Done|
 |482|License Key Formatting|Easy||Java/Javascript|Done/Done|
 |520|Detect Capital|Easy||Java/Javascript|Done/Done|

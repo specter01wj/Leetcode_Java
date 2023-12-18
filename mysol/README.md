@@ -216,7 +216,7 @@ By Jin Wang
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 |415|**Add Strings**|Easy|Java/Javascript|Done/Done|
 |434|**Number of Segments in a String**|Easy|Java/Javascript|Done/Done|
-|443|**String Compression**|Easy|Java/Javascript|Done/Done|
+|443|**String Compression**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |448|**Find All Numbers Disappeared in an Array**|Easy|Java/Javascript|Done/Done|
 |455|**Assign Cookies**|Easy|Java/Javascript|Done/Done|
 |459|**Repeated Substring Pattern**|Easy|Java/Javascript|Done/Done|
