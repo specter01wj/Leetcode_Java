@@ -398,7 +398,7 @@ Cspiration Category:
 |937|Reorder Data in Log Files|Medium||Java/Javascript|Done/Done|
 |1021|Remove Outermost Parentheses|Easy||Java/Javascript|Done/Done|
 |1047|Remove All Adjacent Duplicates In String|Easy||Java/Javascript|Done/Done|
-|1071|Greatest Common Divisor of Strings|Easy||Java/Javascript|Done/Done|
+|1071|Greatest Common Divisor of Strings|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1078|Occurrences After Bigram|Easy||Java/Javascript|Done/Done|
 |1108|Defanging an IP Address|Easy||Java/Javascript|Done/Done|
 |1154|Day of the Year|Easy||Java/Javascript|Done/Done|

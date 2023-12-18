@@ -312,7 +312,7 @@ By Jin Wang
 |1046|**Last Stone Weight**|Easy|Java/Javascript|Done/Done|
 |1047|**Remove All Adjacent Duplicates In String**|Easy|Java/Javascript|Done/Done|
 |1051|**Height Checker**|Easy|Java/Javascript|Done/Done|
-|1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript|Done/Done|
+|1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
 |1089|**Duplicate Zeros**|Easy|Java/Javascript|Done/Done|
 |1108|**Defanging an IP Address**|Easy|Java/Javascript|Done/Done|
