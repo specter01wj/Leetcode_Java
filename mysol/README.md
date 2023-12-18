@@ -94,6 +94,14 @@ By Jin Wang
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |443|**String Compression**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Two Pointers
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|392|**Is Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+
+
 
 ## by Difficulties
 
