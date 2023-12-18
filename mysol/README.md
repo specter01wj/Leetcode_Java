@@ -519,12 +519,14 @@ By Jin Wang
 |2666|**Allow One Function Call**|Easy|Javascript/Typescript|Done/Done|
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
 |2677|**Chunk Array**|Easy|Javascript/Typescript|Done/Done|
+|2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
 |2715|**Timeout Cancellation**|Easy|Javascript/Typescript|Done/Done|
 |2723|**Add Two Promises**|Easy|Javascript/Typescript|Done/Done|
 |2724|**Sort By**|Easy|Javascript/Typescript|Done/Done|
 |2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|
+|2726|**Calculator with Method Chaining**|Easy|Javascript/Typescript|Done/Done|
 |2727|**Is Object Empty**|Easy|Javascript/Typescript|Done/Done|
 
 
@@ -552,6 +554,7 @@ By Jin Wang
 |2627|**Debounce**|Medium|Javascript/Typescript|Done/Done|
 |2631|**Group By**|Medium|Javascript/Typescript|Done/Done|
 |2637|**Promise Time Limit**|Medium|Javascript/Typescript|Done/Done|
+|2694|**Event Emitter**|Medium|Javascript/Typescript|Done/Done|
 |2705|**Compact Object**|Medium|Javascript/Typescript|Done/Done|
 |2721|**Execute Asynchronous Functions in Parallel**|Medium|Javascript/Typescript|Done/Done|
 |2722|**Join Two Arrays by ID**|Medium|Javascript/Typescript|Done/Done|
