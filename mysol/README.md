@@ -518,6 +518,7 @@ By Jin Wang
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |238|**Product of Array Except Self**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
 
 

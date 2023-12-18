@@ -43,7 +43,7 @@ Cspiration Category:
 |309|Best Time to Buy and Sell Stock with Cooldown|Medium||Java/Javascript||
 |11|Container With Most Water|Medium||Java/Javascript||
 |42|Trapping Rain Water|Hard||Java/Javascript||
-|334|Increasing Triplet Subsequence|Medium||Java/Javascript||
+|334|Increasing Triplet Subsequence|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |128|Longest Consecutive Sequence|Hard||Java/Javascript||
 |164|Maximum Gap|Hard||Java/Javascript||
 |287|Find the Duplicate Number|Medium||Java/Javascript||
