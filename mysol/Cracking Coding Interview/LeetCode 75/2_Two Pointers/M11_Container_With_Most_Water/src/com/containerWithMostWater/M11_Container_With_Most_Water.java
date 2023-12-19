@@ -21,7 +21,15 @@ public class M11_Container_With_Most_Water {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Two Pointer Approach
+    */
 	
+	/*
+     * @param height: a list of integers
+     * @return: the maximum amount of water a container can store
+     */
 	public static int maxArea(int[] height) {
         int maxArea = 0;
         int left = 0;
