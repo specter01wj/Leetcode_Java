@@ -100,6 +100,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |392|**Is Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|11|**Container With Most Water**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1679|**Max Number of K-Sum Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
