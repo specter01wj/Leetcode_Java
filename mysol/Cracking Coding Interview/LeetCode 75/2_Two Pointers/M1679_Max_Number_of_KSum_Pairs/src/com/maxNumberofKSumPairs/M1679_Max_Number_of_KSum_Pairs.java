@@ -19,7 +19,16 @@ public class M1679_Max_Number_of_KSum_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Using Hashmap - Single Pass
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the maximum number of operations you can perform on the array
+     */
 	public static int maxOperations(int[] nums, int k) {
         Map<Integer, Integer> numCounts = new HashMap<>();
         int operations = 0;
