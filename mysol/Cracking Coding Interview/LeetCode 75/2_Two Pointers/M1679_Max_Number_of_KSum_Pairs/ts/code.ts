@@ -1,30 +1,25 @@
-function maxArea(height: number[]): number {
-  let maxArea = 0;
-  let left = 0;
-  let right = height.length - 1;
+function maxOperations(nums: number[], k: number): number {
+  const numCounts = new Map<number, number>();
+  let operations = 0;
 
-  while (left < right) {
-      // Calculate the area
-      const width = right - left;
-      const minHeight = Math.min(height[left], height[right]);
-      const area = width * minHeight;
-
-      // Update the maximum area
-      maxArea = Math.max(maxArea, area);
-
-      // Move the pointer pointing to the shorter line inward
-      if (height[left] < height[right]) {
-          left++;
+  for (let num of nums) {
+      const complement = k - num;
+      // Check if the complement is present and has a non-zero count
+      if (numCounts.get(complement) > 0) {
+          // Perform an operation and decrease the count of the complement
+          operations++;
+          numCounts.set(complement, numCounts.get(complement)! - 1);
       } else {
-          right--;
+          // Otherwise, increase the count of the current number
+          numCounts.set(num, (numCounts.get(num) || 0) + 1);
       }
   }
 
-  return maxArea;
+  return operations;
 };
 
-let input1 = [1,8,6,2,5,4,8,3,7];
-let output1 = maxArea(input1);
+let input1 = [1,2,3,4], k = 5;
+let output1 = maxOperations(input1, k);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
