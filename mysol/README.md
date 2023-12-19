@@ -541,7 +541,7 @@ By Jin Wang
 |5|**Longest Palindromic Substring**|Medium|Java/Javascript||
 |6|**ZigZag Conversion**|Medium|Java/Javascript||
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
-|11|**Container With Most Water**|Medium|Java/Javascript||
+|11|**Container With Most Water**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
