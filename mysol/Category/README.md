@@ -222,6 +222,7 @@ Cspiration Category:
 |1656|Design an Ordered Stream|Easy||Java/Javascript|Done/Done|
 |1662|Check If Two String Arrays are Equivalent|Easy||Java/Javascript|Done/Done|
 |1672|Richest Customer Wealth|Easy||Java/Javascript|Done/Done|
+|1679|Max Number of K-Sum Pairs|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1684|Count the Number of Consistent Strings|Easy||Java/Javascript|Done/Done|
 |1700|Number of Students Unable to Eat Lunch|Easy||Java/Javascript|Done/Done|
 |1710|Maximum Units on a Truck|Easy||Java/Javascript|Done/Done|
