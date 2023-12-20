@@ -103,6 +103,13 @@ By Jin Wang
 |11|**Container With Most Water**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Sliding Window
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|643|**Maximum Average Subarray I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1456|**Maximum Number of Vowels in a Substring of Given Length**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+
 
 
 ## by Difficulties
@@ -252,7 +259,7 @@ By Jin Wang
 |605|**Can Place Flowers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |606|**Construct String from Binary Tree**|Easy|Java/Javascript|Done/|
 |628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
-|643|**Maximum Average Subarray I**|Easy|Java/Javascript|Done/Done|
+|643|**Maximum Average Subarray I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |645|**Set Mismatch**|Easy|Java/Javascript|Done/Done|
 |657|**Robot Return to Origin**|Easy|Java/Javascript|Done/Done|
 |661|**Image Smoother**|Easy|Java/Javascript|Done/Done|
