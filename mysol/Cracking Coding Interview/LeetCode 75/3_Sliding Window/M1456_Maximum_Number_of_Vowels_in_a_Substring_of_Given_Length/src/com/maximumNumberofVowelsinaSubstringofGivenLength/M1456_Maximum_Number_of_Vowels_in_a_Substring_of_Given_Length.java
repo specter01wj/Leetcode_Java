@@ -17,7 +17,16 @@ public class M1456_Maximum_Number_of_Vowels_in_a_Substring_of_Given_Length {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding Window
+    */
 	
+	/*
+     * @param s: a string
+     * @param k: an integer
+     * @return: the maximum number of vowel letters in any substring of s with length k
+     */
 	public static int maxVowels(String s, int k) {
         int maxVowels = 0;
         int currentVowels = 0;
