@@ -111,7 +111,7 @@ Cspiration Category:
 |599|Minimum Index Sum of Two Lists|Easy||Java/Javascript|Done/Done|
 |605|Can Place Flowers|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |628|Maximum Product of Three Numbers|Easy||Java/Javascript|Done/Done|
-|643|Maximum Average Subarray I|Easy||Java/Javascript|Done/Done|
+|643|Maximum Average Subarray I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |645|Set Mismatch|Easy||Java/Javascript|Done/Done|
 |661|Image Smoother|Easy||Java/Javascript|Done/Done|
 |674|Longest Continuous Increasing Subsequence|Easy||Java/Javascript|Done/Done|
