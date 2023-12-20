@@ -1,19 +1,38 @@
-function findMaxAverage(nums: number[], k: number): number {
-  let sum = 0;
+function maxVowels(s: string, k: number): number {
+  let maxVowels = 0;
+  let currentVowels = 0;
+
+  // Count vowels in the first window
   for (let i = 0; i < k; i++) {
-      sum += nums[i];
+      if (isVowel(s[i])) {
+          currentVowels++;
+      }
   }
-  let max = sum;
-  
-  for (let i = k; i < nums.length; i++) {
-      sum = sum - nums[i - k] + nums[i];
-      max = Math.max(max, sum);
+
+  maxVowels = currentVowels;
+
+  // Slide the window and update the count
+  for (let i = k; i < s.length; i++) {
+      if (isVowel(s[i])) {
+          currentVowels++;
+      }
+      if (isVowel(s[i - k])) {
+          currentVowels--;
+      }
+
+      maxVowels = Math.max(maxVowels, currentVowels);
   }
-  return max / k;
+
+  return maxVowels;
 };
 
-let input1 = [1,12,-5,-6,50,3], k = 4;
-let output1 = findMaxAverage(input1, 4);
+// Function to check if a character is a vowel
+function isVowel(ch: string): boolean {
+  return 'aeiou'.includes(ch);
+}
+
+let input1 = "abciiidef", k = 3;
+let output1 = maxVowels(input1, 4);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
