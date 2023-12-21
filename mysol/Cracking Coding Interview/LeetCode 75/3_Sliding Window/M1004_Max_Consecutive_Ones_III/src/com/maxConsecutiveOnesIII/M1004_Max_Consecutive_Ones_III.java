@@ -15,8 +15,16 @@ public class M1004_Max_Consecutive_Ones_III {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding Window
+    */
 	
-	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the maximum number of consecutive 1's in the array if you can flip at most k 0's
+     */
 	public static int longestOnes(int[] nums, int k) {
         int left = 0, right = 0;
         int maxOnes = 0;
