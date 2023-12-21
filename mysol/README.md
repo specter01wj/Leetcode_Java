@@ -112,6 +112,11 @@ By Jin Wang
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Prefix Sum
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|1732|**Find the Highest Altitude**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
