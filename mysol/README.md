@@ -100,15 +100,17 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |392|**Is Subsequence**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|11|**Container With Most Water**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1679|**Max Number of K-Sum Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|11|**Container With Most Water**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 #### Sliding Window
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |643|**Maximum Average Subarray I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1456|**Maximum Number of Vowels in a Substring of Given Length**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
