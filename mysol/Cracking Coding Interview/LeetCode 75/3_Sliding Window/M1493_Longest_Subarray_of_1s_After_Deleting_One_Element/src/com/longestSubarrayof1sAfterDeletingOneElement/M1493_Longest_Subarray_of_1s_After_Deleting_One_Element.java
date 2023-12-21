@@ -16,7 +16,15 @@ public class M1493_Longest_Subarray_of_1s_After_Deleting_One_Element {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding Window
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the size of the longest non-empty subarray containing only 1's in the resulting array
+     */
 	public static int longestSubarray(int[] nums) {
         int left = 0, right = 0;
         int zeroCount = 0;
