@@ -559,6 +559,7 @@ By Jin Wang
 |238|**Product of Array Except Self**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Easy|Java/Javascript|Done/Done|
+|1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|

@@ -156,6 +156,7 @@ Cspiration Category:
 |997|Find the Town Judge|Easy||Java/Javascript|Done/Done|
 |999|Available Captures for Rook|Easy||Java/Javascript|Done/Done|
 |1002|Find Common Characters|Easy||Java/Javascript|Done/Done|
+|1004|Max Consecutive Ones III|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1005|Maximize Sum Of Array After K Negations|Easy||Java/Javascript|Done/Done|
 |1013|Partition Array Into Three Parts With Equal Sum|Easy||Java/Javascript|Done/Done|
 |1018|Binary Prefix Divisible By 5|Easy||Java/Javascript|Done/Done|
