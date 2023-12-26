@@ -1,19 +1,17 @@
-function findMaxAverage(nums: number[], k: number): number {
-  let sum = 0;
-  for (let i = 0; i < k; i++) {
-      sum += nums[i];
+function largestAltitude(gain: number[]): number {
+  let maxAlt = 0;
+  let currAlt = 0;
+
+  for (let i = 0; i < gain.length; i++) {
+      currAlt += gain[i];
+      maxAlt = Math.max(currAlt, maxAlt);
   }
-  let max = sum;
-  
-  for (let i = k; i < nums.length; i++) {
-      sum = sum - nums[i - k] + nums[i];
-      max = Math.max(max, sum);
-  }
-  return max / k;
+
+  return maxAlt;
 };
 
-let input1 = [1,12,-5,-6,50,3], k = 4;
-let output1 = findMaxAverage(input1, 4);
+let input1 = [-5,1,5,0,-7];
+let output1 = largestAltitude(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
