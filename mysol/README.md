@@ -117,6 +117,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1732|**Find the Highest Altitude**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|724|**Find Pivot Index**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
