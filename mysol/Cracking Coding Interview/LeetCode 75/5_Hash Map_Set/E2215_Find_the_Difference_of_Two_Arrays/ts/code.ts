@@ -1,24 +1,27 @@
-function pivotIndex(nums: number[]): number {
-  let totalSum = 0;
-  let leftSum = 0;
+function findDifference(nums1: number[], nums2: number[]): number[][] {
+  const set1 = new Set<number>(nums1);
+  const set2 = new Set<number>(nums2);
 
-  // Calculate the total sum of the array
-  nums.forEach(num => totalSum += num);
+  const result: number[][] = [[], []];
 
-  // Iterate through the array to find the pivot index
-  for (let i = 0; i < nums.length; i++) {
-      if (leftSum === totalSum - leftSum - nums[i]) {
-          return i; // Found the pivot index
+  set1.forEach(num => {
+      if (!set2.has(num)) {
+          result[0].push(num);
       }
-      leftSum += nums[i]; // Update the left sum for the next iteration
-  }
+  });
 
-  return -1; // No pivot index found
+  set2.forEach(num => {
+      if (!set1.has(num)) {
+          result[1].push(num);
+      }
+  });
+
+  return result;
 };
 
-let input1 = [1,7,3,6,5,6];
-let output1 = pivotIndex(input1);
+let nums1 = [1,2,3], nums2 = [2,4,6];
+let output1 = findDifference(nums1, nums2);
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
+webHeading1.textContent = 'Output: ' + JSON.stringify(nums1);
 
