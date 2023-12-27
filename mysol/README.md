@@ -119,6 +119,13 @@ By Jin Wang
 |1732|**Find the Highest Altitude**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |724|**Find Pivot Index**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Hash Map / Set
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|2215|**Find the Difference of Two Arrays**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+
+
 
 ## by Difficulties
 
