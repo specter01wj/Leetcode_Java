@@ -124,6 +124,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2215|**Find the Difference of Two Arrays**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1207|**Unique Number of Occurrences**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
