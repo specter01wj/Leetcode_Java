@@ -23,5 +23,5 @@ let nums1 = [1,2,3], nums2 = [2,4,6];
 let output1 = findDifference(nums1, nums2);
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + JSON.stringify(nums1);
+webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
 
