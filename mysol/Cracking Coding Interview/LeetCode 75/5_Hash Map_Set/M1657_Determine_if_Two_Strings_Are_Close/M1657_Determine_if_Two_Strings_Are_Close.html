@@ -4,87 +4,66 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
+			 	Two strings are considered close if you can attain one from the other 
+        using the following operations:
 
-					.answer[0] is a list of all distinct integers in nums1 which are not present in nums2.
-					.answer[1] is a list of all distinct integers in nums2 which are not present in nums1.
+          .Operation 1: Swap any two existing characters.
+          .For example, abcde -> aecdb
+          .Operation 2: Transform every occurrence of one existing character 
+          into another existing character, and do the same with the other character.
+          .For example, aacabb -> bbcbaa (all a's turn into b's, and all b's turn into a's)
 
-				Note that the integers in the lists may be returned in any order.
+        You can use the operations on either string as many times as necessary.
 
-
-				Example 1:
-
-				Input: nums1 = [1,2,3], nums2 = [2,4,6]
-				Output: [[1,3],[4,6]]
-				Explanation:
-				For nums1, nums1[1] = 2 is present at index 0 of nums2, whereas nums1[0] = 1 and 
-				nums1[2] = 3 are not present in nums2. Therefore, answer[0] = [1,3].
-				For nums2, nums2[0] = 2 is present at index 1 of nums1, whereas nums2[1] = 4 and 
-				nums2[2] = 6 are not present in nums2. Therefore, answer[1] = [4,6].
-
-				Example 2:
-
-				Input: nums1 = [1,2,3,3], nums2 = [1,1,2,2]
-				Output: [[3],[]]
-				Explanation:
-				For nums1, nums1[2] and nums1[3] are not present in nums2. Since nums1[2] == nums1[3], 
-				their value is only included once and answer[0] = [3].
-				Every integer in nums2 is present in nums1. Therefore, answer[1] = [].
+        Given two strings, word1 and word2, return true if word1 and word2 are close, 
+        and false otherwise.
 			 */
 			$(document).ready(function(){
 
 				/*
-		     * @param nums1: a list of integers
-		     * @param nums2: a list of integers
-		     * @return: a list answer of size 2
-		     */
-				let findDifference = function(nums1, nums2) {
-					let ans1 = new Set(nums1);
-					nums2.forEach((item) => {
-						ans1.delete(item);
-					});
-					let ans2 = new Set(nums2);
-					nums1.forEach((item) => {
-						ans2.delete(item);
-					});    
+        * @param word1: a string
+        * @param word2: a string
+        * @return: true if word1 and word2 are close, and false otherwise
+        */
+				let closeStrings = function(word1, word2) {
+					if (word1.length !== word2.length) {
+              return false;
+          }
 
-					return [[...ans1],[...ans2]];
+          let freq1 = new Array(26).fill(0);
+          let freq2 = new Array(26).fill(0);
+          let present1 = new Set();
+          let present2 = new Set();
+
+          for (let char of word1) {
+              let index = char.charCodeAt(0) - 'a'.charCodeAt(0);
+              freq1[index]++;
+              present1.add(char);
+          }
+
+          for (let char of word2) {
+              let index = char.charCodeAt(0) - 'a'.charCodeAt(0);
+              freq2[index]++;
+              present2.add(char);
+          }
+
+          if (present1.size !== present2.size || ![...present1].every(char => present2.has(char))) {
+              return false;
+          }
+
+          freq1.sort((a, b) => a - b);
+          freq2.sort((a, b) => a - b);
+
+          return freq1.every((val, index) => val === freq2[index]);
 				};
 
-				function findDifference_2(nums1, nums2) {
-					let ans1 = JSON.parse(JSON.stringify(nums1));
-					for (let item of nums1) {
-						if (nums2.includes(item)) {
-							ans1.splice(ans1.indexOf(item), 1);
-						}
-					}
-					ans1 = removeDuplicates(ans1);
-					let ans2 = JSON.parse(JSON.stringify(nums2));
-					for (let item of nums2) {
-						if (nums1.includes(item)) {
-							ans2.splice(ans2.indexOf(item), 1);
-						}
-					}
-					ans2 = removeDuplicates(ans2);
-
-					return [[...ans1],[...ans2]];
-				}
-
-				function removeDuplicates(arr) {
-		        return arr.filter((item, index) => arr.indexOf(item) === index);
-		    }
-
-				// let input = [1,2,3], nums2 = [2,4,6];
-				let input = [1,2,3,3], nums2 = [1,1,2,2];
-				let tt1 = findDifference(input, nums2);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+				let word1 = "abc", word2 = "bca";
+				let tt1 = closeStrings(word1, word1);
+				$('#t1').html('<h2>Input1: ' + word1 + '; input2:' + word2 + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				1. First create 2 sets. Then add nums1 elements to set1, and nums2 to set2.This will give us 2 sets with unique elements only.
-				2. Now,  just iterate to all elements of set1 and add those elements to first sublist of result list, which are not in set2.
-				3. Similarly, iterate to all elements of set2 and add those elements to second sublist of result list, which are not in set1.
-				4. Now, we got our result list.
+				Using Bitwise Operation and Frequency Array Map
 			 */
 
 		</script>
