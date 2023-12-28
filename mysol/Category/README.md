@@ -288,6 +288,7 @@ Cspiration Category:
 |2335|Minimum Amount of Time to Fill Cups|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2341|Maximum Number of Pairs in Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2347|Best Poker Hand|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2352|Equal Row and Column Pairs|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2357|Make Array Zero by Subtracting Equal Amounts|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2363|Merge Similar Items|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2367|Number of Arithmetic Triplets|Easy||Java/Javascript/Typescript|Done/Done/Done|
@@ -430,6 +431,7 @@ Cspiration Category:
 |1598|Crawler Log Folder|Easy||Java/Javascript|Done/Done|
 |1614|Maximum Nesting Depth of the Parentheses|Easy||Java/Javascript|Done/Done|
 |1624|Largest Substring Between Two Equal Characters|Easy||Java/Javascript|Done/Done|
+|1657|Determine if Two Strings Are Close|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1668|Maximum Repeating Substring|Easy||Java/Javascript|Done/Done|
 |1678|Goal Parser Interpretation|Easy||Java/Javascript|Done/Done|
 |1694|Reformat Phone Number|Easy||Java/Javascript|Done/Done|
