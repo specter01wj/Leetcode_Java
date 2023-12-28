@@ -4,66 +4,44 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Two strings are considered close if you can attain one from the other 
-        using the following operations:
+			 	Given a 0-indexed n x n integer matrix grid, return the number of 
+        pairs (ri, cj) such that row ri and column cj are equal.
 
-          .Operation 1: Swap any two existing characters.
-          .For example, abcde -> aecdb
-          .Operation 2: Transform every occurrence of one existing character 
-          into another existing character, and do the same with the other character.
-          .For example, aacabb -> bbcbaa (all a's turn into b's, and all b's turn into a's)
-
-        You can use the operations on either string as many times as necessary.
-
-        Given two strings, word1 and word2, return true if word1 and word2 are close, 
-        and false otherwise.
+        A row and column pair is considered equal if they contain the same 
+        elements in the same order (i.e., an equal array).
 			 */
 			$(document).ready(function(){
 
 				/*
-        * @param word1: a string
-        * @param word2: a string
-        * @return: true if word1 and word2 are close, and false otherwise
+        * @param grid: a list of 2D integers
+        * @return: the number of pairs
         */
-				let closeStrings = function(word1, word2) {
-					if (word1.length !== word2.length) {
-              return false;
+				let equalPairs = function(grid) {
+					let n = grid.length;
+          let count = 0;
+
+          for (let row = 0; row < n; row++) {
+              for (let col = 0; col < n; col++) {
+                  let r = 0;
+                  while (r < n && grid[row][r] === grid[r][col]) {
+                      r++;
+                  }
+                  if (r === n) {
+                      count++;
+                  }
+              }
           }
 
-          let freq1 = new Array(26).fill(0);
-          let freq2 = new Array(26).fill(0);
-          let present1 = new Set();
-          let present2 = new Set();
-
-          for (let char of word1) {
-              let index = char.charCodeAt(0) - 'a'.charCodeAt(0);
-              freq1[index]++;
-              present1.add(char);
-          }
-
-          for (let char of word2) {
-              let index = char.charCodeAt(0) - 'a'.charCodeAt(0);
-              freq2[index]++;
-              present2.add(char);
-          }
-
-          if (present1.size !== present2.size || ![...present1].every(char => present2.has(char))) {
-              return false;
-          }
-
-          freq1.sort((a, b) => a - b);
-          freq2.sort((a, b) => a - b);
-
-          return freq1.every((val, index) => val === freq2[index]);
+          return count;
 				};
 
-				let word1 = "abc", word2 = "bca";
-				let tt1 = closeStrings(word1, word1);
-				$('#t1').html('<h2>Input1: ' + word1 + '; input2:' + word2 + '<br>Results: ' + (tt1) + '</h2>');
+				let input = [[3,2,1],[1,7,6],[2,7,7]];
+				let tt1 = equalPairs(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				Using Bitwise Operation and Frequency Array Map
+				compare each row with each column
 			 */
 
 		</script>
