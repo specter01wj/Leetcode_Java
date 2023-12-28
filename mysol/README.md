@@ -125,6 +125,13 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2215|**Find the Difference of Two Arrays**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1207|**Unique Number of Occurrences**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+
+#### Stack
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
 
 
 
@@ -576,7 +583,9 @@ By Jin Wang
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
 |2623|**Memoize**|Medium|Javascript/Typescript|Done/Done|
 |2625|**Flatten Deeply Nested Array**|Medium|Javascript/Typescript|Done/Done|
