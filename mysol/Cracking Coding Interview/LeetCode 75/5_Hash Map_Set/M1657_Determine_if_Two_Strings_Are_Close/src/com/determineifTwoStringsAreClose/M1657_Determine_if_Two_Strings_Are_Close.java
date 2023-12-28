@@ -27,7 +27,7 @@ public class M1657_Determine_if_Two_Strings_Are_Close {
 	
 	/*
     solution:
-    count good triplets
+    Using Bitwise Operation and Frequency Array Map
     */
 	
 	/*
