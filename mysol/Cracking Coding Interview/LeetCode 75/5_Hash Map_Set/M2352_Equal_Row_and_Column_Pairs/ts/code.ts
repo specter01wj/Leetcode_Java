@@ -1,37 +1,24 @@
-function closeStrings(word1: string, word2: string): boolean {
-  if (word1.length !== word2.length) {
-      return false;
+function equalPairs(grid: number[][]): number {
+  const n: number = grid.length;
+  let count: number = 0;
+
+  for (let row = 0; row < n; row++) {
+      for (let col = 0; col < n; col++) {
+          let r: number = 0;
+          while (r < n && grid[row][r] === grid[r][col]) {
+              r++;
+          }
+          if (r === n) {
+              count++;
+          }
+      }
   }
 
-  const freq1: number[] = new Array(26).fill(0);
-  const freq2: number[] = new Array(26).fill(0);
-  const present1: Set<string> = new Set();
-  const present2: Set<string> = new Set();
-
-  for (const char of word1) {
-      const index: number = char.charCodeAt(0) - 'a'.charCodeAt(0);
-      freq1[index]++;
-      present1.add(char);
-  }
-
-  for (const char of word2) {
-      const index: number = char.charCodeAt(0) - 'a'.charCodeAt(0);
-      freq2[index]++;
-      present2.add(char);
-  }
-
-  if (present1.size !== present2.size || ![...present1].every(char => present2.has(char))) {
-      return false;
-  }
-
-  freq1.sort((a, b) => a - b);
-  freq2.sort((a, b) => a - b);
-
-  return freq1.every((val, index) => val === freq2[index]);
+  return count;
 };
 
-let word1 = "abc", word2 = "bca";
-let output1 = closeStrings(word1, word2);
+let input1 = [[3,2,1],[1,7,6],[2,7,7]]
+let output1 = equalPairs(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
