@@ -17,7 +17,15 @@ public class M2352_Equal_Row_and_Column_Pairs {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    compare each row with each column
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: the number of pairs
+     */
 	public static int equalPairs(int[][] grid) {
         int n = grid.length;
         int count = 0;
