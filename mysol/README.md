@@ -133,6 +133,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
