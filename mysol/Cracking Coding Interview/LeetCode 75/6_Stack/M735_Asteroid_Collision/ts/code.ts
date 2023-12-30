@@ -26,6 +26,9 @@ function asteroidCollision(asteroids: number[]): number[] {
       }
   }
 
+  return stack;
+};
+
 let input1 = [5,10,-5];
 let output1 = asteroidCollision(input1);
 
