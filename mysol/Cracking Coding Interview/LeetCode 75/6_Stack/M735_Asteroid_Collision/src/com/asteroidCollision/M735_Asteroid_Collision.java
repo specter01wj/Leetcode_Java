@@ -22,7 +22,15 @@ public class M735_Asteroid_Collision {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Stack
+    */
 	
+	/*
+     * @param asteroids: a list of integers
+     * @return: the state of the asteroids after all collisions
+     */
 	public static int[] asteroidCollision(int[] asteroids) {
         Stack<Integer> stack = new Stack<>();
 
