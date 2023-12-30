@@ -21,7 +21,15 @@ public class M2390_Removing_Stars_From_a_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Stack
+    */
 	
+	/**
+     * @param s: a string
+     * @return: the string after all stars have been removed
+     */
 	public static String removeStars(String s) {
         // Use a StringBuilder as a stack to store the characters
         StringBuilder stack = new StringBuilder();
