@@ -123,6 +123,7 @@ Cspiration Category:
 |717|1-bit and 2-bit Characters|Easy||Java/Javascript|Done/Done|
 |724|Find Pivot Index|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |733|Flood Fill|Easy||Java/Javascript|Done/Done|
+|735|Asteroid Collision|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |744|Find Smallest Letter Greater Than Target|Easy||Java/Javascript|Done/Done|
 |746|Min Cost Climbing Stairs|Easy||Java/Javascript|Done/Done|
 |747|Largest Number At Least Twice of Others|Easy||Java/Javascript|Done/Done|
@@ -468,6 +469,7 @@ Cspiration Category:
 |2047|Number of Valid Words in a Sentence|Easy||Java/Javascript||
 |2053|Kth Distinct String in an Array|Easy||Java/Javascript||
 |2062|Count Vowel Substrings of a String|Easy||Java/Javascript||
+|2390|Removing Stars From a String|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 3. Math
