@@ -1,23 +1,18 @@
-function deleteMiddle(head: ListNode | null): ListNode | null {
-  if (head === null || head.next === null) {
-      return null;
+function oddEvenList(head: ListNode | null): ListNode | null {
+  if (head === null) return null;
+
+  let odd: ListNode = head;
+  let even: ListNode = head.next;
+  let evenHead: ListNode = even;
+
+  while (even !== null && even.next !== null) {
+      odd.next = even.next;
+      odd = odd.next;
+      even.next = odd.next;
+      even = even.next;
   }
 
-  let prev: ListNode | null = null;
-  let slow: ListNode | null = head;
-  let fast: ListNode | null = head;
-
-  while (fast !== null && fast.next !== null) {
-      prev = slow;
-      slow = slow.next;
-      fast = fast.next.next;
-  }
-
-  // Delete the middle node
-  if (prev !== null && slow !== null) {
-      prev.next = slow.next;
-  }
-
+  odd.next = evenHead;
   return head;
 };
 
@@ -49,9 +44,9 @@ function listToArray(list) {
   return arr;
 }
 
-let input1 = [1,3,4,7,1,2,6];
+let input1 = [1,2,3,4,5];
 let linkedListInput = arrayToList(input1);
-let modifiedList = deleteMiddle(linkedListInput);
+let modifiedList = oddEvenList(linkedListInput);
 let output1 = listToArray(modifiedList);
 
 let webHeading1 = document.querySelector('#t1');
