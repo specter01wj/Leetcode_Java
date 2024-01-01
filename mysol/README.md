@@ -136,6 +136,12 @@ By Jin Wang
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |394|**Decode String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Queue
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|933|**Number of Recent Calls**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+
 
 ## by Difficulties
 
