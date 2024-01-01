@@ -383,6 +383,7 @@ Cspiration Category:
 |551|Student Attendance Record I|Easy||Java/Javascript|Done/Done|
 |557|Reverse Words in a String III|Easy||Java/Javascript|Done/Done|
 |606|Construct String from Binary Tree|Easy||Java/Javascript|Done/|
+|649|Dota2 Senate|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |657|Robot Return to Origin|Easy||Java/Javascript|Done/Done|
 |680|Valid Palindrome II|Easy||Java/Javascript|Done/Done|
 |696|Count Binary Substrings|Easy||Java/Javascript|Done/Done|

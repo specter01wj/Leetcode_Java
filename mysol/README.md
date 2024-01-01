@@ -591,6 +591,7 @@ By Jin Wang
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |394|**Decode String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Medium|Java/Javascript|Done/Done|
+|649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
