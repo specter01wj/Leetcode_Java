@@ -143,6 +143,11 @@ By Jin Wang
 |933|**Number of Recent Calls**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Linked List
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
 
 ## by Difficulties
 
