@@ -147,6 +147,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|2095|**Delete the Middle Node of a Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|328|**Odd Even Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
