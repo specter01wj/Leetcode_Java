@@ -52,7 +52,7 @@ function listToArray(list) {
 let input1 = [1,3,4,7,1,2,6];
 let linkedListInput = arrayToList(input1);
 let modifiedList = deleteMiddle(linkedListInput);
-let output1 = listToArray(input1);
+let output1 = listToArray(modifiedList);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
