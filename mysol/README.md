@@ -581,6 +581,7 @@ By Jin Wang
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |238|**Product of Array Except Self**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|394|**Decode String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Medium|Java/Javascript|Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|

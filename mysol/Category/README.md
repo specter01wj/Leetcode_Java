@@ -368,6 +368,7 @@ Cspiration Category:
 |115|Distinct Subsequences|Hard||Java/Javascript||
 |187|Repeated DNA Sequences|Medium|很少考|Java/Javascript||
 |Missing||||||
+|394|Decode String|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |408|Valid Word Abbreviation|Easy||Java/Javascript|Done/Done|
 |409|Longest Palindrome|Easy||Java/Javascript|Done/Done|
 |412|Fizz Buzz|Easy||Java/Javascript|Done/Done|
