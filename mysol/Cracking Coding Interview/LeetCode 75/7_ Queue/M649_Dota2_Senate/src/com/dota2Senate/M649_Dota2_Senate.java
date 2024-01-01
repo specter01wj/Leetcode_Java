@@ -37,7 +37,15 @@ public class M649_Dota2_Senate {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Queue
+    */
 	
+	/**
+     * @param senate: a string
+     * @return: "Radiant" or "Dire"
+     */
 	public static String predictPartyVictory(String senate) {
         Queue<Integer> radiant = new LinkedList<>();
         Queue<Integer> dire = new LinkedList<>();
