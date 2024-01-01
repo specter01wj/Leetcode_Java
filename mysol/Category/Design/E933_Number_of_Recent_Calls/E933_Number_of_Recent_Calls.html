@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You have a RecentCounter class which counts the number of recent 
+        requests within a certain time frame.
+
+        Implement the RecentCounter class:
+
+        .RecentCounter() Initializes the counter with zero recent requests.
+        .int ping(int t) Adds a new request at time t, where t represents 
+          some time in milliseconds, and returns the number of requests that 
+          has happened in the past 3000 milliseconds (including the new request). 
+          Specifically, return the number of requests that have happened in the 
+          inclusive range [t - 3000, t].
+
+        It is guaranteed that every call to ping uses a strictly larger value 
+        of t than the previous call.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param t: an integer
+        * @return:  the number of requests
+        */
+				let RecentCounter = function() {
+					this.requests = [];
+				};
+
+        RecentCounter.prototype.ping = function(t) {
+            this.requests.push(t);
+
+            // Remove older requests outside the 3000ms window
+            while (this.requests.length > 0 && this.requests[0] < t - 3000) {
+                this.requests.shift();
+            }
+
+            // Return the number of requests in the window
+            return this.requests.length;
+        };
+
+				let obj = new RecentCounter();
+        let input = 100;
+        let param_1 = obj.ping(input);
+				// let tt1 = decodeString(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (param_1) + '</h2>');
+			});
+
+			/*sol:
+				Queue
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
