@@ -23,11 +23,18 @@ public class E933_Number_of_Recent_Calls {
 	public static void main(String[] args) {
 		RecentCounter obj = new RecentCounter();
 		int[][] t= {{}, {1}, {100}, {3001}, {3002}};
-		int t1 = 100;
 		int param_1 = obj.ping(t1);
 	}
 	
+	/*
+    solution:
+    Queue
+    */
 	
+	/*
+     * @param t: an integer
+     * @return:  the number of requests
+     */
 	class RecentCounter {
 	    private Queue<Integer> requests;
 
