@@ -1,30 +1,33 @@
-function decodeString(s: string): string {
-  let counts: number[] = [];
-  let resultStack: string[][] = [];
-  resultStack.push([]);
-  let k: number = 0;
+function predictPartyVictory(senate: string): string {
+  let radiant: number[] = [];
+  let dire: number[] = [];
 
-  for (let ch of s) {
-      if (ch >= '0' && ch <= '9') {
-          k = k * 10 + parseInt(ch, 10);
-      } else if (ch === '[') {
-          counts.push(k);
-          resultStack.push([]);
-          k = 0;
-      } else if (ch === ']') {
-          let temp: string = resultStack.pop().join('');
-          let count: number = counts.pop();
-          resultStack[resultStack.length - 1].push(temp.repeat(count));
+  // Initialize the queues with the indices of the senators
+  for (let i = 0; i < senate.length; i++) {
+      if (senate[i] === 'R') {
+          radiant.push(i);
       } else {
-          resultStack[resultStack.length - 1].push(ch);
+          dire.push(i);
       }
   }
 
-  return resultStack.pop().join('');
+  while (radiant.length > 0 && dire.length > 0) {
+      let radiantIndex = radiant.shift();
+      let direIndex = dire.shift();
+
+      // The senator with the smaller index gets to act first
+      if (radiantIndex < direIndex) {
+          radiant.push(radiantIndex + senate.length);
+      } else {
+          dire.push(direIndex + senate.length);
+      }
+  }
+
+  return radiant.length === 0 ? "Dire" : "Radiant";
 };
 
-let input1 = "3[a2[c]]";
-let output1 = decodeString(input1);
+let input1 = "RDD";
+let output1 = predictPartyVictory(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
