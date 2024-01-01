@@ -627,6 +627,9 @@ Cspiration Category:
 |2|Add Two Numbers|Medium||Java/Javascript||
 |160|Intersection of Two Linked Lists|Easy||Java/Javascript|Done/|
 |21|Merge Two Sorted Lists|Easy||Java/Javascript|Done/|
+|Missing||||||
+|328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2095|Delete the Middle Node of a Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 8. Binary Search
 
