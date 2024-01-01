@@ -26,7 +26,15 @@ public class M394_Decode_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Stack
+    */
 	
+	/**
+     * @param s: a string
+     * @return: its decoded string
+     */
 	public static String decodeString(String s) {
         Stack<Integer> counts = new Stack<>();
         Stack<StringBuilder> resultStack = new Stack<>();
