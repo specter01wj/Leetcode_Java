@@ -1,30 +1,58 @@
-function decodeString(s: string): string {
-  let counts: number[] = [];
-  let resultStack: string[][] = [];
-  resultStack.push([]);
-  let k: number = 0;
-
-  for (let ch of s) {
-      if (ch >= '0' && ch <= '9') {
-          k = k * 10 + parseInt(ch, 10);
-      } else if (ch === '[') {
-          counts.push(k);
-          resultStack.push([]);
-          k = 0;
-      } else if (ch === ']') {
-          let temp: string = resultStack.pop().join('');
-          let count: number = counts.pop();
-          resultStack[resultStack.length - 1].push(temp.repeat(count));
-      } else {
-          resultStack[resultStack.length - 1].push(ch);
-      }
+function deleteMiddle(head: ListNode | null): ListNode | null {
+  if (head === null || head.next === null) {
+      return null;
   }
 
-  return resultStack.pop().join('');
+  let prev: ListNode | null = null;
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head;
+
+  while (fast !== null && fast.next !== null) {
+      prev = slow;
+      slow = slow.next;
+      fast = fast.next.next;
+  }
+
+  // Delete the middle node
+  if (prev !== null && slow !== null) {
+      prev.next = slow.next;
+  }
+
+  return head;
 };
 
-let input1 = "3[a2[c]]";
-let output1 = decodeString(input1);
+class ListNode {
+  val: number;
+  next: ListNode | null;
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = (val===undefined ? 0 : val);
+    this.next = (next===undefined ? null : next);
+  }
+}
+
+function arrayToList(arr) {
+  let head = new ListNode(0);
+  let current = head;
+  for (let val of arr) {
+      current.next = new ListNode(val);
+      current = current.next;
+  }
+  return head.next; // Return the actual head, not the dummy node
+}
+
+function listToArray(list) {
+  let arr = [];
+  while (list !== null) {
+      arr.push(list.val);
+      list = list.next;
+  }
+  return arr;
+}
+
+let input1 = [1,3,4,7,1,2,6];
+let linkedListInput = arrayToList(input1);
+let modifiedList = deleteMiddle(linkedListInput);
+let output1 = listToArray(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
