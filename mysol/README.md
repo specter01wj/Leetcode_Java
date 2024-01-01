@@ -338,6 +338,7 @@ By Jin Wang
 |922|**Sort Array By Parity II**|Easy|Java/Javascript|Done/Done|
 |925|**Long Pressed Name**|Easy|Java/Javascript|Done/Done|
 |929|**Unique Email Addresses**|Easy|Java/Javascript|Done/Done|
+|933|**Number of Recent Calls**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |937|**Reorder Data in Log Files**|Easy|Java/Javascript|Done/Done|
 |941|**Valid Mountain Array**|Easy|Java/Javascript|Done/Done|
 |942|**DI String Match**|Easy|Java/Javascript|Done/Done|

@@ -798,7 +798,8 @@ Cspiration Category:
 |304|Range Sum Query 2D - Immutable|Medium||Java/Javascript||
 |307|Range Sum Query - Mutable|Medium|Binary Index Tree|Java/Javascript||
 |308|Range Sum Query 2D - Mutable|Hard|Binary Index Tree|Java/Javascript||
-
+|Missing||||||
+|933|Number of Recent Calls|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 
