@@ -595,6 +595,7 @@ By Jin Wang
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |238|**Product of Array Except Self**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|328|**Odd Even Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |394|**Decode String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Medium|Java/Javascript|Done/Done|
@@ -605,6 +606,7 @@ By Jin Wang
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2095|**Delete the Middle Node of a Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
