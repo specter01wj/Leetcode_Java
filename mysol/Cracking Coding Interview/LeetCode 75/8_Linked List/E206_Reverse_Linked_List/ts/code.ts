@@ -1,24 +1,16 @@
-function deleteMiddle(head: ListNode | null): ListNode | null {
-  if (head === null || head.next === null) {
-      return null;
-  }
-
+function reverseList(head: ListNode | null): ListNode | null {
   let prev: ListNode | null = null;
-  let slow: ListNode | null = head;
-  let fast: ListNode | null = head;
+  let current: ListNode | null = head;
+  let next: ListNode | null = null;
 
-  while (fast !== null && fast.next !== null) {
-      prev = slow;
-      slow = slow.next;
-      fast = fast.next.next;
+  while (current !== null) {
+      next = current.next;   // Save next node
+      current.next = prev;   // Reverse the pointer
+      prev = current;        // Move prev to current node
+      current = next;        // Proceed to next node
   }
 
-  // Delete the middle node
-  if (prev !== null && slow !== null) {
-      prev.next = slow.next;
-  }
-
-  return head;
+  return prev;  // prev is the new head of the reversed list
 };
 
 class ListNode {
@@ -49,9 +41,9 @@ function listToArray(list) {
   return arr;
 }
 
-let input1 = [1,3,4,7,1,2,6];
+let input1 = [1,2,3,4,5];
 let linkedListInput = arrayToList(input1);
-let modifiedList = deleteMiddle(linkedListInput);
+let modifiedList = reverseList(linkedListInput);
 let output1 = listToArray(modifiedList);
 
 let webHeading1 = document.querySelector('#t1');
