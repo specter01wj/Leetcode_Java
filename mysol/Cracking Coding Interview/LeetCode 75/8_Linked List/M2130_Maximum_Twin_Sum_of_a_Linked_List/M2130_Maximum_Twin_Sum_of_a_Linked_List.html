@@ -4,28 +4,60 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given the head of a singly linked list, reverse the list, and 
-        return the reversed list.
+			 	In a linked list of size n, where n is even, the ith node (0-indexed) 
+        of the linked list is known as the twin of the (n-1-i)th node, 
+        if 0 <= i <= (n / 2) - 1.
+
+        .For example, if n = 4, then node 0 is the twin of node 3, and node 1 
+          is the twin of node 2. These are the only nodes with twins for n = 4.
+
+        The twin sum is defined as the sum of a node and its twin.
+
+        Given the head of a linked list with even length, return the maximum 
+        twin sum of the linked list.
 			 */
 			$(document).ready(function(){
 
 				/*
         * @param head: The first node of linked list.
-        * @return: the reversed list
+        * @return: the maximum twin sum of the linked list
         */
-				let reverseList = function(head) {
-					let prev = null;
-          let current = head;
-          let next = null;
+				let pairSum = function(head) {
+					// Function to reverse a linked list
+          function reverseList(node) {
+              let prev = null;
+              let current = node;
+              let next = null;
 
-          while (current != null) {
-              next = current.next;    // Save next node
-              current.next = prev;    // Reverse the pointer
-              prev = current;         // Move prev to current node
-              current = next;         // Move to next node
+              while (current !== null) {
+                  next = current.next;
+                  current.next = prev;
+                  prev = current;
+                  current = next;
+              }
+              return prev;
           }
 
-          return prev; // prev is the new head of the reversed list
+          // Find the middle of the list
+          let slow = head, fast = head;
+          while (fast !== null && fast.next !== null) {
+              slow = slow.next;
+              fast = fast.next.next;
+          }
+
+          // Reverse the second half
+          let secondHalf = reverseList(slow);
+          let firstHalf = head;
+
+          // Calculate the twin sums and find the maximum
+          let maxSum = 0;
+          while (secondHalf !== null) {
+              maxSum = Math.max(maxSum, firstHalf.val + secondHalf.val);
+              firstHalf = firstHalf.next;
+              secondHalf = secondHalf.next;
+          }
+
+          return maxSum;
 				};
 
         function ListNode(val, next) {
@@ -52,10 +84,9 @@
             return arr;
         }
 
-				let input = [1,2,3,4,5];
+				let input = [5,4,2,1];
         let linkedListInput = arrayToList(input);
-				let modifiedList = reverseList(linkedListInput);
-				let tt1 = listToArray(modifiedList);
+				let tt1 = pairSum(linkedListInput);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
