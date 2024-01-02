@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given the head of a singly linked list, reverse the list, and 
+        return the reversed list.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param head: The first node of linked list.
+        * @return: the reversed list
+        */
+				let reverseList = function(head) {
+					let prev = null;
+          let current = head;
+          let next = null;
+
+          while (current != null) {
+              next = current.next;    // Save next node
+              current.next = prev;    // Reverse the pointer
+              prev = current;         // Move prev to current node
+              current = next;         // Move to next node
+          }
+
+          return prev; // prev is the new head of the reversed list
+				};
+
+        function ListNode(val, next) {
+            this.val = (val === undefined ? 0 : val);
+            this.next = (next === undefined ? null : next);
+        }
+
+        function arrayToList(arr) {
+            let head = new ListNode(0);
+            let current = head;
+            for (let val of arr) {
+                current.next = new ListNode(val);
+                current = current.next;
+            }
+            return head.next; // Return the actual head, not the dummy node
+        }
+
+        function listToArray(list) {
+            let arr = [];
+            while (list !== null) {
+                arr.push(list.val);
+                list = list.next;
+            }
+            return arr;
+        }
+
+				let input = [1,2,3,4,5];
+        let linkedListInput = arrayToList(input);
+				let modifiedList = reverseList(linkedListInput);
+				let tt1 = listToArray(modifiedList);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				Linked List
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
