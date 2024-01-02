@@ -613,7 +613,7 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|206|Reverse Linked List|Easy||Java/Javascript||
+|206|Reverse Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |141|Linked List Cycle|Easy||Java/Javascript|Done/|
 |24|Swap Nodes in Pairs|Medium||Java/Javascript||
 |328|Odd Even Linked List|Medium||Java/Javascript||
@@ -630,6 +630,7 @@ Cspiration Category:
 |Missing||||||
 |328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2095|Delete the Middle Node of a Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2130|Maximum Twin Sum of a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 8. Binary Search
 
