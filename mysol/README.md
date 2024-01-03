@@ -157,6 +157,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|872|**Leaf-Similar Trees**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
