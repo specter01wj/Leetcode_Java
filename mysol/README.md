@@ -156,7 +156,7 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript/Typescript|Done/|
 
 
 ## by Difficulties
@@ -227,7 +227,7 @@ By Jin Wang
 |203|**Remove Linked List Elements**|Easy|Java/Javascript||
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
-|206|**Reverse Linked List**|Easy|Java/Javascript||
+|206|**Reverse Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |225|**Implement Stack using Queues**|Easy|Java/Javascript||
@@ -615,6 +615,7 @@ By Jin Wang
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2095|**Delete the Middle Node of a Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
