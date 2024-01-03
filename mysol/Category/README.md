@@ -688,6 +688,8 @@ Cspiration Category:
 |51|N-Queens|Hard||Java/Javascript||
 |52|N-Queens II|Hard||Java/Javascript||
 |126|Word Ladder II|Hard||Java/Javascript||
+|Missing||||||
+|872|Leaf-Similar Trees|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 11. Stack & PriorityQueue
 
