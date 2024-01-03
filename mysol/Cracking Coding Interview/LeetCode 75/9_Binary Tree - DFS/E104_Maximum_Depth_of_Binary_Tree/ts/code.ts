@@ -46,8 +46,8 @@ function arrayToTree(arr) {
 }
 
 let input1 = [3,9,20,null,null,15,7];
-let linkedListInput = arrayToTree(input1);
-let output1 = maxDepth(linkedListInput);
+let root1 = arrayToTree(input1);
+let output1 = maxDepth(root1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);

@@ -1,10 +1,30 @@
-function maxDepth(root) {
-    if (root === null) {
-        return 0;
+function leafSimilar(root1, root2) {
+    var leaves1 = [];
+    var leaves2 = [];
+    // Helper function to perform DFS and collect leaf values
+    function dfs(node, leaves) {
+        if (node === null) {
+            return;
+        }
+        if (node.left === null && node.right === null) {
+            leaves.push(node.val);
+        }
+        dfs(node.left, leaves);
+        dfs(node.right, leaves);
     }
-    var leftDepth = maxDepth(root.left);
-    var rightDepth = maxDepth(root.right);
-    return Math.max(leftDepth, rightDepth) + 1;
+    // Collect leaf values for both trees
+    dfs(root1, leaves1);
+    dfs(root2, leaves2);
+    // Compare the leaf value sequences
+    if (leaves1.length !== leaves2.length) {
+        return false;
+    }
+    for (var i = 0; i < leaves1.length; i++) {
+        if (leaves1[i] !== leaves2[i]) {
+            return false;
+        }
+    }
+    return true;
 }
 ;
 var TreeNode = /** @class */ (function () {
@@ -38,8 +58,10 @@ function arrayToTree(arr) {
     }
     return root;
 }
-var input1 = [3, 9, 20, null, null, 15, 7];
+var input1 = [3, 5, 1, 6, 2, 9, 8, null, null, 7, 4];
+var input2 = [3, 5, 1, 6, 2, 9, 8, null, null, 7, 4];
 var root1 = arrayToTree(input1);
-var output1 = maxDepth(root1);
+var root2 = arrayToTree(input2);
+var output1 = leafSimilar(root1, root2);
 var webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
