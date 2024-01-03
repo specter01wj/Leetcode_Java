@@ -1,12 +1,33 @@
-function maxDepth(root: TreeNode | null): number {
-  if (root === null) {
-      return 0;
+function leafSimilar(root1: TreeNode | null, root2: TreeNode | null): boolean {
+  const leaves1: number[] = [];
+  const leaves2: number[] = [];
+
+  // Helper function to perform DFS and collect leaf values
+  function dfs(node: TreeNode | null, leaves: number[]) {
+      if (node === null) {
+          return;
+      }
+      if (node.left === null && node.right === null) {
+          leaves.push(node.val);
+      }
+      dfs(node.left, leaves);
+      dfs(node.right, leaves);
   }
 
-  let leftDepth = maxDepth(root.left);
-  let rightDepth = maxDepth(root.right);
+  // Collect leaf values for both trees
+  dfs(root1, leaves1);
+  dfs(root2, leaves2);
 
-  return Math.max(leftDepth, rightDepth) + 1;
+  // Compare the leaf value sequences
+  if (leaves1.length !== leaves2.length) {
+      return false;
+  }
+  for (let i = 0; i < leaves1.length; i++) {
+      if (leaves1[i] !== leaves2[i]) {
+          return false;
+      }
+  }
+  return true;
 };
 
 class TreeNode {
@@ -45,9 +66,11 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [3,9,20,null,null,15,7];
-let linkedListInput = arrayToTree(input1);
-let output1 = maxDepth(linkedListInput);
+let input1 = [3,5,1,6,2,9,8,null,null,7,4];
+let input2 = [3,5,1,6,2,9,8,null,null,7,4];
+let root1 = arrayToTree(input1);
+let root2 = arrayToTree(input2);
+let output1 = leafSimilar(root1, root2);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
