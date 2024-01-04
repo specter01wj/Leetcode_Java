@@ -1,27 +1,28 @@
-function goodNodes(root: TreeNode | null): number {
-  function countGoodNodes(node: TreeNode | null, maxSoFar: number): number {
+function pathSum(root: TreeNode | null, targetSum: number): number {
+  const prefixSumCount: Map<number, number> = new Map();
+  prefixSumCount.set(0, 1); // Initialize with 0 sum having one count
+
+  function findPathSum(node: TreeNode | null, currentSum: number): number {
       if (node === null) {
           return 0;
       }
 
-      let count = 0;
+      currentSum += node.val;
+      let numPathsToCurr = prefixSumCount.get(currentSum - targetSum) || 0;
 
-      // Increment count if the current node's value is greater than or equal to the maximum value seen so far
-      if (node.val >= maxSoFar) {
-          count = 1;
-      }
+      // Update the prefixSumCount
+      prefixSumCount.set(currentSum, (prefixSumCount.get(currentSum) || 0) + 1);
 
-      // Update the maximum value seen so far
-      maxSoFar = Math.max(maxSoFar, node.val);
+      // Count paths with sum = target in the left and right subtrees
+      let result = numPathsToCurr + findPathSum(node.left, currentSum) + findPathSum(node.right, currentSum);
 
-      // Recursively count good nodes in the left and right subtrees
-      count += countGoodNodes(node.left, maxSoFar);
-      count += countGoodNodes(node.right, maxSoFar);
+      // Restore the prefixSumCount (Backtrack)
+      prefixSumCount.set(currentSum, prefixSumCount.get(currentSum) - 1);
 
-      return count;
+      return result;
   }
 
-  return countGoodNodes(root, -Infinity);
+  return findPathSum(root, 0);
 };
 
 class TreeNode {
@@ -60,9 +61,10 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [3,1,4,3,null,1,5];
+let input1 = [10,5,-3,3,2,null,11,3,-2,null,1];
+let targetSum = 8;
 let root1 = arrayToTree(input1);
-let output1 = goodNodes(root1);
+let output1 = pathSum(root1, targetSum);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
