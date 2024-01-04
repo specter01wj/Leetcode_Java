@@ -30,7 +30,16 @@ public class M437_Path_Sum_III {
         System.out.println("input1: " + treeToArray(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    DFS
+    */
 	
+	/**
+     * @param root: The root of binary tree
+     * @param targetSum: an integer
+     * @return: the number of paths where the sum of the values along the path equals targetSum
+     */
 	public static int pathSum(TreeNode root, int targetSum) {
         Map<Long, Integer> prefixSumCount = new HashMap<>();
         prefixSumCount.put(0L, 1); 
