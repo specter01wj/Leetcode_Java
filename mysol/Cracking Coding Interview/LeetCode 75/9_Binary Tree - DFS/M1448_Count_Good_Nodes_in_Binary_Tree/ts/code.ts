@@ -1,33 +1,27 @@
-function leafSimilar(root1: TreeNode | null, root2: TreeNode | null): boolean {
-  const leaves1: number[] = [];
-  const leaves2: number[] = [];
-
-  // Helper function to perform DFS and collect leaf values
-  function dfs(node: TreeNode | null, leaves: number[]) {
+function goodNodes(root: TreeNode | null): number {
+  function countGoodNodes(node: TreeNode | null, maxSoFar: number): number {
       if (node === null) {
-          return;
+          return 0;
       }
-      if (node.left === null && node.right === null) {
-          leaves.push(node.val);
+
+      let count = 0;
+
+      // Increment count if the current node's value is greater than or equal to the maximum value seen so far
+      if (node.val >= maxSoFar) {
+          count = 1;
       }
-      dfs(node.left, leaves);
-      dfs(node.right, leaves);
+
+      // Update the maximum value seen so far
+      maxSoFar = Math.max(maxSoFar, node.val);
+
+      // Recursively count good nodes in the left and right subtrees
+      count += countGoodNodes(node.left, maxSoFar);
+      count += countGoodNodes(node.right, maxSoFar);
+
+      return count;
   }
 
-  // Collect leaf values for both trees
-  dfs(root1, leaves1);
-  dfs(root2, leaves2);
-
-  // Compare the leaf value sequences
-  if (leaves1.length !== leaves2.length) {
-      return false;
-  }
-  for (let i = 0; i < leaves1.length; i++) {
-      if (leaves1[i] !== leaves2[i]) {
-          return false;
-      }
-  }
-  return true;
+  return countGoodNodes(root, -Infinity);
 };
 
 class TreeNode {
@@ -66,11 +60,9 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [3,5,1,6,2,9,8,null,null,7,4];
-let input2 = [3,5,1,6,2,9,8,null,null,7,4];
+let input1 = [3,1,4,3,null,1,5];
 let root1 = arrayToTree(input1);
-let root2 = arrayToTree(input2);
-let output1 = leafSimilar(root1, root2);
+let output1 = goodNodes(root1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
