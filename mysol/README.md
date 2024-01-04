@@ -611,9 +611,11 @@ By Jin Wang
 |334|**Increasing Triplet Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |394|**Decode String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Medium|Java/Javascript|Done/Done|
+|437|**Path Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1448|**Count Good Nodes in Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
