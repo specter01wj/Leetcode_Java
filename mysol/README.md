@@ -160,6 +160,8 @@ By Jin Wang
 |872|**Leaf-Similar Trees**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1448|**Count Good Nodes in Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |437|**Path Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|236|**Lowest Common Ancestor of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
@@ -615,6 +617,7 @@ By Jin Wang
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1448|**Count Good Nodes in Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
