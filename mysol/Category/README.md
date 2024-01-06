@@ -691,6 +691,7 @@ Cspiration Category:
 |Missing||||||
 |437|Path Sum III|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |872|Leaf-Similar Trees|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|1372|Longest ZigZag Path in a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1448|Count Good Nodes in Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 11. Stack & PriorityQueue
