@@ -1,28 +1,16 @@
-function goodNodes(root: TreeNode | null): number {
-  function countGoodNodes(node: TreeNode | null, maxSoFar: number): number {
-      if (node === null) {
-          return 0;
-      }
+function longestZigZag(root: TreeNode | null): number {
+  return dfs(root, -1, 0) - 1; // -1 for initial direction, 0 for initial length
+}
 
-      let count = 0;
+function dfs(node: TreeNode | null, direction: number, length: number): number {
+  if (node === null) return length;
 
-      // Increment count if the current node's value is greater than or equal to the maximum value seen so far
-      if (node.val >= maxSoFar) {
-          count = 1;
-      }
+  // Left direction = 0, Right direction = 1
+  let leftLength: number = (direction === 1) ? dfs(node.left, 0, length + 1) : dfs(node.left, 0, 1);
+  let rightLength: number = (direction === 0) ? dfs(node.right, 1, length + 1) : dfs(node.right, 1, 1);
 
-      // Update the maximum value seen so far
-      maxSoFar = Math.max(maxSoFar, node.val);
-
-      // Recursively count good nodes in the left and right subtrees
-      count += countGoodNodes(node.left, maxSoFar);
-      count += countGoodNodes(node.right, maxSoFar);
-
-      return count;
-  }
-
-  return countGoodNodes(root, -Infinity);
-};
+  return Math.max(length, Math.max(leftLength, rightLength));
+}
 
 class TreeNode {
   val: number
@@ -60,9 +48,9 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [3,1,4,3,null,1,5];
+let input1 = [1,null,1,1,1,null,null,1,1,null,1,null,null,null,1];
 let root1 = arrayToTree(input1);
-let output1 = goodNodes(root1);
+let output1 = longestZigZag(root1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
