@@ -26,7 +26,7 @@ public class M1372_Longest_ZigZag_Path_in_a_Binary_Tree {
 		input1.right.left = new TreeNode(1);
 		input1.right.right = new TreeNode(1);
 		input1.right.right.left = new TreeNode(1);
-		input1.left.right.right = new TreeNode(1);
+		input1.right.right.right = new TreeNode(1);
 		input1.right.right.left.right = new TreeNode(1);
 		input1.right.right.left.right.right = new TreeNode(1);
 		
@@ -34,7 +34,15 @@ public class M1372_Longest_ZigZag_Path_in_a_Binary_Tree {
         System.out.println("input1: " + treeToArray(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    DFS
+    */
 	
+	/**
+     * @param root: The root of binary tree
+     * @return: an integer
+     */
 	public static int longestZigZag(TreeNode root) {
         return dfs(root, -1, 0) - 1; // -1 for initial direction, 0 for initial length
     }
