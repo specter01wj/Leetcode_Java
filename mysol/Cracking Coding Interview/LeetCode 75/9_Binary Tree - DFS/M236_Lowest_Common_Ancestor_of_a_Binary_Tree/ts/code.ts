@@ -1,16 +1,17 @@
-function longestZigZag(root: TreeNode | null): number {
-  return dfs(root, -1, 0) - 1; // -1 for initial direction, 0 for initial length
-}
+function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
+	if (root === null || root === p || root === q) {
+        return root;
+    }
 
-function dfs(node: TreeNode | null, direction: number, length: number): number {
-  if (node === null) return length;
+    let left: TreeNode | null = lowestCommonAncestor(root.left, p, q);
+    let right: TreeNode | null = lowestCommonAncestor(root.right, p, q);
 
-  // Left direction = 0, Right direction = 1
-  let leftLength: number = (direction === 1) ? dfs(node.left, 0, length + 1) : dfs(node.left, 0, 1);
-  let rightLength: number = (direction === 0) ? dfs(node.right, 1, length + 1) : dfs(node.right, 1, 1);
+    if (left !== null && right !== null) {
+        return root;
+    }
 
-  return Math.max(length, Math.max(leftLength, rightLength));
-}
+    return left !== null ? left : right;
+};
 
 class TreeNode {
   val: number
@@ -48,9 +49,12 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [1,null,1,1,1,null,null,1,1,null,1,null,null,null,1];
+let input1 = [3,5,1,6,2,0,8,null,null,7,4];
+let p = [5], q = [1];
+let p1 = arrayToTree(p);
+let q1 = arrayToTree(q);
 let root1 = arrayToTree(input1);
-let output1 = longestZigZag(root1);
+let output1 = lowestCommonAncestor(root1, p1, q1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
