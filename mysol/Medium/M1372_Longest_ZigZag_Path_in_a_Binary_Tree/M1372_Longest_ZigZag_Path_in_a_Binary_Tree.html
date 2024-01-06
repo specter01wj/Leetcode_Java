@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given the root of a binary tree.
+
+        A ZigZag path for a binary tree is defined as follow:
+
+        .Choose any node in the binary tree and a direction (right or left).
+        .If the current direction is right, move to the right child of 
+          the current node; otherwise, move to the left child.
+        .Change the direction from right to left or from left to right.
+        .Repeat the second and third steps until you can't move in the tree.
+
+        Zigzag length is defined as the number of nodes visited - 1. 
+        (A single node has a length of 0).
+
+        Return the longest ZigZag path contained in that tree.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param root: The root of binary tree
+         * @return: an integer
+         */
+				let longestZigZag = function(root) {
+					return dfs(root, -1, 0) - 1; // -1 for initial direction, 0 for initial length
+				};
+
+        function dfs(node, direction, length) {
+          if (node === null) return length;
+
+          // Left direction = 0, Right direction = 1
+          let leftLength = (direction === 1) ? dfs(node.left, 0, length + 1) : dfs(node.left, 0, 1);
+          let rightLength = (direction === 0) ? dfs(node.right, 1, length + 1) : dfs(node.right, 1, 1);
+
+          return Math.max(length, Math.max(leftLength, rightLength));
+        }
+
+        function TreeNode(val, left, right) {
+          this.val = (val===undefined ? 0 : val)
+          this.left = (left===undefined ? null : left)
+          this.right = (right===undefined ? null : right)
+        }
+
+        function arrayToTree(arr) {
+          if (arr.length === 0) return null;
+
+          let root = new TreeNode(arr[0]);
+          let queue = [root];
+
+          for (let i = 1; i < arr.length; i++) {
+              let parent = queue[0];
+              if (i % 2 === 1) {
+                  if (arr[i] != null) {
+                      parent.left = new TreeNode(arr[i]);
+                      queue.push(parent.left);
+                  }
+              } else {
+                  if (arr[i] != null) {
+                      parent.right = new TreeNode(arr[i]);
+                      queue.push(parent.right);
+                  }
+                  queue.shift(); // Remove the processed node
+              }
+          }
+
+          return root;
+        }
+
+				let input1 = [1,null,1,1,1,null,null,1,1,null,1,null,null,null,1];
+        let root1 = arrayToTree(input1);
+				let tt1 = longestZigZag(root1);
+				$('#t1').html('<h2>Input1: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				DFS
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
