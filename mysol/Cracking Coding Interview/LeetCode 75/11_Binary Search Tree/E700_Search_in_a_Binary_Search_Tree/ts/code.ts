@@ -78,8 +78,8 @@ function treeToArray(root) {
 
 let input1 = [4,2,7,1,3];
 let val = 2;
-let root1 = arrayToTree(input1, val);
-let root2 = searchBST(root1);
+let root1 = arrayToTree(input1);
+let root2 = searchBST(root1, val);
 let output1 = treeToArray(root2);
 
 let webHeading1 = document.querySelector('#t1');
