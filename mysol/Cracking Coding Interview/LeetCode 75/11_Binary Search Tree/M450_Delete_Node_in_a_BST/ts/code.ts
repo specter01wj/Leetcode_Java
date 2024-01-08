@@ -103,7 +103,7 @@ function treeToArray(root) {
 }
 
 let input1 = [5,3,6,2,4,null,7];
-let key = 2;
+let key = 3;
 let root1 = arrayToTree(input1);
 let root2 = deleteNode(root1, key);
 let output1 = treeToArray(root2);
