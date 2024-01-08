@@ -4,41 +4,41 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a binary tree root, a node X in the tree is named good if in 
-        the path from root to X there are no nodes with a value greater than X.
-
-        Return the number of good nodes in the binary tree.
+			 	Given the root of a binary tree, imagine yourself standing 
+        on the right side of it, return the values of the nodes you 
+        can see ordered from top to bottom.
 			 */
 			$(document).ready(function(){
 
 				/**
-         * @param root: The root of binary tree.
-         * @return: the number of good nodes in the binary tree
+         * @param root: The root of binary tree
+         * @return: the values of the nodes you can see ordered from top to bottom
          */
-				let goodNodes = function(root) {
-					function countGoodNodes(node, maxSoFar) {
-              if (node === null) {
-                  return 0;
+				let rightSideView = function(root) {
+					if (!root) return [];
+
+          const queue = [root];
+          const visibleValues = [];
+
+          while (queue.length > 0) {
+              let levelSize = queue.length;
+              for (let i = 0; i < levelSize; i++) {
+                  let currentNode = queue.shift();
+                  // If it's the last node in the current level, add it to the result array.
+                  if (i === levelSize - 1) {
+                      visibleValues.push(currentNode.val);
+                  }
+                  // Add child nodes to the queue for the next level.
+                  if (currentNode.left) {
+                      queue.push(currentNode.left);
+                  }
+                  if (currentNode.right) {
+                      queue.push(currentNode.right);
+                  }
               }
-
-              let count = 0;
-
-              // Increment count if the current node's value is greater than or equal to the maximum value seen so far
-              if (node.val >= maxSoFar) {
-                  count = 1;
-              }
-
-              // Update the maximum value seen so far
-              maxSoFar = Math.max(maxSoFar, node.val);
-
-              // Recursively count good nodes in the left and right subtrees
-              count += countGoodNodes(node.left, maxSoFar);
-              count += countGoodNodes(node.right, maxSoFar);
-
-              return count;
           }
 
-          return countGoodNodes(root, -Infinity);
+          return visibleValues;
 				};
 
         function TreeNode(val, left, right) {
@@ -72,14 +72,14 @@
           return root;
         }
 
-				let input1 = [3,1,4,3,null,1,5];
+				let input1 = [1,2,3,null,5,null,4];
         let root1 = arrayToTree(input1);
-				let tt1 = goodNodes(root1);
+				let tt1 = rightSideView(root1);
 				$('#t1').html('<h2>Input1: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
-				DFS
+				BFS
 			 */
 
 		</script>
