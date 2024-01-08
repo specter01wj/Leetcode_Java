@@ -170,6 +170,12 @@ By Jin Wang
 |199|**Binary Tree Right Side View**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|**Maximum Level Sum of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Binary Search Tree
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
+
 
 ## by Difficulties
 
