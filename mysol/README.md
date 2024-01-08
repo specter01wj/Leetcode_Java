@@ -177,6 +177,11 @@ By Jin Wang
 |700|**Search in a Binary Search Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |450|**Delete Node in a BST**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Graphs - DFS
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
 
 ## by Difficulties
 
