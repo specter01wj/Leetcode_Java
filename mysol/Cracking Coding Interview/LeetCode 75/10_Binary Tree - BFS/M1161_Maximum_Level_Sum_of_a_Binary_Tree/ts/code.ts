@@ -1,30 +1,32 @@
-function rightSideView(root: TreeNode | null): number[] {
-  if (!root) return [];
+function maxLevelSum(root: TreeNode | null): number {
+  if (!root) return 0;
 
-  const queue: (TreeNode | null)[] = [root];
-  const visibleValues: number[] = [];
+  const queue: TreeNode[] = [root];
+  let maxSum: number = -Infinity;
+  let maxLevel: number = 1;
+  let currentLevel: number = 1;
 
   while (queue.length > 0) {
-      let levelSize = queue.length;
+      const levelSize: number = queue.length;
+      let levelSum: number = 0;
+
       for (let i = 0; i < levelSize; i++) {
-          let currentNode = queue.shift();
-          if (currentNode) {
-              // If it's the last node in the current level, add it to the result array.
-              if (i === levelSize - 1) {
-                  visibleValues.push(currentNode.val);
-              }
-              // Add child nodes to the queue for the next level.
-              if (currentNode.left) {
-                  queue.push(currentNode.left);
-              }
-              if (currentNode.right) {
-                  queue.push(currentNode.right);
-              }
-          }
+          const currentNode: TreeNode = queue.shift()!;
+          levelSum += currentNode.val;
+
+          if (currentNode.left) queue.push(currentNode.left);
+          if (currentNode.right) queue.push(currentNode.right);
       }
+
+      if (levelSum > maxSum) {
+          maxSum = levelSum;
+          maxLevel = currentLevel;
+      }
+
+      currentLevel++;
   }
 
-  return visibleValues;
+  return maxLevel;
 };
 
 class TreeNode {
@@ -63,9 +65,9 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [1,2,3,null,5,null,4];
+let input1 = [1,7,0,7,-8,null,null];
 let root1 = arrayToTree(input1);
-let output1 = rightSideView(root1);
+let output1 = maxLevelSum(root1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
