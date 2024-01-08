@@ -163,6 +163,12 @@ By Jin Wang
 |1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |236|**Lowest Common Ancestor of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Binary Tree - BFS
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
+
 
 ## by Difficulties
 
