@@ -551,7 +551,7 @@ Cspiration Category:
 |BFS||||||
 |107|Binary Tree Level Order Traversal II|Easy||Java/Javascript|Done/|
 |103|Binary Tree Zigzag Level Order Traversal|Medium||Java/Javascript||
-|199|Binary Tree Right Side View|Medium|BFS + preorder|Java/Javascript||
+|199|Binary Tree Right Side View|Medium|BFS + preorder|Java/Javascript/Typescript|Done/Done/Done|
 |BST||||||
 |98|Validate Binary Search Tree|Medium||Java/Javascript||
 |235|Lowest Common Ancestor of a Binary Search Tree|Easy||Java/Javascript||

@@ -613,6 +613,7 @@ By Jin Wang
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|199|**Binary Tree Right Side View**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |236|**Lowest Common Ancestor of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
