@@ -565,9 +565,6 @@ Cspiration Category:
 |270|Closest Binary Search Tree Value|Easy||Java/Javascript||
 |272|Closest Binary Search Tree Value II|Hard||Java/Javascript||
 |99|Recover Binary Search Tree|Hard||Java/Javascript||
-|Missing||||||
-|1161|Maximum Level Sum of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
-
 
 ### 5. Backtracking
 
@@ -694,6 +691,7 @@ Cspiration Category:
 |236|Lowest Common Ancestor of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |437|Path Sum III|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |872|Leaf-Similar Trees|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|1161|Maximum Level Sum of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1372|Longest ZigZag Path in a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1448|Count Good Nodes in Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
