@@ -15,20 +15,17 @@ Basically, the deletion can be divided into two stages:
 public class M450_Delete_Node_in_a_BST {
 
 	public static void main(String[] args) {
-		TreeNode input1 = new TreeNode(3);
-		input1.left = new TreeNode(5);
-		input1.right = new TreeNode(1);
-		input1.left.left = new TreeNode(6);
-		input1.left.right = new TreeNode(2);
-		input1.left.right.left = new TreeNode(7);
-		input1.left.right.right = new TreeNode(4);
-		input1.right.left = new TreeNode(9);
-		input1.right.right = new TreeNode(8);
+		TreeNode input1 = new TreeNode(5);
+		input1.left = new TreeNode(3);
+		input1.right = new TreeNode(6);
+		input1.left.left = new TreeNode(2);
+		input1.left.right = new TreeNode(4);
+		input1.right.right = new TreeNode(7);
 		
 		int key = 3;
-		
+		System.out.println("input1: " + treeToArray(input1));
 		TreeNode output = deleteNode(input1, key);
-        System.out.println("input1: " + treeToArray(input1) + "\noutput: " + treeToArray(output));
+        System.out.println("output: " + treeToArray(output));
 	}
 	
 	/*
@@ -37,9 +34,9 @@ public class M450_Delete_Node_in_a_BST {
     */
 	
 	/**
-     * @param root1: The root of binary tree 1.
-     * @param root2: The root of binary tree 2.
-     * @return: a boolean
+     * @param root: The root of binary tree
+     * @param key: an integer
+     * @return: the root node reference (possibly updated) of the BST
      */
 	public static TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
