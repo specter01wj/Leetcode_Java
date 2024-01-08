@@ -1,13 +1,39 @@
-function searchBST(root: TreeNode | null, val: number): TreeNode | null {
-  // Base case: if the root is null or the root's value is the target value
-  if (root === null || root.val === val) {
-      return root;
+function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
+  if (root === null) {
+      return null;
   }
 
-  // If the target value is less than the root's value,
-  // search in the left subtree. Otherwise, search in the right subtree.
-  return val < root.val ? searchBST(root.left, val) : searchBST(root.right, val);
+  // Search for the node
+  if (key < root.val) {
+      root.left = deleteNode(root.left, key);
+  } else if (key > root.val) {
+      root.right = deleteNode(root.right, key);
+  } else {
+      // Node with only one child or no child
+      if (root.left === null) {
+          return root.right;
+      } else if (root.right === null) {
+          return root.left;
+      }
+
+      // Node with two children: Get the inorder successor (smallest in the right subtree)
+      root.val = minValue(root.right);
+
+      // Delete the inorder successor
+      root.right = deleteNode(root.right, root.val);
+  }
+
+  return root;
 };
+
+function minValue(node: TreeNode | null): number {
+  let current: TreeNode | null = node;
+  while (current && current.left !== null) {
+      current = current.left;
+  }
+  if (current === null) throw new Error("The node cannot be null");
+  return current.val;
+}
 
 class TreeNode {
   val: number
@@ -76,10 +102,10 @@ function treeToArray(root) {
   return array;
 }
 
-let input1 = [4,2,7,1,3];
-let val = 2;
+let input1 = [5,3,6,2,4,null,7];
+let key = 2;
 let root1 = arrayToTree(input1);
-let root2 = searchBST(root1, val);
+let root2 = deleteNode(root1, key);
 let output1 = treeToArray(root2);
 
 let webHeading1 = document.querySelector('#t1');
