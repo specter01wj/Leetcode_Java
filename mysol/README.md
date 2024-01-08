@@ -174,7 +174,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|700|**Search in a Binary Search Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|450|**Delete Node in a BST**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
