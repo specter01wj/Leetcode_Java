@@ -565,6 +565,8 @@ Cspiration Category:
 |270|Closest Binary Search Tree Value|Easy||Java/Javascript||
 |272|Closest Binary Search Tree Value II|Hard||Java/Javascript||
 |99|Recover Binary Search Tree|Hard||Java/Javascript||
+|Missing||||||
+|1161|Maximum Level Sum of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 5. Backtracking
