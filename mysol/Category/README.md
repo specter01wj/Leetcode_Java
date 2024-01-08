@@ -565,6 +565,9 @@ Cspiration Category:
 |270|Closest Binary Search Tree Value|Easy||Java/Javascript||
 |272|Closest Binary Search Tree Value II|Hard||Java/Javascript||
 |99|Recover Binary Search Tree|Hard||Java/Javascript||
+|Missing||||||
+|450|Delete Node in a BST|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|700|Search in a Binary Search Tree|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 5. Backtracking
 
