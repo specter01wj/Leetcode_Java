@@ -339,6 +339,7 @@ By Jin Wang
 |682|**Baseball Game**|Easy|Java/Javascript|Done/Done|
 |696|**Count Binary Substrings**|Easy|Java/Javascript|Done/Done|
 |697|**Degree of an Array**|Easy|Java/Javascript|Done/Done|
+|700|**Search in a Binary Search Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |704|**Binary Search**|Easy|Java/Javascript|Done/Done|
 |705|**Design HashSet**|Easy|Java/Javascript|Done/Done|
 |706|**Design HashMap**|Easy|Java/Javascript|Done/Done|
@@ -635,6 +636,7 @@ By Jin Wang
 |394|**Decode String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |400|**Nth Digit**|Medium|Java/Javascript|Done/Done|
 |437|**Path Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|450|**Delete Node in a BST**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
