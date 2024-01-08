@@ -4,41 +4,47 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given the root of a binary tree, imagine yourself standing 
-        on the right side of it, return the values of the nodes you 
-        can see ordered from top to bottom.
+			 	Given the root of a binary tree, the level of its root is 1, 
+        the level of its children is 2, and so on.
+
+        Return the smallest level x such that the sum of all the values 
+        of nodes at level x is maximal.
 			 */
 			$(document).ready(function(){
 
 				/**
          * @param root: The root of binary tree
-         * @return: the values of the nodes you can see ordered from top to bottom
+         * @return: the smallest level x
          */
-				let rightSideView = function(root) {
-					if (!root) return [];
+				let maxLevelSum = function(root) {
+					if (!root) return 0;
 
           const queue = [root];
-          const visibleValues = [];
+          let maxSum = -Infinity;
+          let maxLevel = 1;
+          let currentLevel = 1;
 
           while (queue.length > 0) {
               let levelSize = queue.length;
+              let levelSum = 0;
+
               for (let i = 0; i < levelSize; i++) {
                   let currentNode = queue.shift();
-                  // If it's the last node in the current level, add it to the result array.
-                  if (i === levelSize - 1) {
-                      visibleValues.push(currentNode.val);
-                  }
-                  // Add child nodes to the queue for the next level.
-                  if (currentNode.left) {
-                      queue.push(currentNode.left);
-                  }
-                  if (currentNode.right) {
-                      queue.push(currentNode.right);
-                  }
+                  levelSum += currentNode.val;
+
+                  if (currentNode.left) queue.push(currentNode.left);
+                  if (currentNode.right) queue.push(currentNode.right);
               }
+
+              if (levelSum > maxSum) {
+                  maxSum = levelSum;
+                  maxLevel = currentLevel;
+              }
+
+              currentLevel++;
           }
 
-          return visibleValues;
+          return maxLevel;
 				};
 
         function TreeNode(val, left, right) {
@@ -72,9 +78,9 @@
           return root;
         }
 
-				let input1 = [1,2,3,null,5,null,4];
+				let input1 = [1,7,0,7,-8,null,null];
         let root1 = arrayToTree(input1);
-				let tt1 = rightSideView(root1);
+				let tt1 = maxLevelSum(root1);
 				$('#t1').html('<h2>Input1: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
