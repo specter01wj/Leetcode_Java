@@ -1,27 +1,30 @@
-function goodNodes(root: TreeNode | null): number {
-  function countGoodNodes(node: TreeNode | null, maxSoFar: number): number {
-      if (node === null) {
-          return 0;
+function rightSideView(root: TreeNode | null): number[] {
+  if (!root) return [];
+
+  const queue: (TreeNode | null)[] = [root];
+  const visibleValues: number[] = [];
+
+  while (queue.length > 0) {
+      let levelSize = queue.length;
+      for (let i = 0; i < levelSize; i++) {
+          let currentNode = queue.shift();
+          if (currentNode) {
+              // If it's the last node in the current level, add it to the result array.
+              if (i === levelSize - 1) {
+                  visibleValues.push(currentNode.val);
+              }
+              // Add child nodes to the queue for the next level.
+              if (currentNode.left) {
+                  queue.push(currentNode.left);
+              }
+              if (currentNode.right) {
+                  queue.push(currentNode.right);
+              }
+          }
       }
-
-      let count = 0;
-
-      // Increment count if the current node's value is greater than or equal to the maximum value seen so far
-      if (node.val >= maxSoFar) {
-          count = 1;
-      }
-
-      // Update the maximum value seen so far
-      maxSoFar = Math.max(maxSoFar, node.val);
-
-      // Recursively count good nodes in the left and right subtrees
-      count += countGoodNodes(node.left, maxSoFar);
-      count += countGoodNodes(node.right, maxSoFar);
-
-      return count;
   }
 
-  return countGoodNodes(root, -Infinity);
+  return visibleValues;
 };
 
 class TreeNode {
@@ -60,9 +63,9 @@ function arrayToTree(arr) {
   return root;
 }
 
-let input1 = [3,1,4,3,null,1,5];
+let input1 = [1,2,3,null,5,null,4];
 let root1 = arrayToTree(input1);
-let output1 = goodNodes(root1);
+let output1 = rightSideView(root1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
