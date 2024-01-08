@@ -66,15 +66,6 @@ function arrayToTree(arr) {
 }
 
 let input1 = [1,7,0,7,-8,null,null];
-
-
-
-
-
-
-
-
-
 let root1 = arrayToTree(input1);
 let output1 = maxLevelSum(root1);
 
