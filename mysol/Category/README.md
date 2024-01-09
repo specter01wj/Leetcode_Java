@@ -693,6 +693,8 @@ Cspiration Category:
 |Missing||||||
 |236|Lowest Common Ancestor of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |437|Path Sum III|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|547|Number of Provinces|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|841|Keys and Rooms|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |872|Leaf-Similar Trees|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1161|Maximum Level Sum of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1372|Longest ZigZag Path in a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
