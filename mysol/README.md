@@ -641,8 +641,10 @@ By Jin Wang
 |400|**Nth Digit**|Medium|Java/Javascript|Done/Done|
 |437|**Path Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |450|**Delete Node in a BST**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|**Maximum Level Sum of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
