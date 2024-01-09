@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	There are n cities. Some of them are connected, while some are not. 
+        If city a is connected directly with city b, and city b is connected 
+        directly with city c, then city a is connected indirectly with city c.
+
+        A province is a group of directly or indirectly connected cities and 
+        no other cities outside of the group.
+
+        You are given an n x n matrix isConnected where isConnected[i][j] = 1 
+        if the ith city and the jth city are directly connected, and 
+        isConnected[i][j] = 0 otherwise.
+
+        Return the total number of provinces.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param isConnected: a 2D list of integers
+        * @return: the total number of provinces
+        */
+				let findCircleNum = function(isConnected) {
+					let n = isConnected.length;
+          let visited = new Array(n).fill(false);
+          let count = 0;
+
+          function dfs(city) {
+              for (let i = 0; i < n; i++) {
+                  if (isConnected[city][i] === 1 && !visited[i]) {
+                      visited[i] = true;
+                      dfs(i);
+                  }
+              }
+          }
+
+          for (let i = 0; i < n; i++) {
+              if (!visited[i]) {
+                  dfs(i);
+                  count++;
+              }
+          }
+
+          return count;
+				};
+
+				let input1 = [[1,1,0],[1,1,0],[0,0,1]];
+				let tt1 = findCircleNum(input1);
+				$('#t1').html('<h2>Input1: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				DFS
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
