@@ -181,6 +181,10 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+
+
 
 
 ## by Difficulties
