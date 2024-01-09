@@ -24,7 +24,15 @@ public class M547_Number_of_Provinces {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    DFS
+    */
 	
+	/*
+     * @param isConnected: a 2D list of integers
+     * @return: the total number of provinces
+     */
 	public static int findCircleNum(int[][] isConnected) {
         boolean[] visited = new boolean[isConnected.length]; // Track visited cities
         int count = 0; // Count of provinces
