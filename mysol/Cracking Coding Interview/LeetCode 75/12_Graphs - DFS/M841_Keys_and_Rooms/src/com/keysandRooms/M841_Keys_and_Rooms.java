@@ -33,11 +33,8 @@ public class M841_Keys_and_Rooms {
     */
 	
 	/*
-     * @param arr: a list of integers
-     * @param a: an integer
-     * @param b: an integer
-     * @param c: an integer
-     * @return: the number of good triplets
+     * @param rooms: a list of integers
+     * @return: true if you can visit all the rooms, or false otherwise
      */
 	public static boolean canVisitAllRooms(List<List<Integer>> rooms) {
         // Set to keep track of visited rooms
