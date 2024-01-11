@@ -33,7 +33,17 @@ public class M399_Evaluate_Division {
         System.out.println("input1: " + (equations) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    DFS
+    */
 	
+	/*
+     * @param equations: a list of 2D strings
+     * @param values: a list of double integers
+     * @param queries: a list of 2D strings
+     * @return: the answers to all queries
+     */
 	public static double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
         Map<String, Map<String, Double>> graph = new HashMap<>();
 
