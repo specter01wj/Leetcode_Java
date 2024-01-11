@@ -186,7 +186,10 @@ By Jin Wang
 |1466|**Reorder Routes to Make All Paths Lead to the City Zero**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |399|**Evaluate Division**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Graphs - BFS
 
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
 
 
 ## by Difficulties
