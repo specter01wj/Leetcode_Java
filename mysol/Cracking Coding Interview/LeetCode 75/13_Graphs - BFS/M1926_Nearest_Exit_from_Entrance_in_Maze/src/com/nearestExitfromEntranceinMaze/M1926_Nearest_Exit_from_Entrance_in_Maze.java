@@ -27,7 +27,16 @@ public class M1926_Nearest_Exit_from_Entrance_in_Maze {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    BFS
+    */
 	
+	/*
+     * @param maze: a list of 2D strings
+     * @param entrance: a list of integers
+     * @return: the number of steps in the shortest path from the entrance to the nearest exit
+     */
 	public static int nearestExit(char[][] maze, int[] entrance) {
         int m = maze.length, n = maze[0].length;
         Queue<int[]> queue = new LinkedList<>();
