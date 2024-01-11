@@ -1,29 +1,44 @@
-function minReorder(n: number, connections: number[][]): number {
-  const al: number[][] = Array.from({ length: n }, () => []);
-  for (let c of connections) {
-      al[c[0]].push(c[1]);
-      al[c[1]].push(-c[0]); // Negative to indicate reverse direction
-  }
+function calcEquation(equations: string[][], values: number[], queries: string[][]): number[] {
+  const graph = new Map<string, Map<string, number>>();
 
-  const visited: boolean[] = new Array(n).fill(false);
+  // Build the graph
+  equations.forEach((equation, index) => {
+      const [dividend, divisor] = equation;
+      const value = values[index];
 
-  const dfs = (from: number): number => {
-      let change = 0;
-      visited[from] = true;
-      for (let to of al[from]) {
-          if (!visited[Math.abs(to)]) {
-              change += dfs(Math.abs(to)) + (to > 0 ? 1 : 0);
-          }
+      if (!graph.has(dividend)) graph.set(dividend, new Map());
+      graph.get(dividend)!.set(divisor, value);
+
+      if (!graph.has(divisor)) graph.set(divisor, new Map());
+      graph.get(divisor)!.set(dividend, 1 / value);
+  });
+
+  // DFS function to find the product of the path
+  const dfs = (node: string, target: string, visited: Set<string>): number => {
+      if (!graph.has(node) || visited.has(node)) return -1;
+      if (node === target) return 1;
+
+      visited.add(node);
+      const neighbors = graph.get(node)!;
+      for (let [neighbor, value] of neighbors) {
+          const product = dfs(neighbor, target, visited);
+          if (product !== -1) return product * value;
       }
-      return change;
+
+      return -1;
   };
 
-  return dfs(0);
+  // Process queries
+  return queries.map(([dividend, divisor]) => {
+      if (!graph.has(dividend) || !graph.has(divisor)) return -1;
+      return dfs(dividend, divisor, new Set<string>());
+  });
 };
 
-let input1 = [[0,1],[1,3],[2,3],[4,0],[4,5]];
-let n = 6;
-let output1 = minReorder(n, input1);
+let equations = [["a","b"],["b","c"]];
+let values = [2.0,3.0];
+let queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]];
+let output1 = calcEquation(equations, values, queries);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
