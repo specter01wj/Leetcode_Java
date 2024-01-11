@@ -23,7 +23,15 @@ public class M994_Rotting_Oranges {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    BFS
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: the minimum number of minutes that must elapse until no cell has a fresh orange
+     */
 	public static int orangesRotting(int[][] grid) {
         if (grid == null || grid.length == 0) return -1;
 
