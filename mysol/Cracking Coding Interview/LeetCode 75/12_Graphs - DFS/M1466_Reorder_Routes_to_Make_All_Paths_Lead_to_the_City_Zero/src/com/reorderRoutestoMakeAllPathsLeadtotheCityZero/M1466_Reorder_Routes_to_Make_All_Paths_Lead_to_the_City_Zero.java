@@ -28,7 +28,16 @@ public class M1466_Reorder_Routes_to_Make_All_Paths_Lead_to_the_City_Zero {
         System.out.println("input1: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    DFS
+    */
 	
+	/*
+     * @param n: an integer
+     * @param connections: a list of 2D integers
+     * @return: the minimum number of edges changed
+     */
 	public static int minReorder(int n, int[][] connections) {
         List<List<Integer>> al = new ArrayList<>();
         
