@@ -183,6 +183,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1466|**Reorder Routes to Make All Paths Lead to the City Zero**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|399|**Evaluate Division**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
