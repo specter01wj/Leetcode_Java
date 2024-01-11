@@ -699,6 +699,7 @@ Cspiration Category:
 |1161|Maximum Level Sum of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1372|Longest ZigZag Path in a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1448|Count Good Nodes in Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|1466|Reorder Routes to Make All Paths Lead to the City Zero|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 11. Stack & PriorityQueue
 
@@ -765,7 +766,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |133|Clone Graph|Medium||Java/Javascript||
-|399|Evaluate Division|Medium||Java/Javascript||
+|399|Evaluate Division|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |310|Minimum Height Trees|Medium||Java/Javascript||
 |图形学||||||
 |335|Self Crossing|Hard|很少考|Java/Javascript||
