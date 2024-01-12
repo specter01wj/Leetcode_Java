@@ -696,10 +696,12 @@ Cspiration Category:
 |547|Number of Provinces|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |841|Keys and Rooms|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |872|Leaf-Similar Trees|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|Maximum Level Sum of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1372|Longest ZigZag Path in a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1448|Count Good Nodes in Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1466|Reorder Routes to Make All Paths Lead to the City Zero|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 ### 11. Stack & PriorityQueue
 
