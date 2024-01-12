@@ -193,6 +193,10 @@ By Jin Wang
 |1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Heap / Priority Queue
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
 
 
 
