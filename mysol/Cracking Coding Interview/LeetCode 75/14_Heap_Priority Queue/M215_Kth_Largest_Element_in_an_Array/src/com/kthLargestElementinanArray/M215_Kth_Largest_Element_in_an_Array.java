@@ -20,7 +20,16 @@ public class M215_Kth_Largest_Element_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Heap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the kth largest element in the array
+     */
 	public static int findKthLargest(int[] nums, int k) {
         return quickSort(nums, 0, nums.length - 1, k);
     }
