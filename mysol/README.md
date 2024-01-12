@@ -190,6 +190,10 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+
+
 
 
 ## by Difficulties
