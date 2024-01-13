@@ -4,65 +4,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array nums and an integer k, return the kth 
-        largest element in the array.
+			 	You have a set which contains all positive integers [1, 2, 3, 4, 5, ...].
 
-        Note that it is the kth largest element in the sorted order, 
-        not the kth distinct element.
+        Implement the SmallestInfiniteSet class:
 
-        Can you solve it without sorting?
+        .SmallestInfiniteSet() Initializes the SmallestInfiniteSet object to 
+          contain all positive integers.
+        .int popSmallest() Removes and returns the smallest integer contained 
+          in the infinite set.
+        .void addBack(int num) Adds a positive integer num back into the 
+          infinite set, if it is not already in the infinite set.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param nums: a list of integers
-          * @param k: an integer
-          * @return: the kth largest element in the array
-          */
-				let findKthLargest = function(nums, k) {
-					return quickSort(nums, 0, nums.length - 1, k);
+        * @param actions: a list of strings
+        * @param parameters: a list of integers
+        * @return: Implement the SmallestInfiniteSet class
+        */
+				let SmallestInfiniteSet = function() {
+					this.available = new Set();  // To track available numbers that have been added back
+          this.nextSmallest = 1;       // To track the next smallest number that hasn't been added back
 				};
 
-        function quickSort(nums, left, right, k) {
-          if (left <= right) {
-              let p = partition(nums, left, right);
-              if (p == nums.length - k) {
-                  return nums[p];
-              } else if (p > nums.length - k) {
-                  return quickSort(nums, left, p - 1, k);
-              } else {
-                  return quickSort(nums, p + 1, right, k);
-              }
-          }
-          return -1; // This line is reached only if the input array is empty
-        }
+        SmallestInfiniteSet.prototype.popSmallest = function() {
+            // Check if there is a smaller number in the available set
+            if (this.available.size > 0 && Math.min(...this.available) < this.nextSmallest) {
+                const smallestAvailable = Math.min(...this.available);
+                this.available.delete(smallestAvailable);
+                return smallestAvailable;
+            }
+            // Otherwise, return the next smallest number and increment it
+            return this.nextSmallest++;
+        };
 
-        function partition(nums, left, right) {
-          let pivot = nums[left];
-          let i = left + 1, j = right;
+        SmallestInfiniteSet.prototype.addBack = function(num) {
+            // Add the number back only if it's smaller than the next smallest number
+            if (num < this.nextSmallest) {
+                this.available.add(num);
+            }
+        };
 
-          while (true) {
-              while (i <= right && nums[i] < pivot) {
-                  i++;
-              }
-              while (j >= left + 1 && nums[j] > pivot) {
-                  j--;
-              }
-              if (i > j) {
-                  break;
-              }
-              [nums[i], nums[j]] = [nums[j], nums[i]]; // Swap using destructuring assignment
-              i++;
-              j--;
-          }
-          [nums[left], nums[j]] = [nums[j], nums[left]]; // Swap pivot into correct position
-          return j;
-        }
+				let actions = ["SmallestInfiniteSet", "addBack", "popSmallest", "popSmallest", "popSmallest", "addBack", "popSmallest", "popSmallest", "popSmallest"];
+        let parameters = [[], [2], [], [], [], [1], [], [], []];
+        let results = [];
 
-				let input1 = [3,2,1,5,6,4];
-        let k = 2;
-				let tt1 = findKthLargest(input1, k);
-				$('#t1').html('<h2>Input1: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
+        let set = new SmallestInfiniteSet();
+
+        actions.forEach((action, index) => {
+            if (action === "addBack") {
+                set.addBack(parameters[index][0]);
+                results.push(null);
+            } else if (action === "popSmallest") {
+                results.push(set.popSmallest());
+            } else {
+                results.push(null);
+            }
+        });
+				$('#t1').html('<h2>Input1: ' + actions + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
