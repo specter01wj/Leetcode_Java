@@ -645,6 +645,7 @@ By Jin Wang
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |199|**Binary Tree Right Side View**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|215|**Kth Largest Element in an Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |236|**Lowest Common Ancestor of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
@@ -673,6 +674,7 @@ By Jin Wang
 |1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2095|**Delete the Middle Node of a Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
