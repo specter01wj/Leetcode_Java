@@ -197,7 +197,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|215|**Kth Largest Element in an Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
