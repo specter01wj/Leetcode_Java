@@ -1,47 +1,48 @@
-function findKthLargest(nums: number[], k: number): number {
-  return quickSort(nums, 0, nums.length - 1, k);
-};
+class SmallestInfiniteSet {
+  private available: Set<number>;
+  private nextSmallest: number;
 
-function quickSort(nums: number[], left: number, right: number, k: number): number {
-  if (left <= right) {
-      let p = partition(nums, left, right);
-      if (p == nums.length - k) {
-          return nums[p];
-      } else if (p > nums.length - k) {
-          return quickSort(nums, left, p - 1, k);
-      } else {
-          return quickSort(nums, p + 1, right, k);
+  constructor() {
+      this.available = new Set<number>();
+      this.nextSmallest = 1;
+  }
+
+  popSmallest(): number {
+      // Check if there's a number in the available set smaller than nextSmallest
+      if (this.available.size > 0 && Math.min(...this.available) < this.nextSmallest) {
+          const smallestAvailable = Math.min(...this.available);
+          this.available.delete(smallestAvailable);
+          return smallestAvailable;
+      }
+      // Otherwise, return the nextSmallest number and increment it
+      return this.nextSmallest++;
+  }
+
+  addBack(num: number): void {
+      // Add the number back only if it's smaller than the nextSmallest
+      if (num < this.nextSmallest) {
+          this.available.add(num);
       }
   }
-  return -1; // This line is reached only if the input array is empty
 }
 
-function partition(nums: number[], left: number, right: number): number {
-  let pivot = nums[left];
-  let i = left + 1, j = right;
+let actions = ["SmallestInfiniteSet", "addBack", "popSmallest", "popSmallest", "popSmallest", "addBack", "popSmallest", "popSmallest", "popSmallest"];
+let parameters = [[], [2], [], [], [], [1], [], [], []];
+let results = [];
 
-  while (true) {
-      while (i <= right && nums[i] < pivot) {
-          i++;
-      }
-      while (j >= left + 1 && nums[j] > pivot) {
-          j--;
-      }
-      if (i > j) {
-          break;
-      }
-      [nums[i], nums[j]] = [nums[j], nums[i]]; // Swap using destructuring assignment
-      i++;
-      j--;
-  }
-  [nums[left], nums[j]] = [nums[j], nums[left]]; // Swap pivot into correct position
-  return j;
-}
+let set = new SmallestInfiniteSet();
 
-let input1 = [3,2,1,5,6,4];
-let k = 2;
-let output1 = findKthLargest(input1, k);
+actions.forEach((action, index) => {
+    if (action === "addBack") {
+        set.addBack(parameters[index][0]);
+        results.push(null);
+    } else if (action === "popSmallest") {
+        results.push(set.popSmallest());
+    } else {
+        results.push(null);
+    }
+});
 
 let webHeading1 = document.querySelector('#t1');
-webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
+webHeading1.textContent = 'Output: ' + JSON.stringify(results);
 
