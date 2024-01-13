@@ -92,6 +92,7 @@ Cspiration Category:
 |300|Longest Increasing Subsequence|Medium||Java/Javascript||
 |354|Russian Doll Envelopes|Hard||Java/Javascript||
 |Missing||||||
+|215|Kth Largest Element in an Array|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |414|Third Maximum Number|Easy||Java/Javascript|Done/Done|
 |422|Valid Word Square|Easy||Java/Javascript||
 |448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript|Done/Done|
@@ -819,7 +820,7 @@ Cspiration Category:
 |308|Range Sum Query 2D - Mutable|Hard|Binary Index Tree|Java/Javascript||
 |Missing||||||
 |933|Number of Recent Calls|Easy||Java/Javascript/Typescript|Done/Done/Done|
-
+|2336|Smallest Number in Infinite Set|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 
 
