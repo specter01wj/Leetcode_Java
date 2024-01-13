@@ -1,31 +1,46 @@
-function nearestExit(maze: string[][], entrance: number[]): number {
-  const m = maze.length, n = maze[0].length;
-  const queue: [number, number, number][] = [[entrance[0], entrance[1], 0]];
-  maze[entrance[0]][entrance[1]] = '+'; // Mark the entrance as visited
-
-  while (queue.length > 0) {
-      const [x, y, dist] = queue.shift()!; // Use non-null assertion since queue is never empty here
-
-      const directions: [number, number][] = [[-1, 0], [1, 0], [0, -1], [0, 1]]; // Up, Down, Left, Right
-
-      for (const [dx, dy] of directions) {
-          const newX = x + dx, newY = y + dy;
-
-          if (newX >= 0 && newX < m && newY >= 0 && newY < n && maze[newX][newY] === '.') {
-              if (newX === 0 || newX === m - 1 || newY === 0 || newY === n - 1) {
-                  return dist + 1; // Found an exit
-              }
-              maze[newX][newY] = '+'; // Mark as visited
-              queue.push([newX, newY, dist + 1]);
-          }
-      }
-  }
-  return -1; // No exit found
+function findKthLargest(nums: number[], k: number): number {
+  return quickSort(nums, 0, nums.length - 1, k);
 };
 
-let input1 = [["+","+",".","+"],[".",".",".","+"],["+","+","+","."]];
-let entrance = [1,2];
-let output1 = nearestExit(input1, entrance);
+function quickSort(nums: number[], left: number, right: number, k: number): number {
+  if (left <= right) {
+      let p = partition(nums, left, right);
+      if (p == nums.length - k) {
+          return nums[p];
+      } else if (p > nums.length - k) {
+          return quickSort(nums, left, p - 1, k);
+      } else {
+          return quickSort(nums, p + 1, right, k);
+      }
+  }
+  return -1; // This line is reached only if the input array is empty
+}
+
+function partition(nums: number[], left: number, right: number): number {
+  let pivot = nums[left];
+  let i = left + 1, j = right;
+
+  while (true) {
+      while (i <= right && nums[i] < pivot) {
+          i++;
+      }
+      while (j >= left + 1 && nums[j] > pivot) {
+          j--;
+      }
+      if (i > j) {
+          break;
+      }
+      [nums[i], nums[j]] = [nums[j], nums[i]]; // Swap using destructuring assignment
+      i++;
+      j--;
+  }
+  [nums[left], nums[j]] = [nums[j], nums[left]]; // Swap pivot into correct position
+  return j;
+}
+
+let input1 = [3,2,1,5,6,4];
+let k = 2;
+let output1 = findKthLargest(input1, k);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
