@@ -28,7 +28,17 @@ public class M2542_Maximum_Subsequence_Score {
         System.out.println("input: " + Arrays.toString(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Priority Queue
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @param k: an integer
+     * @return: the maximum possible score
+     */
 	public static long maxScore(int[] nums1, int[] nums2, int k) {
         int n = nums1.length;
         int[][] ess = new int[n][2];
