@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given two 0-indexed integer arrays nums1 and nums2 of equal 
+        length n and a positive integer k. You must choose a subsequence of 
+        indices from nums1 of length k.
+
+        For chosen indices i0, i1, ..., ik - 1, your score is defined as:
+
+        .The sum of the selected elements from nums1 multiplied with the 
+          minimum of the selected elements from nums2.
+        .It can defined simply as: (nums1[i0] + nums1[i1] +...+ nums1[ik - 1]) 
+          * min(nums2[i0] , nums2[i1], ... ,nums2[ik - 1]).
+
+        Return the maximum possible score.
+
+        A subsequence of indices of an array is a set that can be derived 
+        from the set {0, 1, ..., n-1} by deleting some or no elements.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param nums1: a list of integers
+          * @param nums2: a list of integers
+          * @param k: an integer
+          * @return: the maximum possible score
+          */
+				let maxScore = function(nums1, nums2, k) {
+					let result = 0;
+          let totalSum = 0;
+          let heap = new MinPriorityQueue();
+
+          const merged = nums1.map((nums1Val, i) => [nums2[i], nums1Val]);
+          merged.sort((a, b) => b[0] - a[0]);
+
+          for (const [maxOf2, num1Val] of merged) {
+              if (heap.size === k) {
+                  totalSum -= heap.dequeue();
+              }
+
+              totalSum += num1Val;
+              heap.enqueue(num1Val);
+
+              if (heap.size === k) {
+                  result = Math.max(result, totalSum * maxOf2);
+              }
+          }
+
+          return result;
+				};
+
+        class MinPriorityQueue {
+            constructor(comparator = (a, b) => a - b) {
+                this.heap = [];
+                this.comparator = comparator;
+            }
+
+            get size() {
+                return this.heap.length;
+            }
+
+            enqueue(value) {
+                this.heap.push(value);
+                this.heap.sort(this.comparator);
+            }
+
+            dequeue() {
+                return this.heap.shift();
+            }
+
+            peek() {
+                return this.heap[0];
+            }
+        }
+
+				let input1 = [1,3,3,2], input2 = [2,1,3,4];
+        let k = 3;
+        let tt1 = maxScore(input1, input2, k);
+				$('#t1').html('<h2>Input1: ' + input1 + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				Priority Queue
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
