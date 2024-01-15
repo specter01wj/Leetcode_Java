@@ -45,7 +45,7 @@ function insertSorted(arr: number[], value: number): void {
   }
 }
 
-let input1 = [17,12,10,2,7,2,11,20,8], k = 3, candidates = 4
+let input1 = [17,12,10,2,7,2,11,20,8], k = 3, candidates = 4;
 let output1 = totalCost(input1, k, candidates);
 
 let webHeading1 = document.querySelector('#t1');
