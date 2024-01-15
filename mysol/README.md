@@ -199,6 +199,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |215|**Kth Largest Element in an Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2542|**Maximum Subsequence Score**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2462|**Total Cost to Hire K Workers**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
