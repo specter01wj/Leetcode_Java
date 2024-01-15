@@ -687,6 +687,8 @@ By Jin Wang
 |2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2462|**Total Cost to Hire K Workers**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2542|**Maximum Subsequence Score**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
 |2623|**Memoize**|Medium|Javascript/Typescript|Done/Done|
 |2625|**Flatten Deeply Nested Array**|Medium|Javascript/Typescript|Done/Done|
