@@ -297,6 +297,8 @@ Cspiration Category:
 |2373|Largest Local Values in a Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2383|Minimum Hours of Training to Win a Competition|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2389|Longest Subsequence With Limited Sum|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2462|**Total Cost to Hire K Workers**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2542|**Maximum Subsequence Score**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
