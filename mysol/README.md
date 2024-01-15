@@ -202,6 +202,14 @@ By Jin Wang
 |2542|**Maximum Subsequence Score**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2462|**Total Cost to Hire K Workers**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Binary Search
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
+
+
+
 
 ## by Difficulties
 
