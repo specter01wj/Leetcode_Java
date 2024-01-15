@@ -36,7 +36,17 @@ public class M2462_Total_Cost_to_Hire_K_Workers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Priority Queue
+    */
 	
+	/*
+     * @param costs: a list of integers
+     * @param k: an integer
+     * @param candidates: an integer
+     * @return: the total cost to hire exactly k workers
+     */
 	public static long totalCost(int[] costs, int k, int candidates) {
         PriorityQueue<Integer> headWorkers = new PriorityQueue<>();
         PriorityQueue<Integer> tailWorkers = new PriorityQueue<>();
