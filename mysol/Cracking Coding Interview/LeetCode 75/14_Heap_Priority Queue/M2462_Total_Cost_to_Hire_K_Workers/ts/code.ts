@@ -1,57 +1,52 @@
-function maxScore(nums1: number[], nums2: number[], k: number): number {
-  let result: number = 0;
-  let totalSum: number = 0;
-  let heap: MinPriorityQueue<number> = new MinPriorityQueue<number>();
+function totalCost(costs: number[], k: number, candidates: number): number {
+  let headWorkers: number[] = [];
+  let tailWorkers: number[] = [];
 
-  const merged: [number, number][] = nums1.map((nums1Val, i) => [nums2[i], nums1Val]);
-  merged.sort((a, b) => b[0] - a[0]);
+  // Initialize the queues
+  for (let i = 0; i < candidates; i++) {
+      headWorkers.push(costs[i]);
+  }
+  for (let i = Math.max(candidates, costs.length - candidates); i < costs.length; i++) {
+      tailWorkers.push(costs[i]);
+  }
 
-  for (const [maxOf2, num1Val] of merged) {
-      if (heap.size === k) {
-          totalSum -= heap.dequeue();
+  headWorkers.sort((a, b) => a - b);
+  tailWorkers.sort((a, b) => a - b);
+
+  let answer: number = 0;
+  let nextHead: number = candidates;
+  let nextTail: number = costs.length - 1 - candidates;
+
+  for (let i = 0; i < k; i++) {
+      if (tailWorkers.length === 0 || (headWorkers.length > 0 && headWorkers[0] <= tailWorkers[0])) {
+          answer += headWorkers.shift()!;
+          if (nextHead <= nextTail) {
+              insertSorted(headWorkers, costs[nextHead]);
+              nextHead++;
+          }
+      } else {
+          answer += tailWorkers.shift()!;
+          if (nextHead <= nextTail) {
+              insertSorted(tailWorkers, costs[nextTail]);
+              nextTail--;
+          }
       }
-
-      totalSum += num1Val;
-      heap.enqueue(num1Val);
-
-      if (heap.size === k) {
-          result = Math.max(result, totalSum * maxOf2);
-      }
   }
 
-  return result;
-}
+  return answer;
+};
 
-class MinPriorityQueue<T> {
-  private heap: T[];
-  private comparator: (a: T, b: T) => number;
-
-  constructor(comparator: (a: T, b: T) => number = (a, b) => a as any - b as any) {
-      this.heap = [];
-      this.comparator = comparator;
-  }
-
-  get size(): number {
-      return this.heap.length;
-  }
-
-  enqueue(value: T): void {
-      this.heap.push(value);
-      this.heap.sort(this.comparator);
-  }
-
-  dequeue(): T | undefined {
-      return this.heap.shift();
-  }
-
-  peek(): T | undefined {
-      return this.heap[0];
+function insertSorted(arr: number[], value: number): void {
+  const index = arr.findIndex(x => x > value);
+  if (index === -1) {
+      arr.push(value);
+  } else {
+      arr.splice(index, 0, value);
   }
 }
 
-let input1 = [1,3,3,2], input2 = [2,1,3,4];
-let k = 3;
-let output1 = maxScore(input1, input2, k);
+let input1 = [17,12,10,2,7,2,11,20,8], k = 3, candidates = 4
+let output1 = totalCost(input1, k, candidates);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
