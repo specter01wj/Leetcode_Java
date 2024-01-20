@@ -206,7 +206,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|374|**Guess Number Higher or Lower**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2300|**Successful Pairs of Spells and Potions**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
@@ -320,7 +321,7 @@ By Jin Wang
 |359|**Logger Rate Limiter**|Easy|Java/Javascript||
 |367|**Valid Perfect Square**|Easy|Java/Javascript|Done/Done|
 |371|**Sum of Two Integers**|Easy|Java/Javascript|Done/Done|
-|374|**Guess Number Higher or Lower**|Easy|Java/Javascript|Done/Done|
+|374|**Guess Number Higher or Lower**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |383|**Ransom Note**|Easy|Java/Javascript|Done/Done|
 |387|**First Unique Character in a String**|Easy|Java/Javascript|Done/Done|
 |389|**Find the Difference**|Easy|Java/Javascript|Done/Done|
@@ -684,6 +685,7 @@ By Jin Wang
 |1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2095|**Delete the Middle Node of a Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2300|**Successful Pairs of Spells and Potions**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
