@@ -26,7 +26,17 @@ public class M2300_Successful_Pairs_of_Spells_and_Potions {
         System.out.println("input: " + Arrays.toString(spells) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    BST
+    */
 	
+	/*
+     * @param spells: a list of integers
+     * @param potions: a list of integers
+     * @param success: an integer
+     * @return: an integer array pairs of length n
+     */
 	public static int[] successfulPairs(int[] spells, int[] potions, long success) {
         // Sort the potions array
         Arrays.sort(potions);
