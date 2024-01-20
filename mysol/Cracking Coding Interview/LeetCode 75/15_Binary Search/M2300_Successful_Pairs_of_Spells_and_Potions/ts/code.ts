@@ -1,41 +1,33 @@
-function guessNumber(n: number): number {
-  let left = 1;
-  let right = n;
+function successfulPairs(spells: number[], potions: number[], success: number): number[] {
+  // Sort the potions array
+  potions.sort((a, b) => a - b);
 
-  while (left <= right) {
-      let mid = Math.floor((left + right) / 2);
-      let res = guess(mid);
+  const n = spells.length;
+  let pairs = new Array(n).fill(0);
 
-      if (res === 0) {
-          // Correct guess
-          return mid;
-      } else if (res === -1) {
-          // The number is lower than the guess
-          right = mid - 1;
-      } else {
-          // The number is higher than the guess
-          left = mid + 1;
+  for (let i = 0; i < n; i++) {
+      let left = 0;
+      let right = potions.length - 1;
+
+      // Apply binary search for each spell
+      while (left <= right) {
+          let mid = Math.floor((left + right) / 2);
+          if (spells[i] * potions[mid] < success) {
+              left = mid + 1;
+          } else {
+              right = mid - 1;
+          }
       }
+
+      // Count the number of successful pairs for the current spell
+      pairs[i] = potions.length - left;
   }
 
-  // Return -1 if the number is not found, although this should not happen in this game.
-  return -1;
+  return pairs;
 };
 
-let pickedNumber: number = 10;
-
-function guess(num: number): number {
-    if (num > pickedNumber) {
-        return -1; // num is higher than the picked number
-    } else if (num < pickedNumber) {
-        return 1; // num is lower than the picked number
-    } else {
-        return 0; // num is equal to the picked number
-    }
-}
-
-let input1 = 100;
-let output1 = guessNumber(input1);
+let spells = [5,1,3], potions = [1,2,3,4,5], success = 7;
+let output1 = successfulPairs(spells, potions, success);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
