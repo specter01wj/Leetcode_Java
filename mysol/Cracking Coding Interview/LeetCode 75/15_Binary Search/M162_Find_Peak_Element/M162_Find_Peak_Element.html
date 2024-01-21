@@ -4,58 +4,46 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given two positive integer arrays spells and potions, 
-        of length n and m respectively, where spells[i] represents the 
-        strength of the ith spell and potions[j] represents the strength 
-        of the jth potion.
+			 	A peak element is an element that is strictly greater than its neighbors.
 
-        You are also given an integer success. A spell and potion pair 
-        is considered successful if the product of their strengths is 
-        at least success.
+        Given a 0-indexed integer array nums, find a peak element, and return 
+        its index. If the array contains multiple peaks, return the index to 
+        any of the peaks.
 
-        Return an integer array pairs of length n where pairs[i] is 
-        the number of potions that will form a successful pair 
-        with the ith spell.
+        You may imagine that nums[-1] = nums[n] = -∞. In other words, 
+        an element is always considered to be strictly greater than a 
+        neighbor that is outside the array.
+
+        You must write an algorithm that runs in O(log n) time.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param spells: a list of integers
-          * @param potions: a list of integers
-          * @param success: an integer
-          * @return: an integer array pairs of length n
+          * @param nums: a list of integers
+          * @return: the index to any of the peaks
           */
-				let successfulPairs = function(spells, potions, success) {
-					// Sort the potions array
-          potions.sort((a, b) => a - b);
+				let findPeakElement = function(nums) {
+					let left = 0, right = nums.length - 1;
+          
+          while (left < right) {
+              let mid = Math.floor((left + right) / 2);
 
-          const n = spells.length;
-          let pairs = new Array(n).fill(0);
-
-          for (let i = 0; i < n; i++) {
-              let left = 0;
-              let right = potions.length - 1;
-
-              // Apply binary search for each spell
-              while (left <= right) {
-                  let mid = Math.floor((left + right) / 2);
-                  if (spells[i] * potions[mid] < success) {
-                      left = mid + 1;
-                  } else {
-                      right = mid - 1;
-                  }
+              if (nums[mid] > nums[mid + 1]) {
+                  // Peak is in the left half or at mid
+                  right = mid;
+              } else {
+                  // Peak is in the right half
+                  left = mid + 1;
               }
-
-              // Count the number of successful pairs for the current spell
-              pairs[i] = potions.length - left;
           }
-
-          return pairs;
+          
+          // When left equals right, we have found the peak element
+          return left;
 				};
 
-				let spells = [5,1,3], potions = [1,2,3,4,5], success = 7;
-				let tt1 = successfulPairs(spells, potions, success);
-				$('#t1').html('<h2>Inputs: ' + spells + '<br>Results: ' + tt1 + '</h2>');
+				let input = [1,2,1,3,5,6,4];
+				let tt1 = findPeakElement(input);
+				$('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
