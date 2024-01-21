@@ -657,6 +657,7 @@ By Jin Wang
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |199|**Binary Tree Right Side View**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |215|**Kth Largest Element in an Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
@@ -674,6 +675,7 @@ By Jin Wang
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|**Maximum Level Sum of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
