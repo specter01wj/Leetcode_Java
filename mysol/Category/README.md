@@ -83,7 +83,7 @@ Cspiration Category:
 |81|Search in Rotated Sorted Array II|Medium||Java/Javascript||
 |153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
 |154|Find Minimum in Rotated Sorted Array II|Hard||Java/Javascript||
-|162|Find Peak Element|Medium||Java/Javascript||
+|162|Find Peak Element|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |374|Guess Number Higher or Lower|Easy||Java/Javascript|Done/Done|
 |34|Find First and Last Position of Element in Sorted Array|Medium||Java/Javascript||
 |349|Intersection of Two Arrays|Easy||Java/Javascript|Done/Done|
@@ -648,7 +648,7 @@ Cspiration Category:
 |81|Search in Rotated Sorted Array II|Medium||Java/Javascript||
 |153|Find Minimum in Rotated Sorted Array|Medium||Java/Javascript||
 |154|Find Minimum in Rotated Sorted Array II|Hard||Java/Javascript||
-|162|Find Peak Element|Medium||Java/Javascript||
+|162|Find Peak Element|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |374|Guess Number Higher or Lower|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |34|Search for a Range|Medium||Java/Javascript||
 |349|Intersection of Two Arrays|Easy||Java/Javascript||
@@ -657,6 +657,7 @@ Cspiration Category:
 |300|Longest Increasing Subsequence|Medium||Java/Javascript||
 |354|Russian Doll Envelopes|Hard||Java/Javascript||
 |Missing||||||
+|875|Koko Eating Bananas|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2300|Successful Pairs of Spells and Potions|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 9. Matrix
