@@ -211,6 +211,12 @@ By Jin Wang
 |162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Backtracking
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
+
 
 
 
