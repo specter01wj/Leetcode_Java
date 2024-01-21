@@ -27,7 +27,16 @@ public class M875_Koko_Eating_Bananas {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    BST
+    */
 	
+	/*
+     * @param piles: a list of integers
+     * @param h: an integer
+     * @return: the minimum integer k such that she can eat all the bananas within h hours
+     */
 	public static int minEatingSpeed(int[] piles, int h) {
         int left = 1; // minimum possible speed
         int right = getMaxBananaPile(piles); // maximum possible speed
