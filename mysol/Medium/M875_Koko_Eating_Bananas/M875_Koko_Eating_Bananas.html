@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Koko loves to eat bananas. There are n piles of bananas, the ith 
+        pile has piles[i] bananas. The guards have gone and will come back 
+        in h hours.
+
+        Koko can decide her bananas-per-hour eating speed of k. Each hour, 
+        she chooses some pile of bananas and eats k bananas from that pile. 
+        If the pile has less than k bananas, she eats all of them instead 
+        and will not eat any more bananas during this hour.
+
+        Koko likes to eat slowly but still wants to finish eating all the 
+        bananas before the guards return.
+
+        Return the minimum integer k such that she can eat all the bananas 
+        within h hours.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param piles: a list of integers
+          * @param h: an integer
+          * @return: the minimum integer k such that she can eat all the bananas within h hours
+          */
+				let minEatingSpeed = function(piles, h) {
+					let left = 1; // minimum possible speed
+          let right = Math.max(...piles); // maximum possible speed
+
+          while (left < right) {
+              let mid = Math.floor((left + right) / 2);
+              if (canEatAll(piles, mid, h)) {
+                  // If she can eat all bananas at this rate, try a smaller speed
+                  right = mid;
+              } else {
+                  // Otherwise, she needs a higher speed
+                  left = mid + 1;
+              }
+          }
+          
+          return left;
+				};
+
+        function canEatAll(piles, speed, h) {
+            let hours = 0;
+            for (let pile of piles) {
+                hours += Math.ceil(pile / speed);
+            }
+            return hours <= h;
+        }
+
+				let input = [30,11,23,4,20], h = 5;
+				let tt1 = minEatingSpeed(input, h);
+				$('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+        BST
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
