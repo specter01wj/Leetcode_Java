@@ -208,6 +208,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |374|**Guess Number Higher or Lower**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2300|**Successful Pairs of Spells and Potions**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
