@@ -18,7 +18,15 @@ public class M17_Letter_Combinations_of_a_Phone_Number {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Backtracking
+    */
 	
+	/**
+     * @param digits: a string
+     * @return: the answer in any order
+     */
 	private static final String[] LETTERS = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
     public static List<String> letterCombinations(String digits) {
