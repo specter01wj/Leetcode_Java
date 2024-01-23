@@ -661,11 +661,13 @@ By Jin Wang
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||
 |11|**Container With Most Water**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
+|17|**Letter Combinations of a Phone Number**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |199|**Binary Tree Right Side View**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |215|**Kth Largest Element in an Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|216|**Combination Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
 |229|**Majority Element II**|Medium|Java/Javascript|Done/Done|
 |236|**Lowest Common Ancestor of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
