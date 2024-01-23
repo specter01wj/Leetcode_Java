@@ -582,7 +582,7 @@ Cspiration Category:
 |77|Combinations|Medium||Java/Javascript||
 |39|Combination Sum|Medium||Java/Javascript||
 |40|Combination Sum II|Medium||Java/Javascript||
-|216|Combination Sum III|Medium||Java/Javascript||
+|216|Combination Sum III|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |377|Combination Sum IV|Medium|Dynamic Programming|Java/Javascript||
 |254|Factor Combinations|Medium||Java/Javascript||
 |46|Permutations|Medium||Java/Javascript||
@@ -591,7 +591,7 @@ Cspiration Category:
 |60|Permutation Sequence|Medium|String|Java/Javascript||
 |291|Word Pattern II|Hard||Java/Javascript||
 |Enumeration||||||
-|17|Letter Combinations of a Phone Number|Medium||Java/Javascript||
+|17|Letter Combinations of a Phone Number|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |320|Generalized Abbreviation|Medium|要重录|Java/Javascript||
 |93|Restore IP Addresses|Medium|很少考|Java/Javascript||
 |282|Expression Add Operators|Hard||Java/Javascript||
