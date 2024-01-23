@@ -215,8 +215,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
-
+|17|**Letter Combinations of a Phone Number**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|216|**Combination Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
