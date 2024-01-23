@@ -218,6 +218,13 @@ By Jin Wang
 |17|**Letter Combinations of a Phone Number**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |216|**Combination Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### DP - 1D
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
+
+
 
 
 ## by Difficulties
