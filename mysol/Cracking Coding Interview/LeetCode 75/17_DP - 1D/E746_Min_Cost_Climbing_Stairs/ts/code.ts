@@ -1,17 +1,19 @@
-function tribonacci(n: number): number {
-  if (n === 0) return 0;
-  if (n === 1 || n === 2) return 1;
+function minCostClimbingStairs(cost: number[]): number {
+  const n = cost.length;
+  const minCost: number[] = new Array(n + 1);
 
-  let trib: number[] = [0, 1, 1];
-  for (let i = 3; i <= n; i++) {
-      trib[i] = trib[i - 1] + trib[i - 2] + trib[i - 3];
+  minCost[0] = 0;
+  minCost[1] = 0;
+
+  for (let i = 2; i <= n; i++) {
+      minCost[i] = Math.min(minCost[i - 1] + cost[i - 1], minCost[i - 2] + cost[i - 2]);
   }
 
-  return trib[n];
+  return minCost[n];
 };
 
-let input1 = 4;
-let output1 = tribonacci(input1);
+let input1 = [1,100,1,1,1,100,1,1,100,1];
+let output1 = minCostClimbingStairs(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
