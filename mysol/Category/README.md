@@ -612,6 +612,8 @@ Cspiration Category:
 |375|Guess Number Higher or Lower II|Medium||Java/Javascript||
 |312|Burst Balloons|Hard||Java/Javascript||
 |322|Coin Change|Medium||Java/Javascript||
+|Missing||||||
+|1137|N-th Tribonacci Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 7. LinkedList
 
