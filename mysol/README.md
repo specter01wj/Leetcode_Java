@@ -453,6 +453,7 @@ By Jin Wang
 |1108|**Defanging an IP Address**|Easy|Java/Javascript|Done/Done|
 |1122|**Relative Sort Array**|Easy|Java/Javascript|Done/Done|
 |1128|**Number of Equivalent Domino Pairs**|Easy|Java/Javascript|Done/Done|
+|1137|**N-th Tribonacci Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1154|**Day of the Year**|Easy|Java/Javascript|Done/Done|
 |1160|**Find Words That Can Be Formed by Characters**|Easy|Java/Javascript|Done/Done|
 |1184|**Distance Between Bus Stops**|Easy|Java/Javascript|Done/Done|
