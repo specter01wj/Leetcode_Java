@@ -12,8 +12,8 @@ Given n, return the value of Tn.
 public class E1137_Nth_Tribonacci_Number {
 
 	public static void main(String[] args) {
-		String input = "(()())(())(()(()))";
-        String output = removeOuterParentheses(input);
+		int input = 4;
+        int output = tribonacci(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
@@ -26,7 +26,7 @@ public class E1137_Nth_Tribonacci_Number {
      * @param n: an integer
      * @return: the value of Tn
      */
-	public int tribonacci(int n) {
+	public static int tribonacci(int n) {
         if (n == 0) {
             return 0;
         } else if (n == 1 || n == 2) {
