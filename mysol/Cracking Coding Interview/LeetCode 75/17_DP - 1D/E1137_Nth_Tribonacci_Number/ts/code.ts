@@ -1,27 +1,17 @@
-function combinationSum3(k: number, n: number): number[][] {
-  let result: number[][] = [];
-  backtrack(result, [], k, n, 1);
-  return result;
+function tribonacci(n: number): number {
+  if (n === 0) return 0;
+  if (n === 1 || n === 2) return 1;
+
+  let trib: number[] = [0, 1, 1];
+  for (let i = 3; i <= n; i++) {
+      trib[i] = trib[i - 1] + trib[i - 2] + trib[i - 3];
+  }
+
+  return trib[n];
 };
 
-function backtrack(result: number[][], current: number[], k: number, remain: number, start: number): void {
-  if (remain === 0 && current.length === k) {
-      result.push([...current]);
-      return;
-  }
-
-  for (let i = start; i <= 9; i++) {
-      if (remain - i < 0 || current.length >= k) {
-          break;
-      }
-      current.push(i);
-      backtrack(result, current, k, remain - i, i + 1);
-      current.pop();
-  }
-}
-
-let k = 3, n = 7;
-let output1 = combinationSum3(k, n);
+let input1 = 4;
+let output1 = tribonacci(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
