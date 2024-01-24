@@ -4,39 +4,33 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	On a staircase, the i-th step has some non-negative cost cost[i] 
-				assigned (0 indexed).
+			 	You are given an integer array cost where cost[i] is the 
+        cost of ith step on a staircase. Once you pay the cost, 
+        you can either climb one or two steps.
 
-				Once you pay the cost, you can either climb one or two steps. 
-				You need to find minimum cost to reach the top of the floor, 
-				and you can either start from the step with index 0, or the step with index 1.
+        You can either start from the step with index 0, or the 
+        step with index 1.
 
-				Example 1:
-				Input: cost = [10, 15, 20]
-				Output: 15
-				Explanation: Cheapest is start on cost[1], pay that cost and go to the top.
-
-				Example 2:
-				Input: cost = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
-				Output: 6
-				Explanation: Cheapest is start on cost[0], and only step on 1s, skipping cost[3].
+        Return the minimum cost to reach the top of the floor.
 			 */
 			$(document).ready(function(){
 
 				/**
-		     * @param cost: an array
+		     * @param cost: a list of integers
 		     * @return: minimum cost to reach the top of the floor
 		     */
 				let minCostClimbingStairs = function(cost) {
-					let dp = Array(cost.length + 1).fill();
-					dp[0] = 0;
-					dp[1] = 0;
-					
-					for(let i = 2; i < dp.length; i++) {
-						dp[i] = Math.min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2]);
-					}
-					
-					return dp[cost.length];
+					const n = cost.length;
+          const minCost = new Array(n + 1);
+
+          minCost[0] = 0;
+          minCost[1] = 0;
+
+          for (let i = 2; i <= n; i++) {
+              minCost[i] = Math.min(minCost[i - 1] + cost[i - 1], minCost[i - 2] + cost[i - 2]);
+          }
+
+          return minCost[n];
 				};
 
 				let nums = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1];
