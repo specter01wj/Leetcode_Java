@@ -23,8 +23,8 @@ public class E1137_Nth_Tribonacci_Number {
     */
 	
 	/**
-     * @param s: a string
-     * @return: after removing the outermost parentheses
+     * @param n: an integer
+     * @return: the value of Tn
      */
 	public int tribonacci(int n) {
         if (n == 0) {
