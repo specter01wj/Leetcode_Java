@@ -17,7 +17,15 @@ public class E1137_Nth_Tribonacci_Number {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/**
+     * @param s: a string
+     * @return: after removing the outermost parentheses
+     */
 	public int tribonacci(int n) {
         if (n == 0) {
             return 0;
