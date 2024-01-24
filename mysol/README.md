@@ -222,8 +222,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
-
+|1137|**N-th Tribonacci Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|746|**Min Cost Climbing Stairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
