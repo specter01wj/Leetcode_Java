@@ -20,6 +20,7 @@ let input1 = 3;
 
 
 
+
 let output1 = numTilings(input1);
 
 let webHeading1 = document.querySelector('#t1');
