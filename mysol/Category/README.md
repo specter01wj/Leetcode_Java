@@ -604,7 +604,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |一维||||||
 |70|Climbing Stairs|Easy||Java/Javascript|Done/Done|
-|62|Unique Paths|Medium||Java/Javascript||
+|62|Unique Paths|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |63|Unique Paths II|Medium||Java/Javascript||
 |120|Triangle|Medium|很少考|Java/Javascript||
 |279|Perfect Squares|Medium||Java/Javascript||
@@ -616,6 +616,7 @@ Cspiration Category:
 |198|House Robber|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |790|Domino and Tromino Tiling|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1137|N-th Tribonacci Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|1143|Longest Common Subsequence|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 7. LinkedList
 
