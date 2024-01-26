@@ -4,42 +4,44 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You have two types of tiles: a 2 x 1 domino shape and a tromino shape. 
-        You may rotate these shapes.
+			 	There is a robot on an m x n grid. The robot is initially located 
+        at the top-left corner (i.e., grid[0][0]). 
+        The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). 
+        The robot can only move either down or right at any point in time.
 
-        Given an integer n, return the number of ways to tile an 2 x n board. 
-        Since the answer may be very large, return it modulo 109 + 7.
+        Given the two integers m and n, return the number of possible unique 
+        paths that the robot can take to reach the bottom-right corner.
 
-        In a tiling, every square must be covered by a tile. Two tilings are 
-        different if and only if there are two 4-directionally adjacent cells 
-        on the board such that exactly one of the tilings has both squares 
-        occupied by a tile.
+        The test cases are generated so that the answer will be less than or 
+        equal to 2 * 109.
 			 */
 			$(document).ready(function(){
 
 				/*
+          * @param m: an integer
           * @param n: an integer
-          * @return: the number of ways to tile an 2 x n board
+          * @return: the number of possible unique paths
           */
-				let numTilings = function(n) {
-					const MOD = 1000000007;
-          if (n <= 2) return n;
+				let uniquePaths = function(n) {
+					// Create a 2D array with all elements initialized to 1
+          // It's safe to initialize all elements to 1 because for the first row and the first column,
+          // there's only one way to reach each cell
+          let dp = new Array(m).fill(0).map(() => new Array(n).fill(1));
 
-          let dp = new Array(n + 1).fill(0);
-          dp[0] = 1;
-          dp[1] = 1;
-          dp[2] = 2;
-
-          for (let i = 3; i <= n; i++) {
-              dp[i] = (2 * dp[i - 1] + dp[i - 3]) % MOD;
+          // Compute the number of paths for each cell in the grid
+          for (let i = 1; i < m; i++) {
+              for (let j = 1; j < n; j++) {
+                  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+              }
           }
 
-          return dp[n];
+          // The bottom-right cell contains the total number of unique paths
+          return dp[m - 1][n - 1];
 				};
 
-				let input = 3;
-				let tt1 = numTilings(input);
-				$('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
+				let m = 3, n = 7;
+				let tt1 = uniquePaths(m, n);
+				$('#t1').html('<h2>Inputs: ' + m + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
