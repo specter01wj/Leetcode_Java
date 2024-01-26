@@ -1,21 +1,20 @@
-function numTilings(n: number): number {
-  const MOD: number = 1000000007;
-  if (n <= 2) return n;
+function uniquePaths(m: number, n: number): number {
+  // Create a 2D array with all elements initialized to 1
+  let dp: number[][] = new Array(m).fill(null).map(() => new Array(n).fill(1));
 
-  let dp: number[] = new Array(n + 1).fill(0);
-  dp[0] = 1; // base case for an empty board
-  dp[1] = 1; // only one way to tile a 2x1 board
-  dp[2] = 2; // two ways to tile a 2x2 board
-
-  for (let i = 3; i <= n; i++) {
-      dp[i] = (2 * dp[i - 1] + dp[i - 3]) % MOD;
+  // Compute the number of paths for each cell in the grid
+  for (let i = 1; i < m; i++) {
+      for (let j = 1; j < n; j++) {
+          dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+      }
   }
 
-  return dp[n];
+  // The bottom-right cell contains the total number of unique paths
+  return dp[m - 1][n - 1];
 };
 
-let input1 = 3;
-let output1 = numTilings(input1);
+let m = 3, n = 7;
+let output1 = uniquePaths(m, n);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
