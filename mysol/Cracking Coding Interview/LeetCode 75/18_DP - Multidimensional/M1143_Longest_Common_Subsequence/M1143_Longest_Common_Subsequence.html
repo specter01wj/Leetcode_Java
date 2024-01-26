@@ -4,44 +4,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	There is a robot on an m x n grid. The robot is initially located 
-        at the top-left corner (i.e., grid[0][0]). 
-        The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). 
-        The robot can only move either down or right at any point in time.
+			 	Given two strings text1 and text2, return the length of their longest 
+        common subsequence. If there is no common subsequence, return 0.
 
-        Given the two integers m and n, return the number of possible unique 
-        paths that the robot can take to reach the bottom-right corner.
+        A subsequence of a string is a new string generated from the original 
+        string with some characters (can be none) deleted without changing the 
+        relative order of the remaining characters.
 
-        The test cases are generated so that the answer will be less than or 
-        equal to 2 * 109.
+        .For example, "ace" is a subsequence of "abcde".
+
+        A common subsequence of two strings is a subsequence that is common to both strings.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param m: an integer
-          * @param n: an integer
-          * @return: the number of possible unique paths
+          * @param text1: a string
+          * @param text2: a string
+          * @return: the length of their longest common subsequence
           */
-				let uniquePaths = function(m, n) {
-					// Create a 2D array with all elements initialized to 1
-          // It's safe to initialize all elements to 1 because for the first row and the first column,
-          // there's only one way to reach each cell
-          let dp = new Array(m).fill(0).map(() => new Array(n).fill(1));
+				let longestCommonSubsequence = function(text1, text2) {
+					let m = text1.length;
+          let n = text2.length;
 
-          // Compute the number of paths for each cell in the grid
-          for (let i = 1; i < m; i++) {
-              for (let j = 1; j < n; j++) {
-                  dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+          // Initialize a 2D array with 0s
+          let dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+
+          // Fill the dp table
+          for (let i = 1; i <= m; i++) {
+              for (let j = 1; j <= n; j++) {
+                  if (text1[i - 1] === text2[j - 1]) {
+                      // If characters match, add 1 to the diagonal value
+                      dp[i][j] = dp[i - 1][j - 1] + 1;
+                  } else {
+                      // Otherwise, take the maximum of the left and top values
+                      dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                  }
               }
           }
 
-          // The bottom-right cell contains the total number of unique paths
-          return dp[m - 1][n - 1];
+          // The bottom-right cell contains the length of the longest common subsequence
+          return dp[m][n];
 				};
 
-				let m = 3, n = 7;
-				let tt1 = uniquePaths(m, n);
-				$('#t1').html('<h2>Inputs: ' + m + '<br>Results: ' + tt1 + '</h2>');
+				let text1 = "abcde", text2 = "ace" ;
+				let tt1 = longestCommonSubsequence(text1, text2);
+				$('#t1').html('<h2>Inputs: ' + text1 + '<br>Results: ' + tt1 + '</h2>');
 			});
 
 			/*sol:
