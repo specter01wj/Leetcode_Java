@@ -224,6 +224,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1137|**N-th Tribonacci Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |746|**Min Cost Climbing Stairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|198|**House Robber**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|790|**Domino and Tromino Tiling**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
