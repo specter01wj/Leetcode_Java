@@ -231,7 +231,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|62|**Unique Paths**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1143|**Longest Common Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
@@ -677,6 +678,7 @@ By Jin Wang
 |11|**Container With Most Water**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |17|**Letter Combinations of a Phone Number**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|62|**Unique Paths**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
