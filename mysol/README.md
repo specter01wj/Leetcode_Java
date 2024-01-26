@@ -292,7 +292,7 @@ By Jin Wang
 |195|**Tenth Line**|Easy|Java/Javascript||
 |196|**Delete Duplicate Emails**|Easy|Java/Javascript||
 |197|**Rising Temperature**|Easy|Java/Javascript||
-|198|**House Robber**|Easy|Java/Javascript||
+|198|**House Robber**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |203|**Remove Linked List Elements**|Easy|Java/Javascript||
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
