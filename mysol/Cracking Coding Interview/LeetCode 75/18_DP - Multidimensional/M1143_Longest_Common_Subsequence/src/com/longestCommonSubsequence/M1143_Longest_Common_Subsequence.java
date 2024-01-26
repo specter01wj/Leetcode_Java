@@ -22,7 +22,16 @@ public class M1143_Longest_Common_Subsequence {
         System.out.println("input: " + (text1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/*
+     * @param text1: a string
+     * @param text2: a string
+     * @return: the length of their longest common subsequence
+     */
 	public static int longestCommonSubsequence(String text1, String text2) {
         int m = text1.length();
         int n = text2.length();
