@@ -692,6 +692,7 @@ By Jin Wang
 |547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|790|**Domino and Tromino Tiling**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
