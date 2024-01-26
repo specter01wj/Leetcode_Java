@@ -22,7 +22,15 @@ public class M790_Domino_and_Tromino_Tiling {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/*
+     * @param n: an integer
+     * @return: the number of ways to tile an 2 x n board
+     */
 	private static final int MOD = 1000000007;
     
     public static int numTilings(int n) {
