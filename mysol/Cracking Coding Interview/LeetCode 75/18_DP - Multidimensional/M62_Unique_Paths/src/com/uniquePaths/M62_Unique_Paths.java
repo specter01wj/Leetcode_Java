@@ -22,7 +22,16 @@ public class M62_Unique_Paths {
         System.out.println("input: " + (m) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/*
+     * @param m: an integer
+     * @param n: an integer
+     * @return: the number of possible unique paths
+     */
 	public static int uniquePaths(int m, int n) {
         // Create a 2D array for dynamic programming
         int[][] dp = new int[m][n];
