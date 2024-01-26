@@ -9,8 +9,7 @@ security systems connected and it will automatically contact the police
 if two adjacent houses were broken into on the same night.
 
 Given an integer array nums representing the amount of money of each house, 
-return the maximum amount of money you can rob tonight without 
-alerting the police.
+return the maximum amount of money you can rob tonight without alerting the police.
 */
 
 public class M198_House_Robber {
@@ -21,7 +20,15 @@ public class M198_House_Robber {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum amount of money you can rob tonight without alerting the police
+     */
 	public static int rob(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
