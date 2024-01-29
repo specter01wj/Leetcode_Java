@@ -236,6 +236,14 @@ By Jin Wang
 |714|**Best Time to Buy and Sell Stock with Transaction Fee**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |72|**Edit Distance**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+#### Bit Manipulation
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+
+
+
+
 
 ## by Difficulties
 
