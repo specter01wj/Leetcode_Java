@@ -20,7 +20,16 @@ public class M72_Edit_Distance {
         System.out.println("input: " + (word1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/*
+     * @param word1: a string
+     * @param word1: a string
+     * @return: the minimum number of operations required to convert word1 to word2
+     */
 	public static int minDistance(String word1, String word2) {
         int m = word1.length();
         int n = word2.length();
