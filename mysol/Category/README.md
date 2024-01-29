@@ -613,7 +613,9 @@ Cspiration Category:
 |312|Burst Balloons|Hard||Java/Javascript||
 |322|Coin Change|Medium||Java/Javascript||
 |Missing||||||
+|72|Edit Distance|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |198|House Robber|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|714|Best Time to Buy and Sell Stock with Transaction Fee|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |790|Domino and Tromino Tiling|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1137|N-th Tribonacci Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1143|Longest Common Subsequence|Medium||Java/Javascript/Typescript|Done/Done/Done|
