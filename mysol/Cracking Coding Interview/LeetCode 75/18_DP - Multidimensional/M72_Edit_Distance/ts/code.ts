@@ -1,21 +1,36 @@
-function maxProfit(prices: number[], fee: number): number {
-  if (!prices || prices.length === 0) {
-      return 0;
+function minDistance(word1: string, word2: string): number {
+  let m: number = word1.length;
+  let n: number = word2.length;
+  let dp: number[][] = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+
+  // Initialize the first row and column
+  for (let i = 0; i <= m; i++) {
+      dp[i][0] = i;
+  }
+  for (let j = 0; j <= n; j++) {
+      dp[0][j] = j;
   }
 
-  let cash: number = 0;  // Maximum profit we can have if we do not hold a stock
-  let hold: number = -prices[0];  // Maximum profit we can have if we hold a stock
-
-  for (let i = 1; i < prices.length; i++) {
-      cash = Math.max(cash, hold + prices[i] - fee);  // Sell the stock
-      hold = Math.max(hold, cash - prices[i]);  // Buy the stock
+  // Compute the distances
+  for (let i = 1; i <= m; i++) {
+      for (let j = 1; j <= n; j++) {
+          if (word1.charAt(i - 1) === word2.charAt(j - 1)) {
+              dp[i][j] = dp[i - 1][j - 1]; // No operation needed
+          } else {
+              dp[i][j] = 1 + Math.min(
+                  dp[i - 1][j - 1], // Replace
+                  dp[i - 1][j],     // Delete
+                  dp[i][j - 1]      // Insert
+              );
+          }
+      }
   }
 
-  return cash;
+  return dp[m][n];
 };
 
-let input1 = [1,3,2,8,4,9], fee = 2;
-let output1 = maxProfit(input1, fee);
+let word1 = "horse", word2 = "ros";
+let output1 = minDistance(word1, word2);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
