@@ -22,7 +22,7 @@ function longestCommonSubsequence(text1: string, text2: string): number {
   return dp[m][n];
 };
 
-let text1 = "abcde", text2 = "ace" ;
+let text1 = "abcde", text2 = "ace";
 let output1 = longestCommonSubsequence(text1, text2);
 
 let webHeading1 = document.querySelector('#t1');
