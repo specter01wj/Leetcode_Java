@@ -681,6 +681,7 @@ By Jin Wang
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |17|**Letter Combinations of a Phone Number**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |62|**Unique Paths**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|72|**Edit Distance**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
@@ -700,6 +701,7 @@ By Jin Wang
 |450|**Delete Node in a BST**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|714|**Best Time to Buy and Sell Stock with Transaction Fee**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |790|**Domino and Tromino Tiling**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
