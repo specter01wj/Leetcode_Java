@@ -19,7 +19,16 @@ public class M714_Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Dynamic Programming
+    */
 	
+	/*
+     * @param prices: a list of integers
+     * @param fee: an integer
+     * @return: the maximum profit you can achieve
+     */
 	public static int maxProfit(int[] prices, int fee) {
         if (prices == null || prices.length == 0) {
             return 0;
