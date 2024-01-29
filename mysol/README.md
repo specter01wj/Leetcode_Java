@@ -233,6 +233,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |62|**Unique Paths**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1143|**Longest Common Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|714|**Best Time to Buy and Sell Stock with Transaction Fee**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|72|**Edit Distance**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
