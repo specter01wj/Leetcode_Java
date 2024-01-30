@@ -721,6 +721,7 @@ By Jin Wang
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1143|**Longest Common Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|**Maximum Level Sum of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1318|**Minimum Flips to Make a OR b Equal to c**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1448|**Count Good Nodes in Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
