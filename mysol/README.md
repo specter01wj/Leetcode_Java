@@ -240,7 +240,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|338|**Counting Bits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|136|**Single Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
