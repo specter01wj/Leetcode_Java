@@ -752,6 +752,8 @@ Cspiration Category:
 |190|Reverse Bits|Easy||Java/Javascript|Done/Done|
 |137|Single Number II|Medium||Java/Javascript||
 |260|Single Number III|Medium||Java/Javascript||
+|Missing||||||
+|1318|Minimum Flips to Make a OR b Equal to c|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 13. Topological Sort
 
