@@ -1,21 +1,15 @@
-function countBits(n: number): number[] {
-  const ans: number[] = new Array(n + 1);
+function singleNumber(nums: number[]): number {
+  let single: number = 0;
 
-  for (let i = 0; i <= n; i++) {
-      ans[i] = countOnes(i);
+  for (let num of nums) {
+      single ^= num;
   }
 
-  return ans;
-
-  
+  return single;
 };
 
-function countOnes(num: number): number {
-    return num.toString(2).split('1').length - 1;
-}
-
-let input1 = 5;
-let output1 = countBits(input1);
+let input1 = [4,1,2,1,2];
+let output1 = singleNumber(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
