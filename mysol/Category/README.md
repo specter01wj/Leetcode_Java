@@ -739,13 +739,13 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |389|Find the Difference|Easy||Java/Javascript|Done/Done|
-|136|Single Number|Easy||Java/Javascript|Done/Done|
+|136|Single Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |318|Maximum Product of Word Lengths|Medium||Java/Javascript||
 |很少考||||||
 |393|UTF-8 Validation|Medium||Java/Javascript||
 |201|Bitwise AND of Numbers Range|Medium||Java/Javascript||
 |371|Sum of Two Integers|Easy||Java/Javascript|Done/Done|
-|338|Counting Bits|Medium||Java/Javascript||
+|338|Counting Bits|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |89|Gray Code|Medium||Java/Javascript||
 |268|Missing Number|Easy||Java/Javascript|Done/Done|
 |191|Number of 1 Bits|Easy||Java/Javascript|Done/Done|
