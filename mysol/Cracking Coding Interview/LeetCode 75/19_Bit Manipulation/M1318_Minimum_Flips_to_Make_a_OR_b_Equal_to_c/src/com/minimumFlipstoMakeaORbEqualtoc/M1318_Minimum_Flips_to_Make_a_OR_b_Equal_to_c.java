@@ -17,7 +17,17 @@ public class M1318_Minimum_Flips_to_Make_a_OR_b_Equal_to_c {
         System.out.println("input: " + (a) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Bit Manipulation
+    */
 	
+	/*
+     * @param a: an integer
+     * @param b: an integer
+     * @param c: an integer
+     * @return: the minimum flips required in some bits of a and b to make ( a OR b == c )
+     */
 	public static int minFlips(int a, int b, int c) {
         int flips = 0;
 
