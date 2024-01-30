@@ -17,7 +17,15 @@ public class E136_Single_Number {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Bit Manipulation
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: find that single one
+     */
 	public static int singleNumber(int[] nums) {
         int single = 0;
 
