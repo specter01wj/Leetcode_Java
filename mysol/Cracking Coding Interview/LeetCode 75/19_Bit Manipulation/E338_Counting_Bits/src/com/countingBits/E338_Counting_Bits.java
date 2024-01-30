@@ -15,7 +15,15 @@ public class E338_Counting_Bits {
         System.out.println("input: " + (input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Bit Manipulation
+    */
 	
+	/*
+     * @param n: an integer
+     * @return: an array ans of length n + 1
+     */
 	public static int[] countBits(int n) {
         int[] ans = new int[n + 1];
         
