@@ -1,21 +1,27 @@
-function countBits(n: number): number[] {
-  const ans: number[] = new Array(n + 1);
+function minFlips(a: number, b: number, c: number): number {
+  let flips = 0;
 
-  for (let i = 0; i <= n; i++) {
-      ans[i] = countOnes(i);
+  while (a > 0 || b > 0 || c > 0) {
+      let lastBitA = a & 1;
+      let lastBitB = b & 1;
+      let lastBitC = c & 1;
+
+      // Check if the current bits of a and b do not match the bit in c
+      if ((lastBitA | lastBitB) !== lastBitC) {
+          flips += (lastBitC === 0) ? (lastBitA + lastBitB) : 1;
+      }
+
+      // Move to the next set of bits
+      a >>= 1;
+      b >>= 1;
+      c >>= 1;
   }
 
-  return ans;
-
-  
+  return flips;
 };
 
-function countOnes(num: number): number {
-    return num.toString(2).split('1').length - 1;
-}
-
-let input1 = 5;
-let output1 = countBits(input1);
+let a = 2, b = 6, c = 5;
+let output1 = minFlips(a, b, c);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
