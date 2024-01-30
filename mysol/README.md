@@ -242,6 +242,7 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |338|**Counting Bits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |136|**Single Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1318|**Minimum Flips to Make a OR b Equal to c**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
