@@ -285,7 +285,7 @@ By Jin Wang
 |121|**Best Time to Buy and Sell Stock**|Easy|Java/Javascript|Done/Done|
 |122|**Best Time to Buy and Sell Stock II**|Easy|Java/Javascript|Done/Done|
 |125|**Valid Palindrome**|Easy|Java/Javascript|Done/Done|
-|136|**Single Number**|Easy|Java/Javascript|Done/Done|
+|136|**Single Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |141|**Linked List Cycle**|Easy|Java/Javascript|Done/|
 |155|**Min Stack**|Easy|Java/Javascript|Done/|
 |157|**Read N Characters Given Read4**|Easy|Java/Javascript|Done/Done|
@@ -345,6 +345,7 @@ By Jin Wang
 |299|**Bulls and Cows**|Easy|Java/Javascript||
 |303|**Range Sum Query - Immutable**|Easy|Java/Javascript||
 |326|**Power of Three**|Easy|Java/Javascript|Done/Done|
+|338|**Counting Bits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |339|**Nested List Weight Sum**|Easy|Java/Javascript||
 |342|**Power of Four**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
