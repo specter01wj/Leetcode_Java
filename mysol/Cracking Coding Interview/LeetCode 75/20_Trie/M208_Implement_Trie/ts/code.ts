@@ -1,28 +1,70 @@
-function minFlips(a: number, b: number, c: number): number {
-  let flips = 0;
+class TrieNode {
+  children: { [key: string]: TrieNode };
+  isEndOfWord: boolean;
 
-  while (a > 0 || b > 0 || c > 0) {
-      let lastBitA = a & 1;
-      let lastBitB = b & 1;
-      let lastBitC = c & 1;
+  constructor() {
+      this.children = {};
+      this.isEndOfWord = false;
+  }
+}
 
-      // Check if the current bits of a and b do not match the bit in c
-      if ((lastBitA | lastBitB) !== lastBitC) {
-          flips += (lastBitC === 0) ? (lastBitA + lastBitB) : 1;
-      }
+class Trie {
+  private root: TrieNode;
 
-      // Move to the next set of bits
-      a >>= 1;
-      b >>= 1;
-      c >>= 1;
+  constructor() {
+      this.root = new TrieNode();
   }
 
-  return flips;
-};
+  insert(word: string): void {
+      let node = this.root;
+      for (let char of word) {
+          if (!node.children[char]) {
+              node.children[char] = new TrieNode();
+          }
+          node = node.children[char];
+      }
+      node.isEndOfWord = true;
+  }
 
-let a = 2, b = 6, c = 5;
-let output1 = minFlips(a, b, c);
+  search(word: string): boolean {
+      const node = this.searchPrefix(word);
+      return node !== null && node.isEndOfWord;
+  }
+
+  startsWith(prefix: string): boolean {
+      return this.searchPrefix(prefix) !== null;
+  }
+
+  private searchPrefix(word: string): TrieNode | null {
+      let node = this.root;
+      for (let char of word) {
+          if (node.children[char]) {
+              node = node.children[char];
+          } else {
+              return null;
+          }
+      }
+      return node;
+  }
+}
+
+let trie = new Trie();
+trie.insert("apple");
+let output1 = trie.search("apple");   // returns true
+let output2 = trie.search("app");     // returns false
+let output3 = trie.startsWith("app"); // returns true
+trie.insert("app");
+let output4 = trie.search("app");     // returns true
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
+
+let webHeading2 = document.querySelector('#t2');
+webHeading2.textContent = 'Output: ' + JSON.stringify(output2);
+
+let webHeading3 = document.querySelector('#t3');
+webHeading3.textContent = 'Output: ' + JSON.stringify(output3);
+
+let webHeading4 = document.querySelector('#t4');
+webHeading4.textContent = 'Output: ' + JSON.stringify(output4);
 
