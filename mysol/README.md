@@ -248,7 +248,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|208|**Implement Trie (Prefix Tree)**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1268|**Search Suggestions System**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 
