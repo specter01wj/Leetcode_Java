@@ -22,7 +22,16 @@ public class M1268_Search_Suggestions_System {
         System.out.println("Test Case 1: " + result1);
 	}
 	
+	/*
+    solution:
+    Trie
+    */
 	
+	/*
+     * @param products: a list of strings
+     * @param searchWord: a string
+     * @return: a list of lists of the suggested products after each character of searchWord is typed
+     */
 	private static class TrieNode {
         Map<Character, TrieNode> children;
         List<String> suggestions;
