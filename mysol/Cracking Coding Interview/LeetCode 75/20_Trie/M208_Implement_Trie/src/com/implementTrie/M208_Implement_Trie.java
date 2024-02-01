@@ -29,7 +29,15 @@ public class M208_Implement_Trie {
         System.out.println("Search 'app' after insert: " + trie.search("app")); // should return true
 	}
 	
+	/*
+    solution:
+    Trie
+    */
 	
+	/*
+     * @param Trie: Trie
+     * @return: Implement the Trie class
+     */
 	static class Trie {
 	    private class TrieNode {
 	        private TrieNode[] children;
