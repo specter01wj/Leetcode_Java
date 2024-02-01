@@ -703,6 +703,7 @@ By Jin Wang
 |151|**Reverse Words in a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |162|**Find Peak Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |199|**Binary Tree Right Side View**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|208|**Implement Trie (Prefix Tree)**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |215|**Kth Largest Element in an Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |216|**Combination Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |220|**Contains Duplicate III**|Medium|Java/Javascript|Done/|
@@ -727,6 +728,7 @@ By Jin Wang
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1143|**Longest Common Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|**Maximum Level Sum of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1268|**Search Suggestions System**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1318|**Minimum Flips to Make a OR b Equal to c**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1448|**Count Good Nodes in Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
