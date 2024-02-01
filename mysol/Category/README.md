@@ -807,8 +807,10 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |211|Add and Search Word - Data structure design|Medium||Java/Javascript||
-|208|Implement Trie (Prefix Tree)|Medium||Java/Javascript||
+|208|Implement Trie (Prefix Tree)|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |212|Word Search II|Hard||Java/Javascript||
+|Missing||||||
+|1268|Search Suggestions System|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 18. Design
 
