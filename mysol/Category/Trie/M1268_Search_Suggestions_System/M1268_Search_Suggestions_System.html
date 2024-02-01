@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an array of strings products and a string searchWord.
+
+        Design a system that suggests at most three product names from products 
+        after each character of searchWord is typed. Suggested products should 
+        have common prefix with searchWord. If there are more than three products 
+        with a common prefix return the three lexicographically minimums products.
+
+        Return a list of lists of the suggested products after each character of 
+        searchWord is typed.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param products: a list of strings
+          * @param searchWord: a string
+          * @return: a list of lists of the suggested products after each character of searchWord is typed
+          */
+        let suggestedProducts = function(products, searchWord) {
+          products.sort();
+          const root = buildTrie(products);
+          const result = [];
+          let node = root;
+
+          for (let char of searchWord) {
+              if (node) {
+                  node = node.children[char];
+              }
+              result.push(node ? node.suggestions : []);
+          }
+
+          return result;
+        };
+
+        function TrieNode() {
+            this.children = {};
+            this.suggestions = [];
+        }
+
+        function buildTrie(products) {
+            const root = new TrieNode();
+            products.forEach(product => {
+                let node = root;
+                for (let char of product) {
+                    if (!node.children[char]) {
+                        node.children[char] = new TrieNode();
+                    }
+                    node = node.children[char];
+                    if (node.suggestions.length < 3) {
+                        node.suggestions.push(product);
+                    }
+                }
+            });
+            return root;
+        }
+
+        let input = ["mobile","mouse","moneypot","monitor","mousepad"];
+        let searchWord = "mouse";
+        let tt1 = suggestedProducts(input, searchWord);
+        $('#t1').html('<h2>Inputs: ' + input + '<br>Results: ' + tt1 + '</h2>');
+			});
+
+			/*sol:
+        Trie
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
