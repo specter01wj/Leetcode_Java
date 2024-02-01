@@ -20,7 +20,6 @@ Implement the Trie class:
 public class M208_Implement_Trie {
 
 	public static void main(String[] args) {
-		String[] input = {"Trie", "insert", "search", "search", "startsWith", "insert", "search"};
 		Trie trie = new Trie();
 		trie.insert("apple");
         System.out.println("Search 'apple': " + trie.search("apple"));   // should return true
@@ -28,7 +27,6 @@ public class M208_Implement_Trie {
         System.out.println("Starts with 'app': " + trie.startsWith("app")); // should return true
         trie.insert("app");
         System.out.println("Search 'app' after insert: " + trie.search("app")); // should return true
-//        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
 	
