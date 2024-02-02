@@ -95,7 +95,9 @@ Cspiration Category:
 |215|Kth Largest Element in an Array|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |414|Third Maximum Number|Easy||Java/Javascript|Done/Done|
 |422|Valid Word Square|Easy||Java/Javascript||
+|435|Non-overlapping Intervals|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript|Done/Done|
+|452|Minimum Number of Arrows to Burst Balloons|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |455|Assign Cookies|Easy||Java/Javascript|Done/Done|
 |463|Island Perimeter|Easy||Java/Javascript|Done/Done|
 |485|Max Consecutive Ones|Easy||Java/Javascript|Done/Done|
