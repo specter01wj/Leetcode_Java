@@ -15,7 +15,15 @@ public class M435_Nonoverlapping_Intervals {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Intervals
+    */
 	
+	/*
+     * @param intervals: a list of 2D integers
+     * @return: the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping
+     */
 	public static int eraseOverlapIntervals(int[][] intervals) {
         if (intervals.length == 0) return 0;
         
