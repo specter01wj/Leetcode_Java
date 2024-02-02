@@ -26,7 +26,15 @@ public class M452_Minimum_Number_of_Arrows_to_Burst_Balloons {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Intervals
+    */
 	
+	/*
+     * @param points: a list of 2D integers
+     * @return: the minimum number of arrows that must be shot to burst all balloons
+     */
 	public static int findMinArrowShots(int[][] points) {
         if (points == null || points.length == 0) {
             return 0;
