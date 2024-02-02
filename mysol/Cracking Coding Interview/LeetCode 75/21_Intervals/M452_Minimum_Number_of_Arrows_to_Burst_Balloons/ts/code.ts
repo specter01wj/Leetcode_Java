@@ -1,30 +1,30 @@
-function eraseOverlapIntervals(intervals: number[][]): number {
-  // If there are no intervals, return 0
-  if (intervals.length === 0) return 0;
-  
-  // Sort intervals by their end time
-  intervals.sort((a, b) => a[1] - b[1]);
-  
-  let count = 0; // To keep track of intervals to remove
-  let end = intervals[0][1]; // Initialize end to the end time of the first interval
-  
-  // Start from the second interval
-  for (let i = 1; i < intervals.length; i++) {
-      // If the start time of the current interval is less than the end time of the previous interval,
-      // it means they overlap, so we need to remove an interval.
-      if (intervals[i][0] < end) {
-          count++;
-      } else {
-          // If they don't overlap, update the end to the end time of the current interval
-          end = intervals[i][1];
-      }
+function findMinArrowShots(points: number[][]): number {
+  if (points.length === 0) {
+      return 0;
   }
   
-  return count;
+  // Sort the points array based on the end position of each interval
+  points.sort((a, b) => a[1] - b[1]);
+  
+  let arrows = 1; // Start with one arrow
+  let arrowPos = points[0][1]; // Position the first arrow at the end of the first balloon
+  
+  for (let i = 1; i < points.length; i++) {
+      // If the current balloon starts after the arrow position,
+      // it means a new arrow is needed for this and potentially following balloons
+      if (points[i][0] > arrowPos) {
+          arrows++;
+          arrowPos = points[i][1]; // Update the arrow position to the end of the current balloon
+      }
+      // If the current balloon starts before or at the arrow position,
+      // it is already burst by the current arrow, so we do nothing
+  }
+  
+  return arrows;
 };
 
-let input1 = [[1,2],[2,3],[3,4],[1,3]];
-let output1 = eraseOverlapIntervals(input1);
+let input1 = [[10,16],[2,8],[1,6],[7,12]];
+let output1 = findMinArrowShots(input1);
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
