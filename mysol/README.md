@@ -255,7 +255,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|435|**Non-overlapping Intervals**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|452|**Minimum Number of Arrows to Burst Balloons**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ## by Difficulties
