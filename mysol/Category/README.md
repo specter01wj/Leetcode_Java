@@ -734,6 +734,9 @@ Cspiration Category:
 |227|Basic Calculator II|Medium||Java/Javascript||
 |385|Mini Parser|Medium||Java/Javascript||
 |84|Largest Rectangle in Histogram|Hard||Java/Javascript||
+|Missing||||||
+|739|Daily Temperatures|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|901|Online Stock Span|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 12. Bit Manipulation
 
