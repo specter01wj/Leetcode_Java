@@ -1,21 +1,33 @@
-function dailyTemperatures(temperatures: number[]): number[] {
-  let answer: number[] = new Array(temperatures.length).fill(0);
-  let stack: number[] = []; // This stack will store indices
+class StockSpanner {
+  private stack: Array<[number, number]>;
 
-  for (let i = 0; i < temperatures.length; i++) {
-      // Check if current temperature is higher than the last stacked temperature
-      while (stack.length !== 0 && temperatures[i] > temperatures[stack[stack.length - 1]]) {
-          let index: number = stack.pop()!;
-          answer[index] = i - index;
-      }
-      stack.push(i);
+  constructor() {
+      this.stack = [];
   }
 
-  return answer;
-};
+  next(price: number): number {
+      let span: number = 1; // The span is at least 1 for the current price
+      // While the stack is not empty and the current price is greater or equal
+      // to the price at the top of the stack
+      while (this.stack.length > 0 && this.stack[this.stack.length - 1][0] <= price) {
+          // Add the span of the popped element to the current span
+          span += this.stack.pop()![1];
+      }
+      // Push the current price and its span onto the stack
+      this.stack.push([price, span]);
+      return span;
+  }
+}
 
-let input1 = [73,74,75,71,69,72,76,73];
-let output1 = dailyTemperatures(input1);
+let obj = new StockSpanner();
+let output1 = [];
+output1.push(obj.next(100)); // Output: 1
+output1.push(obj.next(80));  // Output: 1
+output1.push(obj.next(60));  // Output: 1
+output1.push(obj.next(70));  // Output: 2
+output1.push(obj.next(60));  // Output: 1
+output1.push(obj.next(75));  // Output: 4
+output1.push(obj.next(85));  // Output: 6
 
 let webHeading1 = document.querySelector('#t1');
 webHeading1.textContent = 'Output: ' + JSON.stringify(output1);
