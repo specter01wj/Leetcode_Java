@@ -262,7 +262,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|739|**Daily Temperatures**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|901|**Online Stock Span**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 ## by Difficulties
 
