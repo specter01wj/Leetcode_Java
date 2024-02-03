@@ -37,7 +37,15 @@ public class M901_Online_Stock_Span {
         System.out.println(stockSpanner.next(85));  // Output: 6
 	}
 	
+	/*
+    solution:
+    Monotonic Stack
+    */
 	
+	/*
+     * @param StockSpanner: StockSpanner
+     * @return: the span of that stock's price for the current day
+     */
 	static class StockSpanner {
 	    private Stack<int[]> stack;
 
