@@ -16,7 +16,15 @@ public class M739_Daily_Temperatures {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Monotonic Stack
+    */
 	
+	/*
+     * @param temperatures: a list of integers
+     * @return: an array answer
+     */
 	public static int[] dailyTemperatures(int[] temperatures) {
         int[] answer = new int[temperatures.length];
         java.util.Stack<Integer> stack = new java.util.Stack<>();
