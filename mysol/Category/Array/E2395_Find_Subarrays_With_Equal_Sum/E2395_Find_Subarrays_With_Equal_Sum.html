@@ -32,6 +32,21 @@
           return false;
 				};
 
+
+				let findSubarrays_2 = function(nums) {
+					let seenSums = {};
+
+          for (let i = 0; i < nums.length - 1; i++) {
+              let sum = nums[i] + nums[i + 1];
+              if (seenSums[sum]) {
+                  return true;
+              }
+              seenSums[sum] = true;
+          }
+
+          return false;
+				};
+
 				let input = [4,2,4];
 				let tt1 = findSubarrays(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
