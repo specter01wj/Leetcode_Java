@@ -1,6 +1,18 @@
 package com.twoSumIIIDatastructuredesign;
 import java.util.*;
 
+/*
+Design a data structure that accepts a stream of integers and checks 
+if it has a pair of integers that sum up to a particular value.
+
+Implement the TwoSum class:
+
+. TwoSum() Initializes the TwoSum object, with an empty array initially.
+. void add(int number) Adds number to the data structure.
+. boolean find(int value) Returns true if there exists any pair of numbers 
+  whose sum is equal to value, otherwise, it returns false.
+*/
+
 public class E170_Two_Sum_III_Data_structure_design {
 
 	public static void main(String[] args) {
@@ -14,7 +26,15 @@ public class E170_Two_Sum_III_Data_structure_design {
         System.out.println(twoSum.find(7)); // return false
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param : a list of integers
+     * @return: checks if it has a pair of integers that sum up to a particular value
+     */
 	private Map<Integer, Integer> numCounts;
     
     public E170_Two_Sum_III_Data_structure_design() {
