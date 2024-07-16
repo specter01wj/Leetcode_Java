@@ -4,56 +4,75 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a 0-indexed integer array nums, determine whether 
-        there exist two subarrays of length 2 with equal sum. 
-        Note that the two subarrays must begin at different indices.
+			 	Design a data structure that accepts a stream of integers and checks 
+        if it has a pair of integers that sum up to a particular value.
 
-        Return true if these subarrays exist, and false otherwise.
+        Implement the TwoSum class:
 
-        A subarray is a contiguous non-empty sequence of elements within an array.
+        . TwoSum() Initializes the TwoSum object, with an empty array initially.
+        . void add(int number) Adds number to the data structure.
+        . boolean find(int value) Returns true if there exists any pair of numbers 
+          whose sum is equal to value, otherwise, it returns false.
 			 */
 			$(document).ready(function(){
 
 				/*
-        * @param nums: a list of integers
-        * @return: true if these subarrays exist, and false otherwise
+        * @param : a list of integers
+        * @return: checks if it has a pair of integers that sum up to a particular value
         */
-				let findSubarrays = function(nums) {
-					let seenSums = new Set();
-          
-          for (let i = 0; i < nums.length - 1; i++) {
-            let sum = nums[i] + nums[i + 1];
-            if (seenSums.has(sum)) {
-              return true;
+        let TwoSum = function() {
+            this.numCounts = new Map();
+        };
+
+        /** 
+         * @param {number} number
+         * @return {void}
+         */
+        TwoSum.prototype.add = function(number) {
+            if (this.numCounts.has(number)) {
+                this.numCounts.set(number, this.numCounts.get(number) + 1);
+            } else {
+                this.numCounts.set(number, 1);
             }
-            seenSums.add(sum);
-          }
-          
-          return false;
-				};
+        };
 
+        /** 
+         * @param {number} value
+         * @return {boolean}
+         */
+        TwoSum.prototype.find = function(value) {
+            for (let [key, count] of this.numCounts) {
+                let complement = value - key;
+                if (complement === key) {
+                    if (count > 1) {
+                        return true;
+                    }
+                } else {
+                    if (this.numCounts.has(complement)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
 
-				let findSubarrays_2 = function(nums) {
-					let seenSums = {};
+        TwoSum.prototype.toString = function() {
+            const obj = {};
+            for (let [key, value] of this.numCounts) {
+                obj[key] = value;
+            }
+            return JSON.stringify(obj);
+        };
 
-          for (let i = 0; i < nums.length - 1; i++) {
-              let sum = nums[i] + nums[i + 1];
-              if (seenSums[sum]) {
-                  return true;
-              }
-              seenSums[sum] = true;
-          }
-
-          return false;
-				};
-
-				let input = [4,2,4];
-				let tt1 = findSubarrays(input);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+				let obj = new TwoSum();
+        obj.add(1);   // [] --> [1]
+        obj.add(3);   // [1] --> [1, 3]
+        obj.add(5);   // [1, 3] --> [1, 3, 5]
+				$('#t1').html('<h2>Input: ' + obj.toString() + '<br>Results: ' + (obj.find(4)) + ',' +obj.find(7) + '</h2>');
 			});
 
 			/*sol:
-				use HashSet
+				HashMap
 			 */
 
 		</script>
