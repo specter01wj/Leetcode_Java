@@ -45,6 +45,5 @@ obj.add(3);   // [1] --> [1, 3]
 obj.add(5);   // [1, 3] --> [1, 3, 5]
 
 let webHeading = document.querySelector('#t1');
-webHeading.textContent = 'Output: ' + obj.toString();
-
+webHeading.textContent = "input: " + obj.toString() + 'Output: ' + '(4)' + obj.find(4) + '(7)' + obj.find(7);
 
