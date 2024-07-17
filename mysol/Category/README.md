@@ -830,7 +830,7 @@ Cspiration Category:
 |284|Peeking Iterator|Medium||Java/Javascript||
 |251|Flatten 2D Vector|Medium||Java/Javascript||
 |288|Unique Word Abbreviation|Medium||Java/Javascript||
-|170|Two Sum III - Data structure design|Easy||Java/Javascript||
+|170|Two Sum III - Data structure design|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |348|Design Tic-Tac-Toe|Medium||Java/Javascript||
 |379|Design Phone Directory|Medium||Java/Javascript||
 |353|Design Snake Game|Medium||Java/Javascript||

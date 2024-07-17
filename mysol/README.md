@@ -313,7 +313,7 @@ By Jin Wang
 |167|**Two Sum II - Input array is sorted**|Easy|Java/Javascript|Done/Done|
 |168|**Excel Sheet Column Title**|Easy|Java/Javascript|Done/Done|
 |169|**Majority Element**|Easy|Java/Javascript|Done/Done|
-|170|**Two Sum III - Data structure design**|Easy|Java/Javascript||
+|170|**Two Sum III - Data structure design**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |171|**Excel Sheet Column Number**|Easy|Java/Javascript|Done/Done|
 |172|**Factorial Trailing Zeroes**|Easy|Java/Javascript|Done/Done|
 |175|**Combine Two Tables**|Easy|Java/Javascript||
