@@ -10,7 +10,7 @@ could attend all meetings.
 public class E252_Meeting_Rooms {
 
 	public static void main(String[] args) {
-		int[][] input = { {0, 30}, {5, 10}, {15, 20} };
+		int[][] input = { {7, 10}, {2, 4} };
 		boolean output = canAttendMeetings(input);
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
@@ -18,7 +18,7 @@ public class E252_Meeting_Rooms {
 	
 	/*
     solution:
-    count good triplets
+    Sorting
     */
 	
 	/*
