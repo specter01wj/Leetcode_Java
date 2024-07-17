@@ -1,22 +1,50 @@
 
-function findSubarrays(nums: number[]): boolean {
-  let seenSums: Set<number> = new Set();
+class TwoSum {
+  private numCounts: Map<number, number>;
 
-  for (let i = 0; i < nums.length - 1; i++) {
-      let sum = nums[i] + nums[i + 1];
-      if (seenSums.has(sum)) {
-          return true;
-      }
-      seenSums.add(sum);
+  constructor() {
+      this.numCounts = new Map<number, number>();
   }
 
-  return false;
+  add(number: number): void {
+      if (this.numCounts.has(number)) {
+          this.numCounts.set(number, this.numCounts.get(number)! + 1);
+      } else {
+          this.numCounts.set(number, 1);
+      }
+  }
+
+  find(value: number): boolean {
+      for (let [key, count] of this.numCounts) {
+          let complement = value - key;
+          if (complement === key) {
+              if (count > 1) {
+                  return true;
+              }
+          } else {
+              if (this.numCounts.has(complement)) {
+                  return true;
+              }
+          }
+      }
+      return false;
+  }
+
+  toString(): string {
+      const obj: { [key: number]: number } = {};
+      for (let [key, value] of this.numCounts) {
+          obj[key] = value;
+      }
+      return JSON.stringify(obj);
+  }
 }
 
-let nums = [4,2,4];
-let output = findSubarrays(nums);
+const obj = new TwoSum();
+obj.add(1);   // [] --> [1]
+obj.add(3);   // [1] --> [1, 3]
+obj.add(5);   // [1, 3] --> [1, 3, 5]
 
 let webHeading = document.querySelector('#t1');
-webHeading.textContent = 'Output: ' + output.toString();
+webHeading.textContent = 'Output: ' + obj.toString();
 
 
