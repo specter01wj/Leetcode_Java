@@ -57,7 +57,7 @@ Cspiration Category:
 |Interval||||||
 |57|Insert Interval|Hard||Java/Javascript||
 |56|Merge Intervals|Medium||Java/Javascript||
-|252|Meeting Rooms|Easy||Java/Javascript||
+|252|Meeting Rooms|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |253|Meeting Rooms II|Medium||Java/Javascript||
 |352|Data Stream as Disjoint Intervals|Hard|TreeMap|Java/Javascript||
 |Counter||||||

@@ -347,7 +347,7 @@ By Jin Wang
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|
 |243|**Shortest Word Distance**|Easy|Java/Javascript|Done/Done|
 |246|**Strobogrammatic Number**|Easy|Java/Javascript||
-|252|**Meeting Rooms**|Easy|Java/Javascript||
+|252|**Meeting Rooms**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |256|**Paint House**|Easy|Java/Javascript||
 |257|**Binary Tree Paths**|Easy|Java/Javascript||
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
