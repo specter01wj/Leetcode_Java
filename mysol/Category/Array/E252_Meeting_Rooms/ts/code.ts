@@ -1,49 +1,21 @@
 
-class TwoSum {
-  private numCounts: Map<number, number>;
-
-  constructor() {
-      this.numCounts = new Map<number, number>();
-  }
-
-  add(number: number): void {
-      if (this.numCounts.has(number)) {
-          this.numCounts.set(number, this.numCounts.get(number)! + 1);
-      } else {
-          this.numCounts.set(number, 1);
+function canAttendMeetings(intervals: number[][]): boolean {
+  // Sort the intervals by start time
+  intervals.sort((a, b) => a[0] - b[0]);
+    
+  // Check for any overlapping intervals
+  for (let i = 1; i < intervals.length; i++) {
+      if (intervals[i][0] < intervals[i - 1][1]) {
+          return false; // Found overlapping intervals
       }
   }
-
-  find(value: number): boolean {
-      for (let [key, count] of this.numCounts) {
-          let complement = value - key;
-          if (complement === key) {
-              if (count > 1) {
-                  return true;
-              }
-          } else {
-              if (this.numCounts.has(complement)) {
-                  return true;
-              }
-          }
-      }
-      return false;
-  }
-
-  toString(): string {
-      const obj: { [key: number]: number } = {};
-      for (let [key, value] of this.numCounts) {
-          obj[key] = value;
-      }
-      return JSON.stringify(obj);
-  }
+  
+  return true; // No overlapping intervals found
 }
 
-const obj = new TwoSum();
-obj.add(1);   // [] --> [1]
-obj.add(3);   // [1] --> [1, 3]
-obj.add(5);   // [1, 3] --> [1, 3, 5]
+let nums: number[][] = [[7, 10], [2, 4]];
+let output = canAttendMeetings(nums);
 
 let webHeading = document.querySelector('#t1');
-webHeading.textContent = "input: " + obj.toString() + 'Output: ' + '(4)' + obj.find(4) + '(7)' + obj.find(7);
+webHeading.textContent = 'Output: ' + output.toString();
 
