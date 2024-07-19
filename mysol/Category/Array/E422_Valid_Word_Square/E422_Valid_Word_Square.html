@@ -4,54 +4,43 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a stream of integers and a window size, calculate 
-        the moving average of all integers in the sliding window.
+			 	Given an array of strings words, return true if it forms a valid word square.
 
-        Implement the MovingAverage class:
-
-        . MovingAverage(int size) Initializes the object with the size of the window size.
-        . double next(int val) Returns the moving average of the last size values of the stream.
+        A sequence of strings forms a valid word square if the kth row and column 
+        read the same string, where 0 <= k < max(numRows, numColumns).
 			 */
 			$(document).ready(function(){
 
 				/**
-         * @param {number} size
+         * @param {string[]} words
+         * @return {boolean}
          */
-        let MovingAverage = function(size) {
-            this.size = size;
-            this.queue = [];
-            this.sum = 0;
+        let validWordSquare = function(words) {
+          if (!words || words.length === 0) {
+              return true;
+          }
+
+          let numRows = words.length;
+
+          for (let i = 0; i < numRows; i++) {
+              let row = words[i];
+              for (let j = 0; j < row.length; j++) {
+                  // Check if j-th row exists and is long enough
+                  if (j >= numRows || i >= words[j].length) {
+                      return false;
+                  }
+                  // Compare characters
+                  if (row[j] !== words[j][i]) {
+                      return false;
+                  }
+              }
+          }
+          return true;
         };
 
-        /** 
-         * @param {number} val
-         * @return {number}
-         */
-        MovingAverage.prototype.next = function(val) {
-            if (this.queue.length === this.size) {
-                this.sum -= this.queue.shift();
-            }
-            this.queue.push(val);
-            this.sum += val;
-            return this.sum / this.queue.length;
-        };
-
-        /** 
-         * Convert the internal state to a string
-         * @return {string}
-         */
-        MovingAverage.prototype.toString = function() {
-            const obj = {
-                size: this.size,
-                queue: this.queue,
-                sum: this.sum
-            };
-            return JSON.stringify(obj);
-        };
-
-				let obj = new MovingAverage(3);
-				$('#t1').html('<h2>Input: ' + obj.toString() + 
-          '<br>Results: ' + (obj.next(1)) + ', ' + (obj.next(10)) + ', ' + obj.next(3) + ', ' + obj.next(5) + '</h2>');
+				let input = ["abcd","bnrt","crmy","dtye"];
+				let tt1 = validWordSquare(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
 			});
 
 			/*sol:
