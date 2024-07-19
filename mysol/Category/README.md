@@ -824,7 +824,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
 |359|Logger Rate Limiter|Easy||Java/Javascript||
-|346|Moving Average from Data Stream|Easy|Sliding Window|Java/Javascript||
+|346|Moving Average from Data Stream|Easy|Sliding Window|Java/Javascript/Typescript|Done/Done/Done|
 |362|Design Hit Counter|Medium||Java/Javascript||
 |281|Zigzag Iterator|Medium||Java/Javascript||
 |284|Peeking Iterator|Medium||Java/Javascript||

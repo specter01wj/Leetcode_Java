@@ -369,7 +369,7 @@ By Jin Wang
 |342|**Power of Four**|Easy|Java/Javascript|Done/Done|
 |344|**Reverse String**|Easy|Java/Javascript|Done/Done|
 |345|**Reverse Vowels of a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|346|**Moving Average from Data Stream**|Easy|Java/Javascript||
+|346|**Moving Average from Data Stream**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |349|**Intersection of Two Arrays**|Easy|Java/Javascript|Done/Done|
 |350|**Intersection of Two Arrays II**|Easy|Java/Javascript|Done/Done|
 |359|**Logger Rate Limiter**|Easy|Java/Javascript||
