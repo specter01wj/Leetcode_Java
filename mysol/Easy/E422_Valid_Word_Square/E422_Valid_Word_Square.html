@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array of strings words, return true if it forms a valid word square.
+
+        A sequence of strings forms a valid word square if the kth row and column 
+        read the same string, where 0 <= k < max(numRows, numColumns).
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {string[]} words
+         * @return {boolean}
+         */
+        let validWordSquare = function(words) {
+          if (!words || words.length === 0) {
+              return true;
+          }
+
+          let numRows = words.length;
+
+          for (let i = 0; i < numRows; i++) {
+              let row = words[i];
+              for (let j = 0; j < row.length; j++) {
+                  // Check if j-th row exists and is long enough
+                  if (j >= numRows || i >= words[j].length) {
+                      return false;
+                  }
+                  // Compare characters
+                  if (row[j] !== words[j][i]) {
+                      return false;
+                  }
+              }
+          }
+          return true;
+        };
+
+				let input = ["abcd","bnrt","crmy","dtye"];
+				let tt1 = validWordSquare(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (tt1) + '</h2>');
+			});
+
+			/*sol:
+				Iterate through each row
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
