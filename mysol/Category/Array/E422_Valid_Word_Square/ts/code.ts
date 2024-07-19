@@ -1,41 +1,30 @@
 
-class MovingAverage {
-  private size: number;
-  private queue: number[];
-  private sum: number;
-
-  constructor(size: number) {
-      this.size = size;
-      this.queue = [];
-      this.sum = 0;
+function validWordSquare(words: string[]): boolean {
+  if (!words || words.length === 0) {
+      return true;
   }
 
-  next(val: number): number {
-      if (this.queue.length === this.size) {
-          this.sum -= this.queue.shift()!;
+  const numRows = words.length;
+
+  for (let i = 0; i < numRows; i++) {
+      const row = words[i];
+      for (let j = 0; j < row.length; j++) {
+          // Check if j-th row exists and is long enough
+          if (j >= numRows || i >= words[j].length) {
+              return false;
+          }
+          // Compare characters
+          if (row[j] !== words[j][i]) {
+              return false;
+          }
       }
-      this.queue.push(val);
-      this.sum += val;
-      return this.sum / this.queue.length;
   }
-
-  toString(): string {
-    const obj = {
-        size: this.size,
-        queue: this.queue,
-        sum: this.sum
-    };
-    return JSON.stringify(obj);
-}
+  return true;
 }
 
-const obj = new MovingAverage(3);
-obj.next(1);  // return 1.0
-obj.next(10); // return 5.5
-obj.next(3);  // return 4.66667
-obj.next(5);  // return 6.0
+let nums: string[] = ["abcd","bnrt","crmy","dtye"];
+let output = validWordSquare(nums);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Output: ' + obj.toString() + 
-'<br>Result = ' + obj.next(1) + ', ' + (obj.next(10)) + ', ' + obj.next(3) + ', ' + obj.next(5);
+webHeading.innerHTML = 'Output: ' + nums + '<br>Result = ' + output;
 
