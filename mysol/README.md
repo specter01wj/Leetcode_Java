@@ -386,6 +386,7 @@ By Jin Wang
 |412|**Fizz Buzz**|Easy|Java/Javascript|Done/Done|
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 |415|**Add Strings**|Easy|Java/Javascript|Done/Done|
+|422|**Valid Word Square**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |434|**Number of Segments in a String**|Easy|Java/Javascript|Done/Done|
 |443|**String Compression**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |448|**Find All Numbers Disappeared in an Array**|Easy|Java/Javascript|Done/Done|
