@@ -1,21 +1,40 @@
 
-function canAttendMeetings(intervals: number[][]): boolean {
-  // Sort the intervals by start time
-  intervals.sort((a, b) => a[0] - b[0]);
-    
-  // Check for any overlapping intervals
-  for (let i = 1; i < intervals.length; i++) {
-      if (intervals[i][0] < intervals[i - 1][1]) {
-          return false; // Found overlapping intervals
-      }
+class MovingAverage {
+  private size: number;
+  private queue: number[];
+  private sum: number;
+
+  constructor(size: number) {
+      this.size = size;
+      this.queue = [];
+      this.sum = 0;
   }
-  
-  return true; // No overlapping intervals found
+
+  next(val: number): number {
+      if (this.queue.length === this.size) {
+          this.sum -= this.queue.shift()!;
+      }
+      this.queue.push(val);
+      this.sum += val;
+      return this.sum / this.queue.length;
+  }
+
+  toString(): string {
+    const obj = {
+        size: this.size,
+        queue: this.queue,
+        sum: this.sum
+    };
+    return JSON.stringify(obj);
+}
 }
 
-let nums: number[][] = [[7, 10], [2, 4]];
-let output = canAttendMeetings(nums);
+const obj = new MovingAverage(3);
+obj.next(1);  // return 1.0
+obj.next(10); // return 5.5
+obj.next(3);  // return 4.66667
+obj.next(5);  // return 6.0
 
 let webHeading = document.querySelector('#t1');
-webHeading.textContent = 'Output: ' + output.toString();
+webHeading.textContent = 'Output: ' + obj.toString();
 
