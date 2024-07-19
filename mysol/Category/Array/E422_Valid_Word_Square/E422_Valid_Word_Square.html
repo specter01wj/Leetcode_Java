@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a stream of integers and a window size, calculate 
+        the moving average of all integers in the sliding window.
+
+        Implement the MovingAverage class:
+
+        . MovingAverage(int size) Initializes the object with the size of the window size.
+        . double next(int val) Returns the moving average of the last size values of the stream.
+			 */
+			$(document).ready(function(){
+
+				/**
+         * @param {number} size
+         */
+        let MovingAverage = function(size) {
+            this.size = size;
+            this.queue = [];
+            this.sum = 0;
+        };
+
+        /** 
+         * @param {number} val
+         * @return {number}
+         */
+        MovingAverage.prototype.next = function(val) {
+            if (this.queue.length === this.size) {
+                this.sum -= this.queue.shift();
+            }
+            this.queue.push(val);
+            this.sum += val;
+            return this.sum / this.queue.length;
+        };
+
+        /** 
+         * Convert the internal state to a string
+         * @return {string}
+         */
+        MovingAverage.prototype.toString = function() {
+            const obj = {
+                size: this.size,
+                queue: this.queue,
+                sum: this.sum
+            };
+            return JSON.stringify(obj);
+        };
+
+				let obj = new MovingAverage(3);
+				$('#t1').html('<h2>Input: ' + obj.toString() + 
+          '<br>Results: ' + (obj.next(1)) + ', ' + (obj.next(10)) + ', ' + obj.next(3) + ', ' + obj.next(5) + '</h2>');
+			});
+
+			/*sol:
+				Sorting
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
