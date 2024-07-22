@@ -127,6 +127,7 @@ Cspiration Category:
 |717|1-bit and 2-bit Characters|Easy||Java/Javascript|Done/Done|
 |724|Find Pivot Index|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |733|Flood Fill|Easy||Java/Javascript|Done/Done|
+|734|Sentence Similarity|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |735|Asteroid Collision|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |744|Find Smallest Letter Greater Than Target|Easy||Java/Javascript|Done/Done|
 |746|Min Cost Climbing Stairs|Easy||Java/Javascript/Typescript|Done/Done/Done|
