@@ -36,6 +36,6 @@ obj.next(3);  // return 4.66667
 obj.next(5);  // return 6.0
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Output: ' + obj.toString() + 
+webHeading.innerHTML = 'Input: ' + obj.toString() + 
 '<br>Result = ' + obj.next(1) + ', ' + (obj.next(10)) + ', ' + obj.next(3) + ', ' + obj.next(5);
 

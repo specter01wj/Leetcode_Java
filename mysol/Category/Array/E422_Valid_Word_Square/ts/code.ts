@@ -26,5 +26,5 @@ let nums: string[] = ["abcd","bnrt","crmy","dtye"];
 let output = validWordSquare(nums);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Output: ' + nums + '<br>Result = ' + output;
+webHeading.innerHTML = 'Input: ' + nums + '<br>Result = ' + output;
 
