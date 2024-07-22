@@ -411,6 +411,7 @@ By Jin Wang
 |594|**Longest Harmonious Subsequence**|Easy|Java/Javascript|Done/Done|
 |598|**Range Addition II**|Easy|Java/Javascript|Done/Done|
 |599|**Minimum Index Sum of Two Lists**|Easy|Java/Javascript|Done/Done|
+|604|**Design Compressed String Iterator**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |605|**Can Place Flowers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |606|**Construct String from Binary Tree**|Easy|Java/Javascript|Done/|
 |628|**Maximum Product of Three Numbers**|Easy|Java/Javascript|Done/Done|
