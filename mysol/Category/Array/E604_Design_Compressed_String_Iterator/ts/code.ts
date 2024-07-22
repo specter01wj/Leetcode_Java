@@ -56,5 +56,5 @@ results.push('next: ' + obj.next()); // Output: "e"
 results.push('hasNext: ' + obj.hasNext()); // Output: false
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + nums + '<br>Result = ' + output;
+webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
 
