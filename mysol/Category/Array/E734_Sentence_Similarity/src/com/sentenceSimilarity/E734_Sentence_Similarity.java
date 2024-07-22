@@ -41,7 +41,19 @@ public class E734_Sentence_Similarity {
         System.out.println("input: " + Arrays.toString(sentence1) + " and " + Arrays.toString(sentence2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Input Length Check
+    2. Map Construction
+    3. Similarity Check
+    */
 	
+	/*
+     * @param sentence1: a list of strings
+     * @param sentence2: a list of strings
+     * @param similarPairs: an array list of strings
+     * @return: true if sentence1 and sentence2 are similar, or false if they are not similar
+     */
 	public boolean areSentencesSimilar(String[] sentence1, String[] sentence2, List<List<String>> similarPairs) {
         // Check if the sentences have the same length
         if (sentence1.length != sentence2.length) {
