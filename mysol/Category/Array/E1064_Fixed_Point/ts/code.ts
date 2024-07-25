@@ -1,24 +1,38 @@
 
-function anagramMappings(nums1: number[], nums2: number[]): number[] {
-  // Create a map to store the value-to-index mappings for nums2
-  let indexMap = new Map<number, number>();
-  for (let i = 0; i < nums2.length; i++) {
-      indexMap.set(nums2[i], i);
+function fixedPoint(arr: number[]): number {
+  // Initialize the left and right pointers for binary search
+  let left = 0;
+  let right = arr.length - 1;
+
+  // Perform binary search
+  while (left <= right) {
+      let mid = Math.floor(left + (right - left) / 2);
+
+      if (arr[mid] === mid) {
+          // If arr[mid] == mid, we found a fixed point, but we need the smallest index
+          // So we continue searching in the left half
+          right = mid - 1;
+      } else if (arr[mid] < mid) {
+          // If arr[mid] < mid, the fixed point must be in the right half
+          left = mid + 1;
+      } else {
+          // If arr[mid] > mid, the fixed point must be in the left half
+          right = mid - 1;
+      }
   }
 
-  // Create the result array to store the mappings
-  let result: number[] = new Array(nums1.length);
-  for (let i = 0; i < nums1.length; i++) {
-      result[i] = indexMap.get(nums1[i])!;
+  // After binary search, check if left points to a valid fixed point
+  if (left < arr.length && arr[left] === left) {
+      return left;
   }
 
-  return result;
-}
+  // If no fixed point is found, return -1
+  return -1;
+};
 
-const nums1 = [12, 28, 46, 32, 50];
-const nums2 = [50, 12, 32, 46, 28];
-const results = anagramMappings(nums1, nums2);
+const arr1: number[] = [-10, -5, 0, 3, 7];
+const results = fixedPoint(arr1);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + nums1 + ' and ' + nums2 + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + arr1 + '<br>Result = ' + results;
 
