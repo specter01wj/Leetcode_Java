@@ -16,7 +16,15 @@ public class E1064_Fixed_Point {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the smallest index i that satisfies arr[i] == i
+     */
 	public int fixedPoint(int[] arr) {
         // Initialize the left and right pointers for binary search
         int left = 0;
