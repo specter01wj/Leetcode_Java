@@ -1,56 +1,24 @@
 
-function areSentencesSimilar(sentence1: string[], sentence2: string[], similarPairs: string[][]): boolean {
-  // Check if the sentences have the same length
-  if (sentence1.length !== sentence2.length) {
-      return false;
+function anagramMappings(nums1: number[], nums2: number[]): number[] {
+  // Create a map to store the value-to-index mappings for nums2
+  let indexMap = new Map<number, number>();
+  for (let i = 0; i < nums2.length; i++) {
+      indexMap.set(nums2[i], i);
   }
-  
-  // Create a map to store similar pairs
-  const similarMap: Map<string, Set<string>> = new Map();
-  
-  // Populate the map with the similar pairs
-  for (let pair of similarPairs) {
-      if (!similarMap.has(pair[0])) {
-          similarMap.set(pair[0], new Set());
-      }
-      similarMap.get(pair[0])!.add(pair[1]);
 
-      if (!similarMap.has(pair[1])) {
-          similarMap.set(pair[1], new Set());
-      }
-      similarMap.get(pair[1])!.add(pair[0]);
+  // Create the result array to store the mappings
+  let result: number[] = new Array(nums1.length);
+  for (let i = 0; i < nums1.length; i++) {
+      result[i] = indexMap.get(nums1[i])!;
   }
-  
-  // Check each word pair in the sentences
-  for (let i = 0; i < sentence1.length; i++) {
-      const word1 = sentence1[i];
-      const word2 = sentence2[i];
-      
-      // A word is always similar to itself
-      if (word1 === word2) {
-          continue;
-      }
-      
-      // Check if the words are similar according to the map
-      if (!(similarMap.has(word1) && similarMap.get(word1)!.has(word2)) &&
-          !(similarMap.has(word2) && similarMap.get(word2)!.has(word1))) {
-          return false;
-      }
-  }
-  
-  // All words are similar
-  return true;
-};
 
-const sentence1 = ["great", "acting", "skills"];
-const sentence2 = ["fine", "drama", "talent"];
-const similarPairs: string[][] = [
-    ["great", "fine"],
-    ["drama", "acting"],
-    ["skills", "talent"]
-];
-const results = areSentencesSimilar(sentence1, sentence2, similarPairs);
+  return result;
+}
+
+const nums1 = [12, 28, 46, 32, 50];
+const nums2 = [50, 12, 32, 46, 28];
+const results = anagramMappings(nums1, nums2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + sentence1 + ' and ' + sentence2 + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + nums1 + ' and ' + nums2 + '<br>Result = ' + results;
 
