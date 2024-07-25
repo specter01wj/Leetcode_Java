@@ -4,16 +4,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given two integer arrays nums1 and nums2 where nums2 
-        is an anagram of nums1. Both arrays may contain duplicates.
-
-        Return an index mapping array mapping from nums1 to nums2 
-        where mapping[i] = j means the ith element in nums1 appears 
-        in nums2 at index j. If there are multiple answers, 
-        return any of them.
-
-        An array a is an anagram of an array b means b is made by 
-        randomizing the order of the elements in a.
+			 	Given an array of distinct integers arr, where arr is sorted 
+        in ascending order, return the smallest index i that satisfies 
+        arr[i] == i. If there is no such index, return -1.
 			 */
 			$(document).ready(function(){
 
@@ -22,34 +15,52 @@
         * @param nums2: a list of integers
         * @return: an index mapping array mapping from nums1 to nums2
         */
-        let anagramMappings = function(nums1, nums2) {
-            // Create a map to store the value-to-index mappings for nums2
-            let indexMap = new Map();
-            for (let i = 0; i < nums2.length; i++) {
-                indexMap.set(nums2[i], i);
+        let fixedPoint = function(arr) {
+            // Initialize the left and right pointers for binary search
+            let left = 0;
+            let right = arr.length - 1;
+
+            // Perform binary search
+            while (left <= right) {
+                let mid = Math.floor(left + (right - left) / 2);
+
+                if (arr[mid] === mid) {
+                    // If arr[mid] == mid, we found a fixed point, but we need the smallest index
+                    // So we continue searching in the left half
+                    right = mid - 1;
+                } else if (arr[mid] < mid) {
+                    // If arr[mid] < mid, the fixed point must be in the right half
+                    left = mid + 1;
+                } else {
+                    // If arr[mid] > mid, the fixed point must be in the left half
+                    right = mid - 1;
+                }
             }
 
-            // Create the result array to store the mappings
-            let result = new Array(nums1.length);
-            for (let i = 0; i < nums1.length; i++) {
-                result[i] = indexMap.get(nums1[i]);
+            // After binary search, check if left points to a valid fixed point
+            if (left < arr.length && arr[left] === left) {
+                return left;
             }
 
-            return result;
+            // If no fixed point is found, return -1
+            return -1;
         };
 
-        const nums1 = [12, 28, 46, 32, 50];
-        const nums2 = [50, 12, 32, 46, 28];
-        let results = anagramMappings(nums1, nums2);
-				$('#t1').html('<h2>Input: ' + nums1 + ' and ' + nums2 + '<br>Results: ' + (results) + '</h2>');
+        const arr1 = [-10, -5, 0, 3, 7];
+        let results = fixedPoint(arr1);
+				$('#t1').html('<h2>Input: ' + arr1 + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Map Creation: We first create a HashMap to store the mapping of values in nums2 to their indices.
-        2. Mapping Indices: We iterate over nums2 and populate the map with the value as the key and its index as the value.
-        3. Result Array: We create a result array of the same length as nums1.
-        4. Fill Result Array: We iterate over nums1 and use the map to find the corresponding index of each element in nums2.
-        5. Return Result: Finally, we return the result array.
+				1. Binary Search: We use binary search to efficiently find the fixed point, where arr[i] == i.
+        2. Left and Right Pointers: We initialize left and right pointers to the start and end of the array, respectively.
+        3. Mid Calculation: Calculate the middle index mid in each iteration.
+        4. Fixed Point Check:
+          . If arr[mid] == mid, it could be a fixed point. To find the smallest index, continue searching in the left half by setting right = mid - 1.
+          . If arr[mid] < mid, the fixed point must be in the right half, so set left = mid + 1.
+          . If arr[mid] > mid, the fixed point must be in the left half, so set right = mid - 1.
+        5. Final Check: After the binary search loop, check if the left index is a valid fixed point.
+        6. Return Result: Return the fixed point if found; otherwise, return -1.
 			 */
 
 		</script>

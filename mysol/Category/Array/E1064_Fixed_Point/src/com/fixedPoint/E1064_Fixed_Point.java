@@ -18,7 +18,15 @@ public class E1064_Fixed_Point {
 	
 	/*
     solution:
-    count good triplets
+    1. Binary Search: We use binary search to efficiently find the fixed point, where arr[i] == i.
+	2. Left and Right Pointers: We initialize left and right pointers to the start and end of the array, respectively.
+	3. Mid Calculation: Calculate the middle index mid in each iteration.
+	4. Fixed Point Check:
+	   . If arr[mid] == mid, it could be a fixed point. To find the smallest index, continue searching in the left half by setting right = mid - 1.
+	   . If arr[mid] < mid, the fixed point must be in the right half, so set left = mid + 1.
+	   . If arr[mid] > mid, the fixed point must be in the left half, so set right = mid - 1.
+	5. Final Check: After the binary search loop, check if the left index is a valid fixed point.
+	6. Return Result: Return the fixed point if found; otherwise, return -1.
     */
 	
 	/*
