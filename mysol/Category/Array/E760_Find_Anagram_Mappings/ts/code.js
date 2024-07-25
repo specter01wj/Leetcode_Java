@@ -13,6 +13,6 @@ function anagramMappings(nums1, nums2) {
 }
 const nums1 = [12, 28, 46, 32, 50];
 const nums2 = [50, 12, 32, 46, 28];
-const results = anagramMappings(nums1, nums1);
+const results = anagramMappings(nums1, nums2);
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + nums1 + ' and ' + nums2 + '<br>Result = ' + results;
