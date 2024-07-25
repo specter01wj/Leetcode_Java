@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given two integer arrays nums1 and nums2 where nums2 
+        is an anagram of nums1. Both arrays may contain duplicates.
+
+        Return an index mapping array mapping from nums1 to nums2 
+        where mapping[i] = j means the ith element in nums1 appears 
+        in nums2 at index j. If there are multiple answers, 
+        return any of them.
+
+        An array a is an anagram of an array b means b is made by 
+        randomizing the order of the elements in a.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @return: an index mapping array mapping from nums1 to nums2
+        */
+        let anagramMappings = function(nums1, nums2) {
+            // Create a map to store the value-to-index mappings for nums2
+            let indexMap = new Map();
+            for (let i = 0; i < nums2.length; i++) {
+                indexMap.set(nums2[i], i);
+            }
+
+            // Create the result array to store the mappings
+            let result = new Array(nums1.length);
+            for (let i = 0; i < nums1.length; i++) {
+                result[i] = indexMap.get(nums1[i]);
+            }
+
+            return result;
+        };
+
+        const nums1 = [12, 28, 46, 32, 50];
+        const nums2 = [50, 12, 32, 46, 28];
+        let results = anagramMappings(nums1, nums2);
+				$('#t1').html('<h2>Input: ' + nums1 + ' and ' + nums2 + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Map Creation: We first create a HashMap to store the mapping of values in nums2 to their indices.
+        2. Mapping Indices: We iterate over nums2 and populate the map with the value as the key and its index as the value.
+        3. Result Array: We create a result array of the same length as nums1.
+        4. Fill Result Array: We iterate over nums1 and use the map to find the corresponding index of each element in nums2.
+        5. Return Result: Finally, we return the result array.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
