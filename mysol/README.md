@@ -438,6 +438,7 @@ By Jin Wang
 |747|**Largest Number At Least Twice of Others**|Easy|Java/Javascript|Done/Done|
 |748|**Shortest Completing Word**|Easy|Java/Javascript|Done/Done|
 |758|**Bold Words in String**|Easy|Java/Javascript|Done/Done|
+|760|**Find Anagram Mappings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |766|**Toeplitz Matrix**|Easy|Java/Javascript|Done/Done|
 |788|**Rotated Digits**|Easy|Java/Javascript|Done/Done|
 |800|**Similar RGB Color**|Easy|Java/Javascript|Done/Done|

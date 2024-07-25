@@ -133,6 +133,7 @@ Cspiration Category:
 |746|Min Cost Climbing Stairs|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |747|Largest Number At Least Twice of Others|Easy||Java/Javascript|Done/Done|
 |748|Shortest Completing Word|Easy||Java/Javascript|Done/Done|
+|760|Find Anagram Mappings|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |766|Toeplitz Matrix|Easy||Java/Javascript|Done/Done|
 |804|Unique Morse Code Words|Easy||Java/Javascript|Done/Done|
 |806|Number of Lines To Write String|Easy||Java/Javascript|Done/Done|
