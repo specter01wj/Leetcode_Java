@@ -26,7 +26,20 @@ public class E760_Find_Anagram_Mappings {
         		"\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Map Creation: We first create a HashMap to store the mapping of values in nums2 to their indices.
+	2. Mapping Indices: We iterate over nums2 and populate the map with the value as the key and its index as the value.
+	3. Result Array: We create a result array of the same length as nums1.
+	4. Fill Result Array: We iterate over nums1 and use the map to find the corresponding index of each element in nums2.
+	5. Return Result: Finally, we return the result array.
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @return: an index mapping array mapping from nums1 to nums2
+     */
 	public int[] anagramMappings(int[] nums1, int[] nums2) {
         // Create a map to store the value-to-index mappings for nums2
         Map<Integer, Integer> indexMap = new HashMap<>();
