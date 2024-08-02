@@ -1,34 +1,22 @@
 
-function indexPairs(text: string, words: string[]): number[][] {
-  let result: number[][] = [];
+function sumOfDigits(nums: number[]): number {
+  // Step 1: Find the minimum element in the array
+  let minElement = Math.min(...nums);
 
-  // Iterate through each position in the text
-  for (let i = 0; i < text.length; i++) {
-      // Check each word in the words array
-      for (let word of words) {
-          if (text.startsWith(word, i)) {
-              // If the word matches the substring starting from index i, add the pair
-              result.push([i, i + word.length - 1]);
-          }
-      }
+  // Step 2: Calculate the sum of the digits of the minimum element
+  let sumOfDigits = 0;
+  while (minElement > 0) {
+      sumOfDigits += minElement % 10;
+      minElement = Math.floor(minElement / 10);
   }
 
-  // Sort the result array
-  result.sort((a, b) => {
-      if (a[0] === b[0]) {
-          return a[1] - b[1];
-      } else {
-          return a[0] - b[0];
-      }
-  });
-
-  return result;
+  // Step 3: Check if the sum of the digits is odd or even
+  return sumOfDigits % 2 === 0 ? 1 : 0;
 };
 
-const text: string = "thestoryofleetcodeandme";
-const words: string[] = ["story", "fleet", "leetcode"];
-const results = indexPairs(text, words);
+const nums: number[] = [34, 23, 1, 24, 75, 33, 54, 8];
+const results = sumOfDigits(nums);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: text - ' + text + '; words - ' + words + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + nums + '<br>Result = ' + results;
 
