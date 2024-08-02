@@ -21,7 +21,19 @@ public class E1065_Index_Pairs_of_a_String {
         System.out.println("input: text - " + (text) + "; words - " + words + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    1. Loop through each character in the text: The outer loop goes through each character in the text.
+	2. Check for each word: The inner loop checks each word in the words array to see if it matches the substring of text starting at the current position.
+	3. Add matching pairs: If a word matches, add the starting index i and the ending index i + word.length() - 1 to the result list.
+	4. Convert the list to an array and sort it: Convert the list of pairs to a 2D array and sort it first by the starting index, and then by the ending index in case of ties.
+    */
 	
+	/*
+     * @param text: a string
+     * @param words: a list of strings
+     * @return: the pairs [i, j] in sorted order
+     */
 	public int[][] indexPairs(String text, String[] words) {
         List<int[]> result = new ArrayList<>();
 
