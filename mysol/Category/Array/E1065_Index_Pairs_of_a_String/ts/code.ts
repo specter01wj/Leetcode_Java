@@ -1,38 +1,34 @@
 
-function fixedPoint(arr: number[]): number {
-  // Initialize the left and right pointers for binary search
-  let left = 0;
-  let right = arr.length - 1;
+function indexPairs(text: string, words: string[]): number[][] {
+  let result: number[][] = [];
 
-  // Perform binary search
-  while (left <= right) {
-      let mid = Math.floor(left + (right - left) / 2);
-
-      if (arr[mid] === mid) {
-          // If arr[mid] == mid, we found a fixed point, but we need the smallest index
-          // So we continue searching in the left half
-          right = mid - 1;
-      } else if (arr[mid] < mid) {
-          // If arr[mid] < mid, the fixed point must be in the right half
-          left = mid + 1;
-      } else {
-          // If arr[mid] > mid, the fixed point must be in the left half
-          right = mid - 1;
+  // Iterate through each position in the text
+  for (let i = 0; i < text.length; i++) {
+      // Check each word in the words array
+      for (let word of words) {
+          if (text.startsWith(word, i)) {
+              // If the word matches the substring starting from index i, add the pair
+              result.push([i, i + word.length - 1]);
+          }
       }
   }
 
-  // After binary search, check if left points to a valid fixed point
-  if (left < arr.length && arr[left] === left) {
-      return left;
-  }
+  // Sort the result array
+  result.sort((a, b) => {
+      if (a[0] === b[0]) {
+          return a[1] - b[1];
+      } else {
+          return a[0] - b[0];
+      }
+  });
 
-  // If no fixed point is found, return -1
-  return -1;
+  return result;
 };
 
-const arr1: number[] = [-10, -5, 0, 3, 7];
-const results = fixedPoint(arr1);
+const text: string = "thestoryofleetcodeandme";
+const words: string[] = ["story", "fleet", "leetcode"];
+const results = indexPairs(text, words);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + arr1 + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: text - ' + text + '; words - ' + words + '<br>Result = ' + results;
 
