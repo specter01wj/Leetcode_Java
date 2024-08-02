@@ -494,6 +494,7 @@ By Jin Wang
 |1065|**Index Pairs of a String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1071|**Greatest Common Divisor of Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
+|1085|**Sum of Digits in the Minimum Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1089|**Duplicate Zeros**|Easy|Java/Javascript|Done/Done|
 |1108|**Defanging an IP Address**|Easy|Java/Javascript|Done/Done|
 |1122|**Relative Sort Array**|Easy|Java/Javascript|Done/Done|
