@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums, return 0 if the sum of the digits 
+        of the minimum integer in nums is odd, or 1 otherwise.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param nums: a list of integers
+          * @return: 0 if the sum of the digits of the minimum integer in nums is odd, or 1 otherwise
+          */
+        let sumOfDigits = function(nums) {
+            // Step 1: Find the minimum element in the array
+            let minElement = Math.min(...nums);
+
+            // Step 2: Calculate the sum of the digits of the minimum element
+            let sumOfDigits = 0;
+            while (minElement > 0) {
+                sumOfDigits += minElement % 10;
+                minElement = Math.floor(minElement / 10);
+            }
+
+            // Step 3: Check if the sum of the digits is odd or even
+            return sumOfDigits % 2 === 0 ? 1 : 0;
+        };
+
+        const nums = [34, 23, 1, 24, 75, 33, 54, 8];
+        let results = sumOfDigits(nums);
+				$('#t1').html('<h2>Input: ' + nums + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Find the Minimum Element:
+          . Initialize minElement to the first element in the array.
+          . Iterate through the array and update minElement if a smaller element is found.
+        2. Sum the Digits of the Minimum Element:
+          . Use a while loop to repeatedly extract the last digit of minElement using the modulus operator (%) and add it to sumOfDigits.
+          . Remove the last digit by dividing minElement by 10.
+        3. Check if the Sum is Odd or Even:
+          . Use the modulus operator to determine if sumOfDigits is odd or even.
+          . Return 1 if sumOfDigits is even, otherwise return 0.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
