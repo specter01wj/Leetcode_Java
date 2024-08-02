@@ -18,7 +18,7 @@ public class E1065_Index_Pairs_of_a_String {
 		String text = "thestoryofleetcodeandme";
         String[] words = {"story","fleet","leetcode"};
 		int[][] output = solution.indexPairs(text, words);
-        System.out.println("input: text - " + (text) + "; words - " + words + "\noutput: " + Arrays.deepToString(output));
+        System.out.println("input: text - " + (text) + "; words - " + Arrays.toString(words) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
 	/*
