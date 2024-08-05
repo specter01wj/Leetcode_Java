@@ -19,9 +19,10 @@ integer division.
 public class E1086_High_Five {
 
 	public static void main(String[] args) {
-		int[] input = {3,0,1,1,9,7};
-		int output = countGoodTriplets(input, 7, 2, 3);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		E1086_High_Five solution = new E1086_High_Five();
+		int[][] input = {{1,91},{1,92},{2,93},{2,97},{1,60},{2,77},{1,65},{1,87},{1,100},{2,100},{2,76}};
+		int[][] output = solution.highFive(input);
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
 	/*
