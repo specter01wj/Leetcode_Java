@@ -20,7 +20,24 @@ public class E1150_Check_If_a_Number_Is_Majority_Element_in_a_Sorted_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. findFirstOccurrence Function:
+	  . This helper function performs a binary search to find the first occurrence of the target in the array.
+	  . If the target is found, it returns the index of the first occurrence; otherwise, it returns -1.
+	2. isMajorityElement Function:
+	  . First, we calculate the length of the array n.
+	  . We then use findFirstOccurrence to find the first occurrence of target in nums.
+	  . If the target isn't found, we return false.
+	  . If it is found, we check whether target appears more than n/2 times by checking if nums[firstIndex + n/2] equals target. 
+	  	If it does, the target is a majority element, and we return true; otherwise, we return false.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param target: an integer
+     * @return: true if target is a majority element, or false otherwise
+     */
 	public boolean isMajorityElement(int[] nums, int target) {
         int n = nums.length;
         int firstIndex = findFirstOccurrence(nums, target);
