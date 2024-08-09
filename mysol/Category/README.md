@@ -181,6 +181,7 @@ Cspiration Category:
 |1128|Number of Equivalent Domino Pairs|Easy||Java/Javascript|Done/Done|
 |1133|Largest Unique Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1150|Check If a Number Is Majority Element in a Sorted Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|1176|Diet Plan Performance|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1184|Distance Between Bus Stops|Easy||Java/Javascript|Done/Done|
 |1200|Minimum Absolute Difference|Easy||Java/Javascript|Done/Done|
 |1207|Unique Number of Occurrences|Easy||Java/Javascript/Typescript|Done/Done/Done|

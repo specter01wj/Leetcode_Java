@@ -506,6 +506,7 @@ By Jin Wang
 |1150|**Check If a Number Is Majority Element in a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1154|**Day of the Year**|Easy|Java/Javascript|Done/Done|
 |1160|**Find Words That Can Be Formed by Characters**|Easy|Java/Javascript|Done/Done|
+|1176|**Diet Plan Performance**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1184|**Distance Between Bus Stops**|Easy|Java/Javascript|Done/Done|
 |1189|**Maximum Number of Balloons**|Easy|Java/Javascript|Done/Done|
 |1200|**Minimum Absolute Difference**|Easy|Java/Javascript|Done/Done|
