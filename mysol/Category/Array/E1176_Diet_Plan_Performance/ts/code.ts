@@ -1,44 +1,37 @@
 
-function isMajorityElement(nums: number[], target: number): boolean {
-  const n = nums.length;
-  const firstIndex = findFirstOccurrence(nums, target);
+function dietPlanPerformance(calories: number[], k: number, lower: number, upper: number): number {
+  let points = 0;
+  let currentSum = 0;
 
-  // If the target is not found in the array
-  if (firstIndex === -1) {
-      return false;
+  // Calculate the sum for the first window of size k
+  for (let i = 0; i < k; i++) {
+      currentSum += calories[i];
   }
 
-  // Check if the target appears more than n/2 times
-  const majorityIndex = firstIndex + Math.floor(n / 2);
-  if (majorityIndex < n && nums[majorityIndex] === target) {
-      return true;
+  // Evaluate the first window
+  if (currentSum < lower) {
+      points--;
+  } else if (currentSum > upper) {
+      points++;
   }
-  
-  return false;
-};
 
-function findFirstOccurrence(nums: number[], target: number): number {
-  let left = 0, right = nums.length - 1;
-  while (left <= right) {
-      const mid = Math.floor(left + (right - left) / 2);
-      if (nums[mid] === target) {
-          if (mid === 0 || nums[mid - 1] !== target) {
-              return mid;
-          } else {
-              right = mid - 1;
-          }
-      } else if (nums[mid] < target) {
-          left = mid + 1;
-      } else {
-          right = mid - 1;
+  // Slide the window over the array
+  for (let i = k; i < calories.length; i++) {
+      currentSum += calories[i] - calories[i - k];
+
+      if (currentSum < lower) {
+          points--;
+      } else if (currentSum > upper) {
+          points++;
       }
   }
-  return -1;  // Target not found
-}
 
-const input: number[] = [2,4,5,5,5,5,5,6,6];
-const target: number = 5;
-const results = isMajorityElement(input, target);
+  return points;
+};
+
+const input: number[] = [1,2,3,4,5];
+const k: number = 1, lower: number = 3, upper: number = 3;
+const results = dietPlanPerformance(input, k, lower, upper);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
