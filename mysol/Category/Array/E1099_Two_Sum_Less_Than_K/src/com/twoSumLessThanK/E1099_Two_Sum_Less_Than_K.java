@@ -20,15 +20,16 @@ public class E1099_Two_Sum_Less_Than_K {
 	
 	/*
     solution:
-    count good triplets
+    1. Sort the Array
+    2. Initialize Two Pointers
+    3. Iterate and Adjust Pointers
+    4. Return the Maximum Sum
     */
 	
 	/*
-     * @param arr: a list of integers
-     * @param a: an integer
-     * @param b: an integer
-     * @param c: an integer
-     * @return: the number of good triplets
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the maximum sum
      */
 	public int twoSumLessThanK(int[] nums, int k) {
         Arrays.sort(nums); // Sort the array
