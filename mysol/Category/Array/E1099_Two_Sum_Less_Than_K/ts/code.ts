@@ -1,43 +1,31 @@
 
-function highFive(items: number[][]): number[][] {
-  // Step 1: Create a Map to store student ID and their scores
-  const scoresMap: Map<number, number[]> = new Map();
+function twoSumLessThanK(nums: number[], k: number): number {
+  // Sort the array in ascending order
+  nums.sort((a, b) => a - b);
+    
+  let left = 0;
+  let right = nums.length - 1;
+  let maxSum = -1;
 
-  // Step 2: Populate the Map with student IDs and their scores
-  for (const [id, score] of items) {
-      if (!scoresMap.has(id)) {
-          scoresMap.set(id, []);
+  // Two-pointer approach
+  while (left < right) {
+      const sum = nums[left] + nums[right];
+      
+      if (sum < k) {
+          maxSum = Math.max(maxSum, sum); // Update maxSum if sum is less than k
+          left++; // Move left pointer to the right
+      } else {
+          right--; // Move right pointer to the left
       }
-      scoresMap.get(id)!.push(score);
   }
-
-  // Step 3: Calculate the top five average for each student
-  const result: number[][] = [];
-  for (const [id, scores] of scoresMap) {
-      // Sort scores in descending order
-      scores.sort((a, b) => b - a);
-
-      // Calculate the sum of the top five scores
-      let sum = 0;
-      for (let i = 0; i < 5 && i < scores.length; i++) {
-          sum += scores[i];
-      }
-
-      // Calculate the average using integer division
-      const topFiveAverage = Math.floor(sum / 5);
-      result.push([id, topFiveAverage]);
-  }
-
-  // Step 4: Sort the result by student ID
-  result.sort((a, b) => a[0] - b[0]);
-
-  // Step 5: Return the result
-  return result;
+  
+  return maxSum; // Return the maximum sum found or -1 if none found
 };
 
-const items: number[][] = [[1,91],[1,92],[2,93],[2,97],[1,60],[2,77],[1,65],[1,87],[1,100],[2,100],[2,76]];
-const results = highFive(items);
+const input: number[] = [34, 23, 1, 24, 75, 33, 54, 8];
+const k: number = 60;
+const results = twoSumLessThanK(input, k);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + items + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
 
