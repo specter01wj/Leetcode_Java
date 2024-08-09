@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array nums of integers and integer k, return 
+        the maximum sum such that there exists i < j with 
+        nums[i] + nums[j] = sum and sum < k. 
+        If no i, j exist satisfying this equation, return -1.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param nums: a list of integers
+          * @param k: an integer
+          * @return: the maximum sum
+          */
+        let twoSumLessThanK = function(nums, k) {
+            // Sort the array in ascending order
+            nums.sort((a, b) => a - b);
+            
+            let left = 0;
+            let right = nums.length - 1;
+            let maxSum = -1;
+
+            // Two-pointer approach
+            while (left < right) {
+                let sum = nums[left] + nums[right];
+                
+                if (sum < k) {
+                    maxSum = Math.max(maxSum, sum); // Update maxSum if sum is less than k
+                    left++; // Move left pointer to the right
+                } else {
+                    right--; // Move right pointer to the left
+                }
+            }
+            
+            return maxSum; // Return the maximum sum found or -1 if none found
+        };
+
+        const input = [34, 23, 1, 24, 75, 33, 54, 8];
+        const k = 60;
+        let results = twoSumLessThanK(input, k);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Sort the Array
+        2. Initialize Two Pointers
+        3. Iterate and Adjust Pointers
+        4. Return the Maximum Sum
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
