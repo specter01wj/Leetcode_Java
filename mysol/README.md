@@ -503,6 +503,7 @@ By Jin Wang
 |1128|**Number of Equivalent Domino Pairs**|Easy|Java/Javascript|Done/Done|
 |1133|**Largest Unique Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1137|**N-th Tribonacci Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1150|**Check If a Number Is Majority Element in a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1154|**Day of the Year**|Easy|Java/Javascript|Done/Done|
 |1160|**Find Words That Can Be Formed by Characters**|Easy|Java/Javascript|Done/Done|
 |1184|**Distance Between Bus Stops**|Easy|Java/Javascript|Done/Done|
