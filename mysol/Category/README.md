@@ -176,6 +176,7 @@ Cspiration Category:
 |1085|Sum of Digits in the Minimum Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1086|High Five|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1089|Duplicate Zeros|Easy||Java/Javascript|Done/Done|
+|1099|Two Sum Less Than K|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1122|Relative Sort Array|Easy||Java/Javascript|Done/Done|
 |1128|Number of Equivalent Domino Pairs|Easy||Java/Javascript|Done/Done|
 |1184|Distance Between Bus Stops|Easy||Java/Javascript|Done/Done|
