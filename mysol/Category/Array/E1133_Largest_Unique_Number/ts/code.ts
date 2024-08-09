@@ -1,30 +1,25 @@
 
-function twoSumLessThanK(nums: number[], k: number): number {
-  // Sort the array in ascending order
-  nums.sort((a, b) => a - b);
-    
-  let left = 0;
-  let right = nums.length - 1;
-  let maxSum = -1;
-
-  // Two-pointer approach
-  while (left < right) {
-      const sum = nums[left] + nums[right];
-      
-      if (sum < k) {
-          maxSum = Math.max(maxSum, sum); // Update maxSum if sum is less than k
-          left++; // Move left pointer to the right
-      } else {
-          right--; // Move right pointer to the left
+function largestUniqueNumber(nums: number[]): number {
+  // Step 1: Count the frequency of each number using a Map
+  const frequencyMap = new Map<number, number>();
+  
+  for (const num of nums) {
+      frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+  }
+  
+  // Step 2: Find the largest number that occurs only once
+  let largestUnique = -1;
+  for (const [num, count] of frequencyMap) {
+      if (count === 1) {
+          largestUnique = Math.max(largestUnique, num);
       }
   }
   
-  return maxSum; // Return the maximum sum found or -1 if none found
+  return largestUnique;
 };
 
-const input: number[] = [34, 23, 1, 24, 75, 33, 54, 8];
-const k: number = 60;
-const results = twoSumLessThanK(input, k);
+const input: number[] = [5,7,3,9,4,9,8,3,1];
+const results = largestUniqueNumber(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
