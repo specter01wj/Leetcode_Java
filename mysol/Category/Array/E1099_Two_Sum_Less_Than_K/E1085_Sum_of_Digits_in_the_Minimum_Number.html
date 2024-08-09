@@ -4,72 +4,52 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a list of the scores of different students, items, 
-        where items[i] = [IDi, scorei] represents one score from 
-        a student with IDi, calculate each student's top five average.
-
-        Return the answer as an array of pairs result, where 
-        result[j] = [IDj, topFiveAveragej] represents the student 
-        with IDj and their top five average. Sort result by IDj 
-        in increasing order.
-
-        A student's top five average is calculated by taking the 
-        sum of their top five scores and dividing it by 5 using 
-        integer division.
+			 	Given an array nums of integers and integer k, return 
+        the maximum sum such that there exists i < j with 
+        nums[i] + nums[j] = sum and sum < k. 
+        If no i, j exist satisfying this equation, return -1.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param items: a list of 2D integers
-          * @return: the answer as an array of pairs result
+          * @param nums: a list of integers
+          * @param k: an integer
+          * @return: the maximum sum
           */
-        let highFive = function(items) {
-            // Step 1: Create a Map to store student ID and their scores
-            const scoresMap = new Map();
+        let twoSumLessThanK = function(nums, k) {
+            // Sort the array in ascending order
+            nums.sort((a, b) => a - b);
+            
+            let left = 0;
+            let right = nums.length - 1;
+            let maxSum = -1;
 
-            // Step 2: Populate the Map with student IDs and their scores
-            for (const [id, score] of items) {
-                if (!scoresMap.has(id)) {
-                    scoresMap.set(id, []);
+            // Two-pointer approach
+            while (left < right) {
+                let sum = nums[left] + nums[right];
+                
+                if (sum < k) {
+                    maxSum = Math.max(maxSum, sum); // Update maxSum if sum is less than k
+                    left++; // Move left pointer to the right
+                } else {
+                    right--; // Move right pointer to the left
                 }
-                scoresMap.get(id).push(score);
             }
-
-            // Step 3: Calculate the top five average for each student
-            const result = [];
-            for (const [id, scores] of scoresMap) {
-                // Sort scores in descending order
-                scores.sort((a, b) => b - a);
-
-                // Calculate the sum of the top five scores
-                let sum = 0;
-                for (let i = 0; i < 5 && i < scores.length; i++) {
-                    sum += scores[i];
-                }
-
-                // Calculate the average using integer division
-                const topFiveAverage = Math.floor(sum / 5);
-                result.push([id, topFiveAverage]);
-            }
-
-            // Step 4: Sort the result by student ID
-            result.sort((a, b) => a[0] - b[0]);
-
-            // Step 5: Return the result
-            return result;
+            
+            return maxSum; // Return the maximum sum found or -1 if none found
         };
 
-        const items = [[1,91],[1,92],[2,93],[2,97],[1,60],[2,77],[1,65],[1,87],[1,100],[2,100],[2,76]];
-        let results = highFive(items);
-				$('#t1').html('<h2>Input: ' + items + '<br>Results: ' + (results) + '</h2>');
+        const input = [34, 23, 1, 24, 75, 33, 54, 8];
+        const k = 60;
+        let results = twoSumLessThanK(input, k);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Use a HashMap to store the list of scores for each student.
-        2. Iterate through the input list and populate the HashMap with student IDs as keys and lists of their scores as values.
-        3. For each student, sort their list of scores in descending order and calculate the average of the top five scores.
-        4. Store the result in a list of arrays.
-        5. Sort the result list by student ID and convert it to the required array format.
+				1. Sort the Array
+        2. Initialize Two Pointers
+        3. Iterate and Adjust Pointers
+        4. Return the Maximum Sum
 			 */
 
 		</script>
