@@ -509,6 +509,7 @@ By Jin Wang
 |1176|**Diet Plan Performance**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1184|**Distance Between Bus Stops**|Easy|Java/Javascript|Done/Done|
 |1189|**Maximum Number of Balloons**|Easy|Java/Javascript|Done/Done|
+|1196|**How Many Apples Can You Put into the Basket**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1200|**Minimum Absolute Difference**|Easy|Java/Javascript|Done/Done|
 |1207|**Unique Number of Occurrences**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1217|**Minimum Cost to Move Chips to The Same Position**|Easy|Java/Javascript|Done/Done|
