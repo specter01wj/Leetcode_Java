@@ -11,14 +11,17 @@ return the maximum number of apples you can put in the basket.
 public class E1196_How_Many_Apples_Can_You_Put_into_the_Basket {
 
 	public static void main(String[] args) {
-		int[] input = {3,0,1,1,9,7};
-		int output = countGoodTriplets(input, 7, 2, 3);
+		E1196_How_Many_Apples_Can_You_Put_into_the_Basket solution = new E1196_How_Many_Apples_Can_You_Put_into_the_Basket();
+		int[] input = {100,200,150,1000};
+		int output = solution.maxNumberOfApples(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
 	/*
     solution:
-    count good triplets
+    1. Sorting
+    2. Iterating and Summing
+    3. Checking the Limit
     */
 	
 	/*
