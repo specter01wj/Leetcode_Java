@@ -4,45 +4,60 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You have some apples and a basket that can carry up to 5000 units of weight.
-
-        Given an integer array weight where weight[i] is the weight of the ith apple, 
-        return the maximum number of apples you can put in the basket.
+			 	Given three integer arrays arr1, arr2 and arr3 sorted in strictly 
+        increasing order, return a sorted array of only the integers that 
+        appeared in all three arrays.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param weight: a list of integers
-          * @return: the maximum number of apples you can put in the basket
+          * @param arr1: a list of integers
+          * @param arr2: a list of integers
+          * @param arr3: a list of integers
+          * @return: a sorted array of only the integers that appeared in all three arrays
           */
-        let maxNumberOfApples = function(weight) {
-            // Sort the array to prioritize lighter apples
-            weight.sort((a, b) => a - b);
+        let arraysIntersection = function(arr1, arr2, arr3) {
+            let result = [];
+            let i = 0, j = 0, k = 0;
 
-            let totalWeight = 0;
-            let count = 0;
-            
-            // Iterate through the sorted weights
-            for (let i = 0; i < weight.length; i++) {
-                totalWeight += weight[i];
-                if (totalWeight > 5000) {
-                    break;
+            // Use three pointers to traverse the arrays
+            while (i < arr1.length && j < arr2.length && k < arr3.length) {
+                if (arr1[i] === arr2[j] && arr1[i] === arr3[k]) {
+                    // If all three elements are equal, add to result
+                    result.push(arr1[i]);
+                    i++;
+                    j++;
+                    k++;
+                } else if (arr1[i] < arr2[j]) {
+                    i++;
+                } else if (arr2[j] < arr3[k]) {
+                    j++;
+                } else {
+                    k++;
                 }
-                count++;
             }
-            
-            return count;
+
+            return result;
         };
 
-        const input = [100,200,150,1000];
-        let results = maxNumberOfApples(input);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = [1, 2, 5, 7, 9];
+        const arr3 = [1, 3, 4, 5, 8];
+        let results = arraysIntersection(arr1, arr2, arr3);
+				$('#t1').html('<h2>Input1: ' + arr1 + '; Input2: ' + arr2 + '; Input3: ' + 
+          arr3 + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Sorting
-        2. Iterating and Summing
-        3. Checking the Limit
+				1. Three Pointers: The algorithm uses three pointers i, j, and k to 
+            traverse the three arrays arr1, arr2, and arr3 respectively.
+        2. Comparison:
+          . If arr1[i], arr2[j], and arr3[k] are all equal, the element is present in 
+            all three arrays, and it's added to the result list.
+          . If arr1[i] is the smallest, increment i to check the next element in arr1.
+          . If arr2[j] is smaller than arr3[k], increment j to check the next element in arr2.
+          . Otherwise, increment k to check the next element in arr3.
+        3. Termination: The loop continues until one of the arrays is fully traversed.
 			 */
 
 		</script>
