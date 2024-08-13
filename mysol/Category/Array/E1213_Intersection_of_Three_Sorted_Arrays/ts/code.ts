@@ -1,26 +1,34 @@
 
-function maxNumberOfApples(weight: number[]): number {
-  // Sort the array to prioritize lighter apples
-  weight.sort((a, b) => a - b);
+function arraysIntersection(arr1: number[], arr2: number[], arr3: number[]): number[] {
+  let result: number[] = [];
+  let i = 0, j = 0, k = 0;
 
-  let totalWeight = 0;
-  let count = 0;
-
-  // Iterate through the sorted weights
-  for (let i = 0; i < weight.length; i++) {
-      totalWeight += weight[i];
-      if (totalWeight > 5000) {
-          break;
+  // Use three pointers to traverse the arrays
+  while (i < arr1.length && j < arr2.length && k < arr3.length) {
+      if (arr1[i] === arr2[j] && arr1[i] === arr3[k]) {
+          // If all three elements are equal, add to result
+          result.push(arr1[i]);
+          i++;
+          j++;
+          k++;
+      } else if (arr1[i] < arr2[j]) {
+          i++;
+      } else if (arr2[j] < arr3[k]) {
+          j++;
+      } else {
+          k++;
       }
-      count++;
   }
 
-  return count;
+  return result;
 };
 
-const input: number[] = [100,200,150,1000];
-const results = maxNumberOfApples(input);
+const arr1: number[] = [1, 2, 3, 4, 5];
+const arr2: number[] = [1, 2, 5, 7, 9];
+const arr3: number[] = [1, 3, 4, 5, 8];
+const results = arraysIntersection(arr1, arr2, arr3);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input1: ' + arr1 + '; Input2: ' + arr2 + '; Input3: ' +
+                        arr3 + '<br>Result = ' + results;
 
