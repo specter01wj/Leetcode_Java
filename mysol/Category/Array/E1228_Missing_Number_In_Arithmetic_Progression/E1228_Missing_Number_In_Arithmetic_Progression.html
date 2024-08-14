@@ -4,60 +4,56 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given three integer arrays arr1, arr2 and arr3 sorted in strictly 
-        increasing order, return a sorted array of only the integers that 
-        appeared in all three arrays.
+			 	In some array arr, the values were in arithmetic progression: 
+        the values arr[i + 1] - arr[i] are all equal for every 0 <= i < arr.length - 1.
+
+        A value from arr was removed that was not the first or last value in the array.
+
+        Given arr, return the removed value.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param arr1: a list of integers
-          * @param arr2: a list of integers
-          * @param arr3: a list of integers
-          * @return: a sorted array of only the integers that appeared in all three arrays
+          * @param arr: a list of integers
+          * @return: the removed value
           */
-        let arraysIntersection = function(arr1, arr2, arr3) {
-            let result = [];
-            let i = 0, j = 0, k = 0;
+        let missingNumber = function(arr) {
+            let n = arr.length;
+            
+            if (n === 1) return arr[0]; // If there's only one element, return it
 
-            // Use three pointers to traverse the arrays
-            while (i < arr1.length && j < arr2.length && k < arr3.length) {
-                if (arr1[i] === arr2[j] && arr1[i] === arr3[k]) {
-                    // If all three elements are equal, add to result
-                    result.push(arr1[i]);
-                    i++;
-                    j++;
-                    k++;
-                } else if (arr1[i] < arr2[j]) {
-                    i++;
-                } else if (arr2[j] < arr3[k]) {
-                    j++;
-                } else {
-                    k++;
+            // Calculate the common difference as the difference between the first two distinct elements
+            let diff = (arr[n - 1] - arr[0]) / n;
+
+            for (let i = 0; i < n - 1; i++) {
+                let currentDiff = arr[i + 1] - arr[i];
+                if (currentDiff !== diff) {
+                    return arr[i] + diff;
                 }
             }
 
-            return result;
+            // Handle cases where all elements are the same, e.g., [0, 0, 0, 0, 0]
+            if (diff === 0) {
+                return arr[0];
+            }
+
+            // In case the input is malformed, return -1
+            return -1;
         };
 
-        const arr1 = [1, 2, 3, 4, 5];
-        const arr2 = [1, 2, 5, 7, 9];
-        const arr3 = [1, 3, 4, 5, 8];
-        let results = arraysIntersection(arr1, arr2, arr3);
-				$('#t1').html('<h2>Input1: ' + arr1 + '; Input2: ' + arr2 + '; Input3: ' + 
-          arr3 + '<br>Results: ' + (results) + '</h2>');
+        const input = [5, 7, 11, 13];
+        let results = missingNumber(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Three Pointers: The algorithm uses three pointers i, j, and k to 
-            traverse the three arrays arr1, arr2, and arr3 respectively.
-        2. Comparison:
-          . If arr1[i], arr2[j], and arr3[k] are all equal, the element is present in 
-            all three arrays, and it's added to the result list.
-          . If arr1[i] is the smallest, increment i to check the next element in arr1.
-          . If arr2[j] is smaller than arr3[k], increment j to check the next element in arr2.
-          . Otherwise, increment k to check the next element in arr3.
-        3. Termination: The loop continues until one of the arrays is fully traversed.
+				1. Handling Equal Elements:
+          . When all elements are the same (e.g., [0, 0, 0, 0, 0]), 
+            the difference (diff) will be 0. In this case, any missing number 
+            should also be 0. The code returns the first element in such cases.
+        2. Edge Case for Single Element:
+          . If the array only contains one element, it directly returns that 
+            element since there is no missing number in a single-element array.
 			 */
 
 		</script>
