@@ -1,34 +1,31 @@
 
-function arraysIntersection(arr1: number[], arr2: number[], arr3: number[]): number[] {
-  let result: number[] = [];
-  let i = 0, j = 0, k = 0;
+function missingNumber(arr: number[]): number {
+  let n = arr.length;
+  
+  if (n === 1) return arr[0]; // If there's only one element, return it
 
-  // Use three pointers to traverse the arrays
-  while (i < arr1.length && j < arr2.length && k < arr3.length) {
-      if (arr1[i] === arr2[j] && arr1[i] === arr3[k]) {
-          // If all three elements are equal, add to result
-          result.push(arr1[i]);
-          i++;
-          j++;
-          k++;
-      } else if (arr1[i] < arr2[j]) {
-          i++;
-      } else if (arr2[j] < arr3[k]) {
-          j++;
-      } else {
-          k++;
+  // Calculate the common difference as the difference between the first and last elements divided by the length of the array
+  let diff = (arr[n - 1] - arr[0]) / n;
+
+  for (let i = 0; i < n - 1; i++) {
+      let currentDiff = arr[i + 1] - arr[i];
+      if (currentDiff !== diff) {
+          return arr[i] + diff;
       }
   }
 
-  return result;
+  // Handle cases where all elements are the same, e.g., [0, 0, 0, 0, 0]
+  if (diff === 0) {
+      return arr[0];
+  }
+
+  // In case the input is malformed, return -1
+  return -1;
 };
 
-const arr1: number[] = [1, 2, 3, 4, 5];
-const arr2: number[] = [1, 2, 5, 7, 9];
-const arr3: number[] = [1, 3, 4, 5, 8];
-const results = arraysIntersection(arr1, arr2, arr3);
+const input: number[] = [5, 7, 11, 13];
+const results = missingNumber(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input1: ' + arr1 + '; Input2: ' + arr2 + '; Input3: ' +
-                        arr3 + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
 
