@@ -19,7 +19,21 @@ public class E1228_Missing_Number_In_Arithmetic_Progression {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Handling Equal Elements:
+		. When all elements are the same (e.g., [0, 0, 0, 0, 0]), 
+		  the difference (diff) will be 0. In this case, any missing number 
+		  should also be 0. The code returns the first element in such cases.
+	2. Edge Case for Single Element:
+		. If the array only contains one element, it directly returns that 
+		  element since there is no missing number in a single-element array.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the removed value
+     */
 	public int missingNumber(int[] arr) {
         int n = arr.length;
         if (n == 1) return arr[0];
