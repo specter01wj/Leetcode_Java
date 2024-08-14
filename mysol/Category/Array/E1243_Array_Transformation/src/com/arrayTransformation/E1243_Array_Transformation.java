@@ -26,7 +26,29 @@ public class E1243_Array_Transformation {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialization:
+		. A boolean changed is set to true to start the while loop that 
+			will continue until no changes occur in the array.
+		. A temporary array temp is created to store the intermediate 
+			results of the transformation.
+	2. Transformation Process:
+		. For each element (excluding the first and last), check if it is 
+			smaller than both its neighbors or larger than both its neighbors.
+		. If the element is smaller than both its neighbors, increment it; 
+			if it's larger, decrement it.
+		. Set changed to true if any modification was made during the iteration.
+	3. Loop Until Stable:
+		. The process repeats until the array no longer changes (changed remains false).
+	4. Conversion to List:
+		. The final array is converted into a List<Integer> and returned.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: that final array
+     */
 	public List<Integer> transformArray(int[] arr) {
         int n = arr.length;
         boolean changed = true;
