@@ -517,6 +517,7 @@ By Jin Wang
 |1221|**Split a String in Balanced Strings**|Easy|Java/Javascript|Done/Done|
 |1228|**Missing Number In Arithmetic Progression**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1232|**Check If It Is a Straight Line**|Easy|Java/Javascript|Done/Done|
+|1243|**Array Transformation**|Easy|Java/Javascript|Done/Done|
 |1252|**Cells with Odd Values in a Matrix**|Easy|Java/Javascript|Done/Done|
 |1260|**Shift 2D Grid**|Easy|Java/Javascript|Done/Done|
 |1266|**Minimum Time Visiting All Points**|Easy|Java/Javascript|Done/Done|
