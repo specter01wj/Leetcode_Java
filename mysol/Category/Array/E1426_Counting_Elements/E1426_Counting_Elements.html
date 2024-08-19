@@ -4,70 +4,47 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an initial array arr, every day you produce a new array 
-        using the array of the previous day.
-
-        On the i-th day, you do the following operations on the array 
-        of day i-1 to produce the array of day i:
-
-        1. If an element is smaller than both its left neighbor and its 
-          right neighbor, then this element is incremented.
-        2. If an element is bigger than both its left neighbor and its 
-          right neighbor, then this element is decremented.
-        3. The first and last elements never change.
-
-        After some days, the array does not change. Return that final array.
+			 	Given an integer array arr, count how many elements x there are, 
+        such that x + 1 is also in arr. If there are duplicates in arr, 
+        count them separately.
 			 */
 			$(document).ready(function(){
 
 				/*
           * @param arr: a list of integers
-          * @return: that final array
+          * @return: count how many elements
           */
-        let transformArray = function(arr) {
-            let changed = true;
+        let countElements = function(arr) {
+            // Create a Set to store the unique elements from the array
+            const elementsSet = new Set(arr);
             
-            while (changed) {
-                changed = false;
-                let temp = arr.slice(); // Create a copy of the array
-
-                for (let i = 1; i < arr.length - 1; i++) {
-                    if (arr[i] < arr[i - 1] && arr[i] < arr[i + 1]) {
-                        temp[i]++;
-                        changed = true;
-                    } else if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
-                        temp[i]--;
-                        changed = true;
-                    }
+            let count = 0;
+            // Loop through the array and check if num + 1 exists in the set
+            for (let num of arr) {
+                if (elementsSet.has(num + 1)) {
+                    count++;
                 }
-                
-                arr = temp; // Update the original array with the modified values
             }
             
-            return arr;
+            return count;
         };
 
-        const input = [6, 2, 3, 4];
-        let results = transformArray(input);
+        const input = [1, 2, 3];
+        let results = countElements(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Initialization:
-          . A boolean changed is set to true to start the while loop that 
-            will continue until no changes occur in the array.
-          . A temporary array temp is created to store the intermediate 
-            results of the transformation.
-        2. Transformation Process:
-          . For each element (excluding the first and last), check if it is 
-            smaller than both its neighbors or larger than both its neighbors.
-          . If the element is smaller than both its neighbors, increment it; 
-            if it's larger, decrement it.
-          . Set changed to true if any modification was made during the iteration.
-        3. Loop Until Stable:
-          . The process repeats until the array no longer changes (changed remains false).
-        4. Conversion to List:
-          . The final array is converted into a List<Integer> and returned.
+				1. Using a HashSet:
+          . We store all the elements of the array in a HashSet because checking 
+            if an element exists in a set is O(1) on average.
+        2. Counting Valid Elements:
+          . We iterate over the array and for each element num, we check if num + 1 is in the set.
+          . If it is, we increment the count because num meets the condition.
+        3. Edge Cases:
+          . If the array is empty, the function will naturally return 0.
+          . Duplicates in the array will be handled correctly since each occurrence 
+            is counted separately as the problem requires.
 			 */
 
 		</script>
