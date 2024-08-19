@@ -1,29 +1,21 @@
 
-function transformArray(arr: number[]): number[] {
-  let changed = true;
-
-  while (changed) {
-      changed = false;
-      let temp = arr.slice(); // Create a copy of the array
-
-      for (let i = 1; i < arr.length - 1; i++) {
-          if (arr[i] < arr[i - 1] && arr[i] < arr[i + 1]) {
-              temp[i]++;
-              changed = true;
-          } else if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
-              temp[i]--;
-              changed = true;
-          }
+function countElements(arr: number[]): number {
+  // Create a Set to store the unique elements from the array
+  const elementsSet: Set<number> = new Set(arr);
+  
+  let count: number = 0;
+  // Loop through the array and check if num + 1 exists in the set
+  for (let num of arr) {
+      if (elementsSet.has(num + 1)) {
+          count++;
       }
-
-      arr = temp; // Update the original array with the modified values
   }
-
-  return arr;
+  
+  return count;
 };
 
-const input: number[] = [6, 2, 3, 4];
-const results = transformArray(input);
+const input: number[] = [1,2,3];
+const results = countElements(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
