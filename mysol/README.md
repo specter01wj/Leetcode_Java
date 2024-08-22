@@ -548,6 +548,7 @@ By Jin Wang
 |1417|**Reformat The String**|Easy|Java/Javascript|Done/Done|
 |1422|**Maximum Score After Splitting a String**|Easy|Java/Javascript|Done/Done|
 |1426|**Counting Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1427|**Perform String Shifts**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1436|**Destination City**|Easy|Java/Javascript|Done/Done|
 |1437|**Check If All 1's Are at Least Length K Places Away**|Easy|Java/Javascript|Done/Done|
