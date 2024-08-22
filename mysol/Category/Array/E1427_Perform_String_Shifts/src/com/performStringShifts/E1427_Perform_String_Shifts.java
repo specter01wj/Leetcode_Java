@@ -23,7 +23,30 @@ public class E1427_Perform_String_Shifts {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Net Shift Calculation:
+		. The first loop iterates through the shift matrix, accumulating 
+			the net shift by adding for right shifts (direction = 1) and 
+			subtracting for left shifts (direction = 0).
+	2. Optimize the Shift Amount:
+		. After calculating the total shift, we use the modulo operation 
+			(totalShift %= len) to ensure the shift is within the bounds 
+			of the string's length.
+	3. Handle Negative Shifts:
+		. If the totalShift is negative (which means a net left shift), 
+			it’s converted to a positive shift by adding the string length.
+	4. Final String Shift:
+		. The final result is obtained by concatenating the substring from 
+			the point where the shift ends to the start, followed by the 
+			substring from the start to where the shift ends.
+    */
 	
+	/*
+     * @param s: a string
+     * @param shift: a list of 2D integer
+     * @return: the final string after all operations
+     */
 	public String stringShift(String s, int[][] shift) {
         int totalShift = 0;
 
