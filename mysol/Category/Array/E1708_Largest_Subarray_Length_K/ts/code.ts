@@ -1,25 +1,27 @@
 
-function maxWidthOfVerticalArea(points: number[][]): number {
-  // Extract the x-coordinates from the points
-  const xCoords: number[] = points.map(point => point[0]);
+function largestSubarray(nums: number[], k: number): number[] {
+  const n = nums.length;
+  let startIndex = 0;
 
-  // Sort the x-coordinates
-  xCoords.sort((a, b) => a - b);
-
-  // Find the maximum gap between consecutive x-coordinates
-  let maxWidth = 0;
-  for (let i = 1; i < xCoords.length; i++) {
-      const gap = xCoords[i] - xCoords[i - 1];
-      if (gap > maxWidth) {
-          maxWidth = gap;
+  // Iterate to find the subarray that starts at the largest value
+  for (let i = 1; i <= n - k; i++) {
+      for (let j = 0; j < k; j++) {
+          if (nums[startIndex + j] < nums[i + j]) {
+              startIndex = i;
+              break;
+          } else if (nums[startIndex + j] > nums[i + j]) {
+              break;
+          }
       }
   }
 
-  return maxWidth;
+  // Return the subarray of length k starting from startIndex
+  return nums.slice(startIndex, startIndex + k);
 };
 
-const input: number[][] = [[8,7],[9,9],[7,4],[9,7]];
-const results = maxWidthOfVerticalArea(input);
+const input: number[] = [1,4,5,2,3];
+const k: number = 3;
+const results = largestSubarray(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
