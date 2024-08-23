@@ -4,76 +4,52 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a string s containing lowercase English letters, 
-        and a matrix shift, where shift[i] = [directioni, amounti]:
+			 	Given n points on a 2D plane where points[i] = [xi, yi], 
+        Return the widest vertical area between two points such that 
+        no points are inside the area.
 
-          . directioni can be 0 (for left shift) or 1 (for right shift).
-          . amounti is the amount by which string s is to be shifted.
-          . A left shift by 1 means remove the first character of s and append it to the end.
-          . Similarly, a right shift by 1 means remove the last character of s and add it to the beginning.
+        A vertical area is an area of fixed-width extending infinitely 
+        along the y-axis (i.e., infinite height). The widest vertical area 
+        is the one with the maximum width.
 
-        Return the final string after all operations.
+        Note that points on the edge of a vertical area are not considered 
+        included in the area.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param s: a string
-          * @param shift: a list of 2D integer
-          * @return: the final string after all operations
+          * @param points: a list of 2D integers
+          * @return: the widest vertical area between two points such that no points are inside the area
           */
-        let stringShift = function(s, shift) {
-            let totalShift = 0;
+        let maxWidthOfVerticalArea = function(points) {
+            // Extract the x-coordinates from the points
+            const xCoords = points.map(point => point[0]);
 
-            // Calculate the net shift amount
-            for (let i = 0; i < shift.length; i++) {
-                let direction = shift[i][0];
-                let amount = shift[i][1];
+            // Sort the x-coordinates
+            xCoords.sort((a, b) => a - b);
 
-                // Left shift
-                if (direction === 0) {
-                    totalShift -= amount;
-                }
-                // Right shift
-                else {
-                    totalShift += amount;
+            // Find the maximum gap between consecutive x-coordinates
+            let maxWidth = 0;
+            for (let i = 1; i < xCoords.length; i++) {
+                const gap = xCoords[i] - xCoords[i - 1];
+                if (gap > maxWidth) {
+                    maxWidth = gap;
                 }
             }
 
-            // Reduce totalShift to a value within the string length
-            const len = s.length;
-            totalShift %= len;
-
-            // Handle negative shifts by converting them to positive shifts
-            if (totalShift < 0) {
-                totalShift += len;
-            }
-
-            // Perform the final shift
-            return s.slice(-totalShift) + s.slice(0, -totalShift);
+            return maxWidth;
         };
 
-        const input = "abc";
-        const shift = [[0,1],[1,2]];
-        let results = stringShift(input, shift);
+        const input = [[8,7],[9,9],[7,4],[9,7]];
+        let results = maxWidthOfVerticalArea(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Net Shift Calculation:
-          . The first loop iterates through the shift matrix, accumulating 
-            the net shift by adding for right shifts (direction = 1) and 
-            subtracting for left shifts (direction = 0).
-        2. Optimize the Shift Amount:
-          . After calculating the total shift, we use the modulo operation 
-            (totalShift %= len) to ensure the shift is within the bounds 
-            of the string's length.
-        3. Handle Negative Shifts:
-          . If the totalShift is negative (which means a net left shift), 
-            it’s converted to a positive shift by adding the string length.
-        4. Final String Shift:
-          . The final result is obtained by concatenating the substring from 
-            the point where the shift ends to the start, followed by the 
-            substring from the start to where the shift ends.
+				. Extracting x-coordinates: We iterate through each point and store the x-coordinate in an array.
+        . Sorting: sort the x-coordinates to find the consecutive points that will give us the possible widths of vertical areas.
+        . Finding the maximum gap: We loop through the sorted array of x-coordinates and calculate the difference between each 
+          pair of consecutive elements. The maximum difference gives us the widest vertical area.
 			 */
 
 		</script>
