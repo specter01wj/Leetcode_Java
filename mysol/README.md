@@ -585,6 +585,7 @@ By Jin Wang
 |1624|**Largest Substring Between Two Equal Characters**|Easy|Java/Javascript|Done/Done|
 |1629|**Slowest Key**|Easy|Java/Javascript|Done/Done|
 |1636|**Sort Array by Increasing Frequency**|Easy|Java/Javascript|Done/Done|
+|1637|**Widest Vertical Area Between Two Points Containing No Points**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1640|**Check Array Formation Through Concatenation**|Easy|Java/Javascript|Done/Done|
 |1646|**Get Maximum in Generated Array**|Easy|Java/Javascript|Done/Done|
 |1652|**Defuse the Bomb**|Easy|Java/Javascript|Done/Done|
@@ -597,6 +598,7 @@ By Jin Wang
 |1694|**Reformat Phone Number**|Easy|Java/Javascript|Done/Done|
 |1700|**Number of Students Unable to Eat Lunch**|Easy|Java/Javascript|Done/Done|
 |1704|**Determine if String Halves Are Alike**|Easy|Java/Javascript|Done/Done|
+|1708|**Largest Subarray Length K**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1710|**Maximum Units on a Truck**|Easy|Java/Javascript|Done/Done|
 |1720|**Decode XORed Array**|Easy|Java/Javascript|Done/Done|
 |1725|**Number Of Rectangles That Can Form The Largest Square**|Easy|Java/Javascript|Done/Done|
