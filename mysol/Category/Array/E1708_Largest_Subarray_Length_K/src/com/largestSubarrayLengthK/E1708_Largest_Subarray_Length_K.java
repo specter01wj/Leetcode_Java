@@ -26,7 +26,24 @@ public class E1708_Largest_Subarray_Length_K {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Initialization:
+		. We start by initializing startIndex to 0, which represents the beginning of the current largest subarray.
+	2. Finding the Largest Subarray:
+		. We iterate over the possible starting indices for subarrays of length k.
+		. For each potential starting index, compare the elements of the subarray starting at startIndex 
+			with the subarray starting at the current index i.
+		. If the current subarray is larger, update startIndex to the current index.
+	3. Result Array:
+		. Finally, we construct the result array using the subarray starting at startIndex.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the largest subarray of nums of length k
+     */
 	public int[] largestSubarray(int[] nums, int k) {
         int n = nums.length;
         int[] largest = new int[k];
