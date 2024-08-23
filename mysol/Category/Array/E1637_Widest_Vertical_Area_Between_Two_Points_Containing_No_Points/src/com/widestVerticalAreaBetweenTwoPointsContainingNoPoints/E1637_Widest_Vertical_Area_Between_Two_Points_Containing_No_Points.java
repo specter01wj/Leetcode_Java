@@ -23,7 +23,18 @@ public class E1637_Widest_Vertical_Area_Between_Two_Points_Containing_No_Points 
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    . Extracting x-coordinates: We iterate through each point and store the x-coordinate in an array.
+	. Sorting: sort the x-coordinates to find the consecutive points that will give us the possible widths of vertical areas.
+	. Finding the maximum gap: We loop through the sorted array of x-coordinates and calculate the difference between each 
+		pair of consecutive elements. The maximum difference gives us the widest vertical area.
+    */
 	
+	/*
+     * @param points: a list of 2D integers
+     * @return: the widest vertical area between two points such that no points are inside the area
+     */
 	public int maxWidthOfVerticalArea(int[][] points) {
         // Extract the x-coordinates from the points
         int n = points.length;
