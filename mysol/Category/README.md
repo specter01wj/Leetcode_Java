@@ -249,6 +249,7 @@ Cspiration Category:
 |1679|Max Number of K-Sum Pairs|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1684|Count the Number of Consistent Strings|Easy||Java/Javascript|Done/Done|
 |1700|Number of Students Unable to Eat Lunch|Easy||Java/Javascript|Done/Done|
+|1708|Largest Subarray Length K|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1710|Maximum Units on a Truck|Easy||Java/Javascript|Done/Done|
 |1720|Decode XORed Array|Easy||Java/Javascript|Done/Done|
 |1725|Number Of Rectangles That Can Form The Largest Square|Easy||Java/Javascript|Done/Done|
