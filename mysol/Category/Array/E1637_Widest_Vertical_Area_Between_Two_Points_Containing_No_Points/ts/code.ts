@@ -1,38 +1,25 @@
 
-function stringShift(s: string, shift: number[][]): string {
-  let totalShift = 0;
+function maxWidthOfVerticalArea(points: number[][]): number {
+  // Extract the x-coordinates from the points
+  const xCoords: number[] = points.map(point => point[0]);
 
-  // Calculate the net shift amount
-  for (let i = 0; i < shift.length; i++) {
-      const direction = shift[i][0];
-      const amount = shift[i][1];
+  // Sort the x-coordinates
+  xCoords.sort((a, b) => a - b);
 
-      // Left shift
-      if (direction === 0) {
-          totalShift -= amount;
-      }
-      // Right shift
-      else {
-          totalShift += amount;
+  // Find the maximum gap between consecutive x-coordinates
+  let maxWidth = 0;
+  for (let i = 1; i < xCoords.length; i++) {
+      const gap = xCoords[i] - xCoords[i - 1];
+      if (gap > maxWidth) {
+          maxWidth = gap;
       }
   }
 
-  // Reduce totalShift to a value within the string length
-  const len = s.length;
-  totalShift %= len;
-
-  // Handle negative shifts by converting them to positive shifts
-  if (totalShift < 0) {
-      totalShift += len;
-  }
-
-  // Perform the final shift
-  return s.slice(-totalShift) + s.slice(0, -totalShift);
+  return maxWidth;
 };
 
-const input: string = "abc";
-const shift: number[][] = [[0,1],[1,2]];
-const results = stringShift(input, shift);
+const input: number[][] = [[8,7],[9,9],[7,4],[9,7]];
+const results = maxWidthOfVerticalArea(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
