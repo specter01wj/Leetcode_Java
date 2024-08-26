@@ -19,7 +19,20 @@ public class E2229_Check_if_an_Array_Is_Consecutive {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Finding Minimum and Maximum:
+		. Traverse the array to find the minimum and maximum values.
+		. Use a HashSet to store unique elements and ensure that there are no duplicates.
+	2. Validating Consecutiveness:
+		. Check if all values from min to max are present in the HashSet.
+		. Verify that the range [min, max] covers exactly n elements, where n is the length of the array.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if nums is consecutive, otherwise return false
+     */
 	public boolean isConsecutive(int[] nums) {
         if (nums == null || nums.length == 0) {
             return false;
