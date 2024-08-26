@@ -33,7 +33,23 @@ public class E1826_Faulty_Sensor {
         		"; input2: " + Arrays.toString(sensor2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initial Matching: The first while loop advances the index i while 
+    	the elements of s1 and s2 match.
+	2. Check for a single mismatch: The second while loop checks if removing 
+		a single element from either s1 or s2 could make the arrays match.
+	3. Determine defective sensor: After the loops, if the index i has reached 
+		the end (or near the end) of the arrays, it means no single element 
+		removal can fix the mismatch, so it returns -1. Otherwise, it checks 
+		which sensor has the discrepancy and returns 1 or 2 accordingly.
+    */
 	
+	/*
+     * @param sensor1: a list of integers
+     * @param sensor2: a list of integers
+     * @return: the sensor number (1 or 2) with the defect
+     */
 	public int badSensor(int[] sensor1, int[] sensor2) {
         int i = 0, sz = sensor1.length;
         while (i < sz && sensor1[i] == sensor2[i]) {
