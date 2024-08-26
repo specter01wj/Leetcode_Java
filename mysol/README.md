@@ -619,6 +619,7 @@ By Jin Wang
 |1812|**Determine Color of a Chessboard Square**|Easy|Java/Javascript|Done/Done|
 |1816|**Truncate Sentence**|Easy|Java/Javascript|Done/Done|
 |1822|**Sign of the Product of an Array**|Easy|Java/Javascript|Done/Done|
+|1826|**Faulty Sensor**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1827|**Minimum Operations to Make the Array Increasing**|Easy|Java/Javascript|Done/Done|
 |1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript|Done/Done|
 |1844|**Replace All Digits with Characters**|Easy|Java/Javascript|Done/Done|
