@@ -4,63 +4,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	An array A is larger than some array B if for the first index i 
-        where A[i] != B[i], A[i] > B[i].
+			 	An experiment is being conducted in a lab. To ensure accuracy, 
+        there are two sensors collecting data simultaneously. 
+        You are given two arrays sensor1 and sensor2, where sensor1[i] 
+        and sensor2[i] are the ith data points collected by the two sensors.
 
-        For example, consider 0-indexing:
+        However, this type of sensor has a chance of being defective, 
+        which causes exactly one data point to be dropped. 
+        After the data is dropped, all the data points to the right of 
+        the dropped data are shifted one place to the left, and the last 
+        data point is replaced with some random value. 
+        It is guaranteed that this random value will not be equal to the dropped value.
 
-        . [1,3,2,4] > [1,2,2,4], since at index 1, 3 > 2.
-        . [1,4,4,4] < [2,1,1,1], since at index 0, 1 < 2.
+          . For example, if the correct data is [1,2,3,4,5] and 3 is dropped, the sensor 
+            could return [1,2,4,5,7] (the last position can be any value, not just 7).
 
-        A subarray is a contiguous subsequence of the array.
-
-        Given an integer array nums of distinct integers, return the 
-        largest subarray of nums of length k.
+        We know that there is a defect in at most one of the sensors. 
+        Return the sensor number (1 or 2) with the defect. If there is no defect in 
+        either sensor or if it is impossible to determine the defective sensor, return -1.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param nums: a list of integers
-          * @param k: an integer
-          * @return: the largest subarray of nums of length k
+          * @param sensor1: a list of integers
+          * @param sensor2: a list of integers
+          * @return: the sensor number (1 or 2) with the defect
           */
-        let largestSubarray = function(nums, k) {
-            const n = nums.length;
-            let startIndex = 0;
-            
-            // Iterate over the array to find the starting index of the largest subarray
-            for (let i = 1; i <= n - k; i++) {
-                // Compare the current largest subarray with the new subarray starting at index i
-                for (let j = 0; j < k; j++) {
-                    if (nums[startIndex + j] < nums[i + j]) {
-                        startIndex = i;
-                        break;
-                    } else if (nums[startIndex + j] > nums[i + j]) {
-                        break;
-                    }
-                }
-            }
-            
-            // Slice the array to return the largest subarray
-            return nums.slice(startIndex, startIndex + k);
+        let badSensor = function(sensor1, sensor2) {
+          let i = 0, sz = sensor1.length;
+          while (i < sz && sensor1[i] === sensor2[i]) {
+              ++i;
+          }
+          while (i + 1 < sz && sensor1[i] === sensor2[i + 1] && sensor1[i + 1] === sensor2[i]) {
+              ++i;
+          }
+          return i >= sz - 1 ? -1 : sensor1[i] === sensor2[i + 1] ? 1 : 2;
         };
 
-        const input = [1,4,5,2,3];
-        const k = 3;
-        let results = largestSubarray(input, k);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
+        const sensor1 = [2, 3, 4, 5];
+        const sensor2 = [2, 1, 3, 4];
+        let results = badSensor(sensor1, sensor2);
+				$('#t1').html('<h2>Input: ' + sensor1 + '; Input2: ' + sensor2 + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Initialization:
-          . We start by initializing startIndex to 0, which represents the beginning of the current largest subarray.
-        2. Finding the Largest Subarray:
-          . We iterate over the possible starting indices for subarrays of length k.
-          . For each potential starting index, compare the elements of the subarray starting at startIndex 
-            with the subarray starting at the current index i.
-          . If the current subarray is larger, update startIndex to the current index.
-        3. Result Array:
-          . Finally, we construct the result array using the subarray starting at startIndex.
+				1. Initial Matching: The first while loop advances the index i while 
+            the elements of s1 and s2 match.
+        2. Check for a single mismatch: The second while loop checks if removing 
+          a single element from either s1 or s2 could make the arrays match.
+        3. Determine defective sensor: After the loops, if the index i has reached 
+          the end (or near the end) of the arrays, it means no single element 
+          removal can fix the mismatch, so it returns -1. Otherwise, it checks 
+          which sensor has the discrepancy and returns 1 or 2 accordingly.
 			 */
 
 		</script>
