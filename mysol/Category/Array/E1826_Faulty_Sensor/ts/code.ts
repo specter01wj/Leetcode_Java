@@ -1,28 +1,26 @@
 
-function largestSubarray(nums: number[], k: number): number[] {
-  const n = nums.length;
-  let startIndex = 0;
-
-  // Iterate to find the subarray that starts at the largest value
-  for (let i = 1; i <= n - k; i++) {
-      for (let j = 0; j < k; j++) {
-          if (nums[startIndex + j] < nums[i + j]) {
-              startIndex = i;
-              break;
-          } else if (nums[startIndex + j] > nums[i + j]) {
-              break;
-          }
-      }
+function badSensor(sensor1: number[], sensor2: number[]): number {
+  let i = 0;
+  const sz = sensor1.length;
+  
+  // Find the first index where sensor1 and sensor2 differ
+  while (i < sz && sensor1[i] === sensor2[i]) {
+      ++i;
   }
-
-  // Return the subarray of length k starting from startIndex
-  return nums.slice(startIndex, startIndex + k);
+  
+  // Check if removing one element from sensor1 or sensor2 will make them equal
+  while (i + 1 < sz && sensor1[i] === sensor2[i + 1] && sensor1[i + 1] === sensor2[i]) {
+      ++i;
+  }
+  
+  // Return 1 if sensor1 has a defect, 2 if sensor2 has a defect, -1 if neither
+  return i >= sz - 1 ? -1 : sensor1[i] === sensor2[i + 1] ? 1 : 2;
 };
 
-const input: number[] = [1,4,5,2,3];
-const k: number = 3;
-const results = largestSubarray(input, k);
+const sensor1: number[] = [2, 3, 4, 5];
+const sensor2: number[] = [2, 1, 3, 4];
+const results = badSensor(sensor1, sensor2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input1: ' + sensor1 + '; Input2: ' + sensor2 + '<br>Result = ' + results;
 
