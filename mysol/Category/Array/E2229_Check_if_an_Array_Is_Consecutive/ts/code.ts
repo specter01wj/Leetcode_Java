@@ -1,27 +1,32 @@
 
-function largestSubarray(nums: number[], k: number): number[] {
-  const n = nums.length;
-  let startIndex = 0;
-
-  // Iterate to find the subarray that starts at the largest value
-  for (let i = 1; i <= n - k; i++) {
-      for (let j = 0; j < k; j++) {
-          if (nums[startIndex + j] < nums[i + j]) {
-              startIndex = i;
-              break;
-          } else if (nums[startIndex + j] > nums[i + j]) {
-              break;
-          }
-      }
+function isConsecutive(nums: number[]): boolean {
+  if (nums == null || nums.length === 0) {
+      return false;
   }
 
-  // Return the subarray of length k starting from startIndex
-  return nums.slice(startIndex, startIndex + k);
+  const set = new Set<number>();
+  let min = Number.MAX_SAFE_INTEGER;
+  let max = Number.MIN_SAFE_INTEGER;
+  
+  // Find the minimum and maximum values
+  for (const num of nums) {
+      if (num < min) min = num;
+      if (num > max) max = num;
+      set.add(num);
+  }
+  
+  // Check if the number of unique elements matches the range
+  for (let i = min; i <= max; i++) {
+      if (!set.has(i)) {
+          return false;
+      }
+  }
+  
+  return (max - min + 1) === nums.length;
 };
 
-const input: number[] = [1,4,5,2,3];
-const k: number = 3;
-const results = largestSubarray(input, k);
+const input: number[] = [1,3,4,2];
+const results = isConsecutive(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
