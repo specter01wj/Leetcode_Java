@@ -26,7 +26,26 @@ public class E2399_Check_Distances_Between_Same_Letters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. firstOccurrence Array:
+		. This array keeps track of the first occurrence of each letter in the string.
+		. Initially, all values are set to -1, indicating that the letter has not been encountered yet.
+	2. Loop through the String:
+		. For each character, calculate its index in the alphabet (c - 'a').
+		. If it's the first time the character is encountered, store its index.
+		. If it's the second time, calculate the distance between the two occurrences.
+		. Compare the calculated distance with the expected distance from the distance array.
+	3. Return:
+		. If all characters meet the distance requirement, return true.
+		. If any character fails, return false.
+    */
 	
+	/*
+     * @param s: a string
+     * @param distance: a list of integers
+     * @return: true if s is a well-spaced string, otherwise return false
+     */
 	public boolean checkDistances(String s, int[] distance) {
         // Array to store the first occurrence of each letter
         int[] firstOccurrence = new int[26];
