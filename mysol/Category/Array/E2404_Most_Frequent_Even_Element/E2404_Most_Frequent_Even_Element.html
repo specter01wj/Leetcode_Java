@@ -4,69 +4,65 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed string s consisting of only lowercase 
-        English letters, where each letter in s appears exactly twice. 
-        You are also given a 0-indexed integer array distance of length 26.
+			 	Given an integer array nums, return the most frequent even element.
 
-        Each letter in the alphabet is numbered from 0 to 25 
-        (i.e. 'a' -> 0, 'b' -> 1, 'c' -> 2, ... , 'z' -> 25).
-
-        In a well-spaced string, the number of letters between the 
-        two occurrences of the ith letter is distance[i]. If the ith 
-        letter does not appear in s, then distance[i] can be ignored.
-
-        Return true if s is a well-spaced string, otherwise return false.
+        If there is a tie, return the smallest one. If there is no such element, return -1.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param s: a string
-          * @param distance: a list of integers
-          * @return: true if s is a well-spaced string, otherwise return false
+          * @param nums: a list of integers
+          * @return: the smallest one
           */
-        let checkDistances = function(s, distance) {
-            // Array to store the first occurrence of each letter
-            const firstOccurrence = Array(26).fill(-1);
+        let mostFrequentEven = function(nums) {
+            // Object to store the frequency of even numbers
+            const frequencyMap = {};
 
-            // Loop through the string
-            for (let i = 0; i < s.length; i++) {
-                const index = s.charCodeAt(i) - 'a'.charCodeAt(0); // Calculate the index of the letter in the alphabet
-
-                if (firstOccurrence[index] === -1) {
-                    // If this is the first occurrence of the letter, store the index
-                    firstOccurrence[index] = i;
-                } else {
-                    // If this is the second occurrence, calculate the distance
-                    const actualDistance = i - firstOccurrence[index] - 1;
-                    if (actualDistance !== distance[index]) {
-                        // If the distance doesn't match the expected distance, return false
-                        return false;
-                    }
+            // Traverse through the array and count frequencies of even numbers
+            for (let num of nums) {
+                if (num % 2 === 0) {
+                    frequencyMap[num] = (frequencyMap[num] || 0) + 1;
                 }
             }
 
-            // If all letters satisfy the distance requirement, return true
-            return true;
+            // Variables to track the most frequent even number and its frequency
+            let mostFrequentEven = -1;
+            let maxFrequency = 0;
+
+            // Traverse through the object to find the most frequent even number
+            for (let num in frequencyMap) {
+                const freq = frequencyMap[num];
+
+                // Convert num to a number before comparison
+                const numValue = parseInt(num);
+
+                // Update the most frequent even number based on frequency and value
+                if (freq > maxFrequency || (freq === maxFrequency && numValue < mostFrequentEven)) {
+                    mostFrequentEven = numValue;
+                    maxFrequency = freq;
+                }
+            }
+
+            return mostFrequentEven;
         };
 
-        const input = "abaccb";
-        const distance = [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-        let results = checkDistances(input, distance);
+        const input = [0,1,2,2,4,4,1];
+        let results = mostFrequentEven(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. firstOccurrence Array:
-          . This array keeps track of the first occurrence of each letter in the string.
-          . Initially, all values are set to -1, indicating that the letter has not been encountered yet.
-        2. Loop through the String:
-          . For each character, calculate its index in the alphabet (c - 'a').
-          . If it's the first time the character is encountered, store its index.
-          . If it's the second time, calculate the distance between the two occurrences.
-          . Compare the calculated distance with the expected distance from the distance array.
-        3. Return:
-          . If all characters meet the distance requirement, return true.
-          . If any character fails, return false.
+				1. frequencyMap:
+          . This Map stores each even number as the key and its frequency as the value.
+        2. Traversing the Array:
+          . The function iterates through the nums array.
+          . For each even number, it updates its frequency in the frequencyMap.
+        3. Finding the Most Frequent Even Number:
+          . The function then iterates through the frequencyMap to find the most frequent even number.
+          . If two numbers have the same frequency, it selects the smaller one.
+        4. Return:
+          . If there is no even number, the function returns -1.
+          . Otherwise, it returns the most frequent even number.
 			 */
 
 		</script>
