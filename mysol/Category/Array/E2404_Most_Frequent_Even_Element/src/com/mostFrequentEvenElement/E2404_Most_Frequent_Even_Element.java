@@ -16,7 +16,25 @@ public class E2404_Most_Frequent_Even_Element {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. frequencyMap:
+		. This Map stores each even number as the key and its frequency as the value.
+	2. Traversing the Array:
+		. The function iterates through the nums array.
+		. For each even number, it updates its frequency in the frequencyMap.
+	3. Finding the Most Frequent Even Number:
+		. The function then iterates through the frequencyMap to find the most frequent even number.
+		. If two numbers have the same frequency, it selects the smaller one.
+	4. Return:
+		. If there is no even number, the function returns -1.
+		. Otherwise, it returns the most frequent even number.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the smallest one
+     */
 	public int mostFrequentEven(int[] nums) {
         // Map to store the frequency of even numbers
         Map<Integer, Integer> frequencyMap = new HashMap<>();
