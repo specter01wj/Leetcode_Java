@@ -698,6 +698,8 @@ By Jin Wang
 |2383|**Minimum Hours of Training to Win a Competition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2389|**Longest Subsequence With Limited Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2395|**Find Subarrays With Equal Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2399|**Check Distances Between Same Letters**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2404|**Most Frequent Even Element**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
