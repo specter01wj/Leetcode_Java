@@ -1,32 +1,32 @@
 
-function isConsecutive(nums: number[]): boolean {
-  if (nums == null || nums.length === 0) {
-      return false;
-  }
+function checkDistances(s: string, distance: number[]): boolean {
+  // Array to store the first occurrence of each letter
+  const firstOccurrence: number[] = Array(26).fill(-1);
 
-  const set = new Set<number>();
-  let min = Number.MAX_SAFE_INTEGER;
-  let max = Number.MIN_SAFE_INTEGER;
-  
-  // Find the minimum and maximum values
-  for (const num of nums) {
-      if (num < min) min = num;
-      if (num > max) max = num;
-      set.add(num);
-  }
-  
-  // Check if the number of unique elements matches the range
-  for (let i = min; i <= max; i++) {
-      if (!set.has(i)) {
-          return false;
+  // Loop through the string
+  for (let i = 0; i < s.length; i++) {
+      const index: number = s.charCodeAt(i) - 'a'.charCodeAt(0); // Calculate the index of the letter in the alphabet
+
+      if (firstOccurrence[index] === -1) {
+          // If this is the first occurrence of the letter, store the index
+          firstOccurrence[index] = i;
+      } else {
+          // If this is the second occurrence, calculate the distance
+          const actualDistance: number = i - firstOccurrence[index] - 1;
+          if (actualDistance !== distance[index]) {
+              // If the distance doesn't match the expected distance, return false
+              return false;
+          }
       }
   }
-  
-  return (max - min + 1) === nums.length;
+
+  // If all letters satisfy the distance requirement, return true
+  return true;
 };
 
-const input: number[] = [1,3,4,2];
-const results = isConsecutive(input);
+const input: string = "abaccb";
+const distance: number[] = [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+const results = checkDistances(input, distance);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
