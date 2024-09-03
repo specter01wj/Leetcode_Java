@@ -701,6 +701,7 @@ By Jin Wang
 |2399|**Check Distances Between Same Letters**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2404|**Most Frequent Even Element**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2418|**Sort the People**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2432|**The Employee That Worked on the Longest Task**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
