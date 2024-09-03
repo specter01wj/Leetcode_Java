@@ -1,38 +1,20 @@
 
-function mostFrequentEven(nums: number[]): number {
-  // Map to store the frequency of even numbers
-  const frequencyMap: { [key: number]: number } = {};
+function sortPeople(names: string[], heights: number[]): string[] {
+  // Create an array of indices
+  const indices: number[] = names.map((_, index) => index);
 
-  // Traverse through the array and count frequencies of even numbers
-  for (let num of nums) {
-      if (num % 2 === 0) {
-          frequencyMap[num] = (frequencyMap[num] || 0) + 1;
-      }
-  }
+  // Sort the indices array based on the corresponding heights in descending order
+  indices.sort((a, b) => heights[b] - heights[a]);
 
-  // Variables to track the most frequent even number and its frequency
-  let mostFrequentEven = -1;
-  let maxFrequency = 0;
+  // Create a new array for the sorted names
+  const sortedNames: string[] = indices.map(index => names[index]);
 
-  // Traverse through the map to find the most frequent even number
-  for (let num in frequencyMap) {
-      const freq = frequencyMap[num];
-
-      // Convert num to a number before comparison
-      const numValue = parseInt(num);
-
-      // Update the most frequent even number based on frequency and value
-      if (freq > maxFrequency || (freq === maxFrequency && numValue < mostFrequentEven)) {
-          mostFrequentEven = numValue;
-          maxFrequency = freq;
-      }
-  }
-
-  return mostFrequentEven;
+  return sortedNames;
 };
 
-const input: number[] = [0,1,2,2,4,4,1];
-const results = mostFrequentEven(input);
+const input: string[] = ["Mary", "John", "Emma"];
+const heights: number[] = [180, 165, 170];
+const results = sortPeople(input, heights);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
