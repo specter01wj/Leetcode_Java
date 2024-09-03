@@ -21,7 +21,24 @@ public class E2418_Sort_the_People {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Index Array Creation:
+		. We first create an array indices of the same length 
+			as names to store the indices of the elements.
+	2. Sorting:
+		. We then sort this indices array based on the corresponding 
+			heights array, in descending order.
+	3. Result Construction:
+		. Finally, we create a new array sortedNames by placing the 
+			names in the order dictated by the sorted indices array.
+    */
 	
+	/*
+     * @param names: a list of strings
+     * @param heights: a list of integers
+     * @return: names sorted in descending order by the people's heights
+     */
 	public String[] sortPeople(String[] names, int[] heights) {
         // Create an array of indices
         Integer[] indices = new Integer[names.length];
