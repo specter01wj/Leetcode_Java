@@ -323,6 +323,7 @@ Cspiration Category:
 |2395|Find Subarrays With Equal Sum|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2399|Check Distances Between Same Letters|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2404|Most Frequent Even Element|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2418|Sort the People|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2462|Total Cost to Hire K Workers|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2542|Maximum Subsequence Score|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
