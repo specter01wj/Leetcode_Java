@@ -4,65 +4,50 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array nums, return the most frequent even element.
+			 	You are given an array of strings names, and an array heights 
+        that consists of distinct positive integers. Both arrays are of length n.
 
-        If there is a tie, return the smallest one. If there is no such element, return -1.
+        For each index i, names[i] and heights[i] denote the name and 
+        height of the ith person.
+
+        Return names sorted in descending order by the people's heights.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param nums: a list of integers
-          * @return: the smallest one
+          * @param names: a list of strings
+          * @param heights: a list of integers
+          * @return: names sorted in descending order by the people's heights
           */
-        let mostFrequentEven = function(nums) {
-            // Object to store the frequency of even numbers
-            const frequencyMap = {};
+        let sortPeople = function(names, heights) {
+            // Create an array of indices
+            let indices = names.map((_, index) => index);
 
-            // Traverse through the array and count frequencies of even numbers
-            for (let num of nums) {
-                if (num % 2 === 0) {
-                    frequencyMap[num] = (frequencyMap[num] || 0) + 1;
-                }
-            }
+            // Sort the indices array based on the corresponding heights in descending order
+            indices.sort((a, b) => heights[b] - heights[a]);
 
-            // Variables to track the most frequent even number and its frequency
-            let mostFrequentEven = -1;
-            let maxFrequency = 0;
+            // Create a new array for the sorted names
+            let sortedNames = indices.map(index => names[index]);
 
-            // Traverse through the object to find the most frequent even number
-            for (let num in frequencyMap) {
-                const freq = frequencyMap[num];
-
-                // Convert num to a number before comparison
-                const numValue = parseInt(num);
-
-                // Update the most frequent even number based on frequency and value
-                if (freq > maxFrequency || (freq === maxFrequency && numValue < mostFrequentEven)) {
-                    mostFrequentEven = numValue;
-                    maxFrequency = freq;
-                }
-            }
-
-            return mostFrequentEven;
+            return sortedNames;
         };
 
-        const input = [0,1,2,2,4,4,1];
-        let results = mostFrequentEven(input);
+        const input = ["Mary", "John", "Emma"];
+        const heights = [180, 165, 170];
+        let results = sortPeople(input, heights);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. frequencyMap:
-          . This Map stores each even number as the key and its frequency as the value.
-        2. Traversing the Array:
-          . The function iterates through the nums array.
-          . For each even number, it updates its frequency in the frequencyMap.
-        3. Finding the Most Frequent Even Number:
-          . The function then iterates through the frequencyMap to find the most frequent even number.
-          . If two numbers have the same frequency, it selects the smaller one.
-        4. Return:
-          . If there is no even number, the function returns -1.
-          . Otherwise, it returns the most frequent even number.
+				1. Index Array Creation:
+          . We first create an array indices of the same length 
+            as names to store the indices of the elements.
+        2. Sorting:
+          . We then sort this indices array based on the corresponding 
+            heights array, in descending order.
+        3. Result Construction:
+          . Finally, we create a new array sortedNames by placing the 
+            names in the order dictated by the sorted indices array.
 			 */
 
 		</script>
