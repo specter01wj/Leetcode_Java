@@ -1,20 +1,30 @@
 
-function sortPeople(names: string[], heights: number[]): string[] {
-  // Create an array of indices
-  const indices: number[] = names.map((_, index) => index);
+function hardestWorker(n: number, logs: number[][]): number {
+  let maxDuration = 0;
+  let employeeId = Number.MAX_VALUE;
+  let previousEndTime = 0;
 
-  // Sort the indices array based on the corresponding heights in descending order
-  indices.sort((a, b) => heights[b] - heights[a]);
+  for (let i = 0; i < logs.length; i++) {
+      const id = logs[i][0];
+      const leaveTime = logs[i][1];
+      const duration = leaveTime - previousEndTime;
 
-  // Create a new array for the sorted names
-  const sortedNames: string[] = indices.map(index => names[index]);
+      if (duration > maxDuration) {
+          maxDuration = duration;
+          employeeId = id;
+      } else if (duration === maxDuration && id < employeeId) {
+          employeeId = id;
+      }
 
-  return sortedNames;
+      previousEndTime = leaveTime;
+  }
+
+  return employeeId;
 };
 
-const input: string[] = ["Mary", "John", "Emma"];
-const heights: number[] = [180, 165, 170];
-const results = sortPeople(input, heights);
+const input: number[][] = [[0, 3], [2, 5], [0, 9], [1, 15]];
+const n: number = 10;
+const results = hardestWorker(n, input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
