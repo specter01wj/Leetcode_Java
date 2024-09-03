@@ -4,50 +4,69 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an array of strings names, and an array heights 
-        that consists of distinct positive integers. Both arrays are of length n.
+			 	There are n employees, each with a unique id from 0 to n - 1.
 
-        For each index i, names[i] and heights[i] denote the name and 
-        height of the ith person.
+        You are given a 2D integer array logs where logs[i] = [idi, leaveTimei] where:
 
-        Return names sorted in descending order by the people's heights.
+          . idi is the id of the employee that worked on the ith task, and
+          . leaveTimei is the time at which the employee finished the ith task. 
+            All the values leaveTimei are unique.
+
+        Note that the ith task starts the moment right after the (i - 1)th task ends, 
+        and the 0th task starts at time 0.
+
+        Return the id of the employee that worked the task with the longest time. 
+        If there is a tie between two or more employees, return the smallest id among them.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param names: a list of strings
-          * @param heights: a list of integers
-          * @return: names sorted in descending order by the people's heights
+          * @param n: an integer
+          * @param logs: a list of 2D integers
+          * @return: the number of good triplets
           */
-        let sortPeople = function(names, heights) {
-            // Create an array of indices
-            let indices = names.map((_, index) => index);
+        let hardestWorker = function(n, logs) {
+            let maxDuration = 0;
+            let employeeId = Infinity;
+            let previousEndTime = 0;
 
-            // Sort the indices array based on the corresponding heights in descending order
-            indices.sort((a, b) => heights[b] - heights[a]);
+            for (let i = 0; i < logs.length; i++) {
+                let id = logs[i][0];
+                let leaveTime = logs[i][1];
+                let duration = leaveTime - previousEndTime;
 
-            // Create a new array for the sorted names
-            let sortedNames = indices.map(index => names[index]);
+                if (duration > maxDuration) {
+                    maxDuration = duration;
+                    employeeId = id;
+                } else if (duration === maxDuration && id < employeeId) {
+                    employeeId = id;
+                }
 
-            return sortedNames;
+                previousEndTime = leaveTime;
+            }
+
+            return employeeId;
         };
 
-        const input = ["Mary", "John", "Emma"];
-        const heights = [180, 165, 170];
-        let results = sortPeople(input, heights);
+        const input = [[0, 3], [2, 5], [0, 9], [1, 15]];
+        const n = 10;
+        let results = hardestWorker(n, input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Index Array Creation:
-          . We first create an array indices of the same length 
-            as names to store the indices of the elements.
-        2. Sorting:
-          . We then sort this indices array based on the corresponding 
-            heights array, in descending order.
-        3. Result Construction:
-          . Finally, we create a new array sortedNames by placing the 
-            names in the order dictated by the sorted indices array.
+				1. Initialize Variables:
+          . maxDuration to store the maximum task duration encountered.
+          . employeeId to store the ID of the employee who worked the longest task, initialized to Integer.MAX_VALUE to handle ties.
+          . previousEndTime to track the end time of the previous task.
+        2. Iterate Over Logs:
+          . For each log, calculate the duration of the task by subtracting previousEndTime from the current leaveTime.
+          . If the current duration is greater than maxDuration, update maxDuration and set employeeId to the current employee's ID.
+          . If the duration is equal to maxDuration but the current employee's ID is smaller, update employeeId to the current ID.
+        3. Update Previous End Time:
+          . Update previousEndTime to the current task's leaveTime for the next iteration.
+        4. Return:
+          . Finally, return the employeeId that corresponds to the longest task duration.
 			 */
 
 		</script>
