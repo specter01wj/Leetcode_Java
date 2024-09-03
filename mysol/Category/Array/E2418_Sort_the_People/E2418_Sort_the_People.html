@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums, return the most frequent even element.
+
+        If there is a tie, return the smallest one. If there is no such element, return -1.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param nums: a list of integers
+          * @return: the smallest one
+          */
+        let mostFrequentEven = function(nums) {
+            // Object to store the frequency of even numbers
+            const frequencyMap = {};
+
+            // Traverse through the array and count frequencies of even numbers
+            for (let num of nums) {
+                if (num % 2 === 0) {
+                    frequencyMap[num] = (frequencyMap[num] || 0) + 1;
+                }
+            }
+
+            // Variables to track the most frequent even number and its frequency
+            let mostFrequentEven = -1;
+            let maxFrequency = 0;
+
+            // Traverse through the object to find the most frequent even number
+            for (let num in frequencyMap) {
+                const freq = frequencyMap[num];
+
+                // Convert num to a number before comparison
+                const numValue = parseInt(num);
+
+                // Update the most frequent even number based on frequency and value
+                if (freq > maxFrequency || (freq === maxFrequency && numValue < mostFrequentEven)) {
+                    mostFrequentEven = numValue;
+                    maxFrequency = freq;
+                }
+            }
+
+            return mostFrequentEven;
+        };
+
+        const input = [0,1,2,2,4,4,1];
+        let results = mostFrequentEven(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. frequencyMap:
+          . This Map stores each even number as the key and its frequency as the value.
+        2. Traversing the Array:
+          . The function iterates through the nums array.
+          . For each even number, it updates its frequency in the frequencyMap.
+        3. Finding the Most Frequent Even Number:
+          . The function then iterates through the frequencyMap to find the most frequent even number.
+          . If two numbers have the same frequency, it selects the smaller one.
+        4. Return:
+          . If there is no even number, the function returns -1.
+          . Otherwise, it returns the most frequent even number.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
