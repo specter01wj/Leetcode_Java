@@ -27,7 +27,27 @@ public class E2432_The_Employee_That_Worked_on_the_Longest_Task {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialize Variables:
+		. maxDuration to store the maximum task duration encountered.
+		. employeeId to store the ID of the employee who worked the longest task, initialized to Integer.MAX_VALUE to handle ties.
+		. previousEndTime to track the end time of the previous task.
+	2. Iterate Over Logs:
+		. For each log, calculate the duration of the task by subtracting previousEndTime from the current leaveTime.
+		. If the current duration is greater than maxDuration, update maxDuration and set employeeId to the current employee's ID.
+		. If the duration is equal to maxDuration but the current employee's ID is smaller, update employeeId to the current ID.
+	3. Update Previous End Time:
+		. Update previousEndTime to the current task's leaveTime for the next iteration.
+	4. Return:
+		. Finally, return the employeeId that corresponds to the longest task duration.
+    */
 	
+	/*
+     * @param n: an integer
+     * @param logs: a list of 2D integers
+     * @return: the number of good triplets
+     */
 	public int hardestWorker(int n, int[][] logs) {
         int maxDuration = 0;
         int employeeId = Integer.MAX_VALUE;
