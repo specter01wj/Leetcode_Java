@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	There are n employees, each with a unique id from 0 to n - 1.
+
+        You are given a 2D integer array logs where logs[i] = [idi, leaveTimei] where:
+
+          . idi is the id of the employee that worked on the ith task, and
+          . leaveTimei is the time at which the employee finished the ith task. 
+            All the values leaveTimei are unique.
+
+        Note that the ith task starts the moment right after the (i - 1)th task ends, 
+        and the 0th task starts at time 0.
+
+        Return the id of the employee that worked the task with the longest time. 
+        If there is a tie between two or more employees, return the smallest id among them.
+			 */
+			$(document).ready(function(){
+
+				/*
+          * @param n: an integer
+          * @param logs: a list of 2D integers
+          * @return: the number of good triplets
+          */
+        let hardestWorker = function(n, logs) {
+            let maxDuration = 0;
+            let employeeId = Infinity;
+            let previousEndTime = 0;
+
+            for (let i = 0; i < logs.length; i++) {
+                let id = logs[i][0];
+                let leaveTime = logs[i][1];
+                let duration = leaveTime - previousEndTime;
+
+                if (duration > maxDuration) {
+                    maxDuration = duration;
+                    employeeId = id;
+                } else if (duration === maxDuration && id < employeeId) {
+                    employeeId = id;
+                }
+
+                previousEndTime = leaveTime;
+            }
+
+            return employeeId;
+        };
+
+        const input = [[0, 3], [2, 5], [0, 9], [1, 15]];
+        const n = 10;
+        let results = hardestWorker(n, input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Initialize Variables:
+          . maxDuration to store the maximum task duration encountered.
+          . employeeId to store the ID of the employee who worked the longest task, initialized to Integer.MAX_VALUE to handle ties.
+          . previousEndTime to track the end time of the previous task.
+        2. Iterate Over Logs:
+          . For each log, calculate the duration of the task by subtracting previousEndTime from the current leaveTime.
+          . If the current duration is greater than maxDuration, update maxDuration and set employeeId to the current employee's ID.
+          . If the duration is equal to maxDuration but the current employee's ID is smaller, update employeeId to the current ID.
+        3. Update Previous End Time:
+          . Update previousEndTime to the current task's leaveTime for the next iteration.
+        4. Return:
+          . Finally, return the employeeId that corresponds to the longest task duration.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
