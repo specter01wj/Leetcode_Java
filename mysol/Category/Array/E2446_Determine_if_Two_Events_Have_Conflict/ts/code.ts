@@ -1,26 +1,25 @@
 
-function findMaxK(nums: number[]): number {
-  let set: Set<number> = new Set();
-  let maxK: number = -1;
+function haveConflict(event1: string[], event2: string[]): boolean {
+  // Helper function to convert "HH:MM" to minutes since 00:00
+  const timeToMinutes = (time: string): number => {
+      const [hours, minutes] = time.split(':').map(Number);
+      return hours * 60 + minutes;
+  };
 
-  // Add all elements to the set
-  for (let num of nums) {
-      set.add(num);
-  }
+  // Convert event start and end times to minutes since 00:00
+  const start1 = timeToMinutes(event1[0]);
+  const end1 = timeToMinutes(event1[1]);
+  const start2 = timeToMinutes(event2[0]);
+  const end2 = timeToMinutes(event2[1]);
 
-  // Check for the largest positive integer k such that -k also exists
-  for (let num of nums) {
-      if (num > 0 && set.has(-num)) {
-          maxK = Math.max(maxK, num);
-      }
-  }
-
-  return maxK;
+  // Check if there is an overlap between event1 and event2
+  return !(end1 < start2 || end2 < start1);
 };
 
-const input: number[] = [-1,10,6,7,-7,1];
-const results = findMaxK(input);
+const event1: string[] = ["01:15", "02:00"];
+const event2: string[] = ["02:00", "03:00"];
+const results = haveConflict(event1, event2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input1: ' + event1 + '; Input2: ' + event2 + '<br>Result = ' + results;
 
