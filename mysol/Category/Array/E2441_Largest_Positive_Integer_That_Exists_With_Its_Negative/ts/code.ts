@@ -1,30 +1,25 @@
 
-function hardestWorker(n: number, logs: number[][]): number {
-  let maxDuration = 0;
-  let employeeId = Number.MAX_VALUE;
-  let previousEndTime = 0;
+function findMaxK(nums: number[]): number {
+  let set: Set<number> = new Set();
+  let maxK: number = -1;
 
-  for (let i = 0; i < logs.length; i++) {
-      const id = logs[i][0];
-      const leaveTime = logs[i][1];
-      const duration = leaveTime - previousEndTime;
-
-      if (duration > maxDuration) {
-          maxDuration = duration;
-          employeeId = id;
-      } else if (duration === maxDuration && id < employeeId) {
-          employeeId = id;
-      }
-
-      previousEndTime = leaveTime;
+  // Add all elements to the set
+  for (let num of nums) {
+      set.add(num);
   }
 
-  return employeeId;
+  // Check for the largest positive integer k such that -k also exists
+  for (let num of nums) {
+      if (num > 0 && set.has(-num)) {
+          maxK = Math.max(maxK, num);
+      }
+  }
+
+  return maxK;
 };
 
-const input: number[][] = [[0, 3], [2, 5], [0, 9], [1, 15]];
-const n: number = 10;
-const results = hardestWorker(n, input);
+const input: number[] = [-1,10,6,7,-7,1];
+const results = findMaxK(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
