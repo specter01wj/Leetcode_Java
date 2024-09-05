@@ -26,7 +26,26 @@ public class E2446_Determine_if_Two_Events_Have_Conflict {
         System.out.println("input1: " + Arrays.toString(event1) + "; input2: " + Arrays.toString(event2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Helper function timeToMinutes: This function converts the "HH:MM" 
+    	format into the total number of minutes since 00:00. It splits 
+    	the time string into hours and minutes, then converts each to 
+    	integers and calculates the total minutes.
+	2. Time comparison: After converting the event times into minutes, 
+		we check for overlaps:
+		. If the end time of the first event is before the start time of 
+			the second event (end1 < start2) or the end time of the second 
+			event is before the start time of the first event (end2 < start1), 
+			there is no conflict.
+		. If neither condition holds, the events overlap, and we return true.
+    */
 	
+	/*
+     * @param event1: a list of strings
+     * @param event2: a list of strings
+     * @return: true if there is a conflict between two events. Otherwise, return false
+     */
 	public boolean haveConflict(String[] event1, String[] event2) {
         // Convert event start and end times to minutes since 00:00
         int start1 = timeToMinutes(event1[0]);
