@@ -1,25 +1,48 @@
 
-function haveConflict(event1: string[], event2: string[]): boolean {
-  // Helper function to convert "HH:MM" to minutes since 00:00
-  const timeToMinutes = (time: string): number => {
-      const [hours, minutes] = time.split(':').map(Number);
-      return hours * 60 + minutes;
-  };
+function oddString(words: string[]): string {
+  const n = words.length;
+  const diffs: number[][] = [];
 
-  // Convert event start and end times to minutes since 00:00
-  const start1 = timeToMinutes(event1[0]);
-  const end1 = timeToMinutes(event1[1]);
-  const start2 = timeToMinutes(event2[0]);
-  const end2 = timeToMinutes(event2[1]);
+  // Compute the difference array for each word
+  for (let i = 0; i < n; i++) {
+      diffs.push(computeDifferenceArray(words[i]));
+  }
 
-  // Check if there is an overlap between event1 and event2
-  return !(end1 < start2 || end2 < start1);
+  // Find the unique difference array
+  for (let i = 0; i < n; i++) {
+      // Check if the difference array is unique
+      if (!areEqual(diffs[i], diffs[(i + 1) % n]) && !areEqual(diffs[i], diffs[(i + 2) % n])) {
+          return words[i];
+      }
+  }
+
+  return words[0];
 };
 
-const event1: string[] = ["01:15", "02:00"];
-const event2: string[] = ["02:00", "03:00"];
-const results = haveConflict(event1, event2);
+// Helper function to compute the difference array
+function computeDifferenceArray(word: string): number[] {
+  const n = word.length;
+  const diff: number[] = [];
+
+  for (let i = 0; i < n - 1; i++) {
+      diff.push(word.charCodeAt(i + 1) - word.charCodeAt(i));
+  }
+
+  return diff;
+}
+
+// Helper function to check if two arrays are equal
+function areEqual(arr1: number[], arr2: number[]): boolean {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) return false;
+  }
+  return true;
+}
+
+const input: string[] = ["adc", "wzy", "abc"];
+const results = oddString(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input1: ' + event1 + '; Input2: ' + event2 + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
 
