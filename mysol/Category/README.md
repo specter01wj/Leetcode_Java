@@ -327,6 +327,7 @@ Cspiration Category:
 |2432|The Employee That Worked on the Longest Task|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2441|Largest Positive Integer That Exists With Its Negative|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2446|Determine if Two Events Have Conflict|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2451|Odd String Difference|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2462|Total Cost to Hire K Workers|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2542|Maximum Subsequence Score|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
