@@ -4,61 +4,83 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given two arrays of strings that represent two inclusive 
-        events that happened on the same day, event1 and event2, where:
+			 	You are given an array of equal-length strings words. 
+        Assume that the length of each string is n.
 
-          . event1 = [startTime1, endTime1] and
-          . event2 = [startTime2, endTime2].
+        Each string words[i] can be converted into a difference integer 
+        array difference[i] of length n - 1 where difference[i][j] = 
+        words[i][j+1] - words[i][j] where 0 <= j <= n - 2. 
+        Note that the difference between two letters is the difference 
+        between their positions in the alphabet i.e. the position of 
+        'a' is 0, 'b' is 1, and 'z' is 25.
 
-        Event times are valid 24 hours format in the form of HH:MM.
+          . For example, for the string "acb", the difference integer array is [2 - 0, 1 - 2] = [2, -1].
 
-        A conflict happens when two events have some non-empty intersection 
-        (i.e., some moment is common to both events).
+        All the strings in words have the same difference integer array, except one. 
+        You should find that string.
 
-        Return true if there is a conflict between two events. Otherwise, return false.
+        Return the string in words that has different difference integer array.
 			 */
 			$(document).ready(function(){
 
 				/*
-          * @param event1: a list of strings
-          * @param event2: a list of strings
-          * @return: true if there is a conflict between two events. Otherwise, return false
+          * @param words: a list of strings
+          * @return: the string in words that has different difference integer array
           */
-        let haveConflict = function(event1, event2) {
-            // Helper function to convert "HH:MM" to minutes since 00:00
-            const timeToMinutes = (time) => {
-                const [hours, minutes] = time.split(':').map(Number);
-                return hours * 60 + minutes;
-            };
+        let oddString = function(words) {
+            const n = words.length;
+            const diffs = [];
 
-            // Convert event start and end times to minutes since 00:00
-            const start1 = timeToMinutes(event1[0]);
-            const end1 = timeToMinutes(event1[1]);
-            const start2 = timeToMinutes(event2[0]);
-            const end2 = timeToMinutes(event2[1]);
+            // Compute the difference array for each word
+            for (let i = 0; i < n; i++) {
+                diffs.push(computeDifferenceArray(words[i]));
+            }
 
-            // Check if there is an overlap between event1 and event2
-            return !(end1 < start2 || end2 < start1);
+            // Find the unique difference array
+            for (let i = 0; i < n; i++) {
+                // Check if the difference array is unique
+                if (!areEqual(diffs[i], diffs[(i + 1) % n]) && !areEqual(diffs[i], diffs[(i + 2) % n])) {
+                    return words[i];
+                }
+            }
+
+            return words[0];
         };
 
-        const event1 = ["01:15", "02:00"];
-        const event2 = ["02:00", "03:00"];
-        let results = haveConflict(event1, event2);
-				$('#t1').html('<h2>Input1: ' + event1 + '; Input2: ' + event2 + '<br>Results: ' + (results) + '</h2>');
+        // Helper function to compute the difference array
+        function computeDifferenceArray(word) {
+            const n = word.length;
+            const diff = [];
+
+            for (let i = 0; i < n - 1; i++) {
+                diff.push(word.charCodeAt(i + 1) - word.charCodeAt(i));
+            }
+
+            return diff;
+        }
+
+        // Helper function to check if two arrays are equal
+        function areEqual(arr1, arr2) {
+            if (arr1.length !== arr2.length) return false;
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i]) return false;
+            }
+            return true;
+        }
+
+        const input = ["adc", "wzy", "abc"];
+        let results = oddString(input);
+				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Helper function timeToMinutes: This function converts the "HH:MM" 
-            format into the total number of minutes since 00:00. It splits 
-            the time string into hours and minutes, then converts each to 
-            integers and calculates the total minutes.
-        2. Time comparison: After converting the event times into minutes, 
-          we check for overlaps:
-          . If the end time of the first event is before the start time of 
-            the second event (end1 < start2) or the end time of the second 
-            event is before the start time of the first event (end2 < start1), 
-            there is no conflict.
-          . If neither condition holds, the events overlap, and we return true.
+				1. computeDifferenceArray: This helper function computes the difference 
+            array for each word by calculating the difference between adjacent 
+            characters.
+        2. areEqual: This helper function checks if two arrays are equal.
+        3. oddString: This function loops through the list of words and compares 
+          the difference arrays to find the unique one. If a difference array 
+          doesn't match its neighbors, it returns the corresponding word.
 			 */
 
 		</script>
