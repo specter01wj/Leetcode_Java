@@ -31,7 +31,13 @@ public class E2451_Odd_String_Difference {
 	
 	/*
     solution:
-    count good triplets
+    1. computeDifferenceArray: This helper function computes the difference 
+    	array for each word by calculating the difference between adjacent 
+    	characters.
+	2. areEqual: This helper function checks if two arrays are equal.
+	3. oddString: This function loops through the list of words and compares 
+		the difference arrays to find the unique one. If a difference array 
+		doesn't match its neighbors, it returns the corresponding word.
     */
 	
 	/*
