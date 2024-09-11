@@ -705,6 +705,7 @@ By Jin Wang
 |2441|**Largest Positive Integer That Exists With Its Negative**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2446|**Determine if Two Events Have Conflict**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2451|**Odd String Difference**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2455|**Average Value of Even Numbers That Are Divisible by Three**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
