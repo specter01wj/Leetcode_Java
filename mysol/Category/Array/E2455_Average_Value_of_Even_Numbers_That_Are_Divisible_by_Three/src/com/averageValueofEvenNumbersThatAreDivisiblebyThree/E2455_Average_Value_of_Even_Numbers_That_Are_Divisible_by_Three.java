@@ -20,12 +20,18 @@ public class E2455_Average_Value_of_Even_Numbers_That_Are_Divisible_by_Three {
 	
 	/*
     solution:
-    count good triplets
+    1. Loop through the array: Check each number to see if it satisfies 
+    	the conditions of being even and divisible by 3.
+	2. Sum and count: Accumulate the numbers that meet the condition and 
+		track how many such numbers are found.
+	3. Return result: If at least one number is found, calculate the 
+		average by dividing the sum by the count, rounding down naturally 
+		using integer division. If no such numbers are found, return 0.
     */
 	
 	/*
      * @param nums: a list of integers
-     * @return: the number of good triplets
+     * @return: the average value of all even integers that are divisible by 3
      */
 	public int averageValue(int[] nums) {
         int sum = 0;
