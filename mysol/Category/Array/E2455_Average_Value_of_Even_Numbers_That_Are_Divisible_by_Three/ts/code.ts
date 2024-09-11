@@ -1,47 +1,22 @@
 
-function oddString(words: string[]): string {
-  const n = words.length;
-  const diffs: number[][] = [];
-
-  // Compute the difference array for each word
-  for (let i = 0; i < n; i++) {
-      diffs.push(computeDifferenceArray(words[i]));
-  }
-
-  // Find the unique difference array
-  for (let i = 0; i < n; i++) {
-      // Check if the difference array is unique
-      if (!areEqual(diffs[i], diffs[(i + 1) % n]) && !areEqual(diffs[i], diffs[(i + 2) % n])) {
-          return words[i];
+function averageValue(nums: number[]): number {
+  let sum = 0;
+  let count = 0;
+  
+  // Iterate through the array to find even numbers divisible by 3
+  for (let num of nums) {
+      if (num % 2 === 0 && num % 3 === 0) {
+          sum += num;
+          count++;
       }
   }
-
-  return words[0];
+  
+  // Return the average (rounded down) or 0 if no such numbers found
+  return count > 0 ? Math.floor(sum / count) : 0;
 };
 
-// Helper function to compute the difference array
-function computeDifferenceArray(word: string): number[] {
-  const n = word.length;
-  const diff: number[] = [];
-
-  for (let i = 0; i < n - 1; i++) {
-      diff.push(word.charCodeAt(i + 1) - word.charCodeAt(i));
-  }
-
-  return diff;
-}
-
-// Helper function to check if two arrays are equal
-function areEqual(arr1: number[], arr2: number[]): boolean {
-  if (arr1.length !== arr2.length) return false;
-  for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) return false;
-  }
-  return true;
-}
-
-const input: string[] = ["adc", "wzy", "abc"];
-const results = oddString(input);
+const input: number[] = [1,3,6,10,12,15];
+const results = averageValue(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
