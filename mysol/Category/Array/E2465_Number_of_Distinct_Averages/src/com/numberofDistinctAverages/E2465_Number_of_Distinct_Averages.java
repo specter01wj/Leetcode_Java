@@ -22,7 +22,8 @@ public class E2465_Number_of_Distinct_Averages {
 	public static void main(String[] args) {
 		E2465_Number_of_Distinct_Averages solution = new E2465_Number_of_Distinct_Averages();
 		int[] input = {4,1,4,0,3,5};
-		int output = solution.distinctAverages(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int output = solution.distinctAverages(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
