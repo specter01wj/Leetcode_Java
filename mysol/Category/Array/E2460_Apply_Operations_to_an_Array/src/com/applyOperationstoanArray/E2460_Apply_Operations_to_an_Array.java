@@ -25,7 +25,8 @@ public class E2460_Apply_Operations_to_an_Array {
 	public static void main(String[] args) {
 		E2460_Apply_Operations_to_an_Array solution = new E2460_Apply_Operations_to_an_Array();
 		int[] input = {1,2,2,1,1,0};
-		int[] output = solution.applyOperations(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int[] output = solution.applyOperations(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
