@@ -28,7 +28,8 @@ function applyOperations(nums: number[]): number[] {
 };
 
 const input: number[] = [1,2,2,1,1,0];
-const results = applyOperations(input);
+const inputCopy: number[] = [...input];
+const results = applyOperations(inputCopy);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
