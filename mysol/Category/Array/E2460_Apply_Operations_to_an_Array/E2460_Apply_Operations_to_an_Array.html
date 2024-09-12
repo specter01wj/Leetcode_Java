@@ -57,7 +57,8 @@
         };
 
         const input = [1,2,2,1,1,0];
-        let results = applyOperations(input);
+        const inputCopy = [...input];
+        let results = applyOperations(inputCopy);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
