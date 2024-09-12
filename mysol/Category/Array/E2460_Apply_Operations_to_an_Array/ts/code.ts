@@ -1,22 +1,34 @@
+function applyOperations(nums: number[]): number[] {
+  const n = nums.length;
 
-function averageValue(nums: number[]): number {
-  let sum = 0;
-  let count = 0;
-  
-  // Iterate through the array to find even numbers divisible by 3
-  for (let num of nums) {
-      if (num % 2 === 0 && num % 3 === 0) {
-          sum += num;
-          count++;
+  // Apply the operations on the array
+  for (let i = 0; i < n - 1; i++) {
+      if (nums[i] === nums[i + 1]) {
+          nums[i] *= 2;
+          nums[i + 1] = 0;
       }
   }
+
+  // Shift all 0s to the end of the array
+  const result: number[] = [];
   
-  // Return the average (rounded down) or 0 if no such numbers found
-  return count > 0 ? Math.floor(sum / count) : 0;
+  // First, push non-zero elements to the result array
+  for (let i = 0; i < n; i++) {
+      if (nums[i] !== 0) {
+          result.push(nums[i]);
+      }
+  }
+
+  // Fill the remaining space with 0s
+  while (result.length < n) {
+      result.push(0);
+  }
+
+  return result;
 };
 
-const input: number[] = [1,3,6,10,12,15];
-const results = averageValue(input);
+const input: number[] = [1,2,2,1,1,0];
+const results = applyOperations(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
