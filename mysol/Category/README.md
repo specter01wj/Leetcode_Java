@@ -331,6 +331,7 @@ Cspiration Category:
 |2455|Average Value of Even Numbers That Are Divisible by Three|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2460|Apply Operations to an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2462|Total Cost to Hire K Workers|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|2465|Number of Distinct Averages|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2542|Maximum Subsequence Score|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 

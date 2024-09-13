@@ -707,6 +707,7 @@ By Jin Wang
 |2451|**Odd String Difference**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2455|**Average Value of Even Numbers That Are Divisible by Three**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2460|**Apply Operations to an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2465|**Number of Distinct Averages**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
