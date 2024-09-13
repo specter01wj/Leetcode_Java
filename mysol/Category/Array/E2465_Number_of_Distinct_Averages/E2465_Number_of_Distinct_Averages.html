@@ -4,70 +4,66 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array nums of size n consisting of non-negative integers.
+			 	You are given a 0-indexed integer array nums of even length.
 
-        You need to apply n - 1 operations to this array where, in the ith operation 
-        (0-indexed), you will apply the following on the ith element of nums:
+        As long as nums is not empty, you must repetitively:
 
-          . If nums[i] == nums[i + 1], then multiply nums[i] by 2 and set 
-            nums[i + 1] to 0. Otherwise, you skip this operation.
+          . Find the minimum number in nums and remove it.
+          . Find the maximum number in nums and remove it.
+          . Calculate the average of the two removed numbers.
 
-        After performing all the operations, shift all the 0's to the end of the array.
+        The average of two numbers a and b is (a + b) / 2.
 
-          . For example, the array [1,0,2,0,0,1] after shifting all its 0's to the end, 
-            is [1,2,1,0,0,0].
+          . For example, the average of 2 and 3 is (2 + 3) / 2 = 2.5.
 
-        Return the resulting array.
-
-        Note that the operations are applied sequentially, not all at once.
+        Return the number of distinct averages calculated using the above process.
 			 */
 			$(document).ready(function(){
 
 				/*
         * @param nums: a list of integers
-        * @return: the resulting array
+        * @return: the number of distinct averages calculated using the above process
         */
-        let applyOperations = function(nums) {
-            let n = nums.length;
-
-            // Apply the operations on the array
-            for (let i = 0; i < n - 1; i++) {
-                if (nums[i] === nums[i + 1]) {
-                    nums[i] *= 2;
-                    nums[i + 1] = 0;
-                }
-            }
-
-            // Shift all 0s to the end of the array
-            let result = [];
+        let distinctAverages = function(nums) {
+            // Sort the array to easily find the minimum and maximum
+            nums.sort((a, b) => a - b);
+            let distinctAverages = new Set();
             
-            // First, push non-zero elements to the result array
-            for (let i = 0; i < n; i++) {
-                if (nums[i] !== 0) {
-                    result.push(nums[i]);
-                }
+            let left = 0;
+            let right = nums.length - 1;
+            
+            // Calculate the average of the minimum and maximum numbers, then remove them
+            while (left < right) {
+                let average = (nums[left] + nums[right]) / 2;
+                distinctAverages.add(average);
+                left++;
+                right--;
             }
             
-            // Then, fill the remaining space with 0s
-            while (result.length < n) {
-                result.push(0);
-            }
-
-            return result;
+            // The size of the set represents the number of distinct averages
+            return distinctAverages.size;
         };
 
-        const input = [1,2,2,1,1,0];
+        const input = [4,1,4,0,3,5];
         const inputCopy = [...input];
-        let results = applyOperations(inputCopy);
+        let results = distinctAverages(inputCopy);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Apply operations: Iterate through the array and, if consecutive elements 
-            are the same, double the first and set the second to 0.
-        2. Shift zeros: Create a new array and place non-zero elements first, 
-          followed by zeros at the end.
-        3. Return the result array.
+				1. Sorting the Array: We first sort the array. After sorting, 
+            we can easily access the minimum element from the left 
+            (starting at index 0) and the maximum element from the right 
+            (starting at the last index).
+        2. Two-Pointer Approach: We use two pointers (left and right) to 
+          pick the smallest and largest numbers, calculate their average, 
+          and add that average to a Set<Double> to ensure only distinct 
+          averages are stored.
+        3. Set for Distinct Averages: A HashSet is used to store the distinct 
+          averages, which automatically handles any duplicates.
+        4. Loop: We continue this process of removing the minimum and maximum 
+          until the pointers meet or cross.
+        5. Return Result: The size of the set represents the number of distinct averages.
 			 */
 
 		</script>
