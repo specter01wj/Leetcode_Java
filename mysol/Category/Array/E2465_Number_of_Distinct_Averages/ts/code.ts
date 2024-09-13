@@ -1,35 +1,26 @@
-function applyOperations(nums: number[]): number[] {
-  const n = nums.length;
+function distinctAverages(nums: number[]): number {
+  // Sort the array to easily find the minimum and maximum
+  nums.sort((a, b) => a - b);
+  const distinctAverages = new Set<number>();
 
-  // Apply the operations on the array
-  for (let i = 0; i < n - 1; i++) {
-      if (nums[i] === nums[i + 1]) {
-          nums[i] *= 2;
-          nums[i + 1] = 0;
-      }
+  let left = 0;
+  let right = nums.length - 1;
+
+  // Calculate the average of the minimum and maximum numbers, then remove them
+  while (left < right) {
+      const average = (nums[left] + nums[right]) / 2;
+      distinctAverages.add(average);
+      left++;
+      right--;
   }
 
-  // Shift all 0s to the end of the array
-  const result: number[] = [];
-  
-  // First, push non-zero elements to the result array
-  for (let i = 0; i < n; i++) {
-      if (nums[i] !== 0) {
-          result.push(nums[i]);
-      }
-  }
-
-  // Fill the remaining space with 0s
-  while (result.length < n) {
-      result.push(0);
-  }
-
-  return result;
+  // The size of the set represents the number of distinct averages
+  return distinctAverages.size;
 };
 
-const input: number[] = [1,2,2,1,1,0];
+const input: number[] = [4,1,4,0,3,5];
 const inputCopy: number[] = [...input];
-const results = applyOperations(inputCopy);
+const results = distinctAverages(inputCopy);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
