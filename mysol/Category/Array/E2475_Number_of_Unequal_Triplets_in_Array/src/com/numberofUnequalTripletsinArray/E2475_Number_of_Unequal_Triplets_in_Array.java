@@ -21,7 +21,20 @@ public class E2475_Number_of_Unequal_Triplets_in_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. The solution uses three nested loops to iterate over all possible 
+    	triplets (i, j, k) where 0 <= i < j < k < nums.length.
+	2. For each triplet, it checks if the elements are pairwise distinct 
+		(nums[i] != nums[j], nums[i] != nums[k], nums[j] != nums[k]).
+	3. If the triplet satisfies the condition, the count is incremented.
+	4. Finally, the total count of valid triplets is returned.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of triplets that meet the conditions
+     */
 	public int unequalTriplets(int[] nums) {
         int count = 0;
         int n = nums.length;
