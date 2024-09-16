@@ -4,66 +4,52 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed integer array nums of even length.
+			 	You are given a 0-indexed array of positive integers nums. 
+        Find the number of triplets (i, j, k) that meet the following conditions:
 
-        As long as nums is not empty, you must repetitively:
+          . 0 <= i < j < k < nums.length
+          . nums[i], nums[j], and nums[k] are pairwise distinct.
+            . In other words, nums[i] != nums[j], nums[i] != nums[k], and nums[j] != nums[k].
 
-          . Find the minimum number in nums and remove it.
-          . Find the maximum number in nums and remove it.
-          . Calculate the average of the two removed numbers.
-
-        The average of two numbers a and b is (a + b) / 2.
-
-          . For example, the average of 2 and 3 is (2 + 3) / 2 = 2.5.
-
-        Return the number of distinct averages calculated using the above process.
+        Return the number of triplets that meet the conditions.
 			 */
 			$(document).ready(function(){
 
 				/*
         * @param nums: a list of integers
-        * @return: the number of distinct averages calculated using the above process
+        * @return: the number of triplets that meet the conditions
         */
-        let distinctAverages = function(nums) {
-            // Sort the array to easily find the minimum and maximum
-            nums.sort((a, b) => a - b);
-            let distinctAverages = new Set();
+        let unequalTriplets = function(nums) {
+            let count = 0;
+            let n = nums.length;
             
-            let left = 0;
-            let right = nums.length - 1;
-            
-            // Calculate the average of the minimum and maximum numbers, then remove them
-            while (left < right) {
-                let average = (nums[left] + nums[right]) / 2;
-                distinctAverages.add(average);
-                left++;
-                right--;
+            // Iterate over all triplets (i, j, k)
+            for (let i = 0; i < n - 2; i++) {
+                for (let j = i + 1; j < n - 1; j++) {
+                    for (let k = j + 1; k < n; k++) {
+                        // Check if nums[i], nums[j], and nums[k] are distinct
+                        if (nums[i] !== nums[j] && nums[i] !== nums[k] && nums[j] !== nums[k]) {
+                            count++;
+                        }
+                    }
+                }
             }
             
-            // The size of the set represents the number of distinct averages
-            return distinctAverages.size;
+            return count;
         };
 
-        const input = [4,1,4,0,3,5];
-        const inputCopy = [...input];
-        let results = distinctAverages(inputCopy);
+        const input = [4,4,2,4,3];
+        let results = unequalTriplets(input);
 				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Sorting the Array: We first sort the array. After sorting, 
-            we can easily access the minimum element from the left 
-            (starting at index 0) and the maximum element from the right 
-            (starting at the last index).
-        2. Two-Pointer Approach: We use two pointers (left and right) to 
-          pick the smallest and largest numbers, calculate their average, 
-          and add that average to a Set<Double> to ensure only distinct 
-          averages are stored.
-        3. Set for Distinct Averages: A HashSet is used to store the distinct 
-          averages, which automatically handles any duplicates.
-        4. Loop: We continue this process of removing the minimum and maximum 
-          until the pointers meet or cross.
-        5. Return Result: The size of the set represents the number of distinct averages.
+				1. The solution uses three nested loops to iterate over all possible 
+            triplets (i, j, k) where 0 <= i < j < k < nums.length.
+        2. For each triplet, it checks if the elements are pairwise distinct 
+          (nums[i] != nums[j], nums[i] != nums[k], nums[j] != nums[k]).
+        3. If the triplet satisfies the condition, the count is incremented.
+        4. Finally, the total count of valid triplets is returned.
 			 */
 
 		</script>
