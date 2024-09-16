@@ -1,24 +1,27 @@
-function unequalTriplets(nums: number[]): number {
-  let count = 0;
-  let n = nums.length;
-  
-  // Iterate over all triplets (i, j, k)
-  for (let i = 0; i < n - 2; i++) {
-      for (let j = i + 1; j < n - 1; j++) {
-          for (let k = j + 1; k < n; k++) {
-              // Check if nums[i], nums[j], and nums[k] are distinct
-              if (nums[i] !== nums[j] && nums[i] !== nums[k] && nums[j] !== nums[k]) {
-                  count++;
-              }
-          }
+function maximumValue(strs: string[]): number {
+  let maxValue = 0;
+
+  for (let str of strs) {
+      let currentValue: number;
+
+      // Check if the string is composed only of digits
+      if (/^\d+$/.test(str)) {
+          // Convert string to its numeric value
+          currentValue = parseInt(str, 10);
+      } else {
+          // Otherwise, the value is the length of the string
+          currentValue = str.length;
       }
+
+      // Update maxValue if the current value is greater
+      maxValue = Math.max(maxValue, currentValue);
   }
-  
-  return count;
+
+  return maxValue;
 };
 
-const input: number[] = [4,4,2,4,3];
-const results = unequalTriplets(input);
+const input: string[] = ["alic3","bob","3","4","00000"];
+const results = maximumValue(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
