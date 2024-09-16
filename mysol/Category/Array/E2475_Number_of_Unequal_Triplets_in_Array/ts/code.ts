@@ -1,26 +1,24 @@
-function distinctAverages(nums: number[]): number {
-  // Sort the array to easily find the minimum and maximum
-  nums.sort((a, b) => a - b);
-  const distinctAverages = new Set<number>();
-
-  let left = 0;
-  let right = nums.length - 1;
-
-  // Calculate the average of the minimum and maximum numbers, then remove them
-  while (left < right) {
-      const average = (nums[left] + nums[right]) / 2;
-      distinctAverages.add(average);
-      left++;
-      right--;
+function unequalTriplets(nums: number[]): number {
+  let count = 0;
+  let n = nums.length;
+  
+  // Iterate over all triplets (i, j, k)
+  for (let i = 0; i < n - 2; i++) {
+      for (let j = i + 1; j < n - 1; j++) {
+          for (let k = j + 1; k < n; k++) {
+              // Check if nums[i], nums[j], and nums[k] are distinct
+              if (nums[i] !== nums[j] && nums[i] !== nums[k] && nums[j] !== nums[k]) {
+                  count++;
+              }
+          }
+      }
   }
-
-  // The size of the set represents the number of distinct averages
-  return distinctAverages.size;
+  
+  return count;
 };
 
-const input: number[] = [4,1,4,0,3,5];
-const inputCopy: number[] = [...input];
-const results = distinctAverages(inputCopy);
+const input: number[] = [4,4,2,4,3];
+const results = unequalTriplets(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
