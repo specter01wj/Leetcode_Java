@@ -19,7 +19,20 @@ public class E2496_Maximum_Value_of_a_String_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. The method maximumValue iterates through each string in the array strs.
+	2. For each string, it checks whether the string is composed entirely of digits using the regex \\d+.
+	3. If the string contains only digits, it is converted to an integer using Integer.parseInt.
+	4. If the string contains non-digit characters, its value is considered to be its length.
+	5. The maxValue is updated if the current string's value is greater than the previous maximum.
+	6. Finally, the method returns the maximum value found.
+    */
 	
+	/*
+     * @param strs: a list of strings
+     * @return: the maximum value of any string in strs
+     */
 	public int maximumValue(String[] strs) {
         int maxValue = 0;
         
