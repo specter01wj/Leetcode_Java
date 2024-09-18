@@ -48,7 +48,7 @@
         const input = [[1,2,4],[3,3,1]];
         const inputCopy = input.map(row => [...row]);
         let results = deleteGreatestValue(inputCopy);
-				$('#t1').html('<h2>Input: ' + input + '<br>Results: ' + (results) + '</h2>');
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
