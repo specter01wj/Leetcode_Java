@@ -22,7 +22,29 @@ public class E2506_Count_Pairs_Of_Similar_Strings {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Represent Each Word as a Set of Characters:
+		. For each word, create a representation that captures the set of 
+			unique characters it contains.
+		. Since the words consist of lowercase English letters ('a' to 'z'), 
+			we can use a 26-bit integer where each bit represents a character.
+	2. Use a HashMap to Count Similar Words:
+		. Use a HashMap to map each unique character set representation to 
+			the number of times it appears.
+		. For example, if two words have the same character set, they will 
+			have the same key in the map.
+	3. Calculate the Number of Pairs:
+		. For each unique character set with a frequency greater than 1, 
+			calculate the number of pairs using the combination formula: 
+			count * (count - 1) / 2.
+		. Sum up the pairs for all character sets.
+    */
 	
+	/*
+     * @param arr: a list of strings
+     * @return: the number of pairs
+     */
 	public int similarPairs(String[] words) {
         Map<Integer, Integer> map = new HashMap<>();
         for (String word : words) {
