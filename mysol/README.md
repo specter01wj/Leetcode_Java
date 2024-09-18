@@ -711,6 +711,7 @@ By Jin Wang
 |2475|**Number of Unequal Triplets in Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2496|**Maximum Value of a String in an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2500|**Delete Greatest Value in Each Row**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2506|**Count Pairs Of Similar Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
