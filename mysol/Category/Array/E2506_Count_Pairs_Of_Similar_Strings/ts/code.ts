@@ -1,31 +1,27 @@
-function deleteGreatestValue(grid: number[][]): number {
-  // Sort each row in ascending order
-  for (const row of grid) {
-      row.sort((a, b) => a - b);
-  }
+function similarPairs(words: string[]): number {
+  const map: Map<number, number> = new Map();
 
-  let ans = 0;
-  const n = grid[0].length;
-
-  // Iterate from the last column to the first
-  for (let k = n - 1; k >= 0; k--) {
-      let maxVal = 0;
-      // Find the maximum value in the k-th column
-      for (let i = 0; i < grid.length; i++) {
-          const val = grid[i][k];
-          if (val > maxVal) {
-              maxVal = val;
-          }
+  for (const word of words) {
+      let signature: number = 0;
+      for (const c of word) {
+          const bit: number = c.charCodeAt(0) - 'a'.charCodeAt(0);
+          signature |= 1 << bit;
       }
-      ans += maxVal;
+      map.set(signature, (map.get(signature) ?? 0) + 1);
   }
 
-  return ans;
+  let count: number = 0;
+  for (const freq of map.values()) {
+      if (freq >= 2) {
+          count += (freq * (freq - 1)) / 2;
+      }
+  }
+
+  return count;
 };
 
-const input: number[][] = [[1,2,4],[3,3,1]];
-const inputCopy: number[][] = input.map(row => [...row]);
-const results = deleteGreatestValue(inputCopy);
+const input: string[] = ["aba","aabb","abcd","bac","aabc"];
+const results = similarPairs(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
