@@ -334,6 +334,7 @@ Cspiration Category:
 |2465|Number of Distinct Averages|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2475|Number of Unequal Triplets in Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2496|Maximum Value of a String in an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2500|Delete Greatest Value in Each Row|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2542|Maximum Subsequence Score|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 
