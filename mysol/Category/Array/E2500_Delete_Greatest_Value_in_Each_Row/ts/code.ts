@@ -23,10 +23,10 @@ function deleteGreatestValue(grid: number[][]): number {
   return ans;
 };
 
-const input: string[] = ["alic3","bob","3","4","00000"];
-const inputCopy: number[] = input.map(row => [...row]);
-const results = deleteGreatestValue(input);
+const input: number[][] = [[1,2,4],[3,3,1]];
+const inputCopy: number[][] = input.map(row => [...row]);
+const results = deleteGreatestValue(inputCopy);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
 

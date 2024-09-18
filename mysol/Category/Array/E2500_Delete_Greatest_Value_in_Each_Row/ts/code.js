@@ -20,8 +20,8 @@ function deleteGreatestValue(grid) {
     return ans;
 }
 ;
-const input = ["alic3", "bob", "3", "4", "00000"];
+const input = [[1, 2, 4], [3, 3, 1]];
 const inputCopy = input.map(row => [...row]);
-const results = deleteGreatestValue(input);
+const results = deleteGreatestValue(inputCopy);
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
