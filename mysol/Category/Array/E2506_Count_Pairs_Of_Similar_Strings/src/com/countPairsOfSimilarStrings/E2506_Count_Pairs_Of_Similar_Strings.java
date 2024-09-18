@@ -1,10 +1,44 @@
 package com.countPairsOfSimilarStrings;
+import java.util.*;
+
+/*
+You are given a 0-indexed string array words.
+
+Two strings are similar if they consist of the same characters.
+
+	. For example, "abca" and "cba" are similar since both consist of characters 'a', 'b', and 'c'.
+	. However, "abacba" and "bcfd" are not similar since they do not consist of the same characters.
+
+Return the number of pairs (i, j) such that 0 <= i < j <= word.length - 1 and 
+the two strings words[i] and words[j] are similar.
+*/
 
 public class E2506_Count_Pairs_Of_Similar_Strings {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		E2506_Count_Pairs_Of_Similar_Strings solution = new E2506_Count_Pairs_Of_Similar_Strings();
+		String[] input = {"aba","aabb","abcd","bac","aabc"};
+		int output = solution.similarPairs(input);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
+	
+	
+	public int similarPairs(String[] words) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (String word : words) {
+            int signature = 0;
+            for (char c : word.toCharArray()) {
+                signature |= 1 << (c - 'a');
+            }
+            map.put(signature, map.getOrDefault(signature, 0) + 1);
+        }
+        int count = 0;
+        for (int freq : map.values()) {
+            if (freq >= 2) {
+                count += freq * (freq - 1) / 2;
+            }
+        }
+        return count;
+    }
 
 }
