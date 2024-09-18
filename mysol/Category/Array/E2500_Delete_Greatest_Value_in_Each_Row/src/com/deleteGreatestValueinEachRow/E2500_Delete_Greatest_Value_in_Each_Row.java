@@ -18,7 +18,11 @@ public class E2500_Delete_Greatest_Value_in_Each_Row {
 	public static void main(String[] args) {
 		E2500_Delete_Greatest_Value_in_Each_Row solution = new E2500_Delete_Greatest_Value_in_Each_Row();
 		int[][] input = {{1,2,4},{3,3,1}};
-		int output = solution.deleteGreatestValue(input);
+		int[][] inputCopy = new int[input.length][];
+	    for (int i = 0; i < input.length; i++) {
+	        inputCopy[i] = Arrays.copyOf(input[i], input[i].length);
+	    }
+		int output = solution.deleteGreatestValue(inputCopy);
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
