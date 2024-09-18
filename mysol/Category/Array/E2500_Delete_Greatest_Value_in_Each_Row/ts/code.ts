@@ -1,27 +1,31 @@
-function maximumValue(strs: string[]): number {
-  let maxValue = 0;
-
-  for (let str of strs) {
-      let currentValue: number;
-
-      // Check if the string is composed only of digits
-      if (/^\d+$/.test(str)) {
-          // Convert string to its numeric value
-          currentValue = parseInt(str, 10);
-      } else {
-          // Otherwise, the value is the length of the string
-          currentValue = str.length;
-      }
-
-      // Update maxValue if the current value is greater
-      maxValue = Math.max(maxValue, currentValue);
+function deleteGreatestValue(grid: number[][]): number {
+  // Sort each row in ascending order
+  for (const row of grid) {
+      row.sort((a, b) => a - b);
   }
 
-  return maxValue;
+  let ans = 0;
+  const n = grid[0].length;
+
+  // Iterate from the last column to the first
+  for (let k = n - 1; k >= 0; k--) {
+      let maxVal = 0;
+      // Find the maximum value in the k-th column
+      for (let i = 0; i < grid.length; i++) {
+          const val = grid[i][k];
+          if (val > maxVal) {
+              maxVal = val;
+          }
+      }
+      ans += maxVal;
+  }
+
+  return ans;
 };
 
 const input: string[] = ["alic3","bob","3","4","00000"];
-const results = maximumValue(input);
+const inputCopy: number[] = input.map(row => [...row]);
+const results = deleteGreatestValue(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + input + '<br>Result = ' + results;
