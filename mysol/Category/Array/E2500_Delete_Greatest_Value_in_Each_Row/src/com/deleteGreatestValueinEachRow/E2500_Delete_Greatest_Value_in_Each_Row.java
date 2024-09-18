@@ -26,7 +26,28 @@ public class E2500_Delete_Greatest_Value_in_Each_Row {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Sort Each Row: Since we are required to delete the greatest value from 
+    	each row in every operation, sorting each row in ascending order will 
+    	help us easily access these values. After sorting, the largest values 
+    	will be at the end of each row.
+	2. Iterate Through Columns: We then iterate through each column from left 
+		to right. At each column index k, we pick the element grid[i][k] from 
+		each row i.	
+	3. Find Maximum in Each Step: For each column k, we find the maximum value 
+		among the selected elements from all rows. This maximum represents the 
+		greatest value deleted in that operation.	
+	4. Accumulate the Answer: We add the maximum value found in each step to 
+		our answer.
+	5. Return the Result: After iterating through all columns, we return the 
+		accumulated answer.
+    */
 	
+	/*
+     * @param arr: a list of 2D integers
+     * @return: the answer after performing the operations described above
+     */
 	public int deleteGreatestValue(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
