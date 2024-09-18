@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an m x n matrix grid consisting of positive integers.
+
+        Perform the following operation until grid becomes empty:
+
+          . Delete the element with the greatest value from each row. 
+            If multiple such elements exist, delete any of them.
+          . Add the maximum of deleted elements to the answer.
+
+        Return the answer after performing the operations described above.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param arr: a list of 2D integers
+        * @return: the answer after performing the operations described above
+        */
+        let deleteGreatestValue = function(grid) {
+            // Sort each row in ascending order
+            for (let row of grid) {
+                row.sort((a, b) => a - b);
+            }
+
+            let ans = 0;
+            const n = grid[0].length;
+
+            // Iterate from the last column to the first
+            for (let k = n - 1; k >= 0; k--) {
+                let maxVal = 0;
+                // Find the maximum value in the k-th column
+                for (let i = 0; i < grid.length; i++) {
+                    const val = grid[i][k];
+                    if (val > maxVal) {
+                        maxVal = val;
+                    }
+                }
+                ans += maxVal;
+            }
+
+            return ans;
+        };
+
+        const input = [[1,2,4],[3,3,1]];
+        const inputCopy = input.map(row => [...row]);
+        let results = deleteGreatestValue(inputCopy);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Sort Each Row: Since we are required to delete the greatest value from 
+            each row in every operation, sorting each row in ascending order will 
+            help us easily access these values. After sorting, the largest values 
+            will be at the end of each row.
+        2. Iterate Through Columns: We then iterate through each column from left 
+            to right. At each column index k, we pick the element grid[i][k] from 
+            each row i.	
+        3. Find Maximum in Each Step: For each column k, we find the maximum value 
+            among the selected elements from all rows. This maximum represents the 
+            greatest value deleted in that operation.	
+        4. Accumulate the Answer: We add the maximum value found in each step to 
+            our answer.
+        5. Return the Result: After iterating through all columns, we return the 
+            accumulated answer.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
