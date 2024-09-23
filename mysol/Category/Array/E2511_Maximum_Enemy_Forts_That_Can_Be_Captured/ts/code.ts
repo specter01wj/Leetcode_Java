@@ -1,27 +1,24 @@
-function similarPairs(words: string[]): number {
-  const map: Map<number, number> = new Map();
+function captureForts(forts: number[]): number {
+  let maxCaptured: number = 0;
+  let prev: number = -1;
 
-  for (const word of words) {
-      let signature: number = 0;
-      for (const c of word) {
-          const bit: number = c.charCodeAt(0) - 'a'.charCodeAt(0);
-          signature |= 1 << bit;
-      }
-      map.set(signature, (map.get(signature) ?? 0) + 1);
-  }
-
-  let count: number = 0;
-  for (const freq of map.values()) {
-      if (freq >= 2) {
-          count += (freq * (freq - 1)) / 2;
+  for (let i = 0; i < forts.length; i++) {
+      if (forts[i] !== 0) {
+          if (prev !== -1 && forts[prev] !== forts[i]) {
+              const captured: number = i - prev - 1;
+              if (captured > 0) {
+                  maxCaptured = Math.max(maxCaptured, captured);
+              }
+          }
+          prev = i;
       }
   }
 
-  return count;
+  return maxCaptured;
 };
 
-const input: string[] = ["aba","aabb","abcd","bac","aabc"];
-const results = similarPairs(input);
+const input: number[] = [1,0,0,-1,0,0,0,0,1];
+const results = captureForts(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
