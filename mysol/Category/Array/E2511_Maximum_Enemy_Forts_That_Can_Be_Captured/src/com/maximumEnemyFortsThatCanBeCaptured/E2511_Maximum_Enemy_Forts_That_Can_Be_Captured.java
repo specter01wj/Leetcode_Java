@@ -30,7 +30,30 @@ public class E2511_Maximum_Enemy_Forts_That_Can_Be_Captured {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialize Variables:
+		. max_captured: To keep track of the maximum number of enemy forts captured.
+		. prev: To store the index of the last non-zero fort encountered.
+	2. Iterate Through the Array:
+		. For each position i in the array:
+			. If forts[i] is not 0, it could be a starting or ending point of a move.
+			. If we have a previous non-zero fort (prev != -1), and the current fort 
+				is of the opposite type (forts[prev] != forts[i]), we calculate the 
+				number of enemy forts between them.
+			. We update max_captured if the calculated number is greater.
+	3. Ensure Valid Movement:
+		. The positions between prev and i (excluding prev and i) must all be enemy forts (0).
+		. Since we only update prev when we encounter a non-zero fort, any non-zero fort 
+			between prev and i would have reset prev, ensuring that all forts in between are enemy forts.
+	4. Return the Result:
+		. After iterating through the array, we return the max_captured value.
+    */
 	
+	/*
+     * @param forts: a list of integers
+     * @return: the maximum number of enemy forts that can be captured
+     */
 	public int captureForts(int[] forts) {
         int maxCaptured = 0;
         int prev = -1;
