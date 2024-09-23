@@ -22,7 +22,7 @@ function closetTarget(words: string[], target: string, startIndex: number): numb
 const input: string[] = ["hello","i","am","leetcode","hello"];
 const target: string = "hello";
 const startIndex: number = 1;
-const results = closetTarget(input,target, startIndex);
+const results = closetTarget(input, target, startIndex);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
