@@ -4,71 +4,74 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed integer array forts of length n representing 
-        the positions of several forts. forts[i] can be -1, 0, or 1 where:
+			 	You are given a 0-indexed circular string array words and a string target. 
+        A circular array means that the array's end connects to the array's beginning.
 
-          . -1 represents there is no fort at the ith position.
-          . 0 indicates there is an enemy fort at the ith position.
-          . 1 indicates the fort at the ith the position is under your command.
+          . Formally, the next element of words[i] is words[(i + 1) % n] and the 
+            previous element of words[i] is words[(i - 1 + n) % n], where n is 
+            the length of words.
 
-        Now you have decided to move your army from one of your forts at position i to an empty position j such that:
+        Starting from startIndex, you can move to either the next word or the previous 
+        word with 1 step at a time.
 
-          . 0 <= i, j <= n - 1
-          . The army travels over enemy forts only. Formally, for all k where min(i,j) < k < max(i,j), forts[k] == 0.
-
-        While moving the army, all the enemy forts that come in the way are captured.
-
-        Return the maximum number of enemy forts that can be captured. 
-        In case it is impossible to move your army, or you do not have any fort 
-        under your command, return 0.
+        Return the shortest distance needed to reach the string target. 
+        If the string target does not exist in words, return -1.
 			 */
 			$(document).ready(function(){
 
 				/*
-        * @param forts: a list of integers
-        * @return: the maximum number of enemy forts that can be captured
+        * @param words: a list of strings
+        * @param target: a string
+        * @param startIndex: an integer
+        * @return: the shortest distance needed to reach the string target
         */
-        let captureForts = function(forts) {
-            let maxCaptured = 0;
-            let prev = -1;
+        let closetTarget = function(words, target, startIndex) {
+            const n = words.length;
+            let minDistance = Number.MAX_SAFE_INTEGER;
 
-            for (let i = 0; i < forts.length; i++) {
-                if (forts[i] !== 0) {
-                    if (prev !== -1 && forts[prev] !== forts[i]) {
-                        let captured = i - prev - 1;
-                        if (captured > 0) {
-                            maxCaptured = Math.max(maxCaptured, captured);
-                        }
-                    }
-                    prev = i;
+            for (let i = 0; i < n; i++) {
+                if (words[i] === target) {
+                    // Calculate the distance moving forward
+                    const forwardDistance = (i - startIndex + n) % n;
+                    // Calculate the distance moving backward
+                    const backwardDistance = (startIndex - i + n) % n;
+                    // Choose the minimum distance
+                    const distance = Math.min(forwardDistance, backwardDistance);
+                    // Update the minimum distance found so far
+                    minDistance = Math.min(minDistance, distance);
                 }
             }
 
-            return maxCaptured;
+            // If the target is not found, return -1
+            return minDistance === Number.MAX_SAFE_INTEGER ? -1 : minDistance;
         };
 
-        const input = [1,0,0,-1,0,0,0,0,1];
-        let results = captureForts(input);
+        const input = ["hello","i","am","leetcode","hello"], target = "hello", startIndex = 1;
+        let results = closetTarget(input, target, startIndex);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Initialize Variables:
-          . max_captured: To keep track of the maximum number of enemy forts captured.
-          . prev: To store the index of the last non-zero fort encountered.
-        2. Iterate Through the Array:
-          . For each position i in the array:
-            . If forts[i] is not 0, it could be a starting or ending point of a move.
-            . If we have a previous non-zero fort (prev != -1), and the current fort 
-              is of the opposite type (forts[prev] != forts[i]), we calculate the 
-              number of enemy forts between them.
-            . We update max_captured if the calculated number is greater.
-        3. Ensure Valid Movement:
-          . The positions between prev and i (excluding prev and i) must all be enemy forts (0).
-          . Since we only update prev when we encounter a non-zero fort, any non-zero fort 
-            between prev and i would have reset prev, ensuring that all forts in between are enemy forts.
-        4. Return the Result:
-          . After iterating through the array, we return the max_captured value.
+				1. Initialization:
+          . n is the length of the words array.
+          . minDistance is initialized to the maximum integer value to keep track of the minimum distance found.
+        2. Iterating Through the Array:
+          . We loop through each index i in the words array.
+          . If words[i] equals the target, we proceed to calculate the distance.
+        3. Calculating Distances:
+          . Forward Distance:
+            . Calculated using (i - startIndex + n) % n.
+            . This formula accounts for the circular nature of the array and ensures a non-negative result.
+          . Backward Distance:
+            . Calculated using (startIndex - i + n) % n.
+            . Similarly adjusted for the circular array.
+          . We take the minimum of the forward and backward distances as the shortest path to the current target.
+        4. Updating Minimum Distance:
+          . We compare the calculated distance with minDistance and update minDistance if the new distance is smaller.
+        5. Final Result:
+          . After checking all occurrences of the target, if minDistance remains Integer.MAX_VALUE, it means the target 
+            was not found in the array, so we return -1.
+          . Otherwise, we return the minDistance, which is the shortest distance to reach the target from the startIndex.
 			 */
 
 		</script>
