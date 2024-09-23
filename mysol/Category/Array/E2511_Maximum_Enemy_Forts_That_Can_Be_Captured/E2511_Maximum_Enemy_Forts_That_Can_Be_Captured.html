@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed string array words.
+
+        Two strings are similar if they consist of the same characters.
+
+          . For example, "abca" and "cba" are similar since both consist of characters 'a', 'b', and 'c'.
+          . However, "abacba" and "bcfd" are not similar since they do not consist of the same characters.
+
+        Return the number of pairs (i, j) such that 0 <= i < j <= word.length - 1 and 
+        the two strings words[i] and words[j] are similar.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param arr: a list of strings
+        * @return: the number of pairs
+        */
+        let similarPairs = function(words) {
+            const map = new Map();
+            for (let word of words) {
+                let signature = 0;
+                for (let c of word) {
+                    const bit = c.charCodeAt(0) - 'a'.charCodeAt(0);
+                    signature |= 1 << bit;
+                }
+                map.set(signature, (map.get(signature) || 0) + 1);
+            }
+            let count = 0;
+            for (let freq of map.values()) {
+                if (freq >= 2) {
+                    count += freq * (freq - 1) / 2;
+                }
+            }
+            return count;
+        };
+
+        const input = ["aba","aabb","abcd","bac","aabc"];
+        let results = similarPairs(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Represent Each Word as a Set of Characters:
+          . For each word, create a representation that captures the set of 
+            unique characters it contains.
+          . Since the words consist of lowercase English letters ('a' to 'z'), 
+            we can use a 26-bit integer where each bit represents a character.
+        2. Use a HashMap to Count Similar Words:
+          . Use a HashMap to map each unique character set representation to 
+            the number of times it appears.
+          . For example, if two words have the same character set, they will 
+            have the same key in the map.
+        3. Calculate the Number of Pairs:
+          . For each unique character set with a frequency greater than 1, 
+            calculate the number of pairs using the combination formula: 
+            count * (count - 1) / 2.
+          . Sum up the pairs for all character sets.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
