@@ -4,44 +4,46 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array nums sorted in non-decreasing order, return 
-        the maximum between the number of positive integers and the 
-        number of negative integers.
+			 	You are given a positive integer array nums.
 
-          . In other words, if the number of positive integers in nums is 
-        pos and the number of negative integers is neg, then return 
-        the maximum of pos and neg.
+          . The element sum is the sum of all the elements in nums.
+          . The digit sum is the sum of all the digits (not necessarily distinct) that appear in nums.
+
+        Return the absolute difference between the element sum and digit sum of nums.
 			 */
 			$(document).ready(function(){
 
 				/*
         * @param nums: a list of integers
-        * @return: the maximum between the number of positive integers and the number of negative integers
+        * @return: the absolute difference between the element sum and digit sum of nums
         */
-        let maximumCount = function(nums) {
-            let pos = 0;
-            let neg = 0;
-            
-            // Iterate through the array and count positive and negative integers
+        let differenceOfSum = function(nums) {
+            let elementSum = 0;
+            let digitSum = 0;
+
+            // Calculate element sum and digit sum
             for (let num of nums) {
-                if (num > 0) {
-                    pos++;
-                } else if (num < 0) {
-                    neg++;
+                elementSum += num;
+
+                // Calculate the digit sum of the current number
+                let currentNum = num;
+                while (currentNum > 0) {
+                    digitSum += currentNum % 10;
+                    currentNum = Math.floor(currentNum / 10);
                 }
             }
-            
-            // Return the maximum count between positive and negative integers
-            return Math.max(pos, neg);
+
+            // Return the absolute difference between element sum and digit sum
+            return Math.abs(elementSum - digitSum);
         };
 
-        const input = [-2,-1,-1,1,2,3];
-        let results = maximumCount(input);
+        const input = [1,15,6,3];
+        let results = differenceOfSum(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				loop, count and compare max
+				sum up element and digit and compare
 			 */
 
 		</script>
