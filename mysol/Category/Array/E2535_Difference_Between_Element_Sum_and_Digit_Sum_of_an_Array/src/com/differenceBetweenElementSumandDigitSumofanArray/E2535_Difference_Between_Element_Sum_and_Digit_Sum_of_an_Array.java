@@ -19,7 +19,15 @@ public class E2535_Difference_Between_Element_Sum_and_Digit_Sum_of_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sum up element and digit and compare
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the absolute difference between the element sum and digit sum of nums
+     */
 	public int differenceOfSum(int[] nums) {
         int elementSum = 0;
         int digitSum = 0;
