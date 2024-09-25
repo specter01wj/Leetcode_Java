@@ -714,6 +714,8 @@ By Jin Wang
 |2506|**Count Pairs Of Similar Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2511|**Maximum Enemy Forts That Can Be Captured**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2515|**Shortest Distance to Target String in a Circular Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2529|**Maximum Count of Positive Integer and Negative Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2535|**Difference Between Element Sum and Digit Sum of an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
