@@ -27,7 +27,7 @@ Input: n = 3
 Output: 2
 Explanation: 
 Since 3 % 2 == 1, 2 will be added to the board. 
-After a billion days, the only two distinct numbers on the board are 2 and 3. 
+After a billion days, the only two distinct numbers on the board are 2 and 3.
 */
 
 public class E2549_Count_Distinct_Numbers_on_Board {
