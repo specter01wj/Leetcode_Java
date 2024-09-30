@@ -340,7 +340,9 @@ Cspiration Category:
 |2515|Shortest Distance to Target String in a Circular Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2529|Maximum Count of Positive Integer and Negative Integer|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2535|Difference Between Element Sum and Digit Sum of an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2540|Minimum Common Value|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2542|Maximum Subsequence Score|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|2549|Count Distinct Numbers on Board|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
