@@ -1,26 +1,25 @@
-function differenceOfSum(nums: number[]): number {
-  let elementSum = 0;
-  let digitSum = 0;
-
-  // Calculate element sum and digit sum
-  for (let num of nums) {
-      elementSum += num;
-
-      // Calculate the digit sum of the current number
-      let currentNum = num;
-      while (currentNum > 0) {
-          digitSum += currentNum % 10;
-          currentNum = Math.floor(currentNum / 10);
+function getCommon(nums1: number[], nums2: number[]): number {
+  let i = 0, j = 0;
+  
+  // Use two pointers to traverse through both arrays
+  while (i < nums1.length && j < nums2.length) {
+      if (nums1[i] === nums2[j]) {
+          return nums1[i]; // Common element found
+      } else if (nums1[i] < nums2[j]) {
+          i++; // Move pointer of nums1 forward
+      } else {
+          j++; // Move pointer of nums2 forward
       }
   }
-
-  // Return the absolute difference between element sum and digit sum
-  return Math.abs(elementSum - digitSum);
+  
+  return -1; // No common element found
 };
 
-const input: number[] = [1,15,6,3];
-const results = differenceOfSum(input);
+const nums1: number[] = [1,2,3];
+const nums2: number[] = [2,4];
+const results = getCommon(nums1, nums2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input1: ' + JSON.stringify(nums1, null, 2) + 
+  '; Input2: ' + JSON.stringify(nums2, null, 2) + '<br>Result = ' + results;
 
