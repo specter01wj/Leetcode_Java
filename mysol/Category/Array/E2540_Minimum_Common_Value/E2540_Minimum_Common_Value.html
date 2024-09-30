@@ -4,46 +4,61 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a positive integer array nums.
+			 	Given two integer arrays nums1 and nums2, sorted in non-decreasing order, 
+        return the minimum integer common to both arrays. If there is no common 
+        integer amongst nums1 and nums2, return -1.
 
-          . The element sum is the sum of all the elements in nums.
-          . The digit sum is the sum of all the digits (not necessarily distinct) that appear in nums.
+        Note that an integer is said to be common to nums1 and nums2 if both arrays 
+        have at least one occurrence of that integer.
 
-        Return the absolute difference between the element sum and digit sum of nums.
+
+        Example 1:
+
+        Input: nums1 = [1,2,3], nums2 = [2,4]
+        Output: 2
+        Explanation: The smallest element common to both arrays is 2, so we return 2.
+
+        Example 2:
+
+        Input: nums1 = [1,2,3,6], nums2 = [2,3,4,5]
+        Output: 2
+        Explanation: There are two common elements in the array 2 and 3 out of which 2 
+        is the smallest, so 2 is returned.
 			 */
 			$(document).ready(function(){
 
 				/*
-        * @param nums: a list of integers
-        * @return: the absolute difference between the element sum and digit sum of nums
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @return: the minimum integer common to both arrays
         */
-        let differenceOfSum = function(nums) {
-            let elementSum = 0;
-            let digitSum = 0;
-
-            // Calculate element sum and digit sum
-            for (let num of nums) {
-                elementSum += num;
-
-                // Calculate the digit sum of the current number
-                let currentNum = num;
-                while (currentNum > 0) {
-                    digitSum += currentNum % 10;
-                    currentNum = Math.floor(currentNum / 10);
-                }
-            }
-
-            // Return the absolute difference between element sum and digit sum
-            return Math.abs(elementSum - digitSum);
+        let getCommon = function(nums1, nums2) {
+          let i = 0, j = 0;
+          
+          // Use two pointers to traverse through both arrays
+          while (i < nums1.length && j < nums2.length) {
+              if (nums1[i] === nums2[j]) {
+                  return nums1[i]; // Common element found
+              } else if (nums1[i] < nums2[j]) {
+                  i++; // Move pointer of nums1 forward
+              } else {
+                  j++; // Move pointer of nums2 forward
+              }
+          }
+          
+          return -1; // No common element found
         };
 
-        const input = [1,15,6,3];
-        let results = differenceOfSum(input);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+        const nums1 = [1,2,3], nums2 = [2,4];
+        let results = getCommon(nums1, nums2);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(nums1, null, 2) + 
+          '; Input2: ' + JSON.stringify(nums2, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				sum up element and digit and compare
+				1. The code uses two pointers to traverse both sorted arrays (nums1 and nums2).
+        2. It compares elements at the current pointers and moves the pointer with the smaller element.
+        3. When both elements match, the common value is returned. If no common element is found, -1 is returned.
 			 */
 
 		</script>
