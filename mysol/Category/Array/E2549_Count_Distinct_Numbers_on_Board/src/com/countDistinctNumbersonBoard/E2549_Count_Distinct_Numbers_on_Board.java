@@ -39,7 +39,19 @@ public class E2549_Count_Distinct_Numbers_on_Board {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. The problem can be solved by recognizing that after performing the procedure, 
+    	all numbers from 2 to n will eventually appear on the board.
+	2. If n == 1, the only number on the board is 1, so the result is 1.
+	3. For any n > 1, all numbers from 2 to n will eventually be added to the board, 
+		so the distinct numbers on the board will be n - 1.
+    */
 	
+	/*
+     * @param n: an integer
+     * @return: the number of distinct integers present on the board after 109 days have elapsed
+     */
 	public int distinctIntegers(int n) {
         // If n is 1, then only 1 remains on the board
         if (n == 1) {
