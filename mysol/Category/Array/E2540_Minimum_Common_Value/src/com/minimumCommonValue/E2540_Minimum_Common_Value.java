@@ -34,7 +34,18 @@ public class E2540_Minimum_Common_Value {
         		"; input2: " + Arrays.toString(nums2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. The code uses two pointers to traverse both sorted arrays (nums1 and nums2).
+	2. It compares elements at the current pointers and moves the pointer with the smaller element.
+	3. When both elements match, the common value is returned. If no common element is found, -1 is returned.
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @return: the minimum integer common to both arrays
+     */
 	public int getCommon(int[] nums1, int[] nums2) {
 		int i = 0, j = 0;
         
