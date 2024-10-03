@@ -23,7 +23,21 @@ public class E2558_Take_Gifts_From_the_Richest_Pile {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Max Heap: A max heap (priority queue) is used to always access the pile with 
+    	the maximum number of gifts efficiently.
+	2. Operations: For k seconds, the largest pile is taken (i.e., removed from the heap), 
+		and the remaining gifts after applying the square root are put back into the heap.
+	3. Remaining Gifts Calculation: After k operations, all remaining gifts in the 
+		heap are summed up and returned.
+    */
 	
+	/*
+     * @param gifts: a list of integers
+     * @param k: an integer
+     * @return: the number of gifts remaining after k seconds
+     */
 	public long pickGifts(int[] gifts, int k) {
         // Create a max heap to always pick the pile with the maximum gifts
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
