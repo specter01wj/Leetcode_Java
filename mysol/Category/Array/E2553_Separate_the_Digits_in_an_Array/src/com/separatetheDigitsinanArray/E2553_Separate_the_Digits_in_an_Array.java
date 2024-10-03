@@ -22,7 +22,20 @@ public class E2553_Separate_the_Digits_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Input Traversal: For each integer in the input array nums, 
+    	the integer is converted to a string.
+	2. Digit Separation: Each character (digit) of the string is 
+		then converted back to an integer and added to a List<Integer>.
+	3. Final Array Construction: The list is finally converted back 
+		into an array of integers and returned as the result.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: an array answer that consists of the digits of each integer
+     */
 	public int[] separateDigits(int[] nums) {
         List<Integer> result = new ArrayList<>();
         
