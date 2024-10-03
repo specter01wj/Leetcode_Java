@@ -718,6 +718,8 @@ By Jin Wang
 |2535|**Difference Between Element Sum and Digit Sum of an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2540|**Minimum Common Value**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2549|**Count Distinct Numbers on Board**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2553|**Separate the Digits in an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2558|**Take Gifts From the Richest Pile**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|

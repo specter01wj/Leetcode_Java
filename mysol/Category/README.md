@@ -343,6 +343,8 @@ Cspiration Category:
 |2540|Minimum Common Value|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2542|Maximum Subsequence Score|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2549|Count Distinct Numbers on Board|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2553|Separate the Digits in an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2558|Take Gifts From the Richest Pile|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
