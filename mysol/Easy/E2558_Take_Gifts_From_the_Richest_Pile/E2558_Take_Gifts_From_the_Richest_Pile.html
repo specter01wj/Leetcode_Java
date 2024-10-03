@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array gifts denoting the number of gifts in various piles. 
+        Every second, you do the following:
+
+          . Choose the pile with the maximum number of gifts.
+          . If there is more than one pile with the maximum number of gifts, choose any.
+          . Leave behind the floor of the square root of the number of gifts in the pile. 
+            Take the rest of the gifts.
+
+        Return the number of gifts remaining after k seconds.
+			 */
+			$(document).ready(function(){
+        // Implementing a simple max heap manually
+        function heapify(arr, n, i) {
+          let largest = i;
+          let left = 2 * i + 1;
+          let right = 2 * i + 2;
+
+          if (left < n && arr[left] > arr[largest]) {
+            largest = left;
+          }
+
+          if (right < n && arr[right] > arr[largest]) {
+            largest = right;
+          }
+
+          if (largest !== i) {
+            [arr[i], arr[largest]] = [arr[largest], arr[i]];
+            heapify(arr, n, largest);
+          }
+        }
+
+        function buildMaxHeap(arr) {
+          const n = arr.length;
+          for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+            heapify(arr, n, i);
+          }
+        }
+
+        function extractMax(arr, n) {
+          const max = arr[0];
+          arr[0] = arr[n - 1];
+          heapify(arr, n - 1, 0);
+          return max;
+        }
+				/*
+        * @param gifts: a list of integers
+        * @param k: an integer
+        * @return: the number of gifts remaining after k seconds
+        */
+        let pickGifts = function(gifts, k) {
+            // Create a max heap using a priority queue
+            const maxHeap = new MaxPriorityQueue();
+
+            // Add all the piles of gifts to the max heap
+            for (const gift of gifts) {
+                maxHeap.enqueue(gift);
+            }
+
+            // Perform the operation for k seconds
+            for (let i = 0; i < k; i++) {
+                // Get the largest pile
+                let largestPile = maxHeap.dequeue().element;
+                // Calculate the remaining gifts after taking the square root
+                let remainingGifts = Math.floor(Math.sqrt(largestPile));
+                // Add the remaining gifts back to the heap
+                maxHeap.enqueue(remainingGifts);
+            }
+
+            // Sum up all the remaining gifts
+            let totalRemainingGifts = 0;
+            while (!maxHeap.isEmpty()) {
+                totalRemainingGifts += maxHeap.dequeue().element;
+            }
+
+            return totalRemainingGifts;
+        };
+
+        let pickGifts_2 = function(gifts, k) {
+          let n = gifts.length;
+
+          // Build the initial max heap
+          buildMaxHeap(gifts);
+
+          // Perform the operation for k seconds
+          for (let i = 0; i < k; i++) {
+            // Extract the largest pile
+            const largestPile = extractMax(gifts, n);
+            n--; // Reduce the size of the heap
+
+            // Calculate the remaining gifts after taking the square root
+            const remainingGifts = Math.floor(Math.sqrt(largestPile));
+            gifts[n] = remainingGifts; // Add the remaining gifts back to the heap
+            n++; // Increase heap size again
+            buildMaxHeap(gifts); // Rebuild the heap with the new element
+          }
+
+          // Sum up all the remaining gifts
+          let totalRemainingGifts = 0;
+          for (let i = 0; i < n; i++) {
+            totalRemainingGifts += gifts[i];
+          }
+
+          return totalRemainingGifts;
+        };
+
+        const input = [25,64,9,4,100];
+        const k = 4;
+        let results = pickGifts_2(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Max Heap: A max heap (priority queue) is used to always access the pile with 
+            the maximum number of gifts efficiently.
+        2. Operations: For k seconds, the largest pile is taken (i.e., removed from the heap), 
+            and the remaining gifts after applying the square root are put back into the heap.
+        3. Remaining Gifts Calculation: After k operations, all remaining gifts in the 
+            heap are summed up and returned.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
