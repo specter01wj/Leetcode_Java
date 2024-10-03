@@ -4,51 +4,124 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of positive integers nums, return an array answer 
-        that consists of the digits of each integer in nums after separating 
-        them in the same order they appear in nums.
+			 	You are given an integer array gifts denoting the number of gifts in various piles. 
+        Every second, you do the following:
 
-        To separate the digits of an integer is to get all the digits it has 
-        in the same order.
+          . Choose the pile with the maximum number of gifts.
+          . If there is more than one pile with the maximum number of gifts, choose any.
+          . Leave behind the floor of the square root of the number of gifts in the pile. 
+            Take the rest of the gifts.
 
-          . For example, for the integer 10921, the separation of its 
-            digits is [1,0,9,2,1].
+        Return the number of gifts remaining after k seconds.
 			 */
 			$(document).ready(function(){
+        // Implementing a simple max heap manually
+        function heapify(arr, n, i) {
+          let largest = i;
+          let left = 2 * i + 1;
+          let right = 2 * i + 2;
 
-				/*
-        * @param nums: a list of integers
-        * @return: an array answer that consists of the digits of each integer
-        */
-        let separateDigits = function(nums) {
-          let result = [];
-          
-          // Iterate through each number in the input array
-          for (let num of nums) {
-              // Convert the number to a string to separate its digits
-              let numStr = num.toString();
-              
-              // Convert each character back to a number and add to the result array
-              for (let digit of numStr) {
-                  result.push(Number(digit));
-              }
+          if (left < n && arr[left] > arr[largest]) {
+            largest = left;
           }
-          
-          return result;
+
+          if (right < n && arr[right] > arr[largest]) {
+            largest = right;
+          }
+
+          if (largest !== i) {
+            [arr[i], arr[largest]] = [arr[largest], arr[i]];
+            heapify(arr, n, largest);
+          }
+        }
+
+        function buildMaxHeap(arr) {
+          const n = arr.length;
+          for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+            heapify(arr, n, i);
+          }
+        }
+
+        function extractMax(arr, n) {
+          const max = arr[0];
+          arr[0] = arr[n - 1];
+          heapify(arr, n - 1, 0);
+          return max;
+        }
+				/*
+        * @param gifts: a list of integers
+        * @param k: an integer
+        * @return: the number of gifts remaining after k seconds
+        */
+        let pickGifts = function(gifts, k) {
+            // Create a max heap using a priority queue
+            const maxHeap = new MaxPriorityQueue();
+
+            // Add all the piles of gifts to the max heap
+            for (const gift of gifts) {
+                maxHeap.enqueue(gift);
+            }
+
+            // Perform the operation for k seconds
+            for (let i = 0; i < k; i++) {
+                // Get the largest pile
+                let largestPile = maxHeap.dequeue().element;
+                // Calculate the remaining gifts after taking the square root
+                let remainingGifts = Math.floor(Math.sqrt(largestPile));
+                // Add the remaining gifts back to the heap
+                maxHeap.enqueue(remainingGifts);
+            }
+
+            // Sum up all the remaining gifts
+            let totalRemainingGifts = 0;
+            while (!maxHeap.isEmpty()) {
+                totalRemainingGifts += maxHeap.dequeue().element;
+            }
+
+            return totalRemainingGifts;
         };
 
-        const input = [13,25,83,77];
-        let results = separateDigits(input);
+        let pickGifts_2 = function(gifts, k) {
+          let n = gifts.length;
+
+          // Build the initial max heap
+          buildMaxHeap(gifts);
+
+          // Perform the operation for k seconds
+          for (let i = 0; i < k; i++) {
+            // Extract the largest pile
+            const largestPile = extractMax(gifts, n);
+            n--; // Reduce the size of the heap
+
+            // Calculate the remaining gifts after taking the square root
+            const remainingGifts = Math.floor(Math.sqrt(largestPile));
+            gifts[n] = remainingGifts; // Add the remaining gifts back to the heap
+            n++; // Increase heap size again
+            buildMaxHeap(gifts); // Rebuild the heap with the new element
+          }
+
+          // Sum up all the remaining gifts
+          let totalRemainingGifts = 0;
+          for (let i = 0; i < n; i++) {
+            totalRemainingGifts += gifts[i];
+          }
+
+          return totalRemainingGifts;
+        };
+
+        const input = [25,64,9,4,100];
+        const k = 4;
+        let results = pickGifts_2(input, k);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Input Traversal: For each integer in the input array nums, 
-            the integer is converted to a string.
-        2. Digit Separation: Each character (digit) of the string is 
-            then converted back to an integer and added to a List<Integer>.
-        3. Final Array Construction: The list is finally converted back 
-            into an array of integers and returned as the result.
+				1. Max Heap: A max heap (priority queue) is used to always access the pile with 
+            the maximum number of gifts efficiently.
+        2. Operations: For k seconds, the largest pile is taken (i.e., removed from the heap), 
+            and the remaining gifts after applying the square root are put back into the heap.
+        3. Remaining Gifts Calculation: After k operations, all remaining gifts in the 
+            heap are summed up and returned.
 			 */
 
 		</script>

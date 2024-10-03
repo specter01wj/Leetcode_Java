@@ -21,20 +21,20 @@
         * @return: an array answer that consists of the digits of each integer
         */
         let separateDigits = function(nums) {
-          let result = [];
-          
-          // Iterate through each number in the input array
-          for (let num of nums) {
-              // Convert the number to a string to separate its digits
-              let numStr = num.toString();
-              
-              // Convert each character back to a number and add to the result array
-              for (let digit of numStr) {
-                  result.push(Number(digit));
-              }
-          }
-          
-          return result;
+            let result = [];
+            
+            // Iterate through each number in the input array
+            for (let num of nums) {
+                // Convert the number to a string to separate its digits
+                let numStr = num.toString();
+                
+                // Convert each character back to a number and add to the result array
+                for (let digit of numStr) {
+                    result.push(Number(digit));
+                }
+            }
+            
+            return result;
         };
 
         const input = [13,25,83,77];
