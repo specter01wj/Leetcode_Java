@@ -31,7 +31,23 @@ public class E2562_Find_the_Array_Concatenation_Value {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. initialize a variable concatenationValue to store the sum of concatenations.
+	2. use two pointers: left starting from the beginning and right starting from 
+		the end of the array.
+	3. In each iteration, if left and right point to the same element, we directly 
+		add that element's value to concatenationValue.
+	4. If they point to different elements, we concatenate them (by converting them 
+		to strings), add the result to concatenationValue, and increment/decrement 
+		the pointers.
+	5. The process continues until the array is fully processed.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the concatenation value of the nums
+     */
 	public long findTheArrayConcVal(int[] nums) {
         long concatenationValue = 0;
         int left = 0;
