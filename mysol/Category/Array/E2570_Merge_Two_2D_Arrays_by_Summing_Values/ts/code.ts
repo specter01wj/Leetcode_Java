@@ -1,26 +1,44 @@
-function findTheArrayConcVal(nums: number[]): number {
-  let concatenationValue = 0;
-  let left = 0;
-  let right = nums.length - 1;
-  
-  while (left <= right) {
-      if (left === right) {
-          concatenationValue += nums[left];
-          break;
+function mergeArrays(nums1: number[][], nums2: number[][]): number[][] {
+  let result: number[][] = [];
+  let i = 0, j = 0;
+
+  // Traverse both arrays
+  while (i < nums1.length && j < nums2.length) {
+      if (nums1[i][0] === nums2[j][0]) {
+          // If the ids are the same, sum their values
+          result.push([nums1[i][0], nums1[i][1] + nums2[j][1]]);
+          i++;
+          j++;
+      } else if (nums1[i][0] < nums2[j][0]) {
+          // Add the id and value from nums1 if its id is smaller
+          result.push([nums1[i][0], nums1[i][1]]);
+          i++;
       } else {
-          let concat = nums[left].toString() + nums[right].toString();
-          concatenationValue += parseInt(concat);
+          // Add the id and value from nums2 if its id is smaller
+          result.push([nums2[j][0], nums2[j][1]]);
+          j++;
       }
-      left++;
-      right--;
   }
-  
-  return concatenationValue;
+
+  // Add remaining elements from nums1, if any
+  while (i < nums1.length) {
+      result.push([nums1[i][0], nums1[i][1]]);
+      i++;
+  }
+
+  // Add remaining elements from nums2, if any
+  while (j < nums2.length) {
+      result.push([nums2[j][0], nums2[j][1]]);
+      j++;
+  }
+
+  return result;
 };
 
-const input: number[] = [7,52,2,4];
-const results = findTheArrayConcVal(input);
+const nums1: number[][] = [[1,2],[2,3],[4,5]];
+const nums2: number[][] = [[1,4],[3,2],[4,1]];
+const results = mergeArrays(nums1, nums2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + results;
+webHeading.innerHTML = 'Input1: ' + JSON.stringify(nums1, null, 2) + '; Input2: ' + JSON.stringify(nums2, null, 2)+ '<br>Result = ' + results;
 
