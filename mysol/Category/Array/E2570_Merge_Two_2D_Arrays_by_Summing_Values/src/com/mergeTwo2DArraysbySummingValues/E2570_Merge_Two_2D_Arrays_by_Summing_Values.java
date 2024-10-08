@@ -32,7 +32,8 @@ public class E2570_Merge_Two_2D_Arrays_by_Summing_Values {
 		int[][] nums1 = {{1,2},{2,3},{4,5}};
 		int[][] nums2 = {{1,4},{3,2},{4,1}};
 		int[][] output = solution.mergeArrays(nums1, nums2);
-        System.out.println("input: " + Arrays.deepToString(nums1) + "\noutput: " + Arrays.deepToString(output));
+        System.out.println("input1: " + Arrays.deepToString(nums1) + 
+        		"; input2: " + Arrays.deepToString(nums2) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
 	/*
