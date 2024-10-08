@@ -35,7 +35,23 @@ public class E2570_Merge_Two_2D_Arrays_by_Summing_Values {
         System.out.println("input: " + Arrays.deepToString(nums1) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    1. Two Pointer Approach: We use two pointers i and j to traverse both arrays nums1 and nums2. 
+    	Since both arrays are sorted by id, we can compare the current elements in both arrays.
+		. If id values are equal, we sum the values and move both pointers.
+		. If nums1[i][0] < nums2[j][0], we add the entry from nums1 and increment i.
+		. If nums1[i][0] > nums2[j][0], we add the entry from nums2 and increment j.
+	2. Remaining Elements: After processing the common elements, any remaining elements in either 
+		nums1 or nums2 are added to the result.
+	3. Result List: The result is collected in a list and finally converted back to a 2D array.
+    */
 	
+	/*
+     * @param nums1: a list of 2D integers
+     * @param nums2: a list of 2D integers
+     * @return: the resulting array
+     */
 	public int[][] mergeArrays(int[][] nums1, int[][] nums2) {
         List<int[]> result = new ArrayList<>();
         int i = 0, j = 0;
