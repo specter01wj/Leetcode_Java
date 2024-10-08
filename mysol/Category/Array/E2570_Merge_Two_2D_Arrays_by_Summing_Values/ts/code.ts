@@ -40,5 +40,7 @@ const nums2: number[][] = [[1,4],[3,2],[4,1]];
 const results = mergeArrays(nums1, nums2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input1: ' + JSON.stringify(nums1, null, 2) + '; Input2: ' + JSON.stringify(nums2, null, 2)+ '<br>Result = ' + results;
+webHeading.innerHTML = 'Input1: ' + JSON.stringify(nums1, null, 2) + 
+  '; Input2: ' + JSON.stringify(nums2, null, 2) + 
+  '<br>Result = ' + JSON.stringify(results, null, 2);
 
