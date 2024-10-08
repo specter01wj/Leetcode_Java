@@ -4,66 +4,87 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed integer array nums.
+			 	You are given two 2D integer arrays nums1 and nums2.
 
-        The concatenation of two numbers is the number formed by concatenating 
-        their numerals.
+          . nums1[i] = [idi, vali] indicate that the number with 
+            the id idi has a value equal to vali.
+          . nums2[i] = [idi, vali] indicate that the number with 
+            the id idi has a value equal to vali.
 
-          . For example, the concatenation of 15, 49 is 1549.
+        Each array contains unique ids and is sorted in ascending order by id.
 
-        The concatenation value of nums is initially equal to 0. 
-        Perform this operation until nums becomes empty:
+        Merge the two arrays into one array that is sorted in ascending order by id, 
+        respecting the following conditions:
 
-          . If there exists more than one number in nums, pick the first element 
-            and last element in nums respectively and add the value of their 
-            concatenation to the concatenation value of nums, then delete the 
-            first and last element from nums.
-          . If one element exists, add its value to the concatenation value of 
-            nums, then delete it.
+          . Only ids that appear in at least one of the two arrays should be 
+            included in the resulting array.
+          . Each id should be included only once and its value should be the 
+            sum of the values of this id in the two arrays. If the id does 
+            not exist in one of the two arrays then its value in that array 
+            is considered to be 0.
 
-        Return the concatenation value of the nums.
+        Return the resulting array. The returned array must be sorted in ascending 
+        order by id.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the concatenation value of the nums
+        * @param nums1: a list of 2D integers
+        * @param nums2: a list of 2D integers
+        * @return: the resulting array
         */
-        let findTheArrayConcVal = function(nums) {
-            let concatenationValue = 0;
-            let left = 0;
-            let right = nums.length - 1;
+        let mergeArrays = function(nums1, nums2) {
+            let result = [];
+            let i = 0, j = 0;
             
-            while (left <= right) {
-                if (left === right) {
-                    concatenationValue += nums[left];
-                    break;
+            // Traverse both arrays
+            while (i < nums1.length && j < nums2.length) {
+                if (nums1[i][0] === nums2[j][0]) {
+                    // If the ids are the same, sum their values
+                    result.push([nums1[i][0], nums1[i][1] + nums2[j][1]]);
+                    i++;
+                    j++;
+                } else if (nums1[i][0] < nums2[j][0]) {
+                    // Add the id and value from nums1 if its id is smaller
+                    result.push([nums1[i][0], nums1[i][1]]);
+                    i++;
                 } else {
-                    let concat = nums[left].toString() + nums[right].toString();
-                    concatenationValue += parseInt(concat);
+                    // Add the id and value from nums2 if its id is smaller
+                    result.push([nums2[j][0], nums2[j][1]]);
+                    j++;
                 }
-                left++;
-                right--;
             }
             
-            return concatenationValue;
+            // Add remaining elements from nums1, if any
+            while (i < nums1.length) {
+                result.push([nums1[i][0], nums1[i][1]]);
+                i++;
+            }
+            
+            // Add remaining elements from nums2, if any
+            while (j < nums2.length) {
+                result.push([nums2[j][0], nums2[j][1]]);
+                j++;
+            }
+            
+            return result;
         };
 
-        const input = [7,52,2,4];
-        let results = findTheArrayConcVal(input);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+        const nums1 = [[1,2],[2,3],[4,5]], nums2 = [[1,4],[3,2],[4,1]];
+        let results = mergeArrays(nums1, nums2);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(nums1, null, 2) + 
+            '; Input2: ' + JSON.stringify(nums2, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. initialize a variable concatenationValue to store the sum of concatenations.
-        2. use two pointers: left starting from the beginning and right starting from 
-            the end of the array.
-        3. In each iteration, if left and right point to the same element, we directly 
-            add that element's value to concatenationValue.
-        4. If they point to different elements, we concatenate them (by converting them 
-            to strings), add the result to concatenationValue, and increment/decrement 
-            the pointers.
-        5. The process continues until the array is fully processed.
+				1. Two Pointer Approach: We use two pointers i and j to traverse both arrays nums1 and nums2. 
+            Since both arrays are sorted by id, we can compare the current elements in both arrays.
+          . If id values are equal, we sum the values and move both pointers.
+          . If nums1[i][0] < nums2[j][0], we add the entry from nums1 and increment i.
+          . If nums1[i][0] > nums2[j][0], we add the entry from nums2 and increment j.
+        2. Remaining Elements: After processing the common elements, any remaining elements in either 
+            nums1 or nums2 are added to the result.
+        3. Result List: The result is collected in a list and finally converted back to a 2D array.
 			 */
 
 		</script>
