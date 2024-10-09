@@ -722,6 +722,7 @@ By Jin Wang
 |2558|**Take Gifts From the Richest Pile**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2562|**Find the Array Concatenation Value**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2570|**Merge Two 2D Arrays by Summing Values**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2574|**Left and Right Sum Differences**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2619|**Array Prototype Last**|Easy|Javascript/Typescript|Done/Done|
 |2620|**Counter**|Easy|Javascript/Typescript|Done/Done|
 |2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
