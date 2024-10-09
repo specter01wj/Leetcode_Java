@@ -26,7 +26,18 @@ public class E2574_Left_and_Right_Sum_Differences {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Initialize Arrays
+    2. Calculate Left Sums
+    3. Calculate Right Sums
+    4. Calculate the Answer Array
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the array answer
+     */
 	public int[] leftRightDifference(int[] nums) {
         int n = nums.length;
         int[] leftSum = new int[n];
