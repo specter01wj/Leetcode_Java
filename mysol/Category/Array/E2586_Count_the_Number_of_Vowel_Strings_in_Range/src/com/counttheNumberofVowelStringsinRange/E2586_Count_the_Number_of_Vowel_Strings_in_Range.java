@@ -21,7 +21,18 @@ public class E2586_Count_the_Number_of_Vowel_Strings_in_Range {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Iterate through the words array, retrieve the current word, check if 
+    the word is a vowel string, update the count if the word is a vowel string
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param left: an integer
+     * @param right: an integer
+     * @return: the number of good triplets
+     */
 	public int vowelStrings(String[] words, int left, int right) {
         int count = 0;
         String vowels = "aeiou";
