@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a 0-indexed integer array nums, find a 0-indexed integer array answer where:
+
+          . answer.length == nums.length.
+          . answer[i] = |leftSum[i] - rightSum[i]|.
+
+        Where:
+
+          . leftSum[i] is the sum of elements to the left of the index i in the array nums. 
+            If there is no such element, leftSum[i] = 0.
+          . rightSum[i] is the sum of elements to the right of the index i in the array nums. 
+            If there is no such element, rightSum[i] = 0.
+
+        Return the array answer.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums1: a list of 2D integers
+        * @param nums2: a list of 2D integers
+        * @return: the resulting array
+        */
+        let leftRightDifference = function(nums) {
+            const n = nums.length;
+            const leftSum = new Array(n).fill(0);
+            const rightSum = new Array(n).fill(0);
+            const answer = new Array(n).fill(0);
+
+            // Calculate left sums
+            for (let i = 1; i < n; i++) {
+                leftSum[i] = leftSum[i - 1] + nums[i - 1];
+            }
+
+            // Calculate right sums
+            for (let i = n - 2; i >= 0; i--) {
+                rightSum[i] = rightSum[i + 1] + nums[i + 1];
+            }
+
+            // Calculate the answer array
+            for (let i = 0; i < n; i++) {
+                answer[i] = Math.abs(leftSum[i] - rightSum[i]);
+            }
+
+            return answer;
+        };
+
+        const input = [10,4,8,3];
+        let results = leftRightDifference(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Initialize Arrays
+        2. Calculate Left Sums
+        3. Calculate Right Sums
+        4. Calculate the Answer Array
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
