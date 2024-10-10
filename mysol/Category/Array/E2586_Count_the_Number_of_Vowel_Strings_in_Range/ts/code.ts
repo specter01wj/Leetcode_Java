@@ -1,29 +1,20 @@
-function leftRightDifference(nums: number[]): number[] {
-  const n = nums.length;
-  const leftSum: number[] = new Array(n).fill(0);
-  const rightSum: number[] = new Array(n).fill(0);
-  const answer: number[] = new Array(n).fill(0);
+function vowelStrings(words: string[], left: number, right: number): number {
+  let count = 0;
+  const vowels = "aeiou";
 
-  // Calculate left sums
-  for (let i = 1; i < n; i++) {
-      leftSum[i] = leftSum[i - 1] + nums[i - 1];
+  for (let i = left; i <= right; i++) {
+      const word = words[i];
+      if (vowels.includes(word.charAt(0)) && vowels.includes(word.charAt(word.length - 1))) {
+          count++;
+      }
   }
 
-  // Calculate right sums
-  for (let i = n - 2; i >= 0; i--) {
-      rightSum[i] = rightSum[i + 1] + nums[i + 1];
-  }
-
-  // Calculate the answer array
-  for (let i = 0; i < n; i++) {
-      answer[i] = Math.abs(leftSum[i] - rightSum[i]);
-  }
-
-  return answer;
+  return count;
 };
 
-const input: number[] = [10,4,8,3];
-const results = leftRightDifference(input);
+const input: string[] = ["hey","aeo","mu","ooo","artro"];
+const left = 1, right = 4;
+const results = vowelStrings(input, left, right);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
