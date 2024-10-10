@@ -24,7 +24,7 @@ public class E2586_Count_the_Number_of_Vowel_Strings_in_Range {
 	/*
     solution:
     Iterate through the words array, retrieve the current word, check if 
-    the word is a vowel string, update the count if the word is a vowel string
+    the word is a vowel string, update the count if the word is a vowel string.
     */
 	
 	/*
