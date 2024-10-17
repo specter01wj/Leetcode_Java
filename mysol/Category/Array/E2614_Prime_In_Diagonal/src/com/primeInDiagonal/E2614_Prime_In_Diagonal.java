@@ -22,12 +22,12 @@ public class E2614_Prime_In_Diagonal {
     solution:
     1. isPrime function: This function checks if a number is prime. 
     	If the number is less than or equal to 1, it is not prime. 
-    	Otherwise, we check divisibility from 2 to the square root of the number.
-	2. Loop through diagonals: We iterate through both diagonals 
+    	Otherwise, check divisibility from 2 to the square root of the number.
+	2. Loop through diagonals: iterate through both diagonals 
 		(nums[i][i] and nums[i][nums.length - i - 1]). For each number 
-		on the diagonals, we check if it's prime using the isPrime function.
-	3. Return the result: We keep track of the maximum prime number found 
-		on the diagonals and return it. If no prime number is found, we return 0.
+		on the diagonals, check if it's prime using the isPrime function.
+	3. Return the result: keep track of the maximum prime number found 
+		on the diagonals and return it. If no prime number is found, return 0.
     */
 	
 	/*
