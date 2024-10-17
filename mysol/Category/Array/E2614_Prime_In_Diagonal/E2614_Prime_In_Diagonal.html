@@ -4,45 +4,60 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array of string words and two integers left and right.
+			 	You are given a 0-indexed two-dimensional integer array nums.
 
-        A string is called a vowel string if it starts with a vowel character and ends 
-        with a vowel character where vowel characters are 'a', 'e', 'i', 'o', and 'u'.
-
-        Return the number of vowel strings words[i] where i belongs to the inclusive 
-        range [left, right].
+        Return the largest prime number that lies on at least one of the 
+        diagonals of nums. In case, no prime is present on any of the 
+        diagonals, return 0.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param words: a list of strings
-        * @param left: an integer
-        * @param right: an integer
-        * @return: the number of good triplets
+        * @param nums: a list of 2D integers
+        * @return: the largest prime number
         */
-        let vowelStrings = function(words, left, right) {
-            let count = 0;
-            const vowels = "aeiou";
+        let diagonalPrime = function(nums) {
+            // Helper function to check if a number is prime
+            const isPrime = (num) => {
+                if (num <= 1) return false;
+                for (let i = 2; i * i <= num; i++) {
+                    if (num % i === 0) return false;
+                }
+                return true;
+            };
 
-            for (let i = left; i <= right; i++) {
-                const word = words[i];
-                if (vowels.includes(word.charAt(0)) && vowels.includes(word.charAt(word.length - 1))) {
-                    count++;
+            let maxPrime = 0;
+            let n = nums.length;
+
+            for (let i = 0; i < n; i++) {
+                // Check the first diagonal (nums[i][i])
+                if (isPrime(nums[i][i])) {
+                    maxPrime = Math.max(maxPrime, nums[i][i]);
+                }
+                
+                // Check the second diagonal (nums[i][n - i - 1])
+                if (isPrime(nums[i][n - i - 1])) {
+                    maxPrime = Math.max(maxPrime, nums[i][n - i - 1]);
                 }
             }
 
-            return count;
+            return maxPrime;
         };
 
-        const input = ["hey","aeo","mu","ooo","artro"];
-        const left = 1, right = 4;
-        let results = vowelStrings(input, left, right);
+        const input = [[1,2,3],[5,6,7],[9,10,11]];
+        let results = diagonalPrime(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				Iterate through the words array, retrieve the current word, check if 
-        the word is a vowel string, update the count if the word is a vowel string.
+				1. isPrime function: This function checks if a number is prime. 
+            If the number is less than or equal to 1, it is not prime. 
+            Otherwise, check divisibility from 2 to the square root of the number.
+        2. Loop through diagonals: iterate through both diagonals 
+            (nums[i][i] and nums[i][nums.length - i - 1]). For each number 
+            on the diagonals, check if it's prime using the isPrime function.
+        3. Return the result: keep track of the maximum prime number found 
+            on the diagonals and return it. If no prime number is found, return 0.
 			 */
 
 		</script>
