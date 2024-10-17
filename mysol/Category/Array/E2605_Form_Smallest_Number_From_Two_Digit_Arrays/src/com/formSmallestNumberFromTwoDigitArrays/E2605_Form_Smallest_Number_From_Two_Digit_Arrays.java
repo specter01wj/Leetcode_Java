@@ -16,7 +16,21 @@ public class E2605_Form_Smallest_Number_From_Two_Digit_Arrays {
         		"; input2: " + Arrays.toString(nums2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Common digit check: use a HashSet to store all digits from nums1. 
+    	Then, check each digit from nums2 to see if it's in the set. 
+    	If find a common digit, return the smallest one.
+	2. No common digit: If there's no common digit, find the smallest digit 
+		from each array and form the smallest possible two-digit number by 
+		combining them.
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @return: the smallest number that contains at least one digit from each array
+     */
 	public int minNumber(int[] nums1, int[] nums2) {
         // Step 1: Find the smallest common digit
         HashSet<Integer> set = new HashSet<>();
