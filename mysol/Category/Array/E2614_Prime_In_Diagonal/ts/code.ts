@@ -1,20 +1,33 @@
-function vowelStrings(words: string[], left: number, right: number): number {
-  let count = 0;
-  const vowels = "aeiou";
+function diagonalPrime(nums: number[][]): number {
+  // Helper function to check if a number is prime
+  const isPrime = (num: number): boolean => {
+      if (num <= 1) return false;
+      for (let i = 2; i * i <= num; i++) {
+          if (num % i === 0) return false;
+      }
+      return true;
+  };
 
-  for (let i = left; i <= right; i++) {
-      const word = words[i];
-      if (vowels.includes(word.charAt(0)) && vowels.includes(word.charAt(word.length - 1))) {
-          count++;
+  let maxPrime: number = 0;
+  const n: number = nums.length;
+
+  for (let i = 0; i < n; i++) {
+      // Check the first diagonal (nums[i][i])
+      if (isPrime(nums[i][i])) {
+          maxPrime = Math.max(maxPrime, nums[i][i]);
+      }
+      
+      // Check the second diagonal (nums[i][n - i - 1])
+      if (isPrime(nums[i][n - i - 1])) {
+          maxPrime = Math.max(maxPrime, nums[i][n - i - 1]);
       }
   }
 
-  return count;
+  return maxPrime;
 };
 
-const input: string[] = ["hey","aeo","mu","ooo","artro"];
-const left = 1, right = 4;
-const results = vowelStrings(input, left, right);
+const input: number[][] = [[1,2,3],[5,6,7],[9,10,11]];
+const results = diagonalPrime(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
