@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given two arrays of unique digits nums1 and nums2, return the 
+        smallest number that contains at least one digit from each array.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @return: the smallest number that contains at least one digit from each array
+        */
+        let minNumber = function(nums1, nums2) {
+            // Step 1: Find the smallest common digit
+            let set = new Set(nums1);
+            let smallestCommon = Infinity;
+            
+            for (let num of nums2) {
+                if (set.has(num)) {
+                    smallestCommon = Math.min(smallestCommon, num);
+                }
+            }
+            
+            if (smallestCommon !== Infinity) {
+                return smallestCommon; // Found common digit, return it
+            }
+            
+            // Step 2: No common digit, return smallest combination
+            let minNum1 = Math.min(...nums1);
+            let minNum2 = Math.min(...nums2);
+            
+            // Form the smallest two-digit number
+            return Math.min(minNum1 * 10 + minNum2, minNum2 * 10 + minNum1);
+        };
+
+        const nums1 = [4,1,3], nums2 = [5,7];
+        let results = minNumber(nums1, nums2);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(nums1, null, 2) + 
+            '; Input2: ' + JSON.stringify(nums2, null, 2) + 
+            '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Common digit check: use a HashSet to store all digits from nums1. 
+            Then, check each digit from nums2 to see if it's in the set. 
+            If find a common digit, return the smallest one.
+        2. No common digit: If there's no common digit, find the smallest digit 
+            from each array and form the smallest possible two-digit number by 
+            combining them.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
