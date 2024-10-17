@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed array of string words and two integers left and right.
+
+        A string is called a vowel string if it starts with a vowel character and ends 
+        with a vowel character where vowel characters are 'a', 'e', 'i', 'o', and 'u'.
+
+        Return the number of vowel strings words[i] where i belongs to the inclusive 
+        range [left, right].
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param words: a list of strings
+        * @param left: an integer
+        * @param right: an integer
+        * @return: the number of good triplets
+        */
+        let vowelStrings = function(words, left, right) {
+            let count = 0;
+            const vowels = "aeiou";
+
+            for (let i = left; i <= right; i++) {
+                const word = words[i];
+                if (vowels.includes(word.charAt(0)) && vowels.includes(word.charAt(word.length - 1))) {
+                    count++;
+                }
+            }
+
+            return count;
+        };
+
+        const input = ["hey","aeo","mu","ooo","artro"];
+        const left = 1, right = 4;
+        let results = vowelStrings(input, left, right);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				Iterate through the words array, retrieve the current word, check if 
+        the word is a vowel string, update the count if the word is a vowel string.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
