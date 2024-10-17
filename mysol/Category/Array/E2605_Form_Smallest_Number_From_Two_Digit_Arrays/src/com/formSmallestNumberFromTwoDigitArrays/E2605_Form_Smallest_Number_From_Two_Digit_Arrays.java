@@ -12,7 +12,8 @@ public class E2605_Form_Smallest_Number_From_Two_Digit_Arrays {
 		E2605_Form_Smallest_Number_From_Two_Digit_Arrays solution = new E2605_Form_Smallest_Number_From_Two_Digit_Arrays();
 		int[] nums1 = {4,1,3}, nums2 = {5,7};
 		int output = solution.minNumber(nums1, nums2);
-        System.out.println("input: " + Arrays.toString(nums1) + "\noutput: " + (output));
+        System.out.println("input1: " + Arrays.toString(nums1) + 
+        		"; input2: " + Arrays.toString(nums2) + "\noutput: " + (output));
 	}
 	
 	
