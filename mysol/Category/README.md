@@ -349,6 +349,8 @@ Cspiration Category:
 |2570|Merge Two 2D Arrays by Summing Values|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2574|Left and Right Sum Differences|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2586|Count the Number of Vowel Strings in Range|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2605|Form Smallest Number From Two Digit Arrays|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2614|Prime In Diagonal|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
