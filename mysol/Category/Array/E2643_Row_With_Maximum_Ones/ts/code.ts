@@ -1,27 +1,24 @@
-function findColumnWidth(grid: number[][]): number[] {
-  const m: number = grid.length;    // Number of rows
-  const n: number = grid[0].length; // Number of columns
-  const ans: number[] = new Array(n).fill(0); // To store the width of each column
+function rowAndMaximumOnes(mat: number[][]): number[] {
+  let maxOnes: number = 0; // Initialize the maximum number of ones to 0
+  let rowIndex: number = 0; // Initialize the row index to 0
 
-  // Iterate through each column
-  for (let col = 0; col < n; col++) {
-      let maxWidth = 0;
+  // Iterate through each row
+  for (let i = 0; i < mat.length; i++) {
+      // Count the number of 1's in the current row
+      let onesCount: number = mat[i].reduce((acc, num) => acc + num, 0);
 
-      // Iterate through each row in the current column
-      for (let row = 0; row < m; row++) {
-          // Get the length of the current number as a string
-          const len: number = String(grid[row][col]).length;
-          maxWidth = Math.max(maxWidth, len); // Update the maximum width for this column
+      // Update the row with the maximum number of 1's
+      if (onesCount > maxOnes) {
+          maxOnes = onesCount;
+          rowIndex = i;
       }
-
-      ans[col] = maxWidth; // Store the maximum width for the current column
   }
 
-  return ans; // Return the result as an array
+  return [rowIndex, maxOnes]; // Return the row index and the max count of 1's
 };
 
-const input: number[][] = [[1],[22],[333]];
-const results = findColumnWidth(input);
+const input: number[][] = [[0,0],[1,1],[0,0]];
+const results = rowAndMaximumOnes(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
