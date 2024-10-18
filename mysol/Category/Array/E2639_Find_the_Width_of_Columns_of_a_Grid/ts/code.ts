@@ -1,33 +1,27 @@
-function diagonalPrime(nums: number[][]): number {
-  // Helper function to check if a number is prime
-  const isPrime = (num: number): boolean => {
-      if (num <= 1) return false;
-      for (let i = 2; i * i <= num; i++) {
-          if (num % i === 0) return false;
-      }
-      return true;
-  };
+function findColumnWidth(grid: number[][]): number[] {
+  const m: number = grid.length;    // Number of rows
+  const n: number = grid[0].length; // Number of columns
+  const ans: number[] = new Array(n).fill(0); // To store the width of each column
 
-  let maxPrime: number = 0;
-  const n: number = nums.length;
+  // Iterate through each column
+  for (let col = 0; col < n; col++) {
+      let maxWidth = 0;
 
-  for (let i = 0; i < n; i++) {
-      // Check the first diagonal (nums[i][i])
-      if (isPrime(nums[i][i])) {
-          maxPrime = Math.max(maxPrime, nums[i][i]);
+      // Iterate through each row in the current column
+      for (let row = 0; row < m; row++) {
+          // Get the length of the current number as a string
+          const len: number = String(grid[row][col]).length;
+          maxWidth = Math.max(maxWidth, len); // Update the maximum width for this column
       }
-      
-      // Check the second diagonal (nums[i][n - i - 1])
-      if (isPrime(nums[i][n - i - 1])) {
-          maxPrime = Math.max(maxPrime, nums[i][n - i - 1]);
-      }
+
+      ans[col] = maxWidth; // Store the maximum width for the current column
   }
 
-  return maxPrime;
+  return ans; // Return the result as an array
 };
 
-const input: number[][] = [[1,2,3],[5,6,7],[9,10,11]];
-const results = diagonalPrime(input);
+const input: number[][] = [[1],[22],[333]];
+const results = findColumnWidth(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
