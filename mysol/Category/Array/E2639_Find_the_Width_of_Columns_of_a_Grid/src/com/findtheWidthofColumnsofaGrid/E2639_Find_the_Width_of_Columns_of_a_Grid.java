@@ -23,7 +23,22 @@ public class E2639_Find_the_Width_of_Columns_of_a_Grid {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Grid Dimensions: first get the number of rows (m) and columns (n) in the grid.
+	2. Iterate Through Columns: For each column, iterate through each row to calculate 
+		the width of the integer in that cell.
+		. use String.valueOf() to convert the integer into a string to determine 
+			its length (accounting for the negative sign).
+		. track the maximum length for each column and store it in the ans array.
+	3. Return Result: Once calculate the maximum width for each column, return 
+		the result as an integer array.
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: an integer array ans of size n where ans[i] is the width of the ith column
+     */
 	public int[] findColumnWidth(int[][] grid) {
         int m = grid.length;    // Number of rows
         int n = grid[0].length; // Number of columns
