@@ -4,59 +4,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed m x n integer matrix grid. 
-        The width of a column is the maximum length of its integers.
+			 	Given a m x n binary matrix mat, find the 0-indexed position of 
+        the row that contains the maximum count of ones, and the number 
+        of ones in that row.
 
-          . For example, if grid = [[-10], [3], [12]], the width of the only 
-            column is 3 since -10 is of length 3.
+        In case there are multiple rows that have the maximum count of ones, 
+        the row with the smallest row number should be selected.
 
-        Return an integer array ans of size n where ans[i] is the width of the ith column.
-
-        The length of an integer x with len digits is equal to len if x is non-negative, 
-        and len + 1 otherwise.
+        Return an array containing the index of the row, and the number of ones in it.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param grid: a list of 2D integers
-        * @return: an integer array ans of size n where ans[i] is the width of the ith column
+        * @param mat: a list of 2D integers
+        * @return: an array containing the index of the row, and the number of ones in it
         */
-        let findColumnWidth = function(grid) {
-            const m = grid.length;    // Number of rows
-            const n = grid[0].length; // Number of columns
-            const ans = new Array(n).fill(0); // To store the width of each column
+        let rowAndMaximumOnes = function(mat) {
+            let maxOnes = 0; // Maximum number of ones in any row
+            let rowIndex = 0; // Row index with the maximum number of ones
 
-            // Iterate through each column
-            for (let col = 0; col < n; col++) {
-                let maxWidth = 0;
+            // Iterate through each row
+            for (let i = 0; i < mat.length; i++) {
+                // Count the number of 1's in the current row
+                let onesCount = mat[i].reduce((acc, num) => acc + num, 0);
 
-                // Iterate through each row in the current column
-                for (let row = 0; row < m; row++) {
-                    // Get the length of the current number as a string
-                    const len = String(grid[row][col]).length;
-                    maxWidth = Math.max(maxWidth, len); // Update the maximum width for this column
+                // Update the row with the maximum number of 1's
+                if (onesCount > maxOnes) {
+                    maxOnes = onesCount;
+                    rowIndex = i;
                 }
-
-                ans[col] = maxWidth; // Store the maximum width for the current column
             }
 
-            return ans; // Return the result as an array
+            return [rowIndex, maxOnes];
         };
 
-        const input = [[1],[22],[333]];
-        let results = findColumnWidth(input);
+        const input = [[0,0],[1,1],[0,0]];
+        let results = rowAndMaximumOnes(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
 			});
 
 			/*sol:
-				1. Grid Dimensions: first get the number of rows (m) and columns (n) in the grid.
-        2. Iterate Through Columns: For each column, iterate through each row to calculate 
-            the width of the integer in that cell.
-          . use String.valueOf() to convert the integer into a string to determine 
-            its length (accounting for the negative sign).
-          . track the maximum length for each column and store it in the ans array.
-        3. Return Result: Once calculate the maximum width for each column, return 
-            the result as an integer array.
+				1. Tracking the maximum ones: initialize two variables: maxOnes to 
+            store the maximum count of 1s, and rowIndex to store the index of 
+            the row with that count.
+        2. Counting ones in each row: loop through each row and count the number 
+            of 1s in that row.
+        3. Updating the result: If the count of 1s in the current row is greater 
+            than maxOnes, update both maxOnes and rowIndex. 
+            If multiple rows have the same number of ones, the row with the smaller 
+            index is automatically selected since only update when a row has a 
+            strictly greater count.
+        4. Return the result: return the index of the row with the maximum ones 
+            and the count of ones in that row.
 			 */
 
 		</script>

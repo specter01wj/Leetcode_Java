@@ -43,7 +43,7 @@ public class E2643_Row_With_Maximum_Ones {
      */
 	public int[] rowAndMaximumOnes(int[][] mat) {
         int maxOnes = 0; // Maximum number of ones in any row
-        int rowIndex = -1; // Row index with maximum number of ones
+        int rowIndex = 0; // Row index with maximum number of ones
 
         // Iterate through each row
         for (int i = 0; i < mat.length; i++) {
