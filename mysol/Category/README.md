@@ -351,8 +351,8 @@ Cspiration Category:
 |2586|Count the Number of Vowel Strings in Range|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2605|Form Smallest Number From Two Digit Arrays|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2614|Prime In Diagonal|Easy||Java/Javascript/Typescript|Done/Done/Done|
-|2639|Find the Width of Columns of a Grid|Easy||Javascript/Typescript|Done/Done|
-|2643|Row With Maximum Ones|Easy||Javascript/Typescript|Done/Done|
+|2639|Find the Width of Columns of a Grid|Easy||Javascript/Typescript|Done/Done/Done|
+|2643|Row With Maximum Ones|Easy||Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
