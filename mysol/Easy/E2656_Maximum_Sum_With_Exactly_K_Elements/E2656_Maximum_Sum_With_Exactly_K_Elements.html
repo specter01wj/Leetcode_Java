@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed integer array nums and an integer k. 
+        Your task is to perform the following operation exactly k times 
+        in order to maximize your score:
+
+          1. Select an element m from nums.
+          2. Remove the selected element m from the array.
+          3. Add a new element with a value of m + 1 to the array.
+          4. Increase your score by m.
+
+        Return the maximum score you can achieve after performing the 
+        operation exactly k times.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @return: the maximum score you can achieve after performing the operation exactly k times
+        */
+        let maximizeSum = function(nums, k) {
+            // Find the maximum element in nums
+            let maxNum = Math.max(...nums);
+            
+            // Initialize the sum
+            let sum = 0;
+            
+            // Perform k operations to maximize the sum
+            for (let i = 0; i < k; i++) {
+                sum += maxNum;  // Add the current largest number to the sum
+                maxNum++;       // Increment the number by 1 for the next step
+            }
+            
+            return sum;
+        };
+
+        const input = [1,2,3,4,5], k = 3
+        let results = maximizeSum(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + (results) + '</h2>');
+			});
+
+			/*sol:
+				1. Find the maximum number: First, iterate through the array to find the largest element, maxNum.
+        2. Maximize the sum: In each of the k iterations:
+            . Add the current value of maxNum to the sum.
+            . Increment maxNum by 1 to simulate the insertion of m + 1 in the array.
+        3. Return the sum: After k operations, return the final sum.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
