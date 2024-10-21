@@ -25,7 +25,20 @@ public class E2656_Maximum_Sum_With_Exactly_K_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Find the maximum number: First, iterate through the array to find the largest element, maxNum.
+	2. Maximize the sum: In each of the k iterations:
+		. Add the current value of maxNum to the sum.
+		. Increment maxNum by 1 to simulate the insertion of m + 1 in the array.
+	3. Return the sum: After k operations, return the final sum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the maximum score you can achieve after performing the operation exactly k times
+     */
 	public int maximizeSum(int[] nums, int k) {
         // Find the maximum element in nums
         int maxNum = Integer.MIN_VALUE;
