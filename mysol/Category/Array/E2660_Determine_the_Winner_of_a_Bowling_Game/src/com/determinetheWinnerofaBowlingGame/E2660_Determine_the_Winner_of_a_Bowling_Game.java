@@ -35,7 +35,26 @@ public class E2660_Determine_the_Winner_of_a_Bowling_Game {
         		"; input2: " + Arrays.toString(player2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. isWinner method:
+		. This method compares the total scores of both players.
+		. If player 1 has a higher score, it returns 1.
+		. If player 2 has a higher score, it returns 2.
+		. If both players have the same score, it returns 0.
+	2. calculateScore method:
+		. This method calculates the total score for each player.
+		. It checks whether the player hit 10 pins in either the previous 
+			turn or the turn before that. If so, the current score is doubled.
+		. The total score is calculated as the sum of these modified or 
+			original turn scores.
+    */
 	
+	/*
+     * @param player1: a list of integers
+     * @param player1: a list of integers
+     * @return: 1 or 2 or 0
+     */
 	public int isWinner(int[] player1, int[] player2) {
         int score1 = calculateScore(player1);
         int score2 = calculateScore(player2);
