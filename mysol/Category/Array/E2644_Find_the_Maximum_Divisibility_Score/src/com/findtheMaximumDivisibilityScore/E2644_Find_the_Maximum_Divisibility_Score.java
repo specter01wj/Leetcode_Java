@@ -20,7 +20,21 @@ public class E2644_Find_the_Maximum_Divisibility_Score {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. initialize maxScore to -1 and resultDivisor to the maximum possible integer value. 
+    	This ensures that any divisor will update these values the first time.
+	2. For each divisor, count how many numbers in nums are divisible by that divisor.
+	3. If the current score is greater than maxScore, or if it's equal to maxScore but 
+		the divisor is smaller, update maxScore and resultDivisor.
+	4. Finally, return the resultDivisor.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param divisors: a list of integers
+     * @return: the integer divisors[i] with the maximum divisibility score
+     */
 	public int maxDivScore(int[] nums, int[] divisors) {
         int maxScore = -1;
         int resultDivisor = Integer.MAX_VALUE;
