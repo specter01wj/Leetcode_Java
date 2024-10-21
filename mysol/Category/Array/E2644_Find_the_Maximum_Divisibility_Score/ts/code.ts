@@ -1,24 +1,31 @@
-function rowAndMaximumOnes(mat: number[][]): number[] {
-  let maxOnes: number = 0; // Initialize the maximum number of ones to 0
-  let rowIndex: number = 0; // Initialize the row index to 0
+function maxDivScore(nums: number[], divisors: number[]): number {
+  let maxScore = -1;
+  let resultDivisor = Infinity;
 
-  // Iterate through each row
-  for (let i = 0; i < mat.length; i++) {
-      // Count the number of 1's in the current row
-      let onesCount: number = mat[i].reduce((acc, num) => acc + num, 0);
+  // Iterate through each divisor
+  for (let divisor of divisors) {
+      let score = 0;
 
-      // Update the row with the maximum number of 1's
-      if (onesCount > maxOnes) {
-          maxOnes = onesCount;
-          rowIndex = i;
+      // Calculate the divisibility score for the current divisor
+      for (let num of nums) {
+          if (num % divisor === 0) {
+              score++;
+          }
+      }
+
+      // Update the result if the current divisor has a higher score,
+      // or if the score is the same but the divisor is smaller
+      if (score > maxScore || (score === maxScore && divisor < resultDivisor)) {
+          maxScore = score;
+          resultDivisor = divisor;
       }
   }
 
-  return [rowIndex, maxOnes]; // Return the row index and the max count of 1's
+  return resultDivisor;
 };
 
-const input: number[][] = [[0,0],[1,1],[0,0]];
-const results = rowAndMaximumOnes(input);
+const input: number[] = [2,9,15,50], divisors: number[] = [5,3,7,2];
+const results = maxDivScore(input, divisors);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
