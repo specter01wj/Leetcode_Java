@@ -25,7 +25,24 @@ public class E2670_Find_the_Distinct_Difference_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Prefix and Suffix Sets: We use two HashSets to track the distinct 
+    	elements in the prefix and suffix subarrays.
+	2. Suffix Distinct Count: We iterate from the end of the array to count 
+		the distinct elements in the suffix starting from each index and 
+		store it in an array suffixDistinctCount.
+	3. Result Calculation: For each index i, we calculate the number of 
+		distinct elements in the prefix (using prefixSet.size()) and the 
+		number of distinct elements in the suffix 
+		(using suffixDistinctCount[i + 1] if it exists, otherwise 0).
+	4. The result at each index is the difference between these two counts.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the distinct difference array of nums
+     */
 	public int[] distinctDifferenceArray(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
