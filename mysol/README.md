@@ -737,9 +737,11 @@ By Jin Wang
 |2643|**Row With Maximum Ones**|Easy|Javascript/Typescript|Done/Done/Done|
 |2644|**Find the Maximum Divisibility Score**|Easy|Javascript/Typescript|Done/Done/Done|
 |2656|**Maximum Sum With Exactly K Elements**|Easy|Javascript/Typescript|Done/Done/Done|
+|2660|**Determine the Winner of a Bowling Game**|Easy|Javascript/Typescript|Done/Done/Done|
 |2665|**Counter II**|Easy|Javascript/Typescript|Done/Done|
 |2666|**Allow One Function Call**|Easy|Javascript/Typescript|Done/Done|
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
+|2670|**Find the Distinct Difference Array**|Easy|Javascript/Typescript|Done/Done|
 |2677|**Chunk Array**|Easy|Javascript/Typescript|Done/Done|
 |2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
