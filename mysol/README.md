@@ -736,6 +736,7 @@ By Jin Wang
 |2639|**Find the Width of Columns of a Grid**|Easy|Javascript/Typescript|Done/Done/Done|
 |2643|**Row With Maximum Ones**|Easy|Javascript/Typescript|Done/Done/Done|
 |2644|**Find the Maximum Divisibility Score**|Easy|Javascript/Typescript|Done/Done/Done|
+|2656|**Maximum Sum With Exactly K Elements**|Easy|Javascript/Typescript|Done/Done/Done|
 |2665|**Counter II**|Easy|Javascript/Typescript|Done/Done|
 |2666|**Allow One Function Call**|Easy|Javascript/Typescript|Done/Done|
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
