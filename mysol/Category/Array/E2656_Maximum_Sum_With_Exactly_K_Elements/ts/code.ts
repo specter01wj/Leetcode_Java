@@ -14,7 +14,7 @@ function maximizeSum(nums: number[], k: number): number {
   return sum;
 };
 
-const input: number[] = [1,2,3,4,5], k: number = 4;
+const input: number[] = [1,2,3,4,5], k: number = 3;
 const results = maximizeSum(input, k);
 
 let webHeading = document.querySelector('#t1');
