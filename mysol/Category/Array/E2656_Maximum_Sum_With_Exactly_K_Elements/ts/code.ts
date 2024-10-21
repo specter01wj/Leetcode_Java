@@ -1,31 +1,21 @@
-function maxDivScore(nums: number[], divisors: number[]): number {
-  let maxScore = -1;
-  let resultDivisor = Infinity;
-
-  // Iterate through each divisor
-  for (let divisor of divisors) {
-      let score = 0;
-
-      // Calculate the divisibility score for the current divisor
-      for (let num of nums) {
-          if (num % divisor === 0) {
-              score++;
-          }
-      }
-
-      // Update the result if the current divisor has a higher score,
-      // or if the score is the same but the divisor is smaller
-      if (score > maxScore || (score === maxScore && divisor < resultDivisor)) {
-          maxScore = score;
-          resultDivisor = divisor;
-      }
+function maximizeSum(nums: number[], k: number): number {
+  // Find the maximum element in nums
+  let maxNum = Math.max(...nums);
+  
+  // Initialize the sum
+  let sum = 0;
+  
+  // Perform k operations to maximize the sum
+  for (let i = 0; i < k; i++) {
+      sum += maxNum;  // Add the current largest number to the sum
+      maxNum++;       // Increment the number by 1 for the next step
   }
-
-  return resultDivisor;
+  
+  return sum;
 };
 
-const input: number[] = [2,9,15,50], divisors: number[] = [5,3,7,2];
-const results = maxDivScore(input, divisors);
+const input: number[] = [1,2,3,4,5], k: number = 4;
+const results = maximizeSum(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
