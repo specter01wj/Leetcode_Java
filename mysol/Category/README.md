@@ -357,6 +357,7 @@ Cspiration Category:
 |2656|Maximum Sum With Exactly K Elements|Easy||Javascript/Typescript|Done/Done/Done|
 |2660|Determine the Winner of a Bowling Game|Easy||Javascript/Typescript|Done/Done/Done|
 |2670|Find the Distinct Difference Array|Easy||Javascript/Typescript|Done/Done|
+|2678|Number of Senior Citizens|Easy||Javascript/Typescript|Done/Done|
 
 
 ### 2. String

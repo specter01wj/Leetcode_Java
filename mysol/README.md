@@ -743,6 +743,7 @@ By Jin Wang
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
 |2670|**Find the Distinct Difference Array**|Easy|Javascript/Typescript|Done/Done|
 |2677|**Chunk Array**|Easy|Javascript/Typescript|Done/Done|
+|2678|**Number of Senior Citizens**|Easy|Javascript/Typescript|Done/Done|
 |2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
