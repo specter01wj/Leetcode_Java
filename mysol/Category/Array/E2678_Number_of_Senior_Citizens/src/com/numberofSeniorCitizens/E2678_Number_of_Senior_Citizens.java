@@ -23,7 +23,19 @@ public class E2678_Number_of_Senior_Citizens {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. iterate through each element in the details array.
+	2. For each string, extract the age part, which consists of the characters at 
+		positions 11 and 12. use substring(11, 13) to get the age and convert it 
+		into an integer.
+	3. If the age is strictly greater than 60, increment the seniorCount.
+    */
 	
+	/*
+     * @param details: a list of strings
+     * @return: the number of passengers who are strictly more than 60 years old
+     */
 	public int countSeniors(String[] details) {
         int seniorCount = 0;
 
