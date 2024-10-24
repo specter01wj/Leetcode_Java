@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	There are n friends that are playing a game. The friends are sitting 
+        in a circle and are numbered from 1 to n in clockwise order. 
+        More formally, moving clockwise from the ith friend brings you to 
+        the (i+1)th friend for 1 <= i < n, and moving clockwise from the nth 
+        friend brings you to the 1st friend.
+
+        The rules of the game are as follows:
+
+        1st friend receives the ball.
+
+          . After that, 1st friend passes it to the friend who is k steps 
+            away from them in the clockwise direction.
+          . After that, the friend who receives the ball should pass it to 
+            the friend who is 2 * k steps away from them in the clockwise direction.
+          . After that, the friend who receives the ball should pass it to 
+            the friend who is 3 * k steps away from them in the clockwise direction, 
+            and so on and so forth.
+
+        In other words, on the ith turn, the friend holding the ball should pass it 
+        to the friend who is i * k steps away from them in the clockwise direction.
+
+        The game is finished when some friend receives the ball for the second time.
+
+        The losers of the game are friends who did not receive the ball in the entire game.
+
+        Given the number of friends, n, and an integer k, return the array answer, 
+        which contains the losers of the game in the ascending order.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param n: an integer
+        * @param k: an integer
+        * @return: the array answer
+        */
+        let circularGameLosers = function(n, k) {
+            const received = new Set(); // Set to track friends who have received the ball
+            let currentFriend = 1; // The game starts with the 1st friend
+            let steps = 1; // Initial steps to pass the ball
+            
+            // Continue the game until a friend receives the ball twice
+            while (!received.has(currentFriend)) {
+                received.add(currentFriend); // Mark current friend as having received the ball
+                currentFriend = (currentFriend + steps * k - 1) % n + 1; // Move to the next friend
+                steps++; // Increase the steps (i * k for the next friend)
+            }
+            
+            // Collect friends who did not receive the ball
+            const losers = [];
+            for (let i = 1; i <= n; i++) {
+                if (!received.has(i)) {
+                    losers.push(i);
+                }
+            }
+            
+            return losers;
+        };
+
+        const input = 5, k = 2;
+        let results = circularGameLosers(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. use a Set<Integer> called received to keep track of which friends 
+            have received the ball.
+        2. start with the 1st friend (currentFriend = 1) and begin passing the 
+            ball according to the rules.
+        3. calculate the next friend using the formula: 
+            (currentFriend + steps * k - 1) % n + 1. This formula ensures that 
+            the game wraps around in a circle.
+        4. Once a friend receives the ball for the second time, the game ends.
+        5. then find all the friends who did not receive the ball by checking 
+            which friends are not in the received set.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
