@@ -42,7 +42,16 @@ public class E2682_Find_the_Losers_of_the_Circular_Game {
 	
 	/*
     solution:
-    count good triplets
+    1. use a Set<Integer> called received to keep track of which friends 
+    	have received the ball.
+	2. start with the 1st friend (currentFriend = 1) and begin passing the 
+		ball according to the rules.
+	3. calculate the next friend using the formula: 
+		(currentFriend + steps * k - 1) % n + 1. This formula ensures that 
+		the game wraps around in a circle.
+	4. Once a friend receives the ball for the second time, the game ends.
+	5. then find all the friends who did not receive the ball by checking 
+		which friends are not in the received set.
     */
 	
 	/*
