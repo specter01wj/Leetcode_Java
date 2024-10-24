@@ -48,7 +48,7 @@ public class E2682_Find_the_Losers_of_the_Circular_Game {
 	/*
      * @param n: an integer
      * @param k: an integer
-     * @return: the number of good triplets
+     * @return: the array answer
      */
 	public int[] circularGameLosers(int n, int k) {
         // Set to track the friends who have received the ball
