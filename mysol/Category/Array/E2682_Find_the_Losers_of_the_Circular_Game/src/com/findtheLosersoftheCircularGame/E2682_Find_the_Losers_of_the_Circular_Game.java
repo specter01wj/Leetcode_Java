@@ -40,7 +40,16 @@ public class E2682_Find_the_Losers_of_the_Circular_Game {
         System.out.println("input: " + (input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param n: an integer
+     * @param k: an integer
+     * @return: the number of good triplets
+     */
 	public int[] circularGameLosers(int n, int k) {
         // Set to track the friends who have received the ball
         Set<Integer> received = new HashSet<>();
