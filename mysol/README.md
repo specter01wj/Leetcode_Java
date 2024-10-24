@@ -733,17 +733,18 @@ By Jin Wang
 |2629|**Function Composition**|Easy|Javascript/Typescript|Done/Done|
 |2634|**Filter Elements from Array**|Easy|Javascript/Typescript|Done/Done|
 |2635|**Apply Transform Over Each Element in Array**|Easy|Javascript/Typescript|Done/Done|
-|2639|**Find the Width of Columns of a Grid**|Easy|Javascript/Typescript|Done/Done/Done|
-|2643|**Row With Maximum Ones**|Easy|Javascript/Typescript|Done/Done/Done|
-|2644|**Find the Maximum Divisibility Score**|Easy|Javascript/Typescript|Done/Done/Done|
-|2656|**Maximum Sum With Exactly K Elements**|Easy|Javascript/Typescript|Done/Done/Done|
-|2660|**Determine the Winner of a Bowling Game**|Easy|Javascript/Typescript|Done/Done/Done|
+|2639|**Find the Width of Columns of a Grid**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2643|**Row With Maximum Ones**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2644|**Find the Maximum Divisibility Score**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2656|**Maximum Sum With Exactly K Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2660|**Determine the Winner of a Bowling Game**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2665|**Counter II**|Easy|Javascript/Typescript|Done/Done|
 |2666|**Allow One Function Call**|Easy|Javascript/Typescript|Done/Done|
 |2667|**Create Hello World Function**|Easy|Javascript/Typescript|Done/Done|
-|2670|**Find the Distinct Difference Array**|Easy|Javascript/Typescript|Done/Done|
+|2670|**Find the Distinct Difference Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2677|**Chunk Array**|Easy|Javascript/Typescript|Done/Done|
-|2678|**Number of Senior Citizens**|Easy|Javascript/Typescript|Done/Done|
+|2678|**Number of Senior Citizens**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2682|**Find the Losers of the Circular Game**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
