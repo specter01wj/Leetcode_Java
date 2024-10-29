@@ -25,7 +25,23 @@ public class E2706_Buy_Two_Chocolates {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. start by sorting the prices array in ascending order so that the 
+    	cheapest chocolates are at the beginning.
+	2. then calculate the sum of the two cheapest chocolates 
+		(prices[0] + prices[1]).
+	3. If the sum is less than or equal to money, we return the leftover 
+		money after buying these two chocolates (money - cost).
+	4. If the sum is greater than money, we return the original money 
+		amount since it’s not possible to buy two chocolates without going into debt.
+    */
 	
+	/*
+     * @param prices: a list of integers
+     * @param money: an integer
+     * @return: the amount of money you will have leftover after buying the two chocolates
+     */
 	public int buyChoco(int[] prices, int money) {
         // Sort the array to get the two cheapest chocolates
         Arrays.sort(prices);
