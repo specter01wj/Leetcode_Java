@@ -748,7 +748,9 @@ By Jin Wang
 |2695|**Array Wrapper**|Easy|Javascript/Typescript|Done/Done|
 |2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
 |2704|**To Be Or Not To Be**|Easy|Javascript/Typescript|Done/Done|
+|2706|**Buy Two Chocolates**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2715|**Timeout Cancellation**|Easy|Javascript/Typescript|Done/Done|
+|2717|**Semi-Ordered Permutation**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2723|**Add Two Promises**|Easy|Javascript/Typescript|Done/Done|
 |2724|**Sort By**|Easy|Javascript/Typescript|Done/Done|
 |2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|

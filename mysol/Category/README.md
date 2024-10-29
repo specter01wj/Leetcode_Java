@@ -359,6 +359,8 @@ Cspiration Category:
 |2670|Find the Distinct Difference Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2678|Number of Senior Citizens|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2682|Find the Losers of the Circular Game|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2706|Buy Two Chocolates|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2717|Semi-Ordered Permutation|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
