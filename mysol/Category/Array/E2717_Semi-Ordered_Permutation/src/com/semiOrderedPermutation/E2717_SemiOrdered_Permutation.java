@@ -25,7 +25,24 @@ public class E2717_SemiOrdered_Permutation {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Finding Positions:
+		. We locate the positions of 1 (index1) and n (indexN) in the nums array.
+	2. Calculating Moves:
+		. To bring 1 to the beginning, it requires index1 moves.
+		. To bring n to the end, it requires (n - 1 - indexN) moves.
+		. The sum of these gives us the minimum number of moves needed 
+			if no overlap occurs between 1 and n.
+	3. Overlap Condition:
+		. If 1 appears before n in the array, no overlap occurs.
+		. If 1 appears after n, we subtract 1 from the total because one move overlaps.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum number of operations to make nums a semi-ordered permutation
+     */
 	public int semiOrderedPermutation(int[] nums) {
         int n = nums.length;
         int index1 = -1;
