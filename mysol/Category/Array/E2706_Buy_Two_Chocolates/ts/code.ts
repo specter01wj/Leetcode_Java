@@ -14,7 +14,8 @@ function buyChoco(prices: number[], money: number): number {
 };
 
 const input: number[] = [3,2,3], money: number = 2;
-const results = buyChoco(input, money);
+const inputCopy: number[] = [...input];
+const results = buyChoco(inputCopy, money);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);

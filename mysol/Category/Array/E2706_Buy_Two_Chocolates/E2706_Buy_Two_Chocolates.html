@@ -39,7 +39,8 @@
         };
 
         const input = [3,2,3], money = 3;
-        let results = buyChoco(input, money);
+        const inputCopy = [...input];
+        let results = buyChoco(inputCopy, money);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
