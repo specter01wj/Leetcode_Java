@@ -19,8 +19,9 @@ each number exactly once.
 public class E2717_SemiOrdered_Permutation {
 
 	public static void main(String[] args) {
+		E2717_SemiOrdered_Permutation solution = new E2717_SemiOrdered_Permutation();
 		int[] input = {2,4,1,3};
-		int output = semiOrderedPermutation(input);
+		int output = solution.semiOrderedPermutation(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
