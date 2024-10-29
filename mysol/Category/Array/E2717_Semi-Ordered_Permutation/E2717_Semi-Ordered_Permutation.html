@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array prices representing the prices of 
+        various chocolates in a store. You are also given a single integer money, 
+        which represents your initial amount of money.
+
+        You must buy exactly two chocolates in such a way that you still have 
+        some non-negative leftover money. You would like to minimize the sum of 
+        the prices of the two chocolates you buy.
+
+        Return the amount of money you will have leftover after buying the two 
+        chocolates. If there is no way for you to buy two chocolates without 
+        ending up in debt, return money. Note that the leftover must be non-negative.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param prices: a list of integers
+        * @param money: an integer
+        * @return: the amount of money you will have leftover after buying the two chocolates
+        */
+        let buyChoco = function(prices, money) {
+            // Sort the prices to get the two cheapest chocolates
+            prices.sort((a, b) => a - b);
+
+            // Calculate the sum of the two cheapest chocolates
+            const cost = prices[0] + prices[1];
+
+            // Check if the total cost is within the available money
+            if (cost <= money) {
+                return money - cost; // Return the remaining money
+            } else {
+                return money; // Not enough money, return original amount
+            }
+        };
+
+        const input = [3,2,3], money = 3;
+        const inputCopy = [...input];
+        let results = buyChoco(inputCopy, money);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. start by sorting the prices array in ascending order so that the 
+            cheapest chocolates are at the beginning.
+        2. then calculate the sum of the two cheapest chocolates 
+            (prices[0] + prices[1]).
+        3. If the sum is less than or equal to money, we return the leftover 
+            money after buying these two chocolates (money - cost).
+        4. If the sum is greater than money, we return the original money 
+            amount since it’s not possible to buy two chocolates without going into debt.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
