@@ -4,61 +4,106 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed permutation of n integers nums.
+			 	You are given an object street of class Street that represents a 
+        circular street and a positive integer k which represents a maximum 
+        bound for the number of houses in that street (in other words, 
+        the number of houses is less than or equal to k). Houses' doors 
+        could be open or closed initially.
 
-        A permutation is called semi-ordered if the first number equals 1 
-        and the last number equals n. You can perform the below operation 
-        as many times as you want until you make nums a semi-ordered permutation:
+        Initially, you are standing in front of a door to a house on this street. 
+        Your task is to count the number of houses in the street.
 
-          . Pick two adjacent elements in nums, then swap them.
+        The class Street contains the following functions which may help you:
 
-        Return the minimum number of operations to make nums a semi-ordered permutation.
+          . void openDoor(): Open the door of the house you are in front of.
+          . void closeDoor(): Close the door of the house you are in front of.
+          . boolean isDoorOpen(): Returns true if the door of the current house is open and false otherwise.
+          . void moveRight(): Move to the right house.
+          . void moveLeft(): Move to the left house.
 
-        A permutation is a sequence of integers from 1 to n of length n containing 
-        each number exactly once.
+        Return ans which represents the number of houses on this street.
 			 */
 			$(document).ready(function(){
         
-				/*
-        * @param nums: a list of integers
-        * @return: the minimum number of operations to make nums a semi-ordered permutation
-        */
-        let semiOrderedPermutation = function(nums) {
-            const n = nums.length;
-            let index1 = -1;
-            let indexN = -1;
-
-            // Find the positions of 1 and n in the array
-            for (let i = 0; i < n; i++) {
-                if (nums[i] === 1) index1 = i;
-                if (nums[i] === n) indexN = i;
+        // Mock implementation of Street class for testing purposes
+        class Street {
+            constructor(doors) {
+                this.doors = doors.map(door => door === 1); // Convert 0/1 array to boolean (false/true)
+                this.position = 0;
             }
 
-            // Calculate moves to bring 1 to the start and n to the end
-            let moves = index1 + (n - 1 - indexN);
+            openDoor() {
+                this.doors[this.position] = true;
+            }
 
-            // If `1` is before `n`, no extra move needed; otherwise, one move overlaps
-            if (index1 > indexN) moves -= 1;
+            closeDoor() {
+                this.doors[this.position] = false;
+            }
 
-            return moves;
+            isDoorOpen() {
+                return this.doors[this.position];
+            }
+
+            moveRight() {
+                this.position = (this.position + 1) % this.doors.length;
+            }
+
+            moveLeft() {
+                this.position = (this.position - 1 + this.doors.length) % this.doors.length;
+            }
+        }
+
+				/*
+        * @param arr: a list of integers
+        * @param k: an integer
+        * @return: ans which represents the number of houses on this street
+        */
+        let houseCount = function(street, k) {
+            // Close all doors within the first k moves to prepare a consistent state
+            for (let i = 0; i < k; i++) {
+                if (street.isDoorOpen()) {
+                    street.closeDoor();
+                }
+                street.moveRight();
+            }
+
+            // Mark the starting point by opening the current door and moving to the next house
+            street.openDoor();
+            street.moveRight();
+
+            let count = 0;
+
+            // Count houses until we encounter the open door again
+            while (!street.isDoorOpen()) {
+                count += 1;
+                street.moveRight();
+            }
+
+            // Include the starting house in the count
+            return count + 1;
         };
 
-        const input = [2,4,1,3];
-        let results = semiOrderedPermutation(input);
+        const input = [1,0,1,1,0], k = 5;
+        const street1 = new Street(input);
+        let results = houseCount(street1, k);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Finding Positions:
-          . We locate the positions of 1 (index1) and n (indexN) in the nums array.
-        2. Calculating Moves:
-          . To bring 1 to the beginning, it requires index1 moves.
-          . To bring n to the end, it requires (n - 1 - indexN) moves.
-          . The sum of these gives us the minimum number of moves needed 
-            if no overlap occurs between 1 and n.
-        3. Overlap Condition:
-          . If 1 appears before n in the array, no overlap occurs.
-          . If 1 appears after n, we subtract 1 from the total because one move overlaps.
+				1. First Loop (Setup Phase):
+          . We iterate k times, moving around the circular street to ensure 
+            that if there are fewer than k houses, we have fully circled around.
+          . For each house, if the door is open, we close it. This ensures a 
+            consistent starting state for counting.
+        2. Marking the Starting Point:
+          . After the initial loop, we open the current door and move to the 
+            next house. This marks the starting point with an open door, 
+            making it easy to detect when we have completed a full loop.
+        3. Counting Houses:
+          . We initialize ans to 0 and then move right, counting each house 
+            until we encounter the marked starting house with an open door.
+          . When we reach the open door, it signifies a complete loop, and we 
+            return ans + 1 (to include the starting house).
 			 */
 
 		</script>
