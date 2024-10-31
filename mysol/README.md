@@ -756,6 +756,8 @@ By Jin Wang
 |2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|
 |2726|**Calculator with Method Chaining**|Easy|Javascript/Typescript|Done/Done|
 |2727|**Is Object Empty**|Easy|Javascript/Typescript|Done/Done|
+|2728|**Count Houses in a Circular Street**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2733|**Neither Minimum nor Maximum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level

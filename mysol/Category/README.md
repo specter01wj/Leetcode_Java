@@ -361,6 +361,8 @@ Cspiration Category:
 |2682|Find the Losers of the Circular Game|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2706|Buy Two Chocolates|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2717|Semi-Ordered Permutation|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2728|Count Houses in a Circular Street|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2733|Neither Minimum nor Maximum|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
