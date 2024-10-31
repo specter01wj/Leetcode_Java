@@ -18,7 +18,22 @@ public class E2733_Neither_Minimum_nor_Maximum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Early Return for Small Arrays:
+		. If the array has fewer than 3 elements, return -1 because we 
+			cannot have a value that is neither the minimum nor the maximum.
+	2. Identify Minimum and Maximum:
+		. Traverse the array once to find the minimum and maximum values.
+	3. Return an Element That Is Neither Min nor Max:
+		. Traverse the array again and return the first element that is 
+			neither the minimum nor maximum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the selected integer
+     */
 	public int findNonMinOrMax(int[] nums) {
         // If the array has fewer than 3 elements, return -1 since we can't have a middle element
         if (nums.length < 3) {
