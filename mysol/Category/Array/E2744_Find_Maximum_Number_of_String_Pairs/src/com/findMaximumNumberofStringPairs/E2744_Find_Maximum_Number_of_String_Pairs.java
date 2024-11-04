@@ -22,7 +22,28 @@ public class E2744_Find_Maximum_Number_of_String_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. HashSet for Unmatched Words:
+		. We use a HashSet called unmatchedWords to track words that do not 
+			yet have a matching reversed pair.
+	2. Iterate Through words Array:
+		. For each word in words, we generate its reversed version.
+		. If the reversed word is already in unmatchedWords, we have found 
+			a pair, so we:
+			. Increment the pairs count.
+			. Remove the reversed word from unmatchedWords.
+		. If the reversed word is not in unmatchedWords, we add the current 
+			word to unmatchedWords as a potential unmatched word.
+	3. Return the Total Pairs:
+		. At the end of the iteration, pairs contains the maximum number of 
+			pairs that can be formed.
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @return: the maximum number of pairs that can be formed from the array words
+     */
 	public int maximumNumberOfStringPairs(String[] words) {
 		int pairs = 0;
 		HashSet<String> unmatchedWords = new HashSet<>();
