@@ -23,7 +23,26 @@ public class E2748_Number_of_Beautiful_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer Loop: Iterate over each element in nums for i.
+		. For each nums[i], get the first digit using getFirstDigit.
+	2. Inner Loop: Iterate over each subsequent element for j > i.
+		. For each nums[j], get the last digit using getLastDigit.
+		. Check if the first digit of nums[i] and the last digit of 
+			nums[j] are coprime by calculating the gcd.
+		. If gcd(firstDigit, lastDigit) == 1, increment count.
+	3. Helper Methods:
+		. getFirstDigit: Finds the first digit by continuously dividing by 10.
+		. getLastDigit: Returns num % 10, which is the last digit.
+		. gcd: Uses the Euclidean algorithm to calculate the greatest common 
+			divisor of two numbers.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the total number of beautiful pairs in nums
+     */
 	public int countBeautifulPairs(int[] nums) {
         int count = 0;
 
