@@ -17,8 +17,9 @@ Note that each string can belong in at most one pair.
 public class E2744_Find_Maximum_Number_of_String_Pairs {
 
 	public static void main(String[] args) {
+		E2744_Find_Maximum_Number_of_String_Pairs solution = new E2744_Find_Maximum_Number_of_String_Pairs();
 		String[] input = {"cd","ac","dc","ca","zz"};
-		int output = maximumNumberOfStringPairs(input);
+		int output = solution.maximumNumberOfStringPairs(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
