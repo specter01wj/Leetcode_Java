@@ -758,6 +758,8 @@ By Jin Wang
 |2727|**Is Object Empty**|Easy|Javascript/Typescript|Done/Done|
 |2728|**Count Houses in a Circular Street**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2733|**Neither Minimum nor Maximum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2744|**Find Maximum Number of String Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2748|**Number of Beautiful Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
