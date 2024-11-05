@@ -4,62 +4,84 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array words consisting of distinct strings.
+			 	You are given a 0-indexed integer array nums. A pair of indices i, j 
+        where 0 <= i < j < nums.length is called beautiful if the first 
+        digit of nums[i] and the last digit of nums[j] are coprime.
 
-        The string words[i] can be paired with the string words[j] if:
+        Return the total number of beautiful pairs in nums.
 
-          . The string words[i] is equal to the reversed string of words[j].
-          . 0 <= i < j < words.length.
-
-        Return the maximum number of pairs that can be formed from the array words.
-
-        Note that each string can belong in at most one pair.
+        Two integers x and y are coprime if there is no integer greater 
+        than 1 that divides both of them. In other words, x and y are 
+        coprime if gcd(x, y) == 1, where gcd(x, y) is the greatest 
+        common divisor of x and y.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param words: a list of strings
-        * @return: the maximum number of pairs that can be formed from the array words
+        * @param nums: a list of integers
+        * @return: the total number of beautiful pairs in nums
         */
-        let maximumNumberOfStringPairs = function(words) {
-          let pairs = 0;
-          const unmatchedWords = new Set();
-          
-          for (let word of words) {
-            const reversedWord = word.split('').reverse().join('');
-            
-            // Check if the reversed word is already in the set
-            if (unmatchedWords.has(reversedWord)) {
-              pairs++;
-              unmatchedWords.delete(reversedWord); // Pair found, remove the reversed word
-            } else {
-              unmatchedWords.add(word); // Add the word to unmatched set
+        let countBeautifulPairs = function(nums) {
+            let count = 0;
+
+            // Iterate through all pairs (i, j) where i < j
+            for (let i = 0; i < nums.length; i++) {
+                const firstDigit = getFirstDigit(nums[i]);
+
+                for (let j = i + 1; j < nums.length; j++) {
+                    const lastDigit = getLastDigit(nums[j]);
+
+                    // Check if the first digit of nums[i] and the last digit of nums[j] are coprime
+                    if (gcd(firstDigit, lastDigit) === 1) {
+                        count++;
+                    }
+                }
             }
-          }
-          
-          return pairs;
+
+            return count;
         };
 
-        const input = ["cd","ac","dc","ca","zz"];
-        let results = maximumNumberOfStringPairs(input);
+        // Helper function to get the first digit of a number
+        function getFirstDigit(num) {
+            while (num >= 10) {
+                num = Math.floor(num / 10);
+            }
+            return num;
+        }
+
+        // Helper function to get the last digit of a number
+        function getLastDigit(num) {
+            return num % 10;
+        }
+
+        // Helper function to find gcd of two numbers
+        function gcd(a, b) {
+            while (b !== 0) {
+                const temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+        const input = [11,21,12];
+        let results = countBeautifulPairs(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. HashSet for Unmatched Words:
-          . We use a HashSet called unmatchedWords to track words that do not 
-            yet have a matching reversed pair.
-        2. Iterate Through words Array:
-          . For each word in words, we generate its reversed version.
-          . If the reversed word is already in unmatchedWords, we have found 
-            a pair, so we:
-            . Increment the pairs count.
-            . Remove the reversed word from unmatchedWords.
-          . If the reversed word is not in unmatchedWords, we add the current 
-            word to unmatchedWords as a potential unmatched word.
-        3. Return the Total Pairs:
-          . At the end of the iteration, pairs contains the maximum number of 
-            pairs that can be formed.
+				1. Outer Loop: Iterate over each element in nums for i.
+          . For each nums[i], get the first digit using getFirstDigit.
+        2. Inner Loop: Iterate over each subsequent element for j > i.
+          . For each nums[j], get the last digit using getLastDigit.
+          . Check if the first digit of nums[i] and the last digit of 
+            nums[j] are coprime by calculating the gcd.
+          . If gcd(firstDigit, lastDigit) == 1, increment count.
+        3. Helper Methods:
+          . getFirstDigit: Finds the first digit by continuously dividing by 10.
+          . getLastDigit: Returns num % 10, which is the last digit.
+          . gcd: Uses the Euclidean algorithm to calculate the greatest common 
+            divisor of two numbers.
 			 */
 
 		</script>
