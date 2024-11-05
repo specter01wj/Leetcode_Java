@@ -17,8 +17,9 @@ common divisor of x and y.
 public class E2748_Number_of_Beautiful_Pairs {
 
 	public static void main(String[] args) {
+		E2748_Number_of_Beautiful_Pairs solution = new E2748_Number_of_Beautiful_Pairs();
 		int[] input = {11,21,12};
-		int output = countBeautifulPairs(input);
+		int output = solution.countBeautifulPairs(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
