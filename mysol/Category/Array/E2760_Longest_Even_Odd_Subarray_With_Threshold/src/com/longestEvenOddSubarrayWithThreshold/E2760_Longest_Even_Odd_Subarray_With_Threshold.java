@@ -20,9 +20,10 @@ Note: A subarray is a contiguous non-empty sequence of elements within an array.
 public class E2760_Longest_Even_Odd_Subarray_With_Threshold {
 
 	public static void main(String[] args) {
+		E2760_Longest_Even_Odd_Subarray_With_Threshold solution = new E2760_Longest_Even_Odd_Subarray_With_Threshold();
 		int[] input = {3,2,5,4};
 		int threshold = 5;
-		int output = longestAlternatingSubarray(input, threshold);
+		int output = solution.longestAlternatingSubarray(input, threshold);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
