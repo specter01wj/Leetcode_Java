@@ -365,6 +365,8 @@ Cspiration Category:
 |2733|Neither Minimum nor Maximum|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2744|Find Maximum Number of String Pairs|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2748|Number of Beautiful Pairs|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2760|Longest Even Odd Subarray With Threshold|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2765|Longest Alternating Subarray|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
