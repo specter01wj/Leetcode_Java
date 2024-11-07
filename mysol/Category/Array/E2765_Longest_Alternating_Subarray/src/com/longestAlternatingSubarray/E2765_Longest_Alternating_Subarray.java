@@ -26,7 +26,35 @@ public class E2765_Longest_Alternating_Subarray {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialize Variables:
+		. maxLength: Keeps track of the longest alternating subarray length 
+			found so far (initialized to -1 if no valid subarray is found).
+		. currentLength: Tracks the length of the current alternating subarray 
+			being built.
+	2. Loop Through the Array:
+		. For each element starting from index 1, we check if the current element 
+			alternates with the previous element:
+			. If currentLength is odd, expect a difference of +1.
+			. If currentLength is even, expect a difference of -1.
+		. If the difference matches, we increment currentLength.
+		. If the difference does not match:
+			. Check if the current element and previous element can start a 
+				new alternating subarray (i.e., difference of +1), in which 
+				case currentLength is set to 2.
+			. Otherwise, reset currentLength to 1.
+	3. Update maxLength:
+		. Each time we find a longer alternating subarray, we update maxLength.
+	4. Return Result:
+		. If we found any valid alternating subarray (maxLength > 1), 
+			return maxLength; otherwise, return -1.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum length of all alternating subarrays
+     */
 	public int alternatingSubarray(int[] nums) {
         int maxLength = -1;
         int currentLength = 1;
