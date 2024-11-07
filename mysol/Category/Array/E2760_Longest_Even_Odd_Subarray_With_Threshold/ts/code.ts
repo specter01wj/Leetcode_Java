@@ -1,24 +1,33 @@
-function maximumNumberOfStringPairs(words: string[]): number {
-  let pairs = 0;
-  const unmatchedWords = new Set();
-  
-  for (let word of words) {
-    const reversedWord = word.split('').reverse().join('');
-    
-    // Check if the reversed word is already in the set
-    if (unmatchedWords.has(reversedWord)) {
-      pairs++;
-      unmatchedWords.delete(reversedWord); // Pair found, remove the reversed word
-    } else {
-      unmatchedWords.add(word); // Add the word to unmatched set
-    }
+function longestAlternatingSubarray(nums: number[], threshold: number): number {
+  let maxLength = 0;
+  let i = 0;
+
+  while (i < nums.length) {
+      // Start counting only if nums[i] is even and within the threshold
+      if (nums[i] % 2 === 0 && nums[i] <= threshold) {
+          let currentLength = 1;
+          let expectOdd = true;
+
+          // Expand the subarray by checking alternating parity and threshold condition
+          for (let j = i + 1; j < nums.length && nums[j] <= threshold; j++) {
+              if ((nums[j] % 2 === 0) === expectOdd) {
+                  break;
+              }
+              currentLength++;
+              expectOdd = !expectOdd;  // Alternate between expecting even and odd
+          }
+
+          maxLength = Math.max(maxLength, currentLength);
+      }
+      i++;
   }
-  
-  return pairs;
+
+  return maxLength;
 };
 
-const input: string[] = ["cd","ac","dc","ca","zz"];
-const results = maximumNumberOfStringPairs(input);
+const input: number[] = [3,2,5,4];
+const threshold: number = 5;
+const results = longestAlternatingSubarray(input, threshold);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
