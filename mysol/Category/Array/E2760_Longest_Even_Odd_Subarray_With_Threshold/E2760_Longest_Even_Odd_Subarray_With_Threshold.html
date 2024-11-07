@@ -4,62 +4,74 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array words consisting of distinct strings.
+			 	You are given a 0-indexed integer array nums and an integer threshold.
 
-        The string words[i] can be paired with the string words[j] if:
+        Find the length of the longest subarray of nums starting at index l and 
+        ending at index r (0 <= l <= r < nums.length) that satisfies the following 
+        conditions:
 
-          . The string words[i] is equal to the reversed string of words[j].
-          . 0 <= i < j < words.length.
+          . nums[l] % 2 == 0
+          . For all indices i in the range [l, r - 1], nums[i] % 2 != nums[i + 1] % 2
+          . For all indices i in the range [l, r], nums[i] <= threshold
 
-        Return the maximum number of pairs that can be formed from the array words.
+        Return an integer denoting the length of the longest such subarray.
 
-        Note that each string can belong in at most one pair.
+        Note: A subarray is a contiguous non-empty sequence of elements within an array.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param words: a list of strings
-        * @return: the maximum number of pairs that can be formed from the array words
+        * @param nums: a list of integers
+        * @param threshold: an integer
+        * @return: an integer denoting the length of the longest such subarray
         */
-        let maximumNumberOfStringPairs = function(words) {
-          let pairs = 0;
-          const unmatchedWords = new Set();
-          
-          for (let word of words) {
-            const reversedWord = word.split('').reverse().join('');
-            
-            // Check if the reversed word is already in the set
-            if (unmatchedWords.has(reversedWord)) {
-              pairs++;
-              unmatchedWords.delete(reversedWord); // Pair found, remove the reversed word
-            } else {
-              unmatchedWords.add(word); // Add the word to unmatched set
+        let longestAlternatingSubarray = function(nums, threshold) {
+            let maxLength = 0;
+            let i = 0;
+
+            while (i < nums.length) {
+                // Only start counting if we find an even number within the threshold
+                if (nums[i] % 2 === 0 && nums[i] <= threshold) {
+                    let currentLength = 1;
+                    let expectOdd = true;
+
+                    // Expand the subarray by checking alternating parity and threshold condition
+                    for (let j = i + 1; j < nums.length && nums[j] <= threshold; j++) {
+                        if ((nums[j] % 2 === 0) === expectOdd) {
+                            break;
+                        }
+                        currentLength++;
+                        expectOdd = !expectOdd;  // Alternate between even and odd expectation
+                    }
+
+                    maxLength = Math.max(maxLength, currentLength);
+                }
+                i++;
             }
-          }
-          
-          return pairs;
+
+            return maxLength;
         };
 
-        const input = ["cd","ac","dc","ca","zz"];
-        let results = maximumNumberOfStringPairs(input);
+        const input = [3,2,5,4];
+        const threshold = 5;
+        let results = longestAlternatingSubarray(input, threshold);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. HashSet for Unmatched Words:
-          . We use a HashSet called unmatchedWords to track words that do not 
-            yet have a matching reversed pair.
-        2. Iterate Through words Array:
-          . For each word in words, we generate its reversed version.
-          . If the reversed word is already in unmatchedWords, we have found 
-            a pair, so we:
-            . Increment the pairs count.
-            . Remove the reversed word from unmatchedWords.
-          . If the reversed word is not in unmatchedWords, we add the current 
-            word to unmatchedWords as a potential unmatched word.
-        3. Return the Total Pairs:
-          . At the end of the iteration, pairs contains the maximum number of 
-            pairs that can be formed.
+				1. Outer Loop to Start a New Subarray:
+          . For each index i, we check if nums[i] is an even number and within the threshold.
+          . If it meets these conditions, we start a new subarray with currentLength = 1.
+        2. Inner Loop to Expand the Subarray:
+          . We expand the subarray by iterating through nums starting from i + 1.
+          . We alternate the parity (isEven) and ensure each nums[j] is within the threshold.
+          . If nums[j] doesn’t satisfy alternating parity or exceeds the threshold, 
+            we break out of the inner loop.
+        3. Update Maximum Length:
+          . We update maxLength with the maximum of maxLength and currentLength after each subarray.
+        4. Return the Result:
+          . After iterating through nums, maxLength holds the length of the longest alternating 
+            subarray that satisfies the conditions.
 			 */
 
 		</script>
