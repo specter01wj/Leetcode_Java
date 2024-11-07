@@ -1,33 +1,31 @@
-function longestAlternatingSubarray(nums: number[], threshold: number): number {
-  let maxLength = 0;
-  let i = 0;
+function alternatingSubarray(nums: number[]): number {
+  let maxLength = -1;
+  let currentLength = 1;
 
-  while (i < nums.length) {
-      // Start counting only if nums[i] is even and within the threshold
-      if (nums[i] % 2 === 0 && nums[i] <= threshold) {
-          let currentLength = 1;
-          let expectOdd = true;
-
-          // Expand the subarray by checking alternating parity and threshold condition
-          for (let j = i + 1; j < nums.length && nums[j] <= threshold; j++) {
-              if ((nums[j] % 2 === 0) === expectOdd) {
-                  break;
-              }
-              currentLength++;
-              expectOdd = !expectOdd;  // Alternate between expecting even and odd
+  for (let i = 1; i < nums.length; i++) {
+      // Check if the current pair alternates according to the condition
+      if (nums[i] - nums[i - 1] === (currentLength % 2 === 1 ? 1 : -1)) {
+          currentLength++;
+      } else {
+          // Reset currentLength to 2 if we find a new starting pair that alternates
+          if (nums[i] - nums[i - 1] === 1) {
+              currentLength = 2;
+          } else {
+              currentLength = 1;
           }
+      }
 
+      // Update maxLength if we found a longer alternating subarray
+      if (currentLength > 1) {
           maxLength = Math.max(maxLength, currentLength);
       }
-      i++;
   }
 
   return maxLength;
 };
 
-const input: number[] = [3,2,5,4];
-const threshold: number = 5;
-const results = longestAlternatingSubarray(input, threshold);
+const input: number[] = [2,3,4,3,4];
+const results = alternatingSubarray(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
