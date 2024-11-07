@@ -27,7 +27,28 @@ public class E2760_Longest_Even_Odd_Subarray_With_Threshold {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer Loop to Start a New Subarray:
+		. For each index i, we check if nums[i] is an even number and within the threshold.
+		. If it meets these conditions, we start a new subarray with currentLength = 1.
+	2. Inner Loop to Expand the Subarray:
+		. We expand the subarray by iterating through nums starting from i + 1.
+		. We alternate the parity (isEven) and ensure each nums[j] is within the threshold.
+		. If nums[j] doesn’t satisfy alternating parity or exceeds the threshold, 
+			we break out of the inner loop.
+	3. Update Maximum Length:
+		. We update maxLength with the maximum of maxLength and currentLength after each subarray.
+	4. Return the Result:
+		. After iterating through nums, maxLength holds the length of the longest alternating 
+			subarray that satisfies the conditions.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param threshold: an integer
+     * @return: an integer denoting the length of the longest such subarray
+     */
 	public int longestAlternatingSubarray(int[] nums, int threshold) {
         int maxLength = 0;
         int i = 0;
