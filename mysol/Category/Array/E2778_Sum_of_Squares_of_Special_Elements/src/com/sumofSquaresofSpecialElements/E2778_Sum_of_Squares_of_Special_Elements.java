@@ -18,7 +18,21 @@ public class E2778_Sum_of_Squares_of_Special_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Identify Special Elements:
+		. We iterate over each index i from 1 to n (since the array is 1-indexed in the problem).
+		. If n % i == 0, then nums[i] is special (i.e., i divides n).
+	2. Calculate the Sum of Squares:
+		. For each special element, square the value nums[i - 1] (adjusting for 0-based indexing) and add it to sum.
+	3. Return the Result:
+		. After iterating through all indices, sum holds the result.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the sum of the squares of all special elements of nums
+     */
 	public int sumOfSquares(int[] nums) {
 		int n = nums.length;
 		int sum = 0;
