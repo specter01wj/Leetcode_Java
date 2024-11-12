@@ -37,9 +37,10 @@ public class E2778_Sum_of_Squares_of_Special_Elements {
 		int n = nums.length;
 		int sum = 0;
 		
+		// Iterate through each index and check if it's special
 		for (int i = 1; i <= n; i++) {
-			if (n % i == 0) {
-				sum += nums[i - 1] * nums[i - 1];
+			if (n % i == 0) { // Check if i divides n
+				sum += nums[i - 1] * nums[i - 1]; // Square the element at index i-1 and add to sum
 			}
 		}
 		
