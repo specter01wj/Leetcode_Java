@@ -1,31 +1,19 @@
-function alternatingSubarray(nums: number[]): number {
-  let maxLength = -1;
-  let currentLength = 1;
+function sumOfSquares(nums: number[]): number {
+  const n = nums.length;
+  let sum = 0;
 
-  for (let i = 1; i < nums.length; i++) {
-      // Check if the current pair alternates according to the condition
-      if (nums[i] - nums[i - 1] === (currentLength % 2 === 1 ? 1 : -1)) {
-          currentLength++;
-      } else {
-          // Reset currentLength to 2 if we find a new starting pair that alternates
-          if (nums[i] - nums[i - 1] === 1) {
-              currentLength = 2;
-          } else {
-              currentLength = 1;
-          }
-      }
-
-      // Update maxLength if we found a longer alternating subarray
-      if (currentLength > 1) {
-          maxLength = Math.max(maxLength, currentLength);
+  // Iterate through each index and check if it's special
+  for (let i = 1; i <= n; i++) {
+      if (n % i === 0) { // Check if i divides n
+          sum += nums[i - 1] * nums[i - 1]; // Square the element at index i-1 and add to sum
       }
   }
 
-  return maxLength;
+  return sum;
 };
 
-const input: number[] = [2,3,4,3,4];
-const results = alternatingSubarray(input);
+const input: number[] = [2,7,1,19,18,3];
+const results = sumOfSquares(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
