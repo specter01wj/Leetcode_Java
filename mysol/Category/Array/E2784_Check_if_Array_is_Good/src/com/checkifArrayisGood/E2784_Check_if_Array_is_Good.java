@@ -23,7 +23,24 @@ public class E2784_Check_if_Array_is_Good {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Determine the Expected Maximum (n):
+		. n is determined as nums.length - 1, as base[n] has n + 1 elements.
+	2. Count Occurrences:
+		. We use an array count to store the occurrences of each integer in nums.
+	3. Validate Counts:
+		. For numbers 1 to n - 1: Check that each appears exactly once. If not, return false.
+		. For number n: Check that it appears exactly twice. If not, return false.
+	4. Return Result:
+		. If all checks are satisfied, return true, indicating that nums is a 
+			valid permutation of base[n].
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if the given array is good, otherwise return false
+     */
 	public boolean isGood(int[] nums) {
         int n = nums.length - 1; // Expected maximum element n
         int[] count = new int[n + 1];
