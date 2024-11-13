@@ -762,6 +762,8 @@ By Jin Wang
 |2748|**Number of Beautiful Pairs**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2760|**Longest Even Odd Subarray With Threshold**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2765|**Longest Alternating Subarray**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2778|**Sum of Squares of Special Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2784|**Check if Array is Good**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
