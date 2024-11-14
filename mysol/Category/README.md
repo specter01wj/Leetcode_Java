@@ -369,6 +369,8 @@ Cspiration Category:
 |2765|Longest Alternating Subarray|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2778|Sum of Squares of Special Elements|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2784|Check if Array is Good|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2788|Split Strings by Separator|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2798|Number of Employees Who Met the Target|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
