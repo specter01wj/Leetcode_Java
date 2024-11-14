@@ -1,25 +1,18 @@
-function splitWordsBySeparator(words: string[], separator: string): string[] {
-  const result: string[] = [];
-  const separatorStr = separator.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special characters in the separator
+function numberOfEmployeesWhoMetTarget(hours: number[], target: number): number {
+  let count = 0;
 
-  for (const word of words) {
-      // Split the word by the separator
-      const parts = word.split(new RegExp(separatorStr));
-      
-      // Add non-empty strings to the result
-      for (const part of parts) {
-          if (part) { // Only add non-empty strings
-              result.push(part);
-          }
+  for (const hour of hours) {
+      if (hour >= target) {
+          count++;
       }
   }
 
-  return result;
+  return count;
 };
 
-const input: string[] = ["one.two.three","four.five","six"];
-const separator: string = ".";
-const results = splitWordsBySeparator(input, separator);
+const input: string[] = [0,1,2,3,4];
+const target: number = 2
+const results = numberOfEmployeesWhoMetTarget(input, target);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
