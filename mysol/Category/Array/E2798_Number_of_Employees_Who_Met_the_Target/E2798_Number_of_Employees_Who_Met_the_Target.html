@@ -4,50 +4,43 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of strings words and a character separator, 
-        split each string in words by separator.
+			 	There are n employees in a company, numbered from 0 to n - 1. 
+        Each employee i has worked for hours[i] hours in the company.
 
-        Return an array of strings containing the new strings formed 
-        after the splits, excluding empty strings.
+        The company requires each employee to work for at least target hours.
+
+        You are given a 0-indexed array of non-negative integers hours of 
+        length n and a non-negative integer target.
+
+        Return the integer denoting the number of employees who worked at 
+        least target hours.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param words: a list of strings
-        * @param separator: a char
-        * @return: an array of strings
+        * @param hours: a list of integers
+        * @param target: an integer
+        * @return: the integer denoting the number of employees
         */
-        let splitWordsBySeparator = function(words, separator) {
-            const result = [];
-            const separatorStr = separator.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escapes special characters in the separator
-
-            for (const word of words) {
-                // Split the word by the separator
-                const parts = word.split(new RegExp(separatorStr));
-                
-                // Add non-empty strings to the result
-                for (const part of parts) {
-                    if (part) { // Ensures we only add non-empty strings
-                        result.push(part);
-                    }
-                }
+        let numberOfEmployeesWhoMetTarget = function(hours, target) {
+          let count = 0;
+          
+          for (let hour of hours) {
+            if (hour >= target) {
+              count++;
             }
-
-            return result;
+          }
+          
+          return count;
         };
 
-        const input = ["one.two.three","four.five","six"], separator = ".";
-        let results = splitWordsBySeparator(input, separator);
+        const input = [0,1,2,3,4], target = 2;
+        let results = numberOfEmployeesWhoMetTarget(input, target);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Escape the Separator:
-          . Pattern.quote(separatorStr) is used to escape any special characters 
-            in the separator, treating it as a literal character during splitting.
-        2. Rest of the Code:
-          . The logic remains the same: split each word by the separator, filter 
-            out empty strings, and add the remaining parts to result.
+				loop and count
 			 */
 
 		</script>
