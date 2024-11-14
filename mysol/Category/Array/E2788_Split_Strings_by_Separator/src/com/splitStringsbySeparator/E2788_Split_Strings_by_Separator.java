@@ -20,7 +20,21 @@ public class E2788_Split_Strings_by_Separator {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Escape the Separator:
+		. Pattern.quote(separatorStr) is used to escape any special characters 
+			in the separator, treating it as a literal character during splitting.
+	2. Rest of the Code:
+		. The logic remains the same: split each word by the separator, filter 
+			out empty strings, and add the remaining parts to result.
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param separator: a char
+     * @return: an array of strings
+     */
 	public List<String> splitWordsBySeparator(List<String> words, char separator) {
         List<String> result = new ArrayList<>();
         String separatorStr = Pattern.quote(String.valueOf(separator)); // Escapes special characters
