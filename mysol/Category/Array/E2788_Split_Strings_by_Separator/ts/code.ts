@@ -1,28 +1,25 @@
-function isGood(nums: number[]): boolean {
-  const n = nums.length - 1; // Expected maximum element n
-  const count: number[] = new Array(n + 1).fill(0);
+function splitWordsBySeparator(words: string[], separator: string): string[] {
+  const result: string[] = [];
+  const separatorStr = separator.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special characters in the separator
 
-  // Count the occurrences of each number
-  for (const num of nums) {
-      if (num > n) {
-          return false; // Any number greater than n makes it invalid
-      }
-      count[num]++;
-  }
-
-  // Check that each number from 1 to n-1 appears exactly once
-  for (let i = 1; i < n; i++) {
-      if (count[i] !== 1) {
-          return false;
+  for (const word of words) {
+      // Split the word by the separator
+      const parts = word.split(new RegExp(separatorStr));
+      
+      // Add non-empty strings to the result
+      for (const part of parts) {
+          if (part) { // Only add non-empty strings
+              result.push(part);
+          }
       }
   }
 
-  // Check that n appears exactly twice
-  return count[n] === 2;
+  return result;
 };
 
-const input: number[] = [1, 3, 3, 2];
-const results = isGood(input);
+const input: string[] = ["one.two.three","four.five","six"];
+const separator: string = ".";
+const results = splitWordsBySeparator(input, separator);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
