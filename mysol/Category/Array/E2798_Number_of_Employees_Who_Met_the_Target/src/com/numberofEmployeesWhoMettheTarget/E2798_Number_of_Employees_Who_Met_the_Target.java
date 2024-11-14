@@ -24,7 +24,16 @@ public class E2798_Number_of_Employees_Who_Met_the_Target {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and count
+    */
 	
+	/*
+     * @param hours: a list of integers
+     * @param target: an integer
+     * @return: the integer denoting the number of employees
+     */
 	public int numberOfEmployeesWhoMetTarget(int[] hours, int target) {
 		int count = 0;
 		
