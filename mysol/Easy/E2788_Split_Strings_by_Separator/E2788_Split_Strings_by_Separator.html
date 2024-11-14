@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array of strings words and a character separator, 
+        split each string in words by separator.
+
+        Return an array of strings containing the new strings formed 
+        after the splits, excluding empty strings.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param words: a list of strings
+        * @param separator: a char
+        * @return: an array of strings
+        */
+        let splitWordsBySeparator = function(words, separator) {
+            const result = [];
+            const separatorStr = separator.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escapes special characters in the separator
+
+            for (const word of words) {
+                // Split the word by the separator
+                const parts = word.split(new RegExp(separatorStr));
+                
+                // Add non-empty strings to the result
+                for (const part of parts) {
+                    if (part) { // Ensures we only add non-empty strings
+                        result.push(part);
+                    }
+                }
+            }
+
+            return result;
+        };
+
+        const input = ["one.two.three","four.five","six"], separator = ".";
+        let results = splitWordsBySeparator(input, separator);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Escape the Separator:
+          . Pattern.quote(separatorStr) is used to escape any special characters 
+            in the separator, treating it as a literal character during splitting.
+        2. Rest of the Code:
+          . The logic remains the same: split each word by the separator, filter 
+            out empty strings, and add the remaining parts to result.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
