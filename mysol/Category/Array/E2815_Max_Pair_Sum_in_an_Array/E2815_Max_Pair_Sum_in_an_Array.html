@@ -4,43 +4,69 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	There are n employees in a company, numbered from 0 to n - 1. 
-        Each employee i has worked for hours[i] hours in the company.
+			 	You are given an integer array nums. You have to find the maximum 
+        sum of a pair of numbers from nums such that the largest digit in 
+        both numbers is equal.
 
-        The company requires each employee to work for at least target hours.
+        For example, 2373 is made up of three distinct digits: 2, 3, and 7, 
+        where 7 is the largest among them.
 
-        You are given a 0-indexed array of non-negative integers hours of 
-        length n and a non-negative integer target.
-
-        Return the integer denoting the number of employees who worked at 
-        least target hours.
+        Return the maximum sum or -1 if no such pair exists.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param hours: a list of integers
-        * @param target: an integer
-        * @return: the integer denoting the number of employees
+        * @param nums: a list of integers
+        * @return: the maximum sum or -1 if no such pair exists
         */
-        let numberOfEmployeesWhoMetTarget = function(hours, target) {
-          let count = 0;
-          
-          for (let hour of hours) {
-            if (hour >= target) {
-              count++;
+        let maxSum = function(nums) {
+            const maxNumByDigit = new Map(); // Map to store the maximum number for each largest digit
+            let maxSum = -1;
+
+            for (const num of nums) {
+                const largestDigit = getLargestDigit(num);
+
+                if (maxNumByDigit.has(largestDigit)) {
+                    // Calculate the pair sum
+                    const pairSum = maxNumByDigit.get(largestDigit) + num;
+                    maxSum = Math.max(maxSum, pairSum);
+                    // Update the maximum number for this largest digit
+                    maxNumByDigit.set(largestDigit, Math.max(maxNumByDigit.get(largestDigit), num));
+                } else {
+                    // Store the number for this largest digit
+                    maxNumByDigit.set(largestDigit, num);
+                }
             }
-          }
-          
-          return count;
+
+            return maxSum;
         };
 
-        const input = [0,1,2,3,4], target = 2;
-        let results = numberOfEmployeesWhoMetTarget(input, target);
+        // Helper function to find the largest digit in a number
+        function getLargestDigit(num) {
+            let largest = 0;
+            while (num > 0) {
+                largest = Math.max(largest, num % 10);
+                num = Math.floor(num / 10);
+            }
+            return largest;
+        }
+
+        const input = [2536,1613,3366,162];
+        let results = maxSum(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				loop and count
+				1. Mapping Largest Digit to Max Numbers:
+          . We use a HashMap<Integer, Integer> to store the largest number associated with each unique largest digit in the input array.
+        2. Iterate Through nums:
+          . For each number, compute the largest digit using the helper function getLargestDigit.
+          . Check if there’s already a number associated with this largest digit:
+            . If yes, calculate the pair sum with the current number, update the maximum sum if needed, and replace the stored number with the larger of the two.
+            . If no, store the current number as the maximum for this largest digit.
+        3. Return Result:
+          . If no valid pair is found, return -1.
+          . Otherwise, return the maximum sum.
 			 */
 
 		</script>
