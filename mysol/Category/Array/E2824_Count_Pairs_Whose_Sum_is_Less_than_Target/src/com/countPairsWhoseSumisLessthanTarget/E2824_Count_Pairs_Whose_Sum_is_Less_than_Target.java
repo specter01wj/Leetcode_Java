@@ -17,7 +17,25 @@ public class E2824_Count_Pairs_Whose_Sum_is_Less_than_Target {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer Loop:
+		. The outer loop iterates over the indices i from 0 to n - 1.
+	2. Inner Loop:
+		. The inner loop iterates over the indices j starting from i + 1 to n - 1.
+		. This ensures that only pairs where i < j are considered.
+	3. Check Pair Sum:
+		. For each pair (i, j), check if nums.get(i) + nums.get(j) < target.
+		. If the condition is met, increment count.
+	4. Return Result:
+		. After checking all pairs, return the count.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param target: an integer
+     * @return: the number of pairs (i, j)
+     */
 	public int countPairs(List<Integer> nums, int target) {
 		int count = 0;
 		int n = nums.size();
