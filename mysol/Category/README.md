@@ -371,6 +371,8 @@ Cspiration Category:
 |2784|Check if Array is Good|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2788|Split Strings by Separator|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2798|Number of Employees Who Met the Target|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2815|Max Pair Sum in an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2824|Count Pairs Whose Sum is Less than Target|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
