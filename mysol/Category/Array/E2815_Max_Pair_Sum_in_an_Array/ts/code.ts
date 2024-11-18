@@ -30,7 +30,7 @@ function getLargestDigit(num: number): number {
   return largest;
 }
 
-const input: number[] = [51,71,17,24,42];
+const input: number[] = [2536,1613,3366,162];
 const results = maxSum(input);
 
 let webHeading = document.querySelector('#t1');
