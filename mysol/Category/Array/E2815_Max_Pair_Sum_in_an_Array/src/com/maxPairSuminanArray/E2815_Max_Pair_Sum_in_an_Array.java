@@ -21,7 +21,24 @@ public class E2815_Max_Pair_Sum_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Mapping Largest Digit to Max Numbers:
+		. We use a HashMap<Integer, Integer> to store the largest number associated with each unique largest digit in the input array.
+	2. Iterate Through nums:
+		. For each number, compute the largest digit using the helper function getLargestDigit.
+		. Check if there’s already a number associated with this largest digit:
+			. If yes, calculate the pair sum with the current number, update the maximum sum if needed, and replace the stored number with the larger of the two.
+			. If no, store the current number as the maximum for this largest digit.
+	3. Return Result:
+		. If no valid pair is found, return -1.
+		. Otherwise, return the maximum sum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum sum or -1 if no such pair exists
+     */
 	public int maxSum(int[] nums) {
         // Map to store the maximum number for each largest digit
         HashMap<Integer, Integer> maxNumByDigit = new HashMap<>();
