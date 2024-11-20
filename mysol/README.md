@@ -768,6 +768,8 @@ By Jin Wang
 |2798|**Number of Employees Who Met the Target**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2815|**Max Pair Sum in an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2824|**Count Pairs Whose Sum is Less than Target**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2828|**Check if a String Is an Acronym of Words**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2848|**Points That Intersect With Cars**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
