@@ -23,7 +23,27 @@ public class E2828_Check_if_a_String_Is_an_Acronym_of_Words {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Early Exit if Lengths Don't Match:
+		. If the number of words in words is not equal to the length of s, 
+			return false immediately. This ensures they can potentially 
+			form an acronym.
+	2. Build the Acronym:
+		. Use a StringBuilder to construct the acronym by appending the 
+			first character of each word in words.
+	3. Compare with s:
+		. After constructing the acronym, compare it with s using .equals(). 
+			Return true if they match, otherwise false.
+	4. Return the Result:
+		. The result of the comparison determines if s is an acronym of words.
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param s: a string
+     * @return: the number of good triplets
+     */
 	public boolean isAcronym(List<String> words, String s) {
         // If the lengths do not match, it cannot be an acronym
         if (words.size() != s.length()) {
