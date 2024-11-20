@@ -21,7 +21,7 @@ public class E2848_Points_That_Intersect_With_Cars {
 	            List.of(4, 7)
 	        );
 		int output = solution.numberOfPoints(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	
