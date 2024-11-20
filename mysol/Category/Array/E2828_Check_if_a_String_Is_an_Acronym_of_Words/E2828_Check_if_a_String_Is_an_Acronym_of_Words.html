@@ -37,8 +37,12 @@
           return acronym === s;
         };
 
+        let isAcronym_2 = function(words, s) {
+          return words.map(word => word[0]).join('') === s;
+        }
+
         const input = ["never","gonna","give","up","on","you"], s = "ngguoy";
-        let results = isAcronym(input, s);
+        let results = isAcronym_2(input, s);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
