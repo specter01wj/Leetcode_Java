@@ -4,48 +4,57 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a 0-indexed integer array nums of length n and an integer 
-        target, return the number of pairs (i, j) where 0 <= i < j < n 
-        and nums[i] + nums[j] < target.
+			 	Given an array of strings words and a string s, determine if s is 
+        an acronym of words.
+
+        The string s is considered an acronym of words if it can be formed 
+        by concatenating the first character of each string in words in order. 
+        For example, "ab" can be formed from ["apple", "banana"], but it can't 
+        be formed from ["bear", "aardvark"].
+
+        Return true if s is an acronym of words, and false otherwise.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @param target: an integer
-        * @return: the number of pairs (i, j)
+        * @param words: a list of strings
+        * @param s: a string
+        * @return: the number of good triplets
         */
-        let countPairs = function(nums, target) {
-          let count = 0;
-          
-          // Iterate over all pairs (i, j) with 0 <= i < j < n
-          for (let i = 0; i < nums.length; i++) {
-            for (let j = i + 1; j < nums.length; j++) {
-              if (nums[i] + nums[j] < target) {
-                count++;
-              }
-            }
+        let isAcronym = function(words, s) {
+          // If the lengths do not match, it cannot be an acronym
+          if (words.length !== s.length) {
+              return false;
           }
-          
-          return count;
+
+          // Build the acronym from the first characters of the words
+          let acronym = "";
+          for (const word of words) {
+              acronym += word[0]; // Add the first character of each word
+          }
+
+          // Compare the built acronym with the given string s
+          return acronym === s;
         };
 
-        const input = [-6,2,5,-2,-7,-1,3], target = -2;
-        let results = countPairs(input, target);
+        const input = ["never","gonna","give","up","on","you"], s = "ngguoy";
+        let results = isAcronym(input, s);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Outer Loop:
-          . The outer loop iterates over the indices i from 0 to n - 1.
-        2. Inner Loop:
-          . The inner loop iterates over the indices j starting from i + 1 to n - 1.
-          . This ensures that only pairs where i < j are considered.
-        3. Check Pair Sum:
-          . For each pair (i, j), check if nums.get(i) + nums.get(j) < target.
-          . If the condition is met, increment count.
-        4. Return Result:
-          . After checking all pairs, return the count.
+				1. Early Exit if Lengths Don't Match:
+          . If the number of words in words is not equal to the length of s, 
+            return false immediately. This ensures they can potentially 
+            form an acronym.
+        2. Build the Acronym:
+          . Use a StringBuilder to construct the acronym by appending the 
+            first character of each word in words.
+        3. Compare with s:
+          . After constructing the acronym, compare it with s using .equals(). 
+            Return true if they match, otherwise false.
+        4. Return the Result:
+          . The result of the comparison determines if s is an acronym of words.
 			 */
 
 		</script>
