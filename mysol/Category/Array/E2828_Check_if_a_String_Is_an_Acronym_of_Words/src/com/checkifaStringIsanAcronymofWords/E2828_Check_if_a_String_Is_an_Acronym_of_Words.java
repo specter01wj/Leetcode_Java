@@ -42,7 +42,7 @@ public class E2828_Check_if_a_String_Is_an_Acronym_of_Words {
 	/*
      * @param words: a list of strings
      * @param s: a string
-     * @return: the number of good triplets
+     * @return: true if s is an acronym of words, and false otherwise
      */
 	public boolean isAcronym(List<String> words, String s) {
         // If the lengths do not match, it cannot be an acronym

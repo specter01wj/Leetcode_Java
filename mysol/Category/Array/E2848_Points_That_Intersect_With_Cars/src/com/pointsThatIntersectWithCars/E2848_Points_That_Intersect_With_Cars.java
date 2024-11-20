@@ -24,7 +24,27 @@ public class E2848_Points_That_Intersect_With_Cars {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Using a Set to Track Covered Points:
+		. A HashSet is used to store unique integer points that are 
+			covered by any car.
+		. Sets automatically handle duplicates, so adding the same 
+			point multiple times has no effect.
+	2. Iterating Through Each Car:
+		. For each car represented by a range [start, end], all points 
+			from start to end (inclusive) are added to the HashSet.
+	3. Counting the Covered Points:
+		. After processing all ranges, the size of the HashSet represents 
+			the number of unique points covered by the cars.
+	4. Return Result:
+		. Return the size of the HashSet.
+    */
 	
+	/*
+     * @param nums: a list of 2D integers
+     * @return: the number of integer points on the line that are covered with any part of a car
+     */
 	public int numberOfPoints(List<List<Integer>> nums) {
         Set<Integer> coveredPoints = new HashSet<>();
 
