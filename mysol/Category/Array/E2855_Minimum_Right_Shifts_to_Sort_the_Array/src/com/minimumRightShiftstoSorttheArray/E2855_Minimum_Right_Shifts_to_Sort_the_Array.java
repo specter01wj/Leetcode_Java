@@ -19,7 +19,29 @@ public class E2855_Minimum_Right_Shifts_to_Sort_the_Array {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Check if Already Sorted:
+		. Iterate through the array to see if it’s already sorted. 
+			If it is, return 0.
+	2. Find Rotation Point:
+		. Identify the single point where the order breaks 
+			(where a smaller number follows a larger number).
+		. If there’s more than one break, return -1 because it’s 
+			impossible to sort the array with right shifts.
+	3. Validate Rotated Array:
+		. After the rotation point, check if the array is sorted up 
+			to the end and wraps correctly to the beginning.
+		. Ensure the last element is not greater than the first 
+			element after the rotation.
+	4. Calculate Right Shifts:
+		. The number of right shifts needed is n - rotationPoint.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum number of right shifts required to sort nums
+     */
 	public int minimumRightShifts(List<Integer> nums) {
         int n = nums.size();
 
