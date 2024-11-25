@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed 2D integer array nums representing the 
+        coordinates of the cars parking on a number line. For any index 
+        i, nums[i] = [starti, endi] where starti is the starting point 
+        of the ith car and endi is the ending point of the ith car.
+
+        Return the number of integer points on the line that are covered 
+        with any part of a car.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of 2D integers
+        * @return: the number of integer points on the line that are covered with any part of a car
+        */
+        let numberOfPoints = function(nums) {
+          const coveredPoints = new Set();
+
+          // Iterate through each car's range
+          for (const [start, end] of nums) {
+            // Add all points within the range [start, end] to the set
+            for (let i = start; i <= end; i++) {
+              coveredPoints.add(i);
+            }
+          }
+
+          // Return the total number of unique points
+          return coveredPoints.size;
+        };
+
+        const input = [[3,6],[1,5],[4,7]];
+        let results = numberOfPoints(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Using a Set to Track Covered Points:
+          . A HashSet is used to store unique integer points that are 
+            covered by any car.
+          . Sets automatically handle duplicates, so adding the same 
+            point multiple times has no effect.
+        2. Iterating Through Each Car:
+          . For each car represented by a range [start, end], all points 
+            from start to end (inclusive) are added to the HashSet.
+        3. Counting the Covered Points:
+          . After processing all ranges, the size of the HashSet represents 
+            the number of unique points covered by the cars.
+        4. Return Result:
+          . Return the size of the HashSet.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
