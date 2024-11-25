@@ -770,6 +770,8 @@ By Jin Wang
 |2824|**Count Pairs Whose Sum is Less than Target**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2828|**Check if a String Is an Acronym of Words**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2848|**Points That Intersect With Cars**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2855|**Minimum Right Shifts to Sort the Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2859|**Sum of Values at Indices With K Set Bits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
