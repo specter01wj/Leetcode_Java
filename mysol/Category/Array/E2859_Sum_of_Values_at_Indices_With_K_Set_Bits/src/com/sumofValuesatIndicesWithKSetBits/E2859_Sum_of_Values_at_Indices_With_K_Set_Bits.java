@@ -22,7 +22,28 @@ public class E2859_Sum_of_Values_at_Indices_With_K_Set_Bits {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate Through Indices:
+		. Loop through all indices of the nums list.
+		. For each index, check if the number of set bits in its binary 
+			representation equals k.
+	2. Count Set Bits:
+		. Use the countSetBits helper method:
+			. Increment a counter for each set bit (1) in the binary representation.
+			. Use the bitwise AND operation (n & 1) to check if the least significant bit is set.
+			. Right shift the number (n >>= 1) to process the next bit.
+	3. Accumulate the Sum:
+		. If the index has exactly k set bits, add the corresponding value from nums to the sum.
+	4. Return Result:
+		. After processing all indices, return the accumulated sum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: an integer that denotes the sum of elements in nums
+     */
 	public int sumIndicesWithKSetBits(List<Integer> nums, int k) {
         int sum = 0;
 
