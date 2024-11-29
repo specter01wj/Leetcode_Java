@@ -22,7 +22,21 @@ public class E2869_Minimum_Operations_to_Collect_Elements {
 	
 	/*
     solution:
-    count good triplets
+    1. Using a Set to Track Collected Elements:
+		. A HashSet is used to store collected elements because it ensures 
+			uniqueness and allows for efficient O(1) insert and lookup operations.
+	2. Iterate from the End of the List:
+		. Start iterating from the last element of the list towards the first, 
+			simulating the process of removing elements from the end.
+		. Add elements to the collected set if they are less than or equal to k.
+	3. Count Operations:
+		. Increment the operations counter for each element processed.
+	4. Stop When All Elements Are Collected:
+		. If the size of the collected set equals k (indicating all elements 
+			from 1 to k are collected), break out of the loop.
+	5. Return the Result:
+		. The operations variable contains the minimum number of operations 
+			required to collect all elements.
     */
 	
 	/*
