@@ -20,7 +20,15 @@ public class E2873_Maximum_Value_of_an_Ordered_Triplet_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum value over all triplets of indices (i, j, k)
+     */
 	public long maximumTripletValue(int[] nums) {
         int n = nums.length;
         long maxValue = 0;
