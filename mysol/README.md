@@ -772,6 +772,8 @@ By Jin Wang
 |2848|**Points That Intersect With Cars**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2855|**Minimum Right Shifts to Sort the Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2859|**Sum of Values at Indices With K Set Bits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2869|**Minimum Operations to Collect Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2873|**Maximum Value of an Ordered Triplet I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
