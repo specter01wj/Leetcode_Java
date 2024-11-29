@@ -4,64 +4,61 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed integer array nums and an integer k.
+			 	You are given an array nums of positive integers and an integer k.
 
-        Return an integer that denotes the sum of elements in nums whose 
-        corresponding indices have exactly k set bits in their binary representation.
+        In one operation, you can remove the last element of the array and 
+        add it to your collection.
 
-        The set bits in an integer are the 1's present when it is written in binary.
-
-          . For example, the binary representation of 21 is 10101, which has 3 set bits.
+        Return the minimum number of operations needed to collect elements 1, 2, ..., k.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
         * @param k: an integer
-        * @return: an integer that denotes the sum of elements in nums
+        * @return: the minimum number of operations needed to collect elements
         */
-        let sumIndicesWithKSetBits = function(nums, k) {
-            let sum = 0;
+        let minOperations = function(nums, k) {
+          const collected = new Set();
+          let operations = 0;
 
-            // Iterate through each index of the array
-            for (let i = 0; i < nums.length; i++) {
-                if (countSetBits(i) === k) {
-                    sum += nums[i];
-                }
-            }
+          // Start from the end of the array and collect elements
+          for (let i = nums.length - 1; i >= 0; i--) {
+              if (nums[i] <= k) {
+                  collected.add(nums[i]);
+              }
+              operations++;
 
-            return sum;
+              // Check if all elements from 1 to k are collected
+              if (collected.size === k) {
+                  break;
+              }
+          }
+
+          return operations;
         };
 
-        // Helper function to count the number of set bits (1s) in the binary representation of a number
-        function countSetBits(n) {
-            let count = 0;
-            while (n > 0) {
-                count += (n & 1); // Increment if the last bit is 1
-                n >>= 1;          // Right shift to process the next bit
-            }
-            return count;
-        }
-
-        const input = [5,10,1,5,2], k = 1;
-        let results = sumIndicesWithKSetBits(input, k);
+        const input = [3,1,5,4,2], k = 2;
+        let results = minOperations(input, k);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Iterate Through Indices:
-          . Loop through all indices of the nums list.
-          . For each index, check if the number of set bits in its binary 
-            representation equals k.
-        2. Count Set Bits:
-          . Use the countSetBits helper method:
-            . Increment a counter for each set bit (1) in the binary representation.
-            . Use the bitwise AND operation (n & 1) to check if the least significant bit is set.
-            . Right shift the number (n >>= 1) to process the next bit.
-        3. Accumulate the Sum:
-          . If the index has exactly k set bits, add the corresponding value from nums to the sum.
-        4. Return Result:
-          . After processing all indices, return the accumulated sum.
+				1. Using a Set to Track Collected Elements:
+          . A HashSet is used to store collected elements because it ensures 
+            uniqueness and allows for efficient O(1) insert and lookup operations.
+        2. Iterate from the End of the List:
+          . Start iterating from the last element of the list towards the first, 
+            simulating the process of removing elements from the end.
+          . Add elements to the collected set if they are less than or equal to k.
+        3. Count Operations:
+          . Increment the operations counter for each element processed.
+        4. Stop When All Elements Are Collected:
+          . If the size of the collected set equals k (indicating all elements 
+            from 1 to k are collected), break out of the loop.
+        5. Return the Result:
+          . The operations variable contains the minimum number of operations 
+            required to collect all elements.
 			 */
 
 		</script>
