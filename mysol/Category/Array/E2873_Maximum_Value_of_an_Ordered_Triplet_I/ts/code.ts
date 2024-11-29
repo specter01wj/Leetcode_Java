@@ -1,26 +1,24 @@
-function minOperations(nums: number[], k: number): number {
-  const collected: Set<number> = new Set();
-  let operations = 0;
+function maximumTripletValue(nums: number[]): number {
+  let maxValue = 0;
+  const n = nums.length;
 
-  // Iterate from the end of the array
-  for (let i = nums.length - 1; i >= 0; i--) {
-      if (nums[i] <= k) {
-          collected.add(nums[i]);
-      }
-      operations++;
-
-      // Check if all elements from 1 to k are collected
-      if (collected.size === k) {
-          break;
+  // Iterate through all possible triplets (i, j, k) where i < j < k
+  for (let i = 0; i < n - 2; i++) {
+      for (let j = i + 1; j < n - 1; j++) {
+          for (let k = j + 1; k < n; k++) {
+              // Calculate the triplet value
+              const value = (nums[i] - nums[j]) * nums[k];
+              // Update the maximum value
+              maxValue = Math.max(maxValue, value);
+          }
       }
   }
 
-  return operations;
+  return maxValue;
 };
 
-const input: number[] = [3,1,5,4,2];
-const k: number = 2;
-const results = minOperations(input, k);
+const input: number[] = [12,6,1,2,7];
+const results = maximumTripletValue(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
