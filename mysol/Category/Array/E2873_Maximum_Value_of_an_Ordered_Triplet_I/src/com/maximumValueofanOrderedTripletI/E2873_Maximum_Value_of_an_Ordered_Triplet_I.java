@@ -22,7 +22,14 @@ public class E2873_Maximum_Value_of_an_Ordered_Triplet_I {
 	
 	/*
     solution:
-    count good triplets
+    1. Iterate Through All Triplets:
+		. Use three nested loops to iterate over all combinations of indices (i, j, k) where i < j < k.
+	2. Calculate Triplet Value:
+		. For each triplet (i, j, k), calculate the value as: (nums[i]−nums[j])×nums[k]
+	3. Update Maximum Value:
+		. Compare the calculated triplet value with the current maximum and update it if the value is greater.
+	4. Return the Result:
+		. If no positive value is found, the maximum remains 0.
     */
 	
 	/*
