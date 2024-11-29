@@ -4,61 +4,53 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an array nums of positive integers and an integer k.
+			 	You are given a 0-indexed integer array nums.
 
-        In one operation, you can remove the last element of the array and 
-        add it to your collection.
+        Return the maximum value over all triplets of indices (i, j, k) 
+        such that i < j < k. If all such triplets have a negative value, return 0.
 
-        Return the minimum number of operations needed to collect elements 1, 2, ..., k.
+        The value of a triplet of indices (i, j, k) is equal to 
+        (nums[i] - nums[j]) * nums[k].
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param k: an integer
-        * @return: the minimum number of operations needed to collect elements
+        * @return: the maximum value over all triplets of indices (i, j, k)
         */
-        let minOperations = function(nums, k) {
-          const collected = new Set();
-          let operations = 0;
+        let maximumTripletValue = function(nums) {
+            let maxValue = 0;
+            const n = nums.length;
 
-          // Start from the end of the array and collect elements
-          for (let i = nums.length - 1; i >= 0; i--) {
-              if (nums[i] <= k) {
-                  collected.add(nums[i]);
-              }
-              operations++;
+            // Iterate through all possible triplets (i, j, k) where i < j < k
+            for (let i = 0; i < n - 2; i++) {
+                for (let j = i + 1; j < n - 1; j++) {
+                    for (let k = j + 1; k < n; k++) {
+                        // Calculate the triplet value
+                        const value = (nums[i] - nums[j]) * nums[k];
+                        // Update the maximum value
+                        maxValue = Math.max(maxValue, value);
+                    }
+                }
+            }
 
-              // Check if all elements from 1 to k are collected
-              if (collected.size === k) {
-                  break;
-              }
-          }
-
-          return operations;
+            return maxValue;
         };
 
-        const input = [3,1,5,4,2], k = 2;
-        let results = minOperations(input, k);
+        const input = [12,6,1,2,7];
+        let results = maximumTripletValue(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Using a Set to Track Collected Elements:
-          . A HashSet is used to store collected elements because it ensures 
-            uniqueness and allows for efficient O(1) insert and lookup operations.
-        2. Iterate from the End of the List:
-          . Start iterating from the last element of the list towards the first, 
-            simulating the process of removing elements from the end.
-          . Add elements to the collected set if they are less than or equal to k.
-        3. Count Operations:
-          . Increment the operations counter for each element processed.
-        4. Stop When All Elements Are Collected:
-          . If the size of the collected set equals k (indicating all elements 
-            from 1 to k are collected), break out of the loop.
-        5. Return the Result:
-          . The operations variable contains the minimum number of operations 
-            required to collect all elements.
+				1. Iterate Through All Triplets:
+          . Use three nested loops to iterate over all combinations of indices (i, j, k) where i < j < k.
+        2. Calculate Triplet Value:
+          . For each triplet (i, j, k), calculate the value as: (nums[i]−nums[j])×nums[k]
+        3. Update Maximum Value:
+          . Compare the calculated triplet value with the current maximum and update it if the value is greater.
+        4. Return the Result:
+          . If no positive value is found, the maximum remains 0.
 			 */
 
 		</script>
