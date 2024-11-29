@@ -20,7 +20,16 @@ public class E2869_Minimum_Operations_to_Collect_Elements {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the minimum number of operations needed to collect elements
+     */
 	public int minOperations(List<Integer> nums, int k) {
         Set<Integer> collected = new HashSet<>();
         int operations = 0;
