@@ -1,24 +1,29 @@
-function maximumTripletValue(nums: number[]): number {
-  let maxValue = 0;
-  const n = nums.length;
+function lastVisitedIntegers(nums: number[]): number[] {
+  const seen: number[] = []; // Array to track "seen" positive integers
+  const ans: number[] = []; // Array to store the result
+  let consecutiveNegativeCount = 0;
 
-  // Iterate through all possible triplets (i, j, k) where i < j < k
-  for (let i = 0; i < n - 2; i++) {
-      for (let j = i + 1; j < n - 1; j++) {
-          for (let k = j + 1; k < n; k++) {
-              // Calculate the triplet value
-              const value = (nums[i] - nums[j]) * nums[k];
-              // Update the maximum value
-              maxValue = Math.max(maxValue, value);
+  for (const num of nums) {
+      if (num > 0) {
+          // If positive, prepend to `seen` and reset the counter
+          seen.unshift(num);
+          consecutiveNegativeCount = 0;
+      } else if (num === -1) {
+          // Handle consecutive -1s
+          consecutiveNegativeCount++;
+          if (consecutiveNegativeCount <= seen.length) {
+              ans.push(seen[consecutiveNegativeCount - 1]);
+          } else {
+              ans.push(-1);
           }
       }
   }
 
-  return maxValue;
+  return ans;
 };
 
-const input: number[] = [12,6,1,2,7];
-const results = maximumTripletValue(input);
+const input: number[] = [1,2,-1,-1,-1];
+const results = lastVisitedIntegers(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
