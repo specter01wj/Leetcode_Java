@@ -29,7 +29,29 @@ public class E2899_Last_Visited_Integers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Using LinkedList for seen:
+		. A LinkedList is used to allow efficient prepending of elements 
+			to the front using addFirst.
+	2. Tracking Consecutive -1 Count:
+		. Use consecutiveNegativeCount to count how many consecutive -1s 
+			have been encountered.
+	3. Processing Each Element:
+		. For positive integers, prepend the number to the seen list and 
+			reset consecutiveNegativeCount.
+		. For -1, check if consecutiveNegativeCount is less than or equal 
+			to the size of seen:
+			. If true, retrieve the corresponding element from seen.
+			. If false, append -1 to ans.
+	4. Return Result:
+		. At the end of the iteration, return the ans list.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the array ans
+     */
 	public List<Integer> lastVisitedIntegers(int[] nums) {
         LinkedList<Integer> seen = new LinkedList<>(); // Used for efficient prepending
         List<Integer> ans = new ArrayList<>();
