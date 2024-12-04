@@ -31,7 +31,25 @@ public class E2900_Longest_Unequal_Adjacent_Groups_Subsequence_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Start With the First Word:
+		. Add the first word to the result list since it starts the subsequence.
+	2. Ensure Alternating Groups:
+		. Iterate through the groups array starting from index 1.
+		. If the current group value (groups[i]) differs from the previous group 
+			value (groups[i - 1]), add the corresponding word (words[i]) to the 
+			result list.
+	3. Return the Result:
+		. At the end of the loop, result contains the longest alternating 
+			subsequence of words.
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param groups: a list of integers
+     * @return: the selected subsequence. If there are multiple answers, return any of them
+     */
 	public List<String> getLongestSubsequence(String[] words, int[] groups) {
         List<String> result = new ArrayList<>();
         int n = words.length;
