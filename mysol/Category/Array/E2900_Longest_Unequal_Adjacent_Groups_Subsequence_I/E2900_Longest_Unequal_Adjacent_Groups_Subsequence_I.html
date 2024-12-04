@@ -4,74 +4,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array nums where nums[i] is either a positive 
-        integer or -1. We need to find for each -1 the respective 
-        positive integer, which we call the last visited integer.
+			 	You are given a string array words and a binary array groups 
+        both of length n, where words[i] is associated with groups[i].
 
-        To achieve this goal, let's define two empty arrays: seen and ans.
+        Your task is to select the longest alternating subsequence 
+        from words. A subsequence of words is alternating if for any 
+        two consecutive strings in the sequence, their corresponding 
+        elements in the binary array groups differ. Essentially, 
+        you are to choose strings such that adjacent elements have 
+        non-matching corresponding bits in the groups array.
 
-        Start iterating from the beginning of the array nums.
+        Formally, you need to find the longest subsequence of an array 
+        of indices [0, 1, ..., n - 1] denoted as [i0, i1, ..., ik-1], 
+        such that groups[ij] != groups[ij+1] for each 0 <= j < k - 1 
+        and then find the words corresponding to these indices.
 
-          . If a positive integer is encountered, prepend it to the front of seen.
-          . If -1 is encountered, let k be the number of consecutive -1s seen 
-            so far (including the current -1),
-            . If k is less than or equal to the length of seen, append the k-th 
-              element of seen to ans.
-            . If k is strictly greater than the length of seen, append -1 to ans.
-
-        Return the array ans.
+        Return the selected subsequence. If there are multiple answers, 
+        return any of them.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the array ans
+        * @param words: a list of strings
+        * @param groups: a list of integers
+        * @return: the selected subsequence. If there are multiple answers, return any of them
         */
-        let lastVisitedIntegers = function(nums) {
-            const seen = []; // Array to store "seen" positive integers
-            const ans = [];  // Array to store the result
-            let consecutiveNegativeCount = 0;
+        let getLongestSubsequence = function(words, groups) {
+            const result = [];
+            const n = words.length;
 
-            for (let num of nums) {
-                if (num > 0) {
-                    // If the number is positive, prepend it to `seen` and reset the counter
-                    seen.unshift(num);
-                    consecutiveNegativeCount = 0;
-                } else if (num === -1) {
-                    // Handle consecutive -1s
-                    consecutiveNegativeCount++;
-                    if (consecutiveNegativeCount <= seen.length) {
-                        ans.push(seen[consecutiveNegativeCount - 1]);
-                    } else {
-                        ans.push(-1);
-                    }
+            // Add the first word to the result
+            result.push(words[0]);
+
+            // Iterate through the array and ensure alternating groups
+            for (let i = 1; i < n; i++) {
+                if (groups[i] !== groups[i - 1]) {
+                    result.push(words[i]);
                 }
             }
 
-            return ans;
+            return result;
         };
 
-        const input = [1,2,-1,-1,-1];
-        let results = lastVisitedIntegers(input);
+        const input = ["e","a","b"], groups = [0,0,1];
+        let results = getLongestSubsequence(input, groups);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Using LinkedList for seen:
-          . A LinkedList is used to allow efficient prepending of elements 
-            to the front using addFirst.
-        2. Tracking Consecutive -1 Count:
-          . Use consecutiveNegativeCount to count how many consecutive -1s 
-            have been encountered.
-        3. Processing Each Element:
-          . For positive integers, prepend the number to the seen list and 
-            reset consecutiveNegativeCount.
-          . For -1, check if consecutiveNegativeCount is less than or equal 
-            to the size of seen:
-            . If true, retrieve the corresponding element from seen.
-            . If false, append -1 to ans.
-        4. Return Result:
-          . At the end of the iteration, return the ans list.
+				1. Start With the First Word:
+          . Add the first word to the result list since it starts the subsequence.
+        2. Ensure Alternating Groups:
+          . Iterate through the groups array starting from index 1.
+          . If the current group value (groups[i]) differs from the previous group 
+            value (groups[i - 1]), add the corresponding word (words[i]) to the 
+            result list.
+        3. Return the Result:
+          . At the end of the loop, result contains the longest alternating 
+            subsequence of words.
 			 */
 
 		</script>
