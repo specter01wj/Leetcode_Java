@@ -379,6 +379,8 @@ Cspiration Category:
 |2859|Sum of Values at Indices With K Set Bits|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2869|Minimum Operations to Collect Elements|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2873|Maximum Value of an Ordered Triplet I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2899|Last Visited Integers|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2900|Longest Unequal Adjacent Groups Subsequence I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
