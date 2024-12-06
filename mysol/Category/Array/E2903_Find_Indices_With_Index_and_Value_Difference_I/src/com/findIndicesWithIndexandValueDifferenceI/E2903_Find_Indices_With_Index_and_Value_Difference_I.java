@@ -26,7 +26,26 @@ public class E2903_Find_Indices_With_Index_and_Value_Difference_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Nested Loops:
+		. Use two nested loops to check all pairs of indices (i, j) in the array.
+	2. Check Conditions:
+		. For each pair (i, j), check the two conditions:
+			. Math.abs(i - j) >= indexDifference
+			. Math.abs(nums[i] - nums[j]) >= valueDifference
+	3. Return Valid Pair:
+		. If a pair satisfies both conditions, return [i, j].
+	4. Fallback:
+		. If no valid pair is found after checking all possibilities, return [-1, -1].
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param indexDifference: an integer
+     * @param valueDifference: an integer
+     * @return: an integer array answer
+     */
 	public int[] findIndices(int[] nums, int indexDifference, int valueDifference) {
         int n = nums.length;
 
