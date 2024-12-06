@@ -22,7 +22,28 @@ public class E2908_Minimum_Sum_of_Mountain_Triplets_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate Through Middle Element (j):
+		. The middle element j is the peak of the mountain, and it must 
+			satisfy nums[i] < nums[j] and nums[k] < nums[j].
+	2. Find Valid Left (i):
+		. For each j, iterate through all elements to the left and find 
+			the smallest valid i where nums[i] < nums[j].
+	3. Find Valid Right (k):
+		. Similarly, iterate through all elements to the right of j to 
+			find the smallest valid k where nums[k] < nums[j].
+	4. Check and Update Minimum Sum:
+		. If both i and k are valid, calculate the sum of the triplet 
+			and update minSum.
+	5. Handle Edge Case:
+		. If no valid mountain triplet is found, return -1.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum possible sum of a mountain triplet of nums
+     */
 	public int minimumSum(int[] nums) {
         int n = nums.length;
         int minSum = Integer.MAX_VALUE;
