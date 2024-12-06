@@ -1,23 +1,41 @@
-function findIndices(nums: number[], indexDifference: number, valueDifference: number): number[] {
+function minimumSum(nums: number[]): number {
   const n = nums.length;
+  let minSum = Infinity;
+  let hasMountain = false;
 
-  // Iterate through all pairs of indices (i, j)
-  for (let i = 0; i < n; i++) {
-      for (let j = 0; j < n; j++) {
-          // Check if the conditions are satisfied
-          if (Math.abs(i - j) >= indexDifference && Math.abs(nums[i] - nums[j]) >= valueDifference) {
-              return [i, j];
+  // Iterate through the middle element of the triplet (j)
+  for (let j = 1; j < n - 1; j++) {
+      let leftMin = Infinity;
+      let rightMin = Infinity;
+
+      // Find the smallest valid i (nums[i] < nums[j]) to the left of j
+      for (let i = 0; i < j; i++) {
+          if (nums[i] < nums[j]) {
+              leftMin = Math.min(leftMin, nums[i]);
           }
+      }
+
+      // Find the smallest valid k (nums[k] < nums[j]) to the right of j
+      for (let k = j + 1; k < n; k++) {
+          if (nums[k] < nums[j]) {
+              rightMin = Math.min(rightMin, nums[k]);
+          }
+      }
+
+      // If valid i and k are found, calculate the mountain triplet sum
+      if (leftMin !== Infinity && rightMin !== Infinity) {
+          hasMountain = true;
+          const currentSum = leftMin + nums[j] + rightMin;
+          minSum = Math.min(minSum, currentSum);
       }
   }
 
-  // If no such indices are found, return [-1, -1]
-  return [-1, -1];
+  // Return the minimum sum if a mountain triplet exists, otherwise -1
+  return hasMountain ? minSum : -1;
 };
 
-const input: number[] = [5,1,4,1];
-const indexDifference: number = 2, valueDifference: number = 4;
-const results = findIndices(input, indexDifference, valueDifference);
+const input: number[] = [5,4,8,7,10,2];
+const results = minimumSum(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
