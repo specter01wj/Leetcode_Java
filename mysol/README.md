@@ -776,6 +776,8 @@ By Jin Wang
 |2873|**Maximum Value of an Ordered Triplet I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2899|**Last Visited Integers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2900|**Longest Unequal Adjacent Groups Subsequence I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2903|**Find Indices With Index and Value Difference I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2908|**Minimum Sum of Mountain Triplets I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
