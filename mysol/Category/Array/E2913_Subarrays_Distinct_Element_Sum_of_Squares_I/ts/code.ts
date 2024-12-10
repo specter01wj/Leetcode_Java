@@ -20,7 +20,7 @@ function sumCounts(nums: number[]): number {
   return totalSum;
 };
 
-const input: number[] = [1,2,1;
+const input: number[] = [1,2,1];
 const results = sumCounts(input);
 
 let webHeading = document.querySelector('#t1');
