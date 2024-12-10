@@ -1,27 +1,29 @@
-function sumCounts(nums: number[]): number {
-  const n = nums.length;
-  let totalSum = 0;
+function findKOr(nums: number[], k: number): number {
+  let result = 0;
 
-  // Iterate over all possible subarray starting points
-  for (let i = 0; i < n; i++) {
-      const distinctSet: Set<number> = new Set();
+  // Iterate over each bit position (0 to 31 for a 32-bit integer)
+  for (let bit = 0; bit < 32; bit++) {
+      let count = 0;
 
-      // Iterate over all possible subarray ending points
-      for (let j = i; j < n; j++) {
-          // Add the current element to the distinct set
-          distinctSet.add(nums[j]);
+      // Count how many numbers have the current bit set
+      for (let num of nums) {
+          if ((num & (1 << bit)) !== 0) {
+              count++;
+          }
+      }
 
-          // Get the size of the set (distinct count) and add its square to totalSum
-          const distinctCount = distinctSet.size;
-          totalSum += distinctCount * distinctCount;
+      // If the bit is set in at least k numbers, set it in the result
+      if (count >= k) {
+          result |= (1 << bit);
       }
   }
 
-  return totalSum;
+  return result;
 };
 
-const input: number[] = [1,2,1];
-const results = sumCounts(input);
+const input: number[] = [7,12,9,8,9,15];
+const k: number = 4;
+const results = findKOr(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
