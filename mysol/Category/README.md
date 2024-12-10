@@ -383,6 +383,8 @@ Cspiration Category:
 |2900|Longest Unequal Adjacent Groups Subsequence I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2903|Find Indices With Index and Value Difference I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2908|Minimum Sum of Mountain Triplets I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2913|Subarrays Distinct Element Sum of Squares I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2917|Find the K-or of an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
