@@ -20,7 +20,25 @@ public class E2917_Find_the_Kor_of_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate Over Bit Positions:
+		. Iterate through each bit position from 0 to 31 (for a 32-bit integer).
+	2. Count Numbers with Bit Set:
+		. For each bit position, count how many numbers in the array have that 
+			bit set to 1 using (num & (1 << bit)).
+	3. Check Against k:
+		. If the count of numbers with the current bit set is greater than or 
+			equal to k, set that bit in the result using result |= (1 << bit).
+	4. Return Result:
+		. After processing all bit positions, return the result.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the K-or of nums
+     */
 	public int findKOr(int[] nums, int k) {
         int result = 0;
 
