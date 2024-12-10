@@ -4,78 +4,66 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array nums of integers.
+			 	You are given a 0-indexed integer array nums.
 
-        A triplet of indices (i, j, k) is a mountain if:
+        The distinct count of a subarray of nums is defined as:
 
-          . i < j < k
-          . nums[i] < nums[j] and nums[k] < nums[j]
+          . Let nums[i..j] be a subarray of nums consisting of all the 
+            indices from i to j such that 0 <= i <= j < nums.length. 
+            Then the number of distinct values in nums[i..j] is called 
+            the distinct count of nums[i..j].
 
-        Return the minimum possible sum of a mountain triplet of nums. 
-        If no such triplet exists, return -1.
+        Return the sum of the squares of distinct counts of all subarrays of nums.
+
+        A subarray is a contiguous non-empty sequence of elements within an array.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: the minimum possible sum of a mountain triplet of nums
+        * @return: the sum of the squares of distinct counts of all subarrays of nums
         */
-        let minimumSum = function(nums) {
+        let sumCounts = function(nums) {
             const n = nums.length;
-            let minSum = Infinity;
-            let hasMountain = false;
+            let totalSum = 0;
 
-            // Iterate through the middle element of the triplet (j)
-            for (let j = 1; j < n - 1; j++) {
-                let leftMin = Infinity;
-                let rightMin = Infinity;
+            // Iterate over all possible subarray starting points
+            for (let i = 0; i < n; i++) {
+                const distinctSet = new Set();
 
-                // Find the smallest valid i (nums[i] < nums[j]) to the left of j
-                for (let i = 0; i < j; i++) {
-                    if (nums[i] < nums[j]) {
-                        leftMin = Math.min(leftMin, nums[i]);
-                    }
-                }
+                // Iterate over all possible subarray ending points
+                for (let j = i; j < n; j++) {
+                    // Add the current element to the distinct set
+                    distinctSet.add(nums[j]);
 
-                // Find the smallest valid k (nums[k] < nums[j]) to the right of j
-                for (let k = j + 1; k < n; k++) {
-                    if (nums[k] < nums[j]) {
-                        rightMin = Math.min(rightMin, nums[k]);
-                    }
-                }
-
-                // If valid i and k are found, calculate the mountain triplet sum
-                if (leftMin !== Infinity && rightMin !== Infinity) {
-                    hasMountain = true;
-                    const currentSum = leftMin + nums[j] + rightMin;
-                    minSum = Math.min(minSum, currentSum);
+                    // Get the size of the set (distinct count) and add its square to totalSum
+                    const distinctCount = distinctSet.size;
+                    totalSum += distinctCount * distinctCount;
                 }
             }
 
-            // Return the minimum sum if a mountain triplet exists, otherwise -1
-            return hasMountain ? minSum : -1;
+            return totalSum;
         };
 
-        const input = [5,4,8,7,10,2];
-        let results = minimumSum(input);
+        const input = [1,2,1];
+        let results = sumCounts(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Iterate Through Middle Element (j):
-          . The middle element j is the peak of the mountain, and it must 
-            satisfy nums[i] < nums[j] and nums[k] < nums[j].
-        2. Find Valid Left (i):
-          . For each j, iterate through all elements to the left and find 
-            the smallest valid i where nums[i] < nums[j].
-        3. Find Valid Right (k):
-          . Similarly, iterate through all elements to the right of j to 
-            find the smallest valid k where nums[k] < nums[j].
-        4. Check and Update Minimum Sum:
-          . If both i and k are valid, calculate the sum of the triplet 
-            and update minSum.
-        5. Handle Edge Case:
-          . If no valid mountain triplet is found, return -1.
+				1. Outer Loop:
+          . The outer loop iterates over the starting index (i) of each subarray.
+        2. Inner Loop:
+          . The inner loop iterates over the ending index (j) of the subarray 
+            starting at i.
+          . For each subarray nums[i..j], add nums[j] to a HashSet to track 
+            distinct elements.
+        3. Calculate Distinct Count:
+          . The size of the HashSet gives the distinct count of the current subarray.
+        4. Square and Add:
+          . Square the distinct count and add it to the totalSum.
+        5. Return Total:
+          . After all iterations, return the totalSum.
 			 */
 
 		</script>
