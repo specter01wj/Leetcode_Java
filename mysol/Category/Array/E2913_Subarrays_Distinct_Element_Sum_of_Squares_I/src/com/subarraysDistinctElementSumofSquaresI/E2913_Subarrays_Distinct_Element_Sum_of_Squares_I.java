@@ -25,7 +25,27 @@ public class E2913_Subarrays_Distinct_Element_Sum_of_Squares_I {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer Loop:
+		. The outer loop iterates over the starting index (i) of each subarray.
+	2. Inner Loop:
+		. The inner loop iterates over the ending index (j) of the subarray 
+			starting at i.
+		. For each subarray nums[i..j], add nums[j] to a HashSet to track 
+			distinct elements.
+	3. Calculate Distinct Count:
+		. The size of the HashSet gives the distinct count of the current subarray.
+	4. Square and Add:
+		. Square the distinct count and add it to the totalSum.
+	5. Return Total:
+		. After all iterations, return the totalSum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the sum of the squares of distinct counts of all subarrays of nums
+     */
 	public int sumCounts(List<Integer> nums) {
         int n = nums.size();
         int totalSum = 0;
