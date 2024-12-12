@@ -1,29 +1,30 @@
-function findKOr(nums: number[], k: number): number {
-  let result = 0;
+function findChampion(grid: number[][]): number {
+  const n = grid.length;
 
-  // Iterate over each bit position (0 to 31 for a 32-bit integer)
-  for (let bit = 0; bit < 32; bit++) {
-      let count = 0;
+  // Start with the assumption that team 0 is the champion
+  let champion = 0;
 
-      // Count how many numbers have the current bit set
-      for (let num of nums) {
-          if ((num & (1 << bit)) !== 0) {
-              count++;
-          }
-      }
-
-      // If the bit is set in at least k numbers, set it in the result
-      if (count >= k) {
-          result |= (1 << bit);
+  // Iterate through all teams to find a potential champion
+  for (let i = 1; i < n; i++) {
+      if (grid[champion][i] === 0) {
+          // If the current champion loses to team i, update champion
+          champion = i;
       }
   }
 
-  return result;
+  // Verify if the identified champion is actually the champion
+  for (let i = 0; i < n; i++) {
+      if (i !== champion && (grid[champion][i] === 0 || grid[i][champion] === 1)) {
+          // If the champion loses to or fails to beat another team, return -1
+          return -1;
+      }
+  }
+
+  return champion;
 };
 
-const input: number[] = [7,12,9,8,9,15];
-const k: number = 4;
-const results = findKOr(input, k);
+const input: number[][] = [[0,0,1],[1,0,1],[0,0,0]];
+const results = findChampion(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
