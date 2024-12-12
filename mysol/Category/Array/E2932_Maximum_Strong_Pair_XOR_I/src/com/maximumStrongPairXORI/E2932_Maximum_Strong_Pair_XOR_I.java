@@ -24,7 +24,26 @@ public class E2932_Maximum_Strong_Pair_XOR_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate Through All Pairs:
+		. Use nested loops to evaluate all pairs (i, j) where i <= j. 
+			The i <= j condition ensures all combinations are considered, 
+			including pairs where x == y.
+	2. Check Strong Pair Condition:
+		. A pair (x, y) is a strong pair if |x - y| <= min(x, y).
+	3. Calculate XOR:
+		. For every valid strong pair (x, y), calculate x ^ y (bitwise XOR).
+	4. Update Maximum XOR:
+		. Keep track of the maximum XOR value found among all strong pairs.
+	5. Return Result:
+		. After evaluating all pairs, return the maximum XOR value.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum XOR value out of all possible strong pairs in the array nums
+     */
 	public int maximumStrongPairXor(int[] nums) {
         int n = nums.length;
         int maxXor = 0;
