@@ -23,7 +23,25 @@ public class E2923_Find_Champion_I {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initial Champion:
+		. Assume the first team (team 0) is the champion.
+		. Compare it with other teams. If the current champion loses to another 
+			team (grid[champion][i] == 0), update the champion to that team.
+	2. Validation:
+		. After identifying a potential champion, iterate through all teams to confirm:
+			. The champion must not lose to any other team (grid[champion][i] == 1).
+			. No other team can beat the champion (grid[i][champion] == 0).
+	3. Return Champion:
+		. If the validation passes, return the champion's index.
+		. Otherwise, return -1 to indicate no valid champion exists.
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: the team that will be the champion of the tournament
+     */
 	public int findChampion(int[][] grid) {
         int n = grid.length;
 
