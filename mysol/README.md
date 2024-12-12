@@ -780,6 +780,8 @@ By Jin Wang
 |2908|**Minimum Sum of Mountain Triplets I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2913|**Subarrays Distinct Element Sum of Squares I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2917|**Find the K-or of an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2923|**Find Champion I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2932|**Maximum Strong Pair XOR I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
