@@ -4,65 +4,63 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	There are n teams numbered from 0 to n - 1 in a tournament.
+			 	You are given a 0-indexed integer array nums. A pair of integers x 
+        and y is called a strong pair if it satisfies the condition:
 
-        Given a 0-indexed 2D boolean matrix grid of size n * n. For all i, j 
-        that 0 <= i, j <= n - 1 and i != j team i is stronger than team j if 
-        grid[i][j] == 1, otherwise, team j is stronger than team i.
+          . |x - y| <= min(x, y)
 
-        Team a will be the champion of the tournament if there is no team b 
-        that is stronger than team a.
+        You need to select two integers from nums such that they form a strong 
+        pair and their bitwise XOR is the maximum among all strong pairs in the array.
 
-        Return the team that will be the champion of the tournament.
+        Return the maximum XOR value out of all possible strong pairs in the array nums.
+
+        Note that you can pick the same integer twice to form a pair.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param grid: a list of 2D integers
-        * @return: the team that will be the champion of the tournament
+        * @param nums: a list of integers
+        * @return: the maximum XOR value out of all possible strong pairs in the array nums
         */
-        let findChampion = function(grid) {
-            const n = grid.length;
+        let maximumStrongPairXor = function(nums) {
+            const n = nums.length;
+            let maxXor = 0;
 
-            // Start with the assumption that team 0 is the champion
-            let champion = 0;
-
-            // Iterate through all teams to find a potential champion
-            for (let i = 1; i < n; i++) {
-                if (grid[champion][i] === 0) {
-                    // If the current champion loses to team i, update champion
-                    champion = i;
-                }
-            }
-
-            // Verify if the identified champion is actually the champion
+            // Iterate through all possible pairs
             for (let i = 0; i < n; i++) {
-                if (i !== champion && (grid[champion][i] === 0 || grid[i][champion] === 1)) {
-                    // If the champion loses to or fails to beat another team, return -1
-                    return -1;
+                for (let j = i; j < n; j++) {
+                    const x = nums[i];
+                    const y = nums[j];
+
+                    // Check if the pair (x, y) is a strong pair
+                    if (Math.abs(x - y) <= Math.min(x, y)) {
+                        // Calculate XOR and update maxXor if it's larger
+                        maxXor = Math.max(maxXor, x ^ y);
+                    }
                 }
             }
 
-            return champion;
+            return maxXor;
         };
 
-        const input = [[0,0,1],[1,0,1],[0,0,0]];
-        let results = findChampion(input);
+        const input = [1,2,3,4,5];
+        let results = maximumStrongPairXor(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Initial Champion:
-          . Assume the first team (team 0) is the champion.
-          . Compare it with other teams. If the current champion loses to another 
-            team (grid[champion][i] == 0), update the champion to that team.
-        2. Validation:
-          . After identifying a potential champion, iterate through all teams to confirm:
-            . The champion must not lose to any other team (grid[champion][i] == 1).
-            . No other team can beat the champion (grid[i][champion] == 0).
-        3. Return Champion:
-          . If the validation passes, return the champion's index.
-          . Otherwise, return -1 to indicate no valid champion exists.
+				1. Iterate Through All Pairs:
+          . Use nested loops to evaluate all pairs (i, j) where i <= j. 
+            The i <= j condition ensures all combinations are considered, 
+            including pairs where x == y.
+        2. Check Strong Pair Condition:
+          . A pair (x, y) is a strong pair if |x - y| <= min(x, y).
+        3. Calculate XOR:
+          . For every valid strong pair (x, y), calculate x ^ y (bitwise XOR).
+        4. Update Maximum XOR:
+          . Keep track of the maximum XOR value found among all strong pairs.
+        5. Return Result:
+          . After evaluating all pairs, return the maximum XOR value.
 			 */
 
 		</script>
