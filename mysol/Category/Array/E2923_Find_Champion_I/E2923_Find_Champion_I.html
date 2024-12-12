@@ -4,60 +4,65 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an integer array nums, and an integer k. 
-        Let's introduce K-or operation by extending the standard bitwise OR. 
-        In K-or, a bit position in the result is set to 1 if at least k numbers 
-        in nums have a 1 in that position.
+			 	There are n teams numbered from 0 to n - 1 in a tournament.
 
-        Return the K-or of nums.
+        Given a 0-indexed 2D boolean matrix grid of size n * n. For all i, j 
+        that 0 <= i, j <= n - 1 and i != j team i is stronger than team j if 
+        grid[i][j] == 1, otherwise, team j is stronger than team i.
+
+        Team a will be the champion of the tournament if there is no team b 
+        that is stronger than team a.
+
+        Return the team that will be the champion of the tournament.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @param k: an integer
-        * @return: the K-or of nums
+        * @param grid: a list of 2D integers
+        * @return: the team that will be the champion of the tournament
         */
-        let findKOr = function(nums, k) {
-            let result = 0;
+        let findChampion = function(grid) {
+            const n = grid.length;
 
-            // Iterate over each bit position (0 to 31 for a 32-bit integer)
-            for (let bit = 0; bit < 32; bit++) {
-                let count = 0;
+            // Start with the assumption that team 0 is the champion
+            let champion = 0;
 
-                // Count how many numbers have the current bit set
-                for (let num of nums) {
-                    if ((num & (1 << bit)) !== 0) {
-                        count++;
-                    }
-                }
-
-                // If the bit is set in at least k numbers, set it in the result
-                if (count >= k) {
-                    result |= (1 << bit);
+            // Iterate through all teams to find a potential champion
+            for (let i = 1; i < n; i++) {
+                if (grid[champion][i] === 0) {
+                    // If the current champion loses to team i, update champion
+                    champion = i;
                 }
             }
 
-            return result;
+            // Verify if the identified champion is actually the champion
+            for (let i = 0; i < n; i++) {
+                if (i !== champion && (grid[champion][i] === 0 || grid[i][champion] === 1)) {
+                    // If the champion loses to or fails to beat another team, return -1
+                    return -1;
+                }
+            }
+
+            return champion;
         };
 
-        const input = [7,12,9,8,9,15];
-        const k = 4;
-        let results = findKOr(input, k);
+        const input = [[0,0,1],[1,0,1],[0,0,0]];
+        let results = findChampion(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Iterate Over Bit Positions:
-          . Iterate through each bit position from 0 to 31 (for a 32-bit integer).
-        2. Count Numbers with Bit Set:
-          . For each bit position, count how many numbers in the array have that 
-            bit set to 1 using (num & (1 << bit)).
-        3. Check Against k:
-          . If the count of numbers with the current bit set is greater than or 
-            equal to k, set that bit in the result using result |= (1 << bit).
-        4. Return Result:
-          . After processing all bit positions, return the result.
+				1. Initial Champion:
+          . Assume the first team (team 0) is the champion.
+          . Compare it with other teams. If the current champion loses to another 
+            team (grid[champion][i] == 0), update the champion to that team.
+        2. Validation:
+          . After identifying a potential champion, iterate through all teams to confirm:
+            . The champion must not lose to any other team (grid[champion][i] == 1).
+            . No other team can beat the champion (grid[i][champion] == 0).
+        3. Return Champion:
+          . If the validation passes, return the champion's index.
+          . Otherwise, return -1 to indicate no valid champion exists.
 			 */
 
 		</script>
