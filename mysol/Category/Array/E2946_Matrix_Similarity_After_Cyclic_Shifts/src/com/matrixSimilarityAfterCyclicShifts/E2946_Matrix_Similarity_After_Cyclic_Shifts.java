@@ -24,7 +24,27 @@ public class E2946_Matrix_Similarity_After_Cyclic_Shifts {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Normalization of k:
+		. k is normalized to k % n because shifting n times results in the same row.
+	2. Row Shifts:
+		. For even-indexed rows: Use isShiftedLeft to check if the row matches after k left shifts.
+		. For odd-indexed rows: Use isShiftedRight to check if the row matches after k right shifts.
+	3. Shift Validation Methods:
+		. isShiftedLeft: Checks if each element at index j matches the element at (j + k) % n.
+		. isShiftedRight: Checks if each element at index j matches the element at (j - k + n) % n.
+	4. Early Termination:
+		. If any row doesn't match after the shifts, return false immediately.
+	5. Return Result:
+		. If all rows pass their respective checks, return true.
+    */
 	
+	/*
+     * @param mat: a list of 2D integers
+     * @param k: an integer
+     * @return: true if the final modified matrix after k steps is identical to the original matrix
+     */
 	public boolean areSimilar(int[][] mat, int k) {
         int m = mat.length;       // Number of rows
         int n = mat[0].length;    // Number of columns
