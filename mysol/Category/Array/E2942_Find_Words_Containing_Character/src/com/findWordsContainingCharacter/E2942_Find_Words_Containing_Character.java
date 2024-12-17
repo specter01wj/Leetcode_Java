@@ -19,7 +19,21 @@ public class E2942_Find_Words_Containing_Character {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Loop Through Words: Iterate over the array words using a loop.
+	2. Check for Character: Use the indexOf method on each word to check 
+		if the character x exists (indexOf(x) != -1).
+	3. Add Index to Result: If the character exists, add the current index 
+		to the result list.
+	4. Return Result: Return the list of indices after iterating through all words.
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @param x: a char
+     * @return: an array of indices representing the words
+     */
 	public List<Integer> findWordsContaining(String[] words, char x) {
         List<Integer> result = new ArrayList<>();
         
