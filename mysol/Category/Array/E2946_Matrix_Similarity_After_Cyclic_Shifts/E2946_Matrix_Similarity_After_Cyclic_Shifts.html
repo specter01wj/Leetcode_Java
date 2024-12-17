@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed array of strings words and a character x.
+
+        Return an array of indices representing the words that contain the character x.
+
+        Note that the returned array may be in any order.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param words: a list of strings
+        * @param x: a char
+        * @return: an array of indices representing the words
+        */
+        let findWordsContaining = function(words, x) {
+            let result = [];
+            
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].includes(x)) { // Check if the character x exists in the current word
+                    result.push(i); // Add the index to the result array
+                }
+            }
+            
+            return result; // Return the array of indices
+        };
+
+        const input = ["abc","bcd","aaaa","cbc"];
+        const x = "a";
+        let results = findWordsContaining(input, x);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Loop Through Words: Iterate over the array words using a loop.
+        2. Check for Character: Use the indexOf method on each word to check 
+          if the character x exists (indexOf(x) != -1).
+        3. Add Index to Result: If the character exists, add the current index 
+          to the result list.
+        4. Return Result: Return the list of indices after iterating through all words.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
