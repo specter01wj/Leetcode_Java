@@ -1,18 +1,47 @@
-function findWordsContaining(words: string[], x: string): number[] {
-  const result: number[] = [];
+function areSimilar(mat: number[][], k: number): boolean {
+  const m: number = mat.length;       // Number of rows
+  const n: number = mat[0].length;    // Number of columns
   
-  for (let i = 0; i < words.length; i++) {
-      if (words[i].includes(x)) { // Check if the character x exists in the current word
-          result.push(i); // Add the index to the result array
+  // Normalize k to avoid unnecessary full cycles
+  k = k % n;
+
+  for (let i = 0; i < m; i++) {
+      if (i % 2 === 0) {
+          // Even-indexed rows: Shift left
+          if (!isShiftedLeft(mat[i], k, n)) {
+              return false;
+          }
+      } else {
+          // Odd-indexed rows: Shift right
+          if (!isShiftedRight(mat[i], k, n)) {
+              return false;
+          }
       }
   }
-  
-  return result; // Return the array of indices
+  return true;
 };
 
-const input: string[] = ["abc","bcd","aaaa","cbc"];
-const x: string = "a";
-const results = findWordsContaining(input, x);
+function isShiftedLeft(row: number[], k: number, n: number): boolean {
+  for (let j = 0; j < n; j++) {
+      if (row[j] !== row[(j + k) % n]) {
+          return false;
+      }
+  }
+  return true;
+}
+
+function isShiftedRight(row: number[], k: number, n: number): boolean {
+  for (let j = 0; j < n; j++) {
+      if (row[j] !== row[(j - k + n) % n]) {
+          return false;
+      }
+  }
+  return true;
+}
+
+const input: number[][] = [[1,2,3],[4,5,6],[7,8,9]];
+const k: number = 4;
+const results = areSimilar(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
