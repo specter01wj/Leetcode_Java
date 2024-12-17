@@ -1,26 +1,18 @@
-function maximumStrongPairXor(nums: number[]): number {
-  const n = nums.length;
-  let maxXor = 0;
-
-  // Iterate through all possible pairs
-  for (let i = 0; i < n; i++) {
-      for (let j = i; j < n; j++) {
-          const x = nums[i];
-          const y = nums[j];
-
-          // Check if the pair (x, y) is a strong pair
-          if (Math.abs(x - y) <= Math.min(x, y)) {
-              // Calculate XOR and update maxXor if it's larger
-              maxXor = Math.max(maxXor, x ^ y);
-          }
+function findWordsContaining(words: string[], x: string): number[] {
+  const result: number[] = [];
+  
+  for (let i = 0; i < words.length; i++) {
+      if (words[i].includes(x)) { // Check if the character x exists in the current word
+          result.push(i); // Add the index to the result array
       }
   }
-
-  return maxXor;
+  
+  return result; // Return the array of indices
 };
 
-const input: number[] = [1,2,3,4,5];
-const results = maximumStrongPairXor(input);
+const input: string[] = ["abc","bcd","aaaa","cbc"];
+const x: string = "a";
+const results = findWordsContaining(input, x);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
