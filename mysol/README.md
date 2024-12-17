@@ -782,6 +782,8 @@ By Jin Wang
 |2917|**Find the K-or of an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2923|**Find Champion I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2932|**Maximum Strong Pair XOR I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2942|**Find Words Containing Character**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2946|**Matrix Similarity After Cyclic Shifts**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
