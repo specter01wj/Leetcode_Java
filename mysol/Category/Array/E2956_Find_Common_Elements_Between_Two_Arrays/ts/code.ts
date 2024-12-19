@@ -1,19 +1,29 @@
-function findPeaks(mountain: number[]): number[] {
-  const peaks: number[] = [];
-  
-  // Start from the second element and go up to the second last element
-  for (let i = 1; i < mountain.length - 1; i++) {
-      // Check if the current element is strictly greater than its neighbors
-      if (mountain[i] > mountain[i - 1] && mountain[i] > mountain[i + 1]) {
-          peaks.push(i); // Add the index to the list of peaks
+function findIntersectionValues(nums1: number[], nums2: number[]): number[] {
+  // Create sets to store the elements of each array
+  const set1: Set<number> = new Set(nums1);
+  const set2: Set<number> = new Set(nums2);
+
+  // Count indices in nums1 that exist in nums2
+  let answer1: number = 0;
+  for (const num of nums1) {
+      if (set2.has(num)) {
+          answer1++;
       }
   }
-  
-  return peaks;
+
+  // Count indices in nums2 that exist in nums1
+  let answer2: number = 0;
+  for (const num of nums2) {
+      if (set1.has(num)) {
+          answer2++;
+      }
+  }
+
+  return [answer1, answer2];
 };
 
-const input: number[] = [1,4,3,8,5];
-const results = findPeaks(input);
+const input1: number[] = [4,3,2,3,1], input2: number[] = [2,2,5,2,3,6];
+const results = findIntersectionValues(input1, input2);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
