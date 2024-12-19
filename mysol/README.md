@@ -784,6 +784,8 @@ By Jin Wang
 |2932|**Maximum Strong Pair XOR I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2942|**Find Words Containing Character**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2946|**Matrix Similarity After Cyclic Shifts**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2951|**Find the Peaks**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2956|**Find Common Elements Between Two Arrays**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
