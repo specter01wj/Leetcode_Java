@@ -26,5 +26,5 @@ const input1: number[] = [4,3,2,3,1], input2: number[] = [2,2,5,2,3,6];
 const results = findIntersectionValues(input1, input2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input1, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
