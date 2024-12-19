@@ -20,7 +20,27 @@ public class E2956_Find_Common_Elements_Between_Two_Arrays {
         System.out.println("input: " + Arrays.toString(input1) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Use of Sets:
+		. A HashSet is used for efficient lookups to check if an element exists in another array.
+		. set1 is used to store elements from nums1 and set2 for elements from nums2.
+	2. Calculating answer1:
+		. Iterate through nums1 and check if each element exists in set2.
+		. Increment answer1 for every match.
+		. Also, add elements to set1 while iterating for later use.
+	3. Calculating answer2:
+		. Iterate through nums2 and check if each element exists in set1.
+		. Increment answer2 for every match.
+	4. Return Result:
+		. Return an array with [answer1, answer2].
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @return: [answer1,answer2]
+     */
 	public int[] findIntersectionValues(int[] nums1, int[] nums2) {
         // Create sets to store the elements of each array
         Set<Integer> set1 = new HashSet<>();
