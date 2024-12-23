@@ -29,7 +29,26 @@ public class E2960_Count_Tested_Devices_After_Test_Operations {
         System.out.println("input: " + Arrays.toString(originalInput) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialization:
+		. n: The length of the batteryPercentages array.
+		. testedDevices: Counter for the number of devices tested.
+	2. Iterate through devices:
+		. For each device i, check if its battery percentage is greater than 0:
+			. If true:
+				. Increment testedDevices.
+				. For all devices with indices j in range [i + 1, n - 1], 
+					decrease their battery percentage by 1 but ensure it 
+					does not go below 0 using Math.max(0, batteryPercentages[j] - 1).
+	3. Return the result:
+		. Return the total count of tested devices.
+    */
 	
+	/*
+     * @param batteryPercentages: a list of integers
+     * @return: an integer denoting the number of devices
+     */
 	public int countTestedDevices(int[] batteryPercentages) {
         int n = batteryPercentages.length;
         int testedDevices = 0;
