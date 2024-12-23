@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given two integer arrays nums1 and nums2 of sizes n and m, respectively. 
+        Calculate the following values:
+
+          . answer1 : the number of indices i such that nums1[i] exists in nums2.
+          . answer2 : the number of indices i such that nums2[i] exists in nums1.
+
+        Return [answer1,answer2].
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @return: [answer1,answer2]
+        */
+        let findIntersectionValues = function(nums1, nums2) {
+            // Create sets to store the elements of each array
+            const set1 = new Set(nums1);
+            const set2 = new Set(nums2);
+
+            // Count indices in nums1 that exist in nums2
+            let answer1 = 0;
+            for (const num of nums1) {
+                if (set2.has(num)) {
+                    answer1++;
+                }
+            }
+
+            // Count indices in nums2 that exist in nums1
+            let answer2 = 0;
+            for (const num of nums2) {
+                if (set1.has(num)) {
+                    answer2++;
+                }
+            }
+
+            return [answer1, answer2];
+        };
+
+        const input1 = [4,3,2,3,1], input2 = [2,2,5,2,3,6];
+        let results = findIntersectionValues(input1, input2);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input1, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Use of Sets:
+          . A HashSet is used for efficient lookups to check if an element exists in another array.
+          . set1 is used to store elements from nums1 and set2 for elements from nums2.
+        2. Calculating answer1:
+          . Iterate through nums1 and check if each element exists in set2.
+          . Increment answer1 for every match.
+          . Also, add elements to set1 while iterating for later use.
+        3. Calculating answer2:
+          . Iterate through nums2 and check if each element exists in set1.
+          . Increment answer2 for every match.
+        4. Return Result:
+          . Return an array with [answer1, answer2].
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
