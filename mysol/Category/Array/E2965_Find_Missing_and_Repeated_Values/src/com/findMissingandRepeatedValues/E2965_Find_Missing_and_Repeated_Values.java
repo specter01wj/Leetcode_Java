@@ -20,7 +20,20 @@ public class E2965_Find_Missing_and_Repeated_Values {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Frequency Array: A frequency array frequency is used to track the count of each number from 1 to n^2.
+	2. Grid Traversal: Each element in the grid is used to update the frequency array.
+	3. Identify Missing and Repeated Values:
+		. A number with a frequency of 2 is the repeated number.
+		. A number with a frequency of 0 is the missing number.
+	4. Early Exit: The loop terminates early when both the repeated and missing numbers are identified.
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: a 0-indexed integer array ans of size 2
+     */
 	public int[] findMissingAndRepeatedValues(int[][] grid) {
         int n = grid.length;
         int nSquared = n * n;
