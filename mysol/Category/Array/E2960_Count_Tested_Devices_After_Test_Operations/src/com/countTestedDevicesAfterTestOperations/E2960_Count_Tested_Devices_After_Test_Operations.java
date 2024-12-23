@@ -24,8 +24,9 @@ public class E2960_Count_Tested_Devices_After_Test_Operations {
 	public static void main(String[] args) {
 		E2960_Count_Tested_Devices_After_Test_Operations solution = new E2960_Count_Tested_Devices_After_Test_Operations();
 		int[] input = {1,1,2,1,3};
+		int[] originalInput = Arrays.copyOf(input, input.length);
 		int output = solution.countTestedDevices(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+        System.out.println("input: " + Arrays.toString(originalInput) + "\noutput: " + (output));
 	}
 	
 	
