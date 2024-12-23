@@ -4,63 +4,63 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given two integer arrays nums1 and nums2 of sizes n and m, respectively. 
-        Calculate the following values:
+			 	You are given a 0-indexed integer array batteryPercentages having length n, 
+        denoting the battery percentages of n 0-indexed devices.
 
-          . answer1 : the number of indices i such that nums1[i] exists in nums2.
-          . answer2 : the number of indices i such that nums2[i] exists in nums1.
+        Your task is to test each device i in order from 0 to n - 1, by performing 
+        the following test operations:
 
-        Return [answer1,answer2].
+          . If batteryPercentages[i] is greater than 0:
+            . Increment the count of tested devices.
+            . Decrease the battery percentage of all devices with indices j in 
+              the range [i + 1, n - 1] by 1, ensuring their battery percentage 
+              never goes below 0, i.e, batteryPercentages[j] = max(0, batteryPercentages[j] - 1).
+            . Move to the next device.
+          . Otherwise, move to the next device without performing any test.
+
+        Return an integer denoting the number of devices that will be tested after performing the test operations in order.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums1: a list of integers
-        * @param nums2: a list of integers
-        * @return: [answer1,answer2]
+        * @param batteryPercentages: a list of integers
+        * @return: an integer denoting the number of devices
         */
-        let findIntersectionValues = function(nums1, nums2) {
-            // Create sets to store the elements of each array
-            const set1 = new Set(nums1);
-            const set2 = new Set(nums2);
+        let countTestedDevices = function(batteryPercentages) {
+            let testedDevices = 0;
 
-            // Count indices in nums1 that exist in nums2
-            let answer1 = 0;
-            for (const num of nums1) {
-                if (set2.has(num)) {
-                    answer1++;
+            for (let i = 0; i < batteryPercentages.length; i++) {
+                // Check if the current device can be tested
+                if (batteryPercentages[i] > 0) {
+                    testedDevices++;
+                    // Decrease the battery percentage for devices in range [i + 1, n - 1]
+                    for (let j = i + 1; j < batteryPercentages.length; j++) {
+                        batteryPercentages[j] = Math.max(0, batteryPercentages[j] - 1);
+                    }
                 }
             }
 
-            // Count indices in nums2 that exist in nums1
-            let answer2 = 0;
-            for (const num of nums2) {
-                if (set1.has(num)) {
-                    answer2++;
-                }
-            }
-
-            return [answer1, answer2];
+            return testedDevices;
         };
 
-        const input1 = [4,3,2,3,1], input2 = [2,2,5,2,3,6];
-        let results = findIntersectionValues(input1, input2);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input1, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        const input = [1,1,2,1,3]
+        let results = countTestedDevices(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Use of Sets:
-          . A HashSet is used for efficient lookups to check if an element exists in another array.
-          . set1 is used to store elements from nums1 and set2 for elements from nums2.
-        2. Calculating answer1:
-          . Iterate through nums1 and check if each element exists in set2.
-          . Increment answer1 for every match.
-          . Also, add elements to set1 while iterating for later use.
-        3. Calculating answer2:
-          . Iterate through nums2 and check if each element exists in set1.
-          . Increment answer2 for every match.
-        4. Return Result:
-          . Return an array with [answer1, answer2].
+				1. Initialization:
+          . n: The length of the batteryPercentages array.
+          . testedDevices: Counter for the number of devices tested.
+        2. Iterate through devices:
+          . For each device i, check if its battery percentage is greater than 0:
+            . If true:
+              . Increment testedDevices.
+              . For all devices with indices j in range [i + 1, n - 1], 
+                decrease their battery percentage by 1 but ensure it 
+                does not go below 0 using Math.max(0, batteryPercentages[j] - 1).
+        3. Return the result:
+          . Return the total count of tested devices.
 			 */
 
 		</script>
