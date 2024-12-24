@@ -45,8 +45,9 @@
         };
 
         const input = [5,4,2,3];
+        const inputCopy = [...input];
         let results = numberGame(input);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+				$('#t1').html('<h2>Input: ' + JSON.stringify(inputCopy, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
