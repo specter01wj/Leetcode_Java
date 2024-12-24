@@ -26,7 +26,21 @@ public class E2970_Count_the_Number_of_Incremovable_Subarrays_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer Loops:
+		. Use two nested loops to generate all subarrays with indices [start, end].
+	2. isIncremovable Method:
+		. For each subarray [start, end], iterate through the array while skipping the indices in the subarray.
+		. Keep track of the last seen number (prev) and check if the remaining elements form a strictly increasing sequence.
+	3. Count:
+		. Increment the count for every subarray that satisfies the "incremovable" condition.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the total number of incremovable subarrays of nums
+     */
 	public int incremovableSubarrayCount(int[] nums) {
         int n = nums.length;
         int count = 0;
