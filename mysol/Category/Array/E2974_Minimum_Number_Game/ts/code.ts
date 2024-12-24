@@ -1,37 +1,28 @@
-function incremovableSubarrayCount(nums: number[]): number {
-  const n = nums.length;
-  let count = 0;
+function numberGame(nums: number[]): number[] {
+  // Sort the array to handle minimum elements
+  nums.sort((a, b) => a - b);
 
-  // Helper function to check if a subarray is incremovable
-  const isIncremovable = (start: number, end: number): boolean => {
-      let prev = -Infinity;
+  // Result array to store the output
+  const arr: number[] = [];
 
-      for (let i = 0; i < n; i++) {
-          if (i < start || i > end) { // Skip the subarray [start, end]
-              if (nums[i] <= prev) {
-                  return false; // Not strictly increasing
-              }
-              prev = nums[i];
-          }
-      }
+  // Simulate the game
+  while (nums.length > 0) {
+      // Alice removes the minimum element
+      const alice = nums.shift()!; // Use `!` to indicate that shift won't return undefined
 
-      return true;
-  };
+      // Bob removes the minimum element
+      const bob = nums.shift()!; // Use `!` to indicate that shift won't return undefined
 
-  // Iterate over all possible subarray start and end indices
-  for (let start = 0; start < n; start++) {
-      for (let end = start; end < n; end++) {
-          if (isIncremovable(start, end)) {
-              count++;
-          }
-      }
+      // Bob appends to the array first, then Alice
+      arr.push(bob);
+      arr.push(alice);
   }
 
-  return count;
+  return arr;
 };
 
-const input: number[] = [6,5,7,8];
-const results = incremovableSubarrayCount(input);
+const input: number[] = [5,4,2,3];
+const results = numberGame(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
