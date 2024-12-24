@@ -1,40 +1,37 @@
-function findMissingAndRepeatedValues(grid: number[][]): number[] {
-  const n = grid.length;
-  const nSquared = n * n;
+function incremovableSubarrayCount(nums: number[]): number {
+  const n = nums.length;
+  let count = 0;
 
-  // Create a frequency array to track occurrences of each number.
-  const frequency: number[] = new Array(nSquared + 1).fill(0);
+  // Helper function to check if a subarray is incremovable
+  const isIncremovable = (start: number, end: number): boolean => {
+      let prev = -Infinity;
 
-  // Count the occurrences of each number in the grid.
-  for (let i = 0; i < n; i++) {
-      for (let j = 0; j < n; j++) {
-          frequency[grid[i][j]]++;
+      for (let i = 0; i < n; i++) {
+          if (i < start || i > end) { // Skip the subarray [start, end]
+              if (nums[i] <= prev) {
+                  return false; // Not strictly increasing
+              }
+              prev = nums[i];
+          }
+      }
+
+      return true;
+  };
+
+  // Iterate over all possible subarray start and end indices
+  for (let start = 0; start < n; start++) {
+      for (let end = start; end < n; end++) {
+          if (isIncremovable(start, end)) {
+              count++;
+          }
       }
   }
 
-  let repeated = -1;
-  let missing = -1;
-
-  // Find the repeated and missing numbers.
-  for (let i = 1; i <= nSquared; i++) {
-      if (frequency[i] === 2) {
-          repeated = i;
-      } else if (frequency[i] === 0) {
-          missing = i;
-      }
-
-      // If both values are found, break early.
-      if (repeated !== -1 && missing !== -1) {
-          break;
-      }
-  }
-
-  // Return the result as an array.
-  return [repeated, missing];
+  return count;
 };
 
-const input: number[][] = [[9,1,7],[8,9,2],[3,4,6]];
-const results = findMissingAndRepeatedValues(input);
+const input: number[] = [6,5,7,8];
+const results = incremovableSubarrayCount(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
