@@ -17,6 +17,7 @@ function numberGame(nums) {
 }
 ;
 const input = [5, 4, 2, 3];
+const inputCopy = [...input];
 const results = numberGame(input);
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(inputCopy, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
