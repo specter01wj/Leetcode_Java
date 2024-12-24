@@ -24,7 +24,21 @@ public class E2974_Minimum_Number_Game {
         System.out.println("input: " + Arrays.toString(originalInput) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Sorting the Array: The array nums is sorted to easily access the smallest elements in each round.
+	2. LinkedList: A LinkedList is used to simulate the removal of elements efficiently.
+	3. Simulating the Game:
+		. Alice removes the first element (pollFirst) from the list.
+		. Bob removes the next smallest element from the list.
+		. Bob appends his removed element to the result array first, followed by Alice.
+	4. Returning the Result: The arr array, which stores the result, is returned at the end.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the resulting array arr
+     */
 	public int[] numberGame(int[] nums) {
         // Sort the array to handle minimum elements
         Arrays.sort(nums);

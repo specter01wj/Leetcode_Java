@@ -38,7 +38,7 @@ public class E2970_Count_the_Number_of_Incremovable_Subarrays_I {
     */
 	
 	/*
-     * @param arr: a list of integers
+     * @param nums: a list of integers
      * @return: the total number of incremovable subarrays of nums
      */
 	public int incremovableSubarrayCount(int[] nums) {
