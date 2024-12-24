@@ -4,69 +4,59 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array of positive integers nums.
+			 	You are given a 0-indexed integer array nums of even length and there is 
+        also an empty array arr. Alice and Bob decided to play a game where in 
+        every round Alice and Bob will do one move. 
+        The rules of the game are as follows:
 
-        A subarray of nums is called incremovable if nums becomes strictly 
-        increasing on removing the subarray. For example, the subarray [3, 4] 
-        is an incremovable subarray of [5, 3, 4, 6, 7] because removing this 
-        subarray changes the array [5, 3, 4, 6, 7] to [5, 6, 7] which is 
-        strictly increasing.
+          . Every round, first Alice will remove the minimum element from nums, and then Bob does the same.
+          . Now, first Bob will append the removed element in the array arr, and then Alice does the same.
+          . The game continues until nums becomes empty.
 
-        Return the total number of incremovable subarrays of nums.
-
-        Note that an empty array is considered strictly increasing.
-
-        A subarray is a contiguous non-empty sequence of elements within an array.
+        Return the resulting array arr.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param arr: a list of integers
-        * @return: the total number of incremovable subarrays of nums
+        * @param nums: a list of integers
+        * @return: the resulting array arr
         */
-        let incremovableSubarrayCount = function(nums) {
-            const n = nums.length;
-            let count = 0;
+        let numberGame = function(nums) {
+            // Sort the array to handle minimum elements
+            nums.sort((a, b) => a - b);
 
-            // Function to check if a subarray is incremovable
-            const isIncremovable = (start, end) => {
-                let prev = -Infinity;
-                for (let i = 0; i < n; i++) {
-                    if (i < start || i > end) { // Skip the subarray [start, end]
-                        if (nums[i] <= prev) {
-                            return false; // Not strictly increasing
-                        }
-                        prev = nums[i];
-                    }
-                }
-                return true;
-            };
+            // Result array to store the output
+            const arr = [];
 
-            // Iterate over all possible subarray start and end indices
-            for (let start = 0; start < n; start++) {
-                for (let end = start; end < n; end++) {
-                    if (isIncremovable(start, end)) {
-                        count++;
-                    }
-                }
+            // Simulate the game
+            while (nums.length > 0) {
+                // Alice removes the minimum element
+                const alice = nums.shift();
+
+                // Bob removes the minimum element
+                const bob = nums.shift();
+
+                // Bob appends to the array first, then Alice
+                arr.push(bob);
+                arr.push(alice);
             }
 
-            return count;
+            return arr;
         };
 
-        const input = [6,5,7,8];
-        let results = incremovableSubarrayCount(input);
+        const input = [5,4,2,3];
+        let results = numberGame(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Outer Loops:
-          . Use two nested loops to generate all subarrays with indices [start, end].
-        2. isIncremovable Method:
-          . For each subarray [start, end], iterate through the array while skipping the indices in the subarray.
-          . Keep track of the last seen number (prev) and check if the remaining elements form a strictly increasing sequence.
-        3. Count:
-          . Increment the count for every subarray that satisfies the "incremovable" condition.
+				1. Sorting the Array: The array nums is sorted to easily access the smallest elements in each round.
+        2. LinkedList: A LinkedList is used to simulate the removal of elements efficiently.
+        3. Simulating the Game:
+          . Alice removes the first element (pollFirst) from the list.
+          . Bob removes the next smallest element from the list.
+          . Bob appends his removed element to the result array first, followed by Alice.
+        4. Returning the Result: The arr array, which stores the result, is returned at the end.
 			 */
 
 		</script>
