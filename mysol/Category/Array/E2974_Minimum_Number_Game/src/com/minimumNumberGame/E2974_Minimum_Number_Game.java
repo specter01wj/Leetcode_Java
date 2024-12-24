@@ -19,8 +19,9 @@ public class E2974_Minimum_Number_Game {
 	public static void main(String[] args) {
 		E2974_Minimum_Number_Game solution = new E2974_Minimum_Number_Game();
 		int[] input = {5,4,2,3};
+		int[] originalInput = Arrays.copyOf(input, input.length);
 		int[] output = solution.numberGame(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
+        System.out.println("input: " + Arrays.toString(originalInput) + "\noutput: " + Arrays.toString(output));
 	}
 	
 	
