@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed integer array nums of even length and there is 
+        also an empty array arr. Alice and Bob decided to play a game where in 
+        every round Alice and Bob will do one move. 
+        The rules of the game are as follows:
+
+          . Every round, first Alice will remove the minimum element from nums, and then Bob does the same.
+          . Now, first Bob will append the removed element in the array arr, and then Alice does the same.
+          . The game continues until nums becomes empty.
+
+        Return the resulting array arr.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the resulting array arr
+        */
+        let numberGame = function(nums) {
+            // Sort the array to handle minimum elements
+            nums.sort((a, b) => a - b);
+
+            // Result array to store the output
+            const arr = [];
+
+            // Simulate the game
+            while (nums.length > 0) {
+                // Alice removes the minimum element
+                const alice = nums.shift();
+
+                // Bob removes the minimum element
+                const bob = nums.shift();
+
+                // Bob appends to the array first, then Alice
+                arr.push(bob);
+                arr.push(alice);
+            }
+
+            return arr;
+        };
+
+        const input = [5,4,2,3];
+        const inputCopy = [...input];
+        let results = numberGame(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(inputCopy, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Sorting the Array: The array nums is sorted to easily access the smallest elements in each round.
+        2. LinkedList: A LinkedList is used to simulate the removal of elements efficiently.
+        3. Simulating the Game:
+          . Alice removes the first element (pollFirst) from the list.
+          . Bob removes the next smallest element from the list.
+          . Bob appends his removed element to the result array first, followed by Alice.
+        4. Returning the Result: The arr array, which stores the result, is returned at the end.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
