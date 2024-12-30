@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed array of integers nums.
+
+        A prefix nums[0..i] is sequential if, for all 1 <= j <= i, 
+        nums[j] = nums[j - 1] + 1. In particular, the prefix consisting 
+        only of nums[0] is sequential.
+
+        Return the smallest integer x missing from nums such that x is 
+        greater than or equal to the sum of the longest sequential prefix.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the smallest integer x missing from nums
+        */
+        let missingInteger = function(nums) {
+            // Find the longest sequential prefix and its sum
+            let sum = nums[0];
+            let longestSequentialEnd = 0;
+
+            for (let i = 1; i < nums.length; i++) {
+                if (nums[i] === nums[i - 1] + 1) {
+                    sum += nums[i];
+                    longestSequentialEnd = i;
+                } else {
+                    break;
+                }
+            }
+
+            // Find the smallest integer missing from nums that is >= sum
+            let x = sum;
+            while (true) {
+                if (!nums.includes(x)) {
+                    return x;
+                }
+                x++;
+            }
+        };
+
+        const input = [1,2,3,2,5];
+        let results = missingInteger(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Finding the Longest Sequential Prefix:
+          . Start with the first element and iterate through the array.
+          . Add the current element to sum if it continues the sequential pattern (nums[i] == nums[i - 1] + 1).
+        2. Determining the Missing Integer:
+          . Start checking from the sum of the sequential prefix.
+          . If the current integer is not found in the array, return it as the result.
+          . Otherwise, increment x and repeat.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
