@@ -21,7 +21,21 @@ public class E2996_Smallest_Missing_Integer_Greater_Than_Sequential_Prefix_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Finding the Longest Sequential Prefix:
+		. Start with the first element and iterate through the array.
+		. Add the current element to sum if it continues the sequential pattern (nums[i] == nums[i - 1] + 1).
+	2. Determining the Missing Integer:
+		. Start checking from the sum of the sequential prefix.
+		. If the current integer is not found in the array, return it as the result.
+		. Otherwise, increment x and repeat.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the smallest integer x missing from nums
+     */
 	public int missingInteger(int[] nums) {
         // Find the longest sequential prefix and its sum
         int sum = nums[0];
