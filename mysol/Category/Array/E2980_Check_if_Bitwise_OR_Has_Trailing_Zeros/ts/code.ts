@@ -1,30 +1,24 @@
-function numberGame(nums: number[]): number[] {
-  // Sort the array to handle minimum elements
-  nums.sort((a, b) => a - b);
+function hasTrailingZeros(nums: number[]): boolean {
+  // Iterate through all pairs of elements in the array
+  for (let i = 0; i < nums.length; i++) {
+      for (let j = i + 1; j < nums.length; j++) {
+          // Calculate the bitwise OR of nums[i] and nums[j]
+          let bitwiseOr = nums[i] | nums[j];
 
-  // Result array to store the output
-  const arr: number[] = [];
-
-  // Simulate the game
-  while (nums.length > 0) {
-      // Alice removes the minimum element
-      const alice = nums.shift()!; // Use `!` to indicate that shift won't return undefined
-
-      // Bob removes the minimum element
-      const bob = nums.shift()!; // Use `!` to indicate that shift won't return undefined
-
-      // Bob appends to the array first, then Alice
-      arr.push(bob);
-      arr.push(alice);
+          // Check if the bitwise OR has at least one trailing zero
+          if ((bitwiseOr & 1) === 0) {
+              return true; // Found at least one pair with trailing zero
+          }
+      }
   }
 
-  return arr;
+  // If no such pair is found, return false
+  return false;
 };
 
-const input: number[] = [5,4,2,3];
-const inputCopy = [...input];
-const results = numberGame(input);
+const input: number[] = [1,2,3,4,5];
+const results = hasTrailingZeros(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(inputCopy, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
