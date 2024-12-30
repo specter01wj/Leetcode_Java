@@ -395,6 +395,8 @@ Cspiration Category:
 |2965|Find Missing and Repeated Values|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2970|Count the Number of Incremovable Subarrays I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2974|Minimum Number Game|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2974|Check if Bitwise OR Has Trailing Zeros|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2974|Smallest Missing Integer Greater Than Sequential Prefix Sum|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
