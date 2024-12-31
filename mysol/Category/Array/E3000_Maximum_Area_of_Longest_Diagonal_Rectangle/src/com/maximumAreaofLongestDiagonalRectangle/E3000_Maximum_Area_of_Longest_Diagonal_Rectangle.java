@@ -22,7 +22,21 @@ public class E3000_Maximum_Area_of_Longest_Diagonal_Rectangle {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Calculate the diagonal length: Use the formula: diagonal = sqrt(length*length + width*width).
+    2. Calculate the area: Multiply length and width.
+	3. Compare diagonals: If the current diagonal is larger than the maxDiagonal, 
+		update maxDiagonal and maxArea. If the diagonals are equal, check the areas 
+		and update the maxArea if necessary.
+	4. Return the maximum area: After iterating through all rectangles, 
+		return the area corresponding to the longest diagonal.
+    */
 	
+	/*
+     * @param arr: a list of 2D integers
+     * @return: the area of the rectangle having the longest diagonal
+     */
 	public int areaOfMaxDiagonal(int[][] dimensions) {
         double maxDiagonal = 0;
         int maxArea = 0;
