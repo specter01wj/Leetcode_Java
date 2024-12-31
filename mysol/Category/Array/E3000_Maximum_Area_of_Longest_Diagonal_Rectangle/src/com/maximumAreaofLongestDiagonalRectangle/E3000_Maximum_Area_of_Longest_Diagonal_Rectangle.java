@@ -34,7 +34,7 @@ public class E3000_Maximum_Area_of_Longest_Diagonal_Rectangle {
     */
 	
 	/*
-     * @param arr: a list of 2D integers
+     * @param dimensions: a list of 2D integers
      * @return: the area of the rectangle having the longest diagonal
      */
 	public int areaOfMaxDiagonal(int[][] dimensions) {
