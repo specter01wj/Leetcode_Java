@@ -4,56 +4,61 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 2D 0-indexed integer array dimensions.
+			 	You are given an array nums consisting of positive integers.
 
-        For all indices i, 0 <= i < dimensions.length, dimensions[i][0] 
-        represents the length and dimensions[i][1] represents the width 
-        of the rectangle i.
+        Return the total frequencies of elements in nums such that those 
+        elements all have the maximum frequency.
 
-        Return the area of the rectangle having the longest diagonal. 
-        If there are multiple rectangles with the longest diagonal, 
-        return the area of the rectangle having the maximum area.
+        The frequency of an element is the number of occurrences of that 
+        element in the array.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param arr: a list of 2D integers
-        * @return: the area of the rectangle having the longest diagonal
+        * @param nums: a list of integers
+        * @return: the total frequencies of elements in nums
         */
-        let areaOfMaxDiagonal = function(dimensions) {
-            let maxDiagonal = 0;
-            let maxArea = 0;
-
-            for (let [length, width] of dimensions) {
-                // Calculate the diagonal length using the Pythagorean theorem
-                let diagonal = Math.sqrt(length * length + width * width);
-
-                // Calculate the area of the rectangle
-                let area = length * width;
-
-                // Update the maximum diagonal and area based on the conditions
-                if (diagonal > maxDiagonal || (diagonal === maxDiagonal && area > maxArea)) {
-                    maxDiagonal = diagonal;
-                    maxArea = area;
+        let maxFrequencyElements = function(nums) {
+            const frequencyMap = new Map();
+            
+            // Count the frequency of each element in the array
+            for (let num of nums) {
+                frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+            }
+            
+            // Find the maximum frequency
+            let maxFrequency = 0;
+            for (let freq of frequencyMap.values()) {
+                maxFrequency = Math.max(maxFrequency, freq);
+            }
+            
+            // Calculate the total frequencies of elements with maximum frequency
+            let totalCount = 0;
+            for (let num of nums) {
+                if (frequencyMap.get(num) === maxFrequency) {
+                    totalCount++;
                 }
             }
-
-            return maxArea;
+            
+            return totalCount;
         };
 
-        const input = [[9,3],[8,6]];
-        let results = areaOfMaxDiagonal(input);
+        const input = [1,2,2,3,1,4];
+        let results = maxFrequencyElements(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Calculate the diagonal length: Use the formula: diagonal = sqrt(length*length + width*width).
-        2. Calculate the area: Multiply length and width.
-        3. Compare diagonals: If the current diagonal is larger than the maxDiagonal, 
-            update maxDiagonal and maxArea. If the diagonals are equal, check the areas 
-            and update the maxArea if necessary.
-        4. Return the maximum area: After iterating through all rectangles, 
-            return the area corresponding to the longest diagonal.
+				1. Frequency Map:
+          . Count the occurrences of each number in the array using a HashMap.
+          . The keys are the array elements, and the values are their frequencies.
+        2. Find Maximum Frequency:
+          . Iterate through the HashMap values to find the maximum frequency.
+        3. Count Elements with Maximum Frequency:
+          . Traverse the array again, and for each element, check if its frequency matches the maximum frequency.
+          . If yes, increment the count.
+        4. Return Result:
+          . Return the count of elements with the maximum frequency.
 			 */
 
 		</script>
