@@ -4,58 +4,56 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed array of integers nums.
+			 	You are given a 2D 0-indexed integer array dimensions.
 
-        A prefix nums[0..i] is sequential if, for all 1 <= j <= i, 
-        nums[j] = nums[j - 1] + 1. In particular, the prefix consisting 
-        only of nums[0] is sequential.
+        For all indices i, 0 <= i < dimensions.length, dimensions[i][0] 
+        represents the length and dimensions[i][1] represents the width 
+        of the rectangle i.
 
-        Return the smallest integer x missing from nums such that x is 
-        greater than or equal to the sum of the longest sequential prefix.
+        Return the area of the rectangle having the longest diagonal. 
+        If there are multiple rectangles with the longest diagonal, 
+        return the area of the rectangle having the maximum area.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the smallest integer x missing from nums
+        * @param arr: a list of 2D integers
+        * @return: the area of the rectangle having the longest diagonal
         */
-        let missingInteger = function(nums) {
-            // Find the longest sequential prefix and its sum
-            let sum = nums[0];
-            let longestSequentialEnd = 0;
+        let areaOfMaxDiagonal = function(dimensions) {
+            let maxDiagonal = 0;
+            let maxArea = 0;
 
-            for (let i = 1; i < nums.length; i++) {
-                if (nums[i] === nums[i - 1] + 1) {
-                    sum += nums[i];
-                    longestSequentialEnd = i;
-                } else {
-                    break;
+            for (let [length, width] of dimensions) {
+                // Calculate the diagonal length using the Pythagorean theorem
+                let diagonal = Math.sqrt(length * length + width * width);
+
+                // Calculate the area of the rectangle
+                let area = length * width;
+
+                // Update the maximum diagonal and area based on the conditions
+                if (diagonal > maxDiagonal || (diagonal === maxDiagonal && area > maxArea)) {
+                    maxDiagonal = diagonal;
+                    maxArea = area;
                 }
             }
 
-            // Find the smallest integer missing from nums that is >= sum
-            let x = sum;
-            while (true) {
-                if (!nums.includes(x)) {
-                    return x;
-                }
-                x++;
-            }
+            return maxArea;
         };
 
-        const input = [1,2,3,2,5];
-        let results = missingInteger(input);
+        const input = [[9,3],[8,6]];
+        let results = areaOfMaxDiagonal(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Finding the Longest Sequential Prefix:
-          . Start with the first element and iterate through the array.
-          . Add the current element to sum if it continues the sequential pattern (nums[i] == nums[i - 1] + 1).
-        2. Determining the Missing Integer:
-          . Start checking from the sum of the sequential prefix.
-          . If the current integer is not found in the array, return it as the result.
-          . Otherwise, increment x and repeat.
+				1. Calculate the diagonal length: Use the formula: diagonal = sqrt(length*length + width*width).
+        2. Calculate the area: Multiply length and width.
+        3. Compare diagonals: If the current diagonal is larger than the maxDiagonal, 
+            update maxDiagonal and maxArea. If the diagonals are equal, check the areas 
+            and update the maxArea if necessary.
+        4. Return the maximum area: After iterating through all rectangles, 
+            return the area corresponding to the longest diagonal.
 			 */
 
 		</script>
