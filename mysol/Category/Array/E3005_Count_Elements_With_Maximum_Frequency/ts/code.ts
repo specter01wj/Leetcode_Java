@@ -1,26 +1,30 @@
-function areaOfMaxDiagonal(dimensions: number[][]): number {
-  let maxDiagonal: number = 0;
-  let maxArea: number = 0;
+function maxFrequencyElements(nums: number[]): number {
+  const frequencyMap = new Map<number, number>();
 
-  for (const [length, width] of dimensions) {
-      // Calculate the diagonal length using the Pythagorean theorem
-      const diagonal: number = Math.sqrt(length * length + width * width);
+  // Count the frequency of each element in the array
+  for (const num of nums) {
+      frequencyMap.set(num, (frequencyMap.get(num) || 0) + 1);
+  }
 
-      // Calculate the area of the rectangle
-      const area: number = length * width;
+  // Find the maximum frequency
+  let maxFrequency = 0;
+  for (const freq of frequencyMap.values()) {
+      maxFrequency = Math.max(maxFrequency, freq);
+  }
 
-      // Update the maximum diagonal and area based on the conditions
-      if (diagonal > maxDiagonal || (diagonal === maxDiagonal && area > maxArea)) {
-          maxDiagonal = diagonal;
-          maxArea = area;
+  // Calculate the total frequencies of elements with maximum frequency
+  let totalCount = 0;
+  for (const num of nums) {
+      if (frequencyMap.get(num) === maxFrequency) {
+          totalCount++;
       }
   }
 
-  return maxArea;
+  return totalCount;
 };
 
-const input: number[][] = [[9,3],[8,6]];
-const results = areaOfMaxDiagonal(input);
+const input: number[] = [1,2,2,3,1,4];
+const results = maxFrequencyElements(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
