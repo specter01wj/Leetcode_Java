@@ -792,6 +792,8 @@ By Jin Wang
 |2974|**Minimum Number Game**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2974|**Check if Bitwise OR Has Trailing Zeros**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2974|**Smallest Missing Integer Greater Than Sequential Prefix Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3000|**Maximum Area of Longest Diagonal Rectangle**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3005|**Count Elements With Maximum Frequency**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
