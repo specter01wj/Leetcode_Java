@@ -21,7 +21,24 @@ public class E3010_Divide_an_Array_Into_Subarrays_With_Minimum_Cost_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Nested Loops:
+		. The first loop identifies the boundary of the first subarray.
+		. The second loop identifies the boundary of the second subarray.
+		. The remaining elements form the third subarray.
+	2. Costs:
+		. The first element of each subarray determines the cost of that subarray.
+	3. Optimization:
+		. For each division, calculate the total cost and update the minimum cost.
+	4. Return Value:
+		. After checking all possible divisions, return the minimum cost.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum possible sum of the cost of these subarrays
+     */
 	public int minimumCost(int[] nums) {
         int n = nums.length;
         if (n < 3) {
