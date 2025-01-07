@@ -20,7 +20,20 @@ public class E3024_Type_of_Triangle {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Input Validation: Ensure the input array is not null and contains exactly three elements.
+	2. Sort the Array: Sorting simplifies the triangle inequality checks.
+	3. Triangle Inequality Check: If the sum of the two smaller sides is not greater than the largest side, it cannot form a triangle.
+	4. Equilateral Check: All three sides must be equal.
+	5. Isosceles Check: Exactly two sides must be equal.
+	6. Scalene Check: If none of the above conditions are met, the triangle is scalene.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: a string representing the type of triangle
+     */
 	public String triangleType(int[] nums) {
         // Check if the array is not null and has exactly 3 elements
         if (nums == null || nums.length != 3) {
