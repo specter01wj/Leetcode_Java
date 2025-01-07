@@ -1,33 +1,33 @@
-function minimumCost(nums: number[]): number {
-  const n = nums.length;
-  if (n < 3) {
-      return -1; // Return -1 for invalid input
+function triangleType(nums: number[]): string {
+  // Check if the array is valid and has exactly 3 elements
+  if (!nums || nums.length !== 3) {
+      return "none";
   }
 
-  // Initialize the minimum cost to a high value
-  let minCost = Infinity;
+  // Sort the array to simplify triangle inequality checks
+  nums.sort((a, b) => a - b);
 
-  // Iterate through all possible divisions of the array into 3 subarrays
-  for (let i = 1; i < n - 1; i++) {
-      for (let j = i + 1; j < n; j++) {
-          // Divide the array into three subarrays
-          const cost1 = nums[0]; // First subarray starts at index 0
-          const cost2 = nums[i]; // Second subarray starts at index i
-          const cost3 = nums[j]; // Third subarray starts at index j
-
-          // Calculate the total cost for this division
-          const totalCost = cost1 + cost2 + cost3;
-
-          // Update the minimum cost if needed
-          minCost = Math.min(minCost, totalCost);
-      }
+  // Check if the sides can form a triangle
+  if (nums[0] + nums[1] <= nums[2]) {
+      return "none";
   }
 
-  return minCost;
+  // Check for equilateral triangle
+  if (nums[0] === nums[1] && nums[1] === nums[2]) {
+      return "equilateral";
+  }
+
+  // Check for isosceles triangle
+  if (nums[0] === nums[1] || nums[1] === nums[2] || nums[0] === nums[2]) {
+      return "isosceles";
+  }
+
+  // If none of the above, it's a scalene triangle
+  return "scalene";
 };
 
-const input: number[] = [1,2,3,12];
-const results = minimumCost(input);
+const input: number[] = [3,4,5];
+const results = triangleType(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
