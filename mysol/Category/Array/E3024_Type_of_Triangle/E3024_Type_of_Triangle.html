@@ -4,65 +4,60 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an array of integers nums of length n.
+			 	You are given a 0-indexed integer array nums of size 3 which can form the sides of a triangle.
 
-        The cost of an array is the value of its first element. 
-        For example, the cost of [1,2,3] is 1 while the cost of [3,4,1] is 3.
+          . A triangle is called equilateral if it has all sides of equal length.
+          . A triangle is called isosceles if it has exactly two sides of equal length.
+          . A triangle is called scalene if all its sides are of different lengths.
 
-        You need to divide nums into 3 disjoint contiguous subarrays.
-
-        Return the minimum possible sum of the cost of these subarrays.
+        Return a string representing the type of triangle that can be formed or "none" if it cannot form a triangle.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: the minimum possible sum of the cost of these subarrays
+        * @return: a string representing the type of triangle
         */
-        let minimumCost = function(nums) {
-            let n = nums.length;
-            if (n < 3) {
-                return -1; // Return -1 for invalid input
+        let triangleType = function(nums) {
+            // Check if the array is valid and has exactly 3 elements
+            if (!nums || nums.length !== 3) {
+                return "none";
             }
 
-            // Initialize the minimum cost to a high value
-            let minCost = Infinity;
+            // Sort the array to simplify triangle inequality checks
+            nums.sort((a, b) => a - b);
 
-            // Iterate through all possible divisions of the array into 3 subarrays
-            for (let i = 1; i < n - 1; i++) {
-                for (let j = i + 1; j < n; j++) {
-                    // Divide the array into three subarrays
-                    let cost1 = nums[0]; // First subarray starts at index 0
-                    let cost2 = nums[i]; // Second subarray starts at index i
-                    let cost3 = nums[j]; // Third subarray starts at index j
-
-                    // Calculate the total cost for this division
-                    let totalCost = cost1 + cost2 + cost3;
-
-                    // Update the minimum cost if needed
-                    minCost = Math.min(minCost, totalCost);
-                }
+            // Check if the sides can form a triangle
+            if (nums[0] + nums[1] <= nums[2]) {
+                return "none";
             }
 
-            return minCost;
+            // Check for equilateral triangle
+            if (nums[0] === nums[1] && nums[1] === nums[2]) {
+                return "equilateral";
+            }
+
+            // Check for isosceles triangle
+            if (nums[0] === nums[1] || nums[1] === nums[2] || nums[0] === nums[2]) {
+                return "isosceles";
+            }
+
+            // If none of the above, it's a scalene triangle
+            return "scalene";
         };
 
-        const input = [1,2,3,12];
-        let results = minimumCost(input);
+        const input = [3,4,5];
+        let results = triangleType(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Nested Loops:
-          . The first loop identifies the boundary of the first subarray.
-          . The second loop identifies the boundary of the second subarray.
-          . The remaining elements form the third subarray.
-        2. Costs:
-          . The first element of each subarray determines the cost of that subarray.
-        3. Optimization:
-          . For each division, calculate the total cost and update the minimum cost.
-        4. Return Value:
-          . After checking all possible divisions, return the minimum cost.
+				1. Input Validation: Ensure the input array is not null and contains exactly three elements.
+        2. Sort the Array: Sorting simplifies the triangle inequality checks.
+        3. Triangle Inequality Check: If the sum of the two smaller sides is not greater than the largest side, it cannot form a triangle.
+        4. Equilateral Check: All three sides must be equal.
+        5. Isosceles Check: Exactly two sides must be equal.
+        6. Scalene Check: If none of the above conditions are met, the triangle is scalene.
 			 */
 
 		</script>
