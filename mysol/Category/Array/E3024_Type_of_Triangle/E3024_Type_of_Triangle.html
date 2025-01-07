@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an array of integers nums of length n.
+
+        The cost of an array is the value of its first element. 
+        For example, the cost of [1,2,3] is 1 while the cost of [3,4,1] is 3.
+
+        You need to divide nums into 3 disjoint contiguous subarrays.
+
+        Return the minimum possible sum of the cost of these subarrays.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the minimum possible sum of the cost of these subarrays
+        */
+        let minimumCost = function(nums) {
+            let n = nums.length;
+            if (n < 3) {
+                return -1; // Return -1 for invalid input
+            }
+
+            // Initialize the minimum cost to a high value
+            let minCost = Infinity;
+
+            // Iterate through all possible divisions of the array into 3 subarrays
+            for (let i = 1; i < n - 1; i++) {
+                for (let j = i + 1; j < n; j++) {
+                    // Divide the array into three subarrays
+                    let cost1 = nums[0]; // First subarray starts at index 0
+                    let cost2 = nums[i]; // Second subarray starts at index i
+                    let cost3 = nums[j]; // Third subarray starts at index j
+
+                    // Calculate the total cost for this division
+                    let totalCost = cost1 + cost2 + cost3;
+
+                    // Update the minimum cost if needed
+                    minCost = Math.min(minCost, totalCost);
+                }
+            }
+
+            return minCost;
+        };
+
+        const input = [1,2,3,12];
+        let results = minimumCost(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Nested Loops:
+          . The first loop identifies the boundary of the first subarray.
+          . The second loop identifies the boundary of the second subarray.
+          . The remaining elements form the third subarray.
+        2. Costs:
+          . The first element of each subarray determines the cost of that subarray.
+        3. Optimization:
+          . For each division, calculate the total cost and update the minimum cost.
+        4. Return Value:
+          . After checking all possible divisions, return the minimum cost.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
