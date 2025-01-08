@@ -19,7 +19,20 @@ public class E3033_Modify_the_Matrix {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + Arrays.deepToString(output));
 	}
 	
+	/*
+    solution:
+    1. Determine Maximum in Each Column:
+		. Iterate through each column and find the maximum value in that column, storing it in an array maxInColumn.
+	2. Replace -1 Values:
+		. Traverse the matrix again, and whenever a -1 is encountered, replace it with the maximum value of its column from maxInColumn.
+	3. Return Result:
+		. Construct and return the modified answer matrix.
+    */
 	
+	/*
+     * @param matrix: a list of 2D integers
+     * @return: the matrix answer
+     */
 	public int[][] modifiedMatrix(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;
