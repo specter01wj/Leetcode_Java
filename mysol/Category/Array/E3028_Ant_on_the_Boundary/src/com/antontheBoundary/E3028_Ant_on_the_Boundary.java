@@ -23,7 +23,20 @@ public class E3028_Ant_on_the_Boundary {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Position Tracking:
+		. The variable position keeps track of the ant's current position relative to the boundary. The boundary is considered as position 0.
+	2. Boundary Check:
+		. After updating the position, the method checks if the position is 0. If true, it increments the boundaryCount.
+	3. Output:
+		. The method finally returns the total number of times the ant returned to the boundary.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of times the ant returns to the boundary
+     */
 	public int returnToBoundaryCount(int[] nums) {
         // Variable to track the current position of the ant
         int position = 0;
