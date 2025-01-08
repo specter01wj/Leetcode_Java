@@ -4,56 +4,52 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	An ant is on a boundary. It sometimes goes left and sometimes right.
+			 	Given a 0-indexed m x n integer matrix matrix, create a new 
+        0-indexed matrix called answer. Make answer equal to matrix, 
+        then replace each element with the value -1 with the maximum 
+        element in its respective column.
 
-        You are given an array of non-zero integers nums. The ant starts 
-        reading nums from the first element of it to its end. At each step, 
-        it moves according to the value of the current element:
-
-          . If nums[i] < 0, it moves left by -nums[i] units.
-          . If nums[i] > 0, it moves right by nums[i] units.
-
-        Return the number of times the ant returns to the boundary.
+        Return the matrix answer.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the number of times the ant returns to the boundary
+        * @param matrix: a list of 2D integers
+        * @return: the matrix answer
         */
-        let returnToBoundaryCount = function(nums) {
-            // Variable to track the current position of the ant
-            let position = 0;
-            // Variable to count the number of times the ant returns to the boundary
-            let boundaryCount = 0;
+        let modifiedMatrix = function(matrix) {
+            let m = matrix.length;
+            let n = matrix[0].length;
 
-            // Iterate through the given array
-            for (let num of nums) {
-                // Update the position of the ant based on the current step
-                position += num;
+            // Step 1: Determine maximum values for each column
+            let maxInColumn = Array(n).fill(Number.MIN_SAFE_INTEGER);
 
-                // Check if the ant is back to the boundary
-                if (position === 0) {
-                    boundaryCount++;
+            for (let j = 0; j < n; j++) {
+                for (let i = 0; i < m; i++) {
+                    maxInColumn[j] = Math.max(maxInColumn[j], matrix[i][j]);
                 }
             }
 
-            // Return the total count
-            return boundaryCount;
+            // Step 2: Create the modified matrix
+            let answer = matrix.map((row, i) =>
+                row.map((value, j) => (value === -1 ? maxInColumn[j] : value))
+            );
+
+            return answer;
         };
 
-        const input = [2,3,-5];
-        let results = returnToBoundaryCount(input);
+        const input = [[1,2,-1],[4,-1,6],[7,8,9]];
+        let results = modifiedMatrix(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Position Tracking:
-          . The variable position keeps track of the ant's current position relative to the boundary. The boundary is considered as position 0.
-        2. Boundary Check:
-          . After updating the position, the method checks if the position is 0. If true, it increments the boundaryCount.
-        3. Output:
-          . The method finally returns the total number of times the ant returned to the boundary.
+				1. Determine Maximum in Each Column:
+          . Iterate through each column and find the maximum value in that column, storing it in an array maxInColumn.
+        2. Replace -1 Values:
+          . Traverse the matrix again, and whenever a -1 is encountered, replace it with the maximum value of its column from maxInColumn.
+        3. Return Result:
+          . Construct and return the modified answer matrix.
 			 */
 
 		</script>
