@@ -19,7 +19,7 @@ function modifiedMatrix(matrix: number[][]): number[][] {
   return answer;
 };
 
-const input: number[] = [[1,2,-1],[4,-1,6],[7,8,9]];
+const input: number[][] = [[1,2,-1],[4,-1,6],[7,8,9]];
 const results = modifiedMatrix(input);
 
 let webHeading = document.querySelector('#t1');
