@@ -1,26 +1,26 @@
-function returnToBoundaryCount(nums: number[]): number {
-  // Variable to track the current position of the ant
-  let position = 0;
-  // Variable to count the number of times the ant returns to the boundary
-  let boundaryCount = 0;
+function modifiedMatrix(matrix: number[][]): number[][] {
+  const m = matrix.length;
+  const n = matrix[0].length;
 
-  // Iterate through the given array
-  for (let num of nums) {
-      // Update the position of the ant based on the current step
-      position += num;
+  // Step 1: Determine maximum values for each column
+  const maxInColumn: number[] = Array(n).fill(Number.MIN_SAFE_INTEGER);
 
-      // Check if the ant is back to the boundary
-      if (position === 0) {
-          boundaryCount++;
+  for (let j = 0; j < n; j++) {
+      for (let i = 0; i < m; i++) {
+          maxInColumn[j] = Math.max(maxInColumn[j], matrix[i][j]);
       }
   }
 
-  // Return the total count
-  return boundaryCount;
+  // Step 2: Create the modified matrix
+  const answer: number[][] = matrix.map((row, i) =>
+      row.map((value, j) => (value === -1 ? maxInColumn[j] : value))
+  );
+
+  return answer;
 };
 
-const input: number[] = [2,3,-5];
-const results = returnToBoundaryCount(input);
+const input: number[] = [[1,2,-1],[4,-1,6],[7,8,9]];
+const results = modifiedMatrix(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
