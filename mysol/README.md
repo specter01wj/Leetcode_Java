@@ -796,6 +796,8 @@ By Jin Wang
 |3005|**Count Elements With Maximum Frequency**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3010|**Divide an Array Into Subarrays With Minimum Cost I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3024|**Type of Triangle**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3028|**Ant on the Boundary**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3033|**Modify the Matrix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
