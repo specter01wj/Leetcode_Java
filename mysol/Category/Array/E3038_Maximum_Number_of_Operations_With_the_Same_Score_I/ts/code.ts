@@ -1,26 +1,27 @@
-function modifiedMatrix(matrix: number[][]): number[][] {
-  const m = matrix.length;
-  const n = matrix[0].length;
+function maxOperations(nums: number[]): number {
+  if (nums.length < 2) return 0;
 
-  // Step 1: Determine maximum values for each column
-  const maxInColumn: number[] = Array(n).fill(Number.MIN_SAFE_INTEGER);
+  // Calculate the initial score using the first two elements
+  let prev = nums[0] + nums[1];
+  let count = 1;
 
-  for (let j = 0; j < n; j++) {
-      for (let i = 0; i < m; i++) {
-          maxInColumn[j] = Math.max(maxInColumn[j], matrix[i][j]);
+  // Iterate through the array, checking pairs of elements
+  for (let i = 2; i < nums.length - 1; i += 2) {
+      // If the current pair's sum matches the previous score, increment count
+      if (nums[i] + nums[i + 1] === prev) {
+          count++;
+      } else {
+          // If the score changes, stop processing further
+          break;
       }
   }
 
-  // Step 2: Create the modified matrix
-  const answer: number[][] = matrix.map((row, i) =>
-      row.map((value, j) => (value === -1 ? maxInColumn[j] : value))
-  );
-
-  return answer;
+  // Return the maximum number of operations with the same score
+  return count;
 };
 
-const input: number[][] = [[1,2,-1],[4,-1,6],[7,8,9]];
-const results = modifiedMatrix(input);
+const input: number[] = [3,2,1,4,5];
+const results = maxOperations(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
