@@ -21,7 +21,15 @@ public class E3038_Maximum_Number_of_Operations_With_the_Same_Score_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum number of operations you can perform
+     */
 	public int maxOperations(int[] nums) {
         // If there are fewer than two elements, no operations can be performed
         if (nums.length < 2) return 0;
