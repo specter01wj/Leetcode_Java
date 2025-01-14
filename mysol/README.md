@@ -798,6 +798,8 @@ By Jin Wang
 |3024|**Type of Triangle**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3028|**Ant on the Boundary**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3033|**Modify the Matrix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3038|**Maximum Number of Operations With the Same Score I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3042|**Count Prefix and Suffix Pairs I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
