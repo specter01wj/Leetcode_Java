@@ -26,7 +26,21 @@ public class E3042_Count_Prefix_and_Suffix_Pairs_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer and Inner Loop:
+		. Iterate over all possible pairs (i, j) where i < j.
+		. This ensures that we don't repeat pairs or compare an element with itself.
+	2. Helper Function isPrefixAndSuffix:
+		. Checks if str1 is both a prefix and a suffix of str2 using String.startsWith() and String.endsWith().
+	3. Increment Count:
+		. Increment the count if isPrefixAndSuffix returns true for a given pair (i, j).
+    */
 	
+	/*
+     * @param words: a list of strings
+     * @return: an integer denoting the number of index pairs (i, j)
+     */
 	public int countPrefixSuffixPairs(String[] words) {
         int count = 0;
 
