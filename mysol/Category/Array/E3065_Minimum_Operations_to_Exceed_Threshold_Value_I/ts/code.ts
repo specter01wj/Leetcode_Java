@@ -1,25 +1,23 @@
-function isPossibleToSplit(nums: number[]): boolean {
-  // Create a Map to count the frequency of each number
-  const count: Map<number, number> = new Map();
+function minOperations(nums: number[], k: number): number {
+  // Sort the array in ascending order
+  nums.sort((a, b) => a - b);
+  
+  let operations = 0;
+  let i = 0;
 
-  // Count the frequency of each number in the array
-  for (const num of nums) {
-      count.set(num, (count.get(num) || 0) + 1);
+  // Iterate through the array until all elements are >= k
+  while (i < nums.length && nums[i] < k) {
+      operations++;
+      i++;
   }
 
-  // Check if any number appears more than twice
-  for (const val of count.values()) {
-      if (val > 2) {
-          return false; // If a number appears more than twice, splitting is not possible
-      }
-  }
-
-  // If all numbers appear at most twice, splitting is possible
-  return true;
+  // Return the operations count
+  return operations;
 };
 
-const input: number[] = [1,1,2,2,3,4];
-const results = isPossibleToSplit(input);
+const input: number[] = [2,11,10,1,3];
+const k: number = 10;
+const results = minOperations(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
