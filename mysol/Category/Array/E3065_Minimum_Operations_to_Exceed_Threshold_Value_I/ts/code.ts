@@ -17,8 +17,9 @@ function minOperations(nums: number[], k: number): number {
 
 const input: number[] = [2,11,10,1,3];
 const k: number = 10;
+const originalArray = [...input];
 const results = minOperations(input, k);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(originalArray, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
