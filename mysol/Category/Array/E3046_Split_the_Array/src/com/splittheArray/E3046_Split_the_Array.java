@@ -21,7 +21,24 @@ public class E3046_Split_the_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. HashMap for Frequency Count:
+		. A HashMap is used to store the frequency of each number in the array. 
+			This helps us efficiently count how many times each number appears.
+	2. Check Frequency Constraint:
+		. After building the frequency map, we iterate over its values to ensure 
+			no number appears more than twice. If any number has a count greater 
+			than 2, splitting into two groups with distinct elements is not possible.
+	3. Return Result:
+		. If all numbers appear at most twice, the array can be split into two 
+			parts with distinct elements. Otherwise, the function returns false.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if it is possible to split the array, and false otherwise
+     */
 	public boolean isPossibleToSplit(int[] nums) {
         // Create a HashMap to count the occurrences of each number
         HashMap<Integer, Integer> count = new HashMap<>();
