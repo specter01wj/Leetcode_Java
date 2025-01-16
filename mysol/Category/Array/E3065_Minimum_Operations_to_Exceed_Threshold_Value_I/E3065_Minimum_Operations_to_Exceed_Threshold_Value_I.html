@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array nums of even length. 
+        You have to split the array into two parts nums1 and nums2 such that:
+
+          . nums1.length == nums2.length == nums.length / 2.
+          . nums1 should contain distinct elements.
+          . nums2 should also contain distinct elements.
+
+        Return true if it is possible to split the array, and false otherwise.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: true if it is possible to split the array, and false otherwise
+        */
+        let isPossibleToSplit = function(nums) {
+            // Create a Map to count the frequency of each number
+            const count = new Map();
+
+            // Count the frequency of each number in the array
+            for (const num of nums) {
+                count.set(num, (count.get(num) || 0) + 1);
+            }
+
+            // Check if any number appears more than twice
+            for (const val of count.values()) {
+                if (val > 2) {
+                    return false; // If a number appears more than twice, splitting is not possible
+                }
+            }
+
+            // If all numbers appear at most twice, splitting is possible
+            return true;
+        };
+
+        const input = [1,1,2,2,3,4];
+        let results = isPossibleToSplit(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. HashMap for Frequency Count:
+          . A HashMap is used to store the frequency of each number in the array. 
+            This helps us efficiently count how many times each number appears.
+        2. Check Frequency Constraint:
+          . After building the frequency map, we iterate over its values to ensure 
+            no number appears more than twice. If any number has a count greater 
+            than 2, splitting into two groups with distinct elements is not possible.
+        3. Return Result:
+          . If all numbers appear at most twice, the array can be split into two 
+            parts with distinct elements. Otherwise, the function returns false.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
