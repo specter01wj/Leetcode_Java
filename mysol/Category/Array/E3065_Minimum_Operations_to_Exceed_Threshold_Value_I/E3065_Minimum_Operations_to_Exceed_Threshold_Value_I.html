@@ -4,57 +4,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an integer array nums of even length. 
-        You have to split the array into two parts nums1 and nums2 such that:
+			 	You are given a 0-indexed integer array nums, and an integer k.
 
-          . nums1.length == nums2.length == nums.length / 2.
-          . nums1 should contain distinct elements.
-          . nums2 should also contain distinct elements.
+        In one operation, you can remove one occurrence of the smallest element of nums.
 
-        Return true if it is possible to split the array, and false otherwise.
+        Return the minimum number of operations needed so that all elements 
+        of the array are greater than or equal to k.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: true if it is possible to split the array, and false otherwise
+        * @param k: an integer
+        * @return: the minimum number of operations
         */
-        let isPossibleToSplit = function(nums) {
-            // Create a Map to count the frequency of each number
-            const count = new Map();
+        let minOperations = function(nums, k) {
+            // Sort the array in ascending order
+            nums.sort((a, b) => a - b);
+            
+            let operations = 0;
+            let i = 0;
 
-            // Count the frequency of each number in the array
-            for (const num of nums) {
-                count.set(num, (count.get(num) || 0) + 1);
+            // Iterate through the array until all elements are >= k
+            while (i < nums.length && nums[i] < k) {
+                operations++;
+                i++;
             }
 
-            // Check if any number appears more than twice
-            for (const val of count.values()) {
-                if (val > 2) {
-                    return false; // If a number appears more than twice, splitting is not possible
-                }
-            }
-
-            // If all numbers appear at most twice, splitting is possible
-            return true;
+            return operations;
         };
 
-        const input = [1,1,2,2,3,4];
-        let results = isPossibleToSplit(input);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        const input = [2,11,10,1,3];
+        const k = 10;
+        const originalArray = [...input];
+        let results = minOperations(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(originalArray, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. HashMap for Frequency Count:
-          . A HashMap is used to store the frequency of each number in the array. 
-            This helps us efficiently count how many times each number appears.
-        2. Check Frequency Constraint:
-          . After building the frequency map, we iterate over its values to ensure 
-            no number appears more than twice. If any number has a count greater 
-            than 2, splitting into two groups with distinct elements is not possible.
-        3. Return Result:
-          . If all numbers appear at most twice, the array can be split into two 
-            parts with distinct elements. Otherwise, the function returns false.
+				1. Sorting:
+          . The array is sorted to ensure that the smallest elements are processed first.
+        2. Iterate and Count:
+          . Start from the smallest element (index 0) and check if it is less than k.
+          . If it is, increment the operations counter and move to the next element.
+        3. Termination:
+          . Stop when all elements are greater than or equal to k.
 			 */
 
 		</script>
