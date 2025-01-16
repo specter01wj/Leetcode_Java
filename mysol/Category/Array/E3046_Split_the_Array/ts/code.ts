@@ -1,24 +1,25 @@
-function countPrefixSuffixPairs(words: string[]): number {
-  let count = 0;
+function isPossibleToSplit(nums: number[]): boolean {
+  // Create a Map to count the frequency of each number
+  const count: Map<number, number> = new Map();
 
-  for (let i = 0; i < words.length; i++) {
-      for (let j = i + 1; j < words.length; j++) {
-          if (isPrefixAndSuffix(words[i], words[j])) {
-              count++;
-          }
+  // Count the frequency of each number in the array
+  for (const num of nums) {
+      count.set(num, (count.get(num) || 0) + 1);
+  }
+
+  // Check if any number appears more than twice
+  for (const val of count.values()) {
+      if (val > 2) {
+          return false; // If a number appears more than twice, splitting is not possible
       }
   }
 
-  return count;
+  // If all numbers appear at most twice, splitting is possible
+  return true;
 };
 
-function isPrefixAndSuffix(str1: string, str2: string): boolean {
-  // Check if str1 is a prefix and a suffix of str2
-  return str2.startsWith(str1) && str2.endsWith(str1);
-}
-
-const input: string[] = ["a","aba","ababa","aa"];
-const results = countPrefixSuffixPairs(input);
+const input: number[] = [1,1,2,2,3,4];
+const results = isPossibleToSplit(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
