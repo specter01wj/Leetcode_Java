@@ -405,6 +405,8 @@ Cspiration Category:
 |3033|Modify the Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3038|Maximum Number of Operations With the Same Score I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3042|Count Prefix and Suffix Pairs I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3046|Split the Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3065|Minimum Operations to Exceed Threshold Value I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
