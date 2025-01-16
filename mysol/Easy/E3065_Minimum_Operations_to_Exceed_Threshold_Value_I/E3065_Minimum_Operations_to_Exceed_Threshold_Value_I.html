@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a 0-indexed integer array nums, and an integer k.
+
+        In one operation, you can remove one occurrence of the smallest element of nums.
+
+        Return the minimum number of operations needed so that all elements 
+        of the array are greater than or equal to k.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @return: the minimum number of operations
+        */
+        let minOperations = function(nums, k) {
+            // Sort the array in ascending order
+            nums.sort((a, b) => a - b);
+            
+            let operations = 0;
+            let i = 0;
+
+            // Iterate through the array until all elements are >= k
+            while (i < nums.length && nums[i] < k) {
+                operations++;
+                i++;
+            }
+
+            return operations;
+        };
+
+        const input = [2,11,10,1,3];
+        const k = 10;
+        const originalArray = [...input];
+        let results = minOperations(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(originalArray, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Sorting:
+          . The array is sorted to ensure that the smallest elements are processed first.
+        2. Iterate and Count:
+          . Start from the smallest element (index 0) and check if it is less than k.
+          . If it is, increment the operations counter and move to the next element.
+        3. Termination:
+          . Stop when all elements are greater than or equal to k.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
