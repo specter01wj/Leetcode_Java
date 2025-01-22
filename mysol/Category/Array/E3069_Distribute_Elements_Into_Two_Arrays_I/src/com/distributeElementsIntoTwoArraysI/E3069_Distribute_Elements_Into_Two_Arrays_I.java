@@ -26,7 +26,25 @@ public class E3069_Distribute_Elements_Into_Two_Arrays_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Initialization:
+		. The first element of nums is added to arr1.
+		. The second element of nums is added to arr2.
+	2. Iteration:
+		. Starting from the third element, the code compares the last elements of arr1 and arr2.
+		. If the last element of arr1 is greater, the current element is added to arr1.
+		. Otherwise, it is added to arr2.
+	3. Combining the Results:
+		. After processing all elements, arr1 and arr2 are concatenated into a single array result.
+	4. Output:
+		. The function returns the concatenated array.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the array result
+     */
 	public int[] resultArray(int[] nums) {
         List<Integer> arr1 = new ArrayList<>();
         List<Integer> arr2 = new ArrayList<>();
