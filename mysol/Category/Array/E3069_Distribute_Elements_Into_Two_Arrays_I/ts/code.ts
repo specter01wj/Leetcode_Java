@@ -1,25 +1,27 @@
-function minOperations(nums: number[], k: number): number {
-  // Sort the array in ascending order
-  nums.sort((a, b) => a - b);
-  
-  let operations = 0;
-  let i = 0;
+function resultArray(nums: number[]): number[] {
+  let arr1: number[] = [];
+  let arr2: number[] = [];
 
-  // Iterate through the array until all elements are >= k
-  while (i < nums.length && nums[i] < k) {
-      operations++;
-      i++;
+  // Add the first element to arr1 and the second element to arr2
+  arr1.push(nums[0]);
+  arr2.push(nums[1]);
+
+  // Start from the third element
+  for (let i = 2; i < nums.length; i++) {
+      if (arr1[arr1.length - 1] > arr2[arr2.length - 1]) {
+          arr1.push(nums[i]);
+      } else {
+          arr2.push(nums[i]);
+      }
   }
 
-  // Return the operations count
-  return operations;
+  // Combine arr1 and arr2 into the result array
+  return [...arr1, ...arr2];
 };
 
-const input: number[] = [2,11,10,1,3];
-const k: number = 10;
-const originalArray = [...input];
-const results = minOperations(input, k);
+const input: number[] = [5,4,3,8];
+const results = resultArray(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(originalArray, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
