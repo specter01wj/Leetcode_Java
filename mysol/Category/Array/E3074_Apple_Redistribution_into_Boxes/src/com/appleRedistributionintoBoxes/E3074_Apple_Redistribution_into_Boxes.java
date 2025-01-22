@@ -22,7 +22,20 @@ public class E3074_Apple_Redistribution_into_Boxes {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. totalApples: Calculates the total apples to be distributed.
+	2. Sorting capacity: Ensures that we use the largest boxes first, 
+		minimizing the number of boxes required.
+	3. Selecting boxes: Adds box capacities until the sum of capacities 
+		meets or exceeds the total number of apples.
+    */
 	
+	/*
+     * @param apple: a list of integers
+     * @param capacity: a list of integers
+     * @return: the minimum number of boxes
+     */
 	public int minimumBoxes(int[] apple, int[] capacity) {
         // Calculate the total number of apples
         int totalApples = 0;
