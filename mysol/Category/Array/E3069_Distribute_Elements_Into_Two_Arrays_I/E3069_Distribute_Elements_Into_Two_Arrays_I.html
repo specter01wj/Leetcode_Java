@@ -4,51 +4,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 0-indexed integer array nums, and an integer k.
+			 	You are given a 1-indexed array of distinct integers nums of length n.
 
-        In one operation, you can remove one occurrence of the smallest element of nums.
+        You need to distribute all the elements of nums between two arrays arr1 
+        and arr2 using n operations. In the first operation, append nums[1] to arr1. 
+        In the second operation, append nums[2] to arr2. Afterwards, in the ith operation:
 
-        Return the minimum number of operations needed so that all elements 
-        of the array are greater than or equal to k.
+          . If the last element of arr1 is greater than the last element of arr2, 
+            append nums[i] to arr1. Otherwise, append nums[i] to arr2.
+
+        The array result is formed by concatenating the arrays arr1 and arr2. 
+        For example, if arr1 == [1,2,3] and arr2 == [4,5,6], then result = [1,2,3,4,5,6].
+
+        Return the array result.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param k: an integer
-        * @return: the minimum number of operations
+        * @return: the array result
         */
-        let minOperations = function(nums, k) {
-            // Sort the array in ascending order
-            nums.sort((a, b) => a - b);
-            
-            let operations = 0;
-            let i = 0;
+        let resultArray = function(nums) {
+            let arr1 = [];
+            let arr2 = [];
 
-            // Iterate through the array until all elements are >= k
-            while (i < nums.length && nums[i] < k) {
-                operations++;
-                i++;
+            // Add the first element to arr1 and the second element to arr2
+            arr1.push(nums[0]);
+            arr2.push(nums[1]);
+
+            // Start from the third element
+            for (let i = 2; i < nums.length; i++) {
+                if (arr1[arr1.length - 1] > arr2[arr2.length - 1]) {
+                    arr1.push(nums[i]);
+                } else {
+                    arr2.push(nums[i]);
+                }
             }
 
-            return operations;
+            // Combine arr1 and arr2 into the result array
+            return [...arr1, ...arr2];
         };
 
-        const input = [2,11,10,1,3];
-        const k = 10;
-        const originalArray = [...input];
-        let results = minOperations(input, k);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(originalArray, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        const input = [5,4,3,8];
+        let results = resultArray(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Sorting:
-          . The array is sorted to ensure that the smallest elements are processed first.
-        2. Iterate and Count:
-          . Start from the smallest element (index 0) and check if it is less than k.
-          . If it is, increment the operations counter and move to the next element.
-        3. Termination:
-          . Stop when all elements are greater than or equal to k.
+				1. Initialization:
+          . The first element of nums is added to arr1.
+          . The second element of nums is added to arr2.
+        2. Iteration:
+          . Starting from the third element, the code compares the last elements of arr1 and arr2.
+          . If the last element of arr1 is greater, the current element is added to arr1.
+          . Otherwise, it is added to arr2.
+        3. Combining the Results:
+          . After processing all elements, arr1 and arr2 are concatenated into a single array result.
+        4. Output:
+          . The function returns the concatenated array.
 			 */
 
 		</script>
