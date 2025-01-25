@@ -19,7 +19,22 @@ public class E3079_Find_the_Sum_of_Encrypted_Integers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate through the Array:
+		. For each number in the array, find the maximum digit.
+	2. Find the Largest Digit:
+		. Use a loop to extract each digit using % 10 and update the maxDigit.
+	3. Construct the Encrypted Value:
+		. Replace each digit of the number with maxDigit by reconstructing the number.
+	4. Add the Encrypted Value to the Sum:
+		. Add the computed encrypted value to the total sum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the sum of encrypted elements
+     */
 	public int sumOfEncryptedInt(int[] nums) {
         int sum = 0;
 
