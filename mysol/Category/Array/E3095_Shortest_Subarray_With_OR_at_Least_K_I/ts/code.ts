@@ -16,7 +16,7 @@ function minimumSubarrayLength(nums: number[], k: number): number {
   return minLength === Infinity ? -1 : minLength;
 };
 
-const input: number[] = [10,21,31];
+const input: number[] = [2,1,8];
 const k: number = 10;
 const results = minimumSubarrayLength(input, k);
 
