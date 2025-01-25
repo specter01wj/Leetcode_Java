@@ -20,7 +20,22 @@ public class E3095_Shortest_Subarray_With_OR_at_Least_K_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Outer Loop: Iterate over all starting indices i in the array.
+	2. Inner Loop: For each starting index i, calculate the bitwise 
+		OR of subarrays starting from i and ending at j.
+	3. Check Condition: If the OR value is at least k, update the 
+		minimum subarray length (minLength) and break out of the inner 
+		loop as any larger subarray starting at i will also meet the condition.
+	4. Edge Case: If no subarray satisfies the condition, return -1.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the length of the shortest special non-empty subarray of nums
+     */
 	public int minimumSubarrayLength(int[] nums, int k) {
         int n = nums.length;
         int minLength = Integer.MAX_VALUE;
