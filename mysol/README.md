@@ -806,6 +806,8 @@ By Jin Wang
 |3074|**Apple Redistribution into Boxes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3079|**Find the Sum of Encrypted Integers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3095|**Shortest Subarray With OR at Least K I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3105|**Longest Strictly Increasing or Strictly Decreasing Subarray**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3127|**Make a Square with the Same Color**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
