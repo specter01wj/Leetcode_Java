@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an array of integers nums. Return the length of the longest 
+        subarray of nums which is either strictly increasing or strictly decreasing.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the length of the longest subarray of nums
+        */
+        let longestMonotonicSubarray = function(nums) {
+            if (!nums || nums.length === 0) return 0;
+
+            let maxLength = 1; // Minimum length of any subarray is 1
+            let incLength = 1; // Length of the current increasing subarray
+            let decLength = 1; // Length of the current decreasing subarray
+
+            for (let i = 1; i < nums.length; i++) {
+                if (nums[i] > nums[i - 1]) {
+                    incLength++;
+                    decLength = 1; // Reset decreasing subarray length
+                } else if (nums[i] < nums[i - 1]) {
+                    decLength++;
+                    incLength = 1; // Reset increasing subarray length
+                } else {
+                    // Reset both lengths when elements are equal
+                    incLength = 1;
+                    decLength = 1;
+                }
+
+                // Update the maximum length found so far
+                maxLength = Math.max(maxLength, Math.max(incLength, decLength));
+            }
+
+            return maxLength;
+        };
+
+        const input = [1,4,3,3,2];
+        let results = longestMonotonicSubarray(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Edge Case: If the input array is empty, return 0.
+        2. Initialization:
+          . maxLength tracks the longest subarray length.
+          . incLength tracks the length of the current strictly increasing subarray.
+          . decLength tracks the length of the current strictly decreasing subarray.
+        3. Iterate through the array:
+          . If the current element is greater than the previous one, increase incLength and reset decLength to 1.
+          . If the current element is smaller than the previous one, increase decLength and reset incLength to 1.
+          . If the elements are equal, reset both lengths to 1.
+        4. Update maxLength after each comparison.
+        5. Return maxLength.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
