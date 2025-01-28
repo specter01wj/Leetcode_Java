@@ -1,32 +1,33 @@
-function longestMonotonicSubarray(nums: number[]): number {
-  if (!nums || nums.length === 0) return 0;
+function canMakeSquare(grid: string[][]): boolean {
+  // Loop through all possible 2x2 squares in the 3x3 grid
+  for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < 2; j++) {
+          // Count the occurrences of 'B' and 'W' in the current 2x2 square
+          let countB = 0;
+          let countW = 0;
 
-  let maxLength: number = 1; // Minimum length of any subarray is 1
-  let incLength: number = 1; // Length of the current increasing subarray
-  let decLength: number = 1; // Length of the current decreasing subarray
+          for (let x = i; x < i + 2; x++) {
+              for (let y = j; y < j + 2; y++) {
+                  if (grid[x][y] === 'B') {
+                      countB++;
+                  } else {
+                      countW++;
+                  }
+              }
+          }
 
-  for (let i = 1; i < nums.length; i++) {
-      if (nums[i] > nums[i - 1]) {
-          incLength++;
-          decLength = 1; // Reset decreasing subarray length
-      } else if (nums[i] < nums[i - 1]) {
-          decLength++;
-          incLength = 1; // Reset increasing subarray length
-      } else {
-          // Reset both lengths when elements are equal
-          incLength = 1;
-          decLength = 1;
+          // Check if the current 2x2 square can be made uniform by changing at most one cell
+          if (countB >= 3 || countW >= 3) {
+              return true;
+          }
       }
-
-      // Update the maximum length found so far
-      maxLength = Math.max(maxLength, Math.max(incLength, decLength));
   }
 
-  return maxLength;
+  return false;
 };
 
-const input: number[] = [1,4,3,3,2];
-const results = longestMonotonicSubarray(input);
+const input: string[][] = [["B","W","B"],["B","W","W"],["B","W","B"]];
+const results = canMakeSquare(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
