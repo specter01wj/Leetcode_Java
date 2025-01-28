@@ -17,15 +17,22 @@ public class E3105_Longest_Strictly_Increasing_or_Strictly_Decreasing_Subarray {
 	
 	/*
     solution:
-    count good triplets
+    1. Edge Case: If the input array is empty, return 0.
+	2. Initialization:
+		. maxLength tracks the longest subarray length.
+		. incLength tracks the length of the current strictly increasing subarray.
+		. decLength tracks the length of the current strictly decreasing subarray.
+	3. Iterate through the array:
+		. If the current element is greater than the previous one, increase incLength and reset decLength to 1.
+		. If the current element is smaller than the previous one, increase decLength and reset incLength to 1.
+		. If the elements are equal, reset both lengths to 1.
+	4. Update maxLength after each comparison.
+	5. Return maxLength.
     */
 	
 	/*
-     * @param arr: a list of integers
-     * @param a: an integer
-     * @param b: an integer
-     * @param c: an integer
-     * @return: the number of good triplets
+     * @param nums: a list of integers
+     * @return: the length of the longest subarray of nums
      */
 	public int longestMonotonicSubarray(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
