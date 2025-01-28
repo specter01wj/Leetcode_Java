@@ -22,7 +22,22 @@ public class E3127_Make_a_Square_with_the_Same_Color {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. The 3x3 grid allows us to check four possible 2x2 squares:
+		. Top-left corner.
+		. Top-right corner.
+		. Bottom-left corner.
+		. Bottom-right corner.
+	2. For each of these 2x2 squares, we count the number of 'B' (black) and 'W' (white).
+	3. If at least 3 cells in a 2x2 square have the same color, we can make the square uniform by changing at most one cell.
+	4. If any such 2x2 square satisfies the condition, the function returns true. Otherwise, it returns false.
+    */
 	
+	/*
+     * @param grid: a list of 2D chars
+     * @return: true if it is possible to create a 2 x 2 square of the same color
+     */
 	public boolean canMakeSquare(char[][] grid) {
         // Loop through all possible 2x2 squares in the 3x3 grid
         for (int i = 0; i < 2; i++) {
