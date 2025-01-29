@@ -24,7 +24,17 @@ public class E3131_Find_the_Integer_Added_to_Array_I {
         System.out.println("input: " + Arrays.toString(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Sorting: Ensures that the corresponding elements are aligned.
+	2. Median Difference: Since addition preserves order, the difference between medians gives the correct value of x.
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @return: the number of good triplets
+     */
 	public int addedInteger(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
         Arrays.sort(nums2);
