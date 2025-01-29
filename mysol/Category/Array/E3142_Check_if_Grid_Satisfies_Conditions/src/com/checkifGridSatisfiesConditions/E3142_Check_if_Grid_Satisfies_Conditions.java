@@ -19,7 +19,18 @@ public class E3142_Check_if_Grid_Satisfies_Conditions {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate through each cell (i, j) in the grid.
+	2. If the cell has a row below (i < m - 1), check if grid[i][j] == grid[i + 1][j]. If not, return false.
+	3. If the cell has a right neighbor (j < n - 1), check if grid[i][j] != grid[i][j + 1]. If not, return false.
+	4. If all cells satisfy the conditions, return true.
+    */
 	
+	/*
+     * @param int[][] grid: a list of 2D integers
+     * @return: the number of good triplets
+     */
 	public boolean satisfiesConditions(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
