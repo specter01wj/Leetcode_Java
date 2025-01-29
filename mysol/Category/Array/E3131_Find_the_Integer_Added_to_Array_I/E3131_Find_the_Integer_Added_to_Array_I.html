@@ -4,64 +4,40 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 2D matrix grid of size 3 x 3 consisting only of 
-        characters 'B' and 'W'. Character 'W' represents the white color, 
-        and character 'B' represents the black color.
+			 	You are given two arrays of equal length, nums1 and nums2.
 
-        Your task is to change the color of at most one cell so that the 
-        matrix has a 2 x 2 square where all cells are of the same color.
+        Each element in nums1 has been increased (or decreased in the 
+        case of negative) by an integer, represented by the variable x.
 
-        Return true if it is possible to create a 2 x 2 square of the 
-        same color, otherwise, return false.
+        As a result, nums1 becomes equal to nums2. Two arrays are considered 
+        equal when they contain the same integers with the same frequencies.
+
+        Return the integer x.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param grid: a list of 2D chars
-        * @return: true if it is possible to create a 2 x 2 square of the same color
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @return: the number of good triplets
         */
-        let canMakeSquare = function(grid) {
-            // Loop through all possible 2x2 squares in the 3x3 grid
-            for (let i = 0; i < 2; i++) {
-                for (let j = 0; j < 2; j++) {
-                    // Count the occurrences of 'B' and 'W' in the current 2x2 square
-                    let countB = 0;
-                    let countW = 0;
-
-                    for (let x = i; x < i + 2; x++) {
-                        for (let y = j; y < j + 2; y++) {
-                            if (grid[x][y] === 'B') {
-                                countB++;
-                            } else {
-                                countW++;
-                            }
-                        }
-                    }
-
-                    // Check if the current 2x2 square can be made uniform by changing at most one cell
-                    if (countB >= 3 || countW >= 3) {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
+        let addedInteger = function(nums1, nums2) {
+            nums1.sort((a, b) => a - b);
+            nums2.sort((a, b) => a - b);
+            
+            return nums2[Math.floor(nums2.length / 2)] - nums1[Math.floor(nums1.length / 2)];
         };
 
-        const input = [["B","W","B"],["B","W","W"],["B","W","B"]];
-        let results = canMakeSquare(input);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        const input1 = [2,6,4], input2 = [9,7,5]
+        let copyNums1 = [...input1];
+        let copyNums2 = [...input2];
+        let results = addedInteger(copyNums1, copyNums2);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input1, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. The 3x3 grid allows us to check four possible 2x2 squares:
-          . Top-left corner.
-          . Top-right corner.
-          . Bottom-left corner.
-          . Bottom-right corner.
-        2. For each of these 2x2 squares, we count the number of 'B' (black) and 'W' (white).
-        3. If at least 3 cells in a 2x2 square have the same color, we can make the square uniform by changing at most one cell.
-        4. If any such 2x2 square satisfies the condition, the function returns true. Otherwise, it returns false.
+				1. Sorting: Ensures that the corresponding elements are aligned.
+	      2. Median Difference: Since addition preserves order, the difference between medians gives the correct value of x.
 			 */
 
 		</script>
