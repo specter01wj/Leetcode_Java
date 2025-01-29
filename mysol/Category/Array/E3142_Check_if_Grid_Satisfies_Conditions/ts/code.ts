@@ -18,7 +18,7 @@ function satisfiesConditions(grid: number[][]): boolean {
   return true;
 };
 
-const input: int[][] = [[1,0,2],[1,0,2]];
+const input: number[][] = [[1,0,2],[1,0,2]];
 const results = satisfiesConditions(input);
 
 let webHeading = document.querySelector('#t1');
