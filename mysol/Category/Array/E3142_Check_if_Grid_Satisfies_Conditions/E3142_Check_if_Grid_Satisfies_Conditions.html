@@ -4,64 +4,49 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a 2D matrix grid of size 3 x 3 consisting only of 
-        characters 'B' and 'W'. Character 'W' represents the white color, 
-        and character 'B' represents the black color.
+			 	You are given a 2D matrix grid of size m x n. You need to check if each cell grid[i][j] is:
 
-        Your task is to change the color of at most one cell so that the 
-        matrix has a 2 x 2 square where all cells are of the same color.
+          . Equal to the cell below it, i.e. grid[i][j] == grid[i + 1][j] (if it exists).
+          . Different from the cell to its right, i.e. grid[i][j] != grid[i][j + 1] (if it exists).
 
-        Return true if it is possible to create a 2 x 2 square of the 
-        same color, otherwise, return false.
+        Return true if all the cells satisfy these conditions, otherwise, return false.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param grid: a list of 2D chars
-        * @return: true if it is possible to create a 2 x 2 square of the same color
+        * @param int[][] grid: a list of 2D integers
+        * @return: the number of good triplets
         */
-        let canMakeSquare = function(grid) {
-            // Loop through all possible 2x2 squares in the 3x3 grid
-            for (let i = 0; i < 2; i++) {
-                for (let j = 0; j < 2; j++) {
-                    // Count the occurrences of 'B' and 'W' in the current 2x2 square
-                    let countB = 0;
-                    let countW = 0;
+        let satisfiesConditions = function(grid) {
+          let m = grid.length;
+          let n = grid[0].length;
 
-                    for (let x = i; x < i + 2; x++) {
-                        for (let y = j; y < j + 2; y++) {
-                            if (grid[x][y] === 'B') {
-                                countB++;
-                            } else {
-                                countW++;
-                            }
-                        }
-                    }
-
-                    // Check if the current 2x2 square can be made uniform by changing at most one cell
-                    if (countB >= 3 || countW >= 3) {
-                        return true;
-                    }
-                }
-            }
-
-            return false;
+          for (let i = 0; i < m; i++) {
+              for (let j = 0; j < n; j++) {
+                  // Check if grid[i][j] is equal to the cell below it
+                  if (i < m - 1 && grid[i][j] !== grid[i + 1][j]) {
+                      return false;
+                  }
+                  // Check if grid[i][j] is different from the cell to its right
+                  if (j < n - 1 && grid[i][j] === grid[i][j + 1]) {
+                      return false;
+                  }
+              }
+          }
+          
+          return true;
         };
 
-        const input = [["B","W","B"],["B","W","W"],["B","W","B"]];
-        let results = canMakeSquare(input);
+        const input = [[1,0,2],[1,0,2]];
+        let results = satisfiesConditions(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. The 3x3 grid allows us to check four possible 2x2 squares:
-          . Top-left corner.
-          . Top-right corner.
-          . Bottom-left corner.
-          . Bottom-right corner.
-        2. For each of these 2x2 squares, we count the number of 'B' (black) and 'W' (white).
-        3. If at least 3 cells in a 2x2 square have the same color, we can make the square uniform by changing at most one cell.
-        4. If any such 2x2 square satisfies the condition, the function returns true. Otherwise, it returns false.
+				1. Iterate through each cell (i, j) in the grid.
+        2. If the cell has a row below (i < m - 1), check if grid[i][j] == grid[i + 1][j]. If not, return false.
+        3. If the cell has a right neighbor (j < n - 1), check if grid[i][j] != grid[i][j + 1]. If not, return false.
+        4. If all cells satisfy the conditions, return true.
 			 */
 
 		</script>
