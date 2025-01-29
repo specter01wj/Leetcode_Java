@@ -1,34 +1,15 @@
-function canMakeSquare(grid: string[][]): boolean {
-  // Loop through all possible 2x2 squares in the 3x3 grid
-  for (let i = 0; i < 2; i++) {
-      for (let j = 0; j < 2; j++) {
-          // Count the occurrences of 'B' and 'W' in the current 2x2 square
-          let countB = 0;
-          let countW = 0;
-
-          for (let x = i; x < i + 2; x++) {
-              for (let y = j; y < j + 2; y++) {
-                  if (grid[x][y] === 'B') {
-                      countB++;
-                  } else {
-                      countW++;
-                  }
-              }
-          }
-
-          // Check if the current 2x2 square can be made uniform by changing at most one cell
-          if (countB >= 3 || countW >= 3) {
-              return true;
-          }
-      }
-  }
-
-  return false;
+function addedInteger(nums1: number[], nums2: number[]): number {
+  nums1.sort((a, b) => a - b);
+  nums2.sort((a, b) => a - b);
+  
+  return nums2[Math.floor(nums2.length / 2)] - nums1[Math.floor(nums1.length / 2)];
 };
 
-const input: string[][] = [["B","W","B"],["B","W","W"],["B","W","B"]];
-const results = canMakeSquare(input);
+const input1: number[] = [2,6,4], input2: number[] = [9,7,5];
+let copyNums1 = [...input1];
+let copyNums2 = [...input2];
+const results = addedInteger(copyNums1, copyNums2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input1, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
