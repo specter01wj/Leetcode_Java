@@ -20,7 +20,12 @@ public class E3158_Find_the_XOR_of_Numbers_Which_Appear_Twice {
 	
 	/*
     solution:
-    count good triplets
+    1. Use a HashSet (seen) to track numbers that have been encountered.
+	2. Use another HashSet (duplicates) to track numbers that appear more than once.
+	3. Iterate through the nums array:
+		. If a number is seen for the first time, add it to seen.
+		. If a number is seen again, add it to duplicates and XOR it into the result.
+	4. Return the final XOR value.
     */
 	
 	/*
