@@ -1,25 +1,14 @@
-function satisfiesConditions(grid: number[][]): boolean {
-  const m = grid.length;
-  const n = grid[0].length;
-
-  for (let i = 0; i < m; i++) {
-      for (let j = 0; j < n; j++) {
-          // Check if grid[i][j] is equal to the cell below it
-          if (i < m - 1 && grid[i][j] !== grid[i + 1][j]) {
-              return false;
-          }
-          // Check if grid[i][j] is different from the cell to its right
-          if (j < n - 1 && grid[i][j] === grid[i][j + 1]) {
-              return false;
-          }
+function isArraySpecial(nums: number[]): boolean {
+  for (let i = 1; i < nums.length; i++) {
+      if ((nums[i] % 2) === (nums[i - 1] % 2)) {
+          return false; // Adjacent elements have the same parity
       }
   }
-
-  return true;
+  return true; // All adjacent pairs have different parity
 };
 
-const input: number[][] = [[1,0,2],[1,0,2]];
-const results = satisfiesConditions(input);
+const input: number[] = [2,1,4];
+const results = isArraySpecial(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
