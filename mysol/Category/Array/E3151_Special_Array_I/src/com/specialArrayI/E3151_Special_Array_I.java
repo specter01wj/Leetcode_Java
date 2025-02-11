@@ -18,7 +18,18 @@ public class E3151_Special_Array_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate through the array starting from index 1.
+	2. Check if the current element and the previous element have the same parity using nums[i] % 2.
+	3. If two adjacent elements have the same parity, return false.
+	4. If all adjacent pairs have different parity, return true.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if nums is a special array
+     */
 	public boolean isArraySpecial(int[] nums) {
 		for (int i = 1; i < nums.length; i++) {
 			if ((nums[i] % 2) == (nums[i - 1] % 2)) {
