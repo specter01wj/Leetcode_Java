@@ -17,13 +17,13 @@
         * @return: true if nums is a special array
         */
         let isArraySpecial = function(nums) {
-          for (let i = 1; i < nums.length; i++) {
-            if ((nums[i] % 2) === (nums[i - 1] % 2)) {
-              return false; // Adjacent elements have the same parity
+            for (let i = 1; i < nums.length; i++) {
+                if ((nums[i] % 2) === (nums[i - 1] % 2)) {
+                    return false; // Adjacent elements have the same parity
+                }
             }
-          }
           
-          return true; // All adjacent pairs have different parity
+            return true; // All adjacent pairs have different parity
         };
 
         const input = [2,1,4];
