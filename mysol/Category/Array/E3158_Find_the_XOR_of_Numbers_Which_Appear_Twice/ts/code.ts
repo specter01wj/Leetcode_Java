@@ -1,14 +1,24 @@
-function isArraySpecial(nums: number[]): boolean {
-  for (let i = 1; i < nums.length; i++) {
-      if ((nums[i] % 2) === (nums[i - 1] % 2)) {
-          return false; // Adjacent elements have the same parity
+function duplicateNumbersXOR(nums: number[]): number {
+  const seen = new Set<number>();
+  const duplicates = new Set<number>();
+  let xor = 0;
+
+  for (const num of nums) {
+      if (seen.has(num)) { // If already seen, it's a duplicate
+          if (!duplicates.has(num)) { // Ensure we only XOR once per duplicate number
+              xor ^= num;
+              duplicates.add(num);
+          }
+      } else {
+          seen.add(num);
       }
   }
-  return true; // All adjacent pairs have different parity
+
+  return xor;
 };
 
-const input: number[] = [2,1,4];
-const results = isArraySpecial(input);
+const input: number[] = [1,2,2,1];
+const results = duplicateNumbersXOR(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
