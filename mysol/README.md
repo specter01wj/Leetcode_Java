@@ -810,6 +810,8 @@ By Jin Wang
 |3127|**Make a Square with the Same Color**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3131|**Find the Integer Added to Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3142|**Check if Grid Satisfies Conditions**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3151|**Special Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3158|**Find the XOR of Numbers Which Appear Twice**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
