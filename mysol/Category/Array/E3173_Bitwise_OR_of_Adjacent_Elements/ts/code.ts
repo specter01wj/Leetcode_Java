@@ -1,24 +1,16 @@
-function duplicateNumbersXOR(nums: number[]): number {
-  const seen = new Set<number>();
-  const duplicates = new Set<number>();
-  let xor = 0;
-
-  for (const num of nums) {
-      if (seen.has(num)) { // If already seen, it's a duplicate
-          if (!duplicates.has(num)) { // Ensure we only XOR once per duplicate number
-              xor ^= num;
-              duplicates.add(num);
-          }
-      } else {
-          seen.add(num);
-      }
+function orArray(nums: number[]): number[] {
+  const n = nums.length;
+  const answer: number[] = new Array(n - 1);
+  
+  for (let i = 0; i < n - 1; i++) {
+      answer[i] = nums[i] | nums[i + 1];
   }
-
-  return xor;
+  
+  return answer;
 };
 
-const input: number[] = [1,2,2,1];
-const results = duplicateNumbersXOR(input);
+const input: number[] = [1,3,7,15];
+const results = orArray(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
