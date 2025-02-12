@@ -16,7 +16,18 @@ public class E3173_Bitwise_OR_of_Adjacent_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. We initialize an array answer of size n - 1.
+	2. We iterate through the nums array up to the second last element.
+	3. At each index i, we compute the bitwise OR of nums[i] and nums[i + 1], storing the result in answer[i].
+	4. Finally, we return the answer array.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: an array answer of length n - 1
+     */
 	public int[] orArray(int[] nums) {
 		int n = nums.length;
 		int[] answer = new int[n - 1];
