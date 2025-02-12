@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array nums of length n, return an array answer of 
+        length n - 1 such that answer[i] = nums[i] | nums[i + 1] 
+        where | is the bitwise OR operation.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: an array answer of length n - 1
+        */
+        let orArray = function(nums) {
+          let n = nums.length;
+          let answer = new Array(n - 1);
+          
+          for (let i = 0; i < n - 1; i++) {
+            answer[i] = nums[i] | nums[i + 1];
+          }
+          
+          return answer;
+        };
+
+        const input = [1,3,7,15];
+        let results = orArray(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. We initialize an array answer of size n - 1.
+        2. We iterate through the nums array up to the second last element.
+        3. At each index i, we compute the bitwise OR of nums[i] and nums[i + 1], storing the result in answer[i].
+        4. Finally, we return the answer array.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>

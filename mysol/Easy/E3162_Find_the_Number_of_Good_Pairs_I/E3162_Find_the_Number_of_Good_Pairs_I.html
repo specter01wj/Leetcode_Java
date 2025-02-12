@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given 2 integer arrays nums1 and nums2 of lengths n 
+        and m respectively. You are also given a positive integer k.
+
+        A pair (i, j) is called good if nums1[i] is divisible by 
+        nums2[j] * k (0 <= i <= n - 1, 0 <= j <= m - 1).
+
+        Return the total number of good pairs.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @param k: an integer
+        * @return: the total number of good pairs
+        */
+        let numberOfPairs = function(nums1, nums2, k) {
+          let count = 0;
+          
+          for (let i = 0; i < nums1.length; i++) {
+            for (let j = 0; j < nums2.length; j++) {
+              if (nums1[i] % (nums2[j] * k) === 0) {
+                count++;
+              }
+            }
+          }
+          
+          return count;
+        };
+
+        const nums1 = [1,2,4,12], nums2 = [2,4], k = 3;
+        let results = numberOfPairs(nums1, nums2, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(nums1, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Iterate through each element in nums1 using index i.
+        2. Iterate through each element in nums2 using index j.
+        3. Check if nums1[i] is divisible by nums2[j] * k using the modulo condition nums1[i] % (nums2[j] * k) == 0.
+        4. If the condition is satisfied, increase the count.
+        5. Return the total count of good pairs.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
