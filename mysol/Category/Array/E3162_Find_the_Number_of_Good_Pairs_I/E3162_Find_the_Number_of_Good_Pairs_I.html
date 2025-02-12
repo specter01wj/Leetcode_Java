@@ -4,49 +4,47 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an array nums, where each number in the array 
-        appears either once or twice.
+			 	You are given 2 integer arrays nums1 and nums2 of lengths n 
+        and m respectively. You are also given a positive integer k.
 
-        Return the bitwise XOR of all the numbers that appear twice 
-        in the array, or 0 if no number appears twice.
+        A pair (i, j) is called good if nums1[i] is divisible by 
+        nums2[j] * k (0 <= i <= n - 1, 0 <= j <= m - 1).
+
+        Return the total number of good pairs.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the bitwise XOR of all the numbers that appear twice in the array
+        * @param nums1: a list of integers
+        * @param nums2: a list of integers
+        * @param k: an integer
+        * @return: the total number of good pairs
         */
-        let duplicateNumbersXOR = function(nums) {
-            let seen = new Set();
-            let duplicates = new Set();
-            let xor = 0;
-            
-            for (let num of nums) {
-                if (seen.has(num)) { // If already seen, it's a duplicate
-                    if (!duplicates.has(num)) { // Ensure we only XOR once per duplicate number
-                        xor ^= num;
-                        duplicates.add(num);
-                    } 
-                } else {
-                    seen.add(num);
-                }
+        let numberOfPairs = function(nums1, nums2, k) {
+          let count = 0;
+          
+          for (let i = 0; i < nums1.length; i++) {
+            for (let j = 0; j < nums2.length; j++) {
+              if (nums1[i] % (nums2[j] * k) === 0) {
+                count++;
+              }
             }
-            
-            return xor;
+          }
+          
+          return count;
         };
 
-        const input = [1,2,2,1];
-        let results = duplicateNumbersXOR(input);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        const nums1 = [1,2,4,12], nums2 = [2,4], k = 3;
+        let results = numberOfPairs(nums1, nums2, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(nums1, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Use a HashSet (seen) to track numbers that have been encountered.
-        2. Use another HashSet (duplicates) to track numbers that appear more than once.
-        3. Iterate through the nums array:
-          . If a number is seen for the first time, add it to seen.
-          . If a number is seen again, add it to duplicates and XOR it into the result.
-        4. Return the final XOR value.
+				1. Iterate through each element in nums1 using index i.
+        2. Iterate through each element in nums2 using index j.
+        3. Check if nums1[i] is divisible by nums2[j] * k using the modulo condition nums1[i] % (nums2[j] * k) == 0.
+        4. If the condition is satisfied, increase the count.
+        5. Return the total count of good pairs.
 			 */
 
 		</script>
