@@ -812,6 +812,8 @@ By Jin Wang
 |3142|**Check if Grid Satisfies Conditions**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3151|**Special Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3158|**Find the XOR of Numbers Which Appear Twice**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3162|**Find the Number of Good Pairs I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3173|**Bitwise OR of Adjacent Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
