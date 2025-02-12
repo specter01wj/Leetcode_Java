@@ -4,49 +4,37 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an array nums, where each number in the array 
-        appears either once or twice.
-
-        Return the bitwise XOR of all the numbers that appear twice 
-        in the array, or 0 if no number appears twice.
+			 	Given an array nums of length n, return an array answer of 
+        length n - 1 such that answer[i] = nums[i] | nums[i + 1] 
+        where | is the bitwise OR operation.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: the bitwise XOR of all the numbers that appear twice in the array
+        * @return: an array answer of length n - 1
         */
-        let duplicateNumbersXOR = function(nums) {
-            let seen = new Set();
-            let duplicates = new Set();
-            let xor = 0;
-            
-            for (let num of nums) {
-                if (seen.has(num)) { // If already seen, it's a duplicate
-                    if (!duplicates.has(num)) { // Ensure we only XOR once per duplicate number
-                        xor ^= num;
-                        duplicates.add(num);
-                    } 
-                } else {
-                    seen.add(num);
-                }
-            }
-            
-            return xor;
+        let orArray = function(nums) {
+          let n = nums.length;
+          let answer = new Array(n - 1);
+          
+          for (let i = 0; i < n - 1; i++) {
+            answer[i] = nums[i] | nums[i + 1];
+          }
+          
+          return answer;
         };
 
-        const input = [1,2,2,1];
-        let results = duplicateNumbersXOR(input);
+        const input = [1,3,7,15];
+        let results = orArray(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Use a HashSet (seen) to track numbers that have been encountered.
-        2. Use another HashSet (duplicates) to track numbers that appear more than once.
-        3. Iterate through the nums array:
-          . If a number is seen for the first time, add it to seen.
-          . If a number is seen again, add it to duplicates and XOR it into the result.
-        4. Return the final XOR value.
+				1. We initialize an array answer of size n - 1.
+        2. We iterate through the nums array up to the second last element.
+        3. At each index i, we compute the bitwise OR of nums[i] and nums[i + 1], storing the result in answer[i].
+        4. Finally, we return the answer array.
 			 */
 
 		</script>
