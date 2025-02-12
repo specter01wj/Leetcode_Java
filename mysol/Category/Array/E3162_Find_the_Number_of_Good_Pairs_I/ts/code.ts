@@ -1,25 +1,20 @@
-function duplicateNumbersXOR(nums: number[]): number {
-  const seen = new Set<number>();
-  const duplicates = new Set<number>();
-  let xor = 0;
+function numberOfPairs(nums1: number[], nums2: number[], k: number): number {
+  let count = 0;
 
-  for (const num of nums) {
-      if (seen.has(num)) { // If already seen, it's a duplicate
-          if (!duplicates.has(num)) { // Ensure we only XOR once per duplicate number
-              xor ^= num;
-              duplicates.add(num);
+  for (let i = 0; i < nums1.length; i++) {
+      for (let j = 0; j < nums2.length; j++) {
+          if (nums1[i] % (nums2[j] * k) === 0) {
+              count++;
           }
-      } else {
-          seen.add(num);
       }
   }
 
-  return xor;
+  return count;
 };
 
-const input: number[] = [1,2,2,1];
-const results = duplicateNumbersXOR(input);
+const nums1: number[] = [1,2,4,12], nums2: number[] = [2,4], k: number = 3;
+const results = numberOfPairs(nums1, nums2, k);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(nums1, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
