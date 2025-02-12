@@ -21,7 +21,21 @@ public class E3162_Find_the_Number_of_Good_Pairs_I {
         System.out.println("input: " + Arrays.toString(nums1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate through each element in nums1 using index i.
+	2. Iterate through each element in nums2 using index j.
+	3. Check if nums1[i] is divisible by nums2[j] * k using the modulo condition nums1[i] % (nums2[j] * k) == 0.
+	4. If the condition is satisfied, increase the count.
+	5. Return the total count of good pairs.
+    */
 	
+	/*
+     * @param nums1: a list of integers
+     * @param nums2: a list of integers
+     * @param k: an integer
+     * @return: the total number of good pairs
+     */
 	public int numberOfPairs(int[] nums1, int[] nums2, int k) {
 		int count = 0;
 		
