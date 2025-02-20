@@ -29,7 +29,7 @@
               let complement = (24 - remainder) % 24;
               
               count += remainderCount.get(complement) || 0;
-              remainderCount.put(remainder, remainderCount.getOrDefault(remainder, 0) + 1);
+              remainderCount.set(remainder, (remainderCount.get(remainder) || 0) + 1);
           }
 
           return count;
