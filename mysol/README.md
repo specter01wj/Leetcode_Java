@@ -814,6 +814,8 @@ By Jin Wang
 |3158|**Find the XOR of Numbers Which Appear Twice**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3162|**Find the Number of Good Pairs I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3173|**Bitwise OR of Adjacent Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3184|**Count Pairs That Form a Complete Day I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3190|**Find Minimum Operations to Make All Elements Divisible by Three**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
