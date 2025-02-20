@@ -24,7 +24,11 @@ public class E3184_Count_Pairs_That_Form_a_Complete_Day_I {
 	
 	/*
     solution:
-    count good triplets
+    1. Use a HashMap to store the remainder of each element when divided by 24.
+	2. For each number hour, compute remainder = hour % 24.
+	3. Check how many times the complement (24 - remainder) % 24 has appeared before.
+	4. Increment the count accordingly.
+	5. Finally, update the map to record the occurrence of the current remainder.
     */
 	
 	/*
