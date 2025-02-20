@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array hours representing times in hours, 
+        return an integer denoting the number of pairs i, j where 
+        i < j and hours[i] + hours[j] forms a complete day.
+
+        A complete day is defined as a time duration that is an 
+        exact multiple of 24 hours.
+
+        For example, 1 day is 24 hours, 2 days is 48 hours, 3 days 
+        is 72 hours, and so on.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param hours: a list of integers
+        * @return: an integer denoting the number of pairs i, j
+        */
+        let countCompleteDayPairs = function(hours) {
+          let remainderCount = new Map();
+          let count = 0;
+
+          for (let hour of hours) {
+              let remainder = hour % 24;
+              let complement = (24 - remainder) % 24;
+              
+              count += remainderCount.get(complement) || 0;
+              remainderCount.set(remainder, (remainderCount.get(remainder) || 0) + 1);
+          }
+
+          return count;
+        };
+
+        const input = [12,12,30,24,24];
+        let results = countCompleteDayPairs(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Use a HashMap to store the remainder of each element when divided by 24.
+        2. For each number hour, compute remainder = hour % 24.
+        3. Check how many times the complement (24 - remainder) % 24 has appeared before.
+        4. Increment the count accordingly.
+        5. Finally, update the map to record the occurrence of the current remainder.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
