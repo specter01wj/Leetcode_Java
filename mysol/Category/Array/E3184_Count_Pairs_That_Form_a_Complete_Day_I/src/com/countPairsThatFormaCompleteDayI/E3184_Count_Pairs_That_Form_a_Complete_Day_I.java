@@ -22,7 +22,15 @@ public class E3184_Count_Pairs_That_Form_a_Complete_Day_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param hours: a list of integers
+     * @return: an integer denoting the number of pairs i, j
+     */
 	public int countCompleteDayPairs(int[] hours) {
         Map<Integer, Integer> remainderCount = new HashMap<>();
         int count = 0;
