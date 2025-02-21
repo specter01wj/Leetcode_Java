@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You have an array of floating point numbers averages which is initially empty. 
+        You are given an array nums of n integers where n is even.
+
+        You repeat the following procedure n / 2 times:
+
+          . Remove the smallest element, minElement, and the largest element maxElement, from nums.
+          . Add (minElement + maxElement) / 2 to averages.
+
+        Return the minimum element in averages.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the minimum element in averages
+        */
+        let minimumAverage = function(nums) {
+          nums.sort((a, b) => a - b);
+          let averages = [];
+          let left = 0, right = nums.length - 1;
+          
+          while (left < right) {
+              let avg = (nums[left] + nums[right]) / 2;
+              averages.push(avg);
+              left++;
+              right--;
+          }
+          
+          return Math.min(...averages);
+        };
+
+        const input = [7,8,3,4,15,13,4,1];
+        let results = minimumAverage(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Sort the Array - Sorting ensures that the smallest and largest elements are easily accessible at the beginning and end of the array.
+        2. Two-Pointer Approach - Start from both ends (left and right) and iterate until they meet.
+        3. Compute Averages - For each pair (min, max), compute (min + max) / 2 and add it to the averages list.
+        4. Find the Minimum - Return the smallest value from the averages list.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
