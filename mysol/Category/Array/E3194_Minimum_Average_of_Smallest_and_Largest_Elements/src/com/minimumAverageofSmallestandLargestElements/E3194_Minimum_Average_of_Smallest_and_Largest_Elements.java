@@ -23,7 +23,18 @@ public class E3194_Minimum_Average_of_Smallest_and_Largest_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Sort the Array - Sorting ensures that the smallest and largest elements are easily accessible at the beginning and end of the array.
+	2. Two-Pointer Approach - Start from both ends (left and right) and iterate until they meet.
+	3. Compute Averages - For each pair (min, max), compute (min + max) / 2 and add it to the averages list.
+	4. Find the Minimum - Return the smallest value from the averages list.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum element in averages
+     */
 	public double minimumAverage(int[] nums) {
         Arrays.sort(nums);
         List<Double> averages = new ArrayList<>();
