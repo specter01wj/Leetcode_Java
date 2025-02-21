@@ -1,21 +1,32 @@
-function minimumAverage(nums: number[]): number {
-  nums.sort((a, b) => a - b);
-  let averages: number[] = [];
-  let left = 0, right = nums.length - 1;
+function tripletCount(a: number[], b: number[], c: number[]): number {
+  let count = 0;
 
-  while (left < right) {
-      let avg = (nums[left] + nums[right]) / 2;
-      averages.push(avg);
-      left++;
-      right--;
+  for (let numA of a) {
+      for (let numB of b) {
+          for (let numC of c) {
+              let xorValue = numA ^ numB ^ numC;
+              if (countSetBits(xorValue) % 2 === 0) {
+                  count++;
+              }
+          }
+      }
   }
 
-  return Math.min(...averages);
+  return count;
 };
 
-const input: number[] = [7,8,3,4,15,13,4,1];
-const results = minimumAverage([...input]);
+function countSetBits(n: number): number {
+  let count = 0;
+  while (n > 0) {
+      count += n & 1;
+      n >>= 1;
+  }
+  return count;
+}
+
+const a: number[] = [1,1], b: number[] = [2,3], c: number[] = [1,5];
+const results = tripletCount(a, b, c);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(a, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
