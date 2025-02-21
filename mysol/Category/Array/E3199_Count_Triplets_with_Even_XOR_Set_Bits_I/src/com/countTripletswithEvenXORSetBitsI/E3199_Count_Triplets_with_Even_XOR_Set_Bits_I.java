@@ -16,7 +16,21 @@ public class E3199_Count_Triplets_with_Even_XOR_Set_Bits_I {
         System.out.println("input: " + Arrays.toString(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate through each possible combination of elements from a, b, and c.
+	2. Compute the XOR value of the triplet.
+	3. Count the number of set bits using Integer.bitCount(xorValue).
+	4. Check if the count of set bits is even (% 2 == 0).
+	5. If true, increase the count.
+    */
 	
+	/*
+     * @param a: a list of integers
+     * @param b: a list of integers
+     * @param c: a list of integers
+     * @return: the number of triplets (a[i], b[j], c[k])
+     */
 	public int tripletCount(int[] a, int[] b, int[] c) {
         int count = 0;
         
