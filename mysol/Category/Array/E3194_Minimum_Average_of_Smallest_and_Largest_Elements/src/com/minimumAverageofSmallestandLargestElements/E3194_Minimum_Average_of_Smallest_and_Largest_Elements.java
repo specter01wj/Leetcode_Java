@@ -18,7 +18,8 @@ public class E3194_Minimum_Average_of_Smallest_and_Largest_Elements {
 	public static void main(String[] args) {
 		E3194_Minimum_Average_of_Smallest_and_Largest_Elements solution = new E3194_Minimum_Average_of_Smallest_and_Largest_Elements();
 		int[] input = {7,8,3,4,15,13,4,1};
-		double output = solution.minimumAverage(input);
+		int[] intputCopy = Arrays.copyOf(input, input.length);
+		double output = solution.minimumAverage(intputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
