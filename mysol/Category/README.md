@@ -421,6 +421,8 @@ Cspiration Category:
 |3173|Bitwise OR of Adjacent Elements|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3184|Count Pairs That Form a Complete Day I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3190|Find Minimum Operations to Make All Elements Divisible by Three|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3194|Minimum Average of Smallest and Largest Elements|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3199|Count Triplets with Even XOR Set Bits I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
