@@ -24,7 +24,19 @@ public class E3206_Alternating_Groups_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. We loop through each tile in the circular array.
+	2. We determine the left (prev), current (curr), and right (next) 
+		tiles while handling circular indexing using modulo (%).
+	3. If prev != curr && curr != next, then it's an alternating group.
+	4. We count such occurrences and return the result.
+    */
 	
+	/*
+     * @param colors: a list of integers
+     * @return: the number of alternating groups
+     */
 	public int numberOfAlternatingGroups(int[] colors) {
         int n = colors.length;
         int count = 0;
