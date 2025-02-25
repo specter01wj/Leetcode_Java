@@ -423,6 +423,8 @@ Cspiration Category:
 |3190|Find Minimum Operations to Make All Elements Divisible by Three|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3194|Minimum Average of Smallest and Largest Elements|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3199|Count Triplets with Even XOR Set Bits I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3200|Maximum Height of a Triangle|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3206|Alternating Groups I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
