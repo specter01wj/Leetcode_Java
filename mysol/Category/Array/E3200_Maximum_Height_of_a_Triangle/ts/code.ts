@@ -1,32 +1,35 @@
-function tripletCount(a: number[], b: number[], c: number[]): number {
-  let count = 0;
-
-  for (let numA of a) {
-      for (let numB of b) {
-          for (let numC of c) {
-              let xorValue = numA ^ numB ^ numC;
-              if (countSetBits(xorValue) % 2 === 0) {
-                  count++;
-              }
-          }
-      }
-  }
-
-  return count;
+function maxHeightOfTriangle(red: number, blue: number): number {
+  return Math.max(buildTriangle(red, blue), buildTriangle(blue, red));
 };
 
-function countSetBits(n: number): number {
-  let count = 0;
-  while (n > 0) {
-      count += n & 1;
-      n >>= 1;
+function buildTriangle(primary: number, secondary: number): number {
+  let height = 0;
+  let i = 1; // Number of balls needed for the current row
+
+  while (true) {
+      if (i % 2 === 1) { // Odd rows use primary color
+          if (primary >= i) {
+              primary -= i;
+          } else {
+              break;
+          }
+      } else { // Even rows use secondary color
+          if (secondary >= i) {
+              secondary -= i;
+          } else {
+              break;
+          }
+      }
+      height++; // Successfully added another row
+      i++; // Move to the next row
   }
-  return count;
+
+  return height;
 }
 
-const a: number[] = [1,1], b: number[] = [2,3], c: number[] = [1,5];
-const results = tripletCount(a, b, c);
+const red: number = 2, blue: number = 4;
+const results = maxHeightOfTriangle(red, blue);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(a, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Red: ' + JSON.stringify(red, null, 2) + '; Blue: ' + JSON.stringify(blue, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
