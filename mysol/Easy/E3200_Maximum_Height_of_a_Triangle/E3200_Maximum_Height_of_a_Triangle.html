@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given two integers red and blue representing the count 
+        of red and blue colored balls. You have to arrange these balls 
+        to form a triangle such that the 1st row will have 1 ball, 
+        the 2nd row will have 2 balls, the 3rd row will have 3 balls, 
+        and so on.
+
+        All the balls in a particular row should be the same color, 
+        and adjacent rows should have different colors.
+
+        Return the maximum height of the triangle that can be achieved.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param red: an integer
+        * @param blue: an integer
+        * @return: the maximum height of the triangle that can be achieved
+        */
+        let maxHeightOfTriangle = function(red, blue) {
+            return Math.max(buildTriangle(red, blue), buildTriangle(blue, red));
+        };
+
+        function buildTriangle(primary, secondary) {
+            let height = 0;
+            let i = 1; // Number of balls needed for the current row
+
+            while (true) {
+                if (i % 2 === 1) { // Odd rows use primary color
+                    if (primary >= i) {
+                        primary -= i;
+                    } else {
+                        break;
+                    }
+                } else { // Even rows use secondary color
+                    if (secondary >= i) {
+                        secondary -= i;
+                    } else {
+                        break;
+                    }
+                }
+                height++; // Successfully added another row
+                i++; // Move to the next row
+            }
+
+            return height;
+        }
+
+        const red = 2, blue = 4;
+        let results = maxHeightOfTriangle(red, blue);
+				$('#t1').html('<h2>Red: ' + JSON.stringify(red, null, 2) +'; Blue: ' + JSON.stringify(blue, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Alternating Color Choice:
+          . The odd rows (1st, 3rd, 5th, …) use the primary color (whichever is passed first).
+          . The even rows (2nd, 4th, 6th, …) use the secondary color.
+        2. Two Calls:
+          . Math.max(buildTriangle(red, blue), buildTriangle(blue, red)) 
+          ensures that we try both starting color arrangements and return 
+          the best result.
+        3. Loop Process:
+          . Start with row 1, check if enough balls are available.
+          . Deduct balls and increase the height.
+          . Repeat for the next row until a row cannot be formed.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
