@@ -23,7 +23,26 @@ public class E3200_Maximum_Height_of_a_Triangle {
         System.out.println("red: " + (red) + "; blue: " + (blue) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Alternating Color Choice:
+		. The odd rows (1st, 3rd, 5th, …) use the primary color (whichever is passed first).
+		. The even rows (2nd, 4th, 6th, …) use the secondary color.
+	2. Two Calls:
+		. Math.max(buildTriangle(red, blue), buildTriangle(blue, red)) 
+		ensures that we try both starting color arrangements and return 
+		the best result.
+	3. Loop Process:
+		. Start with row 1, check if enough balls are available.
+		. Deduct balls and increase the height.
+		. Repeat for the next row until a row cannot be formed.
+    */
 	
+	/*
+     * @param red: an integer
+     * @param blue: an integer
+     * @return: the maximum height of the triangle that can be achieved
+     */
 	public int maxHeightOfTriangle(int red, int blue) {
         return Math.max(buildTriangle(red, blue), buildTriangle(blue, red));
     }
