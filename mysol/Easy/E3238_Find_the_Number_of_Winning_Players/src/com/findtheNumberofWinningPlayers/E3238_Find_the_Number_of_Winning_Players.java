@@ -29,7 +29,11 @@ public class E3238_Find_the_Number_of_Winning_Players {
 	
 	/*
     solution:
-    count good triplets
+    1. We use a HashMap<Integer, HashMap<Integer, Integer>> to track the count of each color picked by each player.
+	2. We iterate over the pick array and populate this map.
+	3. After gathering counts, we check each player's color counts to see if they exceed their player number.
+	4. If any color count surpasses the required threshold (player index + 1), the player is counted as a winner.
+	5. The final count of winning players is returned.
     */
 	
 	/*
