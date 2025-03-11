@@ -820,6 +820,8 @@ By Jin Wang
 |3199|**Count Triplets with Even XOR Set Bits I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3200|**Maximum Height of a Triangle**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3206|**Alternating Groups I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3232|**Find if Digit Game Can Be Won**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3238|**Find the Number of Winning Players**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
