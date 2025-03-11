@@ -1,22 +1,25 @@
-function numberOfAlternatingGroups(colors: number[]): number {
-  let n = colors.length;
-  let count = 0;
+function canAliceWin(nums: number[]): boolean {
+  let singleDigitSum = 0, doubleDigitSum = 0;
 
-  for (let i = 0; i < n; i++) {
-      let prev = colors[(i - 1 + n) % n];
-      let curr = colors[i];
-      let next = colors[(i + 1) % n];
-
-      if (prev !== curr && curr !== next) {
-          count++;
+  // Calculate the sum of single-digit and double-digit numbers
+  for (let num of nums) {
+      if (num < 10) {
+          singleDigitSum += num;
+      } else if (num < 100) {
+          doubleDigitSum += num;
       }
   }
 
-  return count;
+  // Calculate Bob's sums in each case
+  let bobSumWhenAliceTakesSingles = doubleDigitSum;
+  let bobSumWhenAliceTakesDoubles = singleDigitSum;
+
+  // Check if Alice can win in either case
+  return singleDigitSum > bobSumWhenAliceTakesSingles || doubleDigitSum > bobSumWhenAliceTakesDoubles;
 };
 
-const input: number[] = [0,1,0,0,1];
-const results = numberOfAlternatingGroups(input);
+const input: number[] = [1,2,3,4,5,14];
+const results = canAliceWin(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
