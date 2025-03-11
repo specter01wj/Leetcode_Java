@@ -22,7 +22,21 @@ public class E3232_Find_if_Digit_Game_Can_Be_Won {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate through nums and separate sums for:
+		. Single-digit numbers (< 10)
+		. Double-digit numbers (< 100)
+	2. Compute Bob's sum:
+		. If Alice takes all single-digit numbers, Bob gets the sum of double-digit numbers.
+		. If Alice takes all double-digit numbers, Bob gets the sum of single-digit numbers.
+	3. Check if Alice's sum is strictly greater than Bob's sum in either case.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if Alice can win this game, otherwise, return false
+     */
 	public boolean canAliceWin(int[] nums) {
         int singleDigitSum = 0, doubleDigitSum = 0;
 
