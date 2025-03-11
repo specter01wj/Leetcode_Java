@@ -27,7 +27,16 @@ public class E3238_Find_the_Number_of_Winning_Players {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param n: an integer
+     * @param pick: a list of integers
+     * @return: the number of players who win the game
+     */
 	public int winningPlayerCount(int n, int[][] pick) {
         // Map to store player -> (color -> count) mapping
         Map<Integer, Map<Integer, Integer>> playerMap = new HashMap<>();
