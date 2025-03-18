@@ -72,9 +72,15 @@ const results = new NeighborSum(grid);
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = `
       <h2>Input Grid:</h2>
-      <pre>${JSON.stringify(grid, null, 2)}</pre>
-      <h3>adjacentSum(1) = ${results.adjacentSum(1)}</h3>
-      <h3>adjacentSum(4) = ${results.adjacentSum(4)}</h3>
-      <h3>diagonalSum(4) = ${results.diagonalSum(4)}</h3>
-      <h3>diagonalSum(8) = ${results.diagonalSum(8)}</h3>
+      <table border="1" cellpadding="5" cellspacing="0">
+        ${grid.map(row => `<tr>${row.map(num => `<td>${num}</td>`).join('')}</tr>`).join('')}
+      </table>
+
+      <h2>Results:</h2>
+      <table border="1" cellpadding="5" cellspacing="0">
+        <tr><td>adjacentSum(1)</td><td>${results.adjacentSum(1)}</td></tr>
+        <tr><td>adjacentSum(4)</td><td>${results.adjacentSum(4)}</td></tr>
+        <tr><td>diagonalSum(4)</td><td>${results.diagonalSum(4)}</td></tr>
+        <tr><td>diagonalSum(8)</td><td>${results.diagonalSum(8)}</td></tr>
+      </table>
     `;
