@@ -27,7 +27,19 @@ public class E3248_Snake_in_Matrix {
         System.out.println("input: " + (commands) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. The snake starts at position (0,0) in the matrix.
+	2. We iterate through the commands list and update the row and col values accordingly.
+	3. At the end, the final position (row, col) is converted to a 1D index using the formula: index=(row×n)+col
+	4. The output is the final index of the snake after executing all commands.
+    */
 	
+	/*
+     * @param n: an integer
+     * @param commands: a list of strings
+     * @return: the position of the final cell where the snake ends up after executing commands
+     */
 	public int finalPositionOfSnake(int n, List<String> commands) {
         int row = 0, col = 0; // The snake starts at position (0,0)
         
