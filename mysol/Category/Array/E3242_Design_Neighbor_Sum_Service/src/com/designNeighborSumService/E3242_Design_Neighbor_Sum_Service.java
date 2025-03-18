@@ -40,12 +40,17 @@ public class E3242_Design_Neighbor_Sum_Service {
 	        System.out.println("diagonalSum(8) = " + diag8); // Expected: 4
 	}
 	
-	
+	/*
+    solution:
+    */
 	class NeighborSum {
 	    private int[][] grid;
 	    private int n;
 	    private Map<Integer, int[]> valueToPosition;
 
+	    /**
+	     * @param grid: a n x n 2D array
+	     */
 	    public NeighborSum(int[][] grid) {
 	        this.grid = grid;
 	        this.n = grid.length;
@@ -59,6 +64,10 @@ public class E3242_Design_Neighbor_Sum_Service {
 	        }
 	    }
 	    
+	    /**
+	     * @param value: an integer
+	     * @return: an integer
+	     */
 	    public int adjacentSum(int value) {
 	        if (!valueToPosition.containsKey(value)) return 0;
 	        int[] pos = valueToPosition.get(value);
@@ -77,6 +86,10 @@ public class E3242_Design_Neighbor_Sum_Service {
 	        return sum;
 	    }
 	    
+	    /**
+	     * @param value: an integer
+	     * @return: an integer
+	     */
 	    public int diagonalSum(int value) {
 	        if (!valueToPosition.containsKey(value)) return 0;
 	        int[] pos = valueToPosition.get(value);
@@ -95,12 +108,5 @@ public class E3242_Design_Neighbor_Sum_Service {
 	        return sum;
 	    }
 	}
-
-	/**
-	 * Your NeighborSum object will be instantiated and called as such:
-	 * NeighborSum obj = new NeighborSum(grid);
-	 * int param_1 = obj.adjacentSum(value);
-	 * int param_2 = obj.diagonalSum(value);
-	 */
 
 }
