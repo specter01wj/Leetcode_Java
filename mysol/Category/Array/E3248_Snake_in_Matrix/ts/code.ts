@@ -22,7 +22,7 @@ function finalPositionOfSnake(n: number, commands: string[]): number {
   return (row * n) + col;
 };
 
-const commands: string[][] = ["RIGHT","DOWN"];
+const commands: string[] = ["RIGHT","DOWN"];
 const n: number = 2;
 const results = finalPositionOfSnake(n, commands);
 
