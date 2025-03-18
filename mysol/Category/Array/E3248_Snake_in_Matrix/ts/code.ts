@@ -1,34 +1,31 @@
-function winningPlayerCount(n: number, pick: number[][]): number {
-  let playerMap = new Map<number, Map<number, number>>();
+function finalPositionOfSnake(n: number, commands: string[]): number {
+  let row = 0, col = 0; // The snake starts at position (0,0)
 
-  // Count the number of balls of each color picked by each player
-  for (let [player, color] of pick) {
-      if (!playerMap.has(player)) {
-          playerMap.set(player, new Map<number, number>());
-      }
-      let colorMap = playerMap.get(player)!;
-      colorMap.set(color, (colorMap.get(color) || 0) + 1);
-  }
-
-  let count = 0;
-
-  // Check which players meet the winning condition
-  for (let [player, colorMap] of playerMap) {
-      for (let ballCount of colorMap.values()) {
-          if (ballCount > player) {
-              count++;
-              break; // No need to check further colors for this player
-          }
+  for (let command of commands) {
+      switch (command) {
+          case "UP":
+              row -= 1;
+              break;
+          case "DOWN":
+              row += 1;
+              break;
+          case "LEFT":
+              col -= 1;
+              break;
+          case "RIGHT":
+              col += 1;
+              break;
       }
   }
 
-  return count;
+  // Convert (row, col) position to 1D index
+  return (row * n) + col;
 };
 
-const input: number[][] = [[0,0],[1,0],[1,0],[2,1],[2,1],[2,0]];
-const n: number = 4;
-const results = winningPlayerCount(n, input);
+const commands: string[][] = ["RIGHT","DOWN"];
+const n: number = 2;
+const results = finalPositionOfSnake(n, commands);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(commands, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
