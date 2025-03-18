@@ -822,6 +822,8 @@ By Jin Wang
 |3206|**Alternating Groups I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3232|**Find if Digit Game Can Be Won**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3238|**Find the Number of Winning Players**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3242|**Design Neighbor Sum Service**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3248|**Snake in Matrix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
