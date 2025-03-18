@@ -1,34 +1,80 @@
-function winningPlayerCount(n: number, pick: number[][]): number {
-  let playerMap = new Map<number, Map<number, number>>();
+class NeighborSum {
+  private grid: number[][];
+  private n: number;
+  private valueToPosition: Map<number, [number, number]>;
 
-  // Count the number of balls of each color picked by each player
-  for (let [player, color] of pick) {
-      if (!playerMap.has(player)) {
-          playerMap.set(player, new Map<number, number>());
-      }
-      let colorMap = playerMap.get(player)!;
-      colorMap.set(color, (colorMap.get(color) || 0) + 1);
-  }
+  /**
+   * @param grid: a 2D array of numbers
+   */
+  constructor(grid: number[][]) {
+      this.grid = grid;
+      this.n = grid.length;
+      this.valueToPosition = new Map();
 
-  let count = 0;
-
-  // Check which players meet the winning condition
-  for (let [player, colorMap] of playerMap) {
-      for (let ballCount of colorMap.values()) {
-          if (ballCount > player) {
-              count++;
-              break; // No need to check further colors for this player
+      // Store value positions in the map
+      for (let i = 0; i < this.n; i++) {
+          for (let j = 0; j < this.n; j++) {
+              this.valueToPosition.set(grid[i][j], [i, j]);
           }
       }
   }
 
-  return count;
-};
+  /**
+   * @param value: a number
+   * @return: a number
+   */
+  adjacentSum(value: number): number {
+      if (!this.valueToPosition.has(value)) return 0;
+      const [i, j] = this.valueToPosition.get(value)!;
+      let sum = 0;
 
-const input: number[][] = [[0,0],[1,0],[1,0],[2,1],[2,1],[2,0]];
-const n: number = 4;
-const results = winningPlayerCount(n, input);
+      // Adjacent neighbors (top, bottom, left, right)
+      const directions = [[-1, 0], [1, 0], [0, -1], [0, 1]];
+      for (const [di, dj] of directions) {
+          const ni = i + di, nj = j + dj;
+          if (ni >= 0 && ni < this.n && nj >= 0 && nj < this.n) {
+              sum += this.grid[ni][nj];
+          }
+      }
+
+      return sum;
+  }
+
+  /**
+   * @param value: a number
+   * @return: a number
+   */
+  diagonalSum(value: number): number {
+      if (!this.valueToPosition.has(value)) return 0;
+      const [i, j] = this.valueToPosition.get(value)!;
+      let sum = 0;
+
+      // Diagonal neighbors (top-left, top-right, bottom-left, bottom-right)
+      const directions = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
+      for (const [di, dj] of directions) {
+          const ni = i + di, nj = j + dj;
+          if (ni >= 0 && ni < this.n && nj >= 0 && nj < this.n) {
+              sum += this.grid[ni][nj];
+          }
+      }
+
+      return sum;
+  }
+}
+
+const grid = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8]
+];
+const results = new NeighborSum(grid);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
-
+webHeading.innerHTML = `
+      <h2>Input Grid:</h2>
+      <pre>${JSON.stringify(grid, null, 2)}</pre>
+      <h3>adjacentSum(1) = ${results.adjacentSum(1)}</h3>
+      <h3>adjacentSum(4) = ${results.adjacentSum(4)}</h3>
+      <h3>diagonalSum(4) = ${results.diagonalSum(4)}</h3>
+      <h3>diagonalSum(8) = ${results.diagonalSum(8)}</h3>
+    `;
