@@ -824,6 +824,7 @@ By Jin Wang
 |3238|**Find the Number of Winning Players**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3242|**Design Neighbor Sum Service**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3248|**Snake in Matrix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3263|**Convert Doubly Linked List to Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
