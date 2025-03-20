@@ -4,61 +4,61 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	There is a snake in an n x n matrix grid and can move in four 
-        possible directions. Each cell in the grid is identified by 
-        the position: grid[i][j] = (i * n) + j.
+			 	You are given the head of a doubly linked list, which contains 
+        nodes that have a next pointer and a previous pointer.
 
-        The snake starts at cell 0 and follows a sequence of commands.
-
-        You are given an integer n representing the size of the grid and 
-        an array of strings commands where each command[i] is either "UP", 
-        "RIGHT", "DOWN", and "LEFT". It's guaranteed that the snake will 
-        remain within the grid boundaries throughout its movement.
-
-        Return the position of the final cell where the snake ends up after 
-        executing commands.
+        Return an integer array which contains the elements of the linked list in order.
 			 */
 			$(document).ready(function(){
         
-				/*
-        * @param n: an integer
-        * @param commands: a list of strings
-        * @return: the position of the final cell where the snake ends up after executing commands
-        */
-        let finalPositionOfSnake = function(n, commands) {
-            let row = 0, col = 0; // The snake starts at position (0,0)
+        function _Node(val, prev = null, next = null) {
+            this.val = val;
+            this.prev = prev;
+            this.next = next;
+        }
 
-            for (let command of commands) {
-                switch (command) {
-                    case "UP":
-                        row -= 1;
-                        break;
-                    case "DOWN":
-                        row += 1;
-                        break;
-                    case "LEFT":
-                        col -= 1;
-                        break;
-                    case "RIGHT":
-                        col += 1;
-                        break;
-                }
+				/*
+        * @param head: the head node of the doubly linked list
+        * @return: an integer array containing the elements of the linked list in order
+        */
+        let toArray = function(head) {
+            let result = [];
+            let current = head;
+
+            while (current !== null) {
+                result.push(current.val);
+                current = current.next;
             }
 
-            // Convert (row, col) position to 1D index
-            return (row * n) + col;
+            return result;
         };
 
-        const commands = ["RIGHT","DOWN"], n = 2;
-        let results = finalPositionOfSnake(n, commands);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(commands, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        function createDoublyLinkedList(arr) {
+            if (arr.length === 0) return null;
+
+            let head = new _Node(arr[0], null, null);
+            let current = head;
+
+            for (let i = 1; i < arr.length; i++) {
+                let newNode = new _Node(arr[i], current, null);
+                current.next = newNode;
+                current = newNode;
+            }
+
+            return head;
+        }
+
+        const input = [1, 2, 3, 4, 3, 2, 1];
+        let head = createDoublyLinkedList(input);
+        let results = toArray(head);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. The snake starts at position (0,0) in the matrix.
-        2. We iterate through the commands list and update the row and col values accordingly.
-        3. At the end, the final position (row, col) is converted to a 1D index using the formula: index=(row×n)+col
-        4. The output is the final index of the snake after executing all commands.
+				1. Calculate the length: Iterate through the doubly linked list to determine the number of elements.
+        2. Create an array: Use the calculated length to initialize an integer array.
+        3. Fill the array: Traverse the linked list again and store the values in the array.
+        4. Return the array: The method returns the filled integer array.
 			 */
 
 		</script>
