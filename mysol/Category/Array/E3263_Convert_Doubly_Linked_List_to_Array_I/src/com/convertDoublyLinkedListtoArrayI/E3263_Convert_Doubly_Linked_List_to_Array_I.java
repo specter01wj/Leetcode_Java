@@ -42,7 +42,18 @@ public class E3263_Convert_Doubly_Linked_List_to_Array_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Calculate the length: Iterate through the doubly linked list to determine the number of elements.
+	2. Create an array: Use the calculated length to initialize an integer array.
+	3. Fill the array: Traverse the linked list again and store the values in the array.
+	4. Return the array: The method returns the filled integer array.
+    */
 	
+	/*
+     * @param head: the head node of the doubly linked list
+     * @return: an integer array containing the elements of the linked list in order
+     */
 	public int[] toArray(Node head) {
         if (head == null) {
             return new int[0];
