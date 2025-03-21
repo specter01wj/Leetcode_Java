@@ -430,6 +430,7 @@ Cspiration Category:
 |3242|Design Neighbor Sum Service|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3248|Snake in Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3263|Convert Doubly Linked List to Array I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3264|Final Array State After K Multiplication Operations I|Easy||ava/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
