@@ -4,61 +4,48 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	There is a snake in an n x n matrix grid and can move in four 
-        possible directions. Each cell in the grid is identified by 
-        the position: grid[i][j] = (i * n) + j.
+			 	You are given an integer array nums, an integer k, and an integer multiplier.
 
-        The snake starts at cell 0 and follows a sequence of commands.
+        You need to perform k operations on nums. In each operation:
 
-        You are given an integer n representing the size of the grid and 
-        an array of strings commands where each command[i] is either "UP", 
-        "RIGHT", "DOWN", and "LEFT". It's guaranteed that the snake will 
-        remain within the grid boundaries throughout its movement.
+          . Find the minimum value x in nums. If there are multiple occurrences of 
+            the minimum value, select the one that appears first.
+          . Replace the selected minimum value x with x * multiplier.
 
-        Return the position of the final cell where the snake ends up after 
-        executing commands.
+        Return an integer array denoting the final state of nums after performing all k operations.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param n: an integer
-        * @param commands: a list of strings
-        * @return: the position of the final cell where the snake ends up after executing commands
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @param multiplier: an integer
+        * @return: an integer array denoting the final state of nums after performing all k operations
         */
-        let finalPositionOfSnake = function(n, commands) {
-            let row = 0, col = 0; // The snake starts at position (0,0)
-
-            for (let command of commands) {
-                switch (command) {
-                    case "UP":
-                        row -= 1;
-                        break;
-                    case "DOWN":
-                        row += 1;
-                        break;
-                    case "LEFT":
-                        col -= 1;
-                        break;
-                    case "RIGHT":
-                        col += 1;
-                        break;
+        let getFinalState = function(nums, k, multiplier) {
+            for (let i = 0; i < k; i++) {
+                let minIndex = 0;
+                for (let j = 1; j < nums.length; j++) {
+                    if (nums[j] < nums[minIndex]) {
+                        minIndex = j;
+                    }
                 }
+                nums[minIndex] *= multiplier;
             }
-
-            // Convert (row, col) position to 1D index
-            return (row * n) + col;
+            return nums;
         };
 
-        const commands = ["RIGHT","DOWN"], n = 2;
-        let results = finalPositionOfSnake(n, commands);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(commands, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        const input = [2,1,3,5,6], k = 5, multiplier = 2;
+        const inputCopy = [...input];
+        let results = getFinalState(inputCopy, k, multiplier);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. The snake starts at position (0,0) in the matrix.
-        2. We iterate through the commands list and update the row and col values accordingly.
-        3. At the end, the final position (row, col) is converted to a 1D index using the formula: index=(row×n)+col
-        4. The output is the final index of the snake after executing all commands.
+				1. Loop k times.
+        2. In each iteration, find the first occurrence of the minimum value in the array.
+        3. Multiply that value by multiplier and update the array.
+        4. Return the final array state.
 			 */
 
 		</script>
