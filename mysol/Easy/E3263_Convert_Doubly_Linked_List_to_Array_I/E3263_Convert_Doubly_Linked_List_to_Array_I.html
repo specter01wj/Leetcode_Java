@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given the head of a doubly linked list, which contains 
+        nodes that have a next pointer and a previous pointer.
+
+        Return an integer array which contains the elements of the linked list in order.
+			 */
+			$(document).ready(function(){
+        
+        function _Node(val, prev = null, next = null) {
+            this.val = val;
+            this.prev = prev;
+            this.next = next;
+        }
+
+				/*
+        * @param head: the head node of the doubly linked list
+        * @return: an integer array containing the elements of the linked list in order
+        */
+        let toArray = function(head) {
+            let result = [];
+            let current = head;
+
+            while (current !== null) {
+                result.push(current.val);
+                current = current.next;
+            }
+
+            return result;
+        };
+
+        function createDoublyLinkedList(arr) {
+            if (arr.length === 0) return null;
+
+            let head = new _Node(arr[0], null, null);
+            let current = head;
+
+            for (let i = 1; i < arr.length; i++) {
+                let newNode = new _Node(arr[i], current, null);
+                current.next = newNode;
+                current = newNode;
+            }
+
+            return head;
+        }
+
+        const input = [1, 2, 3, 4, 3, 2, 1];
+        let head = createDoublyLinkedList(input);
+        let results = toArray(head);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Calculate the length: Iterate through the doubly linked list to determine the number of elements.
+        2. Create an array: Use the calculated length to initialize an integer array.
+        3. Fill the array: Traverse the linked list again and store the values in the array.
+        4. Return the array: The method returns the filled integer array.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>

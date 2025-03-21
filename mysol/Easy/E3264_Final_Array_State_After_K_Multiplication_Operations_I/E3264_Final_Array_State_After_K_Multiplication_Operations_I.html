@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array nums, an integer k, and an integer multiplier.
+
+        You need to perform k operations on nums. In each operation:
+
+          . Find the minimum value x in nums. If there are multiple occurrences of 
+            the minimum value, select the one that appears first.
+          . Replace the selected minimum value x with x * multiplier.
+
+        Return an integer array denoting the final state of nums after performing all k operations.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @param multiplier: an integer
+        * @return: an integer array denoting the final state of nums after performing all k operations
+        */
+        let getFinalState = function(nums, k, multiplier) {
+            for (let i = 0; i < k; i++) {
+                let minIndex = 0;
+                for (let j = 1; j < nums.length; j++) {
+                    if (nums[j] < nums[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                nums[minIndex] *= multiplier;
+            }
+            return nums;
+        };
+
+        const input = [2,1,3,5,6], k = 5, multiplier = 2;
+        const inputCopy = [...input];
+        let results = getFinalState(inputCopy, k, multiplier);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Loop k times.
+        2. In each iteration, find the first occurrence of the minimum value in the array.
+        3. Multiply that value by multiplier and update the array.
+        4. Return the final array state.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
