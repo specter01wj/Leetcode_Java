@@ -19,7 +19,8 @@ public class E3264_Final_Array_State_After_K_Multiplication_Operations_I {
 		E3264_Final_Array_State_After_K_Multiplication_Operations_I solution = new E3264_Final_Array_State_After_K_Multiplication_Operations_I();
 		int[] input = {2,1,3,5,6};
 		int k = 5, multiplier = 2;
-		int[] output = solution.getFinalState(input, k, multiplier);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int[] output = solution.getFinalState(inputCopy, k, multiplier);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
