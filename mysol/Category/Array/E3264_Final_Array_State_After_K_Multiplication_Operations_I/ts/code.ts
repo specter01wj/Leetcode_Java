@@ -1,31 +1,20 @@
-function finalPositionOfSnake(n: number, commands: string[]): number {
-  let row = 0, col = 0; // The snake starts at position (0,0)
-
-  for (let command of commands) {
-      switch (command) {
-          case "UP":
-              row -= 1;
-              break;
-          case "DOWN":
-              row += 1;
-              break;
-          case "LEFT":
-              col -= 1;
-              break;
-          case "RIGHT":
-              col += 1;
-              break;
+function getFinalState(nums: number[], k: number, multiplier: number): number[] {
+  for (let i = 0; i < k; i++) {
+      let minIndex = 0;
+      for (let j = 1; j < nums.length; j++) {
+          if (nums[j] < nums[minIndex]) {
+              minIndex = j;
+          }
       }
+      nums[minIndex] *= multiplier;
   }
-
-  // Convert (row, col) position to 1D index
-  return (row * n) + col;
+  return nums;
 };
 
-const commands: string[] = ["RIGHT","DOWN"];
-const n: number = 2;
-const results = finalPositionOfSnake(n, commands);
+const input: number[] = [2,1,3,5,6];
+const k: number = 2, multiplier: number = 2;
+const results = getFinalState(input, k, multiplier);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(commands, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
