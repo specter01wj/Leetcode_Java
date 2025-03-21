@@ -13,7 +13,8 @@ function getFinalState(nums: number[], k: number, multiplier: number): number[] 
 
 const input: number[] = [2,1,3,5,6];
 const k: number = 2, multiplier: number = 2;
-const results = getFinalState(input, k, multiplier);
+const inputCopy: number[] = [...input];
+const results = getFinalState(inputCopy, k, multiplier);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
