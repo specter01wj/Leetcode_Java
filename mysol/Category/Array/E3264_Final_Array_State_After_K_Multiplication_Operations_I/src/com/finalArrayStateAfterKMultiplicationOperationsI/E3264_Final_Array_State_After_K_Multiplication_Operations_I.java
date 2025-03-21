@@ -24,7 +24,20 @@ public class E3264_Final_Array_State_After_K_Multiplication_Operations_I {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Loop k times.
+	2. In each iteration, find the first occurrence of the minimum value in the array.
+	3. Multiply that value by multiplier and update the array.
+	4. Return the final array state.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @param multiplier: an integer
+     * @return: an integer array denoting the final state of nums after performing all k operations
+     */
 	public int[] getFinalState(int[] nums, int k, int multiplier) {
         for (int i = 0; i < k; i++) {
             int minIndex = 0;
