@@ -21,7 +21,17 @@ public class E3289_The_Two_Sneaky_Numbers_of_Digitville {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Set<Integer> seen: stores unique numbers.
+	2. When a number is added again (seen.add(num) returns false), it means the number is duplicated.
+	3. We collect two such numbers and return them.
+    */
 	
+	/*
+     * @param int[] nums: a list of integers
+     * @return: an array of size two containing the two numbers
+     */
 	public int[] getSneakyNumbers(int[] nums) {
         Set<Integer> seen = new HashSet<>();
         List<Integer> result = new ArrayList<>();
