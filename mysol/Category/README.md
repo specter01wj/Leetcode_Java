@@ -431,6 +431,8 @@ Cspiration Category:
 |3248|Snake in Matrix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3263|Convert Doubly Linked List to Array I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3264|Final Array State After K Multiplication Operations I|Easy||ava/Javascript/Typescript|Done/Done/Done|
+|3285|Find Indices of Stable Mountains|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3289|The Two Sneaky Numbers of Digitville|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
