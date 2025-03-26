@@ -828,6 +828,8 @@ By Jin Wang
 |3264|**Final Array State After K Multiplication Operations I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3285|**Find Indices of Stable Mountains**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3289|**The Two Sneaky Numbers of Digitville**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3300|**Minimum Element After Replacement With Digit Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3314|**Construct the Minimum Bitwise Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
