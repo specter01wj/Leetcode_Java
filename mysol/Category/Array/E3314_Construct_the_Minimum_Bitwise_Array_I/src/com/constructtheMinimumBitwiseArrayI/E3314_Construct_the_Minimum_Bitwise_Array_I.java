@@ -23,7 +23,19 @@ public class E3314_Construct_the_Minimum_Bitwise_Array_I {
         System.out.println("input: " + (input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    For each num in the list:
+	1. Try all possible x from 0 up to num.
+	2. For each x, check: if (x | (x + 1)) == num
+	3. If such an x is found, take the smallest one and break the loop.
+	4. If no such x exists, set the answer to -1.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: an array ans of length n
+     */
 	public int[] minBitwiseArray(List<Integer> nums) {
         int n = nums.size();
         int[] ans = new int[n];
