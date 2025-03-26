@@ -1,21 +1,22 @@
-function getSneakyNumbers(nums: number[]): number[] {
-  const seen = new Set<number>();
-  const result: number[] = [];
-
-  for (const num of nums) {
-      if (seen.has(num)) {
-          result.push(num);
-          if (result.length === 2) break;
-      } else {
-          seen.add(num);
+function minElement(nums: number[]): number {
+  const digitSum = (num: number): number => {
+      let sum = 0;
+      while (num > 0) {
+          sum += num % 10;
+          num = Math.floor(num / 10);
       }
-  }
+      return sum;
+  };
 
-  return result;
+  let min = Infinity;
+  for (const num of nums) {
+      min = Math.min(min, digitSum(num));
+  }
+  return min;
 };
 
-const input: number[] = [7,1,5,4,3,4,6,0,9,5,8,2];
-const results = getSneakyNumbers(input);
+const input: number[] = [10,12,13,14];
+const results = minElement(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
