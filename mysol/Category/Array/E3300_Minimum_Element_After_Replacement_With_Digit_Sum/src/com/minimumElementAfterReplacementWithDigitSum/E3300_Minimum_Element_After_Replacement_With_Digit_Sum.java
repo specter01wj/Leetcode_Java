@@ -18,7 +18,16 @@ public class E3300_Minimum_Element_After_Replacement_With_Digit_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. getDigitSum() calculates the sum of digits of a given number.
+	2. For each number in nums, we compute its digit sum and keep track of the minimum.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum element in nums after all replacements
+     */
 	public int minElement(int[] nums) {
         int min = Integer.MAX_VALUE;
         for (int num : nums) {
