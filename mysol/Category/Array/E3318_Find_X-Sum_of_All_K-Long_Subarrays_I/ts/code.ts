@@ -1,28 +1,68 @@
-function minBitwiseArray(nums: number[]): number[] {
-  const ans: number[] = [];
+function findXSum(nums: number[], k: number, x: number): number[] {
+  const n = nums.length;
+  const result: number[] = [];
+  const freq: Map<number, number> = new Map();
 
-  for (let i = 0; i < nums.length; i++) {
-      const num = nums[i];
-      let found = false;
+  // Initialize frequency map with first k elements
+  for (let i = 0; i < k; i++) {
+      freq.set(nums[i], (freq.get(nums[i]) || 0) + 1);
+  }
 
-      for (let x = 0; x <= num; x++) {
-          if ((x | (x + 1)) === num) {
-              ans.push(x);
-              found = true;
-              break;
-          }
+  result.push(computeXSum(freq, x));
+
+  // Slide the window
+  for (let i = k; i < n; i++) {
+      const outVal = nums[i - k];
+      const outCount = freq.get(outVal)! - 1;
+      if (outCount === 0) {
+          freq.delete(outVal);
+      } else {
+          freq.set(outVal, outCount);
       }
 
-      if (!found) {
-          ans.push(-1);
+      const inVal = nums[i];
+      freq.set(inVal, (freq.get(inVal) || 0) + 1);
+
+      result.push(computeXSum(freq, x));
+  }
+
+  return result;
+};
+
+function computeXSum(freqMap: Map<number, number>, x: number): number {
+  const freqList: [number, number][] = [];
+
+  // Convert map to list of [value, frequency]
+  for (const [val, count] of freqMap.entries()) {
+      freqList.push([val, count]);
+  }
+
+  // Sort by frequency descending, then value descending
+  freqList.sort((a, b) => {
+      if (b[1] !== a[1]) return b[1] - a[1];
+      return b[0] - a[0];
+  });
+
+  // Pick top x values
+  const topX = new Set<number>();
+  for (let i = 0; i < Math.min(x, freqList.length); i++) {
+      topX.add(freqList[i][0]);
+  }
+
+  // Compute sum of top x frequent values
+  let sum = 0;
+  for (const [val, count] of freqMap.entries()) {
+      if (topX.has(val)) {
+          sum += val * count;
       }
   }
 
-  return ans;
-};
+  return sum;
+}
 
-const input: number[] = [2,3,5,7];
-const results = minBitwiseArray(input);
+const input: number[] = [1,1,2,2,3,4,2,3];
+const k: number = 6, x: number = 2;
+const results = findXSum(input, k, x);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
