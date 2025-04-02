@@ -4,22 +4,29 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an array nums consisting of n prime integers.
+			 	You are given an array nums of n integers and two integers k and x.
 
-        You need to construct an array ans of length n, such that, for each index i, 
-        the bitwise OR of ans[i] and ans[i] + 1 is equal to nums[i], i.e. ans[i] OR 
-        (ans[i] + 1) == nums[i].
+        The x-sum of an array is calculated by the following procedure:
 
-        Additionally, you must minimize each value of ans[i] in the resulting array.
+          . Count the occurrences of all elements in the array.
+          . Keep only the occurrences of the top x most frequent elements. 
+            If two elements have the same number of occurrences, the element 
+            with the bigger value is considered more frequent.
+          . Calculate the sum of the resulting array.
 
-        If it is not possible to find such a value for ans[i] that satisfies the condition, 
-        then set ans[i] = -1.
+        Note that if an array has less than x distinct elements, its x-sum is 
+        the sum of the array.
+
+        Return an integer array answer of length n - k + 1 where answer[i] is 
+        the x-sum of the subarray nums[i..i + k - 1].
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: an array ans of length n
+        * @param k: an integer
+        * @param x: an integer
+        * @return: an integer array answer of length n - k + 1
         */
         let findXSum = function(nums, k, x) {
             const n = nums.length;
@@ -89,11 +96,36 @@
 			});
 
 			/*sol:
-				For each num in the list:
-        1. Try all possible x from 0 up to num.
-        2. For each x, check: if (x | (x + 1)) == num
-        3. If such an x is found, take the smallest one and break the loop.
-        4. If no such x exists, set the answer to -1.
+				Main Method: findXSum(nums, k, x)
+        1. Initialize:
+          . n = nums.length
+          . result[] as an array of size n - k + 1
+          . A HashMap<Integer, Integer> to track element frequencies in the current window
+        2. Populate the frequency map with the first k elements:
+          . Loop from i = 0 to i < k
+          . For each nums[i], increment its count in the frequency map
+        3. Compute the x-sum for the first window:
+          . Call computeXSum(freq, x) and assign the result to result[0]
+        4. Slide the window from i = k to i < n:
+          . Decrement the count of nums[i - k] (element exiting the window)
+            . If its frequency becomes zero, remove it from the map
+          . Increment the count of nums[i] (element entering the window)
+          . Call computeXSum(freq, x) and store the result in result[i - k + 1]
+        5. Return the result[] array
+        
+        Helper Method: computeXSum(freqMap, x)
+        1. Convert the freqMap into a list of integer arrays freqList[]
+          . Each element is of the form [value, frequency]
+        2. Sort freqList using the following criteria:
+          . Primary: descending order of frequency
+          . Secondary: descending order of value (to resolve ties)
+        3. Select the top x elements from the sorted list:
+          . Use a Set<Integer> to store the selected values
+        4. Calculate the x-sum:
+          . Iterate through the original freqMap
+          . For each entry, if its key exists in the top x set:
+            . Add key × frequency to the sum
+        5. Return the calculated sum
 			 */
 
 		</script>
