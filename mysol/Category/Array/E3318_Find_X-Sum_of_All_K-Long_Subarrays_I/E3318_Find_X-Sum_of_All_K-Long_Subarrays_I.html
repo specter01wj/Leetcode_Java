@@ -21,31 +21,70 @@
         * @param nums: a list of integers
         * @return: an array ans of length n
         */
-        let minBitwiseArray = function(nums) {
-            const ans = [];
+        let findXSum = function(nums, k, x) {
+            const n = nums.length;
+            const result = [];
+            const freq = new Map();
 
-            for (let i = 0; i < nums.length; i++) {
-                let num = nums[i];
-                let found = false;
+            // Initialize frequency map with first k elements
+            for (let i = 0; i < k; i++) {
+                freq.set(nums[i], (freq.get(nums[i]) || 0) + 1);
+            }
 
-                for (let x = 0; x <= num; x++) {
-                    if ((x | (x + 1)) === num) {
-                        ans.push(x);
-                        found = true;
-                        break;
-                    }
+            result.push(computeXSum(freq, x));
+
+            for (let i = k; i < n; i++) {
+                // Remove element going out of the window
+                const out = nums[i - k];
+                freq.set(out, freq.get(out) - 1);
+                if (freq.get(out) === 0) {
+                    freq.delete(out);
                 }
 
-                if (!found) {
-                    ans.push(-1);
+                // Add element coming into the window
+                const inVal = nums[i];
+                freq.set(inVal, (freq.get(inVal) || 0) + 1);
+
+                result.push(computeXSum(freq, x));
+            }
+
+            return result;
+        };
+
+        function computeXSum(freqMap, x) {
+            const freqList = [];
+
+            // Convert freqMap to list of [value, count]
+            for (let [val, count] of freqMap.entries()) {
+                freqList.push([val, count]);
+            }
+
+            // Sort by frequency DESC, then value DESC
+            freqList.sort((a, b) => {
+                if (b[1] !== a[1]) return b[1] - a[1];
+                return b[0] - a[0];
+            });
+
+            // Select top x values
+            const topX = new Set();
+            for (let i = 0; i < Math.min(x, freqList.length); i++) {
+                topX.add(freqList[i][0]);
+            }
+
+            // Sum up values from top x
+            let sum = 0;
+            for (let [val, count] of freqMap.entries()) {
+                if (topX.has(val)) {
+                    sum += val * count;
                 }
             }
 
-            return ans;
-        };
+            return sum;
+        }
 
-        const input = [2,3,5,7]
-        let results = minBitwiseArray(input);
+        const input = [1,1,2,2,3,4,2,3];
+        const k = 6, x = 2;
+        let results = findXSum(input, k, x);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
