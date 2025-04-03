@@ -23,7 +23,19 @@ public class E3349_Adjacent_Increasing_Subarrays_Detection_I {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. n < 2 * k: Not enough room for two adjacent subarrays.
+	2. Iterate from i = 0 to n - 2k, since we need two subarrays of length k starting at i and i + k.
+	3. We use a helper function isIncreasing to check if a subarray of length k starting at a specific index is strictly increasing.
+	4. Return true as soon as we find a valid pair. Otherwise, return false.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: true if it is possible to find two such subarrays, and false otherwise
+     */
 	public boolean hasIncreasingSubarrays(List<Integer> nums, int k) {
         int n = nums.size();
         if (n < 2 * k) return false;
