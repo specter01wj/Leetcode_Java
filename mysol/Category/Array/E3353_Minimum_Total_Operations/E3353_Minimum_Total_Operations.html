@@ -4,56 +4,53 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array nums of n integers and an integer k, determine whether 
-        there exist two adjacent subarrays of length k such that both subarrays 
-        are strictly increasing. Specifically, check if there are two subarrays 
-        starting at indices a and b (a < b), where:
+			 	Given an array of integers nums, you can perform any number of 
+        operations on this array.
 
-          . Both subarrays nums[a..a + k - 1] and nums[b..b + k - 1] are strictly increasing.
-          . The subarrays must be adjacent, meaning b = a + k.
+        In each operation, you can:
 
-        Return true if it is possible to find two such subarrays, and false otherwise.
+          . Choose a prefix of the array.
+          . Choose an integer k (which can be negative) and add k to each element in the chosen prefix.
+
+        A prefix of an array is a subarray that starts from the beginning of 
+        the array and extends to any point within it.
+
+        Return the minimum number of operations required to make all elements in arr equal.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param k: an integer
-        * @return: true if it is possible to find two such subarrays, and false otherwise
+        * @return: the minimum number of operations required to make all elements in arr equal
         */
-        let hasIncreasingSubarrays = function(nums, k) {
-            const n = nums.length;
-            if (n < 2 * k) return false;
-
-            for (let i = 0; i <= n - 2 * k; i++) {
-                if (isIncreasing(nums, i, k) && isIncreasing(nums, i + k, k)) {
-                    return true;
+        let minOperations = function(nums) {
+            let operations = 0;
+            for (let i = nums.length - 2; i >= 0; i--) {
+                if (nums[i] !== nums[i + 1]) {
+                    operations++;
                 }
             }
-
-            return false;
+            return operations;
         };
 
-        function isIncreasing(nums, start, k) {
-            for (let i = start + 1; i < start + k; i++) {
-                if (nums[i] <= nums[i - 1]) {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        const input = [2,5,7,8,9,2,3,4,3,1];
-        const k = 3;
-        let results = hasIncreasingSubarrays(input, k);
+        const input = [1,4,2];
+        let results = minOperations(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. n < 2 * k: Not enough room for two adjacent subarrays.
-        2. Iterate from i = 0 to n - 2k, since we need two subarrays of length k starting at i and i + k.
-        3. We use a helper function isIncreasing to check if a subarray of length k starting at a specific index is strictly increasing.
-        4. Return true as soon as we find a valid pair. Otherwise, return false.
+				1. int operations = 0:
+          . Stores the count of operations needed to make all elements equal.
+        2. Traverse the array from right to left (index i from n - 2 to 0):
+          . This ensures we always compare each element with the one that follows it, simulating working backwards from the goal.
+        3. Compare nums[i] and nums[i + 1]:
+          . If they are not equal, it means we need to perform an operation to bring nums[i] in line with nums[i + 1].
+          . This simulates choosing a prefix up to index i and adding a value to match the next number.
+        4. Increment operations when a difference is found:
+          . Each difference between adjacent values indicates one required operation.
+          . This is the minimal number of operations due to the allowed prefix operation rule.
+        5. Return operations:
+          . The total number of value changes from right to left equals the minimum number of operations needed.
 			 */
 
 		</script>
