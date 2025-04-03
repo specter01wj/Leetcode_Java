@@ -830,6 +830,8 @@ By Jin Wang
 |3289|**The Two Sneaky Numbers of Digitville**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3300|**Minimum Element After Replacement With Digit Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3314|**Construct the Minimum Bitwise Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3318|**Find X-Sum of All K-Long Subarrays I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3349|**Adjacent Increasing Subarrays Detection I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
