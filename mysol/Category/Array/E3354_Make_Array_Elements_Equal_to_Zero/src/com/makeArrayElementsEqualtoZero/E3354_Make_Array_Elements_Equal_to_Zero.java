@@ -32,7 +32,18 @@ public class E3354_Make_Array_Elements_Equal_to_Zero {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. countValidSelections: Iterates through the array to find all positions with 0, 
+    	and for each such position, tries both left and right directions using the simulate method.
+	2. simulate: Simulates the movement and mutation process. If after the entire process 
+		all elements are zero, it returns true; otherwise, false.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of possible valid selections
+     */
 	public int countValidSelections(int[] nums) {
         int count = 0;
 
