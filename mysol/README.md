@@ -832,6 +832,8 @@ By Jin Wang
 |3314|**Construct the Minimum Bitwise Array I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3318|**Find X-Sum of All K-Long Subarrays I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3349|**Adjacent Increasing Subarrays Detection I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3353|**Minimum Total Operations**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3354|**Make Array Elements Equal to Zero**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
