@@ -14,10 +14,11 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 public class E3364_Minimum_Positive_Sum_Subarray {
 
 	public static void main(String[] args) {
-		int[] input = {3, -2, 1, 4};
+		E3364_Minimum_Positive_Sum_Subarray solution = new E3364_Minimum_Positive_Sum_Subarray();
+		List<Integer> input = List.of(3, -2, 1, 4);
 		int l = 2, r = 3;
-		int output = minimumSumSubarray(input, l, r);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int output = solution.minimumSumSubarray(input, l, r);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	
