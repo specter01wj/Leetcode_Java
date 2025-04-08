@@ -4,57 +4,54 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an integer array nums and two integers l and r. 
-        Your task is to find the minimum sum of a subarray whose size is 
-        between l and r (inclusive) and whose sum is greater than 0.
+			 	You are given an integer array nums and an integer k.
 
-        Return the minimum sum of such a subarray. If no such subarray exists, return -1.
+        An integer h is called valid if all values in the array that are 
+        strictly greater than h are identical.
 
-        A subarray is a contiguous non-empty sequence of elements within an array.
+        For example, if nums = [10, 8, 10, 8], a valid integer is h = 9 
+        because all nums[i] > 9 are equal to 10, but 5 is not a valid integer.
+
+        You are allowed to perform the following operation on nums:
+
+          . Select an integer h that is valid for the current values in nums.
+          . For each index i where nums[i] > h, set nums[i] to h.
+
+        Return the minimum number of operations required to make every element 
+        in nums equal to k. If it is impossible to make all elements equal to k, return -1.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param l: an integer
-        * @param r: an integer
-        * @return: the minimum sum of such a subarray
+        * @param k: an integer
+        * @return: the minimum number of operations required to make every element in nums equal to k
         */
-        let minimumSumSubarray = function(nums, l, r) {
-            let n = nums.length;
-            let prefix = new Array(n + 1).fill(0);
-
-            // Build prefix sum array
-            for (let i = 0; i < n; i++) {
-                prefix[i + 1] = prefix[i] + nums[i];
-            }
-
-            let minPositiveSum = Infinity;
-
-            // Iterate over all subarray lengths from l to r
-            for (let len = l; len <= r; len++) {
-                for (let i = 0; i + len <= n; i++) {
-                    let sum = prefix[i + len] - prefix[i];
-                    if (sum > 0) {
-                        minPositiveSum = Math.min(minPositiveSum, sum);
-                    }
+        let minOperations = function(nums, k) {
+            const set = new Set();
+            
+            for (const num of nums) {
+                if (num < k) {
+                    return -1; // Step 1: Impossible if any number is less than k
+                } else if (num > k) {
+                    set.add(num); // Step 2: Track unique values greater than k
                 }
             }
-
-            return minPositiveSum === Infinity ? -1 : minPositiveSum;
+            
+            return set.size; // Step 3: Each unique value > k requires one operation
         };
 
-        const input = [3, -2, 1, 4];
-        const l = 2, r = 3;
-        let results = minimumSumSubarray(input, l, r);
+        const input = [5,2,5,4,5];
+        const k = 2;
+        let results = minOperations(input, k);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. We create a prefix sum array to calculate subarray sums in constant time.
-        2. For each length between l and r, we slide a window and check the sum.
-        3. If the sum is positive and less than the current minimum, we update the result.
-        4. At the end, if we found at least one valid subarray, return the minimum positive sum; otherwise, return -1.
+				1. If any element in the array is less than k, return -1. It is impossible to increase values, and elements smaller than k can never be made equal to k.
+        2. Iterate through the array and collect all values greater than k into a set. Only values greater than k need to be reduced through valid operations.
+        3. The size of the set represents the number of distinct values greater than k. Each distinct value requires one valid operation to reduce it toward k.
+        4. Return the number of operations, which equals the number of distinct values greater than k.
 			 */
 
 		</script>
