@@ -439,6 +439,8 @@ Cspiration Category:
 |3349|Adjacent Increasing Subarrays Detection I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3353|Minimum Total Operations|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3354|Make Array Elements Equal to Zero|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3364|Minimum Positive Sum Subarray|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3375|Minimum Operations to Make Array Values Equal to K|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
