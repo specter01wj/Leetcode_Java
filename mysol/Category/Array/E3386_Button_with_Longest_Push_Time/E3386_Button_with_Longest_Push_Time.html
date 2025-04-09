@@ -4,68 +4,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an integer array nums that represents a circular array. 
-        Your task is to create a new array result of the same size, following these rules:
+			 	You are given a 2D array events which represents a sequence of events 
+        where a child pushes a series of buttons on a keyboard.
 
-        For each index i (where 0 <= i < nums.length), perform the following independent actions:
+        Each events[i] = [indexi, timei] indicates that the button at index 
+        indexi was pressed at time timei.
 
-          . If nums[i] > 0: Start at index i and move nums[i] steps to the right in the circular array. 
-            Set result[i] to the value of the index where you land.
-          . If nums[i] < 0: Start at index i and move abs(nums[i]) steps to the left in the circular array. 
-            Set result[i] to the value of the index where you land.
-          . If nums[i] == 0: Set result[i] to nums[i].
+          . The array is sorted in increasing order of time.
+          . The time taken to press a button is the difference in time between 
+            consecutive button presses. The time for the first button is simply 
+            the time at which it was pressed.
 
-        Return the new array result.
+        Return the index of the button that took the longest time to push. 
+        If multiple buttons have the same longest time, return the button with 
+        the smallest index.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the new array result
+        * @param events: a list of 2D integers
+        * @return: the index of the button that took the longest time to push
         */
-        let constructTransformedArray = function(nums) {
-            const n = nums.length;
-            const result = new Array(n);
-            
-            for (let i = 0; i < n; i++) {
-                const steps = nums[i];
-                if (steps === 0) {
-                    result[i] = nums[i];
-                } else {
-                    let newIndex = (i + steps) % n;
-                    if (newIndex < 0) {
-                        newIndex += n;
-                    }
-                    result[i] = nums[newIndex];
+        let buttonWithLongestTime = function(events) {
+            let longestDuration = events[0][1];     // First event's time is its duration
+            let buttonIndex = events[0][0];         // Initialize with the first button index
+
+            for (let i = 1; i < events.length; i++) {
+                let duration = events[i][1] - events[i - 1][1];
+                let currentButton = events[i][0];
+
+                if (duration > longestDuration) {
+                    longestDuration = duration;
+                    buttonIndex = currentButton;
+                } else if (duration === longestDuration && currentButton < buttonIndex) {
+                    buttonIndex = currentButton;
                 }
             }
-            
-            return result;
+
+            return buttonIndex;
         };
 
-        const input = [3,-2,1,1];
-        let results = constructTransformedArray(input);
+        const input = [[1,2],[2,5],[3,9],[1,15]];
+        let results = buttonWithLongestTime(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Initialize:
-          . n is the length of the array.
-          . Create a result[] array of the same size to store transformed values.
-        2. Loop through each element:
-          . For each index i, examine the value nums[i].
-        3. Three cases:
-          . Case 1: nums[i] == 0
-            . Just copy: result[i] = 0.
-          . Case 2: nums[i] > 0
-            . Move nums[i] steps to the right.
-            . Use modulo: (i + nums[i]) % n.
-          . Case 3: nums[i] < 0
-            . Move abs(nums[i]) steps to the left.
-            . Use modulo: (i + nums[i]) % n.
-            . Adjust if index becomes negative by adding n.
-        4. Return:
-          . Return the filled result[] array.
+				1. Initialization:
+          . longestDuration: stores the longest push time found so far.
+          . buttonIndex: stores the index of the corresponding button.
+        2. First Event:
+          . It has no previous event, so its duration is simply events[0][1].
+        3. Loop Through Events from i=1:
+          . Calculate duration = events[i][1] - events[i-1][1].
+          . Compare with current longestDuration.
+            . If duration > longestDuration: update both longestDuration and buttonIndex.
+            . If duration == longestDuration and current button index is smaller, update buttonIndex.
+        4. Return Result:
+          . The button with the longest push time, or the smallest index in case of tie.
 			 */
 
 		</script>
