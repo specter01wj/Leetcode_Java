@@ -23,23 +23,28 @@
         * @param nums: a list of integers
         * @return: the new array result
         */
-        let minOperations = function(nums, k) {
-            const set = new Set();
+        let constructTransformedArray = function(nums) {
+            const n = nums.length;
+            const result = new Array(n);
             
-            for (const num of nums) {
-                if (num < k) {
-                    return -1; // Step 1: Impossible if any number is less than k
-                } else if (num > k) {
-                    set.add(num); // Step 2: Track unique values greater than k
+            for (let i = 0; i < n; i++) {
+                const steps = nums[i];
+                if (steps === 0) {
+                    result[i] = nums[i];
+                } else {
+                    let newIndex = (i + steps) % n;
+                    if (newIndex < 0) {
+                        newIndex += n;
+                    }
+                    result[i] = nums[newIndex];
                 }
             }
             
-            return set.size; // Step 3: Each unique value > k requires one operation
+            return result;
         };
 
-        const input = [5,2,5,4,5];
-        const k = 2;
-        let results = minOperations(input, k);
+        const input = [3,-2,1,1];
+        let results = constructTransformedArray(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
