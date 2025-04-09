@@ -27,7 +27,26 @@ public class E3386_Button_with_Longest_Push_Time {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialization:
+		. longestDuration: stores the longest push time found so far.
+		. buttonIndex: stores the index of the corresponding button.
+	2. First Event:
+		. It has no previous event, so its duration is simply events[0][1].
+	3. Loop Through Events from i=1:
+		. Calculate duration = events[i][1] - events[i-1][1].
+		. Compare with current longestDuration.
+			. If duration > longestDuration: update both longestDuration and buttonIndex.
+			. If duration == longestDuration and current button index is smaller, update buttonIndex.
+	4. Return Result:
+		. The button with the longest push time, or the smallest index in case of tie.
+    */
 	
+	/*
+     * @param events: a list of 2D integers
+     * @return: the index of the button that took the longest time to push
+     */
 	public int buttonWithLongestTime(int[][] events) {
         // Initialize with the first event
         int longestDuration = events[0][1]; // First press time
