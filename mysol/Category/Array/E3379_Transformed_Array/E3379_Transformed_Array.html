@@ -4,28 +4,24 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an integer array nums and an integer k.
+			 	You are given an integer array nums that represents a circular array. 
+        Your task is to create a new array result of the same size, following these rules:
 
-        An integer h is called valid if all values in the array that are 
-        strictly greater than h are identical.
+        For each index i (where 0 <= i < nums.length), perform the following independent actions:
 
-        For example, if nums = [10, 8, 10, 8], a valid integer is h = 9 
-        because all nums[i] > 9 are equal to 10, but 5 is not a valid integer.
+          . If nums[i] > 0: Start at index i and move nums[i] steps to the right in the circular array. 
+            Set result[i] to the value of the index where you land.
+          . If nums[i] < 0: Start at index i and move abs(nums[i]) steps to the left in the circular array. 
+            Set result[i] to the value of the index where you land.
+          . If nums[i] == 0: Set result[i] to nums[i].
 
-        You are allowed to perform the following operation on nums:
-
-          . Select an integer h that is valid for the current values in nums.
-          . For each index i where nums[i] > h, set nums[i] to h.
-
-        Return the minimum number of operations required to make every element 
-        in nums equal to k. If it is impossible to make all elements equal to k, return -1.
+        Return the new array result.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param k: an integer
-        * @return: the minimum number of operations required to make every element in nums equal to k
+        * @return: the new array result
         */
         let minOperations = function(nums, k) {
             const set = new Set();
@@ -48,10 +44,23 @@
 			});
 
 			/*sol:
-				1. If any element in the array is less than k, return -1. It is impossible to increase values, and elements smaller than k can never be made equal to k.
-        2. Iterate through the array and collect all values greater than k into a set. Only values greater than k need to be reduced through valid operations.
-        3. The size of the set represents the number of distinct values greater than k. Each distinct value requires one valid operation to reduce it toward k.
-        4. Return the number of operations, which equals the number of distinct values greater than k.
+				1. Initialize:
+          . n is the length of the array.
+          . Create a result[] array of the same size to store transformed values.
+        2. Loop through each element:
+          . For each index i, examine the value nums[i].
+        3. Three cases:
+          . Case 1: nums[i] == 0
+            . Just copy: result[i] = 0.
+          . Case 2: nums[i] > 0
+            . Move nums[i] steps to the right.
+            . Use modulo: (i + nums[i]) % n.
+          . Case 3: nums[i] < 0
+            . Move abs(nums[i]) steps to the left.
+            . Use modulo: (i + nums[i]) % n.
+            . Adjust if index becomes negative by adding n.
+        4. Return:
+          . Return the filled result[] array.
 			 */
 
 		</script>

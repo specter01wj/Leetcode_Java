@@ -48,7 +48,7 @@ public class E3379_Transformed_Array {
 	
 	/*
      * @param nums: a list of integers
-     * @return: the number of good triplets
+     * @return: the new array result
      */
 	public int[] constructTransformedArray(int[] nums) {
         int n = nums.length;
