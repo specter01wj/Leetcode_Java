@@ -1,21 +1,33 @@
-function countSubarrays(nums: number[]): number {
-  let count = 0;
+function minimumOperations(nums: number[]): number {
+  let ops = 0;
+  let i = 0;
 
-  for (let i = 1; i < nums.length - 1; i++) {
-      const first = nums[i - 1];
-      const mid = nums[i];
-      const third = nums[i + 1];
+  while (i < nums.length) {
+      const seen = new Set<number>();
+      let hasDuplicate = false;
 
-      if ((first + third) * 2 === mid) {
-          count++;
+      for (let j = i; j < nums.length; j++) {
+          if (seen.has(nums[j])) {
+              hasDuplicate = true;
+              break;
+          }
+          seen.add(nums[j]);
       }
+
+      if (!hasDuplicate) {
+          return ops;
+      }
+
+      // Simulate removing first 3 elements
+      i += 3;
+      ops++;
   }
 
-  return count;
+  return ops;
 };
 
-const input: number[] = [1,2,1,4,1];
-const results = countSubarrays(input);
+const input: number[] = [1,2,3,4,2,3,3,5,7];
+const results = minimumOperations(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
