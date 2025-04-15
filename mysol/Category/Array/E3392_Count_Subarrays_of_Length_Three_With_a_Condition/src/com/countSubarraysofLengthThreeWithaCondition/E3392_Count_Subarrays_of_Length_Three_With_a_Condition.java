@@ -15,7 +15,15 @@ public class E3392_Count_Subarrays_of_Length_Three_With_a_Condition {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and slides
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of subarrays of length 3
+     */
 	public int countSubarrays(int[] nums) {
 		int count = 0;
 		
