@@ -838,6 +838,8 @@ By Jin Wang
 |3375|**Minimum Operations to Make Array Values Equal to K**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3379|**Transformed Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3386|**Button with Longest Push Time**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3392|**Count Subarrays of Length Three With a Condition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3396|**Minimum Number of Operations to Make Elements in Array Distinct**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
