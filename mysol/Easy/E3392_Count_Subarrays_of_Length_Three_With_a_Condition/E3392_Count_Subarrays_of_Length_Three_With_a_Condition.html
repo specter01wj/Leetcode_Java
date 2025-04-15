@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums, return the number of subarrays of length 3 
+        such that the sum of the first and third numbers equals exactly half of 
+        the second number.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the number of subarrays of length 3
+        */
+        let countSubarrays = function(nums) {
+            let  count = 0;
+            
+            for (let i = 1; i < nums.length - 1; i++) {
+              let first = nums[i - 1];
+              let mid = nums[i];
+              let third = nums[i + 1];
+              
+              // Check if first + third == mid / 2 (make sure mid is even)
+              if ((first + third) * 2 === mid) {
+                count++;
+              }
+            }
+            
+            return count;
+        };
+
+        const input = [1,2,1,4,1];
+        let results = countSubarrays(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				loop and slide
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
