@@ -10,8 +10,9 @@ the second number.
 public class E3392_Count_Subarrays_of_Length_Three_With_a_Condition {
 
 	public static void main(String[] args) {
-		int[] input = {3,0,1,1,9,7};
-		int output = countGoodTriplets(input, 7, 2, 3);
+		E3392_Count_Subarrays_of_Length_Three_With_a_Condition solution = new E3392_Count_Subarrays_of_Length_Three_With_a_Condition();
+		int[] input = {1,2,1,4,1};
+		int output = solution.countSubarrays(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
