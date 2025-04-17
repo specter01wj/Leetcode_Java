@@ -840,6 +840,8 @@ By Jin Wang
 |3386|**Button with Longest Push Time**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3392|**Count Subarrays of Length Three With a Condition**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3396|**Minimum Number of Operations to Make Elements in Array Distinct**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3402|**Minimum Operations to Make Columns Strictly Increasing**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3411|**Maximum Subarray With Equal Products**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
