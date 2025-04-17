@@ -1,34 +1,25 @@
-function minimumOperations(nums: number[]): number {
-  let ops = 0;
-  let i = 0;
+function minimumOperations(grid: number[][]): number {
+  const m = grid.length;
+  const n = grid[0].length;
+  let operations = 0;
 
-  while (i < nums.length) {
-      const seen = new Set<number>();
-      let hasDuplicate = false;
-
-      for (let j = i; j < nums.length; j++) {
-          if (seen.has(nums[j])) {
-              hasDuplicate = true;
-              break;
+  for (let col = 0; col < n; col++) {
+      for (let row = 1; row < m; row++) {
+          if (grid[row][col] <= grid[row - 1][col]) {
+              const increment = grid[row - 1][col] + 1 - grid[row][col];
+              operations += increment;
+              grid[row][col] += increment; // update current cell
           }
-          seen.add(nums[j]);
       }
-
-      if (!hasDuplicate) {
-          return ops;
-      }
-
-      // Simulate removing first 3 elements
-      i += 3;
-      ops++;
   }
 
-  return ops;
+  return operations;
 };
 
-const input: number[] = [1,2,3,4,2,3,3,5,7];
+const input: number[] = [[3,2],[1,3],[3,4],[0,1]];
+const inputCopy = input.map(row => [...row]);
 const results = minimumOperations(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(inputCopy, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
