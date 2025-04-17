@@ -17,8 +17,9 @@ Return the length of the longest product equivalent subarray of nums.
 public class E3411_Maximum_Subarray_With_Equal_Products {
 
 	public static void main(String[] args) {
+		E3411_Maximum_Subarray_With_Equal_Products solution = new E3411_Maximum_Subarray_With_Equal_Products();
 		int[] input = {1,2,1,2,1,1,1};
-		int output = maxLength(input);
+		int output = solution.maxLength(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
