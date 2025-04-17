@@ -15,8 +15,12 @@ public class E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing {
 	public static void main(String[] args) {
 		E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing solution = new E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing();
 		int[][] input = {{3,2},{1,3},{3,4},{0,1}};
+		int[][] inputCopy = new int[input.length][];
+		for (int i = 0; i < input.length; i++) {
+		    inputCopy[i] = Arrays.copyOf(input[i], input[i].length);
+		}
 		int output = solution.minimumOperations(input);
-        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
+        System.out.println("input: " + Arrays.deepToString(inputCopy) + "\noutput: " + (output));
 	}
 	
 	/*
