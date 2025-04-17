@@ -19,7 +19,19 @@ public class E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Traverse each column from top to bottom.
+	2. Compare each cell grid[row][col] with the value just above it grid[row-1][col].
+	3. If the current cell is not strictly greater, compute the difference needed to make it greater:
+		grid[row-1][col] + 1 - grid[row][col].
+	4. Add this difference to the operations counter and update the current cell.
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: the minimum number of operations
+     */
 	public int minimumOperations(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
