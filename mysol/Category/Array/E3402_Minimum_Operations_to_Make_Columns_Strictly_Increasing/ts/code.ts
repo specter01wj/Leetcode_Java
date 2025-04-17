@@ -16,7 +16,7 @@ function minimumOperations(grid: number[][]): number {
   return operations;
 };
 
-const input: number[] = [[3,2],[1,3],[3,4],[0,1]];
+const input: number[][] = [[3,2],[1,3],[3,4],[0,1]];
 const inputCopy = input.map(row => [...row]);
 const results = minimumOperations(input);
 
