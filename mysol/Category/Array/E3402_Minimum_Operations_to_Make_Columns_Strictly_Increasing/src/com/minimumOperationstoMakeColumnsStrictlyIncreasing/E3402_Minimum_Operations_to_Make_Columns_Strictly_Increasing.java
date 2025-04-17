@@ -13,9 +13,10 @@ grid strictly increasing.
 public class E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing {
 
 	public static void main(String[] args) {
+		E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing solution = new E3402_Minimum_Operations_to_Make_Columns_Strictly_Increasing();
 		int[][] input = {{3,2},{1,3},{3,4},{0,1}};
-		int output = minimumOperations(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int output = solution.minimumOperations(input);
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
 	
