@@ -23,7 +23,18 @@ public class E3411_Maximum_Subarray_With_Equal_Products {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. GCD is calculated using Euclidean algorithm.
+	2. LCM is calculated as: lcm(a,b) = (a * b) / gcd(a,b)
+	3. Long values are used to avoid overflow for product and lcm.
+	4. Loop is pruned early if product or lcm exceeds 1e18.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the length of the longest product equivalent subarray of nums
+     */
 	public int maxLength(int[] nums) {
         int n = nums.length;
         int maxLen = 0;
