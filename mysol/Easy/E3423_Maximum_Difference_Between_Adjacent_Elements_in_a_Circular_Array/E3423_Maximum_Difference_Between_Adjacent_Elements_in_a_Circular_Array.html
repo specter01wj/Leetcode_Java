@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a circular array nums, find the maximum absolute difference between 
+        adjacent elements.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the maximum absolute difference between adjacent elements
+        */
+        let maxAdjacentDistance = function(nums) {
+            let maxDiff = 0;
+            const n = nums.length;
+
+            for (let i = 0; i < n; i++) {
+                const next = (i + 1) % n; // handle circular wrap
+                const diff = Math.abs(nums[i] - nums[next]);
+                maxDiff = Math.max(maxDiff, diff);
+            }
+
+            return maxDiff;
+        };
+
+        const input = [1,2,4];
+        let results = maxAdjacentDistance(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1 .Since the array is circular, we need to consider each element nums[i] and 
+            its neighbor nums[i+1], but for the last element, its neighbor is the 
+            first element nums[0].
+        2. Compute the absolute difference |nums[i] - nums[(i+1)%n]| for every index i.
+        3. Track the maximum of all these differences.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
