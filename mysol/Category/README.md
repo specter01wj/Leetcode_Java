@@ -447,6 +447,8 @@ Cspiration Category:
 |3396|Minimum Number of Operations to Make Elements in Array Distinct|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3402|Minimum Operations to Make Columns Strictly Increasing|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3411|Maximum Subarray With Equal Products|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3417|Zigzag Grid Traversal With Skip|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3423|Maximum Difference Between Adjacent Elements in a Circular Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
