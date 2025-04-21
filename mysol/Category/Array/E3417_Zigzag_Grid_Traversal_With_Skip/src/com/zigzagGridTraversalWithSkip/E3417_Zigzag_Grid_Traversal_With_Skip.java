@@ -28,7 +28,30 @@ public class E3417_Zigzag_Grid_Traversal_With_Skip {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialize Lists:
+		. traversal: temporarily stores all visited values in strict zigzag order (no skipping yet).
+		. result: final output list that includes only every second element from traversal.
+	2. Iterate Over Rows:
+		. Loop through each row index i from 0 to rows - 1.
+	3. Zigzag Direction Check:
+		. If i is even, traverse left to right: use inner loop from j = 0 to j < cols.
+		. If i is odd, traverse right to left: use inner loop from j = cols - 1 down to j >= 0.
+	4. Collect Zigzag Order:
+		. For each cell visited in step 3, append grid[i][j] to the traversal list.
+		. At this point, the list contains a complete zigzag walk through the grid.
+	5. Skip Alternate Cells:
+		. Iterate over traversal with step size 2 (i.e., index 0, 2, 4, ...) to select every other value.
+		. Append only these selected values to the final result.
+	6. Return Result:
+		. Return the result list containing values from the zigzag traversal, with every second value skipped globally.
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: an array of integers result
+     */
 	public List<Integer> zigzagTraversal(int[][] grid) {
         List<Integer> traversal = new ArrayList<>();
         int rows = grid.length;
