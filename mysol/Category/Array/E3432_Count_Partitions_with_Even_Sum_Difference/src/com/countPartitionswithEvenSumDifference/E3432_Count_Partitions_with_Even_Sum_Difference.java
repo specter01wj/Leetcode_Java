@@ -26,7 +26,7 @@ public class E3432_Count_Partitions_with_Even_Sum_Difference {
 	/*
     solution:
     1. Compute totalSum of the array
-	This allows quick calculation of the right subarray sum at each partition:
+		This allows quick calculation of the right subarray sum at each partition:
 		. rightSum = totalSum - leftSum
 	2. Iterate through the array up to index n - 2
 		. Maintain a running sum leftSum
