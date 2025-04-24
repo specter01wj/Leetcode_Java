@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array nums of size n. For each index i 
+        where 0 <= i < n, define a subarray nums[start ... i] where 
+        start = max(0, i - nums[i]).
+
+        Return the total sum of all elements from the subarray defined 
+        for each index in the array.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the total sum of all elements from the subarray defined for each index in the array
+        */
+        let subarraySum = function(nums) {
+            let totalSum = 0;
+
+            for (let i = 0; i < nums.length; i++) {
+                let start = Math.max(0, i - nums[i]);
+                for (let j = start; j <= i; j++) {
+                    totalSum += nums[j];
+                }
+            }
+
+            return totalSum;
+        };
+
+        const input = [2,3,1];
+        let results = subarraySum(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Initialize a variable totalSum to store the result.
+        2. Loop through each index i of the array:
+          . Calculate start = Math.max(0, i - nums[i])
+          . Loop through from start to i and sum elements in that range
+        3. Add this subarray sum to totalSum
+        4. Return totalSum
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
