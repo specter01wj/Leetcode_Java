@@ -1,18 +1,22 @@
-function subarraySum(nums: number[]): number {
-  let totalSum = 0;
+function countPartitions(nums: number[]): number {
+  const totalSum = nums.reduce((sum, num) => sum + num, 0);
+  let leftSum = 0;
+  let count = 0;
 
-  for (let i = 0; i < nums.length; i++) {
-      const start = Math.max(0, i - nums[i]);
-      for (let j = start; j <= i; j++) {
-          totalSum += nums[j];
+  for (let i = 0; i < nums.length - 1; i++) {
+      leftSum += nums[i];
+      const rightSum = totalSum - leftSum;
+
+      if (Math.abs(leftSum - rightSum) % 2 === 0) {
+          count++;
       }
   }
 
-  return totalSum;
+  return count;
 };
 
-const input: number[] = [2,3,1];
-const results = subarraySum(input);
+const input: number[] = [10,10,3,7,6];
+const results = countPartitions(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
