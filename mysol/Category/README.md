@@ -449,6 +449,8 @@ Cspiration Category:
 |3411|Maximum Subarray With Equal Products|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3417|Zigzag Grid Traversal With Skip|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3423|Maximum Difference Between Adjacent Elements in a Circular Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3427|Sum of Variable Length Subarrays|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3432|Count Partitions with Even Sum Difference|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
