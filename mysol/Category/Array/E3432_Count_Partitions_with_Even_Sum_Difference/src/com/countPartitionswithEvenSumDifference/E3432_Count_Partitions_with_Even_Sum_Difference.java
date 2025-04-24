@@ -23,7 +23,24 @@ public class E3432_Count_Partitions_with_Even_Sum_Difference {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Compute totalSum of the array
+	This allows quick calculation of the right subarray sum at each partition:
+		. rightSum = totalSum - leftSum
+	2. Iterate through the array up to index n - 2
+		. Maintain a running sum leftSum
+		. For each partition index i, compute:
+			. rightSum = totalSum - leftSum
+			. Check if (leftSum - rightSum) % 2 == 0
+		. If yes, increment the count
+	3. Return the total valid count
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of partitions
+     */
 	public int countPartitions(int[] nums) {
         int totalSum = 0;
         for (int num : nums) {
