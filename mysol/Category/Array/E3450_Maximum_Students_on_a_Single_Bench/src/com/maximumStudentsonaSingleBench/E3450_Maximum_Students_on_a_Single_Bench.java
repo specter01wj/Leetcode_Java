@@ -22,7 +22,29 @@ public class E3450_Maximum_Students_on_a_Single_Bench {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Check for Edge Case:
+		. If the students array is null or empty (length == 0), immediately return 0.
+	2. Use a Map<Integer, Set<Integer>>:
+		. Key: benchId
+		. Value: Set of studentIds (to ensure uniqueness).
+	3. Traverse the students array:
+		. For each [studentId, benchId] pair:
+			. If the benchId is not already in the map, create a new empty HashSet.
+			. Add studentId to the set corresponding to benchId.
+			. Because it's a Set, duplicates are automatically ignored.
+	4. Find the Maximum:
+		. Iterate through each entry in the map.
+		. For each Set of students, update the maxStudents with the maximum size found.
+	5. Return the result:
+		. After processing all benches, return the maximum number of unique students found.
+    */
 	
+	/*
+     * @param students: a list of 2D integers
+     * @return: the maximum number of unique students sitting on any single bench
+     */
 	public int maxStudentsOnBench(int[][] students) {
         if (students == null || students.length == 0) {
             return 0;
