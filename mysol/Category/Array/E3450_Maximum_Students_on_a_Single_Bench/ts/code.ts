@@ -1,22 +1,25 @@
-function countPartitions(nums: number[]): number {
-  const totalSum = nums.reduce((sum, num) => sum + num, 0);
-  let leftSum = 0;
-  let count = 0;
+function maxStudentsOnBench(students: number[][]): number {
+  if (students.length === 0) return 0;
 
-  for (let i = 0; i < nums.length - 1; i++) {
-      leftSum += nums[i];
-      const rightSum = totalSum - leftSum;
+  const benchMap: Map<number, Set<number>> = new Map();
 
-      if (Math.abs(leftSum - rightSum) % 2 === 0) {
-          count++;
+  for (const [studentId, benchId] of students) {
+      if (!benchMap.has(benchId)) {
+          benchMap.set(benchId, new Set<number>());
       }
+      benchMap.get(benchId)!.add(studentId);
   }
 
-  return count;
+  let max = 0;
+  for (const studentSet of benchMap.values()) {
+      max = Math.max(max, studentSet.size);
+  }
+
+  return max;
 };
 
-const input: number[] = [10,10,3,7,6];
-const results = countPartitions(input);
+const input: number[][] = [[1,2],[2,2],[3,3],[1,3],[2,3]];
+const results = maxStudentsOnBench(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
