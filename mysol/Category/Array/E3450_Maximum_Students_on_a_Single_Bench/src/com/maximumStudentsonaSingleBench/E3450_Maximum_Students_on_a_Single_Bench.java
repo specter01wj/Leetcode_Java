@@ -16,9 +16,10 @@ in the input, but they should be counted only once per bench.
 public class E3450_Maximum_Students_on_a_Single_Bench {
 
 	public static void main(String[] args) {
+		E3450_Maximum_Students_on_a_Single_Bench solution = new E3450_Maximum_Students_on_a_Single_Bench();
 		int[][] input = {{1,2},{2,2},{3,3},{1,3},{2,3}};
-		int output = maxStudentsOnBench(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int output = solution.maxStudentsOnBench(input);
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
 	
