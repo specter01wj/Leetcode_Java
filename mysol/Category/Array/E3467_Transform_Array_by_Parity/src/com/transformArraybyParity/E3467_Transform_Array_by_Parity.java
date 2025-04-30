@@ -22,7 +22,24 @@ public class E3467_Transform_Array_by_Parity {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Input Traversal and Transformation (O(n)):
+		. We iterate through the array.
+		. Use num % 2:
+			. If num % 2 == 0, it's even ⇒ becomes 0
+			. If num % 2 == 1, it's odd ⇒ becomes 1
+		. This replaces all even numbers with 0 and all odd numbers with 1.
+	2. Sorting the Array (O(n log n)):
+		. The array now only contains 0s and 1s.
+		. Sorting brings all 0s (even numbers) to the front and 1s (odd numbers) to the back.
+	3. Return the Transformed Array.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the resulting array after performing these operations
+     */
 	public int[] transformArray(int[] nums) {
         // Step 1: Transform each number based on parity
         for (int i = 0; i < nums.length; i++) {
