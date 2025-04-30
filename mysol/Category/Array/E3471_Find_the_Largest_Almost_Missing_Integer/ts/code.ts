@@ -24,7 +24,7 @@ function largestInteger(nums: number[], k: number): number {
 
 const input: number[] = [3,9,2,1,7];
 const k: number = 3;
-const results = transformArray(input);
+const results = largestInteger(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
