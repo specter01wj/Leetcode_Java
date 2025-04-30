@@ -451,6 +451,8 @@ Cspiration Category:
 |3423|Maximum Difference Between Adjacent Elements in a Circular Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3427|Sum of Variable Length Subarrays|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3432|Count Partitions with Even Sum Difference|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3450|Maximum Students on a Single Bench|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3452|Sum of Good Numbers|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
