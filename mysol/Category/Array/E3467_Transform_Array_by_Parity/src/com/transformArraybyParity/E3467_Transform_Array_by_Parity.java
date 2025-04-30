@@ -17,7 +17,8 @@ public class E3467_Transform_Array_by_Parity {
 	public static void main(String[] args) {
 		E3467_Transform_Array_by_Parity solution = new E3467_Transform_Array_by_Parity();
 		int[] input = {4,3,2,1};
-		int[] output = solution.transformArray(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int[] output = solution.transformArray(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
