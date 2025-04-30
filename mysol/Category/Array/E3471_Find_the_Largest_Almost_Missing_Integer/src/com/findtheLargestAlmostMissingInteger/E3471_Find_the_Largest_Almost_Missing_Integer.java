@@ -16,9 +16,10 @@ A subarray is a contiguous sequence of elements within an array.
 public class E3471_Find_the_Largest_Almost_Missing_Integer {
 
 	public static void main(String[] args) {
+		E3471_Find_the_Largest_Almost_Missing_Integer solution = new E3471_Find_the_Largest_Almost_Missing_Integer();
 		int[] input = {3,9,2,1,7};
 		int k = 3;
-		int output = largestInteger(input, k);
+		int output = solution.largestInteger(input, k);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
