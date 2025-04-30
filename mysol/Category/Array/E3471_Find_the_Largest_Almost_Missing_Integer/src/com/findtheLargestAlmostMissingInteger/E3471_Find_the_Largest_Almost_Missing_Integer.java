@@ -23,7 +23,18 @@ public class E3471_Find_the_Largest_Almost_Missing_Integer {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Use a Map<Integer, Integer> to count the number of subarrays each number appears in.
+	2. For each sliding window of size k, use a Set to avoid double-counting the same number in one window.
+	3. Iterate through the map, and find the maximum number that appears in exactly one window.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the largest almost missing integer from nums
+     */
 	public int largestInteger(int[] nums, int k) {
         Map<Integer, Integer> countMap = new HashMap<>();
         int n = nums.length;
