@@ -4,58 +4,50 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of integers nums and an integer k, an element 
-        nums[i] is considered good if it is strictly greater than the 
-        elements at indices i - k and i + k (if those indices exist). 
-        If neither of these indices exists, nums[i] is still considered good.
+			 	You are given an integer array nums. Transform nums by performing 
+        the following operations in the exact order specified:
 
-        Return the sum of all the good elements in the array.
+        1. Replace each even number with 0.
+        2. Replace each odd numbers with 1.
+        3. Sort the modified array in non-decreasing order.
+
+        Return the resulting array after performing these operations.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param k: an integer
-        * @return: the sum of all the good elements in the array
+        * @return: the resulting array after performing these operations
         */
-        let sumOfGoodNumbers = function(nums, k) {
-            let sum = 0;
-
+        let transformArray = function(nums) {
+            // Step 1: Transform each number based on parity
             for (let i = 0; i < nums.length; i++) {
-                let isGood = true;
-
-                // Check left neighbor at index i - k
-                if (i - k >= 0 && nums[i] <= nums[i - k]) {
-                    isGood = false;
-                }
-
-                // Check right neighbor at index i + k
-                if (i + k < nums.length && nums[i] <= nums[i + k]) {
-                    isGood = false;
-                }
-
-                // If number is good, add to sum
-                if (isGood) {
-                    sum += nums[i];
-                }
+                nums[i] = nums[i] % 2;  // 0 for even, 1 for odd
             }
 
-            return sum;
+            // Step 2: Sort the modified array
+            nums.sort((a, b) => a - b);
+
+            return nums;
         };
 
-        const input = [1,3,2,1,5,4];
-        const k = 2;
-        let results = sumOfGoodNumbers(input, k);
+        const input = [4,3,2,1];
+        const inputCopy = [...input];
+        let results = transformArray(inputCopy);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Initialize sum to track total of good numbers.
-        2. Loop through each index i in the array.
-        3. Check left neighbor (i - k) if in bounds: nums[i] must be greater.
-        4. Check right neighbor (i + k) if in bounds: nums[i] must be greater.
-        5. If both valid conditions pass, add nums[i] to sum.
-        6. Return the final sum after the loop.
+				1. Input Traversal and Transformation (O(n)):
+          . We iterate through the array.
+          . Use num % 2:
+            . If num % 2 == 0, it's even ⇒ becomes 0
+            . If num % 2 == 1, it's odd ⇒ becomes 1
+          . This replaces all even numbers with 0 and all odd numbers with 1.
+        2. Sorting the Array (O(n log n)):
+          . The array now only contains 0s and 1s.
+          . Sorting brings all 0s (even numbers) to the front and 1s (odd numbers) to the back.
+        3. Return the Transformed Array.
 			 */
 
 		</script>
