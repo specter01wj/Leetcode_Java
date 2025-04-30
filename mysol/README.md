@@ -848,6 +848,8 @@ By Jin Wang
 |3432|**Count Partitions with Even Sum Difference**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3450|**Maximum Students on a Single Bench**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3452|**Sum of Good Numbers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3467|**Transform Array by Parity**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3471|**Find the Largest Almost Missing Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
