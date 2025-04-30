@@ -11,7 +11,8 @@ function transformArray(nums: number[]): number[] {
 };
 
 const input: number[] = [4,3,2,1];
-const results = transformArray(input);
+const inputCopy: number[] = [...input];
+const results = transformArray(inputCopy);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
