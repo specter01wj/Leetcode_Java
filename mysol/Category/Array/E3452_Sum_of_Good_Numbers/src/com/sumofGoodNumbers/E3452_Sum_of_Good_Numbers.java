@@ -13,9 +13,10 @@ Return the sum of all the good elements in the array.
 public class E3452_Sum_of_Good_Numbers {
 
 	public static void main(String[] args) {
+		E3452_Sum_of_Good_Numbers solution = new E3452_Sum_of_Good_Numbers();
 		int[] input = {1,3,2,1,5,4};
 		int k = 2;
-		int output = sumOfGoodNumbers(input, k);
+		int output = solution.sumOfGoodNumbers(input, k);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
