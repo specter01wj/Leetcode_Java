@@ -20,7 +20,21 @@ public class E3452_Sum_of_Good_Numbers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Initialize sum to track total of good numbers.
+	2. Loop through each index i in the array.
+	3. Check left neighbor (i - k) if in bounds: nums[i] must be greater.
+	4. Check right neighbor (i + k) if in bounds: nums[i] must be greater.
+	5. If both valid conditions pass, add nums[i] to sum.
+	6. Return the final sum after the loop.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the sum of all the good elements in the array
+     */
 	public int sumOfGoodNumbers(int[] nums, int k) {
         int n = nums.length;
         int sum = 0;
