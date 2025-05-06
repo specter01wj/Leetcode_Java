@@ -19,7 +19,18 @@ public class E3483_Unique_3Digit_Even_Numbers {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Use 3 nested loops to try all combinations i, j, and k (where i ≠ j ≠ k).
+	2. Check if the hundreds digit is not zero.
+	3. Check if the last digit (ones place) is even.
+	4. Construct the number and add to a Set to ensure uniqueness.
+    */
 	
+	/*
+     * @param digits: a list of integers
+     * @return: the number of distinct three-digit even numbers
+     */
 	public int totalNumbers(int[] digits) {
         Set<Integer> uniqueNumbers = new HashSet<>();
         int n = digits.length;
