@@ -22,8 +22,11 @@ public class E3477_Fruits_Into_Baskets_II {
 	public static void main(String[] args) {
 		E3477_Fruits_Into_Baskets_II solution = new E3477_Fruits_Into_Baskets_II();
 		int[] fruits = {4,2,5}, baskets = {3,5,4};
-		int output = solution.numOfUnplacedFruits(fruits, baskets);
-        System.out.println("fruits: " + Arrays.toString(fruits) + "\noutput: " + (output));
+		int[] basketsCopy = Arrays.copyOf(baskets, baskets.length);
+		int output = solution.numOfUnplacedFruits(fruits, basketsCopy);
+        System.out.println("fruits: " + Arrays.toString(fruits) 
+        	+ "; baskets: " + Arrays.toString(baskets) 
+        	+ "\noutput: " + (output));
 	}
 	
 	
