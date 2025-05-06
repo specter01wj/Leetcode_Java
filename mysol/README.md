@@ -850,6 +850,8 @@ By Jin Wang
 |3452|**Sum of Good Numbers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3467|**Transform Array by Parity**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3471|**Find the Largest Almost Missing Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3477|**Fruits Into Baskets II**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3483|**Unique 3-Digit Even Numbers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
