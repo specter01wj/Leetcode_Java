@@ -1,18 +1,29 @@
-function transformArray(nums: number[]): number[] {
-  // Step 1: Replace even with 0 and odd with 1
-  for (let i = 0; i < nums.length; i++) {
-      nums[i] = nums[i] % 2;
+function totalNumbers(digits: number[]): number {
+  const uniqueNumbers = new Set<number>();
+  const n = digits.length;
+
+  for (let i = 0; i < n; i++) {
+      if (digits[i] === 0) continue; // Hundreds place can't be zero
+
+      for (let j = 0; j < n; j++) {
+          if (j === i) continue;
+
+          for (let k = 0; k < n; k++) {
+              if (k === i || k === j) continue;
+
+              const num = digits[i] * 100 + digits[j] * 10 + digits[k];
+              if (num % 2 === 0) {
+                  uniqueNumbers.add(num);
+              }
+          }
+      }
   }
 
-  // Step 2: Sort the transformed array
-  nums.sort((a, b) => a - b);
-
-  return nums;
+  return uniqueNumbers.size;
 };
 
-const input: number[] = [4,3,2,1];
-const inputCopy: number[] = [...input];
-const results = transformArray(inputCopy);
+const input: number[] = [1,2,3,4];
+const results = totalNumbers(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
