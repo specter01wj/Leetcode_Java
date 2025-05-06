@@ -13,8 +13,9 @@ and there may not be leading zeros.
 public class E3483_Unique_3Digit_Even_Numbers {
 
 	public static void main(String[] args) {
+		E3483_Unique_3Digit_Even_Numbers solution = new E3483_Unique_3Digit_Even_Numbers();
 		int[] input = {1,2,3,4};
-		int output = totalNumbers(input);
+		int output = solution.totalNumbers(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
