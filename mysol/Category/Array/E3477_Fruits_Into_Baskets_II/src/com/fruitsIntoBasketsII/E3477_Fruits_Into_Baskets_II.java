@@ -29,7 +29,21 @@ public class E3477_Fruits_Into_Baskets_II {
         	+ "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Iterate over the fruits from left to right.
+	2. For each fruit:
+		. Try to place it in the leftmost basket whose capacity is greater than or equal to the fruit’s quantity.
+		. Once placed, mark that basket as used (e.g., with a sentinel like -1).
+	3. If a fruit can’t be placed, count it as unplaced.
+	4. Return the total number of unplaced fruit types.
+    */
 	
+	/*
+     * @param fruits: a list of integers
+     * @param baskets: a list of integers
+     * @return: the number of fruit types that remain unplaced after all possible allocations are made
+     */
 	public int numOfUnplacedFruits(int[] fruits, int[] baskets) {
         int n = fruits.length;
         int unplacedCount = 0;
