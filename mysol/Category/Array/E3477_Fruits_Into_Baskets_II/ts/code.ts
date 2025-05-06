@@ -1,31 +1,29 @@
-function largestInteger(nums: number[], k: number): number {
-  const freqMap: Map<number, number> = new Map();
-  const n = nums.length;
+function numOfUnplacedFruits(fruits: number[], baskets: number[]): number {
+  let unplaced = 0;
 
-  for (let i = 0; i <= n - k; i++) {
-      const windowSet = new Set<number>();
-      for (let j = i; j < i + k; j++) {
-          windowSet.add(nums[j]);
-      }
-      for (const num of windowSet) {
-          freqMap.set(num, (freqMap.get(num) || 0) + 1);
-      }
-  }
+  for (let i = 0; i < fruits.length; i++) {
+      let placed = false;
 
-  let max = -1;
-  for (const [num, count] of freqMap.entries()) {
-      if (count === 1) {
-          max = Math.max(max, num);
+      for (let j = 0; j < baskets.length; j++) {
+          if (baskets[j] >= fruits[i]) {
+              baskets[j] = -1; // mark as used
+              placed = true;
+              break;
+          }
+      }
+
+      if (!placed) {
+          unplaced++;
       }
   }
 
-  return max;
+  return unplaced;
 };
 
-const input: number[] = [3,9,2,1,7];
-const k: number = 3;
-const results = largestInteger(input, k);
+const fruits: number[] = [4,2,5], baskets: number[] = [3,5,4];
+const basketsCopy = [...baskets];
+const results = numOfUnplacedFruits(fruits, basketsCopy);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'fruits: ' + JSON.stringify(fruits, null, 2) + '; baskets: ' + JSON.stringify(baskets, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
