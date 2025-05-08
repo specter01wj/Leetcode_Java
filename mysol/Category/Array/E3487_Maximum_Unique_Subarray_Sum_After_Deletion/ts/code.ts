@@ -1,29 +1,25 @@
-function totalNumbers(digits: number[]): number {
-  const uniqueNumbers = new Set<number>();
-  const n = digits.length;
+function maxSum(nums: number[]): number {
+  const unique = new Set<number>();
+  let sum = 0;
+  let maxNegative = -Infinity;
 
-  for (let i = 0; i < n; i++) {
-      if (digits[i] === 0) continue; // Hundreds place can't be zero
-
-      for (let j = 0; j < n; j++) {
-          if (j === i) continue;
-
-          for (let k = 0; k < n; k++) {
-              if (k === i || k === j) continue;
-
-              const num = digits[i] * 100 + digits[j] * 10 + digits[k];
-              if (num % 2 === 0) {
-                  uniqueNumbers.add(num);
-              }
-          }
+  for (const num of nums) {
+      if (num > 0) {
+          unique.add(num);
+      } else {
+          maxNegative = Math.max(maxNegative, num);
       }
   }
 
-  return uniqueNumbers.size;
+  for (const val of unique) {
+      sum += val;
+  }
+
+  return unique.size > 0 ? sum : maxNegative;
 };
 
-const input: number[] = [1,2,3,4];
-const results = totalNumbers(input);
+const input: number[] = [1,2,-1,-2,1,0,-1];
+const results = maxSum(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
