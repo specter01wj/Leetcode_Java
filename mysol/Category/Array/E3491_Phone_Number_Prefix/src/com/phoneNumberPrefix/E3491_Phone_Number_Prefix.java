@@ -12,7 +12,8 @@ public class E3491_Phone_Number_Prefix {
 	public static void main(String[] args) {
 		E3491_Phone_Number_Prefix solution = new E3491_Phone_Number_Prefix();
 		String[] input = {"001","007","15","00153"};
-		boolean output = solution.phonePrefix(input);
+		String[] inputCopy = Arrays.copyOf(input, input.length);
+		boolean output = solution.phonePrefix(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
