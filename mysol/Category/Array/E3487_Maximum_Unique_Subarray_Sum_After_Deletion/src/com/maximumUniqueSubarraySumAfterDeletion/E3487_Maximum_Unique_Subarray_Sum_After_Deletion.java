@@ -17,8 +17,9 @@ Return the maximum sum of such a subarray.
 public class E3487_Maximum_Unique_Subarray_Sum_After_Deletion {
 
 	public static void main(String[] args) {
+		E3487_Maximum_Unique_Subarray_Sum_After_Deletion solution = new E3487_Maximum_Unique_Subarray_Sum_After_Deletion();
 		int[] input = {1,2,-1,-2,1,0,-1};
-		int output = maxSum(input);
+		int output = solution.maxSum(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
