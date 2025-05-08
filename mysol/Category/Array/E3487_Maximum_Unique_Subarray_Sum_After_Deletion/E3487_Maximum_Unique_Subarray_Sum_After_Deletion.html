@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an array of digits called digits. 
+        Your task is to determine the number of distinct three-digit 
+        even numbers that can be formed using these digits.
+
+        Note: Each copy of a digit can only be used once per number, 
+        and there may not be leading zeros.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param digits: a list of integers
+        * @return: the number of distinct three-digit even numbers
+        */
+        let totalNumbers = function(digits) {
+            const uniqueNumbers = new Set();
+            const n = digits.length;
+
+            for (let i = 0; i < n; i++) {
+                if (digits[i] === 0) continue; // Hundreds place cannot be zero
+
+                for (let j = 0; j < n; j++) {
+                    if (j === i) continue;
+
+                    for (let k = 0; k < n; k++) {
+                        if (k === i || k === j) continue;
+
+                        const num = digits[i] * 100 + digits[j] * 10 + digits[k];
+                        if (num % 2 === 0) {
+                            uniqueNumbers.add(num);
+                        }
+                    }
+                }
+            }
+
+            return uniqueNumbers.size;
+        };
+
+        const input = [1,2,3,4];
+        let results = totalNumbers(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Use 3 nested loops to try all combinations i, j, and k (where i ≠ j ≠ k).
+        2. Check if the hundreds digit is not zero.
+        3. Check if the last digit (ones place) is even.
+        4. Construct the number and add to a Set to ensure uniqueness.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
