@@ -10,8 +10,9 @@ otherwise, return false.
 public class E3491_Phone_Number_Prefix {
 
 	public static void main(String[] args) {
+		E3491_Phone_Number_Prefix solution = new E3491_Phone_Number_Prefix();
 		String[] input = {"001","007","15","00153"};
-		int output = phonePrefix(input);
+		boolean output = solution.phonePrefix(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
