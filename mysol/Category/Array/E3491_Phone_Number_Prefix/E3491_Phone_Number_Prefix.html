@@ -29,7 +29,8 @@
         };
 
         const input = ["001","007","15","00153"];
-        let results = phonePrefix(input);
+        const inputCopy = [...input];
+        let results = phonePrefix(inputCopy);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
