@@ -11,6 +11,7 @@ function phonePrefix(numbers) {
 }
 ;
 const input = ["001", "007", "15", "00153"];
-const results = phonePrefix(input);
+const inputCopy = [...input];
+const results = phonePrefix(inputCopy);
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
