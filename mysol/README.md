@@ -852,6 +852,8 @@ By Jin Wang
 |3471|**Find the Largest Almost Missing Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3477|**Fruits Into Baskets II**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |3483|**Unique 3-Digit Even Numbers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3487|**Maximum Unique Subarray Sum After Deletion**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3491|**Phone Number Prefix**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Medium Level
