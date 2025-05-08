@@ -1,25 +1,19 @@
-function maxSum(nums: number[]): number {
-  const unique = new Set<number>();
-  let sum = 0;
-  let maxNegative = -Infinity;
+function phonePrefix(numbers: string[]): boolean {
+  // Step 1: Sort the array lexicographically
+  numbers.sort();
 
-  for (const num of nums) {
-      if (num > 0) {
-          unique.add(num);
-      } else {
-          maxNegative = Math.max(maxNegative, num);
+  // Step 2: Compare each number with its next one
+  for (let i = 0; i < numbers.length - 1; i++) {
+      if (numbers[i + 1].startsWith(numbers[i])) {
+          return false;
       }
   }
 
-  for (const val of unique) {
-      sum += val;
-  }
-
-  return unique.size > 0 ? sum : maxNegative;
+  return true;
 };
 
-const input: number[] = [1,2,-1,-2,1,0,-1];
-const results = maxSum(input);
+const input: string[] = ["001","007","15","00153"];
+const results = phonePrefix(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
