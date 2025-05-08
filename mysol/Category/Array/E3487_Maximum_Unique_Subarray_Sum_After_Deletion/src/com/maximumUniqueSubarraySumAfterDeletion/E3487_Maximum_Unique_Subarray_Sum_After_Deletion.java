@@ -23,7 +23,24 @@ public class E3487_Maximum_Unique_Subarray_Sum_After_Deletion {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Data Structures Used:
+		. Set<Integer> unique: to store only unique positive integers.
+	2. Loop Over Array:
+		. If num > 0: add it to the Set.
+		. If num <= 0: track the maximum negative number (maxNegative).
+	3. Sum the Unique Positives:
+		. Iterate over the set and add each element to sum.
+	4. Return Result:
+		. If set is not empty → return the sum of unique positives.
+		. Otherwise → return the largest negative number.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum sum of such a subarray
+     */
 	public int maxSum(int[] nums) {
         Set<Integer> unique = new HashSet<>();
         int sum = 0;
