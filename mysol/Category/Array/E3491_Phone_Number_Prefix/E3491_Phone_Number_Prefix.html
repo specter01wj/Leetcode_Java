@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array nums.
+
+        You are allowed to delete any number of elements from nums without 
+        making it empty. After performing the deletions, select a subarray 
+        of nums such that:
+
+          1. All elements in the subarray are unique.
+          2. The sum of the elements in the subarray is maximized.
+
+        Return the maximum sum of such a subarray.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the maximum sum of such a subarray
+        */
+        let maxSum = function(nums) {
+            let unique = new Set();
+            let sum = 0;
+            let maxNegative = -Infinity;
+
+            for (let num of nums) {
+                if (num > 0) {
+                    unique.add(num);
+                } else {
+                    maxNegative = Math.max(maxNegative, num);
+                }
+            }
+
+            for (let val of unique) {
+                sum += val;
+            }
+
+            return unique.size > 0 ? sum : maxNegative;
+        };
+
+        const input = [1,2,-1,-2,1,0,-1];
+        let results = maxSum(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Data Structures Used:
+          . Set<Integer> unique: to store only unique positive integers.
+        2. Loop Over Array:
+          . If num > 0: add it to the Set.
+          . If num <= 0: track the maximum negative number (maxNegative).
+        3. Sum the Unique Positives:
+          . Iterate over the set and add each element to sum.
+        4. Return Result:
+          . If set is not empty → return the sum of unique positives.
+          . Otherwise → return the largest negative number.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
