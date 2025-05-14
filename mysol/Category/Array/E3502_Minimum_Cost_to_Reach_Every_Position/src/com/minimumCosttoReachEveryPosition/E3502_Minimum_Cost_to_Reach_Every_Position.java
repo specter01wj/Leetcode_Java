@@ -28,7 +28,24 @@ public class E3502_Minimum_Cost_to_Reach_Every_Position {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Initialize result array:
+		. Create an answer[] array of size n.
+		. Fill all entries with Integer.MAX_VALUE
+	2. Iterate over the cost array from left to right:
+		. For each person i:
+			. You pay cost[i] to reach them.
+			. From person i, you can move to any person at j ≥ i for free.
+			. So update all such answer[j] to min(answer[j], cost[i]).
+	3. Apply early break optimization:
+		. Since cost propagates forward, if answer[j] <= cost[i], we stop updating further — no better cost will be applied.
+    */
 	
+	/*
+     * @param cost: a list of integers
+     * @return: an array answer of size n
+     */
 	public int[] minCosts(int[] cost) {
         int n = cost.length;
         int[] answer = new int[n];
