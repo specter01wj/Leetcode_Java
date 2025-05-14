@@ -461,6 +461,7 @@ Cspiration Category:
 |3491|Phone Number Prefix|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3502|Minimum Cost to Reach Every Position|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3507|Minimum Pair Removal to Sort Array I|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3512|Minimum Operations to Make Array Sum Divisible by K|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
