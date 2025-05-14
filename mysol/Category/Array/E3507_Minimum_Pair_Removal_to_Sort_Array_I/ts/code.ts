@@ -1,26 +1,40 @@
-function minCosts(cost: number[]): number[] {
-  const n = cost.length;
-  const answer: number[] = new Array(n).fill(Infinity);
+function minimumPairRemoval(nums: number[]): number {
+  let operations = 0;
 
-  for (let i = 0; i < n; i++) {
-      // Pay cost[i] to reach person i
-      answer[i] = Math.min(answer[i], cost[i]);
+  while (!isSorted(nums)) {
+      let minSum = Infinity;
+      let index = -1;
 
-      // From i, move forward for free, and update cheaper cost if possible
-      for (let j = i + 1; j < n; j++) {
-          if (answer[j] > cost[i]) {
-              answer[j] = cost[i];
-          } else {
-              break; // No need to update further if already cheaper
+      // Find the leftmost adjacent pair with the minimum sum
+      for (let i = 0; i < nums.length - 1; i++) {
+          const sum = nums[i] + nums[i + 1];
+          if (sum < minSum) {
+              minSum = sum;
+              index = i;
           }
       }
+
+      // Merge the pair at index and index + 1
+      const merged = nums[index] + nums[index + 1];
+      nums.splice(index, 2, merged); // Remove 2 elements and insert the sum
+
+      operations++;
   }
 
-  return answer;
+  return operations;
 };
 
-const input: number[] = [5,3,4,1,3,2];
-const results = minCosts(input);
+function isSorted(arr: number[]): boolean {
+  for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < arr[i - 1]) {
+          return false;
+      }
+  }
+  return true;
+}
+
+const input: number[] = [5,2,3,1];
+const results = minimumPairRemoval(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
