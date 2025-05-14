@@ -459,6 +459,8 @@ Cspiration Category:
 |3483|Unique 3-Digit Even Numbers|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3487|Maximum Unique Subarray Sum After Deletion|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |3491|Phone Number Prefix|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3502|Minimum Cost to Reach Every Position|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|3507|Minimum Pair Removal to Sort Array I|Easy||Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### 2. String
