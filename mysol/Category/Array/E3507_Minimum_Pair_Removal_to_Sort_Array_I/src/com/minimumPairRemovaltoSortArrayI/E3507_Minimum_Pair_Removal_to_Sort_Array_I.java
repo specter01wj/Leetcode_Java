@@ -17,12 +17,21 @@ equal to its previous element (if it exists).
 public class E3507_Minimum_Pair_Removal_to_Sort_Array_I {
 
 	public static void main(String[] args) {
+		E3507_Minimum_Pair_Removal_to_Sort_Array_I solution = new E3507_Minimum_Pair_Removal_to_Sort_Array_I();
 		int[] input = {5,2,3,1};
-		int output = minimumPairRemoval(input);
+		int output = solution.minimumPairRemoval(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum number of operations needed to make the array non-decreasing
+     */
 	public int minimumPairRemoval(int[] nums) {
         int operations = 0;
         List<Integer> list = new ArrayList<>();
