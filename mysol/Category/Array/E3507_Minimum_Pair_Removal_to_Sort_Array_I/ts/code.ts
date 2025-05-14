@@ -34,7 +34,8 @@ function isSorted(arr: number[]): boolean {
 }
 
 const input: number[] = [5,2,3,1];
-const results = minimumPairRemoval(input);
+const inputCopy = [...input];
+const results = minimumPairRemoval(inputCopy);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
