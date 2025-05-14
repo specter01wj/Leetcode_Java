@@ -25,7 +25,18 @@ public class E3507_Minimum_Pair_Removal_to_Sort_Array_I {
 	
 	/*
     solution:
-    count good triplets
+    1. Convert the array to a list:
+		. Enables easy modification and pair merging.
+	2. Loop until array is sorted:
+		. Use a helper method isSorted to check if the list is non-decreasing.
+	3. Find the leftmost pair with minimum sum:
+		. Iterate through all adjacent pairs and record the one with the smallest sum.
+	4. Replace the pair with their sum:
+		. Remove the second element of the pair, and replace the first with the sum.
+	5. Count the operation:
+		. Each such merge counts as one operation.
+	6. Return the total number of operations:
+		. Once sorted, we stop and return the result.
     */
 	
 	/*
