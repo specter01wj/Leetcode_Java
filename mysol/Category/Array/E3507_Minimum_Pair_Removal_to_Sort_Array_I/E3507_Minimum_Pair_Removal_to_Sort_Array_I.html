@@ -47,8 +47,16 @@
             return operations;
         };
 
+        function isSorted(arr) {
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < arr[i - 1]) return false;
+            }
+            return true;
+        }
+
         const input = [5,2,3,1];
-        let results = minimumPairRemoval(input);
+        const inputCopy = [...input];
+        let results = minimumPairRemoval(inputCopy);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
