@@ -4,65 +4,63 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given an integer array cost of size n. You are currently 
-        at position n (at the end of the line) in a line of n + 1 people 
-        (numbered from 0 to n).
+			 	Given an array nums, you can perform the following operation any number of times:
 
-        You wish to move forward in the line, but each person in front of 
-        you charges a specific amount to swap places. The cost to swap with 
-        person i is given by cost[i].
+          . Select the adjacent pair with the minimum sum in nums. 
+            If multiple such pairs exist, choose the leftmost one.
+          . Replace the pair with their sum.
 
-        You are allowed to swap places with people as follows:
+        Return the minimum number of operations needed to make the array non-decreasing.
 
-          . If they are in front of you, you must pay them cost[i] to swap with them.
-          . If they are behind you, they can swap with you for free.
-
-        Return an array answer of size n, where answer[i] is the minimum total 
-        cost to reach each position i in the line.
+        An array is said to be non-decreasing if each element is greater than or 
+        equal to its previous element (if it exists).
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param cost: a list of integers
-        * @return: an array answer of size n
+        * @param nums: a list of integers
+        * @return: the minimum number of operations needed to make the array non-decreasing
         */
-        let minCosts = function(cost) {
-            const n = cost.length;
-            const answer = new Array(n).fill(Infinity);
+        let minimumPairRemoval = function(nums) {
+            let operations = 0;
 
-            for (let i = 0; i < n; i++) {
-                // Pay cost[i] to reach i
-                answer[i] = Math.min(answer[i], cost[i]);
+            while (!isSorted(nums)) {
+                let minSum = Infinity;
+                let index = -1;
 
-                // From i, propagate cost[i] forward to all j >= i
-                for (let j = i + 1; j < n; j++) {
-                    if (answer[j] > cost[i]) {
-                        answer[j] = cost[i];
-                    } else {
-                        break; // no need to update further if a lower cost is already there
+                // Find the leftmost adjacent pair with the minimum sum
+                for (let i = 0; i < nums.length - 1; i++) {
+                    let sum = nums[i] + nums[i + 1];
+                    if (sum < minSum) {
+                        minSum = sum;
+                        index = i;
                     }
                 }
+
+                // Merge the pair: replace nums[index] and nums[index+1] with their sum
+                let merged = nums[index] + nums[index + 1];
+                nums.splice(index, 2, merged);  // replace both elements with their sum
+
+                operations++;
             }
 
-            return answer;
+            return operations;
         };
 
-        const input = [5,3,4,1,3,2];
-        let results = minCosts(input);
+        const input = [5,2,3,1];
+        let results = minimumPairRemoval(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Initialize result array:
-          . Create an answer[] array of size n.
-          . Fill all entries with Integer.MAX_VALUE
-        2. Iterate over the cost array from left to right:
-          . For each person i:
-            . You pay cost[i] to reach them.
-            . From person i, you can move to any person at j ≥ i for free.
-            . So update all such answer[j] to min(answer[j], cost[i]).
-        3. Apply early break optimization:
-          . Since cost propagates forward, if answer[j] <= cost[i], we stop updating further — no better cost will be applied.
+				1. Loop Until Sorted:
+          . Use a helper isSorted() to check if the array is non-decreasing.
+        2. Find Minimum Sum Pair::
+          . Loop through nums[i] + nums[i+1] and find the leftmost pair with the lowest sum.
+        3. Replace Pair with Sum:
+          . Use splice(index, 2, merged) to remove 2 elements and insert their sum at the same position.
+        4. Count Operations:
+          . Each such merge is an operation, increment a counter.
 			 */
 
 		</script>
