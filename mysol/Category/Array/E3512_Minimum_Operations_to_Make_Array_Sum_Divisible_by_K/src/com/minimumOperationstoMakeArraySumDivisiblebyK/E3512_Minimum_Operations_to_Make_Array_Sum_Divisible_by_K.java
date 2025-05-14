@@ -14,13 +14,23 @@ of the array divisible by k.
 public class E3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K {
 
 	public static void main(String[] args) {
+		E3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K solution = new E3512_Minimum_Operations_to_Make_Array_Sum_Divisible_by_K();
 		int[] input = {3,9,7};
 		int k = 5;
-		int output = minOperations(input, k);
+		int output = solution.minOperations(input, k);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    sum(nums) % k
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the minimum number of operations
+     */
 	public int minOperations(int[] nums, int k) {
 		long sum = 0;
 		
