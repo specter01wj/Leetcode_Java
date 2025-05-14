@@ -4,48 +4,65 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given a string array numbers that represents phone numbers. 
-        Return true if no phone number is a prefix of any other phone number; 
-        otherwise, return false.
+			 	You are given an integer array cost of size n. You are currently 
+        at position n (at the end of the line) in a line of n + 1 people 
+        (numbered from 0 to n).
+
+        You wish to move forward in the line, but each person in front of 
+        you charges a specific amount to swap places. The cost to swap with 
+        person i is given by cost[i].
+
+        You are allowed to swap places with people as follows:
+
+          . If they are in front of you, you must pay them cost[i] to swap with them.
+          . If they are behind you, they can swap with you for free.
+
+        Return an array answer of size n, where answer[i] is the minimum total 
+        cost to reach each position i in the line.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param numbers: a list of strings
-        * @return: true if no phone number is a prefix of any other phone number
+        * @param cost: a list of integers
+        * @return: an array answer of size n
         */
-        let phonePrefix = function(numbers) {
-            // Step 1: Sort the array lexicographically
-            numbers.sort();
+        let minCosts = function(cost) {
+            const n = cost.length;
+            const answer = new Array(n).fill(Infinity);
 
-            // Step 2: Check for any prefix relationship between adjacent elements
-            for (let i = 0; i < numbers.length - 1; i++) {
-                if (numbers[i + 1].startsWith(numbers[i])) {
-                    return false;
+            for (let i = 0; i < n; i++) {
+                // Pay cost[i] to reach i
+                answer[i] = Math.min(answer[i], cost[i]);
+
+                // From i, propagate cost[i] forward to all j >= i
+                for (let j = i + 1; j < n; j++) {
+                    if (answer[j] > cost[i]) {
+                        answer[j] = cost[i];
+                    } else {
+                        break; // no need to update further if a lower cost is already there
+                    }
                 }
             }
 
-            return true;
+            return answer;
         };
 
-        const input = ["001","007","15","00153"];
-        const inputCopy = [...input];
-        let results = phonePrefix(inputCopy);
+        const input = [5,3,4,1,3,2];
+        let results = minCosts(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Why Sorting Helps:
-          . Sorting places strings with common prefixes next to each other.
-          . For example, ["001", "00153"] will be adjacent after sorting.
-        2. Iterate Through Sorted Array:
-          . Only need to compare numbers[i] with numbers[i+1] since any prefix relationship would now be next to each other.
-        3. Use startsWith():
-          . This built-in method checks if one string is a prefix of another.
-        4. Return Early:
-          . As soon as a prefix is found, return false.
-        5. Final Check:
-          . If loop finishes without finding any prefix, return true.
+				1. Initialize result array:
+          . Create an answer[] array of size n.
+          . Fill all entries with Integer.MAX_VALUE
+        2. Iterate over the cost array from left to right:
+          . For each person i:
+            . You pay cost[i] to reach them.
+            . From person i, you can move to any person at j ≥ i for free.
+            . So update all such answer[j] to min(answer[j], cost[i]).
+        3. Apply early break optimization:
+          . Since cost propagates forward, if answer[j] <= cost[i], we stop updating further — no better cost will be applied.
 			 */
 
 		</script>
