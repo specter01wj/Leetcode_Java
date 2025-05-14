@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given a string array numbers that represents phone numbers. 
+        Return true if no phone number is a prefix of any other phone number; 
+        otherwise, return false.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param numbers: a list of strings
+        * @return: true if no phone number is a prefix of any other phone number
+        */
+        let phonePrefix = function(numbers) {
+            // Step 1: Sort the array lexicographically
+            numbers.sort();
+
+            // Step 2: Check for any prefix relationship between adjacent elements
+            for (let i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i + 1].startsWith(numbers[i])) {
+                    return false;
+                }
+            }
+
+            return true;
+        };
+
+        const input = ["001","007","15","00153"];
+        const inputCopy = [...input];
+        let results = phonePrefix(inputCopy);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Why Sorting Helps:
+          . Sorting places strings with common prefixes next to each other.
+          . For example, ["001", "00153"] will be adjacent after sorting.
+        2. Iterate Through Sorted Array:
+          . Only need to compare numbers[i] with numbers[i+1] since any prefix relationship would now be next to each other.
+        3. Use startsWith():
+          . This built-in method checks if one string is a prefix of another.
+        4. Return Early:
+          . As soon as a prefix is found, return false.
+        5. Final Check:
+          . If loop finishes without finding any prefix, return true.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
