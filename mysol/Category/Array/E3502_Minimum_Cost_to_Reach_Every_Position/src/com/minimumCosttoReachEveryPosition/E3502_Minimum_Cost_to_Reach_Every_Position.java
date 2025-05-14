@@ -22,8 +22,9 @@ cost to reach each position i in the line.
 public class E3502_Minimum_Cost_to_Reach_Every_Position {
 
 	public static void main(String[] args) {
+		E3502_Minimum_Cost_to_Reach_Every_Position solution = new E3502_Minimum_Cost_to_Reach_Every_Position();
 		int[] input = {5,3,4,1,3,2};
-		int[] output = minCosts(input);
+		int[] output = solution.minCosts(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
