@@ -4,26 +4,38 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two integers num1 and num2, return the sum of the two integers.
+			 	You are given the root of a binary tree that consists of exactly 
+        3 nodes: the root, its left child, and its right child.
+
+        Return true if the value of the root is equal to the sum of the 
+        values of its two children, or false otherwise.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param num1: an integer
-        * @param num2: an integer
-        * @return: the sum of the two integers
+        * @param root: a binary tree node
+        * @return: true if the value of the root is equal to the sum of the values of its two children
         */
-        let sum = function(num1, num2) {
-            return num1 + num2;
+        function TreeNode(val, left, right) {
+            this.val = val === undefined ? 0 : val;
+            this.left = left === undefined ? null : left;
+            this.right = right === undefined ? null : right;
+        }
+
+        const left = new TreeNode(4);
+        const right = new TreeNode(6);
+        const root = new TreeNode(10, left, right);
+
+        let checkTree = function(root) {
+            return root.val === root.left.val + root.right.val;
         };
 
-        const num1 = 12, num2 = 5;
-        let results = sum(num1, num2);
-				$('#t1').html('<h2>Input: ' + JSON.stringify(num1, null, 2) + '; ' + JSON.stringify(num2, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+        let results = checkTree(root);
+				$('#t1').html('<pre><h2>Input: ' + JSON.stringify(root, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2></pre>');
 			});
 
 			/*sol:
-				add
+				binary tree
 			 */
 
 		</script>
