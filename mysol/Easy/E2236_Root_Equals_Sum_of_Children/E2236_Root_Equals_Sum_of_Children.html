@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given the root of a binary tree that consists of exactly 
+        3 nodes: the root, its left child, and its right child.
+
+        Return true if the value of the root is equal to the sum of the 
+        values of its two children, or false otherwise.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param root: a binary tree node
+        * @return: true if the value of the root is equal to the sum of the values of its two children
+        */
+        function TreeNode(val, left, right) {
+            this.val = val === undefined ? 0 : val;
+            this.left = left === undefined ? null : left;
+            this.right = right === undefined ? null : right;
+        }
+
+        const left = new TreeNode(4);
+        const right = new TreeNode(6);
+        const root = new TreeNode(10, left, right);
+
+        let checkTree = function(root) {
+            return root.val === root.left.val + root.right.val;
+        };
+
+        let results = checkTree(root);
+				$('#t1').html('<pre><h2>Input: ' + JSON.stringify(root, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2></pre>');
+			});
+
+			/*sol:
+				binary tree
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
