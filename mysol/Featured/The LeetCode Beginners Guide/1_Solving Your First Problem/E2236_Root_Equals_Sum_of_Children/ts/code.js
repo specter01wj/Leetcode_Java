@@ -17,4 +17,5 @@ const right = new TreeNode(6);
 const root = new TreeNode(10, left, right);
 const results = checkTree(root);
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(root, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: <pre>' + JSON.stringify(root, null, 2) +
+    '</pre>Result = <pre>' + JSON.stringify(results, null, 2) + '</pre>';
