@@ -14,7 +14,16 @@ public class E2235_Add_Two_Integers {
         System.out.println("input: " + (num1) + "; " + (num2) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    add
+    */
 	
+	/*
+     * @param num1: an integer
+     * @param num2: an integer
+     * @return: the sum of the two integers
+     */
 	public int sum(int num1, int num2) {
         return num1 + num2;
     }
