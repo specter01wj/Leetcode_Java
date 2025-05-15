@@ -1,19 +1,10 @@
-function minOperations(nums: number[], k: number): number {
-  let sum = 0;
-
-  for (let num of nums) {
-      sum += num;
-  }
-
-  const remainder = sum % k;
-
-  return remainder === 0 ? 0 : remainder;
+function sum(num1: number, num2: number): number {
+  return num1 + num2;
 };
 
-const input: number[] = [3,9,7];
-const k = 5;
-const results = minOperations(input, k);
+const num1: number = 12, num2: number = 5;
+const results = sum(num1, num2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(num1, null, 2) + '; ' + JSON.stringify(num1, null, 2)  + '<br>Result = ' + JSON.stringify(results, null, 2);
 
