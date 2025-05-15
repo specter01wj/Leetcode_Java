@@ -42,7 +42,15 @@ public class E2236_Root_Equals_Sum_of_Children {
         System.out.println("input: " + (root) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    binary tree
+    */
 	
+	/*
+     * @param root: a binary tree node
+     * @return: true if the value of the root is equal to the sum of the values of its two children
+     */
 	public boolean checkTree(TreeNode root) {
         return root.val == root.left.val + root.right.val;
     }
