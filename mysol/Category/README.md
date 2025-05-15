@@ -687,6 +687,8 @@ Cspiration Category:
 |360|Sort Transformed Array|Medium||Java/Javascript||
 |397|Integer Replacement|Medium||Java/Javascript||
 |368|Largest Divisible Subset|Medium||Java/Javascript||
+|2235|Add Two Integers|Easy||Java/Javascript/Typescript|Done/Done/Done|
+
 
 ### 4. Tree
 
