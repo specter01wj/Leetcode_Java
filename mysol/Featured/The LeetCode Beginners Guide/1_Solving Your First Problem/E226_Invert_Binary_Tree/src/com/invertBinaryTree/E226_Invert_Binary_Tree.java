@@ -41,7 +41,9 @@ public class E226_Invert_Binary_Tree {
 	
 	/*
     solution:
-    binary tree
+    1. Base Case: If the node is null, just return null.
+	2. Recursive Case: Recursively invert the left and right subtrees.
+	3. Swap: Swap the left and right children after the recursion.
     */
 	
 	/*
