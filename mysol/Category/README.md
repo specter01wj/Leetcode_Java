@@ -702,7 +702,7 @@ Cspiration Category:
 |Preorder||||||
 |100|Same Tree|Easy|preorder|Java/Javascript|Done/|
 |101|Symmetric Tree|Easy|preorder|Java/Javascript|Done/|
-|226|Invert Binary Tree|Easy|preorder + BFS|Java/Javascript||
+|226|Invert Binary Tree|Easy|preorder + BFS|Java/Javascript/Typescript|Done/Done/Done|
 |257|Binary Tree Paths|Easy|preorder|Java/Javascript||
 |112|Path Sum|Easy|preorder|Java/Javascript|Done/|
 |113|Path Sum II|Medium|preorder|Java/Javascript||

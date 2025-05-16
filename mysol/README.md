@@ -77,7 +77,7 @@ By Jin Wang
 |217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |225|**Implement Stack using Queues**|Easy|Java/Javascript||
-|226|**Invert Binary Tree**|Easy|Java/Javascript||
+|226|**Invert Binary Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |228|**Summary Ranges**|Easy|Java/Javascript|Done/Done|
 |231|**Power of Two**|Easy|Java/Javascript|Done/Done|
 |232|**Implement Queue using Stacks**|Easy|Java/Javascript||
