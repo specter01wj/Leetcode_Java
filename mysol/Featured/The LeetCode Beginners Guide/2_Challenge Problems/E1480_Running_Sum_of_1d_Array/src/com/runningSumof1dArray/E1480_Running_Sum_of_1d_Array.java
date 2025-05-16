@@ -17,7 +17,15 @@ public class E1480_Running_Sum_of_1d_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Starting from index 1, add the previous element to the current one (nums[i] += nums[i - 1]).
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the running sum of nums
+     */
 	public int[] runningSum(int[] nums) {
         for (int i = 1; i < nums.length; i++) {
             nums[i] += nums[i - 1];
