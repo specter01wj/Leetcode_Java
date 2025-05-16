@@ -11,9 +11,10 @@ Return the running sum of nums.
 public class E1480_Running_Sum_of_1d_Array {
 
 	public static void main(String[] args) {
+		E1480_Running_Sum_of_1d_Array solution = new E1480_Running_Sum_of_1d_Array();
 		int[] input = {1,2,3,4};
-		int output = runningSum(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int[] output = solution.runningSum(input);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
 	
