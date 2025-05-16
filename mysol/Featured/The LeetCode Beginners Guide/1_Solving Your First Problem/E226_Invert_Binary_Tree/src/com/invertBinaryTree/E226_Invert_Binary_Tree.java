@@ -21,10 +21,6 @@ class TreeNode {
 	   this.right = right;
 	}
 	
-	@Override
-	public String toString() {
-	   return "[" + val + ", " + left.val + ", " + right.val + "]";
-	}
 }
 
 public class E226_Invert_Binary_Tree {
@@ -35,8 +31,9 @@ public class E226_Invert_Binary_Tree {
             new TreeNode(2, new TreeNode(1), new TreeNode(3)),
             new TreeNode(7, new TreeNode(6), new TreeNode(9))
         );
-		TreeNode invertedRoot = solution.invertTree(root);
-		System.out.println("input: " + (root) + "\noutput: " + (invertedRoot));
+		TreeNode rootCopy = deepCopy(root);
+		TreeNode invertedRoot = solution.invertTree(rootCopy);
+		System.out.println("input: " + serialize(root) + "\noutput: " + serialize(invertedRoot));
 	}
 	
 	/*
@@ -60,5 +57,37 @@ public class E226_Invert_Binary_Tree {
 
         return root;
     }
+	
+	public static List<Integer> serialize(TreeNode root) {
+	    List<Integer> result = new ArrayList<>();
+	    if (root == null) return result;
+
+	    Queue<TreeNode> queue = new LinkedList<>();
+	    queue.offer(root);
+
+	    while (!queue.isEmpty()) {
+	        TreeNode node = queue.poll();
+	        if (node != null) {
+	            result.add(node.val);
+	            queue.offer(node.left);
+	            queue.offer(node.right);
+	        } else {
+	            result.add(null); // To match structure if needed
+	        }
+	    }
+
+	    // Trim trailing nulls
+	    int i = result.size() - 1;
+	    while (i >= 0 && result.get(i) == null) {
+	        result.remove(i--);
+	    }
+
+	    return result;
+	}
+	
+	public static TreeNode deepCopy(TreeNode node) {
+	    if (node == null) return null;
+	    return new TreeNode(node.val, deepCopy(node.left), deepCopy(node.right));
+	}
 
 }
