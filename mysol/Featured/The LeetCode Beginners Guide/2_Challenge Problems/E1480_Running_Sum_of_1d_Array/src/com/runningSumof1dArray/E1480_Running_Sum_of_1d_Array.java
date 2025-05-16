@@ -13,7 +13,8 @@ public class E1480_Running_Sum_of_1d_Array {
 	public static void main(String[] args) {
 		E1480_Running_Sum_of_1d_Array solution = new E1480_Running_Sum_of_1d_Array();
 		int[] input = {1,2,3,4};
-		int[] output = solution.runningSum(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int[] output = solution.runningSum(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
