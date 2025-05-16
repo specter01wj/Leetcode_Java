@@ -1,10 +1,14 @@
-function sum(num1: number, num2: number): number {
-  return num1 + num2;
+function runningSum(nums: number[]): number[] {
+    for (let i = 1; i < nums.length; i++) {
+        nums[i] += nums[i - 1];
+    }
+    return nums;
 };
 
-const num1: number = 12, num2: number = 5;
-const results = sum(num1, num2);
+const input: number[] = [1,2,3,4];
+const inputCopy: number[] = [...input];
+const results = runningSum(inputCopy);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(num1, null, 2) + '; ' + JSON.stringify(num2, null, 2)  + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
