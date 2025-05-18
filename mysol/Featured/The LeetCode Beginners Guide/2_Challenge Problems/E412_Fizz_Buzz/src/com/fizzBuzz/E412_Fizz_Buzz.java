@@ -13,8 +13,9 @@ Given an integer n, return a string array answer (1-indexed) where:
 public class E412_Fizz_Buzz {
 
 	public static void main(String[] args) {
+		E412_Fizz_Buzz solution = new E412_Fizz_Buzz();
 		int input = 5;
-		List<String> output = fizzBuzz(input);
+		List<String> output = solution.fizzBuzz(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
