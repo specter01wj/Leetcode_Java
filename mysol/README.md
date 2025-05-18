@@ -123,7 +123,7 @@ By Jin Wang
 |401|**Binary Watch**|Easy|Java/Javascript||
 |408|**Valid Word Abbreviation**|Easy|Java/Javascript|Done/Done|
 |409|**Longest Palindrome**|Easy|Java/Javascript|Done/Done|
-|412|**Fizz Buzz**|Easy|Java/Javascript|Done/Done|
+|412|**Fizz Buzz**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |414|**Third Maximum Number**|Easy|Java/Javascript|Done/Done|
 |415|**Add Strings**|Easy|Java/Javascript|Done/Done|
 |422|**Valid Word Square**|Easy|Java/Javascript/Typescript|Done/Done/Done|
