@@ -1,13 +1,14 @@
-function runningSum(nums: number[]): number[] {
-    for (let i = 1; i < nums.length; i++) {
-        nums[i] += nums[i - 1];
+function maximumWealth(accounts: number[][]): number {
+    let maxWealth = 0;
+    for (let customer of accounts) {
+        const sum = customer.reduce((a, b) => a + b, 0);
+        maxWealth = Math.max(maxWealth, sum);
     }
-    return nums;
+    return maxWealth;
 };
 
-const input: number[] = [1,2,3,4];
-const inputCopy: number[] = [...input];
-const results = runningSum(inputCopy);
+const input: number[][] = [[1,5],[7,3],[3,5]];
+const results = runningSum(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
