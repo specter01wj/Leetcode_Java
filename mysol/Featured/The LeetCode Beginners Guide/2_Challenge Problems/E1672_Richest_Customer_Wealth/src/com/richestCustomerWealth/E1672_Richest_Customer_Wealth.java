@@ -13,9 +13,10 @@ The richest customer is the customer that has the maximum wealth.
 public class E1672_Richest_Customer_Wealth {
 
 	public static void main(String[] args) {
+		E1672_Richest_Customer_Wealth solution = new E1672_Richest_Customer_Wealth();
 		int[][] input = {{1,5},{7,3},{3,5}};
-		int output = maximumWealth(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int output = solution.maximumWealth(input);
+        System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
 	
