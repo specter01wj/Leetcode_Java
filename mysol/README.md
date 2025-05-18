@@ -332,7 +332,7 @@ By Jin Wang
 |1656|**Design an Ordered Stream**|Easy|Java/Javascript|Done/Done|
 |1662|**Check If Two String Arrays are Equivalent**|Easy|Java/Javascript|Done/Done|
 |1668|**Maximum Repeating Substring**|Easy|Java/Javascript|Done/Done|
-|1672|**Richest Customer Wealth**|Easy|Java/Javascript|Done/Done|
+|1672|**Richest Customer Wealth**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1678|**Goal Parser Interpretation**|Easy|Java/Javascript|Done/Done|
 |1684|**Count the Number of Consistent Strings**|Easy|Java/Javascript|Done/Done|
 |1694|**Reformat Phone Number**|Easy|Java/Javascript|Done/Done|
