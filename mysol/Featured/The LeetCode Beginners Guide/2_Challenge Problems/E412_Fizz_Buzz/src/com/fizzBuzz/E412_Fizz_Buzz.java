@@ -19,7 +19,15 @@ public class E412_Fizz_Buzz {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and transform
+    */
 	
+	/*
+     * @param n: an integer
+     * @return: a string array answer
+     */
 	public List<String> fizzBuzz(int n) {
         List<String> result = new ArrayList<>();
 
