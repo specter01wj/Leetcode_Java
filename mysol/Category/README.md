@@ -222,7 +222,7 @@ Cspiration Category:
 |1464|Maximum Product of Two Elements in an Array|Easy||Java/Javascript|Done/Done|
 |1470|Shuffle the Array|Easy||Java/Javascript|Done/Done|
 |1475|Final Prices With a Special Discount in a Shop|Easy||Java/Javascript|Done/Done|
-|1480|Running Sum of 1d Array|Easy||Java/Javascript|Done/Done|
+|1480|Running Sum of 1d Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1491|Average Salary Excluding the Minimum and Maximum Salary|Easy||Java/Javascript|Done/Done|
 |1493|Longest Subarray of 1's After Deleting One Element|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1502|Can Make Arithmetic Progression From Sequence|Easy||Java/Javascript|Done/Done|
