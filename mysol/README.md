@@ -194,6 +194,7 @@ By Jin Wang
 |860|**Lemonade Change**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|
 |872|**Leaf-Similar Trees**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|876|**Middle of the Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |883|**Projection Area of 3D Shapes**|Easy|Java/Javascript|Done/Done|
 |884|**Uncommon Words from Two Sentences**|Easy|Java/Javascript|Done/Done|
 |888|**Fair Candy Swap**|Easy|Java/Javascript|Done/Done|

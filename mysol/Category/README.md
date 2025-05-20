@@ -810,6 +810,7 @@ Cspiration Category:
 |21|Merge Two Sorted Lists|Easy||Java/Javascript|Done/|
 |Missing||||||
 |328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|876|Middle of the Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2095|Delete the Middle Node of a Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2130|Maximum Twin Sum of a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
