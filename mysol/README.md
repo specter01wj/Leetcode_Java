@@ -271,6 +271,7 @@ By Jin Wang
 |1331|**Rank Transform of an Array**|Easy|Java/Javascript|Done/Done|
 |1332|**Remove Palindromic Subsequences**|Easy|Java/Javascript|Done/Done|
 |1337|**The K Weakest Rows in a Matrix**|Easy|Java/Javascript|Done/Done|
+|1342|**Number of Steps to Reduce a Number to Zero**|Easy|Java/Javascript|Done/Done|
 |1346|**Check If N and Its Double Exist**|Easy|Java/Javascript|Done/Done|
 |1351|**Count Negative Numbers in a Sorted Matrix**|Easy|Java/Javascript|Done/Done|
 |1356|**Sort Integers by The Number of 1 Bits**|Easy|Java/Javascript|Done/Done|

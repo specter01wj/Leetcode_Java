@@ -688,6 +688,8 @@ Cspiration Category:
 |397|Integer Replacement|Medium||Java/Javascript||
 |368|Largest Divisible Subset|Medium||Java/Javascript||
 |2235|Add Two Integers|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|Missing||||||
+|1342|Number of Steps to Reduce a Number to Zero|Easy||Java/Javascript|Done/Done|
 
 
 ### 4. Tree
