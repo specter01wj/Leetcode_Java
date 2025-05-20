@@ -11,8 +11,9 @@ otherwise, you have to subtract 1 from it.
 public class E1342_Number_of_Steps_to_Reduce_a_Number_to_Zero {
 
 	public static void main(String[] args) {
+		E1342_Number_of_Steps_to_Reduce_a_Number_to_Zero solution = new E1342_Number_of_Steps_to_Reduce_a_Number_to_Zero();
 		int input = 14;
-		int output = numberOfSteps(input);
+		int output = solution.numberOfSteps(input);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
