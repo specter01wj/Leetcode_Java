@@ -17,7 +17,15 @@ public class E1342_Number_of_Steps_to_Reduce_a_Number_to_Zero {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop, divide and count
+    */
 	
+	/*
+     * @param num: an integer
+     * @return: the number of steps to reduce it to zero
+     */
 	public int numberOfSteps(int num) {
         int steps = 0;
 
