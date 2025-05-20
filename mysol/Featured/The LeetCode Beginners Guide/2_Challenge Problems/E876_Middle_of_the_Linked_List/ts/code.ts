@@ -1,24 +1,46 @@
-class TreeNode {
-  val: number;
-  left: TreeNode | null;
-  right: TreeNode | null;
+/**
+ * Definition for singly-linked list.
+ */
+class ListNode {
+    val: number;
+    next: ListNode | null;
 
-  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
-      this.val = val === undefined ? 0 : val;
-      this.left = left === undefined ? null : left;
-      this.right = right === undefined ? null : right;
-  }
+    constructor(val?: number, next?: ListNode | null) {
+        this.val = val === undefined ? 0 : val;
+        this.next = next === undefined ? null : next;
+    }
 }
 
-function checkTree(root: TreeNode | null): boolean {
-  return root.val === root.left.val + root.right.val;
-};
+function middleNode(head: ListNode | null): ListNode | null {
+    let slow = head;
+    let fast = head;
 
-const left = new TreeNode(4);
-const right = new TreeNode(6);
-const root = new TreeNode(10, left, right);
-const results = checkTree(root);
+    while (fast !== null && fast.next !== null) {
+        slow = slow!.next;
+        fast = fast.next.next;
+    }
+
+    return slow;
+}
+
+function printList(head: ListNode | null): string {
+    const values: number[] = [];
+    while (head !== null) {
+        values.push(head.val);
+        head = head.next;
+    }
+    return values.join(" -> ");
+}
+
+const head = new ListNode(1, 
+              new ListNode(2, 
+              new ListNode(3, 
+              new ListNode(4, 
+              new ListNode(5, 
+              new ListNode(6))))));
+
+const middle = middleNode(head);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: <pre>' + JSON.stringify(root, null, 2) + 
-    '</pre>Result = <pre>' + JSON.stringify(results, null, 2)  + '</pre>';
+webHeading.innerHTML = 'Input: <pre>' + JSON.stringify(head, null, 2) + 
+    '</pre>Result = <pre>' + JSON.stringify(middle, null, 2)  + '</pre>';
