@@ -42,5 +42,5 @@ const head = new ListNode(1,
 const middle = middleNode(head);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: <pre>' + JSON.stringify(head, null, 2) + 
-    '</pre>Result = <pre>' + JSON.stringify(middle, null, 2)  + '</pre>';
+webHeading.innerHTML = 'Input: <pre>' + JSON.stringify(printList(head), null, 2) + 
+    '</pre>Result = <pre>' + JSON.stringify(printList(middle), null, 2)  + '</pre>';
