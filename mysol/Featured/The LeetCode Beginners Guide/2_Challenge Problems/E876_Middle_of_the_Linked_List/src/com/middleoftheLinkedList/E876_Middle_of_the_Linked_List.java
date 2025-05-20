@@ -45,7 +45,15 @@ public class E876_Middle_of_the_Linked_List {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Singly Linked List
+    */
 	
+	/*
+     * @param head: ListNode
+     * @return: the middle node of the linked list
+     */
 	public ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
