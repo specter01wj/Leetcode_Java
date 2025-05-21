@@ -4,44 +4,45 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer n, return a string array answer (1-indexed) where:
+			 	Given two strings ransomNote and magazine, return true if ransomNote 
+        can be constructed by using the letters from magazine and false otherwise.
 
-          . answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
-          . answer[i] == "Fizz" if i is divisible by 3.
-          . answer[i] == "Buzz" if i is divisible by 5.
-          . answer[i] == i (as a string) if none of the above conditions are true.
+        Each letter in magazine can only be used once in ransomNote.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param n: an integer
-        * @return: a string array answer
+        * @param ransomNote: a string
+        * @param magazine: a string
+        * @return: true if ransomNote can be constructed by using the letters from magazine
         */
-        let fizzBuzz = function(n) {
-            const result = [];
+        let canConstruct = function(ransomNote, magazine) {
+            const count = new Array(26).fill(0);
 
-            for (let i = 1; i <= n; i++) {
-                if (i % 3 === 0 && i % 5 === 0) {
-                    result.push("FizzBuzz");
-                } else if (i % 3 === 0) {
-                    result.push("Fizz");
-                } else if (i % 5 === 0) {
-                    result.push("Buzz");
-                } else {
-                    result.push(i.toString());
+            for (let char of magazine) {
+                count[char.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+            }
+
+            for (let char of ransomNote) {
+                const idx = char.charCodeAt(0) - 'a'.charCodeAt(0);
+                if (--count[idx] < 0) {
+                    return false;
                 }
             }
 
-            return result;
+            return true;
         };
 
-        const input = 5;
-        let results = fizzBuzz(input);
+        const input = "aa";
+        const magazine = "aab";
+        let results = canConstruct(input, magazine);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				loop and transform
+				1. Use an array count of size 26 to keep track of the frequency of each lowercase letter in magazine.
+        2. For each character in ransomNote, we decrement the corresponding count.
+        3. If any count goes below 0, it means there aren’t enough letters in magazine to form ransomNote.
 			 */
 
 		</script>
