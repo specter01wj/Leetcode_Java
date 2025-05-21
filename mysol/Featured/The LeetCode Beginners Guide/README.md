@@ -32,24 +32,14 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|2629|**Function Composition**|Easy|Javascript/Typescript|Done/Done|
-|2703|**Return Length of Arguments Passed**|Easy|Javascript/Typescript|Done/Done|
-|2666|**Allow One Function Call**|Easy|Javascript/Typescript|Done/Done|
-|2623|**Memoize**|Medium|Javascript/Typescript|Done/Done|
+
 
 
 #### Closing Comments
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|2723|**Add Two Promises**|Easy|Javascript/Typescript|Done/Done|
-|2621|**Sleep**|Easy|Javascript/Typescript|Done/Done|
-|2715|**Timeout Cancellation**|Easy|Javascript/Typescript|Done/Done|
-|2725|**Interval Cancellation**|Easy|Javascript/Typescript|Done/Done|
-|2637|**Promise Time Limit**|Medium|Javascript/Typescript|Done/Done|
-|2622|**Cache With Time Limit**|Medium|Javascript/Typescript|Done/Done|
-|2627|**Debounce**|Medium|Javascript/Typescript|Done/Done|
-|2721|**Execute Asynchronous Functions in Parallel**|Medium|Javascript/Typescript|Done/Done|
+
 
 
 ### ================================================================
