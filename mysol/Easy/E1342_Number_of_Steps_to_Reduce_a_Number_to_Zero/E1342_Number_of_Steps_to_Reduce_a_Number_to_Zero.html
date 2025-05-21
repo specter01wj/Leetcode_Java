@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer num, return the number of steps to reduce it to zero.
+
+        In one step, if the current number is even, you have to divide it by 2, 
+        otherwise, you have to subtract 1 from it.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param num: an integer
+        * @return: the number of steps to reduce it to zero
+        */
+        let numberOfSteps = function(num) {
+            let steps = 0;
+            while (num > 0) {
+                if (num % 2 === 0) {
+                    num /= 2;
+                } else {
+                    num -= 1;
+                }
+                steps++;
+            }
+            return steps;
+        };
+
+        const input = 14;
+        let results = numberOfSteps(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				loop, divide and count
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>

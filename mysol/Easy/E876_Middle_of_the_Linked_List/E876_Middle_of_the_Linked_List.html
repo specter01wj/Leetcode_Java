@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given the head of a singly linked list, return the middle node of the linked list.
+
+        If there are two middle nodes, return the second middle node.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param head: ListNode
+        * @return: the middle node of the linked list
+        */
+        // Definition of ListNode
+        function ListNode(val, next) {
+            this.val = (val === undefined ? 0 : val);
+            this.next = (next === undefined ? null : next);
+        }
+
+        // Helper: convert ListNode to array for display
+        function listToArray(head) {
+            const result = [];
+            while (head !== null) {
+                result.push(head.val);
+                head = head.next;
+            }
+            return result;
+        }
+
+        let middleNode = function(head) {
+            let slow = head;
+            let fast = head;
+
+            while (fast !== null && fast.next !== null) {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            return slow;
+        };
+
+        const head = new ListNode(1, 
+                      new ListNode(2, 
+                      new ListNode(3, 
+                      new ListNode(4, 
+                      new ListNode(5, 
+                      new ListNode(6))))));
+        const middle = middleNode(head);
+        const inputList = listToArray(head);
+        const outputList = listToArray(middle);
+				$('#t1').html('<pre><h2>Input: ' + JSON.stringify(inputList.join(' -> '), null, 2) + '<br>Results: ' + JSON.stringify(outputList.join(' -> '), null, 2) + '</h2></pre>');
+			});
+
+			/*sol:
+				Singly Linked List
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
