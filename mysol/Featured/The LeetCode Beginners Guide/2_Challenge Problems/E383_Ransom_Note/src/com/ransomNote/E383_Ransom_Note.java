@@ -11,9 +11,10 @@ Each letter in magazine can only be used once in ransomNote.
 public class E383_Ransom_Note {
 
 	public static void main(String[] args) {
+		E383_Ransom_Note solution = new E383_Ransom_Note();
 		String input = "aa";
 		String magazine = "aab";
-		boolean output = canConstruct(input, magazine);
+		boolean output = solution.canConstruct(input, magazine);
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
