@@ -473,7 +473,7 @@ Cspiration Category:
 |14|Longest Common Prefix|Easy||Java/Javascript|Done/Done|
 |58|Length of Last Word|Easy||Java/Javascript|Done/Done|
 |387|First Unique Character in a String|Easy||Java/Javascript|Done/Done|
-|383|Ransom Note|Easy||Java/Javascript|Done/Done|
+|383|Ransom Note|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |344|Reverse String|Easy||Java/Javascript|Done/Done|
 |151|Reverse Words in a String|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |186|Reverse Words in a String II|Medium||Java/Javascript||
