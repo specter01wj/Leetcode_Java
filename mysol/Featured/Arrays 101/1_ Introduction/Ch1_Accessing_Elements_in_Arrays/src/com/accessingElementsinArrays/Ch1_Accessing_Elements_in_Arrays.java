@@ -45,6 +45,12 @@ public class Ch1_Accessing_Elements_in_Arrays {
 		    // Access and print what's at the i'th index.
 		    System.out.println(squareNumbers[i]);
 		}
+		
+		// For each VALUE in the Array.
+		for (int square : squareNumbers) {
+		    // Print the current value of square.
+		    System.out.println(square);
+		}
 	}
 	
 	public static class DVD {
