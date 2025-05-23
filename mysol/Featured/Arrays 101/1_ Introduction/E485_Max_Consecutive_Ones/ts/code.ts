@@ -1,21 +1,21 @@
-function fizzBuzz(n: number): string[] {
-    const result: string[] = [];
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            result.push("FizzBuzz");
-        } else if (i % 3 === 0) {
-            result.push("Fizz");
-        } else if (i % 5 === 0) {
-            result.push("Buzz");
+function findMaxConsecutiveOnes(nums: number[]): number {
+    let maxCount = 0;
+    let currentCount = 0;
+
+    for (const num of nums) {
+        if (num === 1) {
+            currentCount++;
+            maxCount = Math.max(maxCount, currentCount);
         } else {
-            result.push(i.toString());
+            currentCount = 0;
         }
     }
-    return result;
+
+    return maxCount;
 };
 
-const input: number = 5;
-const results = fizzBuzz(input);
+const input: number[] = [1,1,0,1,1,1];
+const results = findMaxConsecutiveOnes(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
