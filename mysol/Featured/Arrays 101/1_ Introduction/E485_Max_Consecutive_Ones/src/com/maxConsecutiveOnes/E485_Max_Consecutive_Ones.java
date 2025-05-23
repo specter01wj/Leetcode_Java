@@ -14,7 +14,15 @@ public class E485_Max_Consecutive_Ones {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and count
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum number of consecutive 1's in the array
+     */
 	public int findMaxConsecutiveOnes(int[] nums) {
         int maxCount = 0;
         int currentCount = 0;
