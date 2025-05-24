@@ -1,21 +1,17 @@
-function findMaxConsecutiveOnes(nums: number[]): number {
-    let maxCount = 0;
-    let currentCount = 0;
+function findNumbers(nums: number[]): number {
+    let count = 0;
 
-    for (const num of nums) {
-        if (num === 1) {
-            currentCount++;
-            maxCount = Math.max(maxCount, currentCount);
-        } else {
-            currentCount = 0;
+    for (let num of nums) {
+        if (num.toString().length % 2 === 0) {
+            count++;
         }
     }
 
-    return maxCount;
+    return count;
 };
 
-const input: number[] = [1,1,0,1,1,1];
-const results = findMaxConsecutiveOnes(input);
+const input: number[] = [12,345,2,6,7896];
+const results = findNumbers(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
