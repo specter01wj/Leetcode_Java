@@ -14,7 +14,15 @@ public class E1295_Find_Numbers_with_Even_Number_of_Digits {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    loop and count
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: how many of them contain an even number of digits
+     */
 	public int findNumbers(int[] nums) {
         int count = 0;
 
