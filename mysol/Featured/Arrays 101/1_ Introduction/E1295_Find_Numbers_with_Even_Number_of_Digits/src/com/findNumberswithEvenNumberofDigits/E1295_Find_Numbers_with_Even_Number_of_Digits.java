@@ -8,8 +8,9 @@ Given an array nums of integers, return how many of them contain an even number 
 public class E1295_Find_Numbers_with_Even_Number_of_Digits {
 
 	public static void main(String[] args) {
+		E1295_Find_Numbers_with_Even_Number_of_Digits solution = new E1295_Find_Numbers_with_Even_Number_of_Digits();
 		int[] input = {12,345,2,6,7896};
-		int output = findNumbers(input);
+		int output = solution.findNumbers(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
