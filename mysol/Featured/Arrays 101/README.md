@@ -22,7 +22,6 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|1480|**Running Sum of 1d Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Deleting Items From an Array
