@@ -216,7 +216,7 @@ By Jin Wang
 |953|**Verifying an Alien Dictionary**|Easy|Java/Javascript|Done/Done|
 |961|**N-Repeated Element in Size 2N Array**|Easy|Java/Javascript|Done/Done|
 |976|**Largest Perimeter Triangle**|Easy|Java/Javascript|Done/Done|
-|977|**Squares of a Sorted Array**|Easy|Java/Javascript|Done/Done|
+|977|**Squares of a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |985|**Sum of Even Numbers After Queries**|Easy|Java/Javascript|Done/Done|
 |989|**Add to Array-Form of Integer**|Easy|Java/Javascript|Done/Done|
 |997|**Find the Town Judge**|Easy|Java/Javascript|Done/Done|
