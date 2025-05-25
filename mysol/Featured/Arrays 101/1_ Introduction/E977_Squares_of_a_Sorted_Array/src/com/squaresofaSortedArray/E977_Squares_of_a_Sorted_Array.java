@@ -15,7 +15,15 @@ public class E977_Squares_of_a_Sorted_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: an array of the squares of each number sorted in non-decreasing order
+     */
 	public int[] sortedSquares(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
