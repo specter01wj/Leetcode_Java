@@ -1,17 +1,26 @@
-function findNumbers(nums: number[]): number {
-    let count = 0;
+function sortedSquares(nums: number[]): number[] {
+    const n = nums.length;
+    const result: number[] = new Array(n);
+    let left = 0, right = n - 1;
+    let pos = n - 1;
 
-    for (let num of nums) {
-        if (num.toString().length % 2 === 0) {
-            count++;
+    while (left <= right) {
+        const leftSquare = nums[left] * nums[left];
+        const rightSquare = nums[right] * nums[right];
+        if (leftSquare > rightSquare) {
+            result[pos--] = leftSquare;
+            left++;
+        } else {
+            result[pos--] = rightSquare;
+            right--;
         }
     }
 
-    return count;
+    return result;
 };
 
-const input: number[] = [12,345,2,6,7896];
-const results = findNumbers(input);
+const input: number[] = [-4,-1,0,3,10];
+const results = sortedSquares(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
