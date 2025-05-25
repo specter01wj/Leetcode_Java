@@ -13,7 +13,9 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|2235|**Add Two Integers**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|485|**Max Consecutive Ones**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1295|**Find Numbers with Even Number of Digits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|977|**Squares of a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Inserting Items Into an Array
