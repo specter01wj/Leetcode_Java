@@ -12,8 +12,11 @@ Do the above modifications to the input array in place and do not return anythin
 public class E1089_Duplicate_Zeros {
 
 	public static void main(String[] args) {
+		E1089_Duplicate_Zeros solution = new E1089_Duplicate_Zeros();
 		int[] input = {1,0,2,3,0,4,5,0};
-		int[] output = duplicateZeros(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		solution.duplicateZeros(inputCopy);
+		int[] output = inputCopy;
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
