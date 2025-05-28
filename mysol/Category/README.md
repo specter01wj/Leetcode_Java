@@ -71,7 +71,7 @@ Cspiration Category:
 |228|Summary Ranges|Easy||Java/Javascript|Done/Done|
 |163|Missing Ranges|Easy||Java/Javascript|Done/Done|
 |Sort||||||
-|88|Merge Sorted Array|Easy||Java/Javascript|Done/Done|
+|88|Merge Sorted Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |75|Sort Colors|Medium||Java/Javascript||
 |283|Move Zeroes|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |376|Wiggle Subsequence|Medium||Java/Javascript||
@@ -175,7 +175,7 @@ Cspiration Category:
 |1065|Index Pairs of a String|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1085|Sum of Digits in the Minimum Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1086|High Five|Easy||Java/Javascript/Typescript|Done/Done/Done|
-|1089|Duplicate Zeros|Easy||Java/Javascript|Done/Done|
+|1089|Duplicate Zeros|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1099|Two Sum Less Than K|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1122|Relative Sort Array|Easy||Java/Javascript|Done/Done|
 |1128|Number of Equivalent Domino Pairs|Easy||Java/Javascript|Done/Done|

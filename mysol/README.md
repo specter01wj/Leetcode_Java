@@ -30,7 +30,7 @@ By Jin Wang
 |69|**Sqrt(x)**|Easy|Java/Javascript|Done/Done|
 |70|**Climbing Stairs**|Easy|Java/Javascript|Done/Done|
 |83|**Remove Duplicates from Sorted List**|Easy|Java/Javascript|Done/|
-|88|**Merge Sorted Array**|Easy|Java/Javascript|Done/Done|
+|88|**Merge Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |100|**Same Tree**|Easy|Java/Javascript|Done/|
 |101|**Symmetric Tree**|Easy|Java/Javascript|Done/|
 |104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
@@ -237,7 +237,7 @@ By Jin Wang
 |1078|**Occurrences After Bigram**|Easy|Java/Javascript|Done/Done|
 |1085|**Sum of Digits in the Minimum Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1086|**High Five**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1089|**Duplicate Zeros**|Easy|Java/Javascript|Done/Done|
+|1089|**Duplicate Zeros**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1099|**Two Sum Less Than K**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1108|**Defanging an IP Address**|Easy|Java/Javascript|Done/Done|
 |1122|**Relative Sort Array**|Easy|Java/Javascript|Done/Done|
