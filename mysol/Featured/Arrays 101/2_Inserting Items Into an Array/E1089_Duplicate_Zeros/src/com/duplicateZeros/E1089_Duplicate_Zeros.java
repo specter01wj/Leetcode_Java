@@ -20,7 +20,16 @@ public class E1089_Duplicate_Zeros {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. First loop: Count how many zeros can be duplicated without exceeding array bounds.
+	2. Second loop (reverse): Shift elements to the right from the back, duplicating zeros as needed.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: shifted array
+     */
 	public void duplicateZeros(int[] arr) {
         int n = arr.length;
         int possibleDups = 0;
