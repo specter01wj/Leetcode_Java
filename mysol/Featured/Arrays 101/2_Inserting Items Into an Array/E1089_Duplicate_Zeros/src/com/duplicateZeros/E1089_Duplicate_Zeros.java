@@ -28,7 +28,7 @@ public class E1089_Duplicate_Zeros {
 	
 	/*
      * @param arr: a list of integers
-     * @return: shifted array
+     * @return: void
      */
 	public void duplicateZeros(int[] arr) {
         int n = arr.length;

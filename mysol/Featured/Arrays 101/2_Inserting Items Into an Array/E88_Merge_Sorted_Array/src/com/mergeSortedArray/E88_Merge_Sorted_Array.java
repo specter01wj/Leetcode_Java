@@ -25,7 +25,18 @@ public class E88_Merge_Sorted_Array {
         System.out.println("input1: " + Arrays.toString(nums1) + "; input2: " + Arrays.toString(nums2) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    count good triplets
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @param a: an integer
+     * @param b: an integer
+     * @param c: an integer
+     * @return: void
+     */
 	public void merge(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1;           // Pointer for nums1
         int p2 = n - 1;           // Pointer for nums2
