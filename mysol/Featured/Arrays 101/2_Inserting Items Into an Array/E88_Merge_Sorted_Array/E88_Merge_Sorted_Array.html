@@ -4,58 +4,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a fixed-length integer array arr, duplicate each occurrence of zero, 
-        shifting the remaining elements to the right.
+			 	You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, 
+        and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 
-        Note that elements beyond the length of the original array are not written. 
-        Do the above modifications to the input array in place and do not return anything.
+        Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+
+        The final sorted array should not be returned by the function, but instead be 
+        stored inside the array nums1. To accommodate this, nums1 has a length of m + n, 
+        where the first m elements denote the elements that should be merged, and the 
+        last n elements are set to 0 and should be ignored. nums2 has a length of n.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param arr: a list of integers
+        * @param nums1: a list of integers
+        * @param m: an integer
+        * @param nums2: a list of integers
+        * @param n: an integer
         * @return: void
         */
-        let duplicateZeros = function(arr) {
-            let n = arr.length;
-            let possibleDups = 0;
-            let last = n - 1;
+        let merge = function(nums1, m, nums2, n) {
+            let p1 = m - 1;
+            let p2 = n - 1;
+            let p = m + n - 1;
 
-            // Count the number of zeros to be duplicated
-            for (let i = 0; i <= last - possibleDups; i++) {
-                if (arr[i] === 0) {
-                    // Edge case: zero at the boundary
-                    if (i === last - possibleDups) {
-                        arr[last] = 0;
-                        last--;
-                        break;
-                    }
-                    possibleDups++;
+            while (p1 >= 0 && p2 >= 0) {
+                if (nums1[p1] > nums2[p2]) {
+                    nums1[p] = nums1[p1];
+                    p1--;
+                } else {
+                    nums1[p] = nums2[p2];
+                    p2--;
                 }
+                p--;
             }
 
-            // Start from the end and shift elements
-            for (let i = last - possibleDups; i >= 0; i--) {
-                if (arr[i] === 0) {
-                    arr[i + possibleDups] = 0;
-                    possibleDups--;
-                    arr[i + possibleDups] = 0;
-                } else {
-                    arr[i + possibleDups] = arr[i];
-                }
+            while (p2 >= 0) {
+                nums1[p] = nums2[p2];
+                p2--;
+                p--;
             }
         };
 
-        const input = [1,0,2,3,0,4,5,0];
-        const inputCopy = [...input];
-        duplicateZeros(inputCopy);
+        const nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3;
+        const inputCopy = [...nums1];
+        merge(inputCopy, m, nums2, n);
         let results = inputCopy;
-				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(nums1, null, 2) + '; Input2: ' + JSON.stringify(nums2, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. First loop: Count how many zeros can be duplicated without exceeding array bounds.
-	      2. Second loop (reverse): Shift elements to the right from the back, duplicating zeros as needed.
+				1. Use three pointers:
+          . p1 = m - 1 (end of valid nums1)
+          . p2 = n - 1 (end of nums2)
+          . p = m + n - 1 (end of nums1 array)
+        2. Compare and fill from the end of nums1:
+          . Place the larger of nums1[p1] or nums2[p2] at nums1[p]
+          . Decrement pointers accordingly
+        3. After the loop, copy remaining nums2 elements if any
 			 */
 
 		</script>
