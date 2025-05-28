@@ -1,38 +1,31 @@
-function duplicateZeros(arr: number[]): void {
-    let n = arr.length;
-    let possibleDups = 0;
-    let last = n - 1;
+function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+    let p1 = m - 1;
+    let p2 = n - 1;
+    let p = m + n - 1;
 
-    // Count the number of zeros to be duplicated
-    for (let i = 0; i <= last - possibleDups; i++) {
-        if (arr[i] === 0) {
-            // Edge case: zero at the boundary
-            if (i === last - possibleDups) {
-                arr[last] = 0;
-                last--;
-                break;
-            }
-            possibleDups++;
+    while (p1 >= 0 && p2 >= 0) {
+        if (nums1[p1] > nums2[p2]) {
+            nums1[p] = nums1[p1];
+            p1--;
+        } else {
+            nums1[p] = nums2[p2];
+            p2--;
         }
+        p--;
     }
 
-    // Start from the end and move elements accordingly
-    for (let i = last - possibleDups; i >= 0; i--) {
-        if (arr[i] === 0) {
-            arr[i + possibleDups] = 0;
-            possibleDups--;
-            arr[i + possibleDups] = 0;
-        } else {
-            arr[i + possibleDups] = arr[i];
-        }
+    while (p2 >= 0) {
+        nums1[p] = nums2[p2];
+        p2--;
+        p--;
     }
 };
 
-const input: number[] = [1,0,2,3,0,4,5,0];
-const inputCopy = [...input];
-duplicateZeros(inputCopy);
+const nums1: number[] = [1,2,3,0,0,0], m: number = 3, nums2: number[] = [2,5,6], n: number = 3;
+const inputCopy = [...nums1];
+merge(inputCopy);
 const results = inputCopy;
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input1: ' + JSON.stringify(nums1, null, 2) + '; Input2: ' + JSON.stringify(nums2, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
