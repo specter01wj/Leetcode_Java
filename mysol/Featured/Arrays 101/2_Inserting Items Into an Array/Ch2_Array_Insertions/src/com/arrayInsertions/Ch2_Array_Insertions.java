@@ -14,6 +14,13 @@ public class Ch2_Array_Insertions {
 		    length++;
 		}
 		
+
+		// Insert a new element at the end of the Array. Again,
+		// it's important to ensure that there is enough space
+		// in the array for inserting a new element.
+		intArray[length] = 10;
+		length++;
+		
 		for (int i = 0; i < intArray.length; i++) {
 		    System.out.println("Index " + i + " contains " + intArray[i]);
 		}
