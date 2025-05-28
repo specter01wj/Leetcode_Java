@@ -27,14 +27,21 @@ public class E88_Merge_Sorted_Array {
 	
 	/*
     solution:
-    count good triplets
+    1. Use three pointers:
+		. p1 = m - 1 (end of valid nums1)
+		. p2 = n - 1 (end of nums2)
+		. p = m + n - 1 (end of nums1 array)
+	2. Compare and fill from the end of nums1:
+		. Place the larger of nums1[p1] or nums2[p2] at nums1[p]
+		. Decrement pointers accordingly
+	3. After the loop, copy remaining nums2 elements if any
     */
 	
 	/*
-     * @param arr: a list of integers
-     * @param a: an integer
-     * @param b: an integer
-     * @param c: an integer
+     * @param nums1: a list of integers
+     * @param m: an integer
+     * @param nums2: a list of integers
+     * @param n: an integer
      * @return: void
      */
 	public void merge(int[] nums1, int m, int[] nums2, int n) {
