@@ -16,12 +16,13 @@ last n elements are set to 0 and should be ignored. nums2 has a length of n.
 public class E88_Merge_Sorted_Array {
 
 	public static void main(String[] args) {
+		E88_Merge_Sorted_Array solution = new E88_Merge_Sorted_Array();
 		int[] nums1 = {1,2,3,0,0,0}, nums2 = {2,5,6};
 		int m = 3, n = 3;
 		int[] inputCopy = Arrays.copyOf(nums1, nums1.length);
-		merge(inputCopy, m, nums2, n);
-		int output = inputCopy;
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		solution.merge(inputCopy, m, nums2, n);
+		int[] output = inputCopy;
+        System.out.println("input1: " + Arrays.toString(nums1) + "; input2: " + Arrays.toString(nums2) + "\noutput: " + Arrays.toString(output));
 	}
 	
 	
