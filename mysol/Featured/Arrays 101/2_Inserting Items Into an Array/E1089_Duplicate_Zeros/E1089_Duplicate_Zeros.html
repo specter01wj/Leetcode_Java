@@ -4,33 +4,58 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array nums of integers, return how many of them contain an even number of digits.
+			 	Given a fixed-length integer array arr, duplicate each occurrence of zero, 
+        shifting the remaining elements to the right.
+
+        Note that elements beyond the length of the original array are not written. 
+        Do the above modifications to the input array in place and do not return anything.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: how many of them contain an even number of digits
+        * @param arr: a list of integers
+        * @return: shifted array
         */
-        let findNumbers = function(nums) {
-            let count = 0;
+        let duplicateZeros = function(arr) {
+            let n = arr.length;
+            let possibleDups = 0;
+            let last = n - 1;
 
-            for (let num of nums) {
-                if (num.toString().length % 2 === 0) {
-                    count++;
+            // Count the number of zeros to be duplicated
+            for (let i = 0; i <= last - possibleDups; i++) {
+                if (arr[i] === 0) {
+                    // Edge case: zero at the boundary
+                    if (i === last - possibleDups) {
+                        arr[last] = 0;
+                        last--;
+                        break;
+                    }
+                    possibleDups++;
                 }
             }
-            
-            return count;
+
+            // Start from the end and shift elements
+            for (let i = last - possibleDups; i >= 0; i--) {
+                if (arr[i] === 0) {
+                    arr[i + possibleDups] = 0;
+                    possibleDups--;
+                    arr[i + possibleDups] = 0;
+                } else {
+                    arr[i + possibleDups] = arr[i];
+                }
+            }
         };
 
-        const input = [12,345,2,6,7896];
-        let results = findNumbers(input);
+        const input = [1,0,2,3,0,4,5,0];
+        const inputCopy = [...input];
+        duplicateZeros(inputCopy);
+        let results = inputCopy;
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				loop and count
+				1. First loop: Count how many zeros can be duplicated without exceeding array bounds.
+	      2. Second loop (reverse): Shift elements to the right from the back, duplicating zeros as needed.
 			 */
 
 		</script>
