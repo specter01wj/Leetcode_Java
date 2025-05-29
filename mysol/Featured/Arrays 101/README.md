@@ -22,6 +22,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|1089|**Duplicate Zeros**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|88|**Merge Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Deleting Items From an Array
