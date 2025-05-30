@@ -20,11 +20,22 @@ public class E26_Remove_Duplicates_from_Sorted_Array {
 	public static void main(String[] args) {
 		E26_Remove_Duplicates_from_Sorted_Array solution = new E26_Remove_Duplicates_from_Sorted_Array();
 		int[] input = {0,0,1,1,1,2,2,3,3,4};
-		int output = solution.removeDuplicates(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int output = solution.removeDuplicates(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. k tracks the next position to write a unique number.
+	2. Start from the second element (i = 1) and compare it to the previous unique value nums[k - 1].
+	3. If it's different, write it at nums[k] and increment k.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: k
+     */
 	public int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
 
