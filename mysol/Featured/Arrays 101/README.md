@@ -30,6 +30,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|27|**Remove Element**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Searching for Items in an Array
