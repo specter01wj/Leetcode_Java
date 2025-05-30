@@ -1,37 +1,18 @@
-function duplicateZeros(arr: number[]): void {
-    let n = arr.length;
-    let possibleDups = 0;
-    let last = n - 1;
-
-    // Count the number of zeros to be duplicated
-    for (let i = 0; i <= last - possibleDups; i++) {
-        if (arr[i] === 0) {
-            // Edge case: zero at the boundary
-            if (i === last - possibleDups) {
-                arr[last] = 0;
-                last--;
-                break;
-            }
-            possibleDups++;
+function removeElement(nums: number[], val: number): number {
+    let k = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            nums[k] = nums[i];
+            k++;
         }
     }
-
-    // Start from the end and move elements accordingly
-    for (let i = last - possibleDups; i >= 0; i--) {
-        if (arr[i] === 0) {
-            arr[i + possibleDups] = 0;
-            possibleDups--;
-            arr[i + possibleDups] = 0;
-        } else {
-            arr[i + possibleDups] = arr[i];
-        }
-    }
+    return k;
 };
 
-const input: number[] = [1,0,2,3,0,4,5,0];
+const input: number[] = [0,1,2,2,3,0,4,2];
+const val: number = 2;
 const inputCopy = [...input];
-duplicateZeros(inputCopy);
-const results = inputCopy;
+const results = removeElement(inputCopy, val);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
