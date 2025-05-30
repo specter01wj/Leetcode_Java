@@ -14,8 +14,8 @@ Cspiration Category:
 | No. | Problem       | Level  | Type | Language  | Completed|
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |基础||||||
-|27|Remove Element|Easy||Java/Javascript|Done/Done|
-|26|Remove Duplicates from Sorted Array|Easy||Java/Javascript|Done/Done|
+|27|Remove Element|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|26|Remove Duplicates from Sorted Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |80|Remove Duplicates from Sorted Array II|Medium||Java/Javascript|Done/Done|
 |277|Find the Celebrity|Medium||Java/Javascript||
 |189|Rotate Array|Easy||Java/Javascript|Done/Done|

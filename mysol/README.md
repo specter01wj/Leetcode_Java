@@ -18,8 +18,8 @@ By Jin Wang
 |14|**Longest Common Prefix**|Easy|Java/Javascript|Done/Done|
 |20|**Valid Parentheses**|Easy|Java/Javascript|Done/Done|
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript|Done/|
-|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript|Done/Done|
-|27|**Remove Element**|Easy|Java/Javascript|Done/Done|
+|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|27|**Remove Element**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |28|**Implement strStr()**|Easy|Java/Javascript|Done/Done|
 |35|**Search Insert Position**|Easy|Java/Javascript|Done/Done|
 |38|**Count and Say**|Easy|Java/Javascript|Done/Done|
