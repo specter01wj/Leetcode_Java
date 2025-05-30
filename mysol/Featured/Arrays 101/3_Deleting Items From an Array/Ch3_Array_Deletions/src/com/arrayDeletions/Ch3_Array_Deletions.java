@@ -58,8 +58,24 @@ public class Ch3_Array_Deletions {
 		    System.out.println("Index " + i + " contains " + intArray[i]);
 		}
 		
+		System.out.println("==================");
 		
 		
+		// Deleting From Anywhere in the Array
+
+		// Say we want to delete the element at index 1
+		for (int i = 2; i < length; i++) {
+		    // Shift each element one position to the left
+			intArray[i - 1] = intArray[i];
+		}
+
+		// Again, the length needs to be consistent with the current
+		// state of the array.
+		length--;
+		
+		for (int i = 0; i < length; i++) {
+		    System.out.println("Index " + i + " contains " + intArray[i]);
+		}
 	}
 
 }
