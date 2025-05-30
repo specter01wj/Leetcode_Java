@@ -26,7 +26,19 @@ public class E27_Remove_Element {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Use k to track the position where the next valid (non-val) element should go.
+	2. Loop through nums:
+		. If nums[i] != val, copy it to nums[k] and increment k.
+	3. After the loop, the first k elements of nums will not contain val.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param val: an integer
+     * @return: k
+     */
 	public int removeElement(int[] nums, int val) {
         int k = 0; // Points to the next position to place a non-val element
 
