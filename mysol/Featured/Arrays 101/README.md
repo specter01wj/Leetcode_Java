@@ -38,6 +38,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|1346|**Check If N and Its Double Exist**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|941|**Valid Mountain Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### In-Place Operations
