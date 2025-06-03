@@ -15,8 +15,9 @@ Recall that arr is a mountain array if and only if:
 public class E941_Valid_Mountain_Array {
 
 	public static void main(String[] args) {
+		E941_Valid_Mountain_Array solution = new E941_Valid_Mountain_Array();
 		int[] input = {0,3,2,1};
-		boolean output = validMountainArray(input);
+		boolean output = solution.validMountainArray(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
