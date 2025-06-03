@@ -4,48 +4,39 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array nums and an integer val, remove all occurrences 
-        of val in nums in-place. The order of the elements may be changed. 
-        Then return the number of elements in nums which are not equal to val.
+			 	Given an array arr of integers, check if there exist two indices i and j such that :
 
-        Consider the number of elements in nums which are not equal to val be k, 
-        to get accepted, you need to do the following things:
-
-          . Change the array nums such that the first k elements of nums contain 
-            the elements which are not equal to val. The remaining elements of 
-            nums are not important as well as the size of nums.
-          . Return k.
+          . i != j
+          . 0 <= i, j < arr.length
+          . arr[i] == 2 * arr[j]
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @param val: an integer
-        * @return: k
+        * @param arr: a list of integers
+        * @return: boolean
         */
-        let removeElement = function(nums, val) {
-            let k = 0;
-            for (let i = 0; i < nums.length; i++) {
-                if (nums[i] !== val) {
-                    nums[k] = nums[i];
-                    k++;
+        let checkIfExist = function(arr) {
+            const seen = new Set();
+            for (let num of arr) {
+                if (seen.has(2 * num) || (num % 2 === 0 && seen.has(num / 2))) {
+                    return true;
                 }
+                seen.add(num);
             }
-            return k;
+            return false;
         };
 
-        const input = [0,1,2,2,3,0,4,2];
-        const val = 2;
-        const inputCopy = [...input];
-        let results = removeElement(inputCopy, val);
+        const input = [10,2,5,3];
+        let results = checkIfExist(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				1. Use k to track the position where the next valid (non-val) element should go.
-        2. Loop through nums:
-          . If nums[i] != val, copy it to nums[k] and increment k.
-        3. After the loop, the first k elements of nums will not contain val.
+				1. For each num in arr, check:
+          . If 2 * num already exists in the set → arr[j] == 2 * arr[i].
+          . If num is even and num / 2 exists → arr[i] == 2 * arr[j].
+        2. Add num to the set afterward to avoid matching i == j.
 			 */
 
 		</script>
