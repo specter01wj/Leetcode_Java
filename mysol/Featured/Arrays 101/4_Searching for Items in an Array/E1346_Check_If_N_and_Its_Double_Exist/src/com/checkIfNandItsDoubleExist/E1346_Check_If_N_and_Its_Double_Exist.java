@@ -12,8 +12,9 @@ Given an array arr of integers, check if there exist two indices i and j such th
 public class E1346_Check_If_N_and_Its_Double_Exist {
 
 	public static void main(String[] args) {
+		E1346_Check_If_N_and_Its_Double_Exist solution = new E1346_Check_If_N_and_Its_Double_Exist();
 		int[] input = {10,2,5,3};
-		int output = checkIfExist(input);
+		boolean output = solution.checkIfExist(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
