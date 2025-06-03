@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums and an integer val, remove all occurrences 
+        of val in nums in-place. The order of the elements may be changed. 
+        Then return the number of elements in nums which are not equal to val.
+
+        Consider the number of elements in nums which are not equal to val be k, 
+        to get accepted, you need to do the following things:
+
+          . Change the array nums such that the first k elements of nums contain 
+            the elements which are not equal to val. The remaining elements of 
+            nums are not important as well as the size of nums.
+          . Return k.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @param val: an integer
+        * @return: k
+        */
+        let removeElement = function(nums, val) {
+            let k = 0;
+            for (let i = 0; i < nums.length; i++) {
+                if (nums[i] !== val) {
+                    nums[k] = nums[i];
+                    k++;
+                }
+            }
+            return k;
+        };
+
+        const input = [0,1,2,2,3,0,4,2];
+        const val = 2;
+        const inputCopy = [...input];
+        let results = removeElement(inputCopy, val);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Use k to track the position where the next valid (non-val) element should go.
+        2. Loop through nums:
+          . If nums[i] != val, copy it to nums[k] and increment k.
+        3. After the loop, the first k elements of nums will not contain val.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
