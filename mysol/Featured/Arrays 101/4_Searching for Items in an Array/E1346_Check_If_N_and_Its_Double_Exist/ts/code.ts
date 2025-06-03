@@ -1,18 +1,16 @@
-function removeElement(nums: number[], val: number): number {
-    let k = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== val) {
-            nums[k] = nums[i];
-            k++;
+function checkIfExist(arr: number[]): boolean {
+    const seen = new Set<number>();
+    for (const num of arr) {
+        if (seen.has(2 * num) || (num % 2 === 0 && seen.has(num / 2))) {
+            return true;
         }
+        seen.add(num);
     }
-    return k;
+    return false;
 };
 
-const input: number[] = [0,1,2,2,3,0,4,2];
-const val: number = 2;
-const inputCopy = [...input];
-const results = removeElement(inputCopy, val);
+const input: number[] = [10,2,5,3];
+const results = checkIfExist(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
