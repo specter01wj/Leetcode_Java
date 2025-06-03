@@ -151,7 +151,7 @@ Cspiration Category:
 |914|X of a Kind in a Deck of Cards|Easy||Java/Javascript|Done/Done|
 |922|Sort Array By Parity II|Easy||Java/Javascript|Done/Done|
 |929|Unique Email Addresses|Easy||Java/Javascript|Done/Done|
-|941|Valid Mountain Array|Easy||Java/Javascript|Done/Done|
+|941|Valid Mountain Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |942|DI String Match|Easy||Java/Javascript|Done/Done|
 |944|Delete Columns to Make Sorted|Easy||Java/Javascript|Done/Done|
 |953|Verifying an Alien Dictionary|Easy||Java/Javascript|Done/Done|
@@ -202,7 +202,7 @@ Cspiration Category:
 |1313|Decompress Run-Length Encoded List|Easy||Java/Javascript|Done/Done|
 |1331|Rank Transform of an Array|Easy||Java/Javascript|Done/Done|
 |1337|The K Weakest Rows in a Matrix|Easy||Java/Javascript|Done/Done|
-|1346|Check If N and Its Double Exist|Easy||Java/Javascript|Done/Done|
+|1346|Check If N and Its Double Exist|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1351|Count Negative Numbers in a Sorted Matrix|Easy||Java/Javascript|Done/Done|
 |1356|Sort Integers by The Number of 1 Bits|Easy||Java/Javascript|Done/Done|
 |1365|How Many Numbers Are Smaller Than the Current Number|Easy||Java/Javascript|Done/Done|

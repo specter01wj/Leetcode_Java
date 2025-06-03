@@ -210,7 +210,7 @@ By Jin Wang
 |929|**Unique Email Addresses**|Easy|Java/Javascript|Done/Done|
 |933|**Number of Recent Calls**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |937|**Reorder Data in Log Files**|Easy|Java/Javascript|Done/Done|
-|941|**Valid Mountain Array**|Easy|Java/Javascript|Done/Done|
+|941|**Valid Mountain Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |942|**DI String Match**|Easy|Java/Javascript|Done/Done|
 |944|**Delete Columns to Make Sorted**|Easy|Java/Javascript|Done/Done|
 |953|**Verifying an Alien Dictionary**|Easy|Java/Javascript|Done/Done|
@@ -273,7 +273,7 @@ By Jin Wang
 |1332|**Remove Palindromic Subsequences**|Easy|Java/Javascript|Done/Done|
 |1337|**The K Weakest Rows in a Matrix**|Easy|Java/Javascript|Done/Done|
 |1342|**Number of Steps to Reduce a Number to Zero**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1346|**Check If N and Its Double Exist**|Easy|Java/Javascript|Done/Done|
+|1346|**Check If N and Its Double Exist**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1351|**Count Negative Numbers in a Sorted Matrix**|Easy|Java/Javascript|Done/Done|
 |1356|**Sort Integers by The Number of 1 Bits**|Easy|Java/Javascript|Done/Done|
 |1360|**Number of Days Between Two Dates**|Easy|Java/Javascript|Done/Done|
