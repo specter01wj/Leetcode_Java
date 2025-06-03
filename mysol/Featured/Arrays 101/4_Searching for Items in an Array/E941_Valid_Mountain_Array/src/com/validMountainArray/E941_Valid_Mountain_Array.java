@@ -21,7 +21,18 @@ public class E941_Valid_Mountain_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Ascend while arr[i] < arr[i+1]
+	2. Check if peak is not at index 0 or last
+	3. Descend while arr[i] > arr[i+1]
+	4. If you reach the end after ascending then descending → valid mountain
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: boolean
+     */
 	public boolean validMountainArray(int[] arr) {
         int n = arr.length;
         if (n < 3) return false;
