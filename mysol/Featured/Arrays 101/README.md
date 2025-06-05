@@ -46,6 +46,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|1299|**Replace Elements with Greatest Element on Right Side**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Conclusion
