@@ -8,8 +8,9 @@ public class Ch5_A_Better_Repeated_Deletion_Algorithm_Intro {
 		int[] inputCopy = Arrays.copyOf(array, array.length);
 
 	    int result1 = Ch5_A_Better_Repeated_Deletion_Algorithm_Intro.removeDuplicates(inputCopy);
-	    System.out.println("array: " + Arrays.toString(array));
+	    System.out.println("array1: " + Arrays.toString(array));
 	    int[] result2 = Ch5_A_Better_Repeated_Deletion_Algorithm_Intro.copyWithRemovedDuplicates(array);
+	    System.out.println("array2: " + Arrays.toString(array));
 
 	    System.out.println("Output1: " + (result1));
 	    System.out.println("Output2: " + Arrays.toString(result2));
