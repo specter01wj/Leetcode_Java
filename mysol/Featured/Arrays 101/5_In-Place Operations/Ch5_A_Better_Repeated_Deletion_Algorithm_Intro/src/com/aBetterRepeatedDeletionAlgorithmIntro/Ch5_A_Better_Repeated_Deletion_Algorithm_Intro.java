@@ -5,8 +5,9 @@ public class Ch5_A_Better_Repeated_Deletion_Algorithm_Intro {
 
 	public static void main(String[] args) {
 		int[] array = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+		int[] inputCopy = Arrays.copyOf(array, array.length);
 
-	    int result1 = Ch5_A_Better_Repeated_Deletion_Algorithm_Intro.removeDuplicates(array);
+	    int result1 = Ch5_A_Better_Repeated_Deletion_Algorithm_Intro.removeDuplicates(inputCopy);
 	    System.out.println("array: " + Arrays.toString(array));
 	    int[] result2 = Ch5_A_Better_Repeated_Deletion_Algorithm_Intro.copyWithRemovedDuplicates(array);
 
