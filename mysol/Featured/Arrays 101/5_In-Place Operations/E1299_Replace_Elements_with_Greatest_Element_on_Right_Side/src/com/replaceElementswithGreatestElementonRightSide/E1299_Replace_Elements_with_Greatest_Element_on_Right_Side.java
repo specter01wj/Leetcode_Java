@@ -17,7 +17,18 @@ public class E1299_Replace_Elements_with_Greatest_Element_on_Right_Side {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Initialize maxRight as -1 (for the last element).
+	2. Starting from the end, we:
+		. Replace the current element with maxRight.
+		. Then update maxRight to be the maximum of itself and the current value before replacement.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the array
+     */
 	public int[] replaceElements(int[] arr) {
         int n = arr.length;
         int maxRight = -1;
