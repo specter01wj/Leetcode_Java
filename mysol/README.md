@@ -265,7 +265,7 @@ By Jin Wang
 |1275|**Find Winner on a Tic Tac Toe Game**|Easy|Java/Javascript|Done/Done|
 |1287|**Element Appearing More Than 25% In Sorted Array**|Easy|Java/Javascript|Done/Done|
 |1295|**Find Numbers with Even Number of Digits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1299|**Replace Elements with Greatest Element on Right Side**|Easy|Java/Javascript|Done/Done|
+|1299|**Replace Elements with Greatest Element on Right Side**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1304|**Find N Unique Integers Sum up to Zero**|Easy|Java/Javascript|Done/Done|
 |1309|**Decrypt String from Alphabet to Integer Mapping**|Easy|Java/Javascript|Done/Done|
 |1313|**Decompress Run-Length Encoded List**|Easy|Java/Javascript|Done/Done|
