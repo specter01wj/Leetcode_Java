@@ -8,7 +8,9 @@ public class Ch5_InPlace_Array_Operations_Introduction {
 	    int length = array.length;
 
 	    int[] result1 = Ch5_InPlace_Array_Operations_Introduction.squareEven1(array, length);
+	    System.out.println("array1: " + Arrays.toString(array));
 	    int[] result2 = Ch5_InPlace_Array_Operations_Introduction.squareEven2(array, length);
+	    System.out.println("array2: " + Arrays.toString(array));
 
 	    System.out.println("Output1: " + Arrays.toString(result1));
 	    System.out.println("Output2: " + Arrays.toString(result2));
