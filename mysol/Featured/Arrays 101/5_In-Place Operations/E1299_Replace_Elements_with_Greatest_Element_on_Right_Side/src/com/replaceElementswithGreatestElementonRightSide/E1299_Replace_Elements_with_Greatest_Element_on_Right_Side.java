@@ -13,7 +13,8 @@ public class E1299_Replace_Elements_with_Greatest_Element_on_Right_Side {
 	public static void main(String[] args) {
 		E1299_Replace_Elements_with_Greatest_Element_on_Right_Side solution = new E1299_Replace_Elements_with_Greatest_Element_on_Right_Side();
 		int[] input = {17,18,5,4,6,1};
-		int[] output = solution.replaceElements(input);
+		int[] inputCopy = Arrays.copyOf(input, input.length);
+		int[] output = solution.replaceElements(inputCopy);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
