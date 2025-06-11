@@ -48,6 +48,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1299|**Replace Elements with Greatest Element on Right Side**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|905|**Sort Array By Parity**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Conclusion
