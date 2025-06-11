@@ -18,7 +18,16 @@ public class E905_Sort_Array_By_Parity {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    1. Use two pointers: left to find the next odd number, right to find the next even number from the end.
+	2. Swap when needed, and move pointers accordingly.
+    */
 	
+	/*
+     * @param A: a list of integers
+     * @return: any array that satisfies this condition
+     */
 	public int[] sortArrayByParity(int[] A) {
         int left = 0, right = A.length - 1;
 
