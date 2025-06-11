@@ -146,7 +146,7 @@ Cspiration Category:
 |888|Fair Candy Swap|Easy||Java/Javascript|Done/Done|
 |892|Surface Area of 3D Shapes|Easy||Java/Javascript|Done/Done|
 |896|Monotonic Array|Easy||Java/Javascript|Done/Done|
-|905|Sort Array By Parity|Easy||Java/Javascript|Done/Done|
+|905|Sort Array By Parity|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |908|Smallest Range I|Easy||Java/Javascript|Done/Done|
 |914|X of a Kind in a Deck of Cards|Easy||Java/Javascript|Done/Done|
 |922|Sort Array By Parity II|Easy||Java/Javascript|Done/Done|
