@@ -18,7 +18,17 @@ public class E283_Move_Zeroes {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(inputCopy));
 	}
 	
+	/*
+    solution:
+    1. insertPos tracks the position to place the next non-zero element.
+	2. First loop: shifts all non-zero elements forward.
+	3. Second loop: fills remaining slots with 0.
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: void
+     */
 	public void moveZeroes(int[] nums) {
 		int insertPos = 0;
 
