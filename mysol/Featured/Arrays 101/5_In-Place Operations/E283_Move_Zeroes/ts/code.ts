@@ -1,20 +1,23 @@
-function removeDuplicates(nums: number[]): number {
-    if (nums.length === 0) return 0;
+function moveZeroes(nums: number[]): void {
+    let insertPos = 0;
 
-    let k = 1;
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i] !== nums[k - 1]) {
-            nums[k] = nums[i];
-            k++;
+    // Move all non-zero elements to the front
+    for (let num of nums) {
+        if (num !== 0) {
+            nums[insertPos++] = num;
         }
     }
-    return k;
+
+    // Fill the remaining positions with zeroes
+    while (insertPos < nums.length) {
+        nums[insertPos++] = 0;
+    }
 };
 
-const input: number[] = [0,0,1,1,1,2,2,3,3,4];
+const input: number[] = [0,1,0,3,12];
 const inputCopy = [...input];
-const results = removeDuplicates(inputCopy);
+moveZeroes(inputCopy);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(inputCopy, null, 2);
 
