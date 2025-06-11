@@ -1,19 +1,21 @@
-function removeDuplicates(nums: number[]): number {
-    if (nums.length === 0) return 0;
+function sortArrayByParity(nums: number[]): number[] {
+    let left = 0, right = nums.length - 1;
 
-    let k = 1;
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i] !== nums[k - 1]) {
-            nums[k] = nums[i];
-            k++;
+    while (left < right) {
+        if (nums[left] % 2 > nums[right] % 2) {
+            [nums[left], nums[right]] = [nums[right], nums[left]];
         }
+
+        if (nums[left] % 2 === 0) left++;
+        if (nums[right] % 2 === 1) right--;
     }
-    return k;
+
+    return nums;
 };
 
-const input: number[] = [0,0,1,1,1,2,2,3,3,4];
+const input: number[] = [3,1,2,4];
 const inputCopy = [...input];
-const results = removeDuplicates(inputCopy);
+const results = sortArrayByParity(inputCopy);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
