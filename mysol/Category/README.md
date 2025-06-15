@@ -170,7 +170,7 @@ Cspiration Category:
 |1030|Matrix Cells in Distance Order|Easy||Java/Javascript|Done/Done|
 |1037|Valid Boomerang|Easy||Java/Javascript|Done/Done|
 |1046|Last Stone Weight|Easy||Java/Javascript|Done/Done|
-|1051|Height Checker|Easy||Java/Javascript|Done/Done|
+|1051|Height Checker|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1064|Fixed Point|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1065|Index Pairs of a String|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1085|Sum of Digits in the Minimum Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
