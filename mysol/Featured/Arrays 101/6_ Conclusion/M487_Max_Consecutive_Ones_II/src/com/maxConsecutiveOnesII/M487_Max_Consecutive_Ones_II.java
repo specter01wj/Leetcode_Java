@@ -9,8 +9,9 @@ in the array if you can flip at most one 0.
 public class M487_Max_Consecutive_Ones_II {
 
 	public static void main(String[] args) {
+		M487_Max_Consecutive_Ones_II solution = new M487_Max_Consecutive_Ones_II();
 		int[] input = {1,0,1,1,0};
-		int output = findMaxConsecutiveOnes(input);
+		int output = solution.findMaxConsecutiveOnes(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
