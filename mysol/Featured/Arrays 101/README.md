@@ -57,7 +57,9 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-
+|1051|**Height Checker**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|487|**Max Consecutive Ones II**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|414|**Third Maximum Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### ================================================================
