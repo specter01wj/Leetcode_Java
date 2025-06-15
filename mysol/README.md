@@ -637,6 +637,7 @@ By Jin Wang
 |437|**Path Sum III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |450|**Delete Node in a BST**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |452|**Minimum Number of Arrows to Burst Balloons**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|487|**Max Consecutive Ones II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |714|**Best Time to Buy and Sell Stock with Transaction Fee**|Medium|Java/Javascript/Typescript|Done/Done/Done|

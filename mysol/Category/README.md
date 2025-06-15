@@ -101,6 +101,7 @@ Cspiration Category:
 |455|Assign Cookies|Easy||Java/Javascript|Done/Done|
 |463|Island Perimeter|Easy||Java/Javascript|Done/Done|
 |485|Max Consecutive Ones|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|487|Max Consecutive Ones II|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |495|Teemo Attacking|Easy||Java/Javascript|Done/Done|
 |496|Next Greater Element I|Easy||Java/Javascript|Done/Done|
 |500|Keyboard Row|Easy||Java/Javascript|Done/Done|
