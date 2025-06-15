@@ -15,7 +15,18 @@ public class E414_Third_Maximum_Number {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    1. Use Long instead of int to avoid issues with Integer.MIN_VALUE.
+	2. Track top 3 distinct maximums using first, second, third.
+	3. Skip duplicates.
+	4. At the end, if third is null, return first (i.e., max value); otherwise return third.
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the third distinct maximum number in this array
+     */
 	public int thirdMax(int[] nums) {
         Long first = null, second = null, third = null;
 
