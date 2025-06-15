@@ -50,6 +50,7 @@ By Jin Wang
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |905|**Sort Array By Parity**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|27|**Remove Element**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Conclusion
