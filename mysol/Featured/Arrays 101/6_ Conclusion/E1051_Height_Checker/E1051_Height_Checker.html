@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array arr, replace every element in that array with the greatest 
+        element among the elements to its right, and replace the last element with -1.
+
+        After doing so, return the array.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param arr: a list of integers
+        * @return: the array
+        */
+        let replaceElements = function(arr) {
+            let maxRight = -1;
+
+            for (let i = arr.length - 1; i >= 0; i--) {
+                let current = arr[i];
+                arr[i] = maxRight;
+                if (current > maxRight) {
+                    maxRight = current;
+                }
+            }
+
+            return arr;
+        };
+
+        const input = [17,18,5,4,6,1];
+        const inputCopy = [...input];
+        let results = replaceElements(inputCopy);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Initialize maxRight as -1 (for the last element).
+        2. Starting from the end, we:
+          . Replace the current element with maxRight.
+          . Then update maxRight to be the maximum of itself and the current value before replacement.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
