@@ -17,8 +17,9 @@ Return the number of indices where heights[i] != expected[i].
 public class E1051_Height_Checker {
 
 	public static void main(String[] args) {
-		int[] input = {3,0,1,1,9,7};
-		int output = countGoodTriplets(input, 7, 2, 3);
+		E1051_Height_Checker solution = new E1051_Height_Checker();
+		int[] input = {1,1,4,2,1,3};
+		int output = solution.heightChecker(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
