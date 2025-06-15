@@ -1,18 +1,28 @@
-function heightChecker(heights: number[]): number {
-    const expected: number[] = [...heights].sort((a, b) => a - b);
-    let count = 0;
+function findMaxConsecutiveOnes(nums: number[]): number {
+    let max = 0;
+    let left = 0;
+    let zeroCount = 0;
 
-    for (let i = 0; i < heights.length; i++) {
-        if (heights[i] !== expected[i]) {
-            count++;
+    for (let right = 0; right < nums.length; right++) {
+        if (nums[right] === 0) {
+            zeroCount++;
         }
+
+        while (zeroCount > 1) {
+            if (nums[left] === 0) {
+                zeroCount--;
+            }
+            left++;
+        }
+
+        max = Math.max(max, right - left + 1);
     }
 
-    return count;
+    return max;
 };
 
-const input: number[] = [1,1,4,2,1,3];
-const results = heightChecker(input);
+const input: number[] = [1,0,1,1,0];
+const results = findMaxConsecutiveOnes(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
