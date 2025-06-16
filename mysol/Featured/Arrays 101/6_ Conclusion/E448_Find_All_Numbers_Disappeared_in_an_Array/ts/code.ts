@@ -1,28 +1,24 @@
-function thirdMax(nums: number[]): number {
-    let first: number | null = null;
-    let second: number | null = null;
-    let third: number | null = null;
-
-    for (const num of nums) {
-        if (num === first || num === second || num === third) continue;
-
-        if (first === null || num > first) {
-            third = second;
-            second = first;
-            first = num;
-        } else if (second === null || num > second) {
-            third = second;
-            second = num;
-        } else if (third === null || num > third) {
-            third = num;
+function findDisappearedNumbers(nums: number[]): number[] {
+    for (let i = 0; i < nums.length; i++) {
+        const index = Math.abs(nums[i]) - 1;
+        if (nums[index] > 0) {
+            nums[index] = -nums[index];
         }
     }
 
-    return third !== null ? third : first!;
+    const result: number[] = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) {
+            result.push(i + 1);
+        }
+    }
+
+    return result;
 };
 
-const input: number[] = [2,2,3,1];
-const results = thirdMax(input);
+const input: number[] = [4,3,2,7,8,2,3,1];
+const inputCopy = [...input];
+const results = findDisappearedNumbers(inputCopy);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
