@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums, return the third distinct maximum number in this array. 
+        If the third maximum does not exist, return the maximum number.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param arr: a list of integers
+        * @return: the third distinct maximum number in this array
+        */
+        let thirdMax = function(nums) {
+            let first = null, second = null, third = null;
+
+            for (let num of nums) {
+                if (num === first || num === second || num === third) continue;
+
+                if (first === null || num > first) {
+                    third = second;
+                    second = first;
+                    first = num;
+                } else if (second === null || num > second) {
+                    third = second;
+                    second = num;
+                } else if (third === null || num > third) {
+                    third = num;
+                }
+            }
+
+            return third !== null ? third : first;
+        };
+
+        const input = [2,2,3,1];
+        let results = thirdMax(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				1. Use Long instead of int to avoid issues with Integer.MIN_VALUE.
+        2. Track top 3 distinct maximums using first, second, third.
+        3. Skip duplicates.
+        4. At the end, if third is null, return first (i.e., max value); otherwise return third.
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
