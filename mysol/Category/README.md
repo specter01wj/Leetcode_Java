@@ -96,7 +96,7 @@ Cspiration Category:
 |414|Third Maximum Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |422|Valid Word Square|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |435|Non-overlapping Intervals|Medium||Java/Javascript/Typescript|Done/Done/Done|
-|448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript|Done/Done|
+|448|Find All Numbers Disappeared in an Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |452|Minimum Number of Arrows to Burst Balloons|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |455|Assign Cookies|Easy||Java/Javascript|Done/Done|
 |463|Island Perimeter|Easy||Java/Javascript|Done/Done|

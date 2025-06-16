@@ -129,7 +129,7 @@ By Jin Wang
 |422|**Valid Word Square**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |434|**Number of Segments in a String**|Easy|Java/Javascript|Done/Done|
 |443|**String Compression**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|448|**Find All Numbers Disappeared in an Array**|Easy|Java/Javascript|Done/Done|
+|448|**Find All Numbers Disappeared in an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |455|**Assign Cookies**|Easy|Java/Javascript|Done/Done|
 |459|**Repeated Substring Pattern**|Easy|Java/Javascript|Done/Done|
 |463|**Island Perimeter**|Easy|Java/Javascript|Done/Done|
