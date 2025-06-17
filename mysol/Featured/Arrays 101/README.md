@@ -58,8 +58,10 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |1051|**Height Checker**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|487|**Max Consecutive Ones II**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|487|**Max Consecutive Ones II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |414|**Third Maximum Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|448|**Find All Numbers Disappeared in an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|977|**Squares of a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### ================================================================
