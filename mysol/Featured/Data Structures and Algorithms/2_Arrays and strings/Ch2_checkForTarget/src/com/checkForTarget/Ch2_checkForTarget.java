@@ -20,7 +20,16 @@ public class Ch2_checkForTarget {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    two pointers
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param target: an integer
+     * @return: boolean
+     */
 	public boolean checkForTarget(int[] nums, int target) {
 	    int left = 0;
 	    int right = nums.length - 1;
