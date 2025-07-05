@@ -18,7 +18,15 @@ public class Ch2_checkIfPalindrome {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    two pointers
+    */
 	
+	/*
+     * @param s: a string
+     * @return: boolean
+     */
 	public boolean checkIfPalindrome(String s) {
 	    int left = 0;
 	    int right = s.length() - 1;
