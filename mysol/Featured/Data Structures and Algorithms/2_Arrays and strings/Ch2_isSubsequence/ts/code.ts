@@ -1,21 +1,20 @@
-function checkIfPalindrome(s: string): boolean {
-    let left = 0;
-    let right = s.length - 1;
+function isSubsequence(s: string, t: string): boolean {
+    let i = 0;
+    let j = 0;
 
-    while (left < right) {
-        if (s[left] !== s[right]) {
-            return false;
+    while (i < s.length && j < t.length) {
+        if (s[i] === t[j]) {
+            i++;
         }
-        left++;
-        right--;
+        j++;
     }
 
-    return true;
+    return i === s.length;
 }
 
-const input: string = "racecar";
-const results = checkIfPalindrome(input);
+const input1: string = "ace", input2: string = "abcde";
+const results = isSubsequence(input1, input2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input1, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
