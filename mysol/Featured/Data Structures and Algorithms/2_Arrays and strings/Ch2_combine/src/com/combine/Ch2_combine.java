@@ -13,10 +13,19 @@ public class Ch2_combine {
 		int[] input1 = {1, 4, 7, 20};
 		int[] input2 = {3, 5, 6};
 		List<Integer> output = solution.combine(input1, input2);
-        System.out.println("input: " + Arrays.toString(input1) + "\noutput: " + (output));
+        System.out.println("input1: " + Arrays.toString(input1) + "; input2: " + Arrays.toString(input1) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    two pointers
+    */
 	
+	/*
+     * @param arr1: a list of integers
+     * @param arr2: a list of integers
+     * @return: combined list
+     */
 	public List<Integer> combine(int[] arr1, int[] arr2) {
 	    // ans is the answer
 	    List<Integer> ans = new ArrayList<>();
