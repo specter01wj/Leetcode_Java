@@ -19,7 +19,6 @@ function checkForTarget(nums: number[], target: number): boolean {
     return false;
 }
 
-
 const input: number[] = [1, 2, 4, 6, 8, 9, 14, 15];
 const target: number = 13;
 const results = checkForTarget(input, target);

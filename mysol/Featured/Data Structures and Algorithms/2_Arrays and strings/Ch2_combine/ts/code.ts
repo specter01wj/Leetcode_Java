@@ -25,8 +25,6 @@ function combine(arr1: number[], arr2: number[]): number[] {
     return ans;
 }
 
-
-
 const input1: number[] = [1, 4, 7, 20];
 const input2: number[] = [3, 5, 6];
 const results = combine(input1, input2);
