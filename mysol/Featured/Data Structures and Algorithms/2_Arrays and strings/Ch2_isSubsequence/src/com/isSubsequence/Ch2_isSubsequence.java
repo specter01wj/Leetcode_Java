@@ -23,7 +23,16 @@ public class Ch2_isSubsequence {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    two pointers
+    */
 	
+	/*
+     * @param s: a string
+     * @param t: a string
+     * @return: boolean
+     */
 	public boolean isSubsequence(String s, String t) {
         int i = 0;
         int j = 0;
