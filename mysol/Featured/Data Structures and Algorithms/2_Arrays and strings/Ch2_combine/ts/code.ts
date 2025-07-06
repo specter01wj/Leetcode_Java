@@ -1,29 +1,36 @@
-function checkForTarget(nums: number[], target: number): boolean {
-    let left = 0;
-    let right = nums.length - 1;
+function combine(arr1: number[], arr2: number[]): number[] {
+    const ans: number[] = [];
+    let i = 0, j = 0;
 
-    while (left < right) {
-        // curr is the current sum
-        let curr = nums[left] + nums[right];
-        if (curr == target) {
-            return true;
-        }
-        
-        if (curr > target) {
-            right--;
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] < arr2[j]) {
+            ans.push(arr1[i]);
+            i++;
         } else {
-            left++;
+            ans.push(arr2[j]);
+            j++;
         }
     }
 
-    return false;
+    while (i < arr1.length) {
+        ans.push(arr1[i]);
+        i++;
+    }
+
+    while (j < arr2.length) {
+        ans.push(arr2[j]);
+        j++;
+    }
+
+    return ans;
 }
 
 
-const input: number[] = [1, 2, 4, 6, 8, 9, 14, 15];
-const target: number = 13;
-const results = checkForTarget(input, target);
+
+const input1: number[] = [1, 4, 7, 20];
+const input2: number[] = [3, 5, 6];
+const results = combine(input1, input2);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input1: ' + JSON.stringify(input1, null, 2) + 'Input2: ' + JSON.stringify(input2, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
