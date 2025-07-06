@@ -1,20 +1,28 @@
-function checkIfPalindrome(s: string): boolean {
+function checkForTarget(nums: number[], target: number): boolean {
     let left = 0;
-    let right = s.length - 1;
+    let right = nums.length - 1;
 
     while (left < right) {
-        if (s[left] !== s[right]) {
-            return false;
+        // curr is the current sum
+        let curr = nums[left] + nums[right];
+        if (curr == target) {
+            return true;
         }
-        left++;
-        right--;
+        
+        if (curr > target) {
+            right--;
+        } else {
+            left++;
+        }
     }
 
-    return true;
+    return false;
 }
 
-const input: string = "racecar";
-const results = checkIfPalindrome(input);
+
+const input: number[] = [1, 2, 4, 6, 8, 9, 14, 15];
+const target: number = 13;
+const results = checkForTarget(input, target);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
