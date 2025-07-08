@@ -17,7 +17,15 @@ public class E344_Reverse_String {
         System.out.println("input: " + Arrays.toString(inputCopy) + "\noutput: " + Arrays.toString(input));
 	}
 	
+	/*
+    solution:
+    two pointers
+    */
 	
+	/*
+     * @param s: a list of chars
+     * @return: void
+     */
 	public void reverseString(char[] s) {
         int left = 0;
         int right = s.length - 1;
