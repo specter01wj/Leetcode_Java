@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Example 4: 392. Is Subsequence.
+
+        Given two strings s and t, return true if s is a subsequence of t, 
+        or false otherwise.
+
+        A subsequence of a string is a sequence of characters that can be 
+        obtained by deleting some (or none) of the characters from the 
+        original string, while maintaining the relative order of the 
+        remaining characters. For example, "ace" is a subsequence 
+        of "abcde" while "aec" is not.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param s: a string
+        * @param t: a string
+        * @return: boolean
+        */
+        let isSubsequence = function(s, t) {
+            let i = 0, j = 0;
+
+            while (i < s.length && j < t.length) {
+                if (s[i] == t[j]) {
+                    i++;
+                }
+                
+                j++;
+            }
+            
+            return i === s.length;
+        };
+
+        const input1 = "ace", input2 = "abcde";
+        let results = isSubsequence(input1, input2);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input1, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				two pointers
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
