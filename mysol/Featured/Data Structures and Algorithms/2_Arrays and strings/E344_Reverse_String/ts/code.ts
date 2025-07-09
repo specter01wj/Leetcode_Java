@@ -1,20 +1,18 @@
-function isSubsequence(s: string, t: string): boolean {
-    let i = 0;
-    let j = 0;
+function reverseString(s: string[]): void {
+    let left = 0;
+    let right = s.length - 1;
 
-    while (i < s.length && j < t.length) {
-        if (s[i] === t[j]) {
-            i++;
-        }
-        j++;
+    while (left < right) {
+        [s[left], s[right]] = [s[right], s[left]];
+        left++;
+        right--;
     }
+};
 
-    return i === s.length;
-}
-
-const input1: string = "ace", input2: string = "abcde";
-const results = isSubsequence(input1, input2);
+const input: string[] = ["h","e","l","l","o"];
+const inputCopy: string[] = [...input];
+reverseString(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input1, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(inputCopy, null, 2);
 
