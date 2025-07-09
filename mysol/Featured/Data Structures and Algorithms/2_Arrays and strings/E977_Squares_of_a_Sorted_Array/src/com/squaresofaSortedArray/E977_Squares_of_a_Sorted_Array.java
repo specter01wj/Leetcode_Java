@@ -17,11 +17,7 @@ public class E977_Squares_of_a_Sorted_Array {
 	
 	/*
     solution:
-    1. Since negative numbers squared can be larger than some positive numbers 
-    	squared, we use two pointers at both ends of the array.
-	2. Compare the squares of the values at each end.
-	3. Fill the result array from the back (pos = n - 1) with the larger square 
-		each time.
+    two pointers
     */
 	
 	/*
