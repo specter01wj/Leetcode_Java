@@ -1,20 +1,25 @@
-function checkIfPalindrome(s: string): boolean {
+function findLength(nums: number[], k: number): number {
     let left = 0;
-    let right = s.length - 1;
+    let curr = 0;
+    let ans = 0;
 
-    while (left < right) {
-        if (s[left] !== s[right]) {
-            return false;
+    for (let right = 0; right < nums.length; right++) {
+        curr += nums[right];
+
+        while (curr > k) {
+            curr -= nums[left];
+            left++;
         }
-        left++;
-        right--;
+
+        ans = Math.max(ans, right - left + 1);
     }
 
-    return true;
+    return ans;
 }
 
-const input: string = "racecar";
-const results = checkIfPalindrome(input);
+const input: number[] = [3, 1, 2, 7, 4, 2, 1, 1, 5];
+const k: number = 8;
+const results = findLength(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
