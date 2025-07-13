@@ -4,41 +4,45 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Example 1: Given a string s, return true if it is a palindrome, false otherwise.
-
-        A string is a palindrome if it reads the same forward as backward. 
-        That means, after reversing it, it is still the same string. 
-        For example: "abcdcba", or "racecar".
+			 	Example 1: Given an array of positive integers nums and an integer k, 
+        find the length of the longest subarray whose sum is less than or equal to k. 
+        This is the problem we have been talking about above. 
+        We will now formally solve it.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param s: a string
-        * @return: boolean
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @return: the length of the longest subarray
         */
-        let checkIfPalindrome = function(s) {
+        let findLength = function(nums, k) {
             let left = 0;
-            let right = s.length - 1;
-            
-            while (left < right) {
-                if (s[left] != s[right]) {
-                    return false;
-                }
-                
-                left++;
-                right--;
-            }
-            
-            return true;
-        }
+            let curr = 0;
+            let ans = 0;
 
-        const input = "racecar";
-        let results = checkIfPalindrome(input);
+            for (let right = 0; right < nums.length; right++) {
+                curr += nums[right];
+
+                while (curr > k) {
+                    curr -= nums[left];
+                    left++;
+                }
+
+                ans = Math.max(ans, right - left + 1);
+            }
+
+            return ans;
+        };
+
+        const input = [3, 1, 2, 7, 4, 2, 1, 1, 5];
+        const k = 8;
+        let results = findLength(input, 8);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				two pointers
+				Sliding window
 			 */
 
 		</script>
