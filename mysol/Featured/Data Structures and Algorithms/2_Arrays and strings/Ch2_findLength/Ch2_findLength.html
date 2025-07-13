@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Example 1: Given a string s, return true if it is a palindrome, false otherwise.
+
+        A string is a palindrome if it reads the same forward as backward. 
+        That means, after reversing it, it is still the same string. 
+        For example: "abcdcba", or "racecar".
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param s: a string
+        * @return: boolean
+        */
+        let checkIfPalindrome = function(s) {
+            let left = 0;
+            let right = s.length - 1;
+            
+            while (left < right) {
+                if (s[left] != s[right]) {
+                    return false;
+                }
+                
+                left++;
+                right--;
+            }
+            
+            return true;
+        }
+
+        const input = "racecar";
+        let results = checkIfPalindrome(input);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				two pointers
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
