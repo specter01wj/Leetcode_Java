@@ -1,22 +1,22 @@
-function findBestSubarray(nums: number[], k: number): number {
+function findMaxAverage(nums: number[], k: number): number {
     let curr = 0;
     for (let i = 0; i < k; i++) {
         curr += nums[i];
     }
 
-    let ans = curr;
+    let maxSum = curr;
     for (let i = k; i < nums.length; i++) {
         curr += nums[i] - nums[i - k];
-        ans = Math.max(ans, curr);
+        maxSum = Math.max(maxSum, curr);
     }
 
-    return ans;
-}
+    return maxSum / k;
+};
 
 
-const input: number[] = [3, -1, 4, 12, -8, 5, 6];
+const input: number[] = [1,12,-5,-6,50,3];
 const k: number = 4;
-const results = findBestSubarray(input, k);
+const results = findMaxAverage(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
