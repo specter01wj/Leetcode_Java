@@ -1,28 +1,22 @@
-function numSubarrayProductLessThanK(nums: number[], k: number): number {
-    if (k <= 1) return 0;
+function findBestSubarray(nums: number[], k: number): number {
+    let curr = 0;
+    for (let i = 0; i < k; i++) {
+        curr += nums[i];
+    }
 
-    let ans = 0;
-    let left = 0;
-    let curr = 1;
-
-    for (let right = 0; right < nums.length; right++) {
-        curr *= nums[right];
-
-        while (curr >= k) {
-            curr /= nums[left];
-            left++;
-        }
-
-        ans += right - left + 1;
+    let ans = curr;
+    for (let i = k; i < nums.length; i++) {
+        curr += nums[i] - nums[i - k];
+        ans = Math.max(ans, curr);
     }
 
     return ans;
 }
 
 
-const input: number[] = [10, 5, 2, 6];
-const k: number = 100;
-const results = numSubarrayProductLessThanK(input, k);
+const input: number[] = [3, -1, 4, 12, -8, 5, 6];
+const k: number = 4;
+const results = findBestSubarray(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
