@@ -12,9 +12,10 @@ less than 10-5 will be accepted.
 public class E643_Maximum_Average_Subarray_I {
 
 	public static void main(String[] args) {
+		E643_Maximum_Average_Subarray_I solution = new E643_Maximum_Average_Subarray_I();
 		int[] input = {1,12,-5,-6,50,3};
 		int k = 4;
-		int output = findMaxAverage(input, k);
+		double output = solution.findMaxAverage(input, k);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
