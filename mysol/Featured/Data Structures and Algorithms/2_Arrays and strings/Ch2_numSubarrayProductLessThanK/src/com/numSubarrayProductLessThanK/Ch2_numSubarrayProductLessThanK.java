@@ -30,7 +30,7 @@ public class Ch2_numSubarrayProductLessThanK {
 	
 	/*
      * @param nums: a list of integers
-     * @param a: an integer
+     * @param k: an integer
      * @return: the number of subarrays
      */
 	public int numSubarrayProductLessThanK(int[] nums, int k) {

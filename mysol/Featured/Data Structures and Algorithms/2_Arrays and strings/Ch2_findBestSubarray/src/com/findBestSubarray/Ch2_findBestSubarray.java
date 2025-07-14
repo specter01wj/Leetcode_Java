@@ -16,7 +16,16 @@ public class Ch2_findBestSubarray {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the sum of the subarray
+     */
 	public int findBestSubarray(int[] nums, int k) {
 	    int curr = 0;
 	    for (int i = 0; i < k; i++) {
