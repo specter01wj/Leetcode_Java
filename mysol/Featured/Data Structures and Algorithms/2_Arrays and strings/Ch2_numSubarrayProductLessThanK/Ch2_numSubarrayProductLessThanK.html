@@ -4,44 +4,47 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Example 2: You are given a binary string s (a string containing only "0" and "1"). 
-        You may choose up to one "0" and flip it to a "1". What is the length of the longest 
-        substring achievable that contains only "1"?
+			 	Example 3: 713. Subarray Product Less Than K.
 
-        For example, given s = "1101100111", the answer is 5. 
-        If you perform the flip at index 2, the string becomes 1111100111.
+        Given an array of positive integers nums and an integer k, return the number 
+        of subarrays where the product of all the elements in the subarray is strictly less than k.
+
+        For example, given the input nums = [10, 5, 2, 6], k = 100, the answer is 8. 
+        The subarrays with products less than k are:
+
+        [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param s: a string
-        * @return: the length of the longest substring
+        * @param nums: a list of integers
+        * @param a: an integer
+        * @return: the number of subarrays
         */
-        let findLengthStr = function(s) {
-            let left = 0;
-            let curr = 0;
+        let numSubarrayProductLessThanK = function(nums, k) {
+            if (k <= 1) return 0;
+
             let ans = 0;
+            let left = 0;
+            let curr = 1;
 
-            for (let right = 0; right < s.length; right++) {
-                if (s[right] === '0') {
-                    curr++;
-                }
+            for (let right = 0; right < nums.length; right++) {
+                curr *= nums[right];
 
-                while (curr > 1) {
-                    if (s[left] === '0') {
-                        curr--;
-                    }
+                while (curr >= k) {
+                    curr /= nums[left];
                     left++;
                 }
 
-                ans = Math.max(ans, right - left + 1);
+                ans += right - left + 1;
             }
 
             return ans;
         };
 
-        const input = "1101100111";
-        let results = findLengthStr(input);
+        const input = [10, 5, 2, 6];
+        const k = 100;
+        let results = numSubarrayProductLessThanK(input, k);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
