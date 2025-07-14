@@ -16,7 +16,16 @@ public class M1004_Max_Consecutive_Ones_III {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the maximum number of consecutive 1's in the array
+     */
 	public int longestOnes(int[] nums, int k) {
         int left = 0;
         int zeroCount = 0;
