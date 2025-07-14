@@ -19,7 +19,15 @@ public class Ch2_findLengthStr {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+     * @param s: a string
+     * @return: the length of the longest substring
+     */
 	public int findLengthStr(String s) {
 	    // curr is the current number of zeros in the window
 	    int left = 0;
