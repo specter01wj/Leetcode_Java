@@ -1,22 +1,30 @@
-function findMaxAverage(nums: number[], k: number): number {
-    let curr = 0;
-    for (let i = 0; i < k; i++) {
-        curr += nums[i];
+function longestOnes(nums: number[], k: number): number {
+    let left = 0;
+    let zeroCount = 0;
+    let maxLength = 0;
+
+    for (let right = 0; right < nums.length; right++) {
+        if (nums[right] === 0) {
+            zeroCount++;
+        }
+
+        while (zeroCount > k) {
+            if (nums[left] === 0) {
+                zeroCount--;
+            }
+            left++;
+        }
+
+        maxLength = Math.max(maxLength, right - left + 1);
     }
 
-    let maxSum = curr;
-    for (let i = k; i < nums.length; i++) {
-        curr += nums[i] - nums[i - k];
-        maxSum = Math.max(maxSum, curr);
-    }
-
-    return maxSum / k;
+    return maxLength;
 };
 
 
-const input: number[] = [1,12,-5,-6,50,3];
-const k: number = 4;
-const results = findMaxAverage(input, k);
+const input: number[] = [1,1,1,0,0,0,1,1,1,1,0];
+const k: number = 2;
+const results = longestOnes(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
