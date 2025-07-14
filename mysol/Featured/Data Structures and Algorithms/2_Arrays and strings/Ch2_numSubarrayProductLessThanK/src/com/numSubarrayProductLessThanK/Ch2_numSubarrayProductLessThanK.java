@@ -23,7 +23,16 @@ public class Ch2_numSubarrayProductLessThanK {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param a: an integer
+     * @return: the number of subarrays
+     */
 	public int numSubarrayProductLessThanK(int[] nums, int k) {
         if (k <= 1) {
             return 0;
