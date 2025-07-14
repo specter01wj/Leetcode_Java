@@ -22,6 +22,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |344|**Reverse String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |977|**Squares of a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|643|**Maximum Average Subarray I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1004|**Max Consecutive Ones III**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Hashing
