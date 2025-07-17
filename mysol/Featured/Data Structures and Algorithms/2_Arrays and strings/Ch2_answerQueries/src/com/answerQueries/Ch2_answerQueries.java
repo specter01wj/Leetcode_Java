@@ -24,7 +24,17 @@ public class Ch2_answerQueries {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Prefix sum
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param queries: a list of 2D integers
+     * @param limit: an integer
+     * @return: boolean array
+     */
 	public boolean[] answerQueries(int[] nums, int[][] queries, int limit) {
 	    int[] prefix = new int[nums.length];
 	    prefix[0] = nums[0];
