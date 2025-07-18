@@ -1,25 +1,26 @@
-function answerQueries(nums: number[], queries: number[][], limit: number): boolean[] {
-    const prefix: number[] = new Array(nums.length).fill(0);
+function waysToSplitArray(nums: number[]): number {
+    const n = nums.length;
+    const prefix: number[] = new Array(n);
     prefix[0] = nums[0];
 
-    for (let i = 1; i < nums.length; i++) {
-        prefix[i] = prefix[i - 1] + nums[i];
+    for (let i = 1; i < n; i++) {
+        prefix[i] = nums[i] + prefix[i - 1];
     }
 
-    const ans: boolean[] = new Array(queries.length);
-    for (let i = 0; i < queries.length; i++) {
-        const [x, y] = queries[i];
-        const curr = prefix[y] - prefix[x] + nums[x];
-        ans[i] = curr < limit;
+    let ans = 0;
+    for (let i = 0; i < n - 1; i++) {
+        const leftSection = prefix[i];
+        const rightSection = prefix[n - 1] - prefix[i];
+        if (leftSection >= rightSection) {
+            ans++;
+        }
     }
 
     return ans;
 }
 
-const input: number[] = [1, 6, 3, 2, 7, 2];
-const queries: number[][] = [[0, 3], [2, 5], [2, 4]];
-const limit: number = 13;
-const results = answerQueries(input, queries, limit);
+const input: number[] = [10,4,-8,7];
+const results = waysToSplitArray(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
