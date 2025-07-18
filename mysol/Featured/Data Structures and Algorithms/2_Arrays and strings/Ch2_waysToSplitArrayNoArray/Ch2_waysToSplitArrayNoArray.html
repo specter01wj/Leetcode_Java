@@ -17,19 +17,18 @@
         * @param nums: a list of integers
         * @return: the number of valid splits in nums
         */
-        let waysToSplitArray = function(nums) {
-            const n = nums.length;
-            const prefix = new Array(n);
-            prefix[0] = nums[0];
+        let waysToSplitArrayNoArray = function(nums) {
+            let ans = 0;
+            let leftSection = 0;
+            let total = 0;
 
-            for (let i = 1; i < n; i++) {
-                prefix[i] = nums[i] + prefix[i - 1];
+            for (let num of nums) {
+                total += num;
             }
 
-            let ans = 0;
-            for (let i = 0; i < n - 1; i++) {
-                const leftSection = prefix[i];
-                const rightSection = prefix[n - 1] - prefix[i];
+            for (let i = 0; i < nums.length - 1; i++) {
+                leftSection += nums[i];
+                let rightSection = total - leftSection;
                 if (leftSection >= rightSection) {
                     ans++;
                 }
@@ -39,7 +38,7 @@
         };
 
         const input = [10,4,-8,7];
-        let results = waysToSplitArray(input);
+        let results = waysToSplitArrayNoArray(input);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
