@@ -19,7 +19,15 @@ public class Ch2_waysToSplitArray {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Prefix sum
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of valid splits in nums
+     */
 	public int waysToSplitArray(int[] nums) {
         int n = nums.length;
         
