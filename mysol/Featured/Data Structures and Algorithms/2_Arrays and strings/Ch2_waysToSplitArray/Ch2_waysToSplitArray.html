@@ -4,46 +4,42 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Example 1: Given an integer array nums, an array queries where 
-        queries[i] = [x, y] and an integer limit, return a boolean array 
-        that represents the answer to each query. A query is true if the 
-        sum of the subarray from x to y is less than limit, or false otherwise.
+			 	Example 2: 2270. Number of Ways to Split Array
 
-        For example, given nums = [1, 6, 3, 2, 7, 2], 
-        queries = [[0, 3], [2, 5], [2, 4]], and limit = 13, 
-        the answer is [true, false, true]. For each query, 
-        the subarray sums are [12, 14, 12].
+        Given an integer array nums, find the number of ways to split 
+        the array into two parts so that the first section has a sum 
+        greater than or equal to the sum of the second section. 
+        The second section should have at least one number.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @param queries: a list of 2D integers
-        * @param limit: an integer
-        * @return: boolean array
+        * @return: the number of valid splits in nums
         */
-        let answerQueries = function(nums, queries, limit) {
-            const prefix = new Array(nums.length).fill(0);
+        let waysToSplitArray = function(nums) {
+            const n = nums.length;
+            const prefix = new Array(n);
             prefix[0] = nums[0];
 
-            for (let i = 1; i < nums.length; i++) {
-                prefix[i] = prefix[i - 1] + nums[i];
+            for (let i = 1; i < n; i++) {
+                prefix[i] = nums[i] + prefix[i - 1];
             }
 
-            const ans = new Array(queries.length);
-            for (let i = 0; i < queries.length; i++) {
-                const [x, y] = queries[i];
-                const curr = prefix[y] - prefix[x] + nums[x];
-                ans[i] = curr < limit;
+            let ans = 0;
+            for (let i = 0; i < n - 1; i++) {
+                const leftSection = prefix[i];
+                const rightSection = prefix[n - 1] - prefix[i];
+                if (leftSection >= rightSection) {
+                    ans++;
+                }
             }
 
             return ans;
         };
 
-        const input = [1, 6, 3, 2, 7, 2];
-        const queries = [[0, 3], [2, 5], [2, 4]];
-        const limit = 13;
-        let results = answerQueries(input, queries, limit);
+        const input = [10,4,-8,7];
+        let results = waysToSplitArray(input);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
