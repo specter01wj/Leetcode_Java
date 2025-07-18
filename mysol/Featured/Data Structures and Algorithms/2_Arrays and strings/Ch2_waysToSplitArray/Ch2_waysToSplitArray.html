@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Example 1: Given an integer array nums, an array queries where 
+        queries[i] = [x, y] and an integer limit, return a boolean array 
+        that represents the answer to each query. A query is true if the 
+        sum of the subarray from x to y is less than limit, or false otherwise.
+
+        For example, given nums = [1, 6, 3, 2, 7, 2], 
+        queries = [[0, 3], [2, 5], [2, 4]], and limit = 13, 
+        the answer is [true, false, true]. For each query, 
+        the subarray sums are [12, 14, 12].
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @param queries: a list of 2D integers
+        * @param limit: an integer
+        * @return: boolean array
+        */
+        let answerQueries = function(nums, queries, limit) {
+            const prefix = new Array(nums.length).fill(0);
+            prefix[0] = nums[0];
+
+            for (let i = 1; i < nums.length; i++) {
+                prefix[i] = prefix[i - 1] + nums[i];
+            }
+
+            const ans = new Array(queries.length);
+            for (let i = 0; i < queries.length; i++) {
+                const [x, y] = queries[i];
+                const curr = prefix[y] - prefix[x] + nums[x];
+                ans[i] = curr < limit;
+            }
+
+            return ans;
+        };
+
+        const input = [1, 6, 3, 2, 7, 2];
+        const queries = [[0, 3], [2, 5], [2, 4]];
+        const limit = 13;
+        let results = answerQueries(input, queries, limit);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				Prefix sum
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
