@@ -1,26 +1,17 @@
-function sortedSquares(nums: number[]): number[] {
-    const n = nums.length;
-    const result: number[] = new Array(n);
-    let left = 0, right = n - 1;
-    let pos = n - 1;
+function minStartValue(nums: number[]): number {
+    let sum = 0;
+    let minSum = 0;
 
-    while (left <= right) {
-        const leftSquare = nums[left] * nums[left];
-        const rightSquare = nums[right] * nums[right];
-        if (leftSquare > rightSquare) {
-            result[pos--] = leftSquare;
-            left++;
-        } else {
-            result[pos--] = rightSquare;
-            right--;
-        }
+    for (let num of nums) {
+        sum += num;
+        minSum = Math.min(minSum, sum);
     }
 
-    return result;
+    return 1 - minSum;
 };
 
-const input: number[] = [-4,-1,0,3,10];
-const results = sortedSquares(input);
+const input: number[] = [-3,2,-3,4,2];
+const results = minStartValue(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
