@@ -21,7 +21,15 @@ public class Ch2_Minimum_Value_to_Get_Positive_Step_by_Step_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Prefix sum
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the minimum positive value of startValue
+     */
 	public int minStartValue(int[] nums) {
         int sum = 0;
         int minSum = 0;
