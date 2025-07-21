@@ -286,7 +286,7 @@ By Jin Wang
 |1394|**Find Lucky Integer in an Array**|Easy|Java/Javascript|Done/Done|
 |1403|**Minimum Subsequence in Non-Increasing Order**|Easy|Java/Javascript|Done/Done|
 |1408|**String Matching in an Array**|Easy|Java/Javascript|Done/Done|
-|1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript|Done/Done|
+|1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1417|**Reformat The String**|Easy|Java/Javascript|Done/Done|
 |1422|**Maximum Score After Splitting a String**|Easy|Java/Javascript|Done/Done|
 |1426|**Counting Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
