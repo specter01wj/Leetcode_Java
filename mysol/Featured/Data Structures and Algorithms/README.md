@@ -23,7 +23,7 @@ By Jin Wang
 |344|**Reverse String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |977|**Squares of a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |643|**Maximum Average Subarray I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1004|**Max Consecutive Ones III**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1480|**Running Sum of 1d Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
