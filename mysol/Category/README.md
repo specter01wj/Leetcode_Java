@@ -287,6 +287,7 @@ Cspiration Category:
 |2078|Two Furthest Houses With Different Colors|Easy||Java/Javascript|Done/Done|
 |2085|Count Common Words With One Occurrence|Easy||Java/Javascript|Done/Done|
 |2089|Find Target Indices After Sorting Array|Easy||Java/Javascript|Done/Done|
+|2090|K Radius Subarray Averages|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2094|Finding 3-Digit Even Numbers|Easy||Java/Javascript|Done/Done|
 |2099|Find Subsequence of Length K With the Largest Sum|Easy||Java/Javascript|Done/Done|
 |2108|Find First Palindromic String in the Array|Easy||Java/Javascript|Done/Done|
@@ -812,7 +813,7 @@ Cspiration Category:
 |Missing||||||
 |328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |876|Middle of the Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
-|2095|Delete the Middle Node of a Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2095|Delete the Middle Node of a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2130|Maximum Twin Sum of a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 8. Binary Search

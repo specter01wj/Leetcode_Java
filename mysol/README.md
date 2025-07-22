@@ -661,7 +661,8 @@ By Jin Wang
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-|2095|**Delete the Middle Node of a Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2095|**Delete the Middle Node of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2300|**Successful Pairs of Spells and Potions**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
