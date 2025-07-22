@@ -30,7 +30,16 @@ public class M2090_K_Radius_Subarray_Averages {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    Prefix sum
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: an array avgs of length n
+     */
 	public int[] getAverages(int[] nums, int k) {
         int n = nums.length;
         int[] ans = new int[n];
