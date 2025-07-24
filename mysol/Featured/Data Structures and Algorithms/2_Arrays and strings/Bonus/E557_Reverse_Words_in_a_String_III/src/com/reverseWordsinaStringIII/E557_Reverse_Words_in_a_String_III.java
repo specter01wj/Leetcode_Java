@@ -15,7 +15,15 @@ public class E557_Reverse_Words_in_a_String_III {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Two pointers
+    */
 	
+	/*
+     * @param s: a string
+     * @return: a string
+     */
 	public String reverseWords(String s) {
         String[] words = s.split(" ");
         StringBuilder result = new StringBuilder();
