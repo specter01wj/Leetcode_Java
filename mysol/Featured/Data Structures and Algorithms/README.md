@@ -28,6 +28,9 @@ By Jin Wang
 |1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+Bonus problems, arrays and strings
+|557|**Reverse Words in a String III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+
 
 #### Hashing
 
