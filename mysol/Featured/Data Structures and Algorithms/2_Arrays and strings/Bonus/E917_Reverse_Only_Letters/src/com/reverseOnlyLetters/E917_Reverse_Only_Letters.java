@@ -19,7 +19,15 @@ public class E917_Reverse_Only_Letters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Two pointers
+    */
 	
+	/*
+     * @param S: a string
+     * @return: a string
+     */
 	public String reverseOnlyLetters(String S) {
         char[] chars = S.toCharArray();
         int left = 0, right = chars.length - 1;
