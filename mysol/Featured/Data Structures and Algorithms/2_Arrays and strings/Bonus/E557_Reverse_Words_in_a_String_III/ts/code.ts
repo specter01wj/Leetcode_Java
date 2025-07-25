@@ -1,13 +1,12 @@
-function runningSum(nums: number[]): number[] {
-    for (let i = 1; i < nums.length; i++) {
-        nums[i] += nums[i - 1];
-    }
-    return nums;
+function reverseWords(s: string): string {
+    return s
+        .split(" ")
+        .map(word => word.split("").reverse().join(""))
+        .join(" ");
 };
 
-const input: number[] = [1,2,3,4];
-const inputCopy: number[] = [...input];
-const results = runningSum(inputCopy);
+const input: string = "Let's take LeetCode contest";
+const results = reverseWords(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
