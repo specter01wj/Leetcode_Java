@@ -26,13 +26,13 @@ By Jin Wang
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1480|**Running Sum of 1d Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|2090|**K Radius Subarray Averages**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 ##### (Bonus problems, arrays and strings)
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
-|557|**Reverse Words in a String III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|557|**Reverse Words in a String III**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Hashing
