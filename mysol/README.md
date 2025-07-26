@@ -144,7 +144,7 @@ By Jin Wang
 |521|**Longest Uncommon Subsequence I**|Easy|Java/Javascript|Done/Done|
 |541|**Reverse String II**|Easy|Java/Javascript|Done/Done|
 |551|**Student Attendance Record I**|Easy|Java/Javascript|Done/Done|
-|557|**Reverse Words in a String III**|Easy|Java/Javascript|Done/Done|
+|557|**Reverse Words in a String III**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |561|**Array Partition I**|Easy|Java/Javascript|Done/Done|
 |566|**Reshape the Matrix**|Easy|Java/Javascript|Done/Done|
 |575|**Distribute Candies**|Easy|Java/Javascript|Done/Done|
@@ -204,7 +204,7 @@ By Jin Wang
 |905|**Sort Array By Parity**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |908|**Smallest Range I**|Easy|Java/Javascript|Done/Done|
 |914|**X of a Kind in a Deck of Cards**|Easy|Java/Javascript|Done/Done|
-|917|**Reverse Only Letters**|Easy|Java/Javascript|Done/Done|
+|917|**Reverse Only Letters**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |922|**Sort Array By Parity II**|Easy|Java/Javascript|Done/Done|
 |925|**Long Pressed Name**|Easy|Java/Javascript|Done/Done|
 |929|**Unique Email Addresses**|Easy|Java/Javascript|Done/Done|

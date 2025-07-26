@@ -549,7 +549,7 @@ Cspiration Category:
 |521|Longest Uncommon Subsequence I|Easy||Java/Javascript|Done/Done|
 |541|Reverse String II|Easy||Java/Javascript|Done/Done|
 |551|Student Attendance Record I|Easy||Java/Javascript|Done/Done|
-|557|Reverse Words in a String III|Easy||Java/Javascript|Done/Done|
+|557|Reverse Words in a String III|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |606|Construct String from Binary Tree|Easy||Java/Javascript|Done/|
 |649|Dota2 Senate|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |657|Robot Return to Origin|Easy||Java/Javascript|Done/Done|
@@ -568,7 +568,7 @@ Cspiration Category:
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
 |884|Uncommon Words from Two Sentences|Easy||Java/Javascript|Done/Done|
 |893|Groups of Special-Equivalent Strings|Medium||Java/Javascript|Done/Done|
-|917|Reverse Only Letters|Easy||Java/Javascript|Done/Done|
+|917|Reverse Only Letters|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |925|Long Pressed Name|Easy||Java/Javascript|Done/Done|
 |937|Reorder Data in Log Files|Medium||Java/Javascript|Done/Done|
 |1021|Remove Outermost Parentheses|Easy||Java/Javascript|Done/Done|
