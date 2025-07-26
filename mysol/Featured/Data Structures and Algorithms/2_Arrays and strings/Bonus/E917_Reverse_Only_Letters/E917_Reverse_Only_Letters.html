@@ -4,8 +4,12 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a string s, reverse the order of characters in each word within 
-        a sentence while still preserving whitespace and initial word order.
+			 	Given a string s, reverse the string according to the following rules:
+
+          . All the characters that are not English letters remain in the same position.
+          . All the English letters (lowercase or uppercase) should be reversed.
+
+        Return s after reversing it.
 			 */
 			$(document).ready(function(){
         
@@ -13,15 +17,27 @@
         * @param s: a string
         * @return: a string
         */
-        let reverseWords = function(s) {
-            return s
-                .split(" ")
-                .map(word => word.split("").reverse().join(""))
-                .join(" ");
+        let reverseOnlyLetters = function(s) {
+            const chars = s.split('');
+            let left = 0, right = chars.length - 1;
+
+            while (left < right) {
+                if (!/[a-zA-Z]/.test(chars[left])) {
+                    left++;
+                } else if (!/[a-zA-Z]/.test(chars[right])) {
+                    right--;
+                } else {
+                    [chars[left], chars[right]] = [chars[right], chars[left]];
+                    left++;
+                    right--;
+                }
+            }
+
+            return chars.join('');
         };
 
-        const input = "Let's take LeetCode contest";
-        let results = reverseWords(input);
+        const input = "Test1ng-Leet=code-Q!";
+        let results = reverseOnlyLetters(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
