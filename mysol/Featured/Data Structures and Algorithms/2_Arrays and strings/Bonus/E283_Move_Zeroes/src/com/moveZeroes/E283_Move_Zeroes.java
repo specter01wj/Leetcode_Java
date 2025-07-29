@@ -4,8 +4,6 @@ import java.util.*;
 /*
 Given an integer array nums, move all 0's to the end of it while maintaining 
 the relative order of the non-zero elements.
-
-Note that you must do this in-place without making a copy of the array.
 */
 
 public class E283_Move_Zeroes {
@@ -20,9 +18,7 @@ public class E283_Move_Zeroes {
 	
 	/*
     solution:
-    1. insertPos tracks the position to place the next non-zero element.
-	2. First loop: shifts all non-zero elements forward.
-	3. Second loop: fills remaining slots with 0.
+    Two pointers
     */
 	
 	/*
