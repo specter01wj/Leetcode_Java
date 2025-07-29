@@ -34,6 +34,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |557|**Reverse Words in a String III**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |917|**Reverse Only Letters**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2540|**Minimum Common Value**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Hashing
