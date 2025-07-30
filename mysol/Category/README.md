@@ -65,7 +65,7 @@ Cspiration Category:
 |295|Find Median from Data Stream|Hard||Java/Javascript||
 |53|Maximum Subarray|Easy||Java/Javascript|Done/Done|
 |325|Maximum Size Subarray Sum Equals k|Medium||Java/Javascript||
-|209|Minimum Size Subarray Sum|Medium||Java/Javascript||
+|209|Minimum Size Subarray Sum|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |238|Product of Array Except Self|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |152|Maximum Product Subarray|Medium||Java/Javascript||
 |228|Summary Ranges|Easy||Java/Javascript|Done/Done|
