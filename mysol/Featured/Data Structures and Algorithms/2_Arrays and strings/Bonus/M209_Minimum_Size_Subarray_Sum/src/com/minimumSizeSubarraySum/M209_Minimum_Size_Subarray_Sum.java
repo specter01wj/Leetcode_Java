@@ -17,7 +17,16 @@ public class M209_Minimum_Size_Subarray_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+	 * @param target: an integer
+     * @param nums: a list of integers
+     * @return: the minimal length of a subarray
+     */
 	public int minSubArrayLen(int target, int[] nums) {
         int n = nums.length;
         int left = 0, sum = 0, minLen = Integer.MAX_VALUE;
