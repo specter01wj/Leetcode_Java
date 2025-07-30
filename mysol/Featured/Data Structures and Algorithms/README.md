@@ -32,10 +32,15 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|Two pointers|||||
 |557|**Reverse Words in a String III**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |917|**Reverse Only Letters**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2540|**Minimum Common Value**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|2000|**Reverse Prefix of Word**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|Sliding window|||||
+|209|**Minimum Size Subarray Sum**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|Prefix sum|||||
 
 
 #### Hashing
