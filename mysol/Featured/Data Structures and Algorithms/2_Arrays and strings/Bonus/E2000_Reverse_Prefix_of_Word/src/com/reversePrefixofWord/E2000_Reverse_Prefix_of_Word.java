@@ -24,7 +24,16 @@ public class E2000_Reverse_Prefix_of_Word {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Two pointers
+    */
 	
+	/*
+     * @param word: a string
+     * @param ch: a char
+     * @return: a string
+     */
 	public String reversePrefix(String word, char ch) {
         int idx = word.indexOf(ch);
         if (idx == -1) return word;
