@@ -4,35 +4,34 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of positive integers nums and a positive integer target, 
-        return the minimal length of a subarray whose sum is greater than or 
-        equal to target. If there is no such subarray, return 0 instead.
+			 	Given a string s and an integer k, return the maximum number of 
+        vowel letters in any substring of s with length k.
+
+        Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 			 */
 			$(document).ready(function(){
 
 				/*
-        * @param target: an integer
-        * @param nums: a list of integers
-        * @return: the minimal length of a subarray
+        * @param s: a string
+        * @param k: an integer
+        * @return: the maximum number of vowel letters
         */
-        let minSubArrayLen = function(target, nums) {
-            let left = 0, sum = 0, minLen = Infinity;
+        let maxVowels = function(s, k) {
+            let count = 0, max = 0;
+            const isVowel = (ch) => 'aeiou'.includes(ch);
 
-            for (let right = 0; right < nums.length; right++) {
-                sum += nums[right];
-
-                while (sum >= target) {
-                    minLen = Math.min(minLen, right - left + 1);
-                    sum -= nums[left++];
-                }
+            for (let i = 0; i < s.length; i++) {
+                if (isVowel(s[i])) count++;
+                if (i >= k && isVowel(s[i - k])) count--;
+                max = Math.max(max, count);
             }
 
-            return minLen === Infinity ? 0 : minLen;
+            return max;
         };
 
-        const input = [2,3,1,2,4,3];
-        const target = 7;
-        let results = minSubArrayLen(target, input);
+        const input = "abciiidef";
+        const k = 3;
+        let results = maxVowels(input, k);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
