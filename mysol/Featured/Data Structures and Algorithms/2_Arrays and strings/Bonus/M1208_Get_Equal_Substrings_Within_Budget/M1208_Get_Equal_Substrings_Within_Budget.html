@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a string s and an integer k, return the maximum number of 
+        vowel letters in any substring of s with length k.
+
+        Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
+			 */
+			$(document).ready(function(){
+
+				/*
+        * @param s: a string
+        * @param k: an integer
+        * @return: the maximum number of vowel letters
+        */
+        let maxVowels = function(s, k) {
+            let count = 0, max = 0;
+            const isVowel = (ch) => 'aeiou'.includes(ch);
+
+            for (let i = 0; i < s.length; i++) {
+                if (isVowel(s[i])) count++;
+                if (i >= k && isVowel(s[i - k])) count--;
+                max = Math.max(max, count);
+            }
+
+            return max;
+        };
+
+        const input = "abciiidef";
+        const k = 3;
+        let results = maxVowels(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				Sliding window
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
