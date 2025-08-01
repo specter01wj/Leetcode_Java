@@ -1,20 +1,24 @@
-function maxVowels(s: string, k: number): number {
-    let count = 0, max = 0;
-    const isVowel = (ch: string): boolean => "aeiou".includes(ch);
+function equalSubstring(s: string, t: string, maxCost: number): number {
+    let left = 0, cost = 0, maxLen = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        if (isVowel(s[i])) count++;
-        if (i >= k && isVowel(s[i - k])) count--;
-        max = Math.max(max, count);
+    for (let right = 0; right < s.length; right++) {
+        cost += Math.abs(s.charCodeAt(right) - t.charCodeAt(right));
+
+        while (cost > maxCost) {
+            cost -= Math.abs(s.charCodeAt(left) - t.charCodeAt(left));
+            left++;
+        }
+
+        maxLen = Math.max(maxLen, right - left + 1);
     }
 
-    return max;
+    return maxLen;
 };
 
-const input: string = "abciiidef";
-const k: number = 4;
-const results = maxVowels(input, k);
+const s: string = "abcd", t: string = "bcdf";
+const maxCost: number = 3;
+const results = equalSubstring(s, t, maxCost);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
+webHeading.innerHTML = 'Input s: ' + JSON.stringify(s, null, 2) + '; Input t: ' + JSON.stringify(t, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
