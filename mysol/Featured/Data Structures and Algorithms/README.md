@@ -40,6 +40,8 @@ By Jin Wang
 |2000|**Reverse Prefix of Word**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |Sliding window|||||
 |209|**Minimum Size Subarray Sum**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1208|**Get Equal Substrings Within Budget**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |Prefix sum|||||
 
 
