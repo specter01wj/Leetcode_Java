@@ -25,7 +25,17 @@ public class M1208_Get_Equal_Substrings_Within_Budget {
         System.out.println("input s: " + (s) + "; input t: " + (t) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+     * @param s: a string
+     * @param t: a string
+     * @param maxCost: an integer
+     * @return: the maximum length of a substring of s
+     */
 	public int equalSubstring(String s, String t, int maxCost) {
         int left = 0, cost = 0, maxLen = 0;
 
