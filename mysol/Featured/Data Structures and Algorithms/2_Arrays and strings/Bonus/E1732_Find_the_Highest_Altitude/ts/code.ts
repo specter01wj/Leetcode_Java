@@ -1,17 +1,17 @@
-function minStartValue(nums: number[]): number {
-    let sum = 0;
-    let minSum = 0;
+function largestAltitude(gain: number[]): number {
+    let maxAltitude = 0;
+    let current = 0;
 
-    for (let num of nums) {
-        sum += num;
-        minSum = Math.min(minSum, sum);
+    for (let g of gain) {
+        current += g;
+        maxAltitude = Math.max(maxAltitude, current);
     }
 
-    return 1 - minSum;
+    return maxAltitude;
 };
 
-const input: number[] = [-3,2,-3,4,2];
-const results = minStartValue(input);
+const input: number[] = [-5,1,5,0,-7];
+const results = largestAltitude(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
