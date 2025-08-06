@@ -4,20 +4,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of integers nums, you start with an initial 
-        positive value startValue.
+			 	There is a biker going on a road trip. The road trip consists of 
+        n + 1 points at different altitudes. The biker starts his trip on 
+        point 0 with altitude equal 0.
 
-        In each iteration, you calculate the step by step sum of 
-        startValue plus elements in nums (from left to right).
-
-        Return the minimum positive value of startValue such that 
-        the step by step sum is never less than 1.
+        You are given an integer array gain of length n where gain[i] is 
+        the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). 
+        Return the highest altitude of a point.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the minimum positive value of startValue
+        * @param gain: a list of integers
+        * @return: the highest altitude of a point
         */
         let minStartValue = function(nums) {
             let sum = 0;
