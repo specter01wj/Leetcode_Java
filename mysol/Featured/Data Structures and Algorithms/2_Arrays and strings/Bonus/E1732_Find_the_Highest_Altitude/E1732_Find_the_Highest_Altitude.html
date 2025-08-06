@@ -18,20 +18,20 @@
         * @param gain: a list of integers
         * @return: the highest altitude of a point
         */
-        let minStartValue = function(nums) {
-            let sum = 0;
-            let minSum = 0;
+        let largestAltitude = function(gain) {
+          let maxAltitude = 0;
+            let current = 0;
 
-            for (let num of nums) {
-                sum += num;
-                minSum = Math.min(minSum, sum);
+            for (let g of gain) {
+                current += g;
+                maxAltitude = Math.max(maxAltitude, current);
             }
 
-            return 1 - minSum;
+            return maxAltitude;
         };
 
-        const input = [-3,2,-3,4,2];
-        let results = minStartValue(input);
+        const input = [-5,1,5,0,-7];
+        let results = largestAltitude(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
