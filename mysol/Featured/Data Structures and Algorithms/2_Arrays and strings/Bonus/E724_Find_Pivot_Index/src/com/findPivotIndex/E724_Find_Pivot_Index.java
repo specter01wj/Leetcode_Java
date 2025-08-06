@@ -26,7 +26,16 @@ public class E724_Find_Pivot_Index {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    Sliding window
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the sum of the subarray
+     */
 	public int pivotIndex(int[] nums) {
         int totalSum = 0;
         for (int num : nums) {
