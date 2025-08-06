@@ -43,8 +43,8 @@ By Jin Wang
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1208|**Get Equal Substrings Within Budget**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |Prefix sum|||||
-|1732|**Find the Highest Altitude**|Easy|Java/Javascript/Typescript||
-|724|**Find Pivot Index**|Easy|Java/Javascript/Typescript||
+|1732|**Find the Highest Altitude**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|724|**Find Pivot Index**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |303|**Range Sum Query - Immutable**|Easy|Java/Javascript/Typescript||
 
 
