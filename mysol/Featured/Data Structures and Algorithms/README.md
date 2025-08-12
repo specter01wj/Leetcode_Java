@@ -45,7 +45,7 @@ By Jin Wang
 |Prefix sum|||||
 |1732|**Find the Highest Altitude**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |724|**Find Pivot Index**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|303|**Range Sum Query - Immutable**|Easy|Java/Javascript/Typescript||
+|303|**Range Sum Query - Immutable**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Hashing
