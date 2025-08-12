@@ -102,7 +102,7 @@ By Jin Wang
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
 |293|**Flip Game**|Easy|Java/Javascript|Done/Done|
 |299|**Bulls and Cows**|Easy|Java/Javascript||
-|303|**Range Sum Query - Immutable**|Easy|Java/Javascript||
+|303|**Range Sum Query - Immutable**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |326|**Power of Three**|Easy|Java/Javascript|Done/Done|
 |338|**Counting Bits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |339|**Nested List Weight Sum**|Easy|Java/Javascript||

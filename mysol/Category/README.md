@@ -1006,7 +1006,7 @@ Cspiration Category:
 |353|Design Snake Game|Medium||Java/Javascript||
 |146|LRU Cache|Medium||Java/Javascript||
 |355|Design Twitter|Medium||Java/Javascript||
-|303|Range Sum Query - Immutable|Easy||Java/Javascript||
+|303|Range Sum Query - Immutable|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |304|Range Sum Query 2D - Immutable|Medium||Java/Javascript||
 |307|Range Sum Query - Mutable|Medium|Binary Index Tree|Java/Javascript||
 |308|Range Sum Query 2D - Mutable|Hard|Binary Index Tree|Java/Javascript||
