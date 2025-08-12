@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an integer array nums, handle multiple queries of the following type:
+
+        1. Calculate the sum of the elements of nums between indices left and right 
+        inclusive where left <= right.
+
+        Implement the NumArray class:
+
+          . NumArray(int[] nums) Initializes the object with the integer array nums.
+          . int sumRange(int left, int right) Returns the sum of the elements of nums 
+          between indices left and right inclusive 
+          (i.e. nums[left] + nums[left + 1] + ... + nums[right]).
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the sum of the elements
+        */
+        let NumArray = function(nums) {
+            this.pre = new Array(nums.length + 1).fill(0);
+            for (let i = 0; i < nums.length; i++) {
+                this.pre[i + 1] = this.pre[i] + nums[i];
+            }
+        };
+
+        NumArray.prototype.sumRange = function(left, right) {
+            return this.pre[right + 1] - this.pre[left];
+        };
+
+        const input = [-2, 0, 3, -5, 2, -1];
+        const numArray = new NumArray(input);
+        let results = numArray.sumRange(0, 2);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				Prefix sum
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
