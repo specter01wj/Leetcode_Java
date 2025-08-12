@@ -31,7 +31,15 @@ public class E303_Range_Sum_Query_Immutable {
         System.out.println("sumRange(0, 5) -> " + result3);
 	}
 	
+	/*
+    solution:
+    Prefix sum
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the sum of the elements
+     */
 	static class NumArray {
 	    private final int[] pre;
 
