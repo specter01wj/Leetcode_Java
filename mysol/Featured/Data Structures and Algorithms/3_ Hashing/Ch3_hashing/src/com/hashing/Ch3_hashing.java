@@ -6,6 +6,7 @@ public class Ch3_hashing {
 	public static void main(String[] args) {
 		Ch3_hashing solution = new Ch3_hashing();
 		solution.interfaceGuide();
+		solution.interactive();
 	}
 	
 	public void interfaceGuide() {
@@ -15,11 +16,15 @@ public class Ch3_hashing {
 //		Map<Integer, Integer> hashMap = new HashMap<>();
 
 		// If you want to initialize it with some key value pairs, use the following syntax:
-		Map<Integer, Integer> hashMap = new HashMap<>() {{
+		/*Map<Integer, Integer> hashMap = new HashMap<>() {{
 		    put(1, 2);
 		    put(5, 3);
 		    put(7, 2);
-		}};
+		}};*/
+		Map<Integer, Integer> hashMap = new HashMap<>();
+        hashMap.put(1, 2);
+        hashMap.put(5, 3);
+        hashMap.put(7, 2);
 
 		// Checking if a key exists: use .containsKey()
 //		hashMap.containsKey(1); // true
@@ -55,6 +60,23 @@ public class Ch3_hashing {
 		for (int val: hashMap.values()) {
 		    System.out.println(val);
 		}
+	}
+	
+	public void interactive() {
+		Map<Integer, Integer> myHashMap = new HashMap<>();
+        // myHashMap has integers for both keys and values
+        
+        myHashMap.put(4, 83);
+        System.out.println(myHashMap.get(4)); // Prints 83
+        System.out.println(myHashMap.containsKey(4)); // Prints true
+        System.out.println(myHashMap.containsKey(854)); // Prints false
+        
+        myHashMap.put(8, 327);
+        myHashMap.put(45, 82523);
+        
+        for (int key: myHashMap.keySet()) {
+            System.out.println(String.format("%d: %d", key, myHashMap.get(key)));
+        }
 	}
 
 }
