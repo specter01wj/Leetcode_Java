@@ -22,8 +22,10 @@ public class Ch3_hashing {
 		}};
 
 		// Checking if a key exists: use .containsKey()
-		hashMap.containsKey(1); // true
-		hashMap.containsKey(9); // false
+//		hashMap.containsKey(1); // true
+//		hashMap.containsKey(9); // false
+		System.out.println("Contains key 1? " + hashMap.containsKey(1)); // true
+        System.out.println("Contains key 9? " + hashMap.containsKey(9)); // false
 
 		// Accessing a value given a key: use .get()
 		hashMap.get(5); // 3
@@ -39,14 +41,17 @@ public class Ch3_hashing {
 		hashMap.remove(9);
 
 		// Get size
-		hashMap.size(); // 3
+//		hashMap.size(); // 3
+		System.out.println("Size of map: " + hashMap.size()); // 3
 
 		// Iterate over keys: use .keySet()
+		System.out.println("Keys:");
 		for (int key: hashMap.keySet()) {
 		    System.out.println(key);
 		}
 
 		// Iterate over values: use .values()
+		System.out.println("Values:");
 		for (int val: hashMap.values()) {
 		    System.out.println(val);
 		}
