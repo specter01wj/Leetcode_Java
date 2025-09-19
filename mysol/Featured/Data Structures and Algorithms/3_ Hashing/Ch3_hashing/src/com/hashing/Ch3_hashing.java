@@ -5,7 +5,11 @@ public class Ch3_hashing {
 
 	public static void main(String[] args) {
 		Ch3_hashing solution = new Ch3_hashing();
+		
+		System.out.println("====== interfaceGuide() ======");
 		solution.interfaceGuide();
+		
+		System.out.println("====== interactive() ======");
 		solution.interactive();
 	}
 	
