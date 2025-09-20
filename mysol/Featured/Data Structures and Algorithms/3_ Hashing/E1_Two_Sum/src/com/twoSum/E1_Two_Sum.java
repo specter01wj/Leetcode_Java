@@ -14,10 +14,11 @@ You can return the answer in any order.
 public class E1_Two_Sum {
 
 	public static void main(String[] args) {
+		E1_Two_Sum solution = new E1_Two_Sum();
 		int[] input = {2,7,11,15};
 		int target = 9;
-		int output = twoSum(input, target);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		int[] output = solution.twoSum(input, target);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
 	
