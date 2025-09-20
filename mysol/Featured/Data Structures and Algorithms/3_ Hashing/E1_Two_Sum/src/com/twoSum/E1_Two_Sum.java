@@ -21,7 +21,16 @@ public class E1_Two_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + Arrays.toString(output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param target: an integer
+     * @return: indices of the two numbers
+     */
 	public int[] twoSum(int[] nums, int target) {
         // Map to store number and its index
         Map<Integer, Integer> map = new HashMap<>();
