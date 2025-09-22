@@ -36,7 +36,7 @@ public class Ch3_findNumbers {
         }
 
         // Check each number if it satisfies the condition
-        for (int num : nums) {
+        for (int num : numSet) {
             if (!numSet.contains(num - 1) && !numSet.contains(num + 1)) {
                 result.add(num);
             }
