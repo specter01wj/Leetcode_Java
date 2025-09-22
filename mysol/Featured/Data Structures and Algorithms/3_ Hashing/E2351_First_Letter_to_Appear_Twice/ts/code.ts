@@ -1,22 +1,18 @@
-function twoSum(nums: number[], target: number): number[] {
-    const map = new Map<number, number>(); // value -> index
+function repeatedCharacter(s: string): string {
+    const seen: Set<string> = new Set();
 
-    for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-
-        if (map.has(complement)) {
-            return [map.get(complement)!, i]; // non-null assertion
+    for (const char of s) {
+        if (seen.has(char)) {
+            return char;
         }
-
-        map.set(nums[i], i);
+        seen.add(char);
     }
 
-    return []; // problem guarantees exactly one solution
+    return '';
 };
 
-const input: number[] = [2,7,11,15];
-const target: number = 9;
-const results = twoSum(input, target);
+const input: string = "abccbaacz";
+const results = repeatedCharacter(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
