@@ -1,18 +1,23 @@
-function reverseString(s: string[]): void {
-    let left = 0;
-    let right = s.length - 1;
+function twoSum(nums: number[], target: number): number[] {
+    const map = new Map<number, number>(); // value -> index
 
-    while (left < right) {
-        [s[left], s[right]] = [s[right], s[left]];
-        left++;
-        right--;
+    for (let i = 0; i < nums.length; i++) {
+        const complement = target - nums[i];
+
+        if (map.has(complement)) {
+            return [map.get(complement)!, i]; // non-null assertion
+        }
+
+        map.set(nums[i], i);
     }
+
+    return []; // problem guarantees exactly one solution
 };
 
-const input: string[] = ["h","e","l","l","o"];
-const inputCopy: string[] = [...input];
-reverseString(inputCopy);
+const input: number[] = [2,7,11,15];
+const target: number = 9;
+const results = twoSum(input, target);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(inputCopy, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
