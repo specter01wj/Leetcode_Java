@@ -662,7 +662,7 @@ Cspiration Category:
 |365|Water and Jug Problem|Medium||Java/Javascript||
 |204|Count Primes|Easy||Java/Javascript|Done/Done|
 |Sum||||||
-|1|Two Sum|Easy||Java/Javascript|Done/Done|
+|1|Two Sum|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |167|Two Sum II - Input array is sorted|Easy||Java/Javascript|Done/Done|
 |3|3Sum|Medium||Java/Javascript||
 |16|3Sum Closest|Medium|很少考|Java/Javascript||
