@@ -14,7 +14,15 @@ public class E2351_First_Letter_to_Appear_Twice {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param s: a string
+     * @return: the first letter to appear twice
+     */
 	public char repeatedCharacter(String s) {
         Set<Character> seen = new HashSet<>();
 
