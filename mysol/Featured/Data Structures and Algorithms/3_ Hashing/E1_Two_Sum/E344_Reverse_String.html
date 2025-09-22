@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Write a function that reverses a string. The input string is given as an array of characters s.
+
+        You must do this by modifying the input array in-place with O(1) extra memory.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param s: a list of chars
+        * @return: void
+        */
+        let reverseString = function(s) {
+            let left = 0;
+            let right = s.length - 1;
+
+            while (left < right) {
+                [s[left], s[right]] = [s[right], s[left]];
+                left++;
+                right--;
+            }
+        };
+
+        const input = ["h","e","l","l","o"];
+        const inputCopy = [...input];
+        reverseString(inputCopy);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(inputCopy, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				two pointers
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
