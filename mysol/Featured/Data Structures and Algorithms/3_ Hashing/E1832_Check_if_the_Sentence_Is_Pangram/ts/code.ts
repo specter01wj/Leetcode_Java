@@ -9,10 +9,9 @@ function reverseString(s: string[]): void {
     }
 };
 
-const input: string[] = ["h","e","l","l","o"];
-const inputCopy: string[] = [...input];
-reverseString(inputCopy);
+const input: string = "thequickbrownfoxjumpsoverthelazydog";
+const results = reverseString(input);
 
 let webHeading = document.querySelector('#t1');
-webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(inputCopy, null, 2);
+webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
 
