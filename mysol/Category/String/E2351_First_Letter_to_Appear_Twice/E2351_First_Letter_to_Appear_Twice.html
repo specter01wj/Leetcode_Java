@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a string s consisting of lowercase English letters, return the first letter to appear twice.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param s: a string
+        * @return: the first letter to appear twice
+        */
+        let repeatedCharacter = function(s) {
+            const seen = new Set();
+
+            for (const char of s) {
+                if (seen.has(char)) {
+                    return char;
+                }
+                seen.add(char);
+            }
+
+            return '';
+        };
+
+        const input = "abccbaacz";
+        let results = repeatedCharacter(input);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashSet
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
