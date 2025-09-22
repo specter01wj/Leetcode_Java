@@ -47,8 +47,30 @@
             }
         };
 
+        let interactive = function() {
+            let myHashMap = new Map();
+
+            myHashMap.set(4, 83);
+            console.log(myHashMap.get(4)); // 83
+
+            console.log(myHashMap.has(4));    // true
+            console.log(myHashMap.has(854));  // false
+
+            myHashMap.set(8, 327);
+            myHashMap.set(45, 82523);
+
+            console.log("Map contents:");
+            for (const [key, val] of myHashMap) {
+                console.log(`${key}: ${val}`);
+            }
+        }
+
         const input = "Interface guide";
-        let results = interfaceGuide();
+        console.log("====== interfaceGuide() ======");
+        interfaceGuide();
+        console.log("====== interactive() ======");
+        interactive();
+        let results = "results in console.log";
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
