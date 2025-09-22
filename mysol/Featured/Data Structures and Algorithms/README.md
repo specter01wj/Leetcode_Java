@@ -20,10 +20,13 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|Two pointers|||||
 |344|**Reverse String**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |977|**Squares of a Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|Sliding window|||||
 |643|**Maximum Average Subarray I**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|Prefix sum|||||
 |1480|**Running Sum of 1d Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1413|**Minimum Value to Get Positive Step by Step Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
