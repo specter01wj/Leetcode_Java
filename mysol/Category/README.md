@@ -640,6 +640,7 @@ Cspiration Category:
 |2047|Number of Valid Words in a Sentence|Easy||Java/Javascript||
 |2053|Kth Distinct String in an Array|Easy||Java/Javascript||
 |2062|Count Vowel Substrings of a String|Easy||Java/Javascript||
+|2351|First Letter to Appear Twice|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2390|Removing Stars From a String|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 
