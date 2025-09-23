@@ -15,7 +15,15 @@ public class E268_Missing_Number {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the only number in the range that is missing from the array
+     */
 	public int missingNumber(int[] nums) {
 		Set<Integer> seen = new HashSet<>();
 		
