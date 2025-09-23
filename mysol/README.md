@@ -93,7 +93,7 @@ By Jin Wang
 |258|**Add Digits**|Easy|Java/Javascript|Done/Done|
 |263|**Ugly Number**|Easy|Java/Javascript|Done/Done|
 |266|**Palindrome Permutation**|Easy|Java/Javascript||
-|268|**Missing Number**|Easy|Java/Javascript|Done/Done|
+|268|**Missing Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |270|**Closest Binary Search Tree Value**|Easy|Java/Javascript||
 |276|**Paint Fence**|Easy|Java/Javascript||
 |278|**First Bad Version**|Easy|Java/Javascript|Done/Done|
@@ -363,7 +363,7 @@ By Jin Wang
 |1822|**Sign of the Product of an Array**|Easy|Java/Javascript|Done/Done|
 |1826|**Faulty Sensor**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1827|**Minimum Operations to Make the Array Increasing**|Easy|Java/Javascript|Done/Done|
-|1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript|Done/Done|
+|1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1844|**Replace All Digits with Characters**|Easy|Java/Javascript|Done/Done|
 |1848|**Minimum Distance to the Target Element**|Easy|Java/Javascript|Done/Done|
 |1854|**Maximum Population Year**|Easy|Java/Javascript|Done/Done|

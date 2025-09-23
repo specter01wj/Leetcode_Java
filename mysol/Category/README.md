@@ -619,7 +619,7 @@ Cspiration Category:
 |1805|Number of Different Integers in a String|Easy||Java/Javascript|Done/Done|
 |1812|Determine Color of a Chessboard Square|Easy||Java/Javascript|Done/Done|
 |1816|Truncate Sentence|Easy||Java/Javascript|Done/Done|
-|1832|Check if the Sentence Is Pangram|Easy||Java/Javascript|Done/Done|
+|1832|Check if the Sentence Is Pangram|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1844|Replace All Digits with Characters|Easy||Java/Javascript|Done/Done|
 |1859|Sorting the Sentence|Easy||Java/Javascript|Done/Done|
 |1869|Longer Contiguous Segments of Ones than Zeros|Easy||Java/Javascript|Done/Done|
@@ -924,7 +924,7 @@ Cspiration Category:
 |371|Sum of Two Integers|Easy||Java/Javascript|Done/Done|
 |338|Counting Bits|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |89|Gray Code|Medium||Java/Javascript||
-|268|Missing Number|Easy||Java/Javascript|Done/Done|
+|268|Missing Number|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |191|Number of 1 Bits|Easy||Java/Javascript|Done/Done|
 |190|Reverse Bits|Easy||Java/Javascript|Done/Done|
 |137|Single Number II|Medium||Java/Javascript||
