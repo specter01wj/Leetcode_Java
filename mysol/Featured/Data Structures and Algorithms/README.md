@@ -56,8 +56,8 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |Checking for existence|||||
-|1|**Two Sum**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|2351|**First Letter to Appear Twice**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|268|**Missing Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
