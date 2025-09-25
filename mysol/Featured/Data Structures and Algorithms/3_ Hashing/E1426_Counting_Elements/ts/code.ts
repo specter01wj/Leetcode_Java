@@ -1,18 +1,18 @@
-function missingNumber(nums: number[]): number {
-    const numSet = new Set<number>(nums);
-    const n = nums.length;
+function countElements(arr: number[]): number {
+    const set = new Set<number>(arr);
+    let count = 0;
 
-    for (let i = 0; i <= n; i++) {
-        if (!numSet.has(i)) {
-            return i;
+    for (const num of arr) {
+        if (set.has(num + 1)) {
+            count++;
         }
     }
 
-    return -1;
+    return count;
 };
 
-const input: number[] = [9,6,4,2,3,5,7,0,1];
-const results = missingNumber(input);
+const input: number[] = [1,2,3];
+const results = countElements(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
