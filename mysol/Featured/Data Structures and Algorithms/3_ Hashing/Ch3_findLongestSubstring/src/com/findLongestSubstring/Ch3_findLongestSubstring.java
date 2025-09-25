@@ -20,7 +20,16 @@ public class Ch3_findLongestSubstring {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param s: a string
+     * @param k: an integer
+     * @return: the length of the longest substring
+     */
 	public int findLongestSubstring(String s, int k) {
         if (s == null || s.length() == 0 || k == 0) return 0;
 
