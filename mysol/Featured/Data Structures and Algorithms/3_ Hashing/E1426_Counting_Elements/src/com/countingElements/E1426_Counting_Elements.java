@@ -10,8 +10,9 @@ count them separately.
 public class E1426_Counting_Elements {
 
 	public static void main(String[] args) {
+		E1426_Counting_Elements solution = new E1426_Counting_Elements();
 		int[] input = {1,2,3};
-		int output = countElements(input);
+		int output = solution.countElements(input);
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
