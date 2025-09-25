@@ -16,7 +16,15 @@ public class E1426_Counting_Elements {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: count how many elements x
+     */
 	public int countElements(int[] arr) {
 		Set<Integer> set = new HashSet<>();
 		
