@@ -58,6 +58,7 @@ By Jin Wang
 |Checking for existence|||||
 |1832|**Check if the Sentence Is Pangram**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |268|**Missing Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1426|**Counting Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
