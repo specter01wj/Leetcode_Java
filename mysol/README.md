@@ -381,7 +381,7 @@ By Jin Wang
 |1920|**Build Array from Permutation**|Easy|Java/Javascript|Done/Done|
 |1929|**Concatenation of Array**|Easy|Java/Javascript|Done/Done|
 |1935|**Maximum Number of Words You Can Type**|Easy|Java/Javascript|Done/Done|
-|1941|**Check if All Characters Have Equal Number of Occurrences**|Easy|Java/Javascript|Done/Done|
+|1941|**Check if All Characters Have Equal Number of Occurrences**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1945|**Sum of Digits of String After Convert**|Easy|Java/Javascript|Done/Done|
 |1957|**Delete Characters to Make Fancy String**|Easy|Java/Javascript|Done/Done|
 |1961|**Check If String Is a Prefix of Array**|Easy|Java/Javascript|Done/Done|
