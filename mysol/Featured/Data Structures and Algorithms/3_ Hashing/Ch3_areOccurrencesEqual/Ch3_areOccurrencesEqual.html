@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a 2D integer array nums where nums[i] is a non-empty array of 
+        distinct positive integers, return the list of integers that are 
+        present in each array of nums sorted in ascending order.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of 2D integers
+        * @return: the list of integers
+        */
+        let intersection = function(nums) {
+            const countMap = new Map();
+            const totalArrays = nums.length;
+
+            for (const arr of nums) {
+                const unique = new Set(arr); // avoid double-counting in same sub-array
+                for (const num of unique) {
+                    countMap.set(num, (countMap.get(num) || 0) + 1);
+                }
+            }
+
+            const result = [];
+            for (const [num, count] of countMap) {
+                if (count === totalArrays) {
+                    result.push(num);
+                }
+            }
+
+            return result.sort((a, b) => a - b);
+        };
+
+        const input = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]];
+        let results = intersection(input);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
