@@ -4,49 +4,39 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Example 1: You are given a string s and an integer k. 
-        Find the length of the longest substring that contains 
-        at most k distinct characters.
-
-        For example, given s = "eceba" and k = 2, return 3. 
-        The longest substring with at most 2 distinct characters is "ece".
+			 	Given a 2D integer array nums where nums[i] is a non-empty array of 
+        distinct positive integers, return the list of integers that are 
+        present in each array of nums sorted in ascending order.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param s: a string
-        * @param k: an integer
-        * @return: the length of the longest substring
+        * @param nums: a list of 2D integers
+        * @return: the list of integers
         */
-        let findLongestSubstring = function(s, k) {
-            if (k === 0 || s.length === 0) return 0;
+        let intersection = function(nums) {
+            const countMap = new Map();
+            const totalArrays = nums.length;
 
-            const map = new Map();
-            let left = 0;
-            let maxLen = 0;
-
-            for (let right = 0; right < s.length; right++) {
-                const char = s[right];
-                map.set(char, (map.get(char) || 0) + 1);
-
-                while (map.size > k) {
-                    const leftChar = s[left];
-                    map.set(leftChar, map.get(leftChar) - 1);
-                    if (map.get(leftChar) === 0) {
-                        map.delete(leftChar);
-                    }
-                    left++;
+            for (const arr of nums) {
+                const unique = new Set(arr); // avoid double-counting in same sub-array
+                for (const num of unique) {
+                    countMap.set(num, (countMap.get(num) || 0) + 1);
                 }
-
-                maxLen = Math.max(maxLen, right - left + 1);
             }
 
-            return maxLen;
+            const result = [];
+            for (const [num, count] of countMap) {
+                if (count === totalArrays) {
+                    result.push(num);
+                }
+            }
+
+            return result.sort((a, b) => a - b);
         };
 
-        const input = "eceba";
-        const k = 2;
-        let results = findLongestSubstring(input, k);
+        const input = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]];
+        let results = intersection(input);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
