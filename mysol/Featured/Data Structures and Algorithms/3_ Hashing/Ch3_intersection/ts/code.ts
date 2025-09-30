@@ -1,32 +1,26 @@
-function findLongestSubstring(s: string, k: number): number {
-    if (k === 0 || s.length === 0) return 0;
+function intersection(nums: number[][]): number[] {
+    const countMap: Map<number, number> = new Map();
+    const totalArrays = nums.length;
 
-    const map: Map<string, number> = new Map();
-    let left = 0;
-    let maxLen = 0;
-
-    for (let right = 0; right < s.length; right++) {
-        const char = s[right];
-        map.set(char, (map.get(char) || 0) + 1);
-
-        while (map.size > k) {
-            const leftChar = s[left];
-            map.set(leftChar, map.get(leftChar)! - 1);
-            if (map.get(leftChar)! === 0) {
-                map.delete(leftChar);
-            }
-            left++;
+    for (const arr of nums) {
+        const unique = new Set<number>(arr);
+        for (const num of unique) {
+            countMap.set(num, (countMap.get(num) || 0) + 1);
         }
-
-        maxLen = Math.max(maxLen, right - left + 1);
     }
 
-    return maxLen;
-}
+    const result: number[] = [];
+    for (const [num, count] of countMap) {
+        if (count === totalArrays) {
+            result.push(num);
+        }
+    }
 
-const input: string = "eceba";
-const k: number = 2;
-const results = findLongestSubstring(input, k);
+    return result.sort((a, b) => a - b);
+};
+
+const input: number[][] = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]];
+const results = intersection(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
