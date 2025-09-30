@@ -16,7 +16,15 @@ public class Ch3_intersection {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of 2D integers
+     * @return: the list of integers
+     */
 	public List<Integer> intersection(int[][] nums) {
         Map<Integer, Integer> countMap = new HashMap<>();
         int numArrays = nums.length;
