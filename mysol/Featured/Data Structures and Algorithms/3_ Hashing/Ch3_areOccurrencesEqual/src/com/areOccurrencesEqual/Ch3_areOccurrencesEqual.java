@@ -17,7 +17,15 @@ public class Ch3_areOccurrencesEqual {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param s: a string
+     * @return: true if s is a good string
+     */
 	public boolean areOccurrencesEqual(String s) {
         Map<Character, Integer> freqMap = new HashMap<>();
 
