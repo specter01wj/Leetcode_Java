@@ -4,39 +4,30 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a 2D integer array nums where nums[i] is a non-empty array of 
-        distinct positive integers, return the list of integers that are 
-        present in each array of nums sorted in ascending order.
+			 	Given a string s, return true if s is a good string, or false otherwise.
+
+        A string s is good if all the characters that appear in s have the same 
+        number of occurrences (i.e., the same frequency).
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of 2D integers
-        * @return: the list of integers
+        * @param s: a string
+        * @return: true if s is a good string
         */
-        let intersection = function(nums) {
-            const countMap = new Map();
-            const totalArrays = nums.length;
+        let areOccurrencesEqual = function(s) {
+            const freqMap = new Map();
 
-            for (const arr of nums) {
-                const unique = new Set(arr); // avoid double-counting in same sub-array
-                for (const num of unique) {
-                    countMap.set(num, (countMap.get(num) || 0) + 1);
-                }
+            for (const char of s) {
+                freqMap.set(char, (freqMap.get(char) || 0) + 1);
             }
 
-            const result = [];
-            for (const [num, count] of countMap) {
-                if (count === totalArrays) {
-                    result.push(num);
-                }
-            }
-
-            return result.sort((a, b) => a - b);
+            const frequencies = new Set(freqMap.values());
+            return frequencies.size === 1;
         };
 
-        const input = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]];
-        let results = intersection(input);
+        const input = "abacbc";
+        let results = areOccurrencesEqual(input);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
