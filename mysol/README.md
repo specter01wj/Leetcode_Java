@@ -655,6 +655,7 @@ By Jin Wang
 |1143|**Longest Common Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1161|**Maximum Level Sum of a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1208|**Get Equal Substrings Within Budget**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1248|**Count Number of Nice Subarrays**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1268|**Search Suggestions System**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1318|**Minimum Flips to Make a OR b Equal to c**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
