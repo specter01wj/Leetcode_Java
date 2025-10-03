@@ -4,41 +4,41 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of integers nums and an integer k, return the total 
-        number of subarrays whose sum equals to k.
+			 	Given an array of integers nums and an integer k. 
+        A continuous subarray is called nice if there are k odd numbers on it.
 
-        A subarray is a contiguous non-empty sequence of elements within an array.
+        Return the number of nice sub-arrays.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
         * @param k: an integer
-        * @return: the total number of subarrays
+        * @return: the number of nice sub-arrays
         */
-        let subarraySum = function(nums, k) {
-            const prefixSumCount = new Map();
-            prefixSumCount.set(0, 1); // base case: sum 0 appears once
+        let numberOfSubarrays = function(nums, k) {
+            const countMap = new Map();
+            countMap.set(0, 1); // Base case: 0 odd numbers seen once
 
-            let prefixSum = 0;
-            let count = 0;
+            let oddCount = 0;
+            let result = 0;
 
             for (const num of nums) {
-                prefixSum += num;
+                if (num % 2 !== 0) oddCount++;
 
-                if (prefixSumCount.has(prefixSum - k)) {
-                    count += prefixSumCount.get(prefixSum - k);
+                if (countMap.has(oddCount - k)) {
+                    result += countMap.get(oddCount - k);
                 }
 
-                prefixSumCount.set(prefixSum, (prefixSumCount.get(prefixSum) || 0) + 1);
+                countMap.set(oddCount, (countMap.get(oddCount) || 0) + 1);
             }
 
-            return count;
+            return result;
         };
 
-        const input = [1,2,3];
+        const input = [1,1,2,1,1];
         const k = 3;
-        let results = subarraySum(input, k);
+        let results = numberOfSubarrays(input, k);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
