@@ -18,7 +18,16 @@ public class Ch3_subarraySum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the total number of subarrays
+     */
 	public int subarraySum(int[] nums, int k) {
         Map<Integer, Integer> prefixSumCount = new HashMap<>();
         prefixSumCount.put(0, 1); // base case: sum 0 occurs once
