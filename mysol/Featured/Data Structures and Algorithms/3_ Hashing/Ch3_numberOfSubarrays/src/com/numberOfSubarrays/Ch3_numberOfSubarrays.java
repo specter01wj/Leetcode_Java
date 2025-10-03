@@ -18,7 +18,16 @@ public class Ch3_numberOfSubarrays {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the number of nice sub-arrays
+     */
 	public int numberOfSubarrays(int[] nums, int k) {
         Map<Integer, Integer> countMap = new HashMap<>();
         countMap.put(0, 1); // base case: 0 odd numbers seen initially
