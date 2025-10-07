@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array matches where matches[i] = [winneri, loseri] 
+        indicates that the player winneri defeated player loseri in a match.
+
+        Return a list answer of size 2 where:
+
+          . answer[0] is a list of all players that have not lost any matches.
+          . answer[1] is a list of all players that have lost exactly one match.
+
+        The values in the two lists should be returned in increasing order.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param matches: a list of 2D integers
+        * @return: a list answer of size 2
+        */
+        let findWinners = function(matches) {
+            const lossCount = new Map();
+            const allPlayers = new Set();
+
+            for (const [winner, loser] of matches) {
+                // Count the loss
+                lossCount.set(loser, (lossCount.get(loser) || 0) + 1);
+
+                // Track all players who played
+                allPlayers.add(winner);
+                allPlayers.add(loser);
+            }
+
+            const noLoss = [];
+            const oneLoss = [];
+
+            for (const player of allPlayers) {
+                const losses = lossCount.get(player) || 0;
+                if (losses === 0) {
+                    noLoss.push(player);
+                } else if (losses === 1) {
+                    oneLoss.push(player);
+                }
+            }
+
+            noLoss.sort((a, b) => a - b);
+            oneLoss.sort((a, b) => a - b);
+
+            return [noLoss, oneLoss];
+        };
+
+        const input = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]];
+        let results = findWinners(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
