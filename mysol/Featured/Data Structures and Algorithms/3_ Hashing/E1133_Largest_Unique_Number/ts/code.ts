@@ -1,33 +1,22 @@
-function findWinners(matches: number[][]): number[][] {
-    const lossCount: Map<number, number> = new Map();
-    const allPlayers: Set<number> = new Set();
+function largestUniqueNumber(nums: number[]): number {
+    const freq = new Map<number, number>();
 
-    for (const [winner, loser] of matches) {
-        lossCount.set(loser, (lossCount.get(loser) || 0) + 1);
-        allPlayers.add(winner);
-        allPlayers.add(loser);
+    for (const num of nums) {
+        freq.set(num, (freq.get(num) || 0) + 1);
     }
 
-    const noLoss: number[] = [];
-    const oneLoss: number[] = [];
-
-    for (const player of allPlayers) {
-        const losses = lossCount.get(player) || 0;
-        if (losses === 0) {
-            noLoss.push(player);
-        } else if (losses === 1) {
-            oneLoss.push(player);
+    let max = -1;
+    for (const [num, count] of freq) {
+        if (count === 1 && num > max) {
+            max = num;
         }
     }
 
-    noLoss.sort((a, b) => a - b);
-    oneLoss.sort((a, b) => a - b);
-
-    return [noLoss, oneLoss];
+    return max;
 };
 
-const input: nubmer[][] = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]];
-const results = findWinners(input);
+const input: nubmer[] = [5,7,3,9,4,9,8,3,1];
+const results = largestUniqueNumber(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
