@@ -15,7 +15,15 @@ public class E1133_Largest_Unique_Number {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the largest integer
+     */
 	public int largestUniqueNumber(int[] nums) {
         Map<Integer, Integer> freqMap = new HashMap<>();
 
