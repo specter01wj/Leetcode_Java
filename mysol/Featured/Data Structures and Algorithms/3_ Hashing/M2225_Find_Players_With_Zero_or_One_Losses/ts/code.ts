@@ -26,7 +26,7 @@ function findWinners(matches: number[][]): number[][] {
     return [noLoss, oneLoss];
 };
 
-const input: nubmer[][] = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]];
+const input: number[][] = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]];
 const results = findWinners(input);
 
 let webHeading = document.querySelector('#t1');
