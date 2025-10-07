@@ -22,7 +22,15 @@ public class M2225_Find_Players_With_Zero_or_One_Losses {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param matches: a list of 2D integers
+     * @return: a list answer of size 2
+     */
 	public List<List<Integer>> findWinners(int[][] matches) {
         Map<Integer, Integer> lossCount = new HashMap<>();
         Set<Integer> allPlayers = new HashSet<>();
