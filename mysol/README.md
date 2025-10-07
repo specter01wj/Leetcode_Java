@@ -669,6 +669,7 @@ By Jin Wang
 |2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2095|**Delete the Middle Node of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2225|**Find Players With Zero or One Losses**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2300|**Successful Pairs of Spells and Potions**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
