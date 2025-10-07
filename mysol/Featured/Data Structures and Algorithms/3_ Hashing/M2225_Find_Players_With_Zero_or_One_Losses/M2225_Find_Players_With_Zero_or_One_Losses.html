@@ -4,35 +4,67 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	A pangram is a sentence where every letter of the English alphabet 
-        appears at least once.
+			 	You are given an integer array matches where matches[i] = [winneri, loseri] 
+        indicates that the player winneri defeated player loseri in a match.
 
-        Given a string sentence containing only lowercase English letters, 
-        return true if sentence is a pangram, or false otherwise.
+        Return a list answer of size 2 where:
+
+          . answer[0] is a list of all players that have not lost any matches.
+          . answer[1] is a list of all players that have lost exactly one match.
+
+        The values in the two lists should be returned in increasing order.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param sentence: a string
-        * @return: true if sentence is a pangram
+        * @param matches: a list of 2D integers
+        * @return: a list answer of size 2
         */
-        let checkIfPangram = function(sentence) {
-            const seen = new Set();
+        let findWinners = function(matches) {
+            const lossCount = new Map();
+            const allPlayers = new Set();
 
-            for (const char of sentence) {
-              seen.add(char);
+            for (const match of matches) {
+                let winner = match[0];
+                let loser = match[1];
+
+                // Count the loss
+                lossCount.set(loser, (lossCount.get(loser) || 0) + 1);
+
+                // Track all players who played
+                allPlayers.add(winner);
+                allPlayers.add(loser);
             }
 
-            return seen.size === 26;
+            const noLoss = [];
+            const oneLoss = [];
+
+            for (const player of allPlayers) {
+                let losses = lossCount.get(player) || 0;
+                if (losses === 0) {
+                    noLoss.push(player);
+                } else if (losses === 1) {
+                    oneLoss.push(player);
+                }
+            }
+
+            noLoss.sort((a, b) => a - b);
+            oneLoss.sort((a, b) => a - b);
+
+            const result = [];
+            result.push(noLoss);
+            result.push(oneLoss);
+
+            return result;
         };
 
-        const input = "thequickbrownfoxjumpsoverthelazydog";
-        let results = checkIfPangram(input);
+        const input = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]];
+        let results = findWinners(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				HashSet
+				HashMap
 			 */
 
 		</script>
