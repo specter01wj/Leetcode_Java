@@ -60,6 +60,8 @@ By Jin Wang
 |268|**Missing Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1426|**Counting Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |Counting|||||
+|2225|**Find Players With Zero or One Losses**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1133|**Largest Unique Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
