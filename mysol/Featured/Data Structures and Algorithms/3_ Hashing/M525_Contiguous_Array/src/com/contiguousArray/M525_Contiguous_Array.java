@@ -15,7 +15,15 @@ public class M525_Contiguous_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum length of a contiguous subarray
+     */
 	public int findMaxLength(int[] nums) {
         Map<Integer, Integer> sumToIndex = new HashMap<>();
         sumToIndex.put(0, -1); // base case
