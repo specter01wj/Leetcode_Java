@@ -18,7 +18,15 @@ public class E1189_Maximum_Number_of_Balloons {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param text: a string
+     * @return: the maximum number of instances
+     */
 	public int maxNumberOfBalloons(String text) {
 		Map<Character, Integer> freq = new HashMap<>();
 		
