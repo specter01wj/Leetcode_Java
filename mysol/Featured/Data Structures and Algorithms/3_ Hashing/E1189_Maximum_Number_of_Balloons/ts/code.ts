@@ -1,22 +1,21 @@
-function largestUniqueNumber(nums: number[]): number {
-    const freq = new Map<number, number>();
+function maxNumberOfBalloons(text: string): number {
+    const freq: Map<string, number> = new Map();
 
-    for (const num of nums) {
-        freq.set(num, (freq.get(num) || 0) + 1);
+    for (const char of text) {
+        freq.set(char, (freq.get(char) || 0) + 1);
     }
 
-    let max = -1;
-    for (const [num, count] of freq) {
-        if (count === 1 && num > max) {
-            max = num;
-        }
-    }
+    const b = freq.get('b') || 0;
+    const a = freq.get('a') || 0;
+    const l = Math.floor((freq.get('l') || 0) / 2);
+    const o = Math.floor((freq.get('o') || 0) / 2);
+    const n = freq.get('n') || 0;
 
-    return max;
+    return Math.min(b, a, l, o, n);
 };
 
-const input: number[] = [5,7,3,9,4,9,8,3,1];
-const results = largestUniqueNumber(input);
+const input: string = "loonbalxballpoon";
+const results = maxNumberOfBalloons(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
