@@ -249,7 +249,7 @@ By Jin Wang
 |1160|**Find Words That Can Be Formed by Characters**|Easy|Java/Javascript|Done/Done|
 |1176|**Diet Plan Performance**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1184|**Distance Between Bus Stops**|Easy|Java/Javascript|Done/Done|
-|1189|**Maximum Number of Balloons**|Easy|Java/Javascript|Done/Done|
+|1189|**Maximum Number of Balloons**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1196|**How Many Apples Can You Put into the Basket**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1200|**Minimum Absolute Difference**|Easy|Java/Javascript|Done/Done|
 |1207|**Unique Number of Occurrences**|Easy|Java/Javascript/Typescript|Done/Done/Done|

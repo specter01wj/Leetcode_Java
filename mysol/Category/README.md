@@ -581,7 +581,7 @@ Cspiration Category:
 |1108|Defanging an IP Address|Easy||Java/Javascript|Done/Done|
 |1154|Day of the Year|Easy||Java/Javascript|Done/Done|
 |1160|Find Words That Can Be Formed by Characters|Easy||Java/Javascript|Done/Done|
-|1189|Maximum Number of Balloons|Easy||Java/Javascript|Done/Done|
+|1189|Maximum Number of Balloons|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1208|Get Equal Substrings Within Budget|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1221|Split a String in Balanced Strings|Easy||Java/Javascript|Done/Done|
 |1309|Decrypt String from Alphabet to Integer Mapping|Easy||Java/Javascript|Done/Done|
