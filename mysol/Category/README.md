@@ -107,6 +107,7 @@ Cspiration Category:
 |500|Keyboard Row|Easy||Java/Javascript|Done/Done|
 |506|Relative Ranks|Easy||Java/Javascript|Done/Done|
 |509|Fibonacci Number|Easy||Java/Javascript|Done/Done|
+|525|Contiguous Array|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |560|Subarray Sum Equals K|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |561|Array Partition I|Easy||Java/Javascript|Done/Done|
 |566|Reshape the Matrix|Easy||Java/Javascript|Done/Done|
