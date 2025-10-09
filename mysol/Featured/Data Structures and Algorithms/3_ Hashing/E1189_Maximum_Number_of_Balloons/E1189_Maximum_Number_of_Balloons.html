@@ -4,36 +4,38 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array nums, return the largest integer that only occurs once. 
-        If no integer occurs once, return -1.
+			 	Given a string text, you want to use the characters of text to form 
+        as many instances of the word "balloon" as possible.
+
+        You can use each character in text at most once. Return the maximum 
+        number of instances that can be formed.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the largest integer
+        * @param text: a string
+        * @return: the maximum number of instances
         */
-        let largestUniqueNumber = function(nums) {
-            const freqMap = new Map();
-
-            // Step 1: Count frequency of each number
-            for (const num of nums) {
-                freqMap.set(num, (freqMap.get(num) || 0) + 1);
+        let maxNumberOfBalloons = function(nums) {
+            new freq = new Map();
+            
+            // Count frequency of all characters
+            for (const c of text) {
+              freq.set(c, (freq.get(c) || 0) + 1);
             }
-
-            // Step 2: Find the largest number with frequency == 1
-            let maxUnique = -1;
-            for (const [num, count] of freqMap) {
-                if (count === 1 && num > maxUnique) {
-                    maxUnique = num;
-                }
-            }
-
-            return maxUnique;
+            
+            // balloon needs: b(1), a(1), l(2), o(2), n(1)
+            const b = freq.get('b') || 0;
+            const a = freq.get('a') || 0;
+            const l = Math.floor((freq.get('l') || 0) / 2);
+            const o = Math.floor((freq.get('o') || 0) / 2);
+            const n = freq.get('n') || 0;
+            
+            return Math.min(b, a, l, o, n);
         };
 
-        const input = [5,7,3,9,4,9,8,3,1];
-        let results = largestUniqueNumber(input);
+        const input = "loonbalxballpoon";
+        let results = maxNumberOfBalloons(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
