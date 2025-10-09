@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a binary array nums, return the maximum length of a contiguous 
+        subarray with an equal number of 0 and 1.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the maximum length of a contiguous subarray
+        */
+        let findMaxLength = function(nums) {
+            const sumToIndex = new Map();
+            sumToIndex.set(0, -1); // base case
+
+            let sum = 0;
+            let maxLen = 0;
+
+            for (let i = 0; i < nums.length; i++) {
+                // Treat 0 as -1, 1 as +1
+                sum += (nums[i] === 0) ? -1 : 1;
+
+                if (sumToIndex.has(sum)) {
+                    maxLen = Math.max(maxLen, i - sumToIndex.get(sum));
+                } else {
+                    sumToIndex.set(sum, i);
+                }
+            }
+
+            return maxLen;
+        };
+
+        const input = [0,1,1,1,1,1,0,0,0];
+        let results = findMaxLength(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
