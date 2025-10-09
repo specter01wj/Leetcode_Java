@@ -62,6 +62,8 @@ By Jin Wang
 |Counting|||||
 |2225|**Find Players With Zero or One Losses**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1133|**Largest Unique Number**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1189|**Maximum Number of Balloons**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|525|**Contiguous Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
