@@ -15,7 +15,15 @@ public class Ch3_groupAnagrams {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param strs: a list of strings
+     * @return: the answer in any order
+     */
 	public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> anagramGroups = new HashMap<>();
 
