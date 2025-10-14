@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given an array of strings strs, group the anagrams together. 
+        You can return the answer in any order.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param strs: a list of strings
+        * @return: the answer in any order
+        */
+        let groupAnagrams = function(strs) {
+            const map = new Map();
+
+            for (const str of strs) {
+                const key = str.split('').sort().join('');
+                if (!map.has(key)) {
+                    map.set(key, []);
+                }
+                map.get(key).push(str);
+            }
+
+            return Array.from(map.values());
+        };
+
+        const input = ["eat","tea","tan","ate","nat","bat"];
+        let results = groupAnagrams(input);
+				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
