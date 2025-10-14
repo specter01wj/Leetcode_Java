@@ -1,19 +1,20 @@
-function groupAnagrams(strs: string[]): string[][] {
-    const map: Map<string, string[]> = new Map();
+function minimumCardPickup(cards: number[]): number {
+    const lastSeen = new Map<number, number>();
+    let minLength = Infinity;
 
-    for (const str of strs) {
-        const key = str.split('').sort().join('');
-        if (!map.has(key)) {
-            map.set(key, []);
+    for (let i = 0; i < cards.length; i++) {
+        const card = cards[i];
+        if (lastSeen.has(card)) {
+            minLength = Math.min(minLength, i - lastSeen.get(card)! + 1);
         }
-        map.get(key)!.push(str);
+        lastSeen.set(card, i);
     }
 
-    return Array.from(map.values());
+    return minLength === Infinity ? -1 : minLength;
 };
 
-const input: string[] = ["eat","tea","tan","ate","nat","bat"];
-const results = groupAnagrams(input);
+const input: number[] = [3,4,2,3,4,7];
+const results = minimumCardPickup(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
