@@ -4,31 +4,37 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of strings strs, group the anagrams together. 
-        You can return the answer in any order.
+			 	You are given an integer array cards where cards[i] represents 
+        the value of the ith card. A pair of cards are matching if 
+        the cards have the same value.
+
+        Return the minimum number of consecutive cards you have to pick 
+        up to have a pair of matching cards among the picked cards. 
+        If it is impossible to have matching cards, return -1.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param strs: a list of strings
-        * @return: the answer in any order
+        * @param cards: a list of integers
+        * @return: the minimum number of consecutive cards
         */
-        let groupAnagrams = function(strs) {
-            const map = new Map();
+        let minimumCardPickup = function(cards) {
+            const lastSeen = new Map();
+            let minLength = Infinity;
 
-            for (const str of strs) {
-                const key = str.split('').sort().join('');
-                if (!map.has(key)) {
-                    map.set(key, []);
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                if (lastSeen.has(card)) {
+                    minLength = Math.min(minLength, i - lastSeen.get(card) + 1);
                 }
-                map.get(key).push(str);
+                lastSeen.set(card, i);
             }
 
-            return Array.from(map.values());
+            return minLength === Infinity ? -1 : minLength;
         };
 
-        const input = ["eat","tea","tan","ate","nat","bat"];
-        let results = groupAnagrams(input);
+        const input = [3,4,2,3,4,7];
+        let results = minimumCardPickup(input);
 				$('#t1').html('<h2>Input1: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
