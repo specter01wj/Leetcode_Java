@@ -489,7 +489,7 @@ Cspiration Category:
 |294|Flip Game II|Medium||Java/Javascript||
 |290|Word Pattern|Easy||Java/Javascript|Done/Done|
 |242|Valid Anagram|Easy||Java/Javascript|Done/Done|
-|49|Group Anagrams|Medium||Java/Javascript||
+|49|Group Anagrams|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |249|Group Shifted Strings|Medium||Java/Javascript||
 |87|Scramble String|Hard||Java/Javascript||
 |179|Largest Number|Medium|很少考|Java/Javascript||
