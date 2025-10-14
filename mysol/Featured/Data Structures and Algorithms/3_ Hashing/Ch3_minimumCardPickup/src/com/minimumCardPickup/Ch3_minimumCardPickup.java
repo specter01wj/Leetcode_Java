@@ -20,7 +20,15 @@ public class Ch3_minimumCardPickup {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param cards: a list of integers
+     * @return: the minimum number of consecutive cards
+     */
 	public int minimumCardPickup(int[] cards) {
         Map<Integer, Integer> lastSeen = new HashMap<>();
         int minLength = Integer.MAX_VALUE;
