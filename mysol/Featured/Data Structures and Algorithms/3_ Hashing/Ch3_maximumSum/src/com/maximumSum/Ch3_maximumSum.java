@@ -20,7 +20,15 @@ public class Ch3_maximumSum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum value of nums[i] + nums[j]
+     */
 	public int maximumSum(int[] nums) {
         Map<Integer, Integer> digitSumToMax = new HashMap<>();
         int maxSum = -1;
