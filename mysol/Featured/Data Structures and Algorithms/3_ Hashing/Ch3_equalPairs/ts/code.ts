@@ -1,32 +1,32 @@
-function maximumSum(nums: number[]): number {
-    const digitSumToMax = new Map<number, number>();
-    let maxSum = -1;
+function equalPairs(grid: number[][]): number {
+    const n = grid.length;
+    const rowMap = new Map<string, number>();
 
-    for (const num of nums) {
-        const digitSum = getDigitSum(num);
-        if (digitSumToMax.has(digitSum)) {
-            const prevMax = digitSumToMax.get(digitSum)!;
-            maxSum = Math.max(maxSum, prevMax + num);
-            digitSumToMax.set(digitSum, Math.max(prevMax, num));
-        } else {
-            digitSumToMax.set(digitSum, num);
+    // Store serialized rows in map
+    for (const row of grid) {
+        const key = row.join(',');
+        rowMap.set(key, (rowMap.get(key) ?? 0) + 1);
+    }
+
+    let count = 0;
+
+    // Compare serialized columns to map
+    for (let col = 0; col < n; col++) {
+        const colArr: number[] = [];
+        for (let row = 0; row < n; row++) {
+            colArr.push(grid[row][col]);
+        }
+        const key = colArr.join(',');
+        if (rowMap.has(key)) {
+            count += rowMap.get(key)!;
         }
     }
 
-    return maxSum;
+    return count;
 };
 
-const getDigitSum = (num: number): number => {
-    let sum = 0;
-    while (num > 0) {
-        sum += num % 10;
-        num = Math.floor(num / 10);
-    }
-    return sum;
-};
-
-const input: number[] = [18,43,36,13,7];
-const results = maximumSum(input);
+const input: number[][] = [[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]];
+const results = equalPairs(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
