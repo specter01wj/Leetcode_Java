@@ -675,6 +675,7 @@ By Jin Wang
 |2260|**Minimum Consecutive Cards to Pick Up**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2300|**Successful Pairs of Spells and Potions**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2336|**Smallest Number in Infinite Set**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2342|**Max Sum of a Pair With Equal Sum of Digits**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2352|**Equal Row and Column Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2390|**Removing Stars From a String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2462|**Total Cost to Hire K Workers**|Medium|Java/Javascript/Typescript|Done/Done/Done|
