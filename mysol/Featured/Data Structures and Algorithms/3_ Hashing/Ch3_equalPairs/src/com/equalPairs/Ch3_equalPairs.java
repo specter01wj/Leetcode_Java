@@ -18,7 +18,15 @@ public class Ch3_equalPairs {
         System.out.println("input: " + Arrays.deepToString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param grid: a list of 2D integers
+     * @return: the number of pairs (ri, cj)
+     */
 	public int equalPairs(int[][] grid) {
         int n = grid.length;
         Map<String, Integer> rowMap = new HashMap<>();
