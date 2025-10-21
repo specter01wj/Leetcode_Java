@@ -19,7 +19,16 @@ public class E771_Jewels_and_Stones {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param jewels: a string
+     * @param stones: a string
+     * @return: how many of the stones you have are also jewels
+     */
 	public int numJewelsInStones(String jewels, String stones) {
 		Set<Character> jewelSet = new HashSet<>();
 		
