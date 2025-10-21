@@ -16,7 +16,16 @@ public class E383_Ransom_Note {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param ransomNote: a string
+     * @param magazine: a string
+     * @return: true if ransomNote can be constructed
+     */
 	public boolean canConstruct(String ransomNote, String magazine) {
 		Map<Character, Integer> freq = new HashMap<>();
 		
