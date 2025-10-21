@@ -180,6 +180,7 @@ By Jin Wang
 |758|**Bold Words in String**|Easy|Java/Javascript|Done/Done|
 |760|**Find Anagram Mappings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |766|**Toeplitz Matrix**|Easy|Java/Javascript|Done/Done|
+|771|**Jewels and Stones**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |788|**Rotated Digits**|Easy|Java/Javascript|Done/Done|
 |800|**Similar RGB Color**|Easy|Java/Javascript|Done/Done|
 |804|**Unique Morse Code Words**|Easy|Java/Javascript|Done/Done|
