@@ -4,43 +4,41 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two strings ransomNote and magazine, return true if ransomNote 
-        can be constructed by using the letters from magazine and false otherwise.
+			 	You're given strings jewels representing the types of stones 
+        that are jewels, and stones representing the stones you have. 
+        Each character in stones is a type of stone you have. 
+        You want to know how many of the stones you have are also jewels.
 
-        Each letter in magazine can only be used once in ransomNote.
+        Letters are case sensitive, so "a" is considered a different type of stone from "A".
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param ransomNote: a string
-        * @param magazine: a string
-        * @return: true if ransomNote can be constructed
+        * @param jewels: a string
+        * @param stones: a string
+        * @return: how many of the stones you have are also jewels
         */
-        let canConstruct = function(ransomNote, magazine) {
-            const freq = new Map();
-            
-            for (const char of magazine) {
-              freq.set(char, (freq.get(char) || 0) + 1);
-            }
-            
-            for (const char of ransomNote) {
-              if (!freq.has(char) || freq.get(char) === 0) {
-                return false;
+        let numJewelsInStones = function(jewels, stones) {
+            const jewelSet = new Set(jewels);
+            let count = 0;
+
+            for (const stone of stones) {
+              if (jewelSet.has(stone)) {
+                count++;
               }
-              freq.set(char, freq.get(char) - 1);
             }
             
-            return true;
+            return count;
         };
 
-        const input = "aa";
-        const magazine = "aab";
-        let results = canConstruct(input, magazine);
+        const input = "aA";
+        const stones = "aAAbbbb";
+        let results = numJewelsInStones(input, stones);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				HashMap
+				HashSet
 			 */
 
 		</script>
