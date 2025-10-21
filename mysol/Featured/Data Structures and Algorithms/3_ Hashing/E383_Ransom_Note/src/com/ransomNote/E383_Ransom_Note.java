@@ -11,9 +11,10 @@ Each letter in magazine can only be used once in ransomNote.
 public class E383_Ransom_Note {
 
 	public static void main(String[] args) {
-		int[] input = {3,0,1,1,9,7};
-		int output = countGoodTriplets(input, 7, 2, 3);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		E383_Ransom_Note solution = new E383_Ransom_Note();
+		String input = "aa", magazine = "aab";
+		boolean output = solution.canConstruct(input, magazine);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	/*
