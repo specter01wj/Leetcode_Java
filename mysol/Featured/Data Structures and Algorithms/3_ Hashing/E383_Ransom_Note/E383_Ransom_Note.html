@@ -4,35 +4,43 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array nums containing n distinct numbers in the range [0, n], 
-        return the only number in the range that is missing from the array.
+			 	Given two strings ransomNote and magazine, return true if ransomNote 
+        can be constructed by using the letters from magazine and false otherwise.
+
+        Each letter in magazine can only be used once in ransomNote.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param nums: a list of integers
-        * @return: the only number in the range that is missing from the array
+        * @param ransomNote: a string
+        * @param magazine: a string
+        * @return: true if ransomNote can be constructed
         */
-        let missingNumber = function(nums) {
-            const numSet = new Set(nums);
-            const n = nums.length;
-
-            for (let i = 0; i <= n; i++) {
-              if (!numSet.has(i)) {
-                return i;
-              }
+        let canConstruct = function(ransomNote, magazine) {
+            const freq = new Map();
+            
+            for (const char of magazine) {
+              freq.set(char, (freq.get(char) || 0) + 1);
             }
-
-            return -1;
+            
+            for (const char of ransomNote) {
+              if (!freq.has(char) || freq.get(char) === 0) {
+                return false;
+              }
+              freq.set(char, freq.get(char) - 1);
+            }
+            
+            return true;
         };
 
-        const input = [9,6,4,2,3,5,7,0,1];
-        let results = missingNumber(input);
+        const input = "aa";
+        const magazine = "aab";
+        let results = missingNumber(input, magazine);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				HashSet
+				HashMap
 			 */
 
 		</script>
