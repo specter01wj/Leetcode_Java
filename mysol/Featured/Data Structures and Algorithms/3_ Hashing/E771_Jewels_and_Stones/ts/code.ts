@@ -1,23 +1,19 @@
-function canConstruct(ransomNote: string, magazine: string): boolean {
-    const freq: Map<string, number> = new Map();
+function numJewelsInStones(jewels: string, stones: string): number {
+    const jewelSet: Set<string> = new Set(jewels);
+    let count: number = 0;
 
-    for (const char of magazine) {
-        freq.set(char, (freq.get(char) || 0) + 1);
-    }
-
-    for (const char of ransomNote) {
-        if (!freq.has(char) || freq.get(char)! === 0) {
-            return false;
+    for (const stone of stones) {
+        if (jewelSet.has(stone)) {
+            count++;
         }
-        freq.set(char, freq.get(char)! - 1);
     }
 
-    return true;
+    return count;
 };
 
-const input: string = "aa";
-const magazine: string = "aab";
-const results = canConstruct(input, magazine);
+const input: string = "aA";
+const stones: string = "aAAbbbb";
+const results = canConstruct(input, stones);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
