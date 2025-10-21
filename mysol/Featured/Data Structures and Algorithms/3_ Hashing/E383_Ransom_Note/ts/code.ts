@@ -1,18 +1,23 @@
-function missingNumber(nums: number[]): number {
-    const numSet = new Set<number>(nums);
-    const n = nums.length;
+function canConstruct(ransomNote: string, magazine: string): boolean {
+    const freq: Map<string, number> = new Map();
 
-    for (let i = 0; i <= n; i++) {
-        if (!numSet.has(i)) {
-            return i;
-        }
+    for (const char of magazine) {
+        freq.set(char, (freq.get(char) || 0) + 1);
     }
 
-    return -1;
+    for (const char of ransomNote) {
+        if (!freq.has(char) || freq.get(char)! === 0) {
+            return false;
+        }
+        freq.set(char, freq.get(char)! - 1);
+    }
+
+    return true;
 };
 
-const input: number[] = [9,6,4,2,3,5,7,0,1];
-const results = missingNumber(input);
+const input: string = "aa";
+const magazine: string = "aab";
+const results = canConstruct(input, magazine);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
