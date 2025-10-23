@@ -4,43 +4,37 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a string text, you want to use the characters of text to form 
-        as many instances of the word "balloon" as possible.
-
-        You can use each character in text at most once. Return the maximum 
-        number of instances that can be formed.
-			 */
+      Given a string s, find the length of the longest substring without duplicate characters.
+      */
 			$(document).ready(function(){
         
 				/*
-        * @param text: a string
-        * @return: the maximum number of instances
+        * @param nums: a string
+        * @return: the length of the longest substring
         */
-        let maxNumberOfBalloons = function(text) {
-            const freq = new Map();
-            
-            // Count frequency of all characters
-            for (const c of text) {
-              freq.set(c, (freq.get(c) || 0) + 1);
+        let lengthOfLongestSubstring = function(s) {
+            const seen = new Set();
+            let left = 0, maxLength = 0;
+
+            for (let right = 0; right < s.length; right++) {
+                while (seen.has(s[right])) {
+                    seen.delete(s[left]);
+                    left++;
+                }
+                seen.add(s[right]);
+                maxLength = Math.max(maxLength, right - left + 1);
             }
-            
-            // balloon needs: b(1), a(1), l(2), o(2), n(1)
-            const b = freq.get('b') || 0;
-            const a = freq.get('a') || 0;
-            const l = Math.floor((freq.get('l') || 0) / 2);
-            const o = Math.floor((freq.get('o') || 0) / 2);
-            const n = freq.get('n') || 0;
-            
-            return Math.min(b, a, l, o, n);
+
+            return maxLength;
         };
 
-        const input = "loonbalxballpoon";
-        let results = maxNumberOfBalloons(input);
+        const input = "abcabcbb";
+        let results = lengthOfLongestSubstring(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				HashMap
+				HashSet
 			 */
 
 		</script>
