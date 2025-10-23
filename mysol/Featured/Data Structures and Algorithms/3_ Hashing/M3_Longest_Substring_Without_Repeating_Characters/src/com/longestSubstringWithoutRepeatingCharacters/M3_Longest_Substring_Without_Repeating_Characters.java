@@ -14,7 +14,15 @@ public class M3_Longest_Substring_Without_Repeating_Characters {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param nums: a string
+     * @return: the length of the longest substring
+     */
 	public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         int left = 0, maxLength = 0;
