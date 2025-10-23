@@ -65,8 +65,8 @@ By Jin Wang
 |1189|**Maximum Number of Balloons**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |525|**Contiguous Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |More hashing examples|||||
-|383|**Ransom Note**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-|771|**Jewels and Stones**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|383|**Ransom Note**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|771|**Jewels and Stones**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
