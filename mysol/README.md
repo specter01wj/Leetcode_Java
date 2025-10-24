@@ -74,7 +74,7 @@ By Jin Wang
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
 |206|**Reverse Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|217|**Contains Duplicate**|Easy|Java/Javascript|Done/Done|
+|217|**Contains Duplicate**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
 |225|**Implement Stack using Queues**|Easy|Java/Javascript||
 |226|**Invert Binary Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
