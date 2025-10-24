@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given two strings ransomNote and magazine, return true if ransomNote 
+        can be constructed by using the letters from magazine and false otherwise.
+
+        Each letter in magazine can only be used once in ransomNote.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param ransomNote: a string
+        * @param magazine: a string
+        * @return: true if ransomNote can be constructed
+        */
+        let canConstruct = function(ransomNote, magazine) {
+            const freq = new Map();
+            
+            for (const char of magazine) {
+              freq.set(char, (freq.get(char) || 0) + 1);
+            }
+            
+            for (const char of ransomNote) {
+              if (!freq.has(char) || freq.get(char) === 0) {
+                return false;
+              }
+              freq.set(char, freq.get(char) - 1);
+            }
+            
+            return true;
+        };
+
+        const input = "aa";
+        const magazine = "aab";
+        let results = canConstruct(input, magazine);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
