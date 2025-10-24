@@ -67,6 +67,14 @@ By Jin Wang
 |More hashing examples|||||
 |383|**Ransom Note**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |771|**Jewels and Stones**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3|**Longest Substring Without Repeating Characters**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+
+##### (Bonus problems, hashing)
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|Checking for existence|||||
+|217|**Contains Duplicate**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
