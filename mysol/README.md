@@ -610,7 +610,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |2|**Add Two Numbers**|Medium|Java/Javascript||
-|3|**Longest Substring Without Repeating Characters**|Medium|Java/Javascript||
+|3|**Longest Substring Without Repeating Characters**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |5|**Longest Palindromic Substring**|Medium|Java/Javascript||
 |6|**ZigZag Conversion**|Medium|Java/Javascript||
 |8|**LString to Integer (atoi)**|Medium|Java/Javascript||

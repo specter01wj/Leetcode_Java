@@ -517,7 +517,7 @@ Cspiration Category:
 |Substring||||||
 |76|Minimum Window Substring|Hard|Sliding Window|Java/Javascript||
 |30|Substring with Concatenation of All Words|Hard|Sliding Window|Java/Javascript||
-|3|Longest Substring Without Repeating Characters|Medium|Sliding Window|Java/Javascript||
+|3|Longest Substring Without Repeating Characters|Medium|Sliding Window|Java/Javascript/Typescript|Done/Done/Done|
 |340|Longest Substring with At Most K Distinct Characters|Hard|Sliding Window|Java/Javascript||
 |395|Longest Substring with At Least K Repeating Characters|Medium|Sliding Window|Java/Javascript||
 |159|Longest Substring with At Most Two Distinct Characters|Hard|Sliding Window|Java/Javascript||
