@@ -15,7 +15,15 @@ public class E217_Contains_Duplicate {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: true if any value appears at least twice in the array
+     */
 	public boolean containsDuplicate(int[] nums) {
 		Set<Integer> seen = new HashSet<>();
 		
