@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+      Given a string s, find the length of the longest substring without duplicate characters.
+      */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a string
+        * @return: the length of the longest substring
+        */
+        let lengthOfLongestSubstring = function(s) {
+            const seen = new Set();
+            let left = 0, maxLength = 0;
+
+            for (let right = 0; right < s.length; right++) {
+                while (seen.has(s[right])) {
+                    seen.delete(s[left]);
+                    left++;
+                }
+                seen.add(s[right]);
+                maxLength = Math.max(maxLength, right - left + 1);
+            }
+
+            return maxLength;
+        };
+
+        const input = "abcabcbb";
+        let results = lengthOfLongestSubstring(input);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashSet
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
