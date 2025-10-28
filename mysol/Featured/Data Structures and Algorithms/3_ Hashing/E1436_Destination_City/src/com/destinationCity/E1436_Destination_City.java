@@ -14,10 +14,14 @@ therefore, there will be exactly one destination city.
 public class E1436_Destination_City {
 
 	public static void main(String[] args) {
-		E1133_Largest_Unique_Number solution = new E1133_Largest_Unique_Number();
-		int[] input = {5,7,3,9,4,9,8,3,1};
-		int output = solution.largestUniqueNumber(input);
-        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+		E1436_Destination_City solution = new E1436_Destination_City();
+		List<List<String>> input = Arrays.asList(
+	            Arrays.asList("London", "New York"),
+	            Arrays.asList("New York", "Lima"),
+	            Arrays.asList("Lima", "Sao Paulo")
+	        );
+		String output = solution.destCity(input);
+        System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
 	/*
