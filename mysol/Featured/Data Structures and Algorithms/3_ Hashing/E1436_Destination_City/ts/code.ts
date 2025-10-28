@@ -1,18 +1,21 @@
-function countElements(arr: number[]): number {
-    const set = new Set<number>(arr);
-    let count = 0;
+function destCity(paths: string[][]): string {
+    const startingCities = new Set<string>();
 
-    for (const num of arr) {
-        if (set.has(num + 1)) {
-            count++;
+    for (const [from, _] of paths) {
+        startingCities.add(from);
+    }
+
+    for (const [_, to] of paths) {
+        if (!startingCities.has(to)) {
+            return to;
         }
     }
 
-    return count;
+    return "";
 };
 
-const input: number[] = [1,2,3];
-const results = countElements(input);
+const input: string[][] = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]];
+const results = destCity(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
