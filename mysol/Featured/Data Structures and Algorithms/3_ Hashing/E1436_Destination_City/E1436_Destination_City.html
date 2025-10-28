@@ -4,31 +4,38 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an integer array arr, count how many elements x there are, 
-        such that x + 1 is also in arr. If there are duplicates in arr, 
-        count them separately.
+			 	You are given the array paths, where paths[i] = [cityAi, cityBi] 
+        means there exists a direct path going from cityAi to cityBi. 
+        Return the destination city, that is, the city without any path 
+        outgoing to another city.
+
+        It is guaranteed that the graph of paths forms a line without any loop, 
+        therefore, there will be exactly one destination city.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param arr: a list of integers
-        * @return: count how many elements x
+        * @param nums: a list of 2D strings
+        * @return: the destination city
         */
-        let countElements = function(arr) {
-            const set = new Set(arr);
-            let count = 0;
+        let destCity = function(paths) {
+            const startingCities = new Set();
 
-            for (const num of arr) {
-              if (set.has(num + 1)) {
-                count++;
-              }
+            for (const [from, to] of paths) {
+                startingCities.add(from);
             }
 
-            return count;
+            for (const [from, to] of paths) {
+                if (!startingCities.has(to)) {
+                    return to;
+                }
+            }
+
+            return "";
         };
 
-        const input = [1,2,3];
-        let results = countElements(input);
+        const input = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]];
+        let results = destCity(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
