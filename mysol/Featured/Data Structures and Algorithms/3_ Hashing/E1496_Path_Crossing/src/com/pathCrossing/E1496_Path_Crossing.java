@@ -21,7 +21,15 @@ public class E1496_Path_Crossing {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param path: a string
+     * @return: true if the path crosses itself at any point
+     */
 	public boolean isPathCrossing(String path) {
         // Set to store visited coordinates as string "x,y"
         Set<String> visited = new HashSet<>();
