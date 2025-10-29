@@ -21,12 +21,13 @@ public class E1748_Sum_of_Unique_Elements {
 	public int sumOfUnique(int[] nums) {
 		Map<Integer, Integer> countMap = new HashMap<>();
 		
+		// Count occurrences of each number
 		for (int num : nums) {
 			countMap.put(num, countMap.getOrDefault(num, 0) + 1);
 		}
 		
 		int sum = 0;
-		
+		// Sum elements that appear exactly once
 		for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
 			if (entry.getValue() == 1) {
 				sum += entry.getKey();
