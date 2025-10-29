@@ -1,25 +1,23 @@
-function isPathCrossing(path: string): boolean {
-    const visited = new Set<string>();
-    let x = 0, y = 0;
+function sumOfUnique(nums: number[]): number {
+    const countMap = new Map<number, number>();
 
-    visited.add("0,0");
-
-    for (const dir of path) {
-        if (dir === 'N') y++;
-        else if (dir === 'S') y--;
-        else if (dir === 'E') x++;
-        else if (dir === 'W') x--;
-
-        const key = `${x},${y}`;
-        if (visited.has(key)) return true;
-        visited.add(key);
+    // Count occurrences
+    for (const num of nums) {
+        countMap.set(num, (countMap.get(num) || 0) + 1);
     }
 
-    return false;
+    let sum = 0;
+    for (const [key, value] of countMap.entries()) {
+        if (value === 1) {
+            sum += key;
+        }
+    }
+
+    return sum;
 };
 
-const input: string = "NESWW";
-const results = isPathCrossing(input);
+const input: number[] = [1,2,3,2];
+const results = sumOfUnique(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
