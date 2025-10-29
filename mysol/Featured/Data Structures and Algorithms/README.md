@@ -75,6 +75,8 @@ By Jin Wang
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |Checking for existence|||||
 |217|**Contains Duplicate**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1436|**Destination City**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1496|**Path Crossing**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
