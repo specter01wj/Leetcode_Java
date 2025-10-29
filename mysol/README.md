@@ -293,7 +293,7 @@ By Jin Wang
 |1426|**Counting Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1427|**Perform String Shifts**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1431|**Kids With the Greatest Number of Candies**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|1436|**Destination City**|Easy|Java/Javascript|Done/Done|
+|1436|**Destination City**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1437|**Check If All 1's Are at Least Length K Places Away**|Easy|Java/Javascript|Done/Done|
 |1446|**Consecutive Characters**|Easy|Java/Javascript|Done/Done|
 |1450|**Number of Students Doing Homework at a Given Time**|Easy|Java/Javascript|Done/Done|
