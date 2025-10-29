@@ -4,48 +4,43 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a string path, where path[i] = 'N', 'S', 'E' or 'W', 
-        each representing moving one unit north, south, east, or west, 
-        respectively. You start at the origin (0, 0) on a 2D plane 
-        and walk on the path specified by path.
+			 	You are given an integer array nums. The unique elements of 
+        an array are the elements that appear exactly once in the array.
 
-        Return true if the path crosses itself at any point, that is, 
-        if at any time you are on a location you have previously visited. 
-        Return false otherwise.
+        Return the sum of all the unique elements of nums.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param path: a string
-        * @return: true if the path crosses itself at any point
+        * @param nums: a list of integers
+        * @return: the sum of all the unique elements of nums
         */
-        let isPathCrossing = function(path) {
-            const visited = new Set();
-            let x = 0, y = 0;
-
-            visited.add("0,0");
-
-            for (const dir of path) {
-                if (dir === 'N') y++;
-                else if (dir === 'S') y--;
-                else if (dir === 'E') x++;
-                else if (dir === 'W') x--;
-
-                const key = `${x},${y}`;
-                if (visited.has(key)) return true;
-                visited.add(key);
+        let sumOfUnique = function(nums) {
+            const countMap = new Map();
+            
+            // Count occurrences of each number
+            for (const num of nums) {
+              countMap.set(num, (countMap.get(num) || 0) + 1);
             }
-
-            return false;
+            
+            let sum = 0;
+            // Sum only elements that appear exactly once
+            for (const [key, value] of countMap.entries()) {
+              if (value === 1) {
+                sum += key;
+              }
+            }
+            
+            return sum;
         };
 
-        const input = "NESWW";
-        let results = isPathCrossing(input);
+        const input = [1,2,3,2];
+        let results = sumOfUnique(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				HashSet
+				HashMap
 			 */
 
 		</script>
