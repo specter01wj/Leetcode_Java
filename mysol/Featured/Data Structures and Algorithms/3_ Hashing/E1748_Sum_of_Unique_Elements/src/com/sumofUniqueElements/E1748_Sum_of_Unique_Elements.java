@@ -1,10 +1,39 @@
 package com.sumofUniqueElements;
+import java.util.*;
+
+/*
+You are given an integer array nums. The unique elements of 
+an array are the elements that appear exactly once in the array.
+
+Return the sum of all the unique elements of nums.
+*/
 
 public class E1748_Sum_of_Unique_Elements {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		E1748_Sum_of_Unique_Elements solution = new E1748_Sum_of_Unique_Elements();
+		int[] input = {1,2,3,2};
+		int output = solution.sumOfUnique(input);
+        System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
+	}
+	
+	
+	public int sumOfUnique(int[] nums) {
+		Map<Integer, Integer> countMap = new HashMap<>();
+		
+		for (int num : nums) {
+			countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+		}
+		
+		int sum = 0;
+		
+		for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+			if (entry.getValue() == 1) {
+				sum += entry.getKey();
+			}
+		}
+		
+		return sum;
 	}
 
 }
