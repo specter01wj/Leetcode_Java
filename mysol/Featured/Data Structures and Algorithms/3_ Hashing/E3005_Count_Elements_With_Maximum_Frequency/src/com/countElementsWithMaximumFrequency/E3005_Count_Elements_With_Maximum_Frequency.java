@@ -19,7 +19,15 @@ public class E3005_Count_Elements_With_Maximum_Frequency {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the total frequencies of elements in nums
+     */
 	public int maxFrequencyElements(int[] nums) {
         HashMap<Integer, Integer> freqMap = new HashMap<>();
         int maxFreq = 0;
