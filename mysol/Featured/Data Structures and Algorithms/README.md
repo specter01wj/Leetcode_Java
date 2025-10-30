@@ -77,6 +77,8 @@ By Jin Wang
 |217|**Contains Duplicate**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1436|**Destination City**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1496|**Path Crossing**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1748|**Sum of Unique Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|3005|**Count Elements With Maximum Frequency**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
