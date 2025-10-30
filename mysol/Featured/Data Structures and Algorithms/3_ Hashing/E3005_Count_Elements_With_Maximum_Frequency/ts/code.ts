@@ -1,23 +1,27 @@
-function sumOfUnique(nums: number[]): number {
-    const countMap = new Map<number, number>();
+function maxFrequencyElements(nums: number[]): number {
+    const freqMap: Map<number, number> = new Map();
+    let maxFreq = 0;
+    let sum = 0;
 
-    // Count occurrences
     for (const num of nums) {
-        countMap.set(num, (countMap.get(num) || 0) + 1);
+        const freq = (freqMap.get(num) || 0) + 1;
+        freqMap.set(num, freq);
+        if (freq > maxFreq) {
+            maxFreq = freq;
+        }
     }
 
-    let sum = 0;
-    for (const [key, value] of countMap.entries()) {
-        if (value === 1) {
-            sum += key;
+    for (const freq of freqMap.values()) {
+        if (freq === maxFreq) {
+            sum += freq;
         }
     }
 
     return sum;
 };
 
-const input: number[] = [1,2,3,2];
-const results = sumOfUnique(input);
+const input: number[] = [1,2,2,3,1,4];
+const results = maxFrequencyElements(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
