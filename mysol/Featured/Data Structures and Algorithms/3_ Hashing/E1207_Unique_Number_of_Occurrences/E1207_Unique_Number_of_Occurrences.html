@@ -4,40 +4,37 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of integers arr, a lucky integer is an integer 
-        that has a frequency in the array equal to its value.
-
-        Return the largest lucky integer in the array. If there is no 
-        lucky integer return -1.
+			 	Given an array of integers arr, return true if the number of 
+        occurrences of each value in the array is unique or false otherwise.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param arr: a list of integers
-        * @return: the largest lucky integer in the array
+        * @return: true if the number of occurrences of each value in the array is unique
         */
-        let findLucky = function(arr) {
-            const freqMap = new Map();
+        let uniqueOccurrences = function(arr) {
+            const countMap = new Map();
             
             // Count frequency of each number
             for (const num of arr) {
-              freqMap.set(num, (freqMap.get(num) || 0) + 1);
+                countMap.set(num, (countMap.get(num) || 0) + 1);
             }
             
-            let result = -1;
-            
-            // Check for lucky integers
-            for (const [num, freq] of freqMap.entries()) {
-              if (num === freq) {
-                result = Math.max(result, num);
-              }
+            // Use a HashSet to check for duplicate frequencies
+            const freqSet = new Set<>();
+            for (const freq of countMap.values()) {
+                if (freqSet.has(freq)) {
+                    return false; // frequency already exists
+                }
+                freqSet.add(freq);
             }
             
-            return result;
+            return true;
         };
 
-        const input = [1,2,2,3,3,3];
-        let results = findLucky(input);
+        const input = [1,2,2,1,1,3];
+        let results = uniqueOccurrences(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
