@@ -15,7 +15,15 @@ public class E1207_Unique_Number_of_Occurrences {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: true if the number of occurrences of each value in the array is unique
+     */
 	public boolean uniqueOccurrences(int[] arr) {
         Map<Integer, Integer> countMap = new HashMap<>();
         
