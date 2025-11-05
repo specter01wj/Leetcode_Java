@@ -22,7 +22,7 @@
             }
             
             // Use a HashSet to check for duplicate frequencies
-            const freqSet = new Set<>();
+            const freqSet = new Set();
             for (const freq of countMap.values()) {
                 if (freqSet.has(freq)) {
                     return false; // frequency already exists
