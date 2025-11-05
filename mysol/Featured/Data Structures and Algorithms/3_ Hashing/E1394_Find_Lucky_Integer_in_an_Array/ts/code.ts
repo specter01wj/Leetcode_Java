@@ -1,27 +1,23 @@
-function maxFrequencyElements(nums: number[]): number {
+function findLucky(arr: number[]): number {
     const freqMap: Map<number, number> = new Map();
-    let maxFreq = 0;
-    let sum = 0;
 
-    for (const num of nums) {
-        const freq = (freqMap.get(num) || 0) + 1;
-        freqMap.set(num, freq);
-        if (freq > maxFreq) {
-            maxFreq = freq;
+    for (const num of arr) {
+        freqMap.set(num, (freqMap.get(num) || 0) + 1);
+    }
+
+    let result = -1;
+
+    for (const [num, freq] of freqMap.entries()) {
+        if (num === freq) {
+            result = Math.max(result, num);
         }
     }
 
-    for (const freq of freqMap.values()) {
-        if (freq === maxFreq) {
-            sum += freq;
-        }
-    }
-
-    return sum;
+    return result;
 };
 
-const input: number[] = [1,2,2,3,1,4];
-const results = maxFrequencyElements(input);
+const input: number[] = [1,2,2,3,3,3];
+const results = findLucky(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
