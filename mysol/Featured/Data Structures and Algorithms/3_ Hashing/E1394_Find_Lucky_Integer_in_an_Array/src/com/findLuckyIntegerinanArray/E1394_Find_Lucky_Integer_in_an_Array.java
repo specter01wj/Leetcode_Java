@@ -18,7 +18,15 @@ public class E1394_Find_Lucky_Integer_in_an_Array {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param arr: a list of integers
+     * @return: the largest lucky integer in the array
+     */
 	public int findLucky(int[] arr) {
 		Map<Integer, Integer> freqMap = new HashMap<>();
 		
