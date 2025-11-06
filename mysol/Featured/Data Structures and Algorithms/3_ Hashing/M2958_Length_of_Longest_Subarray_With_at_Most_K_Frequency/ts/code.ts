@@ -1,25 +1,24 @@
-function frequencySort(s: string): string {
-    const freqMap: Map<string, number> = new Map();
+function maxSubarrayLength(nums: number[], k: number): number {
+    const freq = new Map<number, number>();
+    let left = 0, maxLen = 0;
 
-    // Count character frequencies
-    for (const char of s) {
-        freqMap.set(char, (freqMap.get(char) || 0) + 1);
+    for (let right = 0; right < nums.length; right++) {
+        freq.set(nums[right], (freq.get(nums[right]) || 0) + 1);
+
+        while ((freq.get(nums[right]) ?? 0) > k) {
+            freq.set(nums[left], (freq.get(nums[left]) ?? 0) - 1);
+            left++;
+        }
+
+        maxLen = Math.max(maxLen, right - left + 1);
     }
 
-    // Sort characters by frequency descending
-    const sorted = [...freqMap.entries()].sort((a, b) => b[1] - a[1]);
-
-    // Build result string
-    let result = '';
-    for (const [char, freq] of sorted) {
-        result += char.repeat(freq);
-    }
-
-    return result;
+    return maxLen;
 };
 
-const input: string = "tree";
-const results = frequencySort(input);
+const input: number[] = [1,2,3,1,2,3,1,2];
+const k: number = 2;
+const results = maxSubarrayLength(input, k);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
