@@ -697,6 +697,7 @@ By Jin Wang
 |2705|**Compact Object**|Medium|Javascript/Typescript|Done/Done|
 |2721|**Execute Asynchronous Functions in Parallel**|Medium|Javascript/Typescript|Done/Done|
 |2722|**Join Two Arrays by ID**|Medium|Javascript/Typescript|Done/Done|
+|2958|**Length of Longest Subarray With at Most K Frequency**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### Hard Level

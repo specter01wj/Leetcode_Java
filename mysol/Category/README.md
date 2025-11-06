@@ -399,6 +399,7 @@ Cspiration Category:
 |2946|Matrix Similarity After Cyclic Shifts|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2951|Find the Peaks|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2956|Find Common Elements Between Two Arrays|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|2958|Length of Longest Subarray With at Most K Frequency|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2960|Count Tested Devices After Test Operations|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2965|Find Missing and Repeated Values|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |2970|Count the Number of Incremovable Subarrays I|Easy||Java/Javascript/Typescript|Done/Done/Done|
