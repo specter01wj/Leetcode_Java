@@ -82,6 +82,8 @@ By Jin Wang
 |3005|**Count Elements With Maximum Frequency**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1394|**Find Lucky Integer in an Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1207|**Unique Number of Occurrences**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|451|**Sort Characters By Frequency**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2958|**Length of Longest Subarray With at Most K Frequency**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
