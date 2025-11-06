@@ -1,24 +1,25 @@
-function uniqueOccurrences(arr: number[]): boolean {
-    const countMap: Map<number, number> = new Map();
+function frequencySort(s: string): string {
+    const freqMap: Map<string, number> = new Map();
 
-    // Count frequency of each number
-    for (const num of arr) {
-        countMap.set(num, (countMap.get(num) || 0) + 1);
+    // Count character frequencies
+    for (const char of s) {
+        freqMap.set(char, (freqMap.get(char) || 0) + 1);
     }
 
-    const seen: Set<number> = new Set();
-    for (const freq of countMap.values()) {
-        if (seen.has(freq)) {
-            return false;
-        }
-        seen.add(freq);
+    // Sort characters by frequency descending
+    const sorted = [...freqMap.entries()].sort((a, b) => b[1] - a[1]);
+
+    // Build result string
+    let result = '';
+    for (const [char, freq] of sorted) {
+        result += char.repeat(freq);
     }
 
-    return true;
+    return result;
 };
 
-const input: number[] = [1,2,2,1,1,3];
-const results = uniqueOccurrences(input);
+const input: string = "tree";
+const results = frequencySort(input);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
