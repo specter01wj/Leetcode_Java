@@ -18,7 +18,15 @@ public class M451_Sort_Characters_By_Frequency {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param s: a string
+     * @return: the sorted string
+     */
 	public String frequencySort(String s) {
         Map<Character, Integer> freqMap = new HashMap<>();
 
