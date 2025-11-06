@@ -23,7 +23,16 @@ public class M2958_Length_of_Longest_Subarray_With_at_Most_K_Frequency {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @param k: an integer
+     * @return: the length of the longest good subarray of nums
+     */
 	public int maxSubarrayLength(int[] nums, int k) {
         Map<Integer, Integer> freq = new HashMap<>();
         int left = 0, maxLen = 0;
