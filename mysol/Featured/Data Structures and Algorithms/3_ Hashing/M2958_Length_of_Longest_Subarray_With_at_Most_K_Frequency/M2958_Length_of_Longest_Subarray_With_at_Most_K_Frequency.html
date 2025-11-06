@@ -4,40 +4,44 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a string s, sort it in decreasing order based on the frequency 
-        of the characters. 
-        The frequency of a character is the number of times it appears in the string.
+			 	You are given an integer array nums and an integer k.
 
-        Return the sorted string. If there are multiple answers, return any of them.
+        The frequency of an element x is the number of times it occurs in an array.
+
+        An array is called good if the frequency of each element in this array is less than or equal to k.
+
+        Return the length of the longest good subarray of nums.
+
+        A subarray is a contiguous non-empty sequence of elements within an array.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param s: a string
-        * @return: the sorted string
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @return: the length of the longest good subarray of nums
         */
-        let frequencySort = function(s) {
-            const freqMap = new Map();
+        let maxSubarrayLength = function(nums, k) {
+            const freq = new Map();
+            let left = 0, maxLen = 0;
 
-            // Count character frequencies
-            for (const char of s) {
-                freqMap.set(char, (freqMap.get(char) || 0) + 1);
+            for (let right = 0; right < nums.length; right++) {
+                freq.set(nums[right], (freq.get(nums[right]) || 0) + 1);
+
+                while (freq.get(nums[right]) > k) {
+                    freq.set(nums[left], freq.get(nums[left]) - 1);
+                    left++;
+                }
+
+                maxLen = Math.max(maxLen, right - left + 1);
             }
 
-            // Convert map to array and sort by frequency descending
-            const sorted = [...freqMap.entries()].sort((a, b) => b[1] - a[1]);
-
-            // Build result string
-            let result = '';
-            for (const [char, freq] of sorted) {
-                result += char.repeat(freq);
-            }
-
-            return result;
+            return maxLen;
         };
 
-        const input = "tree";
-        let results = frequencySort(input);
+        const input = [1,2,3,1,2,3,1,2];
+        const k = 2;
+        let results = maxSubarrayLength(input, k);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
