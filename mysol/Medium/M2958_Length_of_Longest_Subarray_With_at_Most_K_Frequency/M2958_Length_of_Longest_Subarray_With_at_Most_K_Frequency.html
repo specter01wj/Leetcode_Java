@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given an integer array nums and an integer k.
+
+        The frequency of an element x is the number of times it occurs in an array.
+
+        An array is called good if the frequency of each element in this array is less than or equal to k.
+
+        Return the length of the longest good subarray of nums.
+
+        A subarray is a contiguous non-empty sequence of elements within an array.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @param k: an integer
+        * @return: the length of the longest good subarray of nums
+        */
+        let maxSubarrayLength = function(nums, k) {
+            const freq = new Map();
+            let left = 0, maxLen = 0;
+
+            for (let right = 0; right < nums.length; right++) {
+                freq.set(nums[right], (freq.get(nums[right]) || 0) + 1);
+
+                while (freq.get(nums[right]) > k) {
+                    freq.set(nums[left], freq.get(nums[left]) - 1);
+                    left++;
+                }
+
+                maxLen = Math.max(maxLen, right - left + 1);
+            }
+
+            return maxLen;
+        };
+
+        const input = [1,2,3,1,2,3,1,2];
+        const k = 2;
+        let results = maxSubarrayLength(input, k);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
