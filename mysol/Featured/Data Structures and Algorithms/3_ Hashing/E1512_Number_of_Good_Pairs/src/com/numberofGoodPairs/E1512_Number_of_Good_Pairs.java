@@ -16,7 +16,15 @@ public class E1512_Number_of_Good_Pairs {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the number of good pairs
+     */
 	public int numIdenticalPairs(int[] nums) {
 		Map<Integer, Integer> freqMap = new HashMap<>();
 		int count = 0;
