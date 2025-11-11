@@ -18,7 +18,15 @@ public class M930_Binary_Subarrays_With_Sum {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the largest integer
+     */
 	public int numSubarraysWithSum(int[] nums, int goal) {
         Map<Integer, Integer> prefixSumCount = new HashMap<>();
         prefixSumCount.put(0, 1); // for subarrays starting from index 0
