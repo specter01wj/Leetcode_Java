@@ -230,7 +230,7 @@ Cspiration Category:
 |1491|Average Salary Excluding the Minimum and Maximum Salary|Easy||Java/Javascript|Done/Done|
 |1493|Longest Subarray of 1's After Deleting One Element|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1502|Can Make Arithmetic Progression From Sequence|Easy||Java/Javascript|Done/Done|
-|1512|Number of Good Pairs|Easy||Java/Javascript|Done/Done|
+|1512|Number of Good Pairs|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1534|Count Good Triplets|Easy||Java/Javascript|Done/Done|
 |1539|Kth Missing Positive Number|Easy||Java/Javascript|Done/Done|
 |1550|Three Consecutive Odds|Easy||Java/Javascript|Done/Done|
