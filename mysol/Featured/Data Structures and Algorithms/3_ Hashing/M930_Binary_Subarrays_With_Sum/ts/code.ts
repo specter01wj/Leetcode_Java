@@ -1,21 +1,24 @@
-function numIdenticalPairs(nums: number[]): number {
-    const freqMap: Record<number, number> = {};
+function numSubarraysWithSum(nums: number[], goal: number): number {
+    const prefixMap: Map<number, number> = new Map();
+    prefixMap.set(0, 1);
+
+    let sum = 0;
     let count = 0;
 
-    for (const num of nums) {
-        if (freqMap[num]) {
-        count += freqMap[num]; // count how many good pairs can be formed
-        freqMap[num]++;
-        } else {
-        freqMap[num] = 1;
+    for (let num of nums) {
+        sum += num;
+        if (prefixMap.has(sum - goal)) {
+            count += prefixMap.get(sum - goal)!;
         }
+        prefixMap.set(sum, (prefixMap.get(sum) || 0) + 1);
     }
 
     return count;
 };
 
-const input: number[] = [1,2,3,1,1,3];
-const results = numIdenticalPairs(input);
+const input: number[] = [1,0,1,0,1;
+const goal: number = 2;
+const results = numSubarraysWithSum(input, goal);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
