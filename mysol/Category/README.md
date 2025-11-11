@@ -154,6 +154,7 @@ Cspiration Category:
 |914|X of a Kind in a Deck of Cards|Easy||Java/Javascript|Done/Done|
 |922|Sort Array By Parity II|Easy||Java/Javascript|Done/Done|
 |929|Unique Email Addresses|Easy||Java/Javascript|Done/Done|
+|930|Binary Subarrays With Sum|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |941|Valid Mountain Array|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |942|DI String Match|Easy||Java/Javascript|Done/Done|
 |944|Delete Columns to Make Sorted|Easy||Java/Javascript|Done/Done|
