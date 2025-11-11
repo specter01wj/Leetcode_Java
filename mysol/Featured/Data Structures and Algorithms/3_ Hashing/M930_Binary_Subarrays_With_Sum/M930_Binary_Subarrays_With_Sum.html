@@ -4,34 +4,38 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given an array of integers nums, return the number of good pairs.
+			 	Given a binary array nums and an integer goal, 
+        return the number of non-empty subarrays with a sum goal.
 
-        A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+        A subarray is a contiguous part of the array.
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: the number of good pairs
+        * @return: the largest integer
         */
-        let numIdenticalPairs = function(nums) {
-            const freqMap = new Map();
+        let numSubarraysWithSum = function(nums, goal) {
+            const prefixMap = new Map();
+            prefixMap.set(0, 1);
+
+            let sum = 0;
             let count = 0;
-            
-            for (const num of nums) {
-              if (freqMap[num]) {
-                count += freqMap[num]; // all previous same elements form a good pair with current
-                freqMap[num]++;
-              } else {
-                freqMap[num] = 1;
-              }
+
+            for (let num of nums) {
+                sum += num;
+                if (prefixMap.has(sum - goal)) {
+                    count += prefixMap.get(sum - goal);
+                }
+                prefixMap.set(sum, (prefixMap.get(sum) || 0) + 1);
             }
-            
+
             return count;
         };
 
-        const input = [1,2,3,1,1,3];
-        let results = numIdenticalPairs(input);
+        const input = [1,0,1,0,1];
+        const goal = 2;
+        let results = numSubarraysWithSum(input, goal);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
