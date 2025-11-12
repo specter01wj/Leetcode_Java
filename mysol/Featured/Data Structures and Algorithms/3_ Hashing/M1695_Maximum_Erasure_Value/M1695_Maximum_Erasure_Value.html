@@ -4,43 +4,46 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given a binary array nums and an integer goal, 
-        return the number of non-empty subarrays with a sum goal.
+			 	You are given an array of positive integers nums and want to 
+        erase a subarray containing unique elements. The score you get 
+        by erasing the subarray is equal to the sum of its elements.
 
-        A subarray is a contiguous part of the array.
+        Return the maximum score you can get by erasing exactly one subarray.
+
+        An array b is called to be a subarray of a if it forms a contiguous 
+        subsequence of a, that is, if it is equal to a[l],a[l+1],...,a[r] for some (l,r).
 			 */
 			$(document).ready(function(){
         
 				/*
         * @param nums: a list of integers
-        * @return: the largest integer
+        * @return: the maximum score you can get by erasing exactly one subarray
         */
-        let numSubarraysWithSum = function(nums, goal) {
-            const prefixMap = new Map();
-            prefixMap.set(0, 1);
+        let maximumUniqueSubarray = function(nums) {
+            const seen = new Set();
+            let left = 0, currentSum = 0, maxSum = 0;
 
-            let sum = 0;
-            let count = 0;
-
-            for (let num of nums) {
-                sum += num;
-                if (prefixMap.has(sum - goal)) {
-                    count += prefixMap.get(sum - goal);
+            for (let right = 0; right < nums.length; right++) {
+                while (seen.has(nums[right])) {
+                    seen.delete(nums[left]);
+                    currentSum -= nums[left];
+                    left++;
                 }
-                prefixMap.set(sum, (prefixMap.get(sum) || 0) + 1);
+                seen.add(nums[right]);
+                currentSum += nums[right];
+                maxSum = Math.max(maxSum, currentSum);
             }
 
-            return count;
+            return maxSum;
         };
 
-        const input = [1,0,1,0,1];
-        const goal = 2;
-        let results = numSubarraysWithSum(input, goal);
+        const input = [4,2,4,5,6];
+        let results = maximumUniqueSubarray(input);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
 			/*sol:
-				HashMap
+				HashSet
 			 */
 
 		</script>
