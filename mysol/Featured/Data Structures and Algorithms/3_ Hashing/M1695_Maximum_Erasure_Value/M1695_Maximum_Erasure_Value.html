@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	Given a binary array nums and an integer goal, 
+        return the number of non-empty subarrays with a sum goal.
+
+        A subarray is a contiguous part of the array.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param nums: a list of integers
+        * @return: the largest integer
+        */
+        let numSubarraysWithSum = function(nums, goal) {
+            const prefixMap = new Map();
+            prefixMap.set(0, 1);
+
+            let sum = 0;
+            let count = 0;
+
+            for (let num of nums) {
+                sum += num;
+                if (prefixMap.has(sum - goal)) {
+                    count += prefixMap.get(sum - goal);
+                }
+                prefixMap.set(sum, (prefixMap.get(sum) || 0) + 1);
+            }
+
+            return count;
+        };
+
+        const input = [1,0,1,0,1];
+        const goal = 2;
+        let results = numSubarraysWithSum(input, goal);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
