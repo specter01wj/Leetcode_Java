@@ -21,7 +21,15 @@ public class M1695_Maximum_Erasure_Value {
         System.out.println("input: " + Arrays.toString(input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashSet
+    */
 	
+	/*
+     * @param nums: a list of integers
+     * @return: the maximum score you can get by erasing exactly one subarray
+     */
 	public int maximumUniqueSubarray(int[] nums) {
         Set<Integer> seen = new HashSet<>();
         int left = 0, right = 0;
