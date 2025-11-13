@@ -646,6 +646,7 @@ By Jin Wang
 |525|**Contiguous Array**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |547|**Number of Provinces**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |560|**Subarray Sum Equals K**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|567|**Permutation in String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |649|**Dota2 Senate**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |714|**Best Time to Buy and Sell Stock with Transaction Fee**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
