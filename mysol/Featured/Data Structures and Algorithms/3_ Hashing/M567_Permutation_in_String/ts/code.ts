@@ -1,25 +1,45 @@
-function findMaxLength(nums: number[]): number {
-    const sumToIndex: Map<number, number> = new Map();
-    sumToIndex.set(0, -1);
+function checkInclusion(s1: string, s2: string): boolean {
+    if (s1.length > s2.length) return false;
 
-    let maxLen = 0;
-    let sum = 0;
+    const s1Map = new Map<string, number>();
+    const windowMap = new Map<string, number>();
 
-    for (let i = 0; i < nums.length; i++) {
-        sum += (nums[i] === 0) ? -1 : 1;
-
-        if (sumToIndex.has(sum)) {
-            maxLen = Math.max(maxLen, i - sumToIndex.get(sum)!);
-        } else {
-            sumToIndex.set(sum, i);
-        }
+    for (const c of s1) {
+        s1Map.set(c, (s1Map.get(c) || 0) + 1);
     }
 
-    return maxLen;
+    let left = 0, right = 0;
+
+    while (right < s2.length) {
+        const curr = s2[right];
+        windowMap.set(curr, (windowMap.get(curr) || 0) + 1);
+        right++;
+
+        if (right - left > s1.length) {
+            const leftChar = s2[left];
+            windowMap.set(leftChar, windowMap.get(leftChar)! - 1);
+            if (windowMap.get(leftChar) === 0) {
+                windowMap.delete(leftChar);
+            }
+            left++;
+        }
+
+        if (mapsAreEqual(s1Map, windowMap)) return true;
+    }
+
+    return false;
 };
 
-const input: number[] = [0,1,1,1,1,1,0,0,0];
-const results = findMaxLength(input);
+function mapsAreEqual(map1: Map<string, number>, map2: Map<string, number>): boolean {
+    if (map1.size !== map2.size) return false;
+    for (const [key, val] of map1) {
+        if (map2.get(key) !== val) return false;
+    }
+    return true;
+}
+
+const input: string = "ab", s2: string = "eidbaooo";
+const results = checkInclusion(input, s2);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
