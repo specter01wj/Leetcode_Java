@@ -670,6 +670,7 @@ By Jin Wang
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1695|**Maximum Erasure Value**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2095|**Delete the Middle Node of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
