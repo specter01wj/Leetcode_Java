@@ -16,7 +16,16 @@ public class M567_Permutation_in_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param s1: a string
+     * @param s2: a string
+     * @return: true if one of s1's permutations is the substring of s2
+     */
 	public boolean checkInclusion(String s1, String s2) {
         if (s1.length() > s2.length()) return false;
 
