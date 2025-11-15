@@ -87,6 +87,7 @@ By Jin Wang
 |1695|**Maximum Erasure Value**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
+
 |567|**Permutation in String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
