@@ -20,7 +20,16 @@ public class E205_Isomorphic_Strings {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param s: a string
+     * @param t: a string
+     * @return: determine if they are isomorphic
+     */
 	public boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) return false;
 
