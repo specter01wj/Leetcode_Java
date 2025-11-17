@@ -1,21 +1,31 @@
-function destCity(paths: string[][]): string {
-    const startingCities = new Set<string>();
+function isIsomorphic(s: string, t: string): boolean {
+    if (s.length !== t.length) return false;
 
-    for (const [from, _] of paths) {
-        startingCities.add(from);
-    }
+    const mapST: Map<string, string> = new Map();
+    const mapTS: Map<string, string> = new Map();
 
-    for (const [_, to] of paths) {
-        if (!startingCities.has(to)) {
-            return to;
+    for (let i = 0; i < s.length; i++) {
+        const sc = s[i];
+        const tc = t[i];
+
+        if (mapST.has(sc)) {
+            if (mapST.get(sc) !== tc) return false;
+        } else {
+            mapST.set(sc, tc);
+        }
+
+        if (mapTS.has(tc)) {
+            if (mapTS.get(tc) !== sc) return false;
+        } else {
+            mapTS.set(tc, sc);
         }
     }
 
-    return "";
+    return true;
 };
 
-const input: string[][] = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]];
-const results = destCity(input);
+const input: string = "egg", t: string = "add";
+const results = isIsomorphic(input, t);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
