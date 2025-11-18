@@ -1,31 +1,32 @@
-function isIsomorphic(s: string, t: string): boolean {
-    if (s.length !== t.length) return false;
+function wordPattern(pattern: string, s: string): boolean {
+   const words = s.split(" ");
+    if (words.length !== pattern.length) return false;
 
-    const mapST: Map<string, string> = new Map();
-    const mapTS: Map<string, string> = new Map();
+    const charToWord = new Map<string, string>();
+    const wordToChar = new Map<string, string>();
 
-    for (let i = 0; i < s.length; i++) {
-        const sc = s[i];
-        const tc = t[i];
+    for (let i = 0; i < pattern.length; i++) {
+        const c = pattern[i];
+        const word = words[i];
 
-        if (mapST.has(sc)) {
-            if (mapST.get(sc) !== tc) return false;
+        if (charToWord.has(c)) {
+            if (charToWord.get(c) !== word) return false;
         } else {
-            mapST.set(sc, tc);
+            charToWord.set(c, word);
         }
 
-        if (mapTS.has(tc)) {
-            if (mapTS.get(tc) !== sc) return false;
+        if (wordToChar.has(word)) {
+            if (wordToChar.get(word) !== c) return false;
         } else {
-            mapTS.set(tc, sc);
+            wordToChar.set(word, c);
         }
     }
 
-    return true;
+    return true; 
 };
 
-const input: string = "egg", t: string = "add";
-const results = isIsomorphic(input, t);
+const input: string = "abba", s: string = "dog cat cat dog";
+const results = wordPattern(input, s);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
