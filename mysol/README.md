@@ -72,7 +72,7 @@ By Jin Wang
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
 |203|**Remove Linked List Elements**|Easy|Java/Javascript||
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
-|205|**Isomorphic Strings**|Easy|Java/Javascript|Done/Done|
+|205|**Isomorphic Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |206|**Reverse Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |217|**Contains Duplicate**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |219|**Contains Duplicate II**|Easy|Java/Javascript|Done/Done|
