@@ -21,7 +21,16 @@ public class E290_Word_Pattern {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param pattern: a string
+     * @param str: a string
+     * @return: find if s follows the same pattern
+     */
 	public boolean wordPattern(String pattern, String str) {
         String[] words = str.split(" ");
         if (words.length != pattern.length()) return false;
