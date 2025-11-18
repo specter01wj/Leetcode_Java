@@ -98,7 +98,7 @@ By Jin Wang
 |276|**Paint Fence**|Easy|Java/Javascript||
 |278|**First Bad Version**|Easy|Java/Javascript|Done/Done|
 |283|**Move Zeroes**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|290|**Word Pattern**|Easy|Java/Javascript|Done/Done|
+|290|**Word Pattern**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |292|**Nim Game**|Easy|Java/Javascript|Done/Done|
 |293|**Flip Game**|Easy|Java/Javascript|Done/Done|
 |299|**Bulls and Cows**|Easy|Java/Javascript||
