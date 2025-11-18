@@ -4,49 +4,51 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	Given two strings s and t, determine if they are isomorphic.
+			 	Given a pattern and a string s, find if s follows the same pattern.
 
-        Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+        Here follow means a full match, such that there is a bijection between 
+        a letter in pattern and a non-empty word in s. Specifically:
 
-        All occurrences of a character must be replaced with another character 
-        while preserving the order of characters. No two characters may map to 
-        the same character, but a character may map to itself.
+        . Each letter in pattern maps to exactly one unique word in s.
+        . Each unique word in s maps to exactly one letter in pattern.
+        . No two letters map to the same word, and no two words map to the same letter.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param s: a string
-        * @param t: a string
-        * @return: determine if they are isomorphic
+        * @param pattern: a string
+        * @param str: a string
+        * @return: find if s follows the same pattern
         */
-        let isIsomorphic = function(s, t) {
-            if (s.length !== t.length) return false;
+        let wordPattern = function(pattern, s) {
+            const words = s.split(" ");
+            if (words.length !== pattern.length) return false;
 
-            const mapST = new Map();
-            const mapTS = new Map();
+            const charToWord = new Map();
+            const wordToChar = new Map();
 
-            for (let i = 0; i < s.length; i++) {
-                const sc = s[i];
-                const tc = t[i];
+            for (let i = 0; i < pattern.length; i++) {
+                const c = pattern[i];
+                const word = words[i];
 
-                if (mapST.has(sc)) {
-                    if (mapST.get(sc) !== tc) return false;
+                if (charToWord.has(c)) {
+                    if (charToWord.get(c) !== word) return false;
                 } else {
-                    mapST.set(sc, tc);
+                    charToWord.set(c, word);
                 }
 
-                if (mapTS.has(tc)) {
-                    if (mapTS.get(tc) !== sc) return false;
+                if (wordToChar.has(word)) {
+                    if (wordToChar.get(word) !== c) return false;
                 } else {
-                    mapTS.set(tc, sc);
+                    wordToChar.set(word, c);
                 }
             }
 
             return true;
         };
 
-        const input = "egg", t = "add";
-        let results = isIsomorphic(input, t);
+        const input = "abba", t = "dog cat cat dog";
+        let results = wordPattern(input, t);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
