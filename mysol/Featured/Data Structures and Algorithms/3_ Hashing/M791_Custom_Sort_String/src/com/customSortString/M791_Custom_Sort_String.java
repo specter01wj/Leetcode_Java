@@ -21,7 +21,16 @@ public class M791_Custom_Sort_String {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param order: a string
+     * @param s: a string
+     * @return: any permutation of s that satisfies this property
+     */
 	public String customSortString(String order, String s) {
         // Count frequency of each character in s
         Map<Character, Integer> freqMap = new HashMap<>();
