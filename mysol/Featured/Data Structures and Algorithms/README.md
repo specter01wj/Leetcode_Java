@@ -89,6 +89,8 @@ By Jin Wang
 |Counting|||||
 |205|**Isomorphic Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |290|**Word Pattern**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|791|**Custom Sort String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Linked lists
