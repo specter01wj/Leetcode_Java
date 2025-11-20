@@ -24,7 +24,16 @@ public class M1657_Determine_if_Two_Strings_Are_Close {
         System.out.println("input: " + (input) + "\noutput: " + (output));
 	}
 	
+	/*
+    solution:
+    HashMap
+    */
 	
+	/*
+     * @param word1: a string
+     * @param word2: a string
+     * @return: true if word1 and word2 are close, and false otherwise
+     */
 	public boolean closeStrings(String word1, String word2) {
         if (word1.length() != word2.length()) return false;
 
