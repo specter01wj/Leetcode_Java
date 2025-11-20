@@ -20,35 +20,34 @@
         * @param s: a string
         * @return: any permutation of s that satisfies this property
         */
-        let wordPattern = function(pattern, s) {
-            const words = s.split(" ");
-            if (words.length !== pattern.length) return false;
+        let customSortString = function(order, s) {
+            const freq = new Map();
 
-            const charToWord = new Map();
-            const wordToChar = new Map();
+            // Count frequency of each character in s
+            for (const ch of s) {
+                freq.set(ch, (freq.get(ch) || 0) + 1);
+            }
 
-            for (let i = 0; i < pattern.length; i++) {
-                const c = pattern[i];
-                const word = words[i];
+            let result = '';
 
-                if (charToWord.has(c)) {
-                    if (charToWord.get(c) !== word) return false;
-                } else {
-                    charToWord.set(c, word);
-                }
-
-                if (wordToChar.has(word)) {
-                    if (wordToChar.get(word) !== c) return false;
-                } else {
-                    wordToChar.set(word, c);
+            // Add characters in the order defined by 'order'
+            for (const ch of order) {
+                if (freq.has(ch)) {
+                    result += ch.repeat(freq.get(ch));
+                    freq.delete(ch);
                 }
             }
 
-            return true;
+            // Add remaining characters not in 'order'
+            for (const [ch, count] of freq.entries()) {
+                result += ch.repeat(count);
+            }
+
+            return result;
         };
 
-        const input = "abba", s = "dog cat cat dog";
-        let results = wordPattern(input, s);
+        const input = "cba", s = "abcd";
+        let results = customSortString(input, s);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
