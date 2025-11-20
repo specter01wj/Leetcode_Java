@@ -4,50 +4,53 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script>
 			/*
-			 	You are given two strings order and s. All the characters of order 
-        are unique and were sorted in some custom order previously.
+			 	Two strings are considered close if you can attain one from the other using the following operations:
 
-        Permute the characters of s so that they match the order that order 
-        was sorted. More specifically, if a character x occurs before a 
-        character y in order, then x should occur before y in the permuted string.
+        . Operation 1: Swap any two existing characters.
+          . For example, abcde -> aecdb
 
-        Return any permutation of s that satisfies this property.
+        . Operation 2: Transform every occurrence of one existing character into another existing character, and do the same with the other character.
+          . For example, aacabb -> bbcbaa (all a's turn into b's, and all b's turn into a's)
+
+        You can use the operations on either string as many times as necessary.
+
+        Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 			 */
 			$(document).ready(function(){
         
 				/*
-        * @param order: a string
-        * @param s: a string
-        * @return: any permutation of s that satisfies this property
+        * @param word1: a string
+        * @param word2: a string
+        * @return: true if word1 and word2 are close, and false otherwise
         */
-        let customSortString = function(order, s) {
-            const freq = new Map();
+        let closeStrings = function(word1, word2) {
+            if (word1.length !== word2.length) return false;
 
-            // Count frequency of each character in s
-            for (const ch of s) {
-                freq.set(ch, (freq.get(ch) || 0) + 1);
+            const freq1 = new Map();
+            const freq2 = new Map();
+
+            for (const ch of word1) {
+                freq1.set(ch, (freq1.get(ch) || 0) + 1);
             }
 
-            let result = '';
-
-            // Add characters in the order defined by 'order'
-            for (const ch of order) {
-                if (freq.has(ch)) {
-                    result += ch.repeat(freq.get(ch));
-                    freq.delete(ch);
-                }
+            for (const ch of word2) {
+                freq2.set(ch, (freq2.get(ch) || 0) + 1);
             }
 
-            // Add remaining characters not in 'order'
-            for (const [ch, count] of freq.entries()) {
-                result += ch.repeat(count);
-            }
+            // Compare unique character sets
+            const keys1 = Array.from(freq1.keys()).sort().join('');
+            const keys2 = Array.from(freq2.keys()).sort().join('');
+            if (keys1 !== keys2) return false;
 
-            return result;
+            // Compare sorted frequency values
+            const values1 = Array.from(freq1.values()).sort((a, b) => a - b);
+            const values2 = Array.from(freq2.values()).sort((a, b) => a - b);
+
+            return JSON.stringify(values1) === JSON.stringify(values2);
         };
 
-        const input = "cba", s = "abcd";
-        let results = customSortString(input, s);
+        const input = "cabbba", word2 = "abbccc";
+        let results = closeStrings(input, word2);
 				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
 			});
 
