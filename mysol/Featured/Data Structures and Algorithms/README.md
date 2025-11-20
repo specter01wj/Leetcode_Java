@@ -97,6 +97,20 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|Fast and slow pointers|||||
+
+|Reversing a linked list|||||
+
+
+##### (Bonus problems, hashing)
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|Fast and slow pointers|||||
+
+|Reversing a linked list|||||
+
+|General|||||
 
 
 
