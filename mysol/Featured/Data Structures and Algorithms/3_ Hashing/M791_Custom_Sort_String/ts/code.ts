@@ -1,32 +1,30 @@
-function wordPattern(pattern: string, s: string): boolean {
-   const words = s.split(" ");
-    if (words.length !== pattern.length) return false;
+function customSortString(order: string, s: string): string {
+    const freq: Map<string, number> = new Map();
 
-    const charToWord = new Map<string, string>();
-    const wordToChar = new Map<string, string>();
+    // Count frequency of each character in s
+    for (const ch of s) {
+        freq.set(ch, (freq.get(ch) || 0) + 1);
+    }
 
-    for (let i = 0; i < pattern.length; i++) {
-        const c = pattern[i];
-        const word = words[i];
+    let result = '';
 
-        if (charToWord.has(c)) {
-            if (charToWord.get(c) !== word) return false;
-        } else {
-            charToWord.set(c, word);
-        }
-
-        if (wordToChar.has(word)) {
-            if (wordToChar.get(word) !== c) return false;
-        } else {
-            wordToChar.set(word, c);
+    // Add characters in the order defined by 'order'
+    for (const ch of order) {
+        if (freq.has(ch)) {
+            result += ch.repeat(freq.get(ch)!);
+            freq.delete(ch);
         }
     }
 
-    return true; 
-};
+    // Add remaining characters not in 'order'
+    for (const [ch, count] of freq.entries()) {
+        result += ch.repeat(count);
+    }
 
-const input: string = "abba", s: string = "dog cat cat dog";
-const results = wordPattern(input, s);
+    return result;
+};
+const input: string = "cba", s: string = "abcd";
+const results = customSortString(input, s);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
