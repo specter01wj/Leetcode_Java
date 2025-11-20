@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+			/*
+			 	You are given two strings order and s. All the characters of order 
+        are unique and were sorted in some custom order previously.
+
+        Permute the characters of s so that they match the order that order 
+        was sorted. More specifically, if a character x occurs before a 
+        character y in order, then x should occur before y in the permuted string.
+
+        Return any permutation of s that satisfies this property.
+			 */
+			$(document).ready(function(){
+        
+				/*
+        * @param order: a string
+        * @param s: a string
+        * @return: any permutation of s that satisfies this property
+        */
+        let customSortString = function(order, s) {
+            const freq = new Map();
+
+            // Count frequency of each character in s
+            for (const ch of s) {
+                freq.set(ch, (freq.get(ch) || 0) + 1);
+            }
+
+            let result = '';
+
+            // Add characters in the order defined by 'order'
+            for (const ch of order) {
+                if (freq.has(ch)) {
+                    result += ch.repeat(freq.get(ch));
+                    freq.delete(ch);
+                }
+            }
+
+            // Add remaining characters not in 'order'
+            for (const [ch, count] of freq.entries()) {
+                result += ch.repeat(count);
+            }
+
+            return result;
+        };
+
+        const input = "cba", s = "abcd";
+        let results = customSortString(input, s);
+				$('#t1').html('<h2>Input: ' + JSON.stringify(input, null, 2) + '<br>Results: ' + JSON.stringify(results, null, 2) + '</h2>');
+			});
+
+			/*sol:
+				HashMap
+			 */
+
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			<p id='t1'></p>
+		</div>
+	</body>
+
+</html>
