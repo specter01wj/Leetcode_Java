@@ -570,6 +570,7 @@ Cspiration Category:
 |758|Bold Words in String|Easy||Java/Javascript|Done/Done|
 |771|Jewels and Stones|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |788|Rotated Digits|Medium||Java/Javascript|Done/Done|
+|791|Custom Sort String|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |796|Rotate String|Easy||Java/Javascript|Done/Done|
 |800|Similar RGB Color|Easy||Java/Javascript|Done/Done|
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|

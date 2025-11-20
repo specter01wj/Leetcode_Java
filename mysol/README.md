@@ -652,6 +652,7 @@ By Jin Wang
 |735|**Asteroid Collision**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |739|**Daily Temperatures**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |790|**Domino and Tromino Tiling**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|791|**Custom Sort String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |901|**Online Stock Span**|Medium|Java/Javascript/Typescript|Done/Done/Done|
