@@ -23,6 +23,7 @@ function customSortString(order: string, s: string): string {
 
     return result;
 };
+
 const input: string = "cba", s: string = "abcd";
 const results = customSortString(input, s);
 

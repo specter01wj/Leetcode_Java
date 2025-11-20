@@ -1,30 +1,29 @@
-function customSortString(order: string, s: string): string {
-    const freq: Map<string, number> = new Map();
+function closeStrings(word1: string, word2: string): boolean {
+    if (word1.length !== word2.length) return false;
 
-    // Count frequency of each character in s
-    for (const ch of s) {
-        freq.set(ch, (freq.get(ch) || 0) + 1);
+    const freq1 = new Map<string, number>();
+    const freq2 = new Map<string, number>();
+
+    for (const ch of word1) {
+        freq1.set(ch, (freq1.get(ch) || 0) + 1);
     }
 
-    let result = '';
-
-    // Add characters in the order defined by 'order'
-    for (const ch of order) {
-        if (freq.has(ch)) {
-            result += ch.repeat(freq.get(ch)!);
-            freq.delete(ch);
-        }
+    for (const ch of word2) {
+        freq2.set(ch, (freq2.get(ch) || 0) + 1);
     }
 
-    // Add remaining characters not in 'order'
-    for (const [ch, count] of freq.entries()) {
-        result += ch.repeat(count);
-    }
+    const keys1 = Array.from(freq1.keys()).sort().join('');
+    const keys2 = Array.from(freq2.keys()).sort().join('');
+    if (keys1 !== keys2) return false;
 
-    return result;
+    const values1 = Array.from(freq1.values()).sort((a, b) => a - b);
+    const values2 = Array.from(freq2.values()).sort((a, b) => a - b);
+
+    return JSON.stringify(values1) === JSON.stringify(values2);
 };
-const input: string = "cba", s: string = "abcd";
-const results = customSortString(input, s);
+
+const input: string = "cabbba", word2: string = "abbccc";
+const results = closeStrings(input, word2);
 
 let webHeading = document.querySelector('#t1');
 webHeading.innerHTML = 'Input: ' + JSON.stringify(input, null, 2) + '<br>Result = ' + JSON.stringify(results, null, 2);
