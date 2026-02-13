@@ -6,117 +6,51 @@
 
 			$(document).ready(function(){
         
-        function setZeros(matrix) {
+        /**
+         * Example 1: Creating and Traversing a Singly Linked List
+         */
 
-            let m = matrix.length;
-            let n = matrix[0].length;
-
-            let rows = new Array(m).fill(false);
-            let cols = new Array(n).fill(false);
-
-            // Step 1: mark rows and columns
-            for (let i = 0; i < m; i++) {
-                for (let j = 0; j < n; j++) {
-                    if (matrix[i][j] === 0) {
-                        rows[i] = true;
-                        cols[j] = true;
-                    }
-                }
-            }
-
-            // Step 2: nullify matrix
-            for (let i = 0; i < m; i++) {
-                for (let j = 0; j < n; j++) {
-                    if (rows[i] === true || cols[j] === true) {
-                        matrix[i][j] = 0;
-                    }
-                }
+        class ListNode {
+            constructor(val) {
+                this.val = val;
+                this.next = null;
             }
         }
 
+        function createLinkedList() {
+            let one = new ListNode(1);
+            let two = new ListNode(2);
+            let three = new ListNode(3);
 
-        function setZerosOptimized(matrix) {
+            one.next = two;
+            two.next = three;
 
-            let m = matrix.length;
-            let n = matrix[0].length;
-
-            let rowZero = false;
-            let colZero = false;
-
-            // Step 1: check first row
-            for (let j = 0; j < n; j++) {
-                if (matrix[0][j] === 0) {
-                    rowZero = true;
-                }
-            }
-
-            // Step 2: check first column
-            for (let i = 0; i < m; i++) {
-                if (matrix[i][0] === 0) {
-                    colZero = true;
-                }
-            }
-
-            // Step 3: use first row & column as markers
-            for (let i = 1; i < m; i++) {
-                for (let j = 1; j < n; j++) {
-                    if (matrix[i][j] === 0) {
-                        matrix[i][0] = 0;
-                        matrix[0][j] = 0;
-                    }
-                }
-            }
-
-            // Step 4: nullify rows based on first column
-            for (let i = 1; i < m; i++) {
-                if (matrix[i][0] === 0) {
-                    for (let j = 0; j < n; j++) {
-                        matrix[i][j] = 0;
-                    }
-                }
-            }
-
-            // Step 5: nullify columns based on first row
-            for (let j = 1; j < n; j++) {
-                if (matrix[0][j] === 0) {
-                    for (let i = 0; i < m; i++) {
-                        matrix[i][j] = 0;
-                    }
-                }
-            }
-
-            // Step 6: nullify first row if needed
-            if (rowZero === true) {
-                for (let j = 0; j < n; j++) {
-                    matrix[0][j] = 0;
-                }
-            }
-
-            // Step 7: nullify first column if needed
-            if (colZero === true) {
-                for (let i = 0; i < m; i++) {
-                    matrix[i][0] = 0;
-                }
-            }
+            return one; // head
         }
 
-        let matrix1 = [
-          [1, 2, 3],
-          [4, 0, 6],
-          [7, 8, 9]
-        ];
+        function traverseLinkedList(head) {
+            let values = [];
+            let current = head;
 
-        let matrix2 = JSON.parse(JSON.stringify(matrix1));
+            while (current !== null) {
+                values.push(current.val);
+                current = current.next;
+            }
 
-        let output = "<h2>>> CTCI Chapter 1.8 – Zero Matrix</h2>";
+            return values;
+        }
 
-        output += "<b>Original:</b><br>" + JSON.stringify(matrix1) + "<br><br>";
+        // Create list
+        let head = createLinkedList();
 
-        setZeros(matrix1);
-        setZerosOptimized(matrix2);
+        // Traverse list
+        let result = traverseLinkedList(head);
 
-        output += "<b>Solution 1:</b><br>" + JSON.stringify(matrix1) + "<br><br>";
-        output += "<b>Solution 2:</b><br>" + JSON.stringify(matrix2);
+        // Output
+        let output = "<h2>>> Linked List – Create & Traverse</h2>";
+
+        output += "<b>Structure:</b><br>1 → 2 → 3 → null<br><br>";
+        output += "<b>Traversal Output:</b><br>" + result.join(" → ");
 
         $('#t1').html(output);
 			});
