@@ -1,6 +1,6 @@
 /**
  * Chapter 4 – Linked List
- * Insert Node After Given Node (TS Version)
+ * Delete Node After Given Node (TS)
  */
 
 class ListNode {
@@ -13,9 +13,12 @@ class ListNode {
   }
 }
 
-function addNode(prevNode: ListNode, nodeToAdd: ListNode): void {
-  nodeToAdd.next = prevNode.next;
-  prevNode.next = nodeToAdd;
+function deleteNode(prevNode: ListNode | null): void {
+  if (!prevNode || !prevNode.next) {
+    return;
+  }
+
+  prevNode.next = prevNode.next.next;
 }
 
 function traverse(head: ListNode | null): number[] {
@@ -35,26 +38,28 @@ function traverse(head: ListNode | null): number[] {
 ======================== */
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "Chapter 4 – Linked List: Insert Node (TS)";
+  "Chapter 4 – Linked List: Delete Node (TS)";
 
-// Create 1 → 2 → 3
+// Create 1 → 2 → 3 → 4
 const one: ListNode = new ListNode(1);
 const two: ListNode = new ListNode(2);
 const three: ListNode = new ListNode(3);
+const four: ListNode = new ListNode(4);
 
 one.next = two;
 two.next = three;
+three.next = four;
 
 const head: ListNode = one;
 
 const before: number[] = traverse(head);
 
-// Insert 99 after 2
-addNode(two, new ListNode(99));
+// Delete node 3 (prevNode is 2)
+deleteNode(two);
 
 const after: number[] = traverse(head);
 
 (document.getElementById("output") as HTMLElement).innerHTML = `
-  <p><b>Before Insert:</b> ${before.join(" → ")}</p>
-  <p><b>After Insert (99 after 2):</b> ${after.join(" → ")}</p>
+  <p><b>Before Delete:</b> ${before.join(" → ")}</p>
+  <p><b>After Delete (remove 3):</b> ${after.join(" → ")}</p>
 `;
