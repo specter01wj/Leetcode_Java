@@ -1,7 +1,6 @@
-/*
- * Chapter 4 – Linked Lists
- *
- * Example 1: Create and Traverse a Singly Linked List
+/**
+ * Chapter 4 – Linked List
+ * Insert Node After Given Node (TS Version)
  */
 
 class ListNode {
@@ -14,21 +13,12 @@ class ListNode {
   }
 }
 
-function createLinkedList(): ListNode {
-
-  const one: ListNode = new ListNode(1);
-  const two: ListNode = new ListNode(2);
-  const three: ListNode = new ListNode(3);
-
-  // Link nodes: 1 → 2 → 3 → null
-  one.next = two;
-  two.next = three;
-
-  return one; // head
+function addNode(prevNode: ListNode, nodeToAdd: ListNode): void {
+  nodeToAdd.next = prevNode.next;
+  prevNode.next = nodeToAdd;
 }
 
-function traverseLinkedList(head: ListNode | null): number[] {
-
+function traverse(head: ListNode | null): number[] {
   const values: number[] = [];
   let current: ListNode | null = head;
 
@@ -40,18 +30,31 @@ function traverseLinkedList(head: ListNode | null): number[] {
   return values;
 }
 
+/* ========================
+   Execution
+======================== */
 
-/* ===============================
-   Testing Section
-=============================== */
+(document.getElementById("title") as HTMLElement).innerText =
+  "Chapter 4 – Linked List: Insert Node (TS)";
 
-const head: ListNode = createLinkedList();
+// Create 1 → 2 → 3
+const one: ListNode = new ListNode(1);
+const two: ListNode = new ListNode(2);
+const three: ListNode = new ListNode(3);
 
-const result: number[] = traverseLinkedList(head);
+one.next = two;
+two.next = three;
 
-let output: string = "<h2>>> Chapter 4 – Linked List: Create & Traverse</h2>";
+const head: ListNode = one;
 
-output += "<b>Structure:</b><br>1 → 2 → 3 → null<br><br>";
-output += "<b>Traversal Output:</b><br>" + result.join(" → ");
+const before: number[] = traverse(head);
 
-(document.querySelector('#t1') as HTMLElement).innerHTML = output;
+// Insert 99 after 2
+addNode(two, new ListNode(99));
+
+const after: number[] = traverse(head);
+
+(document.getElementById("output") as HTMLElement).innerHTML = `
+  <p><b>Before Insert:</b> ${before.join(" → ")}</p>
+  <p><b>After Insert (99 after 2):</b> ${after.join(" → ")}</p>
+`;

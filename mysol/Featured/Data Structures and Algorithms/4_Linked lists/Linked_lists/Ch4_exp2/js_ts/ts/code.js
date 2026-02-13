@@ -1,7 +1,6 @@
-/*
- * Chapter 4 – Linked Lists
- *
- * Example 1: Create and Traverse a Singly Linked List
+/**
+ * Chapter 4 – Linked List
+ * Insert Node After Given Node (TS Version)
  */
 class ListNode {
     val;
@@ -11,16 +10,11 @@ class ListNode {
         this.next = null;
     }
 }
-function createLinkedList() {
-    const one = new ListNode(1);
-    const two = new ListNode(2);
-    const three = new ListNode(3);
-    // Link nodes: 1 → 2 → 3 → null
-    one.next = two;
-    two.next = three;
-    return one; // head
+function addNode(prevNode, nodeToAdd) {
+    nodeToAdd.next = prevNode.next;
+    prevNode.next = nodeToAdd;
 }
-function traverseLinkedList(head) {
+function traverse(head) {
     const values = [];
     let current = head;
     while (current !== null) {
@@ -29,12 +23,23 @@ function traverseLinkedList(head) {
     }
     return values;
 }
-/* ===============================
-   Testing Section
-=============================== */
-const head = createLinkedList();
-const result = traverseLinkedList(head);
-let output = "<h2>>> Chapter 4 – Linked List: Create & Traverse</h2>";
-output += "<b>Structure:</b><br>1 → 2 → 3 → null<br><br>";
-output += "<b>Traversal Output:</b><br>" + result.join(" → ");
-document.querySelector('#t1').innerHTML = output;
+/* ========================
+   Execution
+======================== */
+document.getElementById("title").innerText =
+    "Chapter 4 – Linked List: Insert Node (TS)";
+// Create 1 → 2 → 3
+const one = new ListNode(1);
+const two = new ListNode(2);
+const three = new ListNode(3);
+one.next = two;
+two.next = three;
+const head = one;
+const before = traverse(head);
+// Insert 99 after 2
+addNode(two, new ListNode(99));
+const after = traverse(head);
+document.getElementById("output").innerHTML = `
+  <p><b>Before Insert:</b> ${before.join(" → ")}</p>
+  <p><b>After Insert (99 after 2):</b> ${after.join(" → ")}</p>
+`;
