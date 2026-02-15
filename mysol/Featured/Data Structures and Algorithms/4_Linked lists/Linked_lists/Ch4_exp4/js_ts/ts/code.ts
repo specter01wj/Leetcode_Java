@@ -1,24 +1,44 @@
 /**
- * Chapter 4 – Linked List
- * Delete Node After Given Node (TS)
+ * Chapter 4 – Doubly Linked List
+ * Insert & Delete
  */
 
 class ListNode {
   val: number;
   next: ListNode | null;
+  prev: ListNode | null;
 
   constructor(val: number) {
     this.val = val;
     this.next = null;
+    this.prev = null;
   }
 }
 
-function deleteNode(prevNode: ListNode | null): void {
-  if (!prevNode || !prevNode.next) {
-    return;
+function addNode(node: ListNode, nodeToAdd: ListNode): void {
+  const prevNode = node.prev;
+
+  nodeToAdd.next = node;
+  nodeToAdd.prev = prevNode;
+
+  if (prevNode !== null) {
+    prevNode.next = nodeToAdd;
   }
 
-  prevNode.next = prevNode.next.next;
+  node.prev = nodeToAdd;
+}
+
+function deleteNode(node: ListNode): void {
+  const prevNode = node.prev;
+  const nextNode = node.next;
+
+  if (prevNode !== null) {
+    prevNode.next = nextNode;
+  }
+
+  if (nextNode !== null) {
+    nextNode.prev = prevNode;
+  }
 }
 
 function traverse(head: ListNode | null): number[] {
@@ -38,28 +58,35 @@ function traverse(head: ListNode | null): number[] {
 ======================== */
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "Chapter 4 – Linked List: Delete Node (TS)";
+  "Chapter 4 – Doubly Linked List (TS)";
 
-// Create 1 → 2 → 3 → 4
-const one: ListNode = new ListNode(1);
-const two: ListNode = new ListNode(2);
-const three: ListNode = new ListNode(3);
-const four: ListNode = new ListNode(4);
+// Create 1 <-> 2 <-> 3
+const one = new ListNode(1);
+const two = new ListNode(2);
+const three = new ListNode(3);
 
 one.next = two;
+two.prev = one;
+
 two.next = three;
-three.next = four;
+three.prev = two;
 
 const head: ListNode = one;
 
+// BEFORE
 const before: number[] = traverse(head);
 
-// Delete node 3 (prevNode is 2)
-deleteNode(two);
+// Insert 99 before 2
+addNode(two, new ListNode(99));
+const afterInsert: number[] = traverse(head);
 
-const after: number[] = traverse(head);
+// Delete 3
+deleteNode(three);
+const afterDelete: number[] = traverse(head);
 
+// CONSISTENT OUTPUT
 (document.getElementById("output") as HTMLElement).innerHTML = `
-  <p><b>Before Delete:</b> ${before.join(" → ")}</p>
-  <p><b>After Delete (remove 3):</b> ${after.join(" → ")}</p>
+  <p><b>Initial:</b> ${before.join(" <-> ")}</p>
+  <p><b>After Insert (99 before 2):</b> ${afterInsert.join(" <-> ")}</p>
+  <p><b>After Delete (remove 3):</b> ${afterDelete.join(" <-> ")}</p>
 `;
