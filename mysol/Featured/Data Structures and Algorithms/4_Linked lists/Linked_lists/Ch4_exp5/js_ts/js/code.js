@@ -1,6 +1,5 @@
 /**
- * Chapter 4 – Doubly Linked List
- * Insert & Delete
+ * Example 5: Doubly Linked List with Sentinel Nodes (JS)
  */
 
 class ListNode {
@@ -11,78 +10,124 @@ class ListNode {
   }
 }
 
-function addNode(node, nodeToAdd) {
-  const prevNode = node.prev;
+// Sentinel nodes
+const head = new ListNode(-1);
+const tail = new ListNode(-1);
 
-  nodeToAdd.next = node;
-  nodeToAdd.prev = prevNode;
+// Initialize
+head.next = tail;
+tail.prev = head;
 
-  if (prevNode !== null) {
-    prevNode.next = nodeToAdd;
-  }
+// ========================
+// Operations
+// ========================
 
-  node.prev = nodeToAdd;
+function addToEnd(nodeToAdd) {
+  nodeToAdd.next = tail;
+  nodeToAdd.prev = tail.prev;
+  tail.prev.next = nodeToAdd;
+  tail.prev = nodeToAdd;
 }
 
-function deleteNode(node) {
-  const prevNode = node.prev;
-  const nextNode = node.next;
-
-  if (prevNode !== null) {
-    prevNode.next = nextNode;
+function removeFromEnd() {
+  if (head.next === tail) {
+    return;
   }
 
-  if (nextNode !== null) {
-    nextNode.prev = prevNode;
-  }
+  const nodeToRemove = tail.prev;
+  nodeToRemove.prev.next = tail;
+  tail.prev = nodeToRemove.prev;
 }
 
-function traverse(head) {
+function addToStart(nodeToAdd) {
+  nodeToAdd.prev = head;
+  nodeToAdd.next = head.next;
+  head.next.prev = nodeToAdd;
+  head.next = nodeToAdd;
+}
+
+function removeFromStart() {
+  if (head.next === tail) {
+    return;
+  }
+
+  const nodeToRemove = head.next;
+  nodeToRemove.next.prev = head;
+  head.next = nodeToRemove.next;
+}
+
+// ========================
+// Print
+// ========================
+
+function printList() {
+  let current = head.next;
+
+  if (current === tail) {
+    return "(empty)";
+  }
+
   const values = [];
-  let current = head;
 
-  while (current !== null) {
+  while (current !== tail) {
     values.push(current.val);
     current = current.next;
   }
 
-  return values;
+  return values.join(" <-> ");
 }
 
-/* ========================
-   Execution
-======================== */
+// ========================
+// Execution (Same as Java)
+// ========================
 
 document.getElementById("title").innerText =
-  "Chapter 4 – Doubly Linked List (JS)";
+  "Sentinel Doubly Linked List (JS)";
 
-// Create 1 <-> 2 <-> 3
-const one = new ListNode(1);
-const two = new ListNode(2);
-const three = new ListNode(3);
+let output = "";
 
-one.next = two;
-two.prev = one;
+output += "Initial (empty):<br>";
+output += printList() + "<br><br>";
 
-two.next = three;
-three.prev = two;
+// remove on empty
+removeFromStart();
+removeFromEnd();
 
-const head = one;
+output += "After removeFromStart() & removeFromEnd() on empty:<br>";
+output += printList() + "<br><br>";
 
-// BEFORE
-const before = traverse(head);
+// Add operations
+addToStart(new ListNode(10));
+output += "After addToStart(10):<br>";
+output += printList() + "<br><br>";
 
-// Insert 99 before 2
-addNode(two, new ListNode(99));
-const afterInsert = traverse(head);
+addToEnd(new ListNode(20));
+output += "After addToEnd(20):<br>";
+output += printList() + "<br><br>";
 
-// Delete 3
-deleteNode(three);
-const afterDelete = traverse(head);
+addToStart(new ListNode(5));
+output += "After addToStart(5):<br>";
+output += printList() + "<br><br>";
 
-// CONSISTENT OUTPUT
-document.getElementById("output").innerHTML = `
-  <p><b>Initial:</b> ${before.join(" <-> ")}</p>
-  <p><b>After Insert (99 before 2):</b> ${afterInsert.join(" <-> ")}</p>
-  <p><b>After Delete (remove 3):</b> ${afterDelete.join(" <-> ")}</p>
-`;
+addToEnd(new ListNode(30));
+output += "After addToEnd(30):<br>";
+output += printList() + "<br><br>";
+
+// Remove operations
+removeFromStart();
+output += "After removeFromStart():<br>";
+output += printList() + "<br><br>";
+
+removeFromEnd();
+output += "After removeFromEnd():<br>";
+output += printList() + "<br><br>";
+
+removeFromStart();
+output += "After removeFromStart():<br>";
+output += printList() + "<br><br>";
+
+removeFromEnd();
+output += "After removeFromEnd() (back to empty):<br>";
+output += printList();
+
+document.getElementById("output").innerHTML = output;
