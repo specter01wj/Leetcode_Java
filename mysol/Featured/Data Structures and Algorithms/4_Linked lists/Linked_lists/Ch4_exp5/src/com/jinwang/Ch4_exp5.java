@@ -75,19 +75,45 @@ public class Ch4_exp5 {
 		System.out.println("Initial (empty):");
         printList();
 
-        addToStart(new ListNode(10));
-        addToEnd(new ListNode(20));
-        addToEnd(new ListNode(30));
+        // Test remove on empty
+        removeFromStart();
+        removeFromEnd();
 
-        System.out.println("After Adding 10,20,30:");
+        System.out.println("After removeFromStart() & removeFromEnd() on empty:");
         printList();
 
+        // Add operations
+        addToStart(new ListNode(10));
+        System.out.println("After addToStart(10):");
+        printList();
+
+        addToEnd(new ListNode(20));
+        System.out.println("After addToEnd(20):");
+        printList();
+
+        addToStart(new ListNode(5));
+        System.out.println("After addToStart(5):");
+        printList();
+
+        addToEnd(new ListNode(30));
+        System.out.println("After addToEnd(30):");
+        printList();
+
+        // Remove operations
         removeFromStart();
-        System.out.println("After removeFromStart:");
+        System.out.println("After removeFromStart():");
         printList();
 
         removeFromEnd();
-        System.out.println("After removeFromEnd:");
+        System.out.println("After removeFromEnd():");
+        printList();
+
+        removeFromStart();
+        System.out.println("After removeFromStart():");
+        printList();
+
+        removeFromEnd();
+        System.out.println("After removeFromEnd() (back to empty):");
         printList();
 	}
 
