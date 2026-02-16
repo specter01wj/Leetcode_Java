@@ -1,8 +1,3 @@
-/**
- * Chapter 4 – Linked List
- * Insert Node After Given Node (JS Version)
- */
-
 class ListNode {
   constructor(val) {
     this.val = val;
@@ -10,48 +5,51 @@ class ListNode {
   }
 }
 
-function addNode(prevNode, nodeToAdd) {
-  nodeToAdd.next = prevNode.next;
-  prevNode.next = nodeToAdd;
-}
+function getMiddle(head) {
+  let slow = head;
+  let fast = head;
 
-function traverse(head) {
-  const values = [];
-  let current = head;
-
-  while (current !== null) {
-    values.push(current.val);
-    current = current.next;
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next;
+    fast = fast.next.next;
   }
 
-  return values;
+  return slow.val;
 }
 
-/* ========================
-   Execution
-======================== */
-
 document.getElementById("title").innerText =
-  "Chapter 4 – Linked List: Insert Node (JS)";
+  "Fast & Slow Pointers - Middle Node (JS)";
 
-// Create 1 → 2 → 3
+// Build 1 -> 2 -> 3 -> 4 -> 5
 const one = new ListNode(1);
 const two = new ListNode(2);
 const three = new ListNode(3);
+const four = new ListNode(4);
+const five = new ListNode(5);
 
 one.next = two;
 two.next = three;
+three.next = four;
+four.next = five;
 
 const head = one;
 
-const before = traverse(head);
+let output = "";
 
-// Insert 99 after 2
-addNode(two, new ListNode(99));
+output += "<b>Input:</b><br>";
+let current = head;
+while (current !== null) {
+  output += current.val;
+  if (current.next !== null) {
+    output += " -> ";
+  }
+  current = current.next;
+}
+output += "<br><br>";
 
-const after = traverse(head);
+const middle = getMiddle(head);
 
-document.getElementById("output").innerHTML = `
-  <p><b>Before Insert:</b> ${before.join(" → ")}</p>
-  <p><b>After Insert (99 after 2):</b> ${after.join(" → ")}</p>
-`;
+output += "<b>Middle value:</b><br>";
+output += middle;
+
+document.getElementById("output").innerHTML = output;
