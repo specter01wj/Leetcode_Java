@@ -1,8 +1,3 @@
-/**
- * Chapter 4 – Linked List
- * Insert Node After Given Node (TS Version)
- */
-
 class ListNode {
   val: number;
   next: ListNode | null;
@@ -13,48 +8,51 @@ class ListNode {
   }
 }
 
-function addNode(prevNode: ListNode, nodeToAdd: ListNode): void {
-  nodeToAdd.next = prevNode.next;
-  prevNode.next = nodeToAdd;
-}
+function getMiddle(head: ListNode): number {
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head;
 
-function traverse(head: ListNode | null): number[] {
-  const values: number[] = [];
-  let current: ListNode | null = head;
-
-  while (current !== null) {
-    values.push(current.val);
-    current = current.next;
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
   }
 
-  return values;
+  return slow!.val;
 }
 
-/* ========================
-   Execution
-======================== */
-
 (document.getElementById("title") as HTMLElement).innerText =
-  "Chapter 4 – Linked List: Insert Node (TS)";
+  "Fast & Slow Pointers - Middle Node (TS)";
 
-// Create 1 → 2 → 3
+// Build 1 -> 2 -> 3 -> 4 -> 5
 const one: ListNode = new ListNode(1);
 const two: ListNode = new ListNode(2);
 const three: ListNode = new ListNode(3);
+const four: ListNode = new ListNode(4);
+const five: ListNode = new ListNode(5);
 
 one.next = two;
 two.next = three;
+three.next = four;
+four.next = five;
 
 const head: ListNode = one;
 
-const before: number[] = traverse(head);
+let output: string = "";
 
-// Insert 99 after 2
-addNode(two, new ListNode(99));
+output += "<b>Input:</b><br>";
+let current: ListNode | null = head;
+while (current !== null) {
+  output += current.val;
+  if (current.next !== null) {
+    output += " -> ";
+  }
+  current = current.next;
+}
+output += "<br><br>";
 
-const after: number[] = traverse(head);
+const middle: number = getMiddle(head);
 
-(document.getElementById("output") as HTMLElement).innerHTML = `
-  <p><b>Before Insert:</b> ${before.join(" → ")}</p>
-  <p><b>After Insert (99 after 2):</b> ${after.join(" → ")}</p>
-`;
+output += "<b>Middle value:</b><br>";
+output += middle;
+
+(document.getElementById("output") as HTMLElement).innerHTML = output;
