@@ -5,26 +5,28 @@ class ListNode {
   }
 }
 
-function detectCycle(head) {
-  const seen = new Set();
+function findNode(head, k) {
+  let slow = head;
+  let fast = head;
 
-  while (head !== null) {
-    if (seen.has(head)) {
-      return true;
-    }
-    seen.add(head);
-    head = head.next;
+  for (let i = 0; i < k; i++) {
+    fast = fast.next;
   }
 
-  return false;
+  while (fast !== null) {
+    slow = slow.next;
+    fast = fast.next;
+  }
+
+  return slow;
 }
 
 document.getElementById("title").innerText =
-  "Linked List Cycle - Hashing (JS)";
+  "Kth Node From End (JS)";
 
 let output = "";
 
-// Case 1: No cycle
+// Build 1 -> 2 -> 3 -> 4 -> 5
 const one = new ListNode(1);
 const two = new ListNode(2);
 const three = new ListNode(3);
@@ -36,44 +38,26 @@ two.next = three;
 three.next = four;
 four.next = five;
 
-const head1 = one;
+const head = one;
+const k = 2;
 
-output += "<b>Case 1 (No Cycle):</b><br>";
-let current = head1;
-let count = 0;
-while (current !== null && count < 10) {
+output += "<b>Input:</b><br>";
+let current = head;
+while (current !== null) {
   output += current.val;
   if (current.next !== null) {
     output += " -> ";
   }
   current = current.next;
-  count++;
 }
 output += "<br><br>";
 
-output += "<b>Has Cycle:</b><br>";
-output += detectCycle(head1);
-output += "<br><br>";
+output += "<b>k:</b><br>";
+output += k + "<br><br>";
 
-// Case 2: With cycle
-const six = new ListNode(1);
-const seven = new ListNode(2);
-const eight = new ListNode(3);
-const nine = new ListNode(4);
-const ten = new ListNode(5);
+const result = findNode(head, k);
 
-six.next = seven;
-seven.next = eight;
-eight.next = nine;
-nine.next = ten;
-ten.next = eight;
-
-const head2 = six;
-
-output += "<b>Case 2 (With Cycle):</b><br>";
-output += "1 -> 2 -> 3 -> 4 -> 5 -> 3 (cycle)<br><br>";
-
-output += "<b>Has Cycle:</b><br>";
-output += detectCycle(head2);
+output += "<b>kth node from end:</b><br>";
+output += result.val;
 
 document.getElementById("output").innerHTML = output;
