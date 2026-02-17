@@ -1,48 +1,51 @@
 class ListNode {
-  constructor(val) {
+  val: number;
+  next: ListNode | null;
+
+  constructor(val: number) {
     this.val = val;
     this.next = null;
   }
 }
 
-function findNode(head, k) {
-  let slow = head;
-  let fast = head;
+function findNode(head: ListNode, k: number): ListNode {
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head;
 
-  for (let i = 0; i < k; i++) {
-    fast = fast.next;
+  for (let i: number = 0; i < k; i++) {
+    fast = fast!.next;
   }
 
   while (fast !== null) {
-    slow = slow.next;
+    slow = slow!.next;
     fast = fast.next;
   }
 
-  return slow;
+  return slow!;
 }
 
-document.getElementById("title").innerText =
-  "Kth Node From End (JS)";
+(document.getElementById("title") as HTMLElement).innerText =
+  "Kth Node From End (TS)";
 
-let output = "";
+let output: string = "";
 
 // Build 1 -> 2 -> 3 -> 4 -> 5
-const one = new ListNode(1);
-const two = new ListNode(2);
-const three = new ListNode(3);
-const four = new ListNode(4);
-const five = new ListNode(5);
+const one: ListNode = new ListNode(1);
+const two: ListNode = new ListNode(2);
+const three: ListNode = new ListNode(3);
+const four: ListNode = new ListNode(4);
+const five: ListNode = new ListNode(5);
 
 one.next = two;
 two.next = three;
 three.next = four;
 four.next = five;
 
-const head = one;
-const k = 2;
+const head: ListNode = one;
+const k: number = 2;
 
 output += "<b>Input:</b><br>";
-let current = head;
+let current: ListNode | null = head;
 while (current !== null) {
   output += current.val;
   if (current.next !== null) {
@@ -55,9 +58,9 @@ output += "<br><br>";
 output += "<b>k:</b><br>";
 output += k + "<br><br>";
 
-const result = findNode(head, k);
+const result: ListNode = findNode(head, k);
 
 output += "<b>kth node from end:</b><br>";
 output += result.val;
 
-document.getElementById("output").innerHTML = output;
+(document.getElementById("output") as HTMLElement).innerHTML = output;
