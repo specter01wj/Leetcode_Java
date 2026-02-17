@@ -5,24 +5,22 @@ class ListNode {
   }
 }
 
-function hasCycle(head) {
-  let slow = head;
-  let fast = head;
+function detectCycle(head) {
+  const seen = new Set();
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
-
-    if (slow === fast) {
+  while (head !== null) {
+    if (seen.has(head)) {
       return true;
     }
+    seen.add(head);
+    head = head.next;
   }
 
   return false;
 }
 
 document.getElementById("title").innerText =
-  "Linked List Cycle (JS)";
+  "Linked List Cycle - Hashing (JS)";
 
 let output = "";
 
@@ -54,7 +52,7 @@ while (current !== null && count < 10) {
 output += "<br><br>";
 
 output += "<b>Has Cycle:</b><br>";
-output += hasCycle(head1);
+output += detectCycle(head1);
 output += "<br><br>";
 
 // Case 2: With cycle
@@ -76,6 +74,6 @@ output += "<b>Case 2 (With Cycle):</b><br>";
 output += "1 -> 2 -> 3 -> 4 -> 5 -> 3 (cycle)<br><br>";
 
 output += "<b>Has Cycle:</b><br>";
-output += hasCycle(head2);
+output += detectCycle(head2);
 
 document.getElementById("output").innerHTML = output;
