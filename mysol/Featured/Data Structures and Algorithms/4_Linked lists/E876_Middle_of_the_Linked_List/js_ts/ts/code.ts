@@ -8,28 +8,24 @@ class ListNode {
   }
 }
 
-function hasCycle(head: ListNode | null): boolean {
+function middleNode(head: ListNode): ListNode {
   let slow: ListNode | null = head;
   let fast: ListNode | null = head;
 
   while (fast !== null && fast.next !== null) {
     slow = slow!.next;
     fast = fast.next.next;
-
-    if (slow === fast) {
-      return true;
-    }
   }
 
-  return false;
+  return slow!;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "Linked List Cycle (TS)";
+  "876. Middle of the Linked List (TS)";
 
 let output: string = "";
 
-// Case 1: No cycle
+// Example 1: head = [1,2,3,4,5]
 const one: ListNode = new ListNode(1);
 const two: ListNode = new ListNode(2);
 const three: ListNode = new ListNode(3);
@@ -43,42 +39,67 @@ four.next = five;
 
 const head1: ListNode = one;
 
-output += "<b>Case 1 (No Cycle):</b><br>";
-let current: ListNode | null = head1;
-let count: number = 0;
-while (current !== null && count < 10) {
-  output += current.val;
-  if (current.next !== null) {
+output += "<b>Example 1 Input:</b><br>";
+let current1: ListNode | null = head1;
+while (current1 !== null) {
+  output += current1.val;
+  if (current1.next !== null) {
     output += " -> ";
   }
-  current = current.next;
-  count++;
+  current1 = current1.next;
 }
 output += "<br><br>";
 
-output += "<b>Has Cycle:</b><br>";
-output += hasCycle(head1);
+const mid1: ListNode = middleNode(head1);
+
+output += "<b>Example 1 Output:</b><br>";
+let out1: ListNode | null = mid1;
+while (out1 !== null) {
+  output += out1.val;
+  if (out1.next !== null) {
+    output += " -> ";
+  }
+  out1 = out1.next;
+}
 output += "<br><br>";
 
-// Case 2: With cycle
-const six: ListNode = new ListNode(1);
-const seven: ListNode = new ListNode(2);
-const eight: ListNode = new ListNode(3);
-const nine: ListNode = new ListNode(4);
-const ten: ListNode = new ListNode(5);
+// Example 2: head = [1,2,3,4,5,6]
+const a: ListNode = new ListNode(1);
+const b: ListNode = new ListNode(2);
+const c: ListNode = new ListNode(3);
+const d: ListNode = new ListNode(4);
+const e: ListNode = new ListNode(5);
+const f: ListNode = new ListNode(6);
 
-six.next = seven;
-seven.next = eight;
-eight.next = nine;
-nine.next = ten;
-ten.next = eight;
+a.next = b;
+b.next = c;
+c.next = d;
+d.next = e;
+e.next = f;
 
-const head2: ListNode = six;
+const head2: ListNode = a;
 
-output += "<b>Case 2 (With Cycle):</b><br>";
-output += "1 -> 2 -> 3 -> 4 -> 5 -> 3 (cycle)<br><br>";
+output += "<b>Example 2 Input:</b><br>";
+let current2: ListNode | null = head2;
+while (current2 !== null) {
+  output += current2.val;
+  if (current2.next !== null) {
+    output += " -> ";
+  }
+  current2 = current2.next;
+}
+output += "<br><br>";
 
-output += "<b>Has Cycle:</b><br>";
-output += hasCycle(head2);
+const mid2: ListNode = middleNode(head2);
+
+output += "<b>Example 2 Output:</b><br>";
+let out2: ListNode | null = mid2;
+while (out2 !== null) {
+  output += out2.val;
+  if (out2.next !== null) {
+    output += " -> ";
+  }
+  out2 = out2.next;
+}
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
