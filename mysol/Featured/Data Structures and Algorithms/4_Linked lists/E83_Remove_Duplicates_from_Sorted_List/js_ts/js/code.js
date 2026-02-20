@@ -5,34 +5,32 @@ class ListNode {
   }
 }
 
-function middleNode(head) {
-  let slow = head;
-  let fast = head;
+function deleteDuplicates(head) {
+  let current = head;
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow.next;
-    fast = fast.next.next;
+  while (current !== null && current.next !== null) {
+    if (current.val === current.next.val) {
+      current.next = current.next.next;
+    } else {
+      current = current.next;
+    }
   }
 
-  return slow;
+  return head;
 }
 
 document.getElementById("title").innerText =
-  "876. Middle of the Linked List (JS)";
+  "83. Remove Duplicates from Sorted List (JS)";
 
 let output = "";
 
-// Example 1: head = [1,2,3,4,5]
+// Example 1: head = [1,1,2]
 const one = new ListNode(1);
-const two = new ListNode(2);
-const three = new ListNode(3);
-const four = new ListNode(4);
-const five = new ListNode(5);
+const two = new ListNode(1);
+const three = new ListNode(2);
 
 one.next = two;
 two.next = three;
-three.next = four;
-four.next = five;
 
 const head1 = one;
 
@@ -47,10 +45,10 @@ while (current1 !== null) {
 }
 output += "<br><br>";
 
-const mid1 = middleNode(head1);
+const result1 = deleteDuplicates(head1);
 
 output += "<b>Example 1 Output:</b><br>";
-let out1 = mid1;
+let out1 = result1;
 while (out1 !== null) {
   output += out1.val;
   if (out1.next !== null) {
@@ -60,19 +58,17 @@ while (out1 !== null) {
 }
 output += "<br><br>";
 
-// Example 2: head = [1,2,3,4,5,6]
+// Example 2: head = [1,1,2,3,3]
 const a = new ListNode(1);
-const b = new ListNode(2);
-const c = new ListNode(3);
-const d = new ListNode(4);
-const e = new ListNode(5);
-const f = new ListNode(6);
+const b = new ListNode(1);
+const c = new ListNode(2);
+const d = new ListNode(3);
+const e = new ListNode(3);
 
 a.next = b;
 b.next = c;
 c.next = d;
 d.next = e;
-e.next = f;
 
 const head2 = a;
 
@@ -87,10 +83,10 @@ while (current2 !== null) {
 }
 output += "<br><br>";
 
-const mid2 = middleNode(head2);
+const result2 = deleteDuplicates(head2);
 
 output += "<b>Example 2 Output:</b><br>";
-let out2 = mid2;
+let out2 = result2;
 while (out2 !== null) {
   output += out2.val;
   if (out2.next !== null) {
