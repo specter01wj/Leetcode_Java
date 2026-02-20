@@ -8,34 +8,32 @@ class ListNode {
   }
 }
 
-function middleNode(head: ListNode): ListNode {
-  let slow: ListNode | null = head;
-  let fast: ListNode | null = head;
+function deleteDuplicates(head: ListNode | null): ListNode | null {
+  let current: ListNode | null = head;
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow!.next;
-    fast = fast.next.next;
+  while (current !== null && current.next !== null) {
+    if (current.val === current.next.val) {
+      current.next = current.next.next;
+    } else {
+      current = current.next;
+    }
   }
 
-  return slow!;
+  return head;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "876. Middle of the Linked List (TS)";
+  "83. Remove Duplicates from Sorted List (TS)";
 
 let output: string = "";
 
-// Example 1: head = [1,2,3,4,5]
+// Example 1: head = [1,1,2]
 const one: ListNode = new ListNode(1);
-const two: ListNode = new ListNode(2);
-const three: ListNode = new ListNode(3);
-const four: ListNode = new ListNode(4);
-const five: ListNode = new ListNode(5);
+const two: ListNode = new ListNode(1);
+const three: ListNode = new ListNode(2);
 
 one.next = two;
 two.next = three;
-three.next = four;
-four.next = five;
 
 const head1: ListNode = one;
 
@@ -50,10 +48,10 @@ while (current1 !== null) {
 }
 output += "<br><br>";
 
-const mid1: ListNode = middleNode(head1);
+const result1: ListNode | null = deleteDuplicates(head1);
 
 output += "<b>Example 1 Output:</b><br>";
-let out1: ListNode | null = mid1;
+let out1: ListNode | null = result1;
 while (out1 !== null) {
   output += out1.val;
   if (out1.next !== null) {
@@ -63,19 +61,17 @@ while (out1 !== null) {
 }
 output += "<br><br>";
 
-// Example 2: head = [1,2,3,4,5,6]
+// Example 2: head = [1,1,2,3,3]
 const a: ListNode = new ListNode(1);
-const b: ListNode = new ListNode(2);
-const c: ListNode = new ListNode(3);
-const d: ListNode = new ListNode(4);
-const e: ListNode = new ListNode(5);
-const f: ListNode = new ListNode(6);
+const b: ListNode = new ListNode(1);
+const c: ListNode = new ListNode(2);
+const d: ListNode = new ListNode(3);
+const e: ListNode = new ListNode(3);
 
 a.next = b;
 b.next = c;
 c.next = d;
 d.next = e;
-e.next = f;
 
 const head2: ListNode = a;
 
@@ -90,10 +86,10 @@ while (current2 !== null) {
 }
 output += "<br><br>";
 
-const mid2: ListNode = middleNode(head2);
+const result2: ListNode | null = deleteDuplicates(head2);
 
 output += "<b>Example 2 Output:</b><br>";
-let out2: ListNode | null = mid2;
+let out2: ListNode | null = result2;
 while (out2 !== null) {
   output += out2.val;
   if (out2.next !== null) {
