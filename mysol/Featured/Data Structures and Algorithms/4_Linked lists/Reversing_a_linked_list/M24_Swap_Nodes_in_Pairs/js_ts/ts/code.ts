@@ -2,40 +2,53 @@ class ListNode {
   val: number;
   next: ListNode | null;
 
-  constructor(val: number) {
+  constructor(val: number, next: ListNode | null = null) {
     this.val = val;
-    this.next = null;
+    this.next = next;
   }
 }
 
-function middleNode(head: ListNode): ListNode {
-  let slow: ListNode | null = head;
-  let fast: ListNode | null = head;
+function swapPairs(head: ListNode | null): ListNode | null {
 
-  while (fast !== null && fast.next !== null) {
-    slow = slow!.next;
-    fast = fast.next.next;
+  if (head === null || head.next === null) {
+    return head;
   }
 
-  return slow!;
+  let dummy: ListNode = head.next;
+  let prev: ListNode | null = null;
+
+  while (head !== null && head.next !== null) {
+
+    if (prev !== null) {
+      prev.next = head.next;
+    }
+
+    prev = head;
+
+    const nextNode: ListNode | null = head.next.next;
+    head.next.next = head;
+
+    head.next = nextNode;
+    head = nextNode;
+  }
+
+  return dummy;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "876. Middle of the Linked List (TS)";
+  "24. Swap Nodes in Pairs (TS)";
 
 let output: string = "";
 
-// Example 1: head = [1,2,3,4,5]
+// Example 1: head = [1,2,3,4]
 const one: ListNode = new ListNode(1);
 const two: ListNode = new ListNode(2);
 const three: ListNode = new ListNode(3);
 const four: ListNode = new ListNode(4);
-const five: ListNode = new ListNode(5);
 
 one.next = two;
 two.next = three;
 three.next = four;
-four.next = five;
 
 const head1: ListNode = one;
 
@@ -50,10 +63,10 @@ while (current1 !== null) {
 }
 output += "<br><br>";
 
-const mid1: ListNode = middleNode(head1);
+const result1: ListNode | null = swapPairs(head1);
 
 output += "<b>Example 1 Output:</b><br>";
-let out1: ListNode | null = mid1;
+let out1: ListNode | null = result1;
 while (out1 !== null) {
   output += out1.val;
   if (out1.next !== null) {
@@ -63,43 +76,77 @@ while (out1 !== null) {
 }
 output += "<br><br>";
 
-// Example 2: head = [1,2,3,4,5,6]
-const a: ListNode = new ListNode(1);
-const b: ListNode = new ListNode(2);
-const c: ListNode = new ListNode(3);
-const d: ListNode = new ListNode(4);
-const e: ListNode = new ListNode(5);
-const f: ListNode = new ListNode(6);
+// Example 2: head = []
+const head2: ListNode | null = null;
 
-a.next = b;
-b.next = c;
-c.next = d;
-d.next = e;
-e.next = f;
+output += "<b>Example 2 Input:</b><br>[]<br><br>";
 
-const head2: ListNode = a;
+const result2: ListNode | null = swapPairs(head2);
 
-output += "<b>Example 2 Input:</b><br>";
-let current2: ListNode | null = head2;
-while (current2 !== null) {
-  output += current2.val;
-  if (current2.next !== null) {
-    output += " -> ";
+output += "<b>Example 2 Output:</b><br>";
+if (result2 === null) {
+  output += "[]";
+} else {
+  let out2: ListNode | null = result2;
+  while (out2 !== null) {
+    output += out2.val;
+    if (out2.next !== null) {
+      output += " -> ";
+    }
+    out2 = out2.next;
   }
-  current2 = current2.next;
 }
 output += "<br><br>";
 
-const mid2: ListNode = middleNode(head2);
+// Example 3: head = [1]
+const head3: ListNode = new ListNode(1);
 
-output += "<b>Example 2 Output:</b><br>";
-let out2: ListNode | null = mid2;
-while (out2 !== null) {
-  output += out2.val;
-  if (out2.next !== null) {
+output += "<b>Example 3 Input:</b><br>1<br><br>";
+
+const result3: ListNode | null = swapPairs(head3);
+
+output += "<b>Example 3 Output:</b><br>";
+let out3: ListNode | null = result3;
+while (out3 !== null) {
+  output += out3.val;
+  if (out3.next !== null) {
     output += " -> ";
   }
-  out2 = out2.next;
+  out3 = out3.next;
+}
+output += "<br><br>";
+
+// Example 4: head = [1,2,3]
+const a: ListNode = new ListNode(1);
+const b: ListNode = new ListNode(2);
+const c: ListNode = new ListNode(3);
+
+a.next = b;
+b.next = c;
+
+const head4: ListNode = a;
+
+output += "<b>Example 4 Input:</b><br>";
+let current4: ListNode | null = head4;
+while (current4 !== null) {
+  output += current4.val;
+  if (current4.next !== null) {
+    output += " -> ";
+  }
+  current4 = current4.next;
+}
+output += "<br><br>";
+
+const result4: ListNode | null = swapPairs(head4);
+
+output += "<b>Example 4 Output:</b><br>";
+let out4: ListNode | null = result4;
+while (out4 !== null) {
+  output += out4.val;
+  if (out4.next !== null) {
+    output += " -> ";
+  }
+  out4 = out4.next;
 }
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
