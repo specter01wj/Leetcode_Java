@@ -8,75 +8,58 @@ class ListNode {
   }
 }
 
-function detectCycle(head: ListNode | null): boolean {
-  const seen: Set<ListNode> = new Set();
+function reverseList(head: ListNode | null): ListNode | null {
+  let prev: ListNode | null = null;
+  let curr: ListNode | null = head;
 
-  while (head !== null) {
-    if (seen.has(head)) {
-      return true;
-    }
-    seen.add(head);
-    head = head.next;
+  while (curr !== null) {
+    const nextNode: ListNode | null = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = nextNode;
   }
 
-  return false;
+  return prev;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "Linked List Cycle - Hashing (TS)";
+  "Reverse Linked List (TS)";
 
 let output: string = "";
 
-// Case 1: No cycle
+// Build 1 -> 2 -> 3 -> 4
 const one: ListNode = new ListNode(1);
 const two: ListNode = new ListNode(2);
 const three: ListNode = new ListNode(3);
 const four: ListNode = new ListNode(4);
-const five: ListNode = new ListNode(5);
 
 one.next = two;
 two.next = three;
 three.next = four;
-four.next = five;
 
-const head1: ListNode = one;
+const head: ListNode = one;
 
-output += "<b>Case 1 (No Cycle):</b><br>";
-let current: ListNode | null = head1;
-let count: number = 0;
-while (current !== null && count < 10) {
-  output += current.val;
-  if (current.next !== null) {
+output += "<b>Input:</b><br>";
+let current1: ListNode | null = head;
+while (current1 !== null) {
+  output += current1.val;
+  if (current1.next !== null) {
     output += " -> ";
   }
-  current = current.next;
-  count++;
+  current1 = current1.next;
 }
 output += "<br><br>";
 
-output += "<b>Has Cycle:</b><br>";
-output += detectCycle(head1);
-output += "<br><br>";
+const reversed: ListNode | null = reverseList(head);
 
-// Case 2: With cycle
-const six: ListNode = new ListNode(1);
-const seven: ListNode = new ListNode(2);
-const eight: ListNode = new ListNode(3);
-const nine: ListNode = new ListNode(4);
-const ten: ListNode = new ListNode(5);
-
-six.next = seven;
-seven.next = eight;
-eight.next = nine;
-nine.next = ten;
-ten.next = eight;
-
-const head2: ListNode = six;
-
-output += "<b>Case 2 (With Cycle):</b><br>";
-output += "1 -> 2 -> 3 -> 4 -> 5 -> 3 (cycle)<br><br>";
-
-output += "<b>Has Cycle:</b><br>";
-output += detectCycle(head2);
+output += "<b>Output:</b><br>";
+let current2: ListNode | null = reversed;
+while (current2 !== null) {
+  output += current2.val;
+  if (current2.next !== null) {
+    output += " -> ";
+  }
+  current2 = current2.next;
+}
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
