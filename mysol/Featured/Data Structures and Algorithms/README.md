@@ -98,8 +98,12 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |Fast and slow pointers|||||
+|876|**Middle of the Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|83|**Remove Duplicates from Sorted List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
 |Reversing a linked list|||||
+|24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ##### (Bonus problems, hashing)
