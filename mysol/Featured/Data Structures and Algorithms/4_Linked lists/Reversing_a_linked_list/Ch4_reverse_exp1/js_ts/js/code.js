@@ -5,75 +5,58 @@ class ListNode {
   }
 }
 
-function detectCycle(head) {
-  const seen = new Set();
+function reverseList(head) {
+  let prev = null;
+  let curr = head;
 
-  while (head !== null) {
-    if (seen.has(head)) {
-      return true;
-    }
-    seen.add(head);
-    head = head.next;
+  while (curr !== null) {
+    const nextNode = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = nextNode;
   }
 
-  return false;
+  return prev;
 }
 
 document.getElementById("title").innerText =
-  "Linked List Cycle - Hashing (JS)";
+  "Reverse Linked List (JS)";
 
 let output = "";
 
-// Case 1: No cycle
+// Build 1 -> 2 -> 3 -> 4
 const one = new ListNode(1);
 const two = new ListNode(2);
 const three = new ListNode(3);
 const four = new ListNode(4);
-const five = new ListNode(5);
 
 one.next = two;
 two.next = three;
 three.next = four;
-four.next = five;
 
-const head1 = one;
+const head = one;
 
-output += "<b>Case 1 (No Cycle):</b><br>";
-let current = head1;
-let count = 0;
-while (current !== null && count < 10) {
-  output += current.val;
-  if (current.next !== null) {
+output += "<b>Input:</b><br>";
+let current1 = head;
+while (current1 !== null) {
+  output += current1.val;
+  if (current1.next !== null) {
     output += " -> ";
   }
-  current = current.next;
-  count++;
+  current1 = current1.next;
 }
 output += "<br><br>";
 
-output += "<b>Has Cycle:</b><br>";
-output += detectCycle(head1);
-output += "<br><br>";
+const reversed = reverseList(head);
 
-// Case 2: With cycle
-const six = new ListNode(1);
-const seven = new ListNode(2);
-const eight = new ListNode(3);
-const nine = new ListNode(4);
-const ten = new ListNode(5);
-
-six.next = seven;
-seven.next = eight;
-eight.next = nine;
-nine.next = ten;
-ten.next = eight;
-
-const head2 = six;
-
-output += "<b>Case 2 (With Cycle):</b><br>";
-output += "1 -> 2 -> 3 -> 4 -> 5 -> 3 (cycle)<br><br>";
-
-output += "<b>Has Cycle:</b><br>";
-output += detectCycle(head2);
+output += "<b>Output:</b><br>";
+let current2 = reversed;
+while (current2 !== null) {
+  output += current2.val;
+  if (current2.next !== null) {
+    output += " -> ";
+  }
+  current2 = current2.next;
+}
 
 document.getElementById("output").innerHTML = output;
