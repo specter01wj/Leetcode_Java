@@ -812,7 +812,7 @@ Cspiration Category:
 |基础||||||
 |206|Reverse Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |141|Linked List Cycle|Easy||Java/Javascript|Done/|
-|24|Swap Nodes in Pairs|Medium||Java/Javascript||
+|24|Swap Nodes in Pairs|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |328|Odd Even Linked List|Medium||Java/Javascript||
 |92|Reverse Linked List II|Medium||Java/Javascript||
 |237|Delete Node in a Linked List|Easy||Java/Javascript||
