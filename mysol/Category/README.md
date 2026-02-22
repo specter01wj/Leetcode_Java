@@ -814,7 +814,7 @@ Cspiration Category:
 |141|Linked List Cycle|Easy||Java/Javascript|Done/|
 |24|Swap Nodes in Pairs|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |328|Odd Even Linked List|Medium||Java/Javascript||
-|92|Reverse Linked List II|Medium||Java/Javascript||
+|92|Reverse Linked List II|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |237|Delete Node in a Linked List|Easy||Java/Javascript||
 |19|Remove Nth Node From End of List|Medium||Java/Javascript||
 |83|Remove Duplicates from Sorted List|Easy||Java/Javascript/Typescript|Done/Done/Done|
