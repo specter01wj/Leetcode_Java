@@ -118,9 +118,9 @@ By Jin Wang
 |1721|**Swapping Nodes in a Linked List**|Medium|Java/Javascript/Typescript||
 
 |Reversing a linked list|||||
-|24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript||
-|24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript||
-|24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript||
+|234|**Palindrome Linked List**|Medium|Java/Javascript/Typescript||
+|2074|**Reverse Nodes in Even Length Groups**|Medium|Java/Javascript/Typescript||
+|2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript||
 
 |General|||||
 |24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript||
