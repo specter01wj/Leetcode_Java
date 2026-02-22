@@ -5,49 +5,51 @@ class ListNode {
   }
 }
 
-function swapPairs(head) {
+function reverseBetween(head, left, right) {
 
-  if (head === null || head.next === null) {
+  if (head === null || left === right) {
     return head;
   }
 
-  let dummy = head.next;
-  let prev = null;
+  const dummy = new ListNode(0, head);
 
-  while (head !== null && head.next !== null) {
-
-    if (prev !== null) {
-      prev.next = head.next;
-    }
-
-    prev = head;
-
-    const nextNode = head.next.next;
-    head.next.next = head;
-
-    head.next = nextNode;
-    head = nextNode;
+  let prev = dummy;
+  for (let i = 1; i < left; i++) {
+    prev = prev.next;
   }
 
-  return dummy;
+  let curr = prev.next;
+
+  for (let i = 0; i < right - left; i++) {
+    const nextNode = curr.next;
+    curr.next = nextNode.next;
+    nextNode.next = prev.next;
+    prev.next = nextNode;
+  }
+
+  return dummy.next;
 }
 
 document.getElementById("title").innerText =
-  "24. Swap Nodes in Pairs (JS)";
+  "92. Reverse Linked List II (JS)";
 
 let output = "";
 
-// Example 1: head = [1,2,3,4]
+// Example 1: head = [1,2,3,4,5], left = 2, right = 4
 const one = new ListNode(1);
 const two = new ListNode(2);
 const three = new ListNode(3);
 const four = new ListNode(4);
+const five = new ListNode(5);
 
 one.next = two;
 two.next = three;
 three.next = four;
+four.next = five;
 
 const head1 = one;
+const left1 = 2;
+const right1 = 4;
 
 output += "<b>Example 1 Input:</b><br>";
 let current1 = head1;
@@ -58,9 +60,10 @@ while (current1 !== null) {
   }
   current1 = current1.next;
 }
-output += "<br><br>";
+output += "<br>";
+output += "<b>left =</b> " + left1 + ", <b>right =</b> " + right1 + "<br><br>";
 
-const result1 = swapPairs(head1);
+const result1 = reverseBetween(head1, left1, right1);
 
 output += "<b>Example 1 Output:</b><br>";
 let out1 = result1;
@@ -73,77 +76,33 @@ while (out1 !== null) {
 }
 output += "<br><br>";
 
-// Example 2: head = []
-const head2 = null;
+// Example 2: head = [5], left = 1, right = 1
+const head2 = new ListNode(5);
+const left2 = 1;
+const right2 = 1;
 
-output += "<b>Example 2 Input:</b><br>[]<br><br>";
+output += "<b>Example 2 Input:</b><br>";
+let current2 = head2;
+while (current2 !== null) {
+  output += current2.val;
+  if (current2.next !== null) {
+    output += " -> ";
+  }
+  current2 = current2.next;
+}
+output += "<br>";
+output += "<b>left =</b> " + left2 + ", <b>right =</b> " + right2 + "<br><br>";
 
-const result2 = swapPairs(head2);
+const result2 = reverseBetween(head2, left2, right2);
 
 output += "<b>Example 2 Output:</b><br>";
-if (result2 === null) {
-  output += "[]";
-} else {
-  let out2 = result2;
-  while (out2 !== null) {
-    output += out2.val;
-    if (out2.next !== null) {
-      output += " -> ";
-    }
-    out2 = out2.next;
-  }
-}
-output += "<br><br>";
-
-// Example 3: head = [1]
-const head3 = new ListNode(1);
-
-output += "<b>Example 3 Input:</b><br>1<br><br>";
-
-const result3 = swapPairs(head3);
-
-output += "<b>Example 3 Output:</b><br>";
-let out3 = result3;
-while (out3 !== null) {
-  output += out3.val;
-  if (out3.next !== null) {
+let out2 = result2;
+while (out2 !== null) {
+  output += out2.val;
+  if (out2.next !== null) {
     output += " -> ";
   }
-  out3 = out3.next;
-}
-output += "<br><br>";
-
-// Example 4: head = [1,2,3]
-const a = new ListNode(1);
-const b = new ListNode(2);
-const c = new ListNode(3);
-
-a.next = b;
-b.next = c;
-
-const head4 = a;
-
-output += "<b>Example 4 Input:</b><br>";
-let current4 = head4;
-while (current4 !== null) {
-  output += current4.val;
-  if (current4.next !== null) {
-    output += " -> ";
-  }
-  current4 = current4.next;
-}
-output += "<br><br>";
-
-const result4 = swapPairs(head4);
-
-output += "<b>Example 4 Output:</b><br>";
-let out4 = result4;
-while (out4 !== null) {
-  output += out4.val;
-  if (out4.next !== null) {
-    output += " -> ";
-  }
-  out4 = out4.next;
+  out2 = out2.next;
 }
 
 document.getElementById("output").innerHTML = output;
