@@ -617,6 +617,7 @@ By Jin Wang
 |11|**Container With Most Water**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |12|**Integer to Roman**|Medium|Java/Javascript|Done/Done|
 |17|**Letter Combinations of a Phone Number**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|19|**Remove Nth Node From End of List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |49|**Group Anagrams**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |62|**Unique Paths**|Medium|Java/Javascript/Typescript|Done/Done/Done|
