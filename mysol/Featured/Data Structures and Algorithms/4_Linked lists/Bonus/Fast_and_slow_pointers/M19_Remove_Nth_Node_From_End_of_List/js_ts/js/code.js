@@ -1,158 +1,126 @@
 class ListNode {
-  constructor(val) {
+  constructor(val, next = null) {
     this.val = val;
-    this.next = null;
+    this.next = next;
   }
 }
 
-function deleteMiddle(head, log) {
+function removeNthFromEnd(head, n) {
 
-  if (head === null) {
-    return null;
+  const dummy = new ListNode(0);
+  dummy.next = head;
+
+  let fast = dummy;
+  let slow = dummy;
+
+  for (let i = 0; i < n; i++) {
+    fast = fast.next;
   }
 
-  if (head.next === null) {
-    return null;
-  }
-
-  let slow = head;
-  let fast = head;
-  let prev = null;
-
-  let step = 0;
-
-  while (fast !== null && fast.next !== null) {
-    step++;
-    prev = slow;
+  while (fast.next !== null) {
+    fast = fast.next;
     slow = slow.next;
-    fast = fast.next.next;
-
-    log.push("Step " + step + ": prev=" + prev.val + ", slow=" + slow.val + ", fast=" + (fast === null ? "null" : fast.val));
   }
 
-  log.push("Delete node (middle): " + slow.val);
-  prev.next = slow.next;
+  slow.next = slow.next.next;
 
-  return head;
+  return dummy.next;
 }
 
-document.getElementById("title").innerText = "2095. Delete the Middle Node of a Linked List (JS)";
+document.getElementById("title").innerText =
+  "19. Remove Nth Node From End of List (JS)";
 
 let output = "";
 
-// Example 1: [1,3,4,7,1,2,6]
-let a1 = new ListNode(1);
-let a2 = new ListNode(3);
-let a3 = new ListNode(4);
-let a4 = new ListNode(7);
-let a5 = new ListNode(1);
-let a6 = new ListNode(2);
-let a7 = new ListNode(6);
+// Example 1: head = [1,2,3,4,5], n = 2
+const one = new ListNode(1);
+const two = new ListNode(2);
+const three = new ListNode(3);
+const four = new ListNode(4);
+const five = new ListNode(5);
 
-a1.next = a2;
-a2.next = a3;
-a3.next = a4;
-a4.next = a5;
-a5.next = a6;
-a6.next = a7;
+one.next = two;
+two.next = three;
+three.next = four;
+four.next = five;
 
-let head1 = a1;
+const head1 = one;
+const n1 = 2;
 
-output += "<b>=== Example 1 ===</b><br>";
-output += "<b>Before:</b> ";
-let p1 = head1;
-while (p1 !== null) {
-  output += p1.val;
-  if (p1.next !== null) output += " -> ";
-  p1 = p1.next;
+output += "<b>Example 1 Input:</b><br>";
+let current1 = head1;
+while (current1 !== null) {
+  output += current1.val;
+  if (current1.next !== null) output += " -> ";
+  current1 = current1.next;
 }
 output += "<br>";
+output += "<b>n =</b> " + n1 + "<br><br>";
 
-let log1 = [];
-head1 = deleteMiddle(head1, log1);
+const result1 = removeNthFromEnd(head1, n1);
 
-for (let i = 0; i < log1.length; i++) {
-  output += log1[i] + "<br>";
-}
-
-output += "<b>After :</b> ";
-let q1 = head1;
-while (q1 !== null) {
-  output += q1.val;
-  if (q1.next !== null) output += " -> ";
-  q1 = q1.next;
+output += "<b>Example 1 Output:</b><br>";
+let out1 = result1;
+while (out1 !== null) {
+  output += out1.val;
+  if (out1.next !== null) output += " -> ";
+  out1 = out1.next;
 }
 output += "<br><br>";
 
-// Example 2: [1,2,3,4]
-let b1 = new ListNode(1);
-let b2 = new ListNode(2);
-let b3 = new ListNode(3);
-let b4 = new ListNode(4);
 
-b1.next = b2;
-b2.next = b3;
-b3.next = b4;
+// Example 2: head = [1], n = 1
+const head2 = new ListNode(1);
+const n2 = 1;
 
-let head2 = b1;
-
-output += "<b>=== Example 2 ===</b><br>";
-output += "<b>Before:</b> ";
-let p2 = head2;
-while (p2 !== null) {
-  output += p2.val;
-  if (p2.next !== null) output += " -> ";
-  p2 = p2.next;
+output += "<b>Example 2 Input:</b><br>";
+let current2 = head2;
+while (current2 !== null) {
+  output += current2.val;
+  if (current2.next !== null) output += " -> ";
+  current2 = current2.next;
 }
 output += "<br>";
+output += "<b>n =</b> " + n2 + "<br><br>";
 
-let log2 = [];
-head2 = deleteMiddle(head2, log2);
+const result2 = removeNthFromEnd(head2, n2);
 
-for (let i = 0; i < log2.length; i++) {
-  output += log2[i] + "<br>";
-}
-
-output += "<b>After :</b> ";
-let q2 = head2;
-while (q2 !== null) {
-  output += q2.val;
-  if (q2.next !== null) output += " -> ";
-  q2 = q2.next;
+output += "<b>Example 2 Output:</b><br>";
+let out2 = result2;
+while (out2 !== null) {
+  output += out2.val;
+  if (out2.next !== null) output += " -> ";
+  out2 = out2.next;
 }
 output += "<br><br>";
 
-// Example 3: [2,1]
-let c1 = new ListNode(2);
-let c2 = new ListNode(1);
 
-c1.next = c2;
+// Example 3: head = [1,2], n = 1
+const a = new ListNode(1);
+const b = new ListNode(2);
+a.next = b;
 
-let head3 = c1;
+const head3 = a;
+const n3 = 1;
 
-output += "<b>=== Example 3 ===</b><br>";
-output += "<b>Before:</b> ";
-let p3 = head3;
-while (p3 !== null) {
-  output += p3.val;
-  if (p3.next !== null) output += " -> ";
-  p3 = p3.next;
+output += "<b>Example 3 Input:</b><br>";
+let current3 = head3;
+while (current3 !== null) {
+  output += current3.val;
+  if (current3.next !== null) output += " -> ";
+  current3 = current3.next;
 }
 output += "<br>";
+output += "<b>n =</b> " + n3 + "<br><br>";
 
-let log3 = [];
-head3 = deleteMiddle(head3, log3);
+const result3 = removeNthFromEnd(head3, n3);
 
-for (let i = 0; i < log3.length; i++) {
-  output += log3[i] + "<br>";
-}
-
-output += "<b>After :</b> ";
-let q3 = head3;
-while (q3 !== null) {
-  output += q3.val;
-  if (q3.next !== null) output += " -> ";
-  q3 = q3.next;
+output += "<b>Example 3 Output:</b><br>";
+let out3 = result3;
+while (out3 !== null) {
+  output += out3.val;
+  if (out3.next !== null) output += " -> ";
+  out3 = out3.next;
 }
 output += "<br>";
 
