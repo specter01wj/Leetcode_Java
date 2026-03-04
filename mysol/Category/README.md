@@ -819,7 +819,7 @@ Cspiration Category:
 |19|Remove Nth Node From End of List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |83|Remove Duplicates from Sorted List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |203|Remove Linked List Elements|Easy||Java/Javascript||
-|82|Remove Duplicates from Sorted List II|Medium||Java/Javascript||
+|82|Remove Duplicates from Sorted List II|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |369|Plus One Linked List|Medium||Java/Javascript||
 |2|Add Two Numbers|Medium||Java/Javascript||
 |160|Intersection of Two Linked Lists|Easy||Java/Javascript|Done/|
