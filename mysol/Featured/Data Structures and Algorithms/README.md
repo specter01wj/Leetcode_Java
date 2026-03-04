@@ -114,8 +114,8 @@ By Jin Wang
 |Fast and slow pointers|||||
 |2095|**Delete the Middle Node of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |19|**Remove Nth Node From End of List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-|82|**Remove Duplicates from Sorted List II**|Medium|Java/Javascript/Typescript||
-|1721|**Swapping Nodes in a Linked List**|Medium|Java/Javascript/Typescript||
+|82|**Remove Duplicates from Sorted List II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1721|**Swapping Nodes in a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 |Reversing a linked list|||||
 |234|**Palindrome Linked List**|Medium|Java/Javascript/Typescript||
