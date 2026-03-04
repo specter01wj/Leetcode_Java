@@ -18,7 +18,6 @@ public class M82_Remove_Duplicates_from_Sorted_List_II {
         }
     }
 
-    // Implementation (submission-style only). No prints here.
     static ListNode deleteDuplicates(ListNode head) {
 
         ListNode dummy = new ListNode(0, head);
