@@ -5,123 +5,189 @@ class ListNode {
   }
 }
 
-function removeNthFromEnd(head, n) {
+function reverseEvenLengthGroups(head) {
 
-  const dummy = new ListNode(0);
-  dummy.next = head;
+  let current = head;
+  let prevGroupEnd = null;
 
-  let fast = dummy;
-  let slow = dummy;
+  let groupSize = 1;
 
-  for (let i = 0; i < n; i++) {
-    fast = fast.next;
+  while (current !== null) {
+
+    let groupStart = current;
+
+    let temp = current;
+    let count = 0;
+
+    while (temp !== null && count < groupSize) {
+      temp = temp.next;
+      count++;
+    }
+
+    if (count % 2 === 0) {
+
+      let prev = temp;
+      let node = groupStart;
+
+      for (let i = 0; i < count; i++) {
+        let nextNode = node.next;
+        node.next = prev;
+        prev = node;
+        node = nextNode;
+      }
+
+      if (prevGroupEnd !== null) {
+        prevGroupEnd.next = prev;
+      } else {
+        head = prev;
+      }
+
+      prevGroupEnd = groupStart;
+      current = temp;
+
+    } else {
+
+      for (let i = 0; i < count; i++) {
+        prevGroupEnd = current;
+        current = current.next;
+      }
+
+    }
+
+    groupSize++;
   }
 
-  while (fast.next !== null) {
-    fast = fast.next;
-    slow = slow.next;
-  }
-
-  slow.next = slow.next.next;
-
-  return dummy.next;
+  return head;
 }
 
 document.getElementById("title").innerText =
-  "19. Remove Nth Node From End of List (JS)";
+"2074. Reverse Nodes in Even Length Groups (JS)";
 
 let output = "";
 
-// Example 1: head = [1,2,3,4,5], n = 2
-const one = new ListNode(1);
-const two = new ListNode(2);
-const three = new ListNode(3);
-const four = new ListNode(4);
-const five = new ListNode(5);
+// Example 1: head = [5,2,6,3,9,1,7,3,8,4]
+const a1 = new ListNode(5);
+const a2 = new ListNode(2);
+const a3 = new ListNode(6);
+const a4 = new ListNode(3);
+const a5 = new ListNode(9);
+const a6 = new ListNode(1);
+const a7 = new ListNode(7);
+const a8 = new ListNode(3);
+const a9 = new ListNode(8);
+const a10 = new ListNode(4);
 
-one.next = two;
-two.next = three;
-three.next = four;
-four.next = five;
+a1.next = a2;
+a2.next = a3;
+a3.next = a4;
+a4.next = a5;
+a5.next = a6;
+a6.next = a7;
+a7.next = a8;
+a8.next = a9;
+a9.next = a10;
 
-const head1 = one;
-const n1 = 2;
+const head1 = a1;
 
-output += "<b>Example 1 Input:</b><br>";
-let current1 = head1;
-while (current1 !== null) {
-  output += current1.val;
-  if (current1.next !== null) output += " -> ";
-  current1 = current1.next;
+output += "<b>=== Example 1 ===</b><br>";
+output += "<b>Input :</b> ";
+
+let p1 = head1;
+while (p1 !== null) {
+  output += p1.val;
+  if (p1.next !== null) output += " -> ";
+  p1 = p1.next;
 }
+
 output += "<br>";
-output += "<b>n =</b> " + n1 + "<br><br>";
 
-const result1 = removeNthFromEnd(head1, n1);
+const result1 = reverseEvenLengthGroups(head1);
 
-output += "<b>Example 1 Output:</b><br>";
-let out1 = result1;
-while (out1 !== null) {
-  output += out1.val;
-  if (out1.next !== null) output += " -> ";
-  out1 = out1.next;
+output += "<b>Output:</b> ";
+
+let r1 = result1;
+while (r1 !== null) {
+  output += r1.val;
+  if (r1.next !== null) output += " -> ";
+  r1 = r1.next;
 }
+
 output += "<br><br>";
 
 
-// Example 2: head = [1], n = 1
-const head2 = new ListNode(1);
-const n2 = 1;
+// Example 2: head = [1,1,0,6]
+const b1 = new ListNode(1);
+const b2 = new ListNode(1);
+const b3 = new ListNode(0);
+const b4 = new ListNode(6);
 
-output += "<b>Example 2 Input:</b><br>";
-let current2 = head2;
-while (current2 !== null) {
-  output += current2.val;
-  if (current2.next !== null) output += " -> ";
-  current2 = current2.next;
+b1.next = b2;
+b2.next = b3;
+b3.next = b4;
+
+const head2 = b1;
+
+output += "<b>=== Example 2 ===</b><br>";
+output += "<b>Input :</b> ";
+
+let p2 = head2;
+while (p2 !== null) {
+  output += p2.val;
+  if (p2.next !== null) output += " -> ";
+  p2 = p2.next;
 }
+
 output += "<br>";
-output += "<b>n =</b> " + n2 + "<br><br>";
 
-const result2 = removeNthFromEnd(head2, n2);
+const result2 = reverseEvenLengthGroups(head2);
 
-output += "<b>Example 2 Output:</b><br>";
-let out2 = result2;
-while (out2 !== null) {
-  output += out2.val;
-  if (out2.next !== null) output += " -> ";
-  out2 = out2.next;
+output += "<b>Output:</b> ";
+
+let r2 = result2;
+while (r2 !== null) {
+  output += r2.val;
+  if (r2.next !== null) output += " -> ";
+  r2 = r2.next;
 }
+
 output += "<br><br>";
 
 
-// Example 3: head = [1,2], n = 1
-const a = new ListNode(1);
-const b = new ListNode(2);
-a.next = b;
+// Example 3: head = [1,1,0,6,5]
+const c1 = new ListNode(1);
+const c2 = new ListNode(1);
+const c3 = new ListNode(0);
+const c4 = new ListNode(6);
+const c5 = new ListNode(5);
 
-const head3 = a;
-const n3 = 1;
+c1.next = c2;
+c2.next = c3;
+c3.next = c4;
+c4.next = c5;
 
-output += "<b>Example 3 Input:</b><br>";
-let current3 = head3;
-while (current3 !== null) {
-  output += current3.val;
-  if (current3.next !== null) output += " -> ";
-  current3 = current3.next;
+const head3 = c1;
+
+output += "<b>=== Example 3 ===</b><br>";
+output += "<b>Input :</b> ";
+
+let p3 = head3;
+while (p3 !== null) {
+  output += p3.val;
+  if (p3.next !== null) output += " -> ";
+  p3 = p3.next;
 }
+
 output += "<br>";
-output += "<b>n =</b> " + n3 + "<br><br>";
 
-const result3 = removeNthFromEnd(head3, n3);
+const result3 = reverseEvenLengthGroups(head3);
 
-output += "<b>Example 3 Output:</b><br>";
-let out3 = result3;
-while (out3 !== null) {
-  output += out3.val;
-  if (out3.next !== null) output += " -> ";
-  out3 = out3.next;
+output += "<b>Output:</b> ";
+
+let r3 = result3;
+while (r3 !== null) {
+  output += r3.val;
+  if (r3.next !== null) output += " -> ";
+  r3 = r3.next;
 }
-output += "<br>";
 
 document.getElementById("output").innerHTML = output;
