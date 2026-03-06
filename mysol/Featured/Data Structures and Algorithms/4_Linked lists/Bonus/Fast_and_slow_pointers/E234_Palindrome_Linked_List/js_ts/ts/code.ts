@@ -8,123 +8,98 @@ class ListNode {
   }
 }
 
-function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
+function isPalindrome(head: ListNode | null): boolean {
 
-  const dummy: ListNode = new ListNode(0);
-  dummy.next = head;
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head;
 
-  let fast: ListNode = dummy;
-  let slow: ListNode = dummy;
-
-  for (let i: number = 0; i < n; i++) {
-    fast = fast.next as ListNode;
+  while (fast !== null && fast.next !== null) {
+    slow = slow!.next;
+    fast = fast.next.next;
   }
 
-  while (fast.next !== null) {
-    fast = fast.next as ListNode;
-    slow = slow.next as ListNode;
+  let prev: ListNode | null = null;
+  let curr: ListNode | null = slow;
+
+  while (curr !== null) {
+    let nextNode: ListNode | null = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = nextNode;
   }
 
-  slow.next = slow.next!.next;
+  let left: ListNode | null = head;
+  let right: ListNode | null = prev;
 
-  return dummy.next;
+  while (right !== null) {
+    if (left!.val !== right.val) {
+      return false;
+    }
+    left = left!.next;
+    right = right.next;
+  }
+
+  return true;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "19. Remove Nth Node From End of List (TS)";
+"234. Palindrome Linked List (TS)";
 
 let output: string = "";
 
 // Example 1
-const one: ListNode = new ListNode(1);
-const two: ListNode = new ListNode(2);
-const three: ListNode = new ListNode(3);
-const four: ListNode = new ListNode(4);
-const five: ListNode = new ListNode(5);
+const a1: ListNode = new ListNode(1);
+const a2: ListNode = new ListNode(2);
+const a3: ListNode = new ListNode(2);
+const a4: ListNode = new ListNode(1);
 
-one.next = two;
-two.next = three;
-three.next = four;
-four.next = five;
+a1.next = a2;
+a2.next = a3;
+a3.next = a4;
 
-const head1: ListNode = one;
-const n1: number = 2;
+const head1: ListNode = a1;
 
-output += "<b>Example 1 Input:</b><br>";
-let current1: ListNode | null = head1;
-while (current1 !== null) {
-  output += current1.val;
-  if (current1.next !== null) output += " -> ";
-  current1 = current1.next;
+output += "<b>=== Example 1 ===</b><br>";
+output += "<b>Input :</b> ";
+
+let p1: ListNode | null = head1;
+
+while (p1 !== null) {
+  output += p1.val;
+  if (p1.next !== null) output += " -> ";
+  p1 = p1.next;
 }
+
 output += "<br>";
-output += "<b>n =</b> " + n1 + "<br><br>";
 
-const result1: ListNode | null = removeNthFromEnd(head1, n1);
+const result1: boolean = isPalindrome(head1);
 
-output += "<b>Example 1 Output:</b><br>";
-let out1: ListNode | null = result1;
-while (out1 !== null) {
-  output += out1.val;
-  if (out1.next !== null) output += " -> ";
-  out1 = out1.next;
-}
-output += "<br><br>";
+output += "<b>Output:</b> " + result1 + "<br><br>";
 
 
 // Example 2
-const head2: ListNode = new ListNode(1);
-const n2: number = 1;
+const b1: ListNode = new ListNode(1);
+const b2: ListNode = new ListNode(2);
 
-output += "<b>Example 2 Input:</b><br>";
-let current2: ListNode | null = head2;
-while (current2 !== null) {
-  output += current2.val;
-  if (current2.next !== null) output += " -> ";
-  current2 = current2.next;
+b1.next = b2;
+
+const head2: ListNode = b1;
+
+output += "<b>=== Example 2 ===</b><br>";
+output += "<b>Input :</b> ";
+
+let p2: ListNode | null = head2;
+
+while (p2 !== null) {
+  output += p2.val;
+  if (p2.next !== null) output += " -> ";
+  p2 = p2.next;
 }
+
 output += "<br>";
-output += "<b>n =</b> " + n2 + "<br><br>";
 
-const result2: ListNode | null = removeNthFromEnd(head2, n2);
+const result2: boolean = isPalindrome(head2);
 
-output += "<b>Example 2 Output:</b><br>";
-let out2: ListNode | null = result2;
-while (out2 !== null) {
-  output += out2.val;
-  if (out2.next !== null) output += " -> ";
-  out2 = out2.next;
-}
-output += "<br><br>";
-
-
-// Example 3
-const a: ListNode = new ListNode(1);
-const b: ListNode = new ListNode(2);
-a.next = b;
-
-const head3: ListNode = a;
-const n3: number = 1;
-
-output += "<b>Example 3 Input:</b><br>";
-let current3: ListNode | null = head3;
-while (current3 !== null) {
-  output += current3.val;
-  if (current3.next !== null) output += " -> ";
-  current3 = current3.next;
-}
-output += "<br>";
-output += "<b>n =</b> " + n3 + "<br><br>";
-
-const result3: ListNode | null = removeNthFromEnd(head3, n3);
-
-output += "<b>Example 3 Output:</b><br>";
-let out3: ListNode | null = result3;
-while (out3 !== null) {
-  output += out3.val;
-  if (out3.next !== null) output += " -> ";
-  out3 = out3.next;
-}
-output += "<br>";
+output += "<b>Output:</b> " + result2 + "<br>";
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
