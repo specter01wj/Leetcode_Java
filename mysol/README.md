@@ -81,7 +81,7 @@ By Jin Wang
 |228|**Summary Ranges**|Easy|Java/Javascript|Done/Done|
 |231|**Power of Two**|Easy|Java/Javascript|Done/Done|
 |232|**Implement Queue using Stacks**|Easy|Java/Javascript||
-|234|**Palindrome Linked List**|Easy|Java/Javascript||
+|234|**Palindrome Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |235|**Lowest Common Ancestor of a Binary Search Tree**|Easy|Java/Javascript||
 |237|**Delete Node in a Linked List**|Easy|Java/Javascript||
 |242|**Valid Anagram**|Easy|Java/Javascript|Done/Done|

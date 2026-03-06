@@ -825,6 +825,7 @@ Cspiration Category:
 |160|Intersection of Two Linked Lists|Easy||Java/Javascript|Done/|
 |21|Merge Two Sorted Lists|Easy||Java/Javascript|Done/|
 |Missing||||||
+|234|Palindrome Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |876|Middle of the Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1721|Swapping Nodes in a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
