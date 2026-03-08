@@ -120,7 +120,7 @@ By Jin Wang
 |Reversing a linked list|||||
 |234|**Palindrome Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2074|**Reverse Nodes in Even Length Groups**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-|2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript||
+|2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 |General|||||
 |203|**Remove Linked List Elements**|Easy|Java/Javascript/Typescript||
