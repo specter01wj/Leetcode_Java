@@ -123,8 +123,8 @@ By Jin Wang
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 |General|||||
-|203|**Remove Linked List Elements**|Easy|Java/Javascript/Typescript||
-|1290|**Convert Binary Number in a Linked List to Integer**|Easy|Java/Javascript/Typescript||
+|203|**Remove Linked List Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
+|1290|**Convert Binary Number in a Linked List to Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |328|**Odd Even Linked List**|Medium|Java/Javascript/Typescript||
 |707|**Design Linked List**|Medium|Java/Javascript/Typescript||
 
