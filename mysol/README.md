@@ -70,7 +70,7 @@ By Jin Wang
 |197|**Rising Temperature**|Easy|Java/Javascript||
 |198|**House Robber**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |202|**Happy Number**|Easy|Java/Javascript|Done/Done|
-|203|**Remove Linked List Elements**|Easy|Java/Javascript||
+|203|**Remove Linked List Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |204|**Count Primes**|Easy|Java/Javascript|Done/Done|
 |205|**Isomorphic Strings**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |206|**Reverse Linked List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
@@ -265,6 +265,7 @@ By Jin Wang
 |1266|**Minimum Time Visiting All Points**|Easy|Java/Javascript|Done/Done|
 |1275|**Find Winner on a Tic Tac Toe Game**|Easy|Java/Javascript|Done/Done|
 |1287|**Element Appearing More Than 25% In Sorted Array**|Easy|Java/Javascript|Done/Done|
+|1290|**Convert Binary Number in a Linked List to Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1295|**Find Numbers with Even Number of Digits**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1299|**Replace Elements with Greatest Element on Right Side**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1304|**Find N Unique Integers Sum up to Zero**|Easy|Java/Javascript|Done/Done|

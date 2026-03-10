@@ -818,7 +818,7 @@ Cspiration Category:
 |237|Delete Node in a Linked List|Easy||Java/Javascript||
 |19|Remove Nth Node From End of List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |83|Remove Duplicates from Sorted List|Easy||Java/Javascript/Typescript|Done/Done/Done|
-|203|Remove Linked List Elements|Easy||Java/Javascript||
+|203|Remove Linked List Elements|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |82|Remove Duplicates from Sorted List II|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |369|Plus One Linked List|Medium||Java/Javascript||
 |2|Add Two Numbers|Medium||Java/Javascript||
@@ -828,6 +828,7 @@ Cspiration Category:
 |234|Palindrome Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |876|Middle of the Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
+|1290|Convert Binary Number in a Linked List to Integer|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1721|Swapping Nodes in a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2095|Delete the Middle Node of a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2130|Maximum Twin Sum of a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
