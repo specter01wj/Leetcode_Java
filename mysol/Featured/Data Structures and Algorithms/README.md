@@ -29,6 +29,8 @@ By Jin Wang
 - [Binary Search](#binary-search)
 - [Backtracking](#backtracking)
 - [Dynamic Programming](#dynamic-programming)
+- [Interviews and Tools](#interviews-and-tools)
+- [Bonus](#bonus)
 
 ## Study Plan
 
