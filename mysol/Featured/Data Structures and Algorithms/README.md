@@ -139,6 +139,14 @@ By Jin Wang
 |496|**Next Greater Element I**|Easy|Java/Javascript/Typescript||
 |901|**Online Stock Span**|Medium|Java/Javascript/Typescript||
 
+##### (Bonus problems, hashing)
+
+| No. | Problem       | Level  | Language  | Completed|
+|:-------:|:--------------|:------:|:---------:|:-------------:|
+|String problems|||||
+|Queues|||||
+|Monotonic|||||
+
 
 #### Trees and graphs
 
