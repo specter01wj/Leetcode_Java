@@ -106,7 +106,7 @@ By Jin Wang
 |92|**Reverse Linked List II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
-##### (Bonus problems, hashing)
+##### (Bonus problems, linked lists)
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
@@ -139,7 +139,7 @@ By Jin Wang
 |496|**Next Greater Element I**|Easy|Java/Javascript/Typescript||
 |901|**Online Stock Span**|Medium|Java/Javascript/Typescript||
 
-##### (Bonus problems, hashing)
+##### (Bonus problems, stacks and queues)
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
