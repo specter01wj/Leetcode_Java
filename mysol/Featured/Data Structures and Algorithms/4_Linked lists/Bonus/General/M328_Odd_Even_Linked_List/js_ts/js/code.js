@@ -5,47 +5,47 @@ class ListNode {
   }
 }
 
-function removeElements(head, val) {
+function oddEvenList(head) {
 
-  const dummy = new ListNode(0);
-  dummy.next = head;
-
-  let current = dummy;
-
-  while (current.next !== null) {
-    if (current.next.val === val) {
-      current.next = current.next.next;
-    } else {
-      current = current.next;
-    }
+  if (head === null || head.next === null) {
+    return head;
   }
 
-  return dummy.next;
+  let odd = head;
+  let even = head.next;
+  let evenHead = even;
+
+  while (even !== null && even.next !== null) {
+    odd.next = even.next;
+    odd = odd.next;
+
+    even.next = odd.next;
+    even = even.next;
+  }
+
+  odd.next = evenHead;
+
+  return head;
 }
 
 document.getElementById("title").innerText =
-"203. Remove Linked List Elements (JS)";
+"328. Odd Even Linked List (JS)";
 
 let output = "";
 
-// Example 1: head = [1,2,6,3,4,5,6], val = 6
+// Example 1: head = [1,2,3,4,5]
 const a1 = new ListNode(1);
 const a2 = new ListNode(2);
-const a3 = new ListNode(6);
-const a4 = new ListNode(3);
-const a5 = new ListNode(4);
-const a6 = new ListNode(5);
-const a7 = new ListNode(6);
+const a3 = new ListNode(3);
+const a4 = new ListNode(4);
+const a5 = new ListNode(5);
 
 a1.next = a2;
 a2.next = a3;
 a3.next = a4;
 a4.next = a5;
-a5.next = a6;
-a6.next = a7;
 
 const head1 = a1;
-const val1 = 6;
 
 output += "<b>=== Example 1 ===</b><br>";
 output += "<b>Input :</b> ";
@@ -56,9 +56,8 @@ while (p1 !== null) {
   p1 = p1.next;
 }
 output += "<br>";
-output += "val = " + val1 + "<br>";
 
-const result1 = removeElements(head1, val1);
+const result1 = oddEvenList(head1);
 
 output += "<b>Output:</b> ";
 let q1 = result1;
@@ -70,9 +69,23 @@ while (q1 !== null) {
 output += "<br><br>";
 
 
-// Example 2: head = [], val = 1
-const head2 = null;
-const val2 = 1;
+// Example 2: head = [2,1,3,5,6,4,7]
+const b1 = new ListNode(2);
+const b2 = new ListNode(1);
+const b3 = new ListNode(3);
+const b4 = new ListNode(5);
+const b5 = new ListNode(6);
+const b6 = new ListNode(4);
+const b7 = new ListNode(7);
+
+b1.next = b2;
+b2.next = b3;
+b3.next = b4;
+b4.next = b5;
+b5.next = b6;
+b6.next = b7;
+
+const head2 = b1;
 
 output += "<b>=== Example 2 ===</b><br>";
 output += "<b>Input :</b> ";
@@ -83,9 +96,8 @@ while (p2 !== null) {
   p2 = p2.next;
 }
 output += "<br>";
-output += "val = " + val2 + "<br>";
 
-const result2 = removeElements(head2, val2);
+const result2 = oddEvenList(head2);
 
 output += "<b>Output:</b> ";
 let q2 = result2;
@@ -93,42 +105,6 @@ while (q2 !== null) {
   output += q2.val;
   if (q2.next !== null) output += " -> ";
   q2 = q2.next;
-}
-output += "<br><br>";
-
-
-// Example 3: head = [7,7,7,7], val = 7
-const c1 = new ListNode(7);
-const c2 = new ListNode(7);
-const c3 = new ListNode(7);
-const c4 = new ListNode(7);
-
-c1.next = c2;
-c2.next = c3;
-c3.next = c4;
-
-const head3 = c1;
-const val3 = 7;
-
-output += "<b>=== Example 3 ===</b><br>";
-output += "<b>Input :</b> ";
-let p3 = head3;
-while (p3 !== null) {
-  output += p3.val;
-  if (p3.next !== null) output += " -> ";
-  p3 = p3.next;
-}
-output += "<br>";
-output += "val = " + val3 + "<br>";
-
-const result3 = removeElements(head3, val3);
-
-output += "<b>Output:</b> ";
-let q3 = result3;
-while (q3 !== null) {
-  output += q3.val;
-  if (q3.next !== null) output += " -> ";
-  q3 = q3.next;
 }
 output += "<br>";
 
