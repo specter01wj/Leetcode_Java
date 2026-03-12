@@ -115,12 +115,10 @@ By Jin Wang
 |19|**Remove Nth Node From End of List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |82|**Remove Duplicates from Sorted List II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1721|**Swapping Nodes in a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-
 |Reversing a linked list|||||
 |234|**Palindrome Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2074|**Reverse Nodes in Even Length Groups**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-
 |General|||||
 |203|**Remove Linked List Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1290|**Convert Binary Number in a Linked List to Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
