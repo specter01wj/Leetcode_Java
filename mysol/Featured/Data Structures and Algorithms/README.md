@@ -5,17 +5,17 @@ By Jin Wang
 
 ## Repository Structure
 
-leetcode/
-├── arrays-and-strings/
-├── hashing/
-├── linked-list/
-├── stacks-and-queues/
-├── trees-and-graphs/
-├── heaps/
-├── greedy/
-├── binary-search/
-├── backtracking/
-└── dynamic-programming/
+    leetcode/
+    ├── arrays-and-strings/
+    ├── hashing/
+    ├── linked-list/
+    ├── stacks-and-queues/
+    ├── trees-and-graphs/
+    ├── heaps/
+    ├── greedy/
+    ├── binary-search/
+    ├── backtracking/
+    └── dynamic-programming/
 
 ## Study Plan
 
