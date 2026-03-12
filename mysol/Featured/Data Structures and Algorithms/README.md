@@ -125,8 +125,8 @@ By Jin Wang
 |General|||||
 |203|**Remove Linked List Elements**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |1290|**Convert Binary Number in a Linked List to Integer**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|328|**Odd Even Linked List**|Medium|Java/Javascript/Typescript||
-|707|**Design Linked List**|Medium|Java/Javascript/Typescript||
+|328|**Odd Even Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|707|**Design Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
 
 #### Stacks and queues
