@@ -131,8 +131,8 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |String problems|||||
-|71|**Simplify Path**|🟡Medium|Java/Javascript/Typescript|✔/✔/✔|
-|1544|**Make The String Great**|🟢Easy|Java/Javascript/Typescript||
+|71|**Simplify Path**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
+|1544|**Make The String Great**|🟢 Easy|Java/Javascript/Typescript||
 |Queues|||||
 |346|**Moving Average from Data Stream**|Easy|Java/Javascript/Typescript||
 |Monotonic|||||
