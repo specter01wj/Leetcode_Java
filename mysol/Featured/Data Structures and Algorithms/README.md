@@ -45,7 +45,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Arrays and strings
 
@@ -81,6 +81,7 @@ By Jin Wang
 |724|**Find Pivot Index**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |303|**Range Sum Query - Immutable**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 
+---
 
 #### Hashing
 
@@ -123,6 +124,7 @@ By Jin Wang
 |791|**Custom Sort String**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+---
 
 #### Linked lists
 
@@ -135,7 +137,6 @@ By Jin Wang
 |24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |92|**Reverse Linked List II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
-
 
 ##### (Bonus problems, linked lists)
 
@@ -156,6 +157,7 @@ By Jin Wang
 |328|**Odd Even Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |707|**Design Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 
+---
 
 #### Stacks and queues
 
@@ -178,55 +180,56 @@ By Jin Wang
 |Queues|||||
 |Monotonic|||||
 
+---
 
 #### Trees and graphs
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Heaps
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Greedy
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Binary search
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Backtracking
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Dynamic programming
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Interviews and tools
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 
-
+---
 
 #### Bonus
 
