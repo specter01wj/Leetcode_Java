@@ -17,6 +17,19 @@ By Jin Wang
     ├── backtracking/
     └── dynamic-programming/
 
+## Table of Contents
+
+- [Arrays and Strings](#arrays-and-strings)
+- [Hashing](#hashing)
+- [Linked Lists](#linked-lists)
+- [Stacks and Queues](#stacks-and-queues)
+- [Trees and Graphs](#trees-and-graphs)
+- [Heaps](#heaps)
+- [Greedy](#greedy)
+- [Binary Search](#binary-search)
+- [Backtracking](#backtracking)
+- [Dynamic Programming](#dynamic-programming)
+
 ## Study Plan
 
 ### LeetCode's Interview Crash Course
