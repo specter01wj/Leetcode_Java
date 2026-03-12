@@ -1,111 +1,166 @@
 class ListNode {
-  constructor(val, next = null) {
+  constructor(val) {
     this.val = val;
-    this.next = next;
+    this.next = null;
   }
 }
 
-function oddEvenList(head) {
+var MyLinkedList = function() {
+  this.head = null;
+  this.size = 0;
+};
 
-  if (head === null || head.next === null) {
-    return head;
+/** 
+ * @param {number} index
+ * @return {number}
+ */
+MyLinkedList.prototype.get = function(index) {
+
+  if (index < 0 || index >= this.size) {
+    return -1;
   }
 
-  let odd = head;
-  let even = head.next;
-  let evenHead = even;
+  let current = this.head;
 
-  while (even !== null && even.next !== null) {
-    odd.next = even.next;
-    odd = odd.next;
-
-    even.next = odd.next;
-    even = even.next;
+  for (let i = 0; i < index; i++) {
+    current = current.next;
   }
 
-  odd.next = evenHead;
+  return current.val;
+};
 
-  return head;
-}
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtHead = function(val) {
+
+  const newNode = new ListNode(val);
+
+  newNode.next = this.head;
+
+  this.head = newNode;
+
+  this.size++;
+};
+
+/** 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtTail = function(val) {
+
+  const newNode = new ListNode(val);
+
+  if (this.head === null) {
+    this.head = newNode;
+    this.size++;
+    return;
+  }
+
+  let current = this.head;
+
+  while (current.next !== null) {
+    current = current.next;
+  }
+
+  current.next = newNode;
+
+  this.size++;
+};
+
+/** 
+ * @param {number} index 
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtIndex = function(index, val) {
+
+  if (index < 0 || index > this.size) {
+    return;
+  }
+
+  if (index === 0) {
+    this.addAtHead(val);
+    return;
+  }
+
+  if (index === this.size) {
+    this.addAtTail(val);
+    return;
+  }
+
+  let current = this.head;
+
+  for (let i = 0; i < index - 1; i++) {
+    current = current.next;
+  }
+
+  const newNode = new ListNode(val);
+
+  newNode.next = current.next;
+
+  current.next = newNode;
+
+  this.size++;
+};
+
+/** 
+ * @param {number} index
+ * @return {void}
+ */
+MyLinkedList.prototype.deleteAtIndex = function(index) {
+
+  if (index < 0 || index >= this.size) {
+    return;
+  }
+
+  if (index === 0) {
+    this.head = this.head.next;
+    this.size--;
+    return;
+  }
+
+  let current = this.head;
+
+  for (let i = 0; i < index - 1; i++) {
+    current = current.next;
+  }
+
+  current.next = current.next.next;
+
+  this.size--;
+};
+
+
 
 document.getElementById("title").innerText =
-"328. Odd Even Linked List (JS)";
+"707. Design Linked List (JS)";
 
 let output = "";
 
-// Example 1: head = [1,2,3,4,5]
-const a1 = new ListNode(1);
-const a2 = new ListNode(2);
-const a3 = new ListNode(3);
-const a4 = new ListNode(4);
-const a5 = new ListNode(5);
-
-a1.next = a2;
-a2.next = a3;
-a3.next = a4;
-a4.next = a5;
-
-const head1 = a1;
+const myLinkedList = new MyLinkedList();
 
 output += "<b>=== Example 1 ===</b><br>";
-output += "<b>Input :</b> ";
-let p1 = head1;
-while (p1 !== null) {
-  output += p1.val;
-  if (p1.next !== null) output += " -> ";
-  p1 = p1.next;
-}
-output += "<br>";
 
-const result1 = oddEvenList(head1);
+output += "addAtHead(1)<br>";
+myLinkedList.addAtHead(1);
 
-output += "<b>Output:</b> ";
-let q1 = result1;
-while (q1 !== null) {
-  output += q1.val;
-  if (q1.next !== null) output += " -> ";
-  q1 = q1.next;
-}
-output += "<br><br>";
+output += "addAtTail(3)<br>";
+myLinkedList.addAtTail(3);
 
+output += "addAtIndex(1,2)<br>";
+myLinkedList.addAtIndex(1,2);
 
-// Example 2: head = [2,1,3,5,6,4,7]
-const b1 = new ListNode(2);
-const b2 = new ListNode(1);
-const b3 = new ListNode(3);
-const b4 = new ListNode(5);
-const b5 = new ListNode(6);
-const b6 = new ListNode(4);
-const b7 = new ListNode(7);
+output += "get(1)<br>";
+const result1 = myLinkedList.get(1);
+output += "Output: " + result1 + "<br>";
 
-b1.next = b2;
-b2.next = b3;
-b3.next = b4;
-b4.next = b5;
-b5.next = b6;
-b6.next = b7;
+output += "deleteAtIndex(1)<br>";
+myLinkedList.deleteAtIndex(1);
 
-const head2 = b1;
-
-output += "<b>=== Example 2 ===</b><br>";
-output += "<b>Input :</b> ";
-let p2 = head2;
-while (p2 !== null) {
-  output += p2.val;
-  if (p2.next !== null) output += " -> ";
-  p2 = p2.next;
-}
-output += "<br>";
-
-const result2 = oddEvenList(head2);
-
-output += "<b>Output:</b> ";
-let q2 = result2;
-while (q2 !== null) {
-  output += q2.val;
-  if (q2.next !== null) output += " -> ";
-  q2 = q2.next;
-}
-output += "<br>";
+output += "get(1)<br>";
+const result2 = myLinkedList.get(1);
+output += "Output: " + result2 + "<br>";
 
 document.getElementById("output").innerHTML = output;
