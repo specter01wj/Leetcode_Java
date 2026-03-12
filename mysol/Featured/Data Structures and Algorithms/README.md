@@ -15,7 +15,9 @@ By Jin Wang
     ├── greedy/
     ├── binary-search/
     ├── backtracking/
-    └── dynamic-programming/
+    ├── dynamic-programming/
+    ├── interviews-and-tools/
+    └── bonus/
 
 ## Table of Contents
 
