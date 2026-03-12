@@ -813,7 +813,7 @@ Cspiration Category:
 |206|Reverse Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |141|Linked List Cycle|Easy||Java/Javascript|Done/|
 |24|Swap Nodes in Pairs|Medium||Java/Javascript/Typescript|Done/Done/Done|
-|328|Odd Even Linked List|Medium||Java/Javascript||
+|328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |92|Reverse Linked List II|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |237|Delete Node in a Linked List|Easy||Java/Javascript||
 |19|Remove Nth Node From End of List|Medium||Java/Javascript/Typescript|Done/Done/Done|
@@ -826,7 +826,6 @@ Cspiration Category:
 |21|Merge Two Sorted Lists|Easy||Java/Javascript|Done/|
 |Missing||||||
 |234|Palindrome Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
-|328|Odd Even Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |876|Middle of the Linked List|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1290|Convert Binary Number in a Linked List to Integer|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |1721|Swapping Nodes in a Linked List|Medium||Java/Javascript/Typescript|Done/Done/Done|
