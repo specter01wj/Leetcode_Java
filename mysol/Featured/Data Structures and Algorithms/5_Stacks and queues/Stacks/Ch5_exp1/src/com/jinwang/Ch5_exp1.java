@@ -23,6 +23,16 @@ public class Ch5_exp1 {
         
         System.out.println("Pop: " + stack.pop());
         System.out.println("Stack: " + stack);
+        
+        // Push another element
+        System.out.println("\n=== Push Again ===");
+        stack.push(5);
+        System.out.println("Stack: " + stack);
+        
+        // Peek
+        System.out.println("\n=== Peek ===");
+        System.out.println("Top Element: " + stack.peek());
+        System.out.println("Stack: " + stack);
 
 	}
 
