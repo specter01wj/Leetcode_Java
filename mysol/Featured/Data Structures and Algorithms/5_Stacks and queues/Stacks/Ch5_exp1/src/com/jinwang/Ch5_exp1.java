@@ -33,6 +33,14 @@ public class Ch5_exp1 {
         System.out.println("\n=== Peek ===");
         System.out.println("Top Element: " + stack.peek());
         System.out.println("Stack: " + stack);
+        
+        // Size
+        System.out.println("\n=== Size ===");
+        System.out.println("Size: " + stack.size());
+        
+        // Empty
+        System.out.println("\n=== Empty ===");
+        System.out.println("Is Empty? " + stack.empty());
 
 	}
 
