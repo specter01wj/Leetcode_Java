@@ -48,6 +48,11 @@ public class Ch5_exp1 {
             System.out.println("Pop: " + stack.pop());
             System.out.println("Stack: " + stack);
         }
+        
+        // Check again
+        System.out.println("\n=== Final Check ===");
+        System.out.println("Is Empty? " + stack.empty());
+        System.out.println("Size: " + stack.size());
 
 	}
 
