@@ -41,6 +41,13 @@ public class Ch5_exp1 {
         // Empty
         System.out.println("\n=== Empty ===");
         System.out.println("Is Empty? " + stack.empty());
+        
+        // Remove remaining elements
+        System.out.println("\n=== Pop Remaining Elements ===");
+        while (!stack.empty()) {
+            System.out.println("Pop: " + stack.pop());
+            System.out.println("Stack: " + stack);
+        }
 
 	}
 
