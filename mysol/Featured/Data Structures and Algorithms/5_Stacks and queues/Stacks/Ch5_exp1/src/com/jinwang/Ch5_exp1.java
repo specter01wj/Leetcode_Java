@@ -15,6 +15,14 @@ public class Ch5_exp1 {
         stack.push(2);
         stack.push(3);
         System.out.println("Stack: " + stack);
+        
+        // Pop elements
+        System.out.println("\n=== Pop ===");
+        System.out.println("Pop: " + stack.pop());
+        System.out.println("Stack: " + stack);
+        
+        System.out.println("Pop: " + stack.pop());
+        System.out.println("Stack: " + stack);
 
 	}
 
