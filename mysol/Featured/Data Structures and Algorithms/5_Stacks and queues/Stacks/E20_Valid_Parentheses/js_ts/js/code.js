@@ -1,149 +1,96 @@
-class ListNode {
-  constructor(val, next = null) {
-    this.val = val;
-    this.next = next;
-  }
-}
+function isValid(s) {
 
-function swapPairs(head) {
+    const matching = new Map();
+    matching.set("(", ")");
+    matching.set("[", "]");
+    matching.set("{", "}");
 
-  if (head === null || head.next === null) {
-    return head;
-  }
+    const stack = [];
 
-  let dummy = head.next;
-  let prev = null;
+    for (const c of s) {
 
-  while (head !== null && head.next !== null) {
+        // Opening bracket
+        if (matching.has(c)) {
 
-    if (prev !== null) {
-      prev.next = head.next;
+            stack.push(c);
+
+        } else {
+
+            // Closing bracket with no matching opening bracket
+            if (stack.length === 0) {
+                return false;
+            }
+
+            const previousOpening = stack.pop();
+
+            // Brackets do not match
+            if (matching.get(previousOpening) !== c) {
+                return false;
+            }
+        }
     }
 
-    prev = head;
-
-    const nextNode = head.next.next;
-    head.next.next = head;
-
-    head.next = nextNode;
-    head = nextNode;
-  }
-
-  return dummy;
+    // Valid only if no unmatched opening brackets remain
+    return stack.length === 0;
 }
 
 document.getElementById("title").innerText =
-  "24. Swap Nodes in Pairs (JS)";
+    "20. Valid Parentheses (JS)";
 
 let output = "";
 
-// Example 1: head = [1,2,3,4]
-const one = new ListNode(1);
-const two = new ListNode(2);
-const three = new ListNode(3);
-const four = new ListNode(4);
-
-one.next = two;
-two.next = three;
-three.next = four;
-
-const head1 = one;
+// Example 1
+const input1 = "()";
 
 output += "<b>Example 1 Input:</b><br>";
-let current1 = head1;
-while (current1 !== null) {
-  output += current1.val;
-  if (current1.next !== null) {
-    output += " -> ";
-  }
-  current1 = current1.next;
-}
+output += input1;
 output += "<br><br>";
-
-const result1 = swapPairs(head1);
 
 output += "<b>Example 1 Output:</b><br>";
-let out1 = result1;
-while (out1 !== null) {
-  output += out1.val;
-  if (out1.next !== null) {
-    output += " -> ";
-  }
-  out1 = out1.next;
-}
+output += isValid(input1);
 output += "<br><br>";
 
-// Example 2: head = []
-const head2 = null;
+// Example 2
+const input2 = "()[]{}";
 
-output += "<b>Example 2 Input:</b><br>[]<br><br>";
-
-const result2 = swapPairs(head2);
+output += "<b>Example 2 Input:</b><br>";
+output += input2;
+output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-if (result2 === null) {
-  output += "[]";
-} else {
-  let out2 = result2;
-  while (out2 !== null) {
-    output += out2.val;
-    if (out2.next !== null) {
-      output += " -> ";
-    }
-    out2 = out2.next;
-  }
-}
+output += isValid(input2);
 output += "<br><br>";
 
-// Example 3: head = [1]
-const head3 = new ListNode(1);
+// Example 3
+const input3 = "(]";
 
-output += "<b>Example 3 Input:</b><br>1<br><br>";
-
-const result3 = swapPairs(head3);
+output += "<b>Example 3 Input:</b><br>";
+output += input3;
+output += "<br><br>";
 
 output += "<b>Example 3 Output:</b><br>";
-let out3 = result3;
-while (out3 !== null) {
-  output += out3.val;
-  if (out3.next !== null) {
-    output += " -> ";
-  }
-  out3 = out3.next;
-}
+output += isValid(input3);
 output += "<br><br>";
 
-// Example 4: head = [1,2,3]
-const a = new ListNode(1);
-const b = new ListNode(2);
-const c = new ListNode(3);
-
-a.next = b;
-b.next = c;
-
-const head4 = a;
+// Example 4
+const input4 = "([])";
 
 output += "<b>Example 4 Input:</b><br>";
-let current4 = head4;
-while (current4 !== null) {
-  output += current4.val;
-  if (current4.next !== null) {
-    output += " -> ";
-  }
-  current4 = current4.next;
-}
+output += input4;
 output += "<br><br>";
 
-const result4 = swapPairs(head4);
-
 output += "<b>Example 4 Output:</b><br>";
-let out4 = result4;
-while (out4 !== null) {
-  output += out4.val;
-  if (out4.next !== null) {
-    output += " -> ";
-  }
-  out4 = out4.next;
-}
+output += isValid(input4);
+output += "<br><br>";
+
+// Example 5
+const input5 = "([)]";
+
+output += "<b>Example 5 Input:</b><br>";
+output += input5;
+output += "<br><br>";
+
+output += "<b>Example 5 Output:</b><br>";
+output += isValid(input5);
 
 document.getElementById("output").innerHTML = output;
