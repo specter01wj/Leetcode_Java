@@ -33,15 +33,11 @@ public class E20_Valid_Parentheses {
                 if (matching.get(previousOpening) != c) {
                     return false;
                 }
-
             }
-
         }
 
         // Valid only if no unmatched opening brackets remain
-
         return stack.empty();
-
     }
 
 }
