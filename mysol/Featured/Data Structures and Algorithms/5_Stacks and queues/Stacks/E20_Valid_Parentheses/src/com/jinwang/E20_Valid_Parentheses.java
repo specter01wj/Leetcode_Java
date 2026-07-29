@@ -12,9 +12,7 @@ public class E20_Valid_Parentheses {
         Map<Character, Character> matching = new HashMap<>();
 
         matching.put('(', ')');
-
         matching.put('[', ']');
-
         matching.put('{', '}');
 
         Stack<Character> stack = new Stack<>();
