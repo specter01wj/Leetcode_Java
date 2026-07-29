@@ -30,11 +30,8 @@ public class E20_Valid_Parentheses {
                 char previousOpening = stack.pop();
 
                 // Brackets do not match
-
                 if (matching.get(previousOpening) != c) {
-
                     return false;
-
                 }
 
             }
