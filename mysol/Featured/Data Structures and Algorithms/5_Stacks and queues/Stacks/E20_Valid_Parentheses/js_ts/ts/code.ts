@@ -11,9 +11,7 @@ function isValid(s: string): boolean {
 
     // Opening bracket
     if (matching.has(c)) {
-
       stack.push(c);
-
     } else {
 
       // Closing bracket with no matching opening bracket
