@@ -1,10 +1,34 @@
 package com.jinwang;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
+
 public class E20_Valid_Parentheses {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		E20_Valid_Parentheses solution = new E20_Valid_Parentheses();
 
+        String input1 = "()";
+        String input2 = "()[]{}";
+        String input3 = "(]";
+        String input4 = "([])";
+        String input5 = "([)]";
+
+        System.out.println("Input: " + input1 + "\nOutput: " + solution.isValid(input1));
+        System.out.println();
+
+        System.out.println("Input: " + input2 + "\nOutput: " + solution.isValid(input2));
+        System.out.println();
+
+        System.out.println("Input: " + input3 + "\nOutput: " + solution.isValid(input3));
+        System.out.println();
+
+        System.out.println("Input: " + input4 + "\nOutput: " + solution.isValid(input4));
+        System.out.println();
+
+        System.out.println("Input: " + input5 + "\nOutput: " + solution.isValid(input5));
 	}
 	
 	public boolean isValid(String s) {
