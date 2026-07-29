@@ -20,11 +20,8 @@ public class E20_Valid_Parentheses {
         for (char c : s.toCharArray()) {
 
             // Opening bracket
-
             if (matching.containsKey(c)) {
-
                 stack.push(c);
-
             } else {
 
                 // Closing bracket with no matching opening bracket
