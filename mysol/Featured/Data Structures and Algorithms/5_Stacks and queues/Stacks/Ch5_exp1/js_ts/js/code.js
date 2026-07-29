@@ -1,94 +1,54 @@
-function isValid(s) {
-
-    const matching = new Map();
-    matching.set("(", ")");
-    matching.set("[", "]");
-    matching.set("{", "}");
-
-    const stack = [];
-
-    for (const c of s) {
-
-        // Opening bracket
-        if (matching.has(c)) {
-            stack.push(c);
-        } else {
-
-            // Closing bracket with no matching opening bracket
-            if (stack.length === 0) {
-                return false;
-            }
-
-            const previousOpening = stack.pop();
-
-            // Brackets do not match
-            if (matching.get(previousOpening) !== c) {
-                return false;
-            }
-        }
-    }
-
-    // Valid only if no unmatched opening brackets remain
-    return stack.length === 0;
-}
-
 document.getElementById("title").innerText =
-    "20. Valid Parentheses (JS)";
+    "Stack Basics (JS)";
+
+const stack = [];
 
 let output = "";
 
-// Example 1
-const input1 = "()";
+// Push
+output += "<b>=== Push ===</b><br>";
+stack.push(1);
+stack.push(2);
+stack.push(3);
+output += "Stack: [" + stack.join(", ") + "]<br><br>";
 
-output += "<b>Example 1 Input:</b><br>";
-output += input1;
-output += "<br><br>";
+// Pop
+output += "<b>=== Pop ===</b><br>";
+output += "Pop: " + stack.pop() + "<br>";
+output += "Stack: [" + stack.join(", ") + "]<br>";
 
-output += "<b>Example 1 Output:</b><br>";
-output += isValid(input1);
-output += "<br><br>";
+output += "Pop: " + stack.pop() + "<br>";
+output += "Stack: [" + stack.join(", ") + "]<br><br>";
 
-// Example 2
-const input2 = "()[]{}";
+// Push Again
+output += "<b>=== Push Again ===</b><br>";
+stack.push(5);
+output += "Stack: [" + stack.join(", ") + "]<br><br>";
 
-output += "<b>Example 2 Input:</b><br>";
-output += input2;
-output += "<br><br>";
+// Peek
+output += "<b>=== Peek ===</b><br>";
+output += "Top Element: " + stack[stack.length - 1] + "<br>";
+output += "Stack: [" + stack.join(", ") + "]<br><br>";
 
-output += "<b>Example 2 Output:</b><br>";
-output += isValid(input2);
-output += "<br><br>";
+// Size
+output += "<b>=== Size ===</b><br>";
+output += "Size: " + stack.length + "<br><br>";
 
-// Example 3
-const input3 = "(]";
+// Empty
+output += "<b>=== Empty ===</b><br>";
+output += "Is Empty? " + (stack.length === 0) + "<br><br>";
 
-output += "<b>Example 3 Input:</b><br>";
-output += input3;
-output += "<br><br>";
+// Pop Remaining Elements
+output += "<b>=== Pop Remaining Elements ===</b><br>";
+while (stack.length > 0) {
+    output += "Pop: " + stack.pop() + "<br>";
+    output += "Stack: [" + stack.join(", ") + "]<br>";
+}
+output += "<br>";
 
-output += "<b>Example 3 Output:</b><br>";
-output += isValid(input3);
-output += "<br><br>";
-
-// Example 4
-const input4 = "([])";
-
-output += "<b>Example 4 Input:</b><br>";
-output += input4;
-output += "<br><br>";
-
-output += "<b>Example 4 Output:</b><br>";
-output += isValid(input4);
-output += "<br><br>";
-
-// Example 5
-const input5 = "([)]";
-
-output += "<b>Example 5 Input:</b><br>";
-output += input5;
-output += "<br><br>";
-
-output += "<b>Example 5 Output:</b><br>";
-output += isValid(input5);
+// Final Check
+output += "<b>=== Final Check ===</b><br>";
+output += "Is Empty? " + (stack.length === 0) + "<br>";
+output += "Size: " + stack.length;
 
 document.getElementById("output").innerHTML = output;
