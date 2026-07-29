@@ -18,18 +18,13 @@ public class E20_Valid_Parentheses {
         Stack<Character> stack = new Stack<>();
 
         for (char c : s.toCharArray()) {
-
             // Opening bracket
             if (matching.containsKey(c)) {
                 stack.push(c);
             } else {
-
                 // Closing bracket with no matching opening bracket
-
                 if (stack.empty()) {
-
                     return false;
-
                 }
 
                 char previousOpening = stack.pop();
