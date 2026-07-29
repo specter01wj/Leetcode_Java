@@ -16,7 +16,7 @@ By Jin Wang
 |9|**Palindrome Number**|Easy|Java/Javascript|Done/Done|
 |13|**Roman to Integer**|Easy|Java/Javascript|Done/Done|
 |14|**Longest Common Prefix**|Easy|Java/Javascript|Done/Done|
-|20|**Valid Parentheses**|Easy|Java/Javascript|Done/Done|
+|20|**Valid Parentheses**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |21|**Merge Two Sorted Lists**|Easy|Java/Javascript|Done/|
 |26|**Remove Duplicates from Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |27|**Remove Element**|Easy|Java/Javascript/Typescript|Done/Done/Done|
