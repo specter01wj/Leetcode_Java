@@ -9,28 +9,18 @@ var backspaceCompare = function(s, t) {
     const stackT = [];
 
     for (const c of s) {
-
         if (c !== '#') {
-
             stackS.push(c);
-
         } else if (stackS.length > 0) {
-
             stackS.pop();
-
         }
     }
 
     for (const c of t) {
-
         if (c !== '#') {
-
             stackT.push(c);
-
         } else if (stackT.length > 0) {
-
             stackT.pop();
-
         }
     }
 
