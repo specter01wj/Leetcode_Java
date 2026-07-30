@@ -191,6 +191,7 @@ By Jin Wang
 |824|**Goat Latin**|Easy|Java/Javascript|Done/Done|
 |830|**Positions of Large Groups**|Easy|Java/Javascript|Done/Done|
 |832|**Flipping an Image**|Easy|Java/Javascript|Done/Done|
+|844|**Backspace String Compare**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |859|**Buddy Strings**|Easy|Java/Javascript|Done/Done|
 |860|**Lemonade Change**|Easy|Java/Javascript|Done/Done|
 |867|**Transpose Matrix**|Easy|Java/Javascript|Done/Done|

@@ -576,7 +576,7 @@ Cspiration Category:
 |819|Most Common Word|Easy||Java/Javascript|Done/Done|
 |824|Goat Latin|Easy||Java/Javascript|Done/Done|
 |830|Positions of Large Groups|Easy||Java/Javascript|Done/Done|
-|844|Backspace String Compare|Easy||Java/Javascript|Done/Done|
+|844|Backspace String Compare|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |859|Buddy Strings|Easy||Java/Javascript|Done/Done|
 |884|Uncommon Words from Two Sentences|Easy||Java/Javascript|Done/Done|
 |893|Groups of Special-Equivalent Strings|Medium||Java/Javascript|Done/Done|
