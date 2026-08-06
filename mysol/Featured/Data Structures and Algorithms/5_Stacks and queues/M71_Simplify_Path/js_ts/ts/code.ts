@@ -1,64 +1,85 @@
-function backspaceCompare(s: string, t: string): boolean {
-    const stackS: string[] = [];
-    const stackT: string[] = [];
+function simplifyPath(path: string): string {
 
-    for (const c of s) {
-        if (c !== '#') {
-            stackS.push(c);
-        } else if (stackS.length > 0) {
-            stackS.pop();
-        }
+  const stack: string[] = [];
+  const folders: string[] = path.split("/");
+
+  for (const folder of folders) {
+
+    if (folder === "" || folder === ".") {
+      continue;
     }
 
-    for (const c of t) {
-        if (c !== '#') {
-            stackT.push(c);
-        } else if (stackT.length > 0) {
-            stackT.pop();
-        }
-    }
+    if (folder === "..") {
 
-    return stackS.join("") === stackT.join("");
+      if (stack.length > 0) {
+        stack.pop();
+      }
+
+    } else {
+      stack.push(folder);
+    }
+  }
+
+  return "/" + stack.join("/");
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-    "844. Backspace String Compare (TS)";
+  "71. Simplify Path (TS)";
 
 let output: string = "";
 
 // Example 1
-const s1: string = "ab#c";
-const t1: string = "ad#c";
+const input1: string = "/home/";
 
 output += "<b>Example 1 Input:</b><br>";
-output += 's = "' + s1 + '", t = "' + t1 + '"';
+output += input1;
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += backspaceCompare(s1, t1);
+output += simplifyPath(input1);
 output += "<br><br>";
 
 // Example 2
-const s2: string = "ab##";
-const t2: string = "c#d#";
+const input2: string = "/home//foo/";
 
 output += "<b>Example 2 Input:</b><br>";
-output += 's = "' + s2 + '", t = "' + t2 + '"';
+output += input2;
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += backspaceCompare(s2, t2);
+output += simplifyPath(input2);
 output += "<br><br>";
 
 // Example 3
-const s3: string = "a#c";
-const t3: string = "b";
+const input3: string = "/home/user/Documents/../Pictures";
 
 output += "<b>Example 3 Input:</b><br>";
-output += 's = "' + s3 + '", t = "' + t3 + '"';
+output += input3;
 output += "<br><br>";
 
 output += "<b>Example 3 Output:</b><br>";
-output += backspaceCompare(s3, t3);
+output += simplifyPath(input3);
+output += "<br><br>";
+
+// Example 4
+const input4: string = "/../";
+
+output += "<b>Example 4 Input:</b><br>";
+output += input4;
+output += "<br><br>";
+
+output += "<b>Example 4 Output:</b><br>";
+output += simplifyPath(input4);
+output += "<br><br>";
+
+// Example 5
+const input5: string = "/.../a/../b/c/../d/./";
+
+output += "<b>Example 5 Input:</b><br>";
+output += input5;
+output += "<br><br>";
+
+output += "<b>Example 5 Output:</b><br>";
+output += simplifyPath(input5);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
