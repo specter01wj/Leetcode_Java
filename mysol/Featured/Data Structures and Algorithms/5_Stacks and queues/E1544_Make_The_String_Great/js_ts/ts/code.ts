@@ -1,85 +1,60 @@
-function simplifyPath(path: string): string {
+function makeGood(s: string): string {
 
   const stack: string[] = [];
-  const folders: string[] = path.split("/");
 
-  for (const folder of folders) {
+  for (const c of s) {
 
-    if (folder === "" || folder === ".") {
-      continue;
-    }
+    if (
+      stack.length > 0 &&
+      Math.abs(stack[stack.length - 1].charCodeAt(0) - c.charCodeAt(0)) === 32
+    ) {
 
-    if (folder === "..") {
-
-      if (stack.length > 0) {
-        stack.pop();
-      }
+      stack.pop();
 
     } else {
-      stack.push(folder);
+
+      stack.push(c);
     }
   }
 
-  return "/" + stack.join("/");
+  return stack.join("");
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "71. Simplify Path (TS)";
+  "1544. Make The String Great (TS)";
 
 let output: string = "";
 
 // Example 1
-const input1: string = "/home/";
+const input1: string = "leEeetcode";
 
 output += "<b>Example 1 Input:</b><br>";
 output += input1;
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += simplifyPath(input1);
+output += makeGood(input1);
 output += "<br><br>";
 
 // Example 2
-const input2: string = "/home//foo/";
+const input2: string = "abBAcC";
 
 output += "<b>Example 2 Input:</b><br>";
 output += input2;
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += simplifyPath(input2);
+output += makeGood(input2);
 output += "<br><br>";
 
 // Example 3
-const input3: string = "/home/user/Documents/../Pictures";
+const input3: string = "s";
 
 output += "<b>Example 3 Input:</b><br>";
 output += input3;
 output += "<br><br>";
 
 output += "<b>Example 3 Output:</b><br>";
-output += simplifyPath(input3);
-output += "<br><br>";
-
-// Example 4
-const input4: string = "/../";
-
-output += "<b>Example 4 Input:</b><br>";
-output += input4;
-output += "<br><br>";
-
-output += "<b>Example 4 Output:</b><br>";
-output += simplifyPath(input4);
-output += "<br><br>";
-
-// Example 5
-const input5: string = "/.../a/../b/c/../d/./";
-
-output += "<b>Example 5 Input:</b><br>";
-output += input5;
-output += "<br><br>";
-
-output += "<b>Example 5 Output:</b><br>";
-output += simplifyPath(input5);
+output += makeGood(input3);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
