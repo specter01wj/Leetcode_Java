@@ -914,7 +914,7 @@ Cspiration Category:
 |232|Implement Queue using Stacks|Easy||Java/Javascript||
 |225|Implement Stack using Queues|Easy||Java/Javascript||
 |150|Evaluate Reverse Polish Notation|Medium||Java/Javascript||
-|71|Simplify Path|Medium||Java/Javascript||
+|71|Simplify Path|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |388|Longest Absolute File Path|Medium||Java/Javascript||
 |394|Decode String|Medium||Java/Javascript||
 |224|Basic Calculator|Hard||Java/Javascript||

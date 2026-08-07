@@ -623,6 +623,7 @@ By Jin Wang
 |24|**Swap Nodes in Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |49|**Group Anagrams**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |62|**Unique Paths**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|71|**Simplify Path**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |72|**Edit Distance**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |80|**Remove Duplicates from Sorted Array II**|Medium|Java/Javascript|Done/Done|
 |82|**Remove Duplicates from Sorted List II**|Medium|Java/Javascript/Typescript|Done/Done/Done|
