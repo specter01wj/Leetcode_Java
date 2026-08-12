@@ -1,54 +1,55 @@
 document.getElementById("title").innerText =
-    "Stack Basics (JS)";
+    "Queue Basics (JS)";
 
-const stack = [];
+const queue = [];
 
 let output = "";
 
-// Push
-output += "<b>=== Push ===</b><br>";
-stack.push(1);
-stack.push(2);
-stack.push(3);
-output += "Stack: [" + stack.join(", ") + "]<br><br>";
+// Offer
+output += "<b>=== Offer ===</b><br>";
+queue.push(1);
+queue.push(2);
+queue.push(3);
+output += "Queue: [" + queue.join(", ") + "]<br><br>";
 
-// Pop
-output += "<b>=== Pop ===</b><br>";
-output += "Pop: " + stack.pop() + "<br>";
-output += "Stack: [" + stack.join(", ") + "]<br>";
+// Poll
+output += "<b>=== Poll ===</b><br>";
+output += "Poll: " + queue.shift() + "<br>";
+output += "Queue: [" + queue.join(", ") + "]<br>";
 
-output += "Pop: " + stack.pop() + "<br>";
-output += "Stack: [" + stack.join(", ") + "]<br><br>";
+output += "Poll: " + queue.shift() + "<br>";
+output += "Queue: [" + queue.join(", ") + "]<br><br>";
 
-// Push Again
-output += "<b>=== Push Again ===</b><br>";
-stack.push(5);
-output += "Stack: [" + stack.join(", ") + "]<br><br>";
+// Offer Again
+output += "<b>=== Offer Again ===</b><br>";
+queue.push(4);
+queue.push(5);
+output += "Queue: [" + queue.join(", ") + "]<br><br>";
 
 // Peek
 output += "<b>=== Peek ===</b><br>";
-output += "Top Element: " + stack[stack.length - 1] + "<br>";
-output += "Stack: [" + stack.join(", ") + "]<br><br>";
+output += "Front Element: " + queue[0] + "<br>";
+output += "Queue: [" + queue.join(", ") + "]<br><br>";
 
 // Size
 output += "<b>=== Size ===</b><br>";
-output += "Size: " + stack.length + "<br><br>";
+output += "Size: " + queue.length + "<br><br>";
 
 // Empty
 output += "<b>=== Empty ===</b><br>";
-output += "Is Empty? " + (stack.length === 0) + "<br><br>";
+output += "Is Empty? " + (queue.length === 0) + "<br><br>";
 
-// Pop Remaining Elements
-output += "<b>=== Pop Remaining Elements ===</b><br>";
-while (stack.length > 0) {
-    output += "Pop: " + stack.pop() + "<br>";
-    output += "Stack: [" + stack.join(", ") + "]<br>";
+// Poll Remaining Elements
+output += "<b>=== Poll Remaining Elements ===</b><br>";
+while (queue.length > 0) {
+    output += "Poll: " + queue.shift() + "<br>";
+    output += "Queue: [" + queue.join(", ") + "]<br>";
 }
 output += "<br>";
 
 // Final Check
 output += "<b>=== Final Check ===</b><br>";
-output += "Is Empty? " + (stack.length === 0) + "<br>";
-output += "Size: " + stack.length;
+output += "Is Empty? " + (queue.length === 0) + "<br>";
+output += "Size: " + queue.length;
 
 document.getElementById("output").innerHTML = output;
