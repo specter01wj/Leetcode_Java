@@ -1,64 +1,73 @@
-function backspaceCompare(s: string, t: string): boolean {
-    const stackS: string[] = [];
-    const stackT: string[] = [];
+class RecentCounter {
+  private requests: number[];
 
-    for (const c of s) {
-        if (c !== '#') {
-            stackS.push(c);
-        } else if (stackS.length > 0) {
-            stackS.pop();
-        }
+  constructor() {
+    this.requests = [];
+  }
+
+  ping(t: number): number {
+
+    // Add new request timestamp
+    this.requests.push(t);
+
+    // Remove older requests outside the 3000ms window
+    while (this.requests.length > 0 && this.requests[0] < t - 3000) {
+      this.requests.shift();
     }
 
-    for (const c of t) {
-        if (c !== '#') {
-            stackT.push(c);
-        } else if (stackT.length > 0) {
-            stackT.pop();
-        }
-    }
-
-    return stackS.join("") === stackT.join("");
+    // Return the number of requests in the window
+    return this.requests.length;
+  }
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-    "844. Backspace String Compare (TS)";
+  "933. Number of Recent Calls (TS)";
 
 let output: string = "";
 
+const recentCounter: RecentCounter = new RecentCounter();
+
 // Example 1
-const s1: string = "ab#c";
-const t1: string = "ad#c";
+const input1: number = 1;
 
-output += "<b>Example 1 Input:</b><br>";
-output += 's = "' + s1 + '", t = "' + t1 + '"';
-output += "<br><br>";
+output += "<b>Input:</b><br>";
+output += input1;
+output += "<br>";
 
-output += "<b>Example 1 Output:</b><br>";
-output += backspaceCompare(s1, t1);
+output += "<b>Output:</b><br>";
+output += recentCounter.ping(input1);
 output += "<br><br>";
 
 // Example 2
-const s2: string = "ab##";
-const t2: string = "c#d#";
+const input2: number = 100;
 
-output += "<b>Example 2 Input:</b><br>";
-output += 's = "' + s2 + '", t = "' + t2 + '"';
-output += "<br><br>";
+output += "<b>Input:</b><br>";
+output += input2;
+output += "<br>";
 
-output += "<b>Example 2 Output:</b><br>";
-output += backspaceCompare(s2, t2);
+output += "<b>Output:</b><br>";
+output += recentCounter.ping(input2);
 output += "<br><br>";
 
 // Example 3
-const s3: string = "a#c";
-const t3: string = "b";
+const input3: number = 3001;
 
-output += "<b>Example 3 Input:</b><br>";
-output += 's = "' + s3 + '", t = "' + t3 + '"';
+output += "<b>Input:</b><br>";
+output += input3;
+output += "<br>";
+
+output += "<b>Output:</b><br>";
+output += recentCounter.ping(input3);
 output += "<br><br>";
 
-output += "<b>Example 3 Output:</b><br>";
-output += backspaceCompare(s3, t3);
+// Example 4
+const input4: number = 3002;
+
+output += "<b>Input:</b><br>";
+output += input4;
+output += "<br>";
+
+output += "<b>Output:</b><br>";
+output += recentCounter.ping(input4);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
