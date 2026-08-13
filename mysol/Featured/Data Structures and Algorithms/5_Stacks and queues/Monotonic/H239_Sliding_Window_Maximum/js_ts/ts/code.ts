@@ -1,59 +1,61 @@
-function dailyTemperatures(temperatures: number[]): number[] {
+function maxSlidingWindow(nums: number[], k: number): number[] {
 
-  const stack: number[] = [];
-  const answer: number[] = new Array(temperatures.length).fill(0);
+  const answer: number[] = new Array(nums.length - k + 1).fill(0);
+  const deque: number[] = [];
 
-  for (let i = 0; i < temperatures.length; i++) {
+  for (let i = 0; i < nums.length; i++) {
 
-    while (
-      stack.length > 0 &&
-      temperatures[stack[stack.length - 1]] < temperatures[i]
-    ) {
-      const j: number = stack.pop()!;
-      answer[j] = i - j;
+    // Remove indices that are outside the current window
+    if (deque.length > 0 && deque[0] < i - k + 1) {
+      deque.shift();
     }
 
-    stack.push(i);
+    // Maintain monotonic decreasing order
+    while (
+      deque.length > 0 &&
+      nums[deque[deque.length - 1]] < nums[i]
+    ) {
+      deque.pop();
+    }
+
+    // Store the current index
+    deque.push(i);
+
+    // Record maximum once the first window is complete
+    if (i >= k - 1) {
+      answer[i - k + 1] = nums[deque[0]];
+    }
   }
 
   return answer;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "739. Daily Temperatures (TS)";
+  "239. Sliding Window Maximum (TS)";
 
 let output: string = "";
 
 // Example 1
-const input1: number[] = [73, 74, 75, 71, 69, 72, 76, 73];
+const input1: number[] = [1, 3, -1, -3, 5, 3, 6, 7];
+const k1: number = 3;
 
 output += "<b>Example 1 Input:</b><br>";
-output += "[" + input1.join(", ") + "]";
+output += "nums = [" + input1.join(", ") + "], k = " + k1;
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += "[" + dailyTemperatures(input1).join(", ") + "]";
+output += "[" + maxSlidingWindow(input1, k1).join(", ") + "]";
 output += "<br><br>";
 
 // Example 2
-const input2: number[] = [30, 40, 50, 60];
+const input2: number[] = [1];
+const k2: number = 1;
 
 output += "<b>Example 2 Input:</b><br>";
-output += "[" + input2.join(", ") + "]";
+output += "nums = [" + input2.join(", ") + "], k = " + k2;
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += "[" + dailyTemperatures(input2).join(", ") + "]";
-output += "<br><br>";
-
-// Example 3
-const input3: number[] = [30, 60, 90];
-
-output += "<b>Example 3 Input:</b><br>";
-output += "[" + input3.join(", ") + "]";
-output += "<br><br>";
-
-output += "<b>Example 3 Output:</b><br>";
-output += "[" + dailyTemperatures(input3).join(", ") + "]";
+output += "[" + maxSlidingWindow(input2, k2).join(", ") + "]";
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
