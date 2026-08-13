@@ -61,7 +61,7 @@ Cspiration Category:
 |253|Meeting Rooms II|Medium||Java/Javascript||
 |352|Data Stream as Disjoint Intervals|Hard|TreeMap|Java/Javascript||
 |Counter||||||
-|239|Sliding Window Maximum|Hard||Java/Javascript||
+|239|Sliding Window Maximum|Hard||Java/Javascript/Typescript|Done/Done/Done|
 |295|Find Median from Data Stream|Hard||Java/Javascript||
 |53|Maximum Subarray|Easy||Java/Javascript|Done/Done|
 |325|Maximum Size Subarray Sum Equals k|Medium||Java/Javascript||

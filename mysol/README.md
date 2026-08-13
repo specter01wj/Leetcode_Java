@@ -721,6 +721,7 @@ By Jin Wang
 |10|**Regular Expression Matching**|Hard|Java/Javascript||
 |123|**Best Time to Buy and Sell Stock III**|Hard|Java/Javascript|Done/|
 |188|**Best Time to Buy and Sell Stock IV**|Hard|Java/Javascript|Done/|
+|239|**Sliding Window Maximum**|Hard|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### ================================================================
