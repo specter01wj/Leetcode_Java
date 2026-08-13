@@ -1,59 +1,90 @@
-function dailyTemperatures(temperatures: number[]): number[] {
+function longestSubarray(nums: number[], limit: number): number {
 
-  const stack: number[] = [];
-  const answer: number[] = new Array(temperatures.length).fill(0);
+  const increasing: number[] = [];
+  const decreasing: number[] = [];
 
-  for (let i = 0; i < temperatures.length; i++) {
+  let left: number = 0;
+  let answer: number = 0;
 
+  for (let right: number = 0; right < nums.length; right++) {
+
+    // Maintain increasing deque
     while (
-      stack.length > 0 &&
-      temperatures[stack[stack.length - 1]] < temperatures[i]
+      increasing.length > 0 &&
+      increasing[increasing.length - 1] > nums[right]
     ) {
-      const j: number = stack.pop()!;
-      answer[j] = i - j;
+      increasing.pop();
     }
 
-    stack.push(i);
+    // Maintain decreasing deque
+    while (
+      decreasing.length > 0 &&
+      decreasing[decreasing.length - 1] < nums[right]
+    ) {
+      decreasing.pop();
+    }
+
+    increasing.push(nums[right]);
+    decreasing.push(nums[right]);
+
+    // Shrink window until max - min <= limit
+    while (decreasing[0] - increasing[0] > limit) {
+
+      if (nums[left] === decreasing[0]) {
+        decreasing.shift();
+      }
+
+      if (nums[left] === increasing[0]) {
+        increasing.shift();
+      }
+
+      left++;
+    }
+
+    answer = Math.max(answer, right - left + 1);
   }
 
   return answer;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "739. Daily Temperatures (TS)";
+  "1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit (TS)";
 
 let output: string = "";
 
 // Example 1
-const input1: number[] = [73, 74, 75, 71, 69, 72, 76, 73];
+const input1: number[] = [8, 2, 4, 7];
+const limit1: number = 4;
 
 output += "<b>Example 1 Input:</b><br>";
-output += "[" + input1.join(", ") + "]";
+output += "nums = [" + input1.join(", ") + "], limit = " + limit1;
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += "[" + dailyTemperatures(input1).join(", ") + "]";
+output += longestSubarray(input1, limit1);
 output += "<br><br>";
 
 // Example 2
-const input2: number[] = [30, 40, 50, 60];
+const input2: number[] = [10, 1, 2, 4, 7, 2];
+const limit2: number = 5;
 
 output += "<b>Example 2 Input:</b><br>";
-output += "[" + input2.join(", ") + "]";
+output += "nums = [" + input2.join(", ") + "], limit = " + limit2;
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += "[" + dailyTemperatures(input2).join(", ") + "]";
+output += longestSubarray(input2, limit2);
 output += "<br><br>";
 
 // Example 3
-const input3: number[] = [30, 60, 90];
+const input3: number[] = [4, 2, 2, 2, 4, 4, 2, 2];
+const limit3: number = 0;
 
 output += "<b>Example 3 Input:</b><br>";
-output += "[" + input3.join(", ") + "]";
+output += "nums = [" + input3.join(", ") + "], limit = " + limit3;
 output += "<br><br>";
 
 output += "<b>Example 3 Output:</b><br>";
-output += "[" + dailyTemperatures(input3).join(", ") + "]";
+output += longestSubarray(input3, limit3);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
