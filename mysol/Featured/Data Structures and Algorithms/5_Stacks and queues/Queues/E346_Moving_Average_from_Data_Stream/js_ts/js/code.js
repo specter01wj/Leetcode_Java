@@ -1,31 +1,30 @@
-var RecentCounter = function() {
-    this.requests = [];
+var MovingAverage = function(size) {
+    this.size = size;
+    this.queue = [];
+    this.sum = 0;
 };
 
-/** 
- * @param {number} t
- * @return {number}
- */
-RecentCounter.prototype.ping = function(t) {
+MovingAverage.prototype.next = function(val) {
 
-    // Add new request timestamp
-    this.requests.push(t);
-
-    // Remove older requests outside the 3000ms window
-    while (this.requests.length > 0 && this.requests[0] < t - 3000) {
-        this.requests.shift();
+    // Remove oldest value when window is full
+    if (this.queue.length === this.size) {
+        this.sum -= this.queue.shift();
     }
 
-    // Return the number of requests in the window
-    return this.requests.length;
+    // Add new value
+    this.queue.push(val);
+    this.sum += val;
+
+    // Return moving average
+    return this.sum / this.queue.length;
 };
 
 document.getElementById("title").innerText =
-    "933. Number of Recent Calls (JS)";
+    "346. Moving Average from Data Stream (JS)";
 
 let output = "";
 
-const recentCounter = new RecentCounter();
+const movingAverage = new MovingAverage(3);
 
 // Example 1
 const input1 = 1;
@@ -35,39 +34,39 @@ output += input1;
 output += "<br>";
 
 output += "<b>Output:</b><br>";
-output += recentCounter.ping(input1);
+output += movingAverage.next(input1);
 output += "<br><br>";
 
 // Example 2
-const input2 = 100;
+const input2 = 10;
 
 output += "<b>Input:</b><br>";
 output += input2;
 output += "<br>";
 
 output += "<b>Output:</b><br>";
-output += recentCounter.ping(input2);
+output += movingAverage.next(input2);
 output += "<br><br>";
 
 // Example 3
-const input3 = 3001;
+const input3 = 3;
 
 output += "<b>Input:</b><br>";
 output += input3;
 output += "<br>";
 
 output += "<b>Output:</b><br>";
-output += recentCounter.ping(input3);
+output += movingAverage.next(input3);
 output += "<br><br>";
 
 // Example 4
-const input4 = 3002;
+const input4 = 5;
 
 output += "<b>Input:</b><br>";
 output += input4;
 output += "<br>";
 
 output += "<b>Output:</b><br>";
-output += recentCounter.ping(input4);
+output += movingAverage.next(input4);
 
 document.getElementById("output").innerHTML = output;
