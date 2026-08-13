@@ -167,7 +167,7 @@ By Jin Wang
 |71|**Simplify Path**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 |1544|**Make The String Great**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |Queues|||||
-|346|**Moving Average from Data Stream**|🟢 Easy|Java/Javascript/Typescript||
+|346|**Moving Average from Data Stream**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |Monotonic|||||
 |496|**Next Greater Element I**|🟢 Easy|Java/Javascript/Typescript||
 |901|**Online Stock Span**|🟡 Medium|Java/Javascript/Typescript||
