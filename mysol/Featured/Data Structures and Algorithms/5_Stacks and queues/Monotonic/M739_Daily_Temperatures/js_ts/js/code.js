@@ -1,72 +1,59 @@
-var MovingAverage = function(size) {
-    this.size = size;
-    this.queue = [];
-    this.sum = 0;
-};
+var dailyTemperatures = function(temperatures) {
 
-MovingAverage.prototype.next = function(val) {
+    const stack = [];
+    const answer = new Array(temperatures.length).fill(0);
 
-    // Remove oldest value when window is full
-    if (this.queue.length === this.size) {
-        this.sum -= this.queue.shift();
+    for (let i = 0; i < temperatures.length; i++) {
+
+        while (
+            stack.length > 0 &&
+            temperatures[stack[stack.length - 1]] < temperatures[i]
+        ) {
+            const j = stack.pop();
+            answer[j] = i - j;
+        }
+
+        stack.push(i);
     }
 
-    // Add new value
-    this.queue.push(val);
-    this.sum += val;
-
-    // Return moving average
-    return this.sum / this.queue.length;
+    return answer;
 };
 
 document.getElementById("title").innerText =
-    "346. Moving Average from Data Stream (JS)";
+    "739. Daily Temperatures (JS)";
 
 let output = "";
 
-const movingAverage = new MovingAverage(3);
-
 // Example 1
-const input1 = 1;
+const input1 = [73, 74, 75, 71, 69, 72, 76, 73];
 
-output += "<b>Input:</b><br>";
-output += input1;
-output += "<br>";
+output += "<b>Example 1 Input:</b><br>";
+output += "[" + input1.join(", ") + "]";
+output += "<br><br>";
 
-output += "<b>Output:</b><br>";
-output += movingAverage.next(input1);
+output += "<b>Example 1 Output:</b><br>";
+output += "[" + dailyTemperatures(input1).join(", ") + "]";
 output += "<br><br>";
 
 // Example 2
-const input2 = 10;
+const input2 = [30, 40, 50, 60];
 
-output += "<b>Input:</b><br>";
-output += input2;
-output += "<br>";
+output += "<b>Example 2 Input:</b><br>";
+output += "[" + input2.join(", ") + "]";
+output += "<br><br>";
 
-output += "<b>Output:</b><br>";
-output += movingAverage.next(input2);
+output += "<b>Example 2 Output:</b><br>";
+output += "[" + dailyTemperatures(input2).join(", ") + "]";
 output += "<br><br>";
 
 // Example 3
-const input3 = 3;
+const input3 = [30, 60, 90];
 
-output += "<b>Input:</b><br>";
-output += input3;
-output += "<br>";
-
-output += "<b>Output:</b><br>";
-output += movingAverage.next(input3);
+output += "<b>Example 3 Input:</b><br>";
+output += "[" + input3.join(", ") + "]";
 output += "<br><br>";
 
-// Example 4
-const input4 = 5;
-
-output += "<b>Input:</b><br>";
-output += input4;
-output += "<br>";
-
-output += "<b>Output:</b><br>";
-output += movingAverage.next(input4);
+output += "<b>Example 3 Output:</b><br>";
+output += "[" + dailyTemperatures(input3).join(", ") + "]";
 
 document.getElementById("output").innerHTML = output;
