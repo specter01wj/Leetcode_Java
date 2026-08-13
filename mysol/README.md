@@ -674,6 +674,7 @@ By Jin Wang
 |1268|**Search Suggestions System**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1318|**Minimum Flips to Make a OR b Equal to c**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1372|**Longest ZigZag Path in a Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1438|**Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1448|**Count Good Nodes in Binary Tree**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1456|**Maximum Number of Vowels in a Substring of Given Length**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1466|**Reorder Routes to Make All Paths Lead to the City Zero**|Medium|Java/Javascript/Typescript|Done/Done/Done|

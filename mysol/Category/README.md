@@ -924,6 +924,7 @@ Cspiration Category:
 |Missing||||||
 |739|Daily Temperatures|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |901|Online Stock Span|Medium||Java/Javascript/Typescript|Done/Done/Done|
+|1438|Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 12. Bit Manipulation
 
