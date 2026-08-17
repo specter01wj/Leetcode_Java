@@ -169,8 +169,8 @@ By Jin Wang
 |Queues|||||
 |346|**Moving Average from Data Stream**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |Monotonic|||||
-|496|**Next Greater Element I**|🟢 Easy|Java/Javascript/Typescript||
-|901|**Online Stock Span**|🟡 Medium|Java/Javascript/Typescript||
+|496|**Next Greater Element I**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
+|901|**Online Stock Span**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 
 ##### (Bonus problems, stacks and queues)
 
