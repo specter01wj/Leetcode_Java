@@ -1,85 +1,60 @@
-function simplifyPath(path: string): string {
+function nextGreaterElement(nums1: number[], nums2: number[]): number[] {
 
-  const stack: string[] = [];
-  const folders: string[] = path.split("/");
+  const nextGreater = new Map<number, number>();
+  const stack: number[] = [];
 
-  for (const folder of folders) {
+  for (const num of nums2) {
 
-    if (folder === "" || folder === ".") {
-      continue;
+    // Current number is the next greater element
+    while (stack.length > 0 && stack[stack.length - 1] < num) {
+      nextGreater.set(stack.pop()!, num);
     }
 
-    if (folder === "..") {
-
-      if (stack.length > 0) {
-        stack.pop();
-      }
-
-    } else {
-      stack.push(folder);
-    }
+    stack.push(num);
   }
 
-  return "/" + stack.join("/");
+  // Remaining numbers have no next greater element
+  while (stack.length > 0) {
+    nextGreater.set(stack.pop()!, -1);
+  }
+
+  const answer: number[] = [];
+
+  for (let i = 0; i < nums1.length; i++) {
+    answer.push(nextGreater.get(nums1[i])!);
+  }
+
+  return answer;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "71. Simplify Path (TS)";
+  "496. Next Greater Element I (TS)";
 
 let output: string = "";
 
 // Example 1
-const input1: string = "/home/";
+const nums1_1: number[] = [4, 1, 2];
+const nums2_1: number[] = [1, 3, 4, 2];
 
 output += "<b>Example 1 Input:</b><br>";
-output += input1;
+output += "nums1 = [" + nums1_1.join(", ") + "]<br>";
+output += "nums2 = [" + nums2_1.join(", ") + "]";
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += simplifyPath(input1);
+output += "[" + nextGreaterElement(nums1_1, nums2_1).join(", ") + "]";
 output += "<br><br>";
 
 // Example 2
-const input2: string = "/home//foo/";
+const nums1_2: number[] = [2, 4];
+const nums2_2: number[] = [1, 2, 3, 4];
 
 output += "<b>Example 2 Input:</b><br>";
-output += input2;
+output += "nums1 = [" + nums1_2.join(", ") + "]<br>";
+output += "nums2 = [" + nums2_2.join(", ") + "]";
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += simplifyPath(input2);
-output += "<br><br>";
-
-// Example 3
-const input3: string = "/home/user/Documents/../Pictures";
-
-output += "<b>Example 3 Input:</b><br>";
-output += input3;
-output += "<br><br>";
-
-output += "<b>Example 3 Output:</b><br>";
-output += simplifyPath(input3);
-output += "<br><br>";
-
-// Example 4
-const input4: string = "/../";
-
-output += "<b>Example 4 Input:</b><br>";
-output += input4;
-output += "<br><br>";
-
-output += "<b>Example 4 Output:</b><br>";
-output += simplifyPath(input4);
-output += "<br><br>";
-
-// Example 5
-const input5: string = "/.../a/../b/c/../d/./";
-
-output += "<b>Example 5 Input:</b><br>";
-output += input5;
-output += "<br><br>";
-
-output += "<b>Example 5 Output:</b><br>";
-output += simplifyPath(input5);
+output += "[" + nextGreaterElement(nums1_2, nums2_2).join(", ") + "]";
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
