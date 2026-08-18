@@ -184,6 +184,8 @@ By Jin Wang
 |735|**Asteroid Collision**|🟡 Medium|Java/Javascript/Typescript||
 |155|**Min Stack**|🟡 Medium|Java/Javascript/Typescript||
 |Queues|||||
+|225|**Implement Stack using Queues**|🟢 Easy|Java/Javascript/Typescript||
+|649|**Dota2 Senate**|🟡 Medium|Java/Javascript/Typescript||
 |Monotonic|||||
 
 ---
