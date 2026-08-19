@@ -1,60 +1,43 @@
-function nextGreaterElement(nums1: number[], nums2: number[]): number[] {
+function removeStars(s: string): string {
 
-  const nextGreater = new Map<number, number>();
-  const stack: number[] = [];
+  const stack: string[] = [];
 
-  for (const num of nums2) {
+  for (const c of s) {
 
-    // Current number is the next greater element
-    while (stack.length > 0 && stack[stack.length - 1] < num) {
-      nextGreater.set(stack.pop()!, num);
+    if (c === "*") {
+      stack.pop();
+    } else {
+      stack.push(c);
     }
-
-    stack.push(num);
   }
 
-  // Remaining numbers have no next greater element
-  while (stack.length > 0) {
-    nextGreater.set(stack.pop()!, -1);
-  }
-
-  const answer: number[] = [];
-
-  for (let i = 0; i < nums1.length; i++) {
-    answer.push(nextGreater.get(nums1[i])!);
-  }
-
-  return answer;
+  return stack.join("");
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "496. Next Greater Element I (TS)";
+  "2390. Removing Stars From a String (TS)";
 
 let output: string = "";
 
 // Example 1
-const nums1_1: number[] = [4, 1, 2];
-const nums2_1: number[] = [1, 3, 4, 2];
+const input1: string = "leet**cod*e";
 
 output += "<b>Example 1 Input:</b><br>";
-output += "nums1 = [" + nums1_1.join(", ") + "]<br>";
-output += "nums2 = [" + nums2_1.join(", ") + "]";
+output += input1;
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += "[" + nextGreaterElement(nums1_1, nums2_1).join(", ") + "]";
+output += removeStars(input1);
 output += "<br><br>";
 
 // Example 2
-const nums1_2: number[] = [2, 4];
-const nums2_2: number[] = [1, 2, 3, 4];
+const input2: string = "erase*****";
 
 output += "<b>Example 2 Input:</b><br>";
-output += "nums1 = [" + nums1_2.join(", ") + "]<br>";
-output += "nums2 = [" + nums2_2.join(", ") + "]";
+output += input2;
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += "[" + nextGreaterElement(nums1_2, nums2_2).join(", ") + "]";
+output += removeStars(input2);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
