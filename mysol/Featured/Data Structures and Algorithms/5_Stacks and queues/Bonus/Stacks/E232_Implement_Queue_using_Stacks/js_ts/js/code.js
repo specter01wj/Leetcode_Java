@@ -1,47 +1,78 @@
-/**
- * @param {string} s
- * @return {string}
+var MyQueue = function() {
+    this.inputStack = [];
+    this.outputStack = [];
+};
+
+/** 
+ * @param {number} x
+ * @return {void}
  */
-var removeStars = function(s) {
+MyQueue.prototype.push = function(x) {
+    this.inputStack.push(x);
+};
 
-    const stack = [];
-
-    for (const c of s) {
-
-        if (c === "*") {
-            stack.pop();
-        } else {
-            stack.push(c);
+/**
+ * @return {number}
+ */
+MyQueue.prototype.pop = function() {
+    if (this.outputStack.length === 0) {
+        while (this.inputStack.length > 0) {
+            this.outputStack.push(this.inputStack.pop());
         }
     }
 
-    return stack.join("");
+    return this.outputStack.pop();
+};
+
+/**
+ * @return {number}
+ */
+MyQueue.prototype.peek = function() {
+    if (this.outputStack.length === 0) {
+        while (this.inputStack.length > 0) {
+            this.outputStack.push(this.inputStack.pop());
+        }
+    }
+
+    return this.outputStack[this.outputStack.length - 1];
+};
+
+/**
+ * @return {boolean}
+ */
+MyQueue.prototype.empty = function() {
+    return this.inputStack.length === 0 && this.outputStack.length === 0;
 };
 
 document.getElementById("title").innerText =
-    "2390. Removing Stars From a String (JS)";
+    "232. Implement Queue using Stacks (JS)";
 
 let output = "";
 
-// Example 1
-const input1 = "leet**cod*e";
+const myQueue = new MyQueue();
 
-output += "<b>Example 1 Input:</b><br>";
-output += input1;
+// Push 1
+output += "<b>Input: push(1)</b><br>";
+myQueue.push(1);
+output += "<br>";
+
+// Push 2
+output += "<b>Input: push(2)</b><br>";
+myQueue.push(2);
+output += "<br>";
+
+// Peek
+output += "<b>Input: peek()</b><br>";
+output += "Output: " + myQueue.peek();
 output += "<br><br>";
 
-output += "<b>Example 1 Output:</b><br>";
-output += removeStars(input1);
+// Pop
+output += "<b>Input: pop()</b><br>";
+output += "Output: " + myQueue.pop();
 output += "<br><br>";
 
-// Example 2
-const input2 = "erase*****";
-
-output += "<b>Example 2 Input:</b><br>";
-output += input2;
-output += "<br><br>";
-
-output += "<b>Example 2 Output:</b><br>";
-output += removeStars(input2);
+// Empty
+output += "<b>Input: empty()</b><br>";
+output += "Output: " + myQueue.empty();
 
 document.getElementById("output").innerHTML = output;
