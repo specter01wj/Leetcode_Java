@@ -911,7 +911,7 @@ Cspiration Category:
 |:-------:|:--------------|:------:|:---:|:---------:|:-------------:|
 |Stack||||||
 |155|Min Stack|Easy||Java/Javascript|Done/|
-|232|Implement Queue using Stacks|Easy||Java/Javascript||
+|232|Implement Queue using Stacks|Easy||Java/Javascript/Typescript|Done/Done/Done|
 |225|Implement Stack using Queues|Easy||Java/Javascript||
 |150|Evaluate Reverse Polish Notation|Medium||Java/Javascript||
 |71|Simplify Path|Medium||Java/Javascript/Typescript|Done/Done/Done|
