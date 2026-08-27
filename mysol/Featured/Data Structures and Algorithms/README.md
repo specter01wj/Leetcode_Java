@@ -179,8 +179,8 @@ By Jin Wang
 |String problems|||||
 |2390|**Removing Stars From a String**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 |232|**Implement Queue using Stacks**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
-|2434|**Using a Robot to Print the Lexicographically Smallest String**|🟡 Medium|Java/Javascript/Typescript||
-|946|**Validate Stack Sequences**|🟡 Medium|Java/Javascript/Typescript||
+|2434|**Using a Robot to Print the Lexicographically Smallest String**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
+|946|**Validate Stack Sequences**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 |735|**Asteroid Collision**|🟡 Medium|Java/Javascript/Typescript||
 |155|**Min Stack**|🟡 Medium|Java/Javascript/Typescript||
 |Queues|||||
