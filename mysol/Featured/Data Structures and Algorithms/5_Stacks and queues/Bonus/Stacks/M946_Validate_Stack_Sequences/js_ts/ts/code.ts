@@ -1,72 +1,50 @@
-function robotWithString(s: string): string {
-  const count: number[] = new Array(26).fill(0);
+function validateStackSequences(pushed: number[], popped: number[]): boolean {
+  const stack: number[] = [];
+  let j: number = 0;
 
-  for (const c of s) {
-    count[c.charCodeAt(0) - 97]++;
-  }
+  for (const num of pushed) {
+    stack.push(num);
 
-  const stack: string[] = [];
-  let answer: string = "";
-
-  let smallest: number = 0;
-
-  for (const c of s) {
-    stack.push(c);
-    count[c.charCodeAt(0) - 97]--;
-
-    // Find the smallest remaining character in s
-    while (smallest < 26 && count[smallest] === 0) {
-      smallest++;
-    }
-
-    // Output characters that are no larger than the smallest remaining character
+    // Pop while the top matches the next expected popped value
     while (
       stack.length > 0 &&
-      (smallest === 26 ||
-        stack[stack.length - 1].charCodeAt(0) - 97 <= smallest)
+      j < popped.length &&
+      stack[stack.length - 1] === popped[j]
     ) {
-      answer += stack.pop()!;
+      stack.pop();
+      j++;
     }
   }
 
-  return answer;
+  return stack.length === 0;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "2434. Using a Robot to Print the Lexicographically Smallest String (TS)";
+  "946. Validate Stack Sequences (TS)";
 
 let output: string = "";
 
 // Example 1
-const input1: string = "zza";
+const pushed1: number[] = [1, 2, 3, 4, 5];
+const popped1: number[] = [4, 5, 3, 2, 1];
 
 output += "<b>Example 1 Input:</b><br>";
-output += input1;
+output += "pushed = [" + pushed1.join(", ") + "], popped = [" + popped1.join(", ") + "]";
 output += "<br><br>";
 
 output += "<b>Example 1 Output:</b><br>";
-output += robotWithString(input1);
+output += validateStackSequences(pushed1, popped1);
 output += "<br><br>";
 
 // Example 2
-const input2: string = "bac";
+const pushed2: number[] = [1, 2, 3, 4, 5];
+const popped2: number[] = [4, 3, 5, 1, 2];
 
 output += "<b>Example 2 Input:</b><br>";
-output += input2;
+output += "pushed = [" + pushed2.join(", ") + "], popped = [" + popped2.join(", ") + "]";
 output += "<br><br>";
 
 output += "<b>Example 2 Output:</b><br>";
-output += robotWithString(input2);
-output += "<br><br>";
-
-// Example 3
-const input3: string = "bdda";
-
-output += "<b>Example 3 Input:</b><br>";
-output += input3;
-output += "<br><br>";
-
-output += "<b>Example 3 Output:</b><br>";
-output += robotWithString(input3);
+output += validateStackSequences(pushed2, popped2);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
