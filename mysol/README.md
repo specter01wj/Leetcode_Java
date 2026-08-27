@@ -665,6 +665,7 @@ By Jin Wang
 |875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |901|**Online Stock Span**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |930|**Binary Subarrays With Sum**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|946|**Validate Stack Sequences**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1004|**Max Consecutive Ones III**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1143|**Longest Common Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
