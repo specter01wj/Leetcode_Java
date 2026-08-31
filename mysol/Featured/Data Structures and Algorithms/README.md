@@ -181,8 +181,8 @@ By Jin Wang
 |232|**Implement Queue using Stacks**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |2434|**Using a Robot to Print the Lexicographically Smallest String**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 |946|**Validate Stack Sequences**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
-|735|**Asteroid Collision**|🟡 Medium|Java/Javascript/Typescript||
-|155|**Min Stack**|🟡 Medium|Java/Javascript/Typescript||
+|735|**Asteroid Collision**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
+|155|**Min Stack**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 |Queues|||||
 |225|**Implement Stack using Queues**|🟢 Easy|Java/Javascript/Typescript||
 |649|**Dota2 Senate**|🟡 Medium|Java/Javascript/Typescript||
