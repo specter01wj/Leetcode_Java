@@ -1,62 +1,53 @@
-class MinStack {
-  private stack: number[];
-  private minStack: number[];
+class MyStack {
+  private queue: number[];
 
   constructor() {
-    this.stack = [];
-    this.minStack = [];
+    this.queue = [];
   }
 
-  push(value: number): void {
-    this.stack.push(value);
+  push(x: number): void {
+    this.queue.push(x);
 
-    if (
-      this.minStack.length === 0 ||
-      value <= this.minStack[this.minStack.length - 1]
-    ) {
-      this.minStack.push(value);
+    // Move previous elements behind the new element
+    const size: number = this.queue.length;
+
+    for (let i = 0; i < size - 1; i++) {
+      this.queue.push(this.queue.shift()!);
     }
   }
 
-  pop(): void {
-    const value: number = this.stack.pop()!;
-
-    if (value === this.minStack[this.minStack.length - 1]) {
-      this.minStack.pop();
-    }
+  pop(): number {
+    return this.queue.shift()!;
   }
 
   top(): number {
-    return this.stack[this.stack.length - 1];
+    return this.queue[0];
   }
 
-  getMin(): number {
-    return this.minStack[this.minStack.length - 1];
+  empty(): boolean {
+    return this.queue.length === 0;
   }
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "155. Min Stack (TS)";
+  "225. Implement Stack using Queues (TS)";
 
 let output: string = "";
 
-const minStack = new MinStack();
+const myStack = new MyStack();
 
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-
-output += "<b>Input:</b> getMin()<br>";
-output += "<b>Output:</b> " + minStack.getMin();
-output += "<br><br>";
-
-minStack.pop();
+myStack.push(1);
+myStack.push(2);
 
 output += "<b>Input:</b> top()<br>";
-output += "<b>Output:</b> " + minStack.top();
+output += "<b>Output:</b> " + myStack.top();
 output += "<br><br>";
 
-output += "<b>Input:</b> getMin()<br>";
-output += "<b>Output:</b> " + minStack.getMin();
+output += "<b>Input:</b> pop()<br>";
+output += "<b>Output:</b> " + myStack.pop();
+output += "<br><br>";
+
+output += "<b>Input:</b> empty()<br>";
+output += "<b>Output:</b> " + myStack.empty();
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
