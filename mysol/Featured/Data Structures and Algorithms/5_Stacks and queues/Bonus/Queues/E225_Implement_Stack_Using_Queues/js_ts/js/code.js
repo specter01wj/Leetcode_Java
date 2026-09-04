@@ -1,70 +1,62 @@
-var MinStack = function() {
-    this.stack = [];
-    this.minStack = [];
+var MyStack = function() {
+    this.queue = [];
 };
 
 /**
- * @param {number} value
+ * @param {number} x
  * @return {void}
  */
-MinStack.prototype.push = function(value) {
-    this.stack.push(value);
+MyStack.prototype.push = function(x) {
+    this.queue.push(x);
 
-    if (
-        this.minStack.length === 0 ||
-        value <= this.minStack[this.minStack.length - 1]
-    ) {
-        this.minStack.push(value);
-    }
-};
+    // Move previous elements behind the new element
+    const size = this.queue.length;
 
-/**
- * @return {void}
- */
-MinStack.prototype.pop = function() {
-    const value = this.stack.pop();
-
-    if (value === this.minStack[this.minStack.length - 1]) {
-        this.minStack.pop();
+    for (let i = 0; i < size - 1; i++) {
+        this.queue.push(this.queue.shift());
     }
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.top = function() {
-    return this.stack[this.stack.length - 1];
+MyStack.prototype.pop = function() {
+    return this.queue.shift();
 };
 
 /**
  * @return {number}
  */
-MinStack.prototype.getMin = function() {
-    return this.minStack[this.minStack.length - 1];
+MyStack.prototype.top = function() {
+    return this.queue[0];
+};
+
+/**
+ * @return {boolean}
+ */
+MyStack.prototype.empty = function() {
+    return this.queue.length === 0;
 };
 
 document.getElementById("title").innerText =
-    "155. Min Stack (JS)";
+    "225. Implement Stack using Queues (JS)";
 
 let output = "";
 
-const minStack = new MinStack();
+const myStack = new MyStack();
 
-minStack.push(-2);
-minStack.push(0);
-minStack.push(-3);
-
-output += "<b>Input:</b> getMin()<br>";
-output += "<b>Output:</b> " + minStack.getMin();
-output += "<br><br>";
-
-minStack.pop();
+myStack.push(1);
+myStack.push(2);
 
 output += "<b>Input:</b> top()<br>";
-output += "<b>Output:</b> " + minStack.top();
+output += "<b>Output:</b> " + myStack.top();
 output += "<br><br>";
 
-output += "<b>Input:</b> getMin()<br>";
-output += "<b>Output:</b> " + minStack.getMin();
+output += "<b>Input:</b> pop()<br>";
+output += "<b>Output:</b> " + myStack.pop();
+output += "<br><br>";
+
+output += "<b>Input:</b> empty()<br>";
+output += "<b>Output:</b> " + myStack.empty();
 
 document.getElementById("output").innerHTML = output;
