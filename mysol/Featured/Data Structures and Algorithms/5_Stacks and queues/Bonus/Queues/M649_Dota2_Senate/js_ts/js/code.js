@@ -1,62 +1,50 @@
-var MyStack = function() {
-    this.queue = [];
-};
-
 /**
- * @param {number} x
- * @return {void}
+ * @param {string} senate
+ * @return {string}
  */
-MyStack.prototype.push = function(x) {
-    this.queue.push(x);
+var predictPartyVictory = function(senate) {
+    const radiant = [];
+    const dire = [];
+    const n = senate.length;
 
-    // Move previous elements behind the new element
-    const size = this.queue.length;
-
-    for (let i = 0; i < size - 1; i++) {
-        this.queue.push(this.queue.shift());
+    for (let i = 0; i < n; i++) {
+        if (senate[i] === "R") {
+            radiant.push(i);
+        } else {
+            dire.push(i);
+        }
     }
-};
 
-/**
- * @return {number}
- */
-MyStack.prototype.pop = function() {
-    return this.queue.shift();
-};
+    while (radiant.length > 0 && dire.length > 0) {
+        const r = radiant.shift();
+        const d = dire.shift();
 
-/**
- * @return {number}
- */
-MyStack.prototype.top = function() {
-    return this.queue[0];
-};
+        if (r < d) {
+            radiant.push(r + n);
+        } else {
+            dire.push(d + n);
+        }
+    }
 
-/**
- * @return {boolean}
- */
-MyStack.prototype.empty = function() {
-    return this.queue.length === 0;
+    return radiant.length > 0 ? "Radiant" : "Dire";
 };
 
 document.getElementById("title").innerText =
-    "225. Implement Stack using Queues (JS)";
+    "649. Dota2 Senate (JS)";
 
 let output = "";
 
-const myStack = new MyStack();
+// Example 1
+const senate1 = "RD";
 
-myStack.push(1);
-myStack.push(2);
-
-output += "<b>Input:</b> top()<br>";
-output += "<b>Output:</b> " + myStack.top();
+output += "<b>Input:</b> senate = \"" + senate1 + "\"<br>";
+output += "<b>Output:</b> " + predictPartyVictory(senate1);
 output += "<br><br>";
 
-output += "<b>Input:</b> pop()<br>";
-output += "<b>Output:</b> " + myStack.pop();
-output += "<br><br>";
+// Example 2
+const senate2 = "RDD";
 
-output += "<b>Input:</b> empty()<br>";
-output += "<b>Output:</b> " + myStack.empty();
+output += "<b>Input:</b> senate = \"" + senate2 + "\"<br>";
+output += "<b>Output:</b> " + predictPartyVictory(senate2);
 
 document.getElementById("output").innerHTML = output;
