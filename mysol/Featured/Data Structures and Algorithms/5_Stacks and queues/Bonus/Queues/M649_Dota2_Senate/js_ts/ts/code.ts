@@ -1,53 +1,46 @@
-class MyStack {
-  private queue: number[];
+function predictPartyVictory(senate: string): string {
+    const radiant: number[] = [];
+    const dire: number[] = [];
+    const n: number = senate.length;
 
-  constructor() {
-    this.queue = [];
-  }
-
-  push(x: number): void {
-    this.queue.push(x);
-
-    // Move previous elements behind the new element
-    const size: number = this.queue.length;
-
-    for (let i = 0; i < size - 1; i++) {
-      this.queue.push(this.queue.shift()!);
+    for (let i = 0; i < n; i++) {
+        if (senate[i] === "R") {
+            radiant.push(i);
+        } else {
+            dire.push(i);
+        }
     }
-  }
 
-  pop(): number {
-    return this.queue.shift()!;
-  }
+    while (radiant.length > 0 && dire.length > 0) {
+        const r: number = radiant.shift()!;
+        const d: number = dire.shift()!;
 
-  top(): number {
-    return this.queue[0];
-  }
+        if (r < d) {
+            radiant.push(r + n);
+        } else {
+            dire.push(d + n);
+        }
+    }
 
-  empty(): boolean {
-    return this.queue.length === 0;
-  }
+    return radiant.length > 0 ? "Radiant" : "Dire";
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "225. Implement Stack using Queues (TS)";
+    "649. Dota2 Senate (TS)";
 
 let output: string = "";
 
-const myStack = new MyStack();
+// Example 1
+const senate1: string = "RD";
 
-myStack.push(1);
-myStack.push(2);
-
-output += "<b>Input:</b> top()<br>";
-output += "<b>Output:</b> " + myStack.top();
+output += "<b>Input:</b> senate = \"" + senate1 + "\"<br>";
+output += "<b>Output:</b> " + predictPartyVictory(senate1);
 output += "<br><br>";
 
-output += "<b>Input:</b> pop()<br>";
-output += "<b>Output:</b> " + myStack.pop();
-output += "<br><br>";
+// Example 2
+const senate2: string = "RDD";
 
-output += "<b>Input:</b> empty()<br>";
-output += "<b>Output:</b> " + myStack.empty();
+output += "<b>Input:</b> senate = \"" + senate2 + "\"<br>";
+output += "<b>Output:</b> " + predictPartyVictory(senate2);
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
