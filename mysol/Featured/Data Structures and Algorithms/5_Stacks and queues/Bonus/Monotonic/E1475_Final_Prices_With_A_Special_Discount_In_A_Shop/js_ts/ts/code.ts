@@ -1,53 +1,45 @@
-class MyStack {
-  private queue: number[];
+function finalPrices(prices: number[]): number[] {
+    const answer: number[] = [...prices];
+    const stack: number[] = [];
 
-  constructor() {
-    this.queue = [];
-  }
+    for (let i = 0; i < prices.length; i++) {
+        while (
+            stack.length > 0 &&
+            prices[stack[stack.length - 1]] >= prices[i]
+        ) {
+            const index: number = stack.pop()!;
+            answer[index] = prices[index] - prices[i];
+        }
 
-  push(x: number): void {
-    this.queue.push(x);
-
-    // Move previous elements behind the new element
-    const size: number = this.queue.length;
-
-    for (let i = 0; i < size - 1; i++) {
-      this.queue.push(this.queue.shift()!);
+        stack.push(i);
     }
-  }
 
-  pop(): number {
-    return this.queue.shift()!;
-  }
-
-  top(): number {
-    return this.queue[0];
-  }
-
-  empty(): boolean {
-    return this.queue.length === 0;
-  }
+    return answer;
 }
 
 (document.getElementById("title") as HTMLElement).innerText =
-  "225. Implement Stack using Queues (TS)";
+    "1475. Final Prices With a Special Discount in a Shop (TS)";
 
 let output: string = "";
 
-const myStack = new MyStack();
+// Example 1
+const prices1: number[] = [8, 4, 6, 2, 3];
 
-myStack.push(1);
-myStack.push(2);
-
-output += "<b>Input:</b> top()<br>";
-output += "<b>Output:</b> " + myStack.top();
+output += "<b>Input:</b> prices = [" + prices1 + "]<br>";
+output += "<b>Output:</b> [" + finalPrices(prices1) + "]";
 output += "<br><br>";
 
-output += "<b>Input:</b> pop()<br>";
-output += "<b>Output:</b> " + myStack.pop();
+// Example 2
+const prices2: number[] = [1, 2, 3, 4, 5];
+
+output += "<b>Input:</b> prices = [" + prices2 + "]<br>";
+output += "<b>Output:</b> [" + finalPrices(prices2) + "]";
 output += "<br><br>";
 
-output += "<b>Input:</b> empty()<br>";
-output += "<b>Output:</b> " + myStack.empty();
+// Example 3
+const prices3: number[] = [10, 1, 1, 6];
+
+output += "<b>Input:</b> prices = [" + prices3 + "]<br>";
+output += "<b>Output:</b> [" + finalPrices(prices3) + "]";
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
