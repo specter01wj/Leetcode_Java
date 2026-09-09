@@ -1,49 +1,46 @@
 /**
- * @param {number[]} prices
- * @return {number[]}
+ * @param {number[]} nums
+ * @return {number}
  */
-var finalPrices = function(prices) {
-    const answer = [...prices];
+var validSubarrays = function(nums) {
     const stack = [];
+    let count = 0;
 
-    for (let i = 0; i < prices.length; i++) {
-        while (
-            stack.length > 0 &&
-            prices[stack[stack.length - 1]] >= prices[i]
-        ) {
-            const index = stack.pop();
-            answer[index] = prices[index] - prices[i];
+    for (const num of nums) {
+        while (stack.length > 0 && stack[stack.length - 1] > num) {
+            stack.pop();
         }
 
-        stack.push(i);
+        stack.push(num);
+        count += stack.length;
     }
 
-    return answer;
+    return count;
 };
 
 document.getElementById("title").innerText =
-    "1475. Final Prices With a Special Discount in a Shop (JS)";
+    "1063. Number of Valid Subarrays (JS)";
 
 let output = "";
 
 // Example 1
-const prices1 = [8, 4, 6, 2, 3];
+const nums1 = [1, 4, 2, 5, 3];
 
-output += "<b>Input:</b> prices = [" + prices1 + "]<br>";
-output += "<b>Output:</b> [" + finalPrices(prices1) + "]";
+output += "<b>Input:</b> nums = [" + nums1 + "]<br>";
+output += "<b>Output:</b> " + validSubarrays(nums1);
 output += "<br><br>";
 
 // Example 2
-const prices2 = [1, 2, 3, 4, 5];
+const nums2 = [3, 2, 1];
 
-output += "<b>Input:</b> prices = [" + prices2 + "]<br>";
-output += "<b>Output:</b> [" + finalPrices(prices2) + "]";
+output += "<b>Input:</b> nums = [" + nums2 + "]<br>";
+output += "<b>Output:</b> " + validSubarrays(nums2);
 output += "<br><br>";
 
 // Example 3
-const prices3 = [10, 1, 1, 6];
+const nums3 = [2, 2, 2];
 
-output += "<b>Input:</b> prices = [" + prices3 + "]<br>";
-output += "<b>Output:</b> [" + finalPrices(prices3) + "]";
+output += "<b>Input:</b> nums = [" + nums3 + "]<br>";
+output += "<b>Output:</b> " + validSubarrays(nums3);
 
 document.getElementById("output").innerHTML = output;
