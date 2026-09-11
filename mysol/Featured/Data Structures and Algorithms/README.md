@@ -189,8 +189,8 @@ By Jin Wang
 |Monotonic|||||
 |1475|**Final Prices With a Special Discount in a Shop**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |1063|**Number of Valid Subarrays**|🔴 Hard|Java/Javascript/Typescript|✔/✔/✔|
-|1673|**Find the Most Competitive Subsequence**|🟡 Medium|Java/Javascript/Typescript||
-|1944|**Number of Visible People in a Queue**|🔴 Hard|Java/Javascript/Typescript||
+|1673|**Find the Most Competitive Subsequence**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
+|1944|**Number of Visible People in a Queue**|🔴 Hard|Java/Javascript/Typescript|✔/✔/✔|
 |907|**Sum of Subarray Minimums**|🟡 Medium|Java/Javascript/Typescript||
 |2104|**Sum of Subarray Ranges**|🟡 Medium|Java/Javascript/Typescript||
 |2398|**Maximum Number of Robots Within Budget**|🔴 Hard|Java/Javascript/Typescript||
