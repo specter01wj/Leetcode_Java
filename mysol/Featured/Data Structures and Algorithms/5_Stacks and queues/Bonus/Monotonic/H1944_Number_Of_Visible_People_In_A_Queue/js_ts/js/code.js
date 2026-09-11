@@ -1,46 +1,46 @@
 /**
- * @param {number[]} nums
- * @param {number} k
+ * @param {number[]} heights
  * @return {number[]}
  */
-var mostCompetitive = function(nums, k) {
+var canSeePersonsCount = function(heights) {
+    const answer = new Array(heights.length).fill(0);
     const stack = [];
 
-    for (let i = 0; i < nums.length; i++) {
+    for (let i = heights.length - 1; i >= 0; i--) {
         while (
             stack.length > 0 &&
-            stack[stack.length - 1] > nums[i] &&
-            stack.length + nums.length - i > k
+            heights[i] > stack[stack.length - 1]
         ) {
             stack.pop();
+            answer[i]++;
         }
 
-        if (stack.length < k) {
-            stack.push(nums[i]);
+        if (stack.length > 0) {
+            answer[i]++;
         }
+
+        stack.push(heights[i]);
     }
 
-    return stack;
+    return answer;
 };
 
 document.getElementById("title").innerText =
-    "1673. Find the Most Competitive Subsequence (JS)";
+    "1944. Number of Visible People in a Queue (JS)";
 
 let output = "";
 
 // Example 1
-const nums1 = [3, 5, 2, 6];
-const k1 = 2;
+const heights1 = [10, 6, 8, 5, 11, 9];
 
-output += "<b>Input:</b> nums = [" + nums1 + "], k = " + k1 + "<br>";
-output += "<b>Output:</b> [" + mostCompetitive(nums1, k1) + "]";
+output += "<b>Input:</b> heights = [" + heights1 + "]<br>";
+output += "<b>Output:</b> [" + canSeePersonsCount(heights1) + "]";
 output += "<br><br>";
 
 // Example 2
-const nums2 = [2, 4, 3, 3, 5, 4, 9, 6];
-const k2 = 4;
+const heights2 = [5, 1, 2, 3, 10];
 
-output += "<b>Input:</b> nums = [" + nums2 + "], k = " + k2 + "<br>";
-output += "<b>Output:</b> [" + mostCompetitive(nums2, k2) + "]";
+output += "<b>Input:</b> heights = [" + heights2 + "]<br>";
+output += "<b>Output:</b> [" + canSeePersonsCount(heights2) + "]";
 
 document.getElementById("output").innerHTML = output;
