@@ -727,6 +727,7 @@ By Jin Wang
 |188|**Best Time to Buy and Sell Stock IV**|Hard|Java/Javascript|Done/|
 |239|**Sliding Window Maximum**|Hard|Java/Javascript/Typescript|Done/Done/Done|
 |1063|**Number of Valid Subarrays**|Hard|Java/Javascript/Typescript|Done/Done/Done|
+|1944|**Number of Visible People in a Queue**|Hard|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### ================================================================
