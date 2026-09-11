@@ -681,6 +681,7 @@ By Jin Wang
 |1466|**Reorder Routes to Make All Paths Lead to the City Zero**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1493|**Longest Subarray of 1's After Deleting One Element**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1657|**Determine if Two Strings Are Close**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|1673|**Find the Most Competitive Subsequence**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1679|**Max Number of K-Sum Pairs**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1695|**Maximum Erasure Value**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |1721|**Swapping Nodes in a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
