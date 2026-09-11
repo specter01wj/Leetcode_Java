@@ -1,46 +1,46 @@
 /**
  * @param {number[]} nums
- * @return {number}
+ * @param {number} k
+ * @return {number[]}
  */
-var validSubarrays = function(nums) {
+var mostCompetitive = function(nums, k) {
     const stack = [];
-    let count = 0;
 
-    for (const num of nums) {
-        while (stack.length > 0 && stack[stack.length - 1] > num) {
+    for (let i = 0; i < nums.length; i++) {
+        while (
+            stack.length > 0 &&
+            stack[stack.length - 1] > nums[i] &&
+            stack.length + nums.length - i > k
+        ) {
             stack.pop();
         }
 
-        stack.push(num);
-        count += stack.length;
+        if (stack.length < k) {
+            stack.push(nums[i]);
+        }
     }
 
-    return count;
+    return stack;
 };
 
 document.getElementById("title").innerText =
-    "1063. Number of Valid Subarrays (JS)";
+    "1673. Find the Most Competitive Subsequence (JS)";
 
 let output = "";
 
 // Example 1
-const nums1 = [1, 4, 2, 5, 3];
+const nums1 = [3, 5, 2, 6];
+const k1 = 2;
 
-output += "<b>Input:</b> nums = [" + nums1 + "]<br>";
-output += "<b>Output:</b> " + validSubarrays(nums1);
+output += "<b>Input:</b> nums = [" + nums1 + "], k = " + k1 + "<br>";
+output += "<b>Output:</b> [" + mostCompetitive(nums1, k1) + "]";
 output += "<br><br>";
 
 // Example 2
-const nums2 = [3, 2, 1];
+const nums2 = [2, 4, 3, 3, 5, 4, 9, 6];
+const k2 = 4;
 
-output += "<b>Input:</b> nums = [" + nums2 + "]<br>";
-output += "<b>Output:</b> " + validSubarrays(nums2);
-output += "<br><br>";
-
-// Example 3
-const nums3 = [2, 2, 2];
-
-output += "<b>Input:</b> nums = [" + nums3 + "]<br>";
-output += "<b>Output:</b> " + validSubarrays(nums3);
+output += "<b>Input:</b> nums = [" + nums2 + "], k = " + k2 + "<br>";
+output += "<b>Output:</b> [" + mostCompetitive(nums2, k2) + "]";
 
 document.getElementById("output").innerHTML = output;
