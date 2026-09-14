@@ -1,46 +1,73 @@
 /**
- * @param {number[]} nums
- * @param {number} k
- * @return {number[]}
+ * @param {number[]} arr
+ * @return {number}
  */
-var mostCompetitive = function(nums, k) {
+var sumSubarrayMins = function(arr) {
+    const mod = 1000000007;
+    const n = arr.length;
+
+    const left = new Array(n);
+    const right = new Array(n);
+
     const stack = [];
 
-    for (let i = 0; i < nums.length; i++) {
+    // Distance to previous smaller element
+    for (let i = 0; i < n; i++) {
         while (
             stack.length > 0 &&
-            stack[stack.length - 1] > nums[i] &&
-            stack.length + nums.length - i > k
+            arr[stack[stack.length - 1]] > arr[i]
         ) {
             stack.pop();
         }
 
-        if (stack.length < k) {
-            stack.push(nums[i]);
-        }
+        left[i] =
+            stack.length === 0 ? i + 1 : i - stack[stack.length - 1];
+
+        stack.push(i);
     }
 
-    return stack;
+    stack.length = 0;
+
+    // Distance to next smaller or equal element
+    for (let i = n - 1; i >= 0; i--) {
+        while (
+            stack.length > 0 &&
+            arr[stack[stack.length - 1]] >= arr[i]
+        ) {
+            stack.pop();
+        }
+
+        right[i] =
+            stack.length === 0 ? n - i : stack[stack.length - 1] - i;
+
+        stack.push(i);
+    }
+
+    let answer = 0;
+
+    for (let i = 0; i < n; i++) {
+        answer = (answer + arr[i] * left[i] * right[i]) % mod;
+    }
+
+    return answer;
 };
 
 document.getElementById("title").innerText =
-    "1673. Find the Most Competitive Subsequence (JS)";
+    "907. Sum of Subarray Minimums (JS)";
 
 let output = "";
 
 // Example 1
-const nums1 = [3, 5, 2, 6];
-const k1 = 2;
+const arr1 = [3, 1, 2, 4];
 
-output += "<b>Input:</b> nums = [" + nums1 + "], k = " + k1 + "<br>";
-output += "<b>Output:</b> [" + mostCompetitive(nums1, k1) + "]";
+output += "<b>Input:</b> arr = [" + arr1 + "]<br>";
+output += "<b>Output:</b> " + sumSubarrayMins(arr1);
 output += "<br><br>";
 
 // Example 2
-const nums2 = [2, 4, 3, 3, 5, 4, 9, 6];
-const k2 = 4;
+const arr2 = [11, 81, 94, 43, 3];
 
-output += "<b>Input:</b> nums = [" + nums2 + "], k = " + k2 + "<br>";
-output += "<b>Output:</b> [" + mostCompetitive(nums2, k2) + "]";
+output += "<b>Input:</b> arr = [" + arr2 + "]<br>";
+output += "<b>Output:</b> " + sumSubarrayMins(arr2);
 
 document.getElementById("output").innerHTML = output;
