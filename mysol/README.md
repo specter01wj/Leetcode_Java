@@ -664,6 +664,7 @@ By Jin Wang
 |841|**Keys and Rooms**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |875|**Koko Eating Bananas**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |901|**Online Stock Span**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|907|**Sum of Subarray Minimums**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |930|**Binary Subarrays With Sum**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |946|**Validate Stack Sequences**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |994|**Rotting Oranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
