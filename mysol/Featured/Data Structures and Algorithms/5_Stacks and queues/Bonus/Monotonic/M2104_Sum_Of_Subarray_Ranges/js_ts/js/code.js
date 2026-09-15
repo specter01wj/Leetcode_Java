@@ -1,73 +1,76 @@
 /**
- * @param {number[]} arr
+ * @param {number[]} nums
  * @return {number}
  */
-var sumSubarrayMins = function(arr) {
-    const mod = 1000000007;
-    const n = arr.length;
-
-    const left = new Array(n);
-    const right = new Array(n);
+var subArrayRanges = function(nums) {
+    const n = nums.length;
+    let minSum = 0;
+    let maxSum = 0;
 
     const stack = [];
 
-    // Distance to previous smaller element
-    for (let i = 0; i < n; i++) {
+    // Sum of minimums
+    for (let i = 0; i <= n; i++) {
         while (
             stack.length > 0 &&
-            arr[stack[stack.length - 1]] > arr[i]
+            (i === n || nums[stack[stack.length - 1]] > nums[i])
         ) {
-            stack.pop();
-        }
+            const index = stack.pop();
+            const left =
+                stack.length === 0 ? index + 1 : index - stack[stack.length - 1];
+            const right = i - index;
 
-        left[i] =
-            stack.length === 0 ? i + 1 : i - stack[stack.length - 1];
+            minSum += nums[index] * left * right;
+        }
 
         stack.push(i);
     }
 
     stack.length = 0;
 
-    // Distance to next smaller or equal element
-    for (let i = n - 1; i >= 0; i--) {
+    // Sum of maximums
+    for (let i = 0; i <= n; i++) {
         while (
             stack.length > 0 &&
-            arr[stack[stack.length - 1]] >= arr[i]
+            (i === n || nums[stack[stack.length - 1]] < nums[i])
         ) {
-            stack.pop();
-        }
+            const index = stack.pop();
+            const left =
+                stack.length === 0 ? index + 1 : index - stack[stack.length - 1];
+            const right = i - index;
 
-        right[i] =
-            stack.length === 0 ? n - i : stack[stack.length - 1] - i;
+            maxSum += nums[index] * left * right;
+        }
 
         stack.push(i);
     }
 
-    let answer = 0;
-
-    for (let i = 0; i < n; i++) {
-        answer = (answer + arr[i] * left[i] * right[i]) % mod;
-    }
-
-    return answer;
+    return maxSum - minSum;
 };
 
 document.getElementById("title").innerText =
-    "907. Sum of Subarray Minimums (JS)";
+    "2104. Sum of Subarray Ranges (JS)";
 
 let output = "";
 
 // Example 1
-const arr1 = [3, 1, 2, 4];
+const nums1 = [1, 2, 3];
 
-output += "<b>Input:</b> arr = [" + arr1 + "]<br>";
-output += "<b>Output:</b> " + sumSubarrayMins(arr1);
+output += "<b>Input:</b> nums = [" + nums1 + "]<br>";
+output += "<b>Output:</b> " + subArrayRanges(nums1);
 output += "<br><br>";
 
 // Example 2
-const arr2 = [11, 81, 94, 43, 3];
+const nums2 = [1, 3, 3];
 
-output += "<b>Input:</b> arr = [" + arr2 + "]<br>";
-output += "<b>Output:</b> " + sumSubarrayMins(arr2);
+output += "<b>Input:</b> nums = [" + nums2 + "]<br>";
+output += "<b>Output:</b> " + subArrayRanges(nums2);
+output += "<br><br>";
+
+// Example 3
+const nums3 = [4, -2, -3, 4, 1];
+
+output += "<b>Input:</b> nums = [" + nums3 + "]<br>";
+output += "<b>Output:</b> " + subArrayRanges(nums3);
 
 document.getElementById("output").innerHTML = output;
