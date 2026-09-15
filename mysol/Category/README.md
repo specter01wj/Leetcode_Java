@@ -930,6 +930,7 @@ Cspiration Category:
 |1438|Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1673|Find the Most Competitive Subsequence|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |1944|Number of Visible People in a Queue|Hard||Java/Javascript/Typescript|Done/Done/Done|
+|2104|Sum of Subarray Ranges|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |2434|Using a Robot to Print the Lexicographically Smallest String|Medium||Java/Javascript/Typescript|Done/Done/Done|
 
 ### 12. Bit Manipulation

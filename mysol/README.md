@@ -689,6 +689,7 @@ By Jin Wang
 |1926|**Nearest Exit from Entrance in Maze**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2090|**K Radius Subarray Averages**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2095|**Delete the Middle Node of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
+|2104|**Sum of Subarray Ranges**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2130|**Maximum Twin Sum of a Linked List**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2225|**Find Players With Zero or One Losses**|Medium|Java/Javascript/Typescript|Done/Done/Done|
 |2260|**Minimum Consecutive Cards to Pick Up**|Medium|Java/Javascript/Typescript|Done/Done/Done|
