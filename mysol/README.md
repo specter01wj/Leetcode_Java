@@ -730,6 +730,7 @@ By Jin Wang
 |239|**Sliding Window Maximum**|Hard|Java/Javascript/Typescript|Done/Done/Done|
 |1063|**Number of Valid Subarrays**|Hard|Java/Javascript/Typescript|Done/Done/Done|
 |1944|**Number of Visible People in a Queue**|Hard|Java/Javascript/Typescript|Done/Done/Done|
+|2398|**Maximum Number of Robots Within Budget**|Hard|Java/Javascript/Typescript|Done/Done/Done|
 
 
 ### ================================================================
