@@ -1,76 +1,71 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} chargeTimes
+ * @param {number[]} runningCosts
+ * @param {number} budget
  * @return {number}
  */
-var subArrayRanges = function(nums) {
-    const n = nums.length;
-    let minSum = 0;
-    let maxSum = 0;
+var maximumRobots = function(chargeTimes, runningCosts, budget) {
+    const deque = [];
 
-    const stack = [];
+    let runningSum = 0;
+    let left = 0;
+    let answer = 0;
 
-    // Sum of minimums
-    for (let i = 0; i <= n; i++) {
+    for (let right = 0; right < chargeTimes.length; right++) {
+        runningSum += runningCosts[right];
+
         while (
-            stack.length > 0 &&
-            (i === n || nums[stack[stack.length - 1]] > nums[i])
+            deque.length > 0 &&
+            chargeTimes[deque[deque.length - 1]] <= chargeTimes[right]
         ) {
-            const index = stack.pop();
-            const left =
-                stack.length === 0 ? index + 1 : index - stack[stack.length - 1];
-            const right = i - index;
-
-            minSum += nums[index] * left * right;
+            deque.pop();
         }
 
-        stack.push(i);
-    }
+        deque.push(right);
 
-    stack.length = 0;
-
-    // Sum of maximums
-    for (let i = 0; i <= n; i++) {
         while (
-            stack.length > 0 &&
-            (i === n || nums[stack[stack.length - 1]] < nums[i])
+            deque.length > 0 &&
+            chargeTimes[deque[0]] +
+            (right - left + 1) * runningSum > budget
         ) {
-            const index = stack.pop();
-            const left =
-                stack.length === 0 ? index + 1 : index - stack[stack.length - 1];
-            const right = i - index;
+            if (deque[0] === left) {
+                deque.shift();
+            }
 
-            maxSum += nums[index] * left * right;
+            runningSum -= runningCosts[left];
+            left++;
         }
 
-        stack.push(i);
+        answer = Math.max(answer, right - left + 1);
     }
 
-    return maxSum - minSum;
+    return answer;
 };
 
 document.getElementById("title").innerText =
-    "2104. Sum of Subarray Ranges (JS)";
+    "2398. Maximum Number of Robots Within Budget (JS)";
 
 let output = "";
 
 // Example 1
-const nums1 = [1, 2, 3];
+const chargeTimes1 = [3, 6, 1, 3, 4];
+const runningCosts1 = [2, 1, 3, 4, 5];
+const budget1 = 25;
 
-output += "<b>Input:</b> nums = [" + nums1 + "]<br>";
-output += "<b>Output:</b> " + subArrayRanges(nums1);
+output += "<b>Input:</b> chargeTimes = [" + chargeTimes1 +
+    "], runningCosts = [" + runningCosts1 + "], budget = " + budget1 + "<br>";
+output += "<b>Output:</b> " +
+    maximumRobots(chargeTimes1, runningCosts1, budget1);
 output += "<br><br>";
 
 // Example 2
-const nums2 = [1, 3, 3];
+const chargeTimes2 = [11, 12, 19];
+const runningCosts2 = [10, 8, 7];
+const budget2 = 19;
 
-output += "<b>Input:</b> nums = [" + nums2 + "]<br>";
-output += "<b>Output:</b> " + subArrayRanges(nums2);
-output += "<br><br>";
-
-// Example 3
-const nums3 = [4, -2, -3, 4, 1];
-
-output += "<b>Input:</b> nums = [" + nums3 + "]<br>";
-output += "<b>Output:</b> " + subArrayRanges(nums3);
+output += "<b>Input:</b> chargeTimes = [" + chargeTimes2 +
+    "], runningCosts = [" + runningCosts2 + "], budget = " + budget2 + "<br>";
+output += "<b>Output:</b> " +
+    maximumRobots(chargeTimes2, runningCosts2, budget2);
 
 document.getElementById("output").innerHTML = output;
