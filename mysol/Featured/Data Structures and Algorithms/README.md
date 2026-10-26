@@ -191,9 +191,9 @@ By Jin Wang
 |1063|**Number of Valid Subarrays**|🔴 Hard|Java/Javascript/Typescript|✔/✔/✔|
 |1673|**Find the Most Competitive Subsequence**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 |1944|**Number of Visible People in a Queue**|🔴 Hard|Java/Javascript/Typescript|✔/✔/✔|
-|907|**Sum of Subarray Minimums**|🟡 Medium|Java/Javascript/Typescript||
-|2104|**Sum of Subarray Ranges**|🟡 Medium|Java/Javascript/Typescript||
-|2398|**Maximum Number of Robots Within Budget**|🔴 Hard|Java/Javascript/Typescript||
+|907|**Sum of Subarray Minimums**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
+|2104|**Sum of Subarray Ranges**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
+|2398|**Maximum Number of Robots Within Budget**|🔴 Hard|Java/Javascript/Typescript|✔/✔/✔|
 
 ---
 
@@ -201,6 +201,8 @@ By Jin Wang
 
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
+|Binary trees - DFS|||||
+|104|**Maximum Depth of Binary Tree**|🟢 Easy|Java/Javascript/Typescript||
 
 ---
 
