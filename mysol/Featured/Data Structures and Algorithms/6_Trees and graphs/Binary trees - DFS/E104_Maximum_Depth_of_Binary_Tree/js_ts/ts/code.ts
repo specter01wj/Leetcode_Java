@@ -1,53 +1,64 @@
-class MyStack {
-  private queue: number[];
 
-  constructor() {
-    this.queue = [];
-  }
+(document.getElementById("title") as HTMLElement).innerHTML =
+    "104. Maximum Depth of Binary Tree";
 
-  push(x: number): void {
-    this.queue.push(x);
+class TreeNode {
+    val: number;
+    left: TreeNode | null;
+    right: TreeNode | null;
 
-    // Move previous elements behind the new element
-    const size: number = this.queue.length;
-
-    for (let i = 0; i < size - 1; i++) {
-      this.queue.push(this.queue.shift()!);
+    constructor(
+        val: number = 0,
+        left: TreeNode | null = null,
+        right: TreeNode | null = null
+    ) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
-  }
-
-  pop(): number {
-    return this.queue.shift()!;
-  }
-
-  top(): number {
-    return this.queue[0];
-  }
-
-  empty(): boolean {
-    return this.queue.length === 0;
-  }
 }
 
-(document.getElementById("title") as HTMLElement).innerText =
-  "225. Implement Stack using Queues (TS)";
+function maxDepth(root: TreeNode | null): number {
+    if (root === null) {
+        return 0;
+    }
+
+    let left: number = maxDepth(root.left);
+    let right: number = maxDepth(root.right);
+
+    return Math.max(left, right) + 1;
+}
 
 let output: string = "";
 
-const myStack = new MyStack();
+// Example 1
+let root1: TreeNode = new TreeNode(3,
+    new TreeNode(9),
+    new TreeNode(20,
+        new TreeNode(15),
+        new TreeNode(7)
+    )
+);
 
-myStack.push(1);
-myStack.push(2);
+output += "<b>Input:</b> root = [3,9,20,null,null,15,7]<br>";
+output += "<b>Output:</b> " + maxDepth(root1) + "<br><br>";
 
-output += "<b>Input:</b> top()<br>";
-output += "<b>Output:</b> " + myStack.top();
-output += "<br><br>";
+// Example 2
+let root2: TreeNode = new TreeNode(1, null, new TreeNode(2));
 
-output += "<b>Input:</b> pop()<br>";
-output += "<b>Output:</b> " + myStack.pop();
-output += "<br><br>";
+output += "<b>Input:</b> root = [1,null,2]<br>";
+output += "<b>Output:</b> " + maxDepth(root2) + "<br><br>";
 
-output += "<b>Input:</b> empty()<br>";
-output += "<b>Output:</b> " + myStack.empty();
+// Example 3
+let root3: TreeNode | null = null;
+
+output += "<b>Input:</b> root = []<br>";
+output += "<b>Output:</b> " + maxDepth(root3) + "<br><br>";
+
+// Example 4
+let root4: TreeNode = new TreeNode(1);
+
+output += "<b>Input:</b> root = [1]<br>";
+output += "<b>Output:</b> " + maxDepth(root4) + "<br>";
 
 (document.getElementById("output") as HTMLElement).innerHTML = output;
