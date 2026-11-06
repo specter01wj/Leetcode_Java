@@ -202,7 +202,7 @@ By Jin Wang
 | No. | Problem       | Level  | Language  | Completed|
 |:-------:|:--------------|:------:|:---------:|:-------------:|
 |Binary trees - DFS|||||
-|104|**Maximum Depth of Binary Tree**|🟢 Easy|Java/Javascript/Typescript||
+|104|**Maximum Depth of Binary Tree**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 
 ---
 
