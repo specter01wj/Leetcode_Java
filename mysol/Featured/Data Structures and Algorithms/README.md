@@ -204,6 +204,7 @@ By Jin Wang
 |Binary trees - DFS|||||
 |104|**Maximum Depth of Binary Tree**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |112|**Path Sum**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
+|1448|**Count Good Nodes in Binary Tree**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 
 ---
 
