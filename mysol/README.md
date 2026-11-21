@@ -31,7 +31,7 @@ By Jin Wang
 |70|**Climbing Stairs**|Easy|Java/Javascript|Done/Done|
 |83|**Remove Duplicates from Sorted List**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |88|**Merge Sorted Array**|Easy|Java/Javascript/Typescript|Done/Done/Done|
-|100|**Same Tree**|Easy|Java/Javascript|Done/|
+|100|**Same Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |101|**Symmetric Tree**|Easy|Java/Javascript|Done/|
 |104|**Maximum Depth of Binary Tree**|Easy|Java/Javascript/Typescript|Done/Done/Done|
 |107|**Binary Tree Level Order Traversal II**|Easy|Java/Javascript|Done/|
