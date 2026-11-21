@@ -1,6 +1,5 @@
 
-document.getElementById("title").innerHTML =
-    "104. Maximum Depth of Binary Tree";
+document.getElementById("title").innerHTML = "100. Same Tree";
 
 function TreeNode(val = 0, left = null, right = null) {
     this.val = val;
@@ -8,47 +7,76 @@ function TreeNode(val = 0, left = null, right = null) {
     this.right = right;
 }
 
-var maxDepth = function(root) {
-    if (root === null) {
-        return 0;
+var isSameTree = function(p, q) {
+    if (p === null && q === null) {
+        return true;
     }
 
-    let left = maxDepth(root.left);
-    let right = maxDepth(root.right);
+    if (p === null || q === null) {
+        return false;
+    }
 
-    return Math.max(left, right) + 1;
+    return p.val === q.val
+        && isSameTree(p.left, q.left)
+        && isSameTree(p.right, q.right);
 };
 
 let output = "";
 
 // Example 1
-let root1 = new TreeNode(3,
-    new TreeNode(9),
-    new TreeNode(20,
-        new TreeNode(15),
-        new TreeNode(7)
-    )
+let p1 = new TreeNode(1,
+    new TreeNode(2),
+    new TreeNode(3)
 );
 
-output += "<b>Input:</b> root = [3,9,20,null,null,15,7]<br>";
-output += "<b>Output:</b> " + maxDepth(root1) + "<br><br>";
+let q1 = new TreeNode(1,
+    new TreeNode(2),
+    new TreeNode(3)
+);
+
+output += "<b>Input:</b> p = [1,2,3], q = [1,2,3]<br>";
+output += "<b>Output:</b> " + isSameTree(p1, q1) + "<br><br>";
 
 // Example 2
-let root2 = new TreeNode(1, null, new TreeNode(2));
+let p2 = new TreeNode(1,
+    new TreeNode(2),
+    null
+);
 
-output += "<b>Input:</b> root = [1,null,2]<br>";
-output += "<b>Output:</b> " + maxDepth(root2) + "<br><br>";
+let q2 = new TreeNode(1,
+    null,
+    new TreeNode(2)
+);
+
+output += "<b>Input:</b> p = [1,2], q = [1,null,2]<br>";
+output += "<b>Output:</b> " + isSameTree(p2, q2) + "<br><br>";
 
 // Example 3
-let root3 = null;
+let p3 = new TreeNode(1,
+    new TreeNode(2),
+    new TreeNode(1)
+);
 
-output += "<b>Input:</b> root = []<br>";
-output += "<b>Output:</b> " + maxDepth(root3) + "<br><br>";
+let q3 = new TreeNode(1,
+    new TreeNode(1),
+    new TreeNode(2)
+);
+
+output += "<b>Input:</b> p = [1,2,1], q = [1,1,2]<br>";
+output += "<b>Output:</b> " + isSameTree(p3, q3) + "<br><br>";
 
 // Example 4
-let root4 = new TreeNode(1);
+let p4 = null;
+let q4 = null;
 
-output += "<b>Input:</b> root = [1]<br>";
-output += "<b>Output:</b> " + maxDepth(root4) + "<br>";
+output += "<b>Input:</b> p = [], q = []<br>";
+output += "<b>Output:</b> " + isSameTree(p4, q4) + "<br><br>";
+
+// Example 5
+let p5 = new TreeNode(1);
+let q5 = null;
+
+output += "<b>Input:</b> p = [1], q = []<br>";
+output += "<b>Output:</b> " + isSameTree(p5, q5) + "<br>";
 
 document.getElementById("output").innerHTML = output;
