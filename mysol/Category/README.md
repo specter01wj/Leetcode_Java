@@ -741,7 +741,7 @@ Cspiration Category:
 |BST||||||
 |98|Validate Binary Search Tree|Medium||Java/Javascript||
 |235|Lowest Common Ancestor of a Binary Search Tree|Easy||Java/Javascript||
-|236|Lowest Common Ancestor of a Binary Tree|Medium||Java/Javascript||
+|236|Lowest Common Ancestor of a Binary Tree|Medium||Java/Javascript/Typescript|Done/Done/Done|
 |108|Convert Sorted Array to Binary Search Tree|Easy||Java/Javascript|Done/|
 |109|Convert Sorted List to Binary Search Tree|Medium||Java/Javascript||
 |173|Binary Search Tree Iterator|Medium||Java/Javascript||
