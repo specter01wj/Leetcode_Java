@@ -205,8 +205,8 @@ By Jin Wang
 |104|**Maximum Depth of Binary Tree**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |112|**Path Sum**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
 |1448|**Count Good Nodes in Binary Tree**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
-|100|**Same Tree**|🟢 Easy|Java/Javascript/Typescript||
-|236|**Lowest Common Ancestor of a Binary Tree**|🟡 Medium|Java/Javascript/Typescript||
+|100|**Same Tree**|🟢 Easy|Java/Javascript/Typescript|✔/✔/✔|
+|236|**Lowest Common Ancestor of a Binary Tree**|🟡 Medium|Java/Javascript/Typescript|✔/✔/✔|
 
 ---
 
